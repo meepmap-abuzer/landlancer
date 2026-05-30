@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://chistaya-kozha.ru/sitemap.xml

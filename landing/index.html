@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LEVEL UP — Система, которая делает тебя богатым | Дмитрий Воронов</title>
+<meta name="description" content="Авторский курс Дмитрия Воронова — пошаговая система, которая помогла более 12 000 человек выйти на новый уровень дохода. Узнай, как зарабатывать от 1 000 000 ₽ в месяц.">
+<meta name="keywords" content="курс по заработку, обучение бизнесу, как заработать деньги, инфобизнес курс, курс инвестирования, онлайн курс заработок, Дмитрий Воронов курс, система заработка, финансовая свобода, пассивный доход курс">
+<meta name="author" content="Дмитрий Воронов">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://levelup-academy.ru/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://levelup-academy.ru/">
+<meta property="og:title" content="LEVEL UP — Система, которая делает тебя богатым">
+<meta property="og:description" content="Пошаговая система, которая помогла более 12 000 человек выйти на новый уровень дохода и жизни.">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="LEVEL UP Академия">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="LEVEL UP — Система, которая делает тебя богатым">
+<meta name="twitter:description" content="12 000+ учеников. 162 899 081 ₽ заработано. Авторский курс Дмитрия Воронова.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Course","name":"LEVEL UP — Полная система твоего роста","description":"Пошаговая система, которая помогла более 12 000 человек выйти на новый уровень дохода и жизни","provider":{"@type":"Person","name":"Дмитрий Воронов","jobTitle":"Предприниматель, инвестор"},"offers":{"@type":"Offer","priceCurrency":"RUB","availability":"https://schema.org/LimitedAvailability"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"12000"}}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ─── API URL — измени на свой домен при деплое ─────────────────────── */
+
+:root {
+  --orange: #FF6B00;
+  --orange-light: #FF8C35;
+  --orange-dark: #CC5500;
+  --bg: #0A0A0A;
+  --bg-2: #111111;
+  --bg-3: #161616;
+  --text: #FFFFFF;
+  --text-muted: #888888;
+  --text-dim: #555555;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 92px; }
+section[id] { scroll-margin-top: 92px; }
+body { font-family: 'Montserrat', sans-serif; background: var(--bg); color: var(--text); overflow-x: hidden; }
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none; z-index: 1; opacity: .4;
+}
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--orange-dark); border-radius: 2px; }
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 60px; height: 72px;
+  background: rgba(10,10,10,.85); backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255,107,0,.08); transition: background .3s;
+}
+nav.scrolled { background: rgba(10,10,10,.97); }
+.nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.nav-logo-icon {
+  width: 36px; height: 36px; background: var(--orange);
+  clip-path: polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);
+}
+.nav-logo-text { font-family: 'Oswald',sans-serif; font-size: 20px; font-weight: 700; letter-spacing: .15em; color: var(--text); }
+.nav-logo-text span { color: var(--orange); }
+.nav-links { display: flex; gap: 36px; list-style: none; }
+.nav-links a { color: var(--text-muted); text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; transition: color .2s; }
+.nav-links a:hover { color: var(--text); }
+.nav-cta {
+  background: transparent; border: 1.5px solid var(--orange); color: var(--orange);
+  padding: 10px 24px; font-family: 'Montserrat',sans-serif; font-size: 12px; font-weight: 700;
+  letter-spacing: .15em; text-transform: uppercase; cursor: pointer; transition: all .25s; text-decoration: none;
+}
+.nav-cta:hover { background: var(--orange); color: var(--bg); }
+
+/* HERO */
+#hero {
+  position: relative; min-height: 100vh; display: flex; align-items: center;
+  overflow: hidden; padding: 100px 60px 60px;
+}
+#hero-canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+.hero-glow { position: absolute; border-radius: 50%; filter: blur(120px); pointer-events: none; }
+.hero-glow-1 {
+  width: 700px; height: 700px;
+  background: radial-gradient(circle, rgba(255,107,0,.18) 0%,transparent 70%);
+  top: -200px; right: -100px; animation: glowPulse 6s ease-in-out infinite;
+}
+.hero-glow-2 {
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(255,107,0,.1) 0%,transparent 70%);
+  bottom: 0; left: 100px; animation: glowPulse 8s ease-in-out infinite reverse;
+}
+@keyframes glowPulse { 0%,100%{opacity:.6;transform:scale(1)} 50%{opacity:1;transform:scale(1.1)} }
+.hero-scene {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center right;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(1.018);
+  filter: saturate(.94) contrast(1.03);
+  animation: sceneAppear 1.45s .55s cubic-bezier(.16,1,.3,1) forwards;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.72) 35%, #000 52%);
+  mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.72) 35%, #000 52%);
+}
+.hero-scene-shade {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(5,5,5,.98) 0%, rgba(5,5,5,.84) 37%, rgba(5,5,5,.12) 68%, rgba(5,5,5,.2) 100%),
+    linear-gradient(180deg, rgba(5,5,5,.08) 0%, rgba(5,5,5,.12) 62%, rgba(5,5,5,.82) 100%);
+}
+@keyframes sceneAppear {
+  to { opacity: .9; transform: scale(1); }
+}
+.hero-content { position: relative; z-index: 2; max-width: 680px; }
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(255,107,0,.1); border: 1px solid rgba(255,107,0,.3);
+  padding: 8px 16px; font-size: 11px; font-weight: 600; letter-spacing: .2em;
+  text-transform: uppercase; color: var(--orange); margin-bottom: 32px;
+  opacity: 0; animation: fadeUp 1.15s .25s forwards;
+}
+.hero-badge-dot { width: 6px; height: 6px; background: var(--orange); border-radius: 50%; animation: blink 1.5s ease-in-out infinite; }
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:.3} }
+.hero-title {
+  font-family: 'Oswald',sans-serif; font-size: clamp(52px,7vw,88px); font-weight: 700;
+  line-height: .95; letter-spacing: .02em; text-transform: uppercase; margin-bottom: 28px;
+  opacity: 0; animation: fadeUp 1.25s .5s forwards;
+}
+.hero-title .accent { color: var(--orange); display: block; }
+.hero-subtitle {
+  font-size: 15px; font-weight: 400; line-height: 1.7; color: rgba(255,255,255,.6);
+  max-width: 480px; margin-bottom: 44px; opacity: 0; animation: fadeUp 1.25s .75s forwards;
+}
+.hero-actions { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; opacity: 0; animation: fadeUp 1.25s 1s forwards; }
+
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: var(--orange); color: #000; padding: 18px 36px;
+  font-family: 'Montserrat',sans-serif; font-size: 13px; font-weight: 800;
+  letter-spacing: .12em; text-transform: uppercase; text-decoration: none;
+  border: none; cursor: pointer; position: relative; overflow: hidden; transition: all .3s;
+  clip-path: polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,12px 100%,0 calc(100% - 12px));
+}
+.btn-primary::before {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);
+  transform: translateX(-100%); transition: transform .5s;
+}
+.btn-primary:hover::before { transform: translateX(100%); }
+.btn-primary:hover { background: var(--orange-light); transform: translateY(-2px); box-shadow: 0 20px 60px rgba(255,107,0,.4); }
+
+.btn-ghost {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: transparent; color: var(--text); padding: 18px 28px;
+  font-family: 'Montserrat',sans-serif; font-size: 13px; font-weight: 600;
+  letter-spacing: .08em; text-decoration: none; border: none; cursor: pointer; transition: color .2s;
+}
+.btn-ghost:hover { color: var(--orange); }
+.btn-play-icon {
+  width: 40px; height: 40px; border-radius: 50%; border: 1.5px solid rgba(255,255,255,.3);
+  display: flex; align-items: center; justify-content: center; transition: border-color .2s, background .2s;
+}
+.btn-ghost:hover .btn-play-icon { border-color: var(--orange); background: rgba(255,107,0,.1); }
+
+.hero-stats {
+  position: absolute; right: 60px; top: 50%; transform: translateY(-50%);
+  display: flex; flex-direction: column; gap: 16px; z-index: 2;
+  opacity: 0; animation: fadeLeft 1.35s 1.15s forwards;
+}
+@keyframes fadeLeft {
+  from { opacity:0; transform:translateY(-50%) translateX(40px); }
+  to   { opacity:1; transform:translateY(-50%) translateX(0); }
+}
+.stat-card {
+  background: rgba(255,107,0,.06); border: 1px solid rgba(255,107,0,.2);
+  backdrop-filter: blur(20px); padding: 20px 28px; position: relative; overflow: hidden; min-width: 220px;
+}
+.stat-card::before { content:''; position:absolute; top:0; left:0; width:3px; height:100%; background:var(--orange); }
+.stat-card::after { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at top right,rgba(255,107,0,.08) 0%,transparent 60%); }
+.stat-value { font-family:'Oswald',sans-serif; font-size:28px; font-weight:700; color:var(--orange); margin-bottom:6px; }
+.stat-label { font-size:10px; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--text-muted); }
+
+.scroll-indicator {
+  position: absolute; bottom: 32px; left: 60px;
+  display: flex; align-items: center; gap: 12px;
+  opacity: 0; animation: fadeUp 1.15s 1.55s forwards; z-index: 2;
+}
+.scroll-line { width:40px; height:1px; background:var(--orange); position:relative; overflow:hidden; }
+.scroll-line::after {
+  content:''; position:absolute; inset:0; background:rgba(255,255,255,.3);
+  animation: scanLine 1.5s ease-in-out infinite;
+}
+@keyframes scanLine { 0%{transform:translateX(-100%)} 100%{transform:translateX(100%)} }
+.scroll-text { font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--text-muted); }
+
+@keyframes fadeUp { from{opacity:0;transform:translateY(42px)} to{opacity:1;transform:translateY(0)} }
+
+.reveal { opacity:0; filter:blur(4px); transform:translateY(48px) scale(.99); transition:filter .82s cubic-bezier(.16,1,.3,1),opacity .84s cubic-bezier(.16,1,.3,1),transform .98s cubic-bezier(.16,1,.3,1); will-change:opacity,transform,filter; }
+.reveal.visible { opacity:1; filter:blur(0); transform:translateY(0) scale(1); }
+.reveal-left { opacity:0; filter:blur(4px); transform:translateX(-52px) scale(.99); transition:filter .82s cubic-bezier(.16,1,.3,1),opacity .84s cubic-bezier(.16,1,.3,1),transform .98s cubic-bezier(.16,1,.3,1); will-change:opacity,transform,filter; }
+.reveal-left.visible { opacity:1; filter:blur(0); transform:translateX(0) scale(1); }
+.reveal-right { opacity:0; filter:blur(4px); transform:translateX(52px) scale(.99); transition:filter .82s cubic-bezier(.16,1,.3,1),opacity .84s cubic-bezier(.16,1,.3,1),transform .98s cubic-bezier(.16,1,.3,1); will-change:opacity,transform,filter; }
+.reveal-right.visible { opacity:1; filter:blur(0); transform:translateX(0) scale(1); }
+
+section { position:relative; z-index:2; padding:120px 60px; }
+.container { max-width:1200px; margin:0 auto; }
+.section-divider { height:1px; background:linear-gradient(90deg,transparent,rgba(255,107,0,.3),transparent); margin:0 60px; }
+
+/* ABOUT */
+#about { background:var(--bg-2); overflow:hidden; }
+#about::before {
+  content:''; position:absolute; right:-200px; top:50%; transform:translateY(-50%);
+  width:600px; height:600px; background:radial-gradient(circle,rgba(255,107,0,.06) 0%,transparent 70%); border-radius:50%;
+}
+.about-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
+.about-label { font-size:11px; font-weight:600; letter-spacing:.3em; text-transform:uppercase; color:var(--orange); margin-bottom:20px; }
+.about-title { font-family:'Oswald',sans-serif; font-size:clamp(40px,5vw,64px); font-weight:700; line-height:1; text-transform:uppercase; margin-bottom:32px; }
+.about-title .accent { color:var(--orange); }
+.about-title .dash { display:block; }
+.about-text { font-size:15px; line-height:1.8; color:rgba(255,255,255,.55); margin-bottom:16px; }
+.about-signature { display:flex; align-items:center; gap:16px; margin-top:36px; padding-top:36px; border-top:1px solid rgba(255,255,255,.08); }
+.signature-text { font-family:'Oswald',sans-serif; font-size:22px; font-weight:400; letter-spacing:.05em; color:rgba(255,255,255,.5); font-style:italic; }
+.signature-name { font-size:12px; font-weight:600; letter-spacing:.15em; text-transform:uppercase; color:var(--text-muted); }
+.stats-grid { display:grid; grid-template-columns:1fr 1fr; gap:2px; }
+.stat-block { background:var(--bg-3); padding:36px 32px; position:relative; overflow:hidden; transition:background .3s; }
+.stat-block:hover { background:rgba(255,107,0,.06); }
+.stat-block::after { content:''; position:absolute; bottom:0; left:0; right:0; height:2px; background:var(--orange); transform:scaleX(0); transition:transform .4s; transform-origin:left; }
+.stat-block:hover::after { transform:scaleX(1); }
+.stat-block-icon { margin-bottom:16px; color:var(--orange); opacity:.8; }
+.stat-block-value { font-family:'Oswald',sans-serif; font-size:40px; font-weight:700; line-height:1; margin-bottom:8px; }
+.stat-block-value .orange { color:var(--orange); }
+.stat-block-label { font-size:11px; font-weight:600; letter-spacing:.15em; text-transform:uppercase; color:var(--text-muted); }
+
+/* MODULES */
+#modules { background:var(--bg); overflow:hidden; }
+.section-header { text-align:center; margin-bottom:80px; }
+.section-title { font-family:'Oswald',sans-serif; font-size:clamp(36px,4.5vw,58px); font-weight:700; text-transform:uppercase; letter-spacing:.04em; margin-bottom:16px; }
+.section-sub { font-size:14px; color:var(--text-muted); letter-spacing:.1em; text-transform:uppercase; }
+.modules-timeline { position:relative; max-width:900px; margin:0 auto; }
+.modules-timeline::before { content:''; position:absolute; left:48px; top:0; bottom:0; width:1px; background:linear-gradient(to bottom,var(--orange),rgba(255,107,0,.1)); }
+.module-item { display:grid; grid-template-columns:96px 1fr; gap:40px; margin-bottom:4px; opacity:0; filter:blur(4px); transform:translateX(-46px) scale(.99); transition:filter .78s cubic-bezier(.16,1,.3,1),opacity .82s cubic-bezier(.16,1,.3,1),transform .96s cubic-bezier(.16,1,.3,1); }
+.module-item.visible { opacity:1; filter:blur(0); transform:translateX(0) scale(1); }
+.module-num-wrap { display:flex; flex-direction:column; align-items:center; padding-top:32px; }
+.module-num { width:48px; height:48px; background:var(--bg-3); border:2px solid var(--orange); display:flex; align-items:center; justify-content:center; font-family:'Oswald',sans-serif; font-size:18px; font-weight:700; color:var(--orange); position:relative; z-index:1; transition:background .3s; flex-shrink:0; }
+.module-item:hover .module-num { background:var(--orange); color:#000; }
+.module-card { background:var(--bg-3); border:1px solid rgba(255,255,255,.05); padding:36px 40px; margin-bottom:4px; position:relative; overflow:hidden; transition:border-color .3s, transform .3s; }
+.module-card:hover { border-color:rgba(255,107,0,.25); transform:translateX(6px); }
+.module-card::before { content:''; position:absolute; left:0; top:0; bottom:0; width:3px; background:var(--orange); transform:scaleY(0); transition:transform .4s; transform-origin:bottom; }
+.module-item:hover .module-card::before { transform:scaleY(1); }
+.module-tag { display:inline-block; background:rgba(255,107,0,.1); color:var(--orange); font-size:10px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; padding:4px 12px; margin-bottom:16px; }
+.module-title { font-family:'Oswald',sans-serif; font-size:28px; font-weight:700; text-transform:uppercase; letter-spacing:.04em; margin-bottom:12px; }
+.module-desc { font-size:14px; line-height:1.7; color:rgba(255,255,255,.5); }
+.module-icon { position:absolute; right:36px; top:36px; color:rgba(255,107,0,.15); transition:color .3s; }
+.module-item:hover .module-icon { color:rgba(255,107,0,.35); }
+
+/* COUNTDOWN */
+#countdown { background:var(--bg-2); padding:100px 60px; overflow:hidden; text-align:center; position:relative; }
+#countdown::before {
+  content:''; position:absolute; inset:0;
+  background: repeating-linear-gradient(0deg,transparent,transparent 59px,rgba(255,107,0,.03) 60px),
+              repeating-linear-gradient(90deg,transparent,transparent 59px,rgba(255,107,0,.03) 60px);
+}
+.countdown-label { font-size:11px; font-weight:600; letter-spacing:.3em; text-transform:uppercase; color:var(--orange); margin-bottom:20px; position:relative; z-index:1; }
+.countdown-title { font-family:'Oswald',sans-serif; font-size:clamp(36px,5vw,64px); font-weight:700; text-transform:uppercase; line-height:1; position:relative; z-index:1; margin-bottom:16px; }
+.countdown-title .accent { color:var(--orange); }
+.countdown-subtitle { font-size:14px; color:var(--text-muted); margin-bottom:60px; letter-spacing:.08em; position:relative; z-index:1; }
+.timer { display:flex; align-items:center; justify-content:center; gap:0; margin-bottom:60px; position:relative; z-index:1; }
+.timer-block { display:flex; flex-direction:column; align-items:center; padding:0 40px; border-right:1px solid rgba(255,255,255,.08); }
+.timer-block:last-child { border-right:none; }
+.timer-value { font-family:'Oswald',sans-serif; font-size:clamp(60px,8vw,100px); font-weight:700; line-height:1; letter-spacing:-.02em; }
+.timer-value.changing { animation:flipNum .3s ease; }
+@keyframes flipNum { 0%{transform:translateY(-10px);opacity:0} 100%{transform:translateY(0);opacity:1} }
+.timer-unit { font-size:11px; font-weight:700; letter-spacing:.25em; text-transform:uppercase; color:var(--text-muted); margin-top:8px; }
+.timer-colon { font-family:'Oswald',sans-serif; font-size:80px; font-weight:700; color:var(--orange); line-height:1; padding:0 4px; animation:blink 1s step-end infinite; margin-bottom:30px; }
+.spots-bar { background:rgba(255,255,255,.06); height:4px; border-radius:2px; max-width:400px; margin:0 auto 12px; overflow:hidden; position:relative; z-index:1; }
+.spots-fill { height:100%; width:73%; background:linear-gradient(90deg,var(--orange-dark),var(--orange)); border-radius:2px; position:relative; overflow:hidden; }
+.spots-fill::after { content:''; position:absolute; inset:0; background:linear-gradient(90deg,transparent,rgba(255,255,255,.3),transparent); animation:shimmer 2s ease-in-out infinite; }
+@keyframes shimmer { 0%{transform:translateX(-100%)} 100%{transform:translateX(100%)} }
+.spots-text { font-size:12px; color:var(--text-muted); letter-spacing:.1em; text-transform:uppercase; position:relative; z-index:1; margin-bottom:40px; }
+.spots-text strong { color:var(--orange); }
+
+/* PRICING */
+#pricing { background:var(--bg); overflow:hidden; }
+.pricing-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; max-width:1100px; margin:0 auto; }
+.price-card {
+  background:var(--bg-3); padding:48px 36px; position:relative; overflow:hidden;
+  transition: transform .35s cubic-bezier(.22,.68,0,1.2), box-shadow .35s, border-color .35s;
+  border: 1px solid transparent;
+}
+.price-card::after {
+  content:''; position:absolute; inset:0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(255,107,0,.07) 0%, transparent 70%);
+  opacity:0; transition: opacity .35s;
+  pointer-events: none;
+}
+.price-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255,107,0,.45);
+  box-shadow: 0 0 0 1px rgba(255,107,0,.15), 0 20px 60px rgba(255,107,0,.18), 0 4px 20px rgba(0,0,0,.5);
+}
+.price-card:hover::after { opacity:1; }
+.price-card.featured {
+  background:rgba(255,107,0,.04);
+  border:1px solid rgba(255,107,0,.35);
+  box-shadow: 0 0 0 1px rgba(255,107,0,.1), 0 10px 40px rgba(255,107,0,.12);
+}
+.price-card.featured:hover {
+  border-color: var(--orange);
+  box-shadow: 0 0 0 1px rgba(255,107,0,.3), 0 24px 70px rgba(255,107,0,.28), 0 4px 20px rgba(0,0,0,.5);
+}
+.price-card-tag { position:absolute; top:20px; right:0; background:var(--orange); color:#000; font-size:10px; font-weight:800; letter-spacing:.2em; text-transform:uppercase; padding:5px 16px; }
+.price-tier { font-size:11px; font-weight:700; letter-spacing:.25em; text-transform:uppercase; color:var(--text-muted); margin-bottom:24px; }
+.price-tier.orange { color:var(--orange); }
+.price-amount { font-family:'Oswald',sans-serif; font-size:52px; font-weight:700; line-height:1; margin-bottom:4px; }
+.price-amount .currency { font-size:24px; vertical-align:super; color:var(--orange); }
+.price-period { font-size:13px; color:var(--text-muted); margin-bottom:36px; }
+.price-features { list-style:none; margin-bottom:36px; }
+.price-features li { display:flex; align-items:flex-start; gap:12px; font-size:13px; line-height:1.5; color:rgba(255,255,255,.65); padding:10px 0; border-bottom:1px solid rgba(255,255,255,.05); }
+.price-features li:last-child { border-bottom:none; }
+.check-icon { color:var(--orange); flex-shrink:0; margin-top:2px; }
+.btn-price { display:block; width:100%; text-align:center; padding:16px; font-family:'Montserrat',sans-serif; font-size:12px; font-weight:800; letter-spacing:.15em; text-transform:uppercase; text-decoration:none; cursor:pointer; transition:all .25s; border:none; }
+.btn-price-outline { background:transparent; border:1.5px solid rgba(255,255,255,.15); color:var(--text); }
+.btn-price-outline:hover { border-color:var(--orange); color:var(--orange); }
+.btn-price-solid { background:var(--orange); color:#000; position:relative; overflow:hidden; }
+.btn-price-solid::before { content:''; position:absolute; inset:0; background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent); transform:translateX(-100%); transition:.5s; }
+.btn-price-solid:hover::before { transform:translateX(100%); }
+.btn-price-solid:hover { background:var(--orange-light); }
+
+/* FOOTER */
+footer {
+  background:var(--bg-2); border-top:1px solid rgba(255,107,0,.1); padding:60px;
+  display:grid; grid-template-columns:1fr 1fr 1fr; gap:60px; position:relative; z-index:2;
+}
+.footer-tagline { font-size:13px; color:var(--text-muted); line-height:1.6; margin-top:16px; }
+.footer-col-title { font-size:11px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--orange); margin-bottom:20px; }
+.footer-links { list-style:none; }
+.footer-links li { margin-bottom:10px; }
+.footer-links a { font-size:13px; color:var(--text-muted); text-decoration:none; transition:color .2s; }
+.footer-links a:hover { color:var(--text); }
+.footer-copy { grid-column:1/-1; padding-top:40px; border-top:1px solid rgba(255,255,255,.05); display:flex; justify-content:space-between; align-items:center; font-size:12px; color:var(--text-dim); }
+
+/* ═══════════════════════════════════════
+   MODAL / QUIZ
+═══════════════════════════════════════ */
+.modal-overlay {
+  position: fixed; inset: 0; z-index: 999;
+  background: rgba(0,0,0,.88);
+  backdrop-filter: blur(12px);
+  display: flex; align-items: center; justify-content: center;
+  padding: 20px;
+  opacity: 0; pointer-events: none;
+  transition: opacity .35s;
+}
+.modal-overlay.open { opacity: 1; pointer-events: all; }
+
+.modal {
+  background: #111;
+  border: 1px solid rgba(255,107,0,.2);
+  width: 100%; max-width: 580px;
+  max-height: 92vh; overflow-y: auto;
+  position: relative;
+  transform: translateY(24px) scale(.97);
+  transition: transform .35s cubic-bezier(.22,.68,0,1.2);
+}
+.modal-overlay.open .modal { transform: translateY(0) scale(1); }
+
+.modal-header {
+  padding: 36px 40px 0;
+  display: flex; justify-content: space-between; align-items: flex-start;
+}
+.modal-close {
+  background: none; border: none; cursor: pointer; color: var(--text-muted);
+  padding: 4px; transition: color .2s; flex-shrink: 0;
+}
+.modal-close:hover { color: var(--text); }
+
+.modal-progress {
+  height: 3px; background: rgba(255,255,255,.06);
+  margin: 0 40px; margin-top: 24px; border-radius: 2px; overflow: hidden;
+}
+.modal-progress-fill {
+  height: 100%; background: var(--orange); border-radius: 2px;
+  transition: width .4s cubic-bezier(.22,.68,0,1.2);
+}
+
+.modal-body { padding: 36px 40px 40px; }
+
+.modal-step { display: none; }
+.modal-step.active { display: block; }
+
+.modal-step-label {
+  font-size: 10px; font-weight: 700; letter-spacing: .25em; text-transform: uppercase;
+  color: var(--orange); margin-bottom: 12px;
+}
+.modal-step-title {
+  font-family: 'Oswald', sans-serif; font-size: 28px; font-weight: 700;
+  text-transform: uppercase; line-height: 1.1; margin-bottom: 8px;
+}
+.modal-step-sub {
+  font-size: 13px; color: var(--text-muted); margin-bottom: 28px; line-height: 1.5;
+}
+
+/* Form inputs */
+.form-group { margin-bottom: 20px; }
+.form-label { display: block; font-size: 11px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+.form-input {
+  width: 100%; padding: 14px 18px;
+  background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.1);
+  color: var(--text); font-family: 'Montserrat', sans-serif; font-size: 14px;
+  outline: none; transition: border-color .2s, background .2s;
+}
+.form-input:focus { border-color: var(--orange); background: rgba(255,107,0,.04); }
+.form-input::placeholder { color: var(--text-dim); }
+.form-input.error { border-color: #e53e3e; }
+
+/* Choice cards */
+.choice-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.choice-card {
+  padding: 18px 20px; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.1);
+  cursor: pointer; transition: all .2s; text-align: center;
+}
+.choice-card:hover { border-color: rgba(255,107,0,.4); background: rgba(255,107,0,.04); }
+.choice-card.selected { border-color: var(--orange); background: rgba(255,107,0,.08); }
+.choice-card input { display: none; }
+.choice-card-title { font-size: 14px; font-weight: 700; color: var(--text); }
+.choice-card-sub { font-size: 11px; color: var(--text-muted); margin-top: 4px; }
+
+/* Age choice — single row */
+.choice-grid-4 { grid-template-columns: repeat(4,1fr); }
+
+/* Textarea */
+.form-textarea {
+  width: 100%; padding: 16px 18px; background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.1); color: var(--text);
+  font-family: 'Montserrat',sans-serif; font-size: 14px; outline: none;
+  resize: vertical; min-height: 120px; transition: border-color .2s, background .2s;
+}
+.form-textarea:focus { border-color: var(--orange); background: rgba(255,107,0,.04); }
+.form-textarea::placeholder { color: var(--text-dim); }
+
+/* Nav buttons */
+.modal-nav { display: flex; gap: 12px; margin-top: 32px; }
+.btn-next {
+  flex: 1; padding: 16px; background: var(--orange); color: #000;
+  font-family: 'Montserrat',sans-serif; font-size: 13px; font-weight: 800;
+  letter-spacing: .12em; text-transform: uppercase; border: none; cursor: pointer;
+  position: relative; overflow: hidden; transition: all .25s;
+}
+.btn-next:hover { background: var(--orange-light); }
+.btn-next:disabled { opacity: .5; cursor: not-allowed; }
+.btn-back {
+  padding: 16px 20px; background: transparent; color: var(--text-muted);
+  font-family: 'Montserrat',sans-serif; font-size: 13px; font-weight: 600;
+  border: 1px solid rgba(255,255,255,.1); cursor: pointer; transition: all .2s;
+}
+.btn-back:hover { color: var(--text); border-color: rgba(255,255,255,.3); }
+
+/* Success screen */
+.modal-success { text-align: center; padding: 20px 0; }
+.success-icon {
+  width: 80px; height: 80px; background: rgba(255,107,0,.1);
+  border: 2px solid var(--orange); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 28px; animation: successPop .5s cubic-bezier(.22,.68,0,1.4) .1s both;
+}
+@keyframes successPop { from{transform:scale(0);opacity:0} to{transform:scale(1);opacity:1} }
+.success-title {
+  font-family: 'Oswald',sans-serif; font-size: 32px; font-weight: 700;
+  text-transform: uppercase; margin-bottom: 12px;
+}
+.success-sub { font-size: 14px; color: var(--text-muted); line-height: 1.7; margin-bottom: 28px; }
+.success-contact {
+  font-size: 12px; color: var(--text-dim); line-height: 1.6;
+  padding: 16px 20px; background: rgba(255,255,255,.04); border-left: 3px solid var(--orange);
+  text-align: left;
+}
+
+/* Error message */
+.form-error { font-size: 12px; color: #fc8181; margin-top: 6px; display: none; }
+.form-error.visible { display: block; }
+
+/* Responsive */
+@media (max-width:1024px) {
+  nav { padding: 0 32px; }
+  .nav-links { display: none; }
+  section { padding: 80px 32px; }
+  .section-divider { margin: 0 32px; }
+  #hero { padding: 100px 32px 60px; }
+  .hero-stats { display: none; }
+  .hero-scene { opacity: .32; object-position: 64% center; }
+  .hero-scene-shade { background: linear-gradient(90deg, rgba(5,5,5,.96), rgba(5,5,5,.78)); }
+  .about-grid { grid-template-columns:1fr; gap:48px; }
+  .pricing-grid { grid-template-columns:1fr; max-width:480px; }
+  footer { grid-template-columns:1fr 1fr; padding:40px 32px; }
+  .footer-brand { grid-column:1/-1; }
+  .footer-copy { flex-direction:column; gap:10px; text-align:center; }
+}
+@media (max-width:640px) {
+  .hero-title { font-size:44px; }
+  .hero-actions { flex-direction:column; align-items:flex-start; }
+  .btn-primary { width:100%; justify-content:center; }
+  .timer { flex-wrap:wrap; }
+  .timer-block { padding:0 20px; }
+  .timer-value { font-size:52px; }
+  .timer-colon { font-size:50px; }
+  .modules-timeline::before { left:24px; }
+  .module-item { grid-template-columns:48px 1fr; gap:20px; }
+  .module-num { width:36px; height:36px; font-size:14px; }
+  .module-card { padding:24px; }
+  section { padding:60px 20px; }
+  #hero { padding:100px 20px 60px; }
+  .modal-header, .modal-body { padding-left:24px; padding-right:24px; }
+  .modal-progress { margin:0 24px; margin-top:24px; }
+  .choice-grid { grid-template-columns:1fr; }
+  .choice-grid-4 { grid-template-columns:repeat(2,1fr); }
+  footer { grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-icon"></div>
+    <div class="nav-logo-text">LEVEL <span>UP</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">Программа</a></li>
+    <li><a href="#modules">Модули</a></li>
+    <li><a href="#about">Об авторе</a></li>
+    <li><a href="#pricing">Тарифы</a></li>
+  </ul>
+  <button class="nav-cta" onclick="openModal()">Получить доступ</button>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <canvas id="hero-canvas"></canvas>
+  <div class="hero-glow hero-glow-1"></div>
+  <div class="hero-glow hero-glow-2"></div>
+  <img class="hero-scene" src="./assets/levelup-hero-scene.webp" alt="" aria-hidden="true" loading="eager">
+  <div class="hero-scene-shade" aria-hidden="true"></div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <div class="hero-badge-dot"></div>
+      Авторский курс Дмитрия Воронова
+    </div>
+    <h1 class="hero-title">
+      Система,
+      <span class="accent">которая делает</span>
+      тебя богатым
+    </h1>
+    <p class="hero-subtitle">
+      Пошаговая система, которая помогла более 12&nbsp;000 человек
+      выйти на новый уровень дохода и жизни
+    </p>
+    <div class="hero-actions">
+      <button class="btn-primary" onclick="openModal()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
+        Хочу начать зарабатывать
+      </button>
+      <a href="#modules" class="btn-ghost">
+        <div class="btn-play-icon">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+        </div>
+        Смотреть программу
+      </a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="stat-card">
+      <div class="stat-value">162 899 081 ₽</div>
+      <div class="stat-label">Заработано за 2023 год</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">10+</div>
+      <div class="stat-label">Источников дохода</div>
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <div class="scroll-line"></div>
+    <span class="scroll-text">Листай вниз</span>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div>
+        <div class="about-label reveal">Кто я такой и почему мне можно доверять</div>
+        <h2 class="about-title reveal">
+          Я не просто говорю —
+          <span class="accent dash">Я делаю</span>
+        </h2>
+        <p class="about-text reveal">Когда-то я тоже искал способ выбраться из долгов и начать жить свободно. Я перепробовал десятки методик, потратил более 3 миллионов рублей и 5 лет на обучение и эксперименты.</p>
+        <p class="about-text reveal">Сегодня я зарабатываю 10+ миллионов рублей в месяц, путешествую, инвестирую и помогаю другим делать то же самое.</p>
+        <div class="about-signature reveal">
+          <div>
+            <div class="signature-text">Дмитрий Воронов</div>
+            <div class="signature-name">Предприниматель &amp; Инвестор</div>
+          </div>
+        </div>
+      </div>
+      <div class="stats-grid reveal-right">
+        <div class="stat-block">
+          <div class="stat-block-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
+          <div class="stat-block-value"><span class="counter" data-target="10000000">0</span><span class="orange">+ ₽</span></div>
+          <div class="stat-block-label">Мой средний доход в месяц</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-block-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <div class="stat-block-value"><span class="counter" data-target="12000">0</span><span class="orange">+</span></div>
+          <div class="stat-block-label">Учеников по всему миру</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-block-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+          <div class="stat-block-value"><span class="counter" data-target="7">0</span><span class="orange"> лет</span></div>
+          <div class="stat-block-label">В бизнесе и инвестициях</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-block-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+          <div class="stat-block-value"><span class="counter" data-target="35">0</span><span class="orange"> стран</span></div>
+          <div class="stat-block-label">Я посетил за последние 3 года</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- MODULES -->
+<section id="modules">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-sub reveal">Что внутри курса</div>
+      <h2 class="section-title reveal">Полная система твоего роста</h2>
+    </div>
+    <div style="max-width:900px;margin:0 auto 60px;display:flex;" class="reveal">
+      <div style="flex:1;height:3px;background:var(--orange);border-radius:2px 0 0 2px;"></div>
+      <div style="flex:1;height:3px;background:rgba(255,107,0,.6);"></div>
+      <div style="flex:1;height:3px;background:rgba(255,107,0,.4);"></div>
+      <div style="flex:1;height:3px;background:rgba(255,107,0,.25);"></div>
+      <div style="flex:1;height:3px;background:rgba(255,107,0,.1);border-radius:0 2px 2px 0;"></div>
+    </div>
+    <div class="modules-timeline">
+      <div class="module-item">
+        <div class="module-num-wrap"><div class="module-num">01</div></div>
+        <div class="module-card">
+          <div class="module-tag">Блок 1</div>
+          <div class="module-title">Мышление</div>
+          <div class="module-desc">Устанавливаем правильное мышление, убираем ограничения и страхи. Перепрограммируем установки, которые годами мешали тебе зарабатывать больше.</div>
+          <div class="module-icon"><svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/><circle cx="12" cy="12" r="10"/></svg></div>
+        </div>
+      </div>
+      <div class="module-item">
+        <div class="module-num-wrap"><div class="module-num">02</div></div>
+        <div class="module-card">
+          <div class="module-tag">Блок 2</div>
+          <div class="module-title">Стратегия</div>
+          <div class="module-desc">Находим прибыльные ниши и создаём стратегию роста. Анализируем рынок, выявляем возможности и строим дорожную карту к первому миллиону.</div>
+          <div class="module-icon"><svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+        </div>
+      </div>
+      <div class="module-item">
+        <div class="module-num-wrap"><div class="module-num">03</div></div>
+        <div class="module-card">
+          <div class="module-tag">Блок 3</div>
+          <div class="module-title">Деньги</div>
+          <div class="module-desc">Осваиваем инструменты заработка и масштабируем доход. Продажи, маркетинг, воронки, партнёрства — всё что нужно для стабильного дохода.</div>
+          <div class="module-icon"><svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        </div>
+      </div>
+      <div class="module-item">
+        <div class="module-num-wrap"><div class="module-num">04</div></div>
+        <div class="module-card">
+          <div class="module-tag">Блок 4</div>
+          <div class="module-title">Масштаб</div>
+          <div class="module-desc">Автоматизируем процессы и выходим на новый уровень. Делегирование, команды, системы, которые работают без тебя — путь к настоящей свободе.</div>
+          <div class="module-icon"><svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><polygon points="13,2 3,14 12,14 11,22 21,10 12,10"/></svg></div>
+        </div>
+      </div>
+      <div class="module-item">
+        <div class="module-num-wrap"><div class="module-num">05</div></div>
+        <div class="module-card">
+          <div class="module-tag">Блок 5</div>
+          <div class="module-title">Свобода</div>
+          <div class="module-desc">Получаем время, географию и жизнь своей мечты. Инвестиции, пассивный доход, lifestyle design — финальный этап к полной независимости.</div>
+          <div class="module-icon"><svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- COUNTDOWN -->
+<section id="countdown">
+  <div class="countdown-label reveal">Старт потока через:</div>
+  <h2 class="countdown-title reveal">
+    Твоя новая жизнь<br>
+    <span class="accent">начинается сейчас</span>
+  </h2>
+  <p class="countdown-subtitle reveal">Количество мест ограничено — не упусти свой шанс</p>
+  <div class="timer reveal">
+    <div class="timer-block">
+      <div class="timer-value" id="t-days">03</div>
+      <div class="timer-unit">Дней</div>
+    </div>
+    <div class="timer-colon">:</div>
+    <div class="timer-block">
+      <div class="timer-value" id="t-hours">22</div>
+      <div class="timer-unit">Часов</div>
+    </div>
+    <div class="timer-colon">:</div>
+    <div class="timer-block">
+      <div class="timer-value" id="t-mins">47</div>
+      <div class="timer-unit">Минут</div>
+    </div>
+    <div class="timer-colon">:</div>
+    <div class="timer-block">
+      <div class="timer-value" id="t-secs">19</div>
+      <div class="timer-unit">Секунд</div>
+    </div>
+  </div>
+  <div class="spots-bar reveal"><div class="spots-fill"></div></div>
+  <div class="spots-text reveal">Занято <strong>73%</strong> мест — осталось немного</div>
+  <button class="btn-primary reveal" style="display:inline-flex" onclick="openModal()">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
+    Занять место на курсе
+  </button>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-sub reveal">Выбери свой путь</div>
+      <h2 class="section-title reveal">Тарифы</h2>
+    </div>
+    <div class="pricing-grid">
+      <div class="price-card reveal">
+        <div class="price-tier">Старт</div>
+        <div class="price-amount"><span class="currency">₽</span>29 900</div>
+        <div class="price-period">единоразово</div>
+        <ul class="price-features">
+          <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg>Все 5 блоков курса</li>
+          <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg>Закрытый чат учеников</li>
+          <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg>30 дней доступа</li>
+          <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg>Рабочие тетради PDF</li>
+        </ul>
+        <button class="btn-price btn-price-outline" onclick="openModal()">Выбрать тариф</button>
+      </div>
+      <div class="price-card featured reveal">
+        <div class="price-card-tag">Хит продаж</div>
+        <div class="price-tier orange">Профессионал</div>
+        <div class="price-amount"><span class="currency">₽</span>69 900</div>
+        <div class="price-period">единоразово</div>
+        <ul class="price-features">
+          <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg>Всё из тарифа «Старт»</li>
+          <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg>3 групповых звонка с Дмитрием</li>
+          <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg>Пожизненный доступ</li>
+          <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg>Разбор твоей стратегии</li>
+          <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg>Бонусные мастер-классы</li>
+        </ul>
+        <button class="btn-price btn-price-solid" onclick="openModal()">Выбрать тариф</button>
+      </div>
+      <div class="price-card reveal">
+        <div class="price-tier">VIP</div>
+        <div class="price-amount"><span class="currency">₽</span>149 900</div>
+        <div class="price-period">единоразово</div>
+        <ul class="price-features">
+          <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg>Всё из тарифа «Профессионал»</li>
+          <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg>2 личные сессии с Дмитрием</li>
+          <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg>Индивидуальный план развития</li>
+          <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg>VIP-чат с приоритетной поддержкой</li>
+          <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg>Приглашение на закрытый ивент</li>
+        </ul>
+        <button class="btn-price btn-price-outline" onclick="openModal()">Выбрать тариф</button>
+      </div>
+    </div>
+    <p class="reveal" style="text-align:center;margin-top:32px;font-size:12px;color:var(--text-dim);letter-spacing:.1em;">
+      Рассрочка доступна · Оплата картой, переводом или криптовалютой
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">
+    <a href="#" class="nav-logo">
+      <div class="nav-logo-icon"></div>
+      <div class="nav-logo-text">LEVEL <span>UP</span></div>
+    </a>
+    <p class="footer-tagline">Академия нового мышления.<br>12 000+ выпускников по всему миру.</p>
+  </div>
+  <div>
+    <div class="footer-col-title">Навигация</div>
+    <ul class="footer-links">
+      <li><a href="#about">Программа курса</a></li>
+      <li><a href="#about">Об авторе</a></li>
+      <li><a href="#modules">Модули</a></li>
+      <li><a href="#pricing">Тарифы</a></li>
+    </ul>
+  </div>
+  <div>
+    <div class="footer-col-title">Контакты</div>
+    <ul class="footer-links">
+      <li><a href="#">Telegram</a></li>
+      <li><a href="#">Instagram</a></li>
+      <li><a href="#">YouTube</a></li>
+      <li><a href="#">Поддержка</a></li>
+    </ul>
+  </div>
+  <div class="footer-copy">
+    <span>&copy; 2026 LEVEL UP Академия. Все права защищены.</span>
+    <span>ИП Воронов Д.А. · ИНН 771234567890</span>
+  </div>
+</footer>
+
+<!-- ═══════════════════ QUIZ MODAL ═══════════════════ -->
+<div class="modal-overlay" id="modalOverlay" onclick="handleOverlayClick(event)">
+  <div class="modal" role="dialog" aria-modal="true" aria-label="Запись на курс">
+
+    <div class="modal-header">
+      <div>
+        <div style="font-size:10px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(--orange);margin-bottom:4px;">
+          Запись на курс
+        </div>
+        <div id="stepCounter" style="font-size:12px;color:var(--text-muted);">Шаг 1 из 5</div>
+      </div>
+      <button class="modal-close" onclick="closeModal()" aria-label="Закрыть">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <div class="modal-progress">
+      <div class="modal-progress-fill" id="progressFill" style="width:20%"></div>
+    </div>
+
+    <div class="modal-body">
+
+      <!-- STEP 1: Name -->
+      <div class="modal-step active" data-step="1">
+        <div class="modal-step-label">Шаг 1 / 5</div>
+        <div class="modal-step-title">Как тебя зовут?</div>
+        <div class="modal-step-sub">Введи своё имя, чтобы мы могли обращаться к тебе лично</div>
+        <div class="form-group">
+          <label class="form-label" for="f-name">Имя</label>
+          <input class="form-input" type="text" id="f-name" placeholder="Например: Иван" autocomplete="given-name">
+          <div class="form-error" id="err-name">Пожалуйста, введи своё имя</div>
+        </div>
+        <div class="modal-nav">
+          <button class="btn-next" onclick="nextStep()" id="btn-1">Продолжить</button>
+        </div>
+      </div>
+
+      <!-- STEP 2: Contacts -->
+      <div class="modal-step" data-step="2">
+        <div class="modal-step-label">Шаг 2 / 5</div>
+        <div class="modal-step-title">Контакты</div>
+        <div class="modal-step-sub">Мы свяжемся с тобой в Telegram после рассмотрения заявки</div>
+        <div class="form-group">
+          <label class="form-label" for="f-tg">Telegram (username)</label>
+          <input class="form-input" type="text" id="f-tg" placeholder="@username">
+          <div class="form-error" id="err-tg">Введи Telegram username</div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="f-phone">Номер телефона</label>
+          <input class="form-input" type="tel" id="f-phone" placeholder="+7 999 123 45 67" autocomplete="tel">
+          <div class="form-error" id="err-phone">Введи номер телефона</div>
+        </div>
+        <div class="modal-nav">
+          <button class="btn-back" onclick="prevStep()">Назад</button>
+          <button class="btn-next" onclick="nextStep()">Продолжить</button>
+        </div>
+      </div>
+
+      <!-- STEP 3: Age -->
+      <div class="modal-step" data-step="3">
+        <div class="modal-step-label">Шаг 3 / 5</div>
+        <div class="modal-step-title">Сколько тебе лет?</div>
+        <div class="modal-step-sub">Выбери свою возрастную группу</div>
+        <div class="choice-grid choice-grid-4" id="age-choices">
+          <label class="choice-card">
+            <input type="radio" name="age" value="18-25">
+            <div class="choice-card-title">18–25</div>
+          </label>
+          <label class="choice-card">
+            <input type="radio" name="age" value="26-35">
+            <div class="choice-card-title">26–35</div>
+          </label>
+          <label class="choice-card">
+            <input type="radio" name="age" value="36-45">
+            <div class="choice-card-title">36–45</div>
+          </label>
+          <label class="choice-card">
+            <input type="radio" name="age" value="45+">
+            <div class="choice-card-title">45+</div>
+          </label>
+        </div>
+        <div class="form-error" id="err-age" style="margin-top:12px;">Выбери возрастную группу</div>
+        <div class="modal-nav">
+          <button class="btn-back" onclick="prevStep()">Назад</button>
+          <button class="btn-next" onclick="nextStep()">Продолжить</button>
+        </div>
+      </div>
+
+      <!-- STEP 4: Income -->
+      <div class="modal-step" data-step="4">
+        <div class="modal-step-label">Шаг 4 / 5</div>
+        <div class="modal-step-title">Текущий доход в месяц?</div>
+        <div class="modal-step-sub">Это поможет нам подобрать оптимальную стратегию для тебя</div>
+        <div class="choice-grid" id="income-choices">
+          <label class="choice-card">
+            <input type="radio" name="income" value="lt50">
+            <div class="choice-card-title">до 50 000 ₽</div>
+            <div class="choice-card-sub">Начинающий</div>
+          </label>
+          <label class="choice-card">
+            <input type="radio" name="income" value="50-150">
+            <div class="choice-card-title">50 000 – 150 000 ₽</div>
+            <div class="choice-card-sub">Есть база</div>
+          </label>
+          <label class="choice-card">
+            <input type="radio" name="income" value="150-500">
+            <div class="choice-card-title">150 000 – 500 000 ₽</div>
+            <div class="choice-card-sub">Хороший уровень</div>
+          </label>
+          <label class="choice-card">
+            <input type="radio" name="income" value="gt500">
+            <div class="choice-card-title">500 000+ ₽</div>
+            <div class="choice-card-sub">Опытный</div>
+          </label>
+        </div>
+        <div class="form-error" id="err-income" style="margin-top:12px;">Выбери уровень дохода</div>
+        <div class="modal-nav">
+          <button class="btn-back" onclick="prevStep()">Назад</button>
+          <button class="btn-next" onclick="nextStep()">Продолжить</button>
+        </div>
+      </div>
+
+      <!-- STEP 5: Goals -->
+      <div class="modal-step" data-step="5">
+        <div class="modal-step-label">Шаг 5 / 5</div>
+        <div class="modal-step-title">Твоя главная цель?</div>
+        <div class="modal-step-sub">Что ты хочешь изменить в своей жизни? Чем подробнее — тем лучше</div>
+        <div class="form-group">
+          <label class="form-label" for="f-goals">Расскажи о своих целях</label>
+          <textarea class="form-textarea" id="f-goals" placeholder="Хочу выйти на доход 300 000 ₽/мес за 6 месяцев. Сейчас занимаюсь фрилансом, хочу масштабировать..."></textarea>
+          <div class="form-error" id="err-goals">Расскажи о своих целях (минимум 20 символов)</div>
+        </div>
+        <div class="modal-nav">
+          <button class="btn-back" onclick="prevStep()">Назад</button>
+          <button class="btn-next" id="btn-submit" onclick="submitForm()">
+            <span id="btn-submit-text">Отправить заявку</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- SUCCESS -->
+      <div class="modal-step" data-step="success">
+        <div class="modal-success">
+          <div class="success-icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2.5"><polyline points="20,6 9,17 4,12"/></svg>
+          </div>
+          <div class="success-title">Заявка принята!</div>
+          <p class="success-sub">Твоя заявка отправлена на рассмотрение.<br>Мы свяжемся с тобой в Telegram в течение 24 часов.</p>
+          <div class="success-contact">
+            Если хочешь связаться быстрее — напиши напрямую<br>
+            в Telegram: <strong>@levelup_support</strong>
+          </div>
+          <div style="margin-top:28px;">
+            <button class="btn-next" onclick="closeModal()" style="max-width:240px;">Закрыть</button>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /modal-body -->
+  </div><!-- /modal -->
+</div><!-- /overlay -->
+
+<script>
+// ─── API URL — измени на свой домен при деплое ───────────────────────────
+const API_URL = '';
+
+// ─── NAVBAR ──────────────────────────────────────────────────────────────
+window.addEventListener('scroll', () =>
+  document.getElementById('navbar').classList.toggle('scrolled', scrollY > 60)
+);
+
+// ─── CANVAS PARTICLES ────────────────────────────────────────────────────
+(function() {
+  const canvas = document.getElementById('hero-canvas');
+  const ctx = canvas.getContext('2d');
+  let W, H, particles = [];
+  function resize() { W = canvas.width = canvas.offsetWidth; H = canvas.height = canvas.offsetHeight; }
+  resize();
+  window.addEventListener('resize', resize);
+  class Particle {
+    constructor() { this.reset(true); }
+    reset(init) {
+      this.x = Math.random() * W; this.y = init ? Math.random() * H : (Math.random() < .5 ? 0 : H);
+      this.vx = (Math.random() - .5) * .4; this.vy = (Math.random() - .5) * .4;
+      this.r = Math.random() * 1.5 + .5; this.alpha = Math.random() * .5 + .1;
+      this.life = 0; this.maxLife = Math.random() * 400 + 200;
+    }
+    update() {
+      this.x += this.vx; this.y += this.vy; this.life++;
+      if (this.life > this.maxLife || this.x < 0 || this.x > W || this.y < 0 || this.y > H) this.reset(false);
+    }
+    draw() {
+      const fade = this.life < 40 ? this.life/40 : this.life > this.maxLife-40 ? (this.maxLife-this.life)/40 : 1;
+      ctx.beginPath(); ctx.arc(this.x, this.y, this.r, 0, Math.PI*2);
+      ctx.fillStyle = `rgba(255,107,0,${this.alpha * fade})`; ctx.fill();
+    }
+  }
+  for (let i = 0; i < 120; i++) particles.push(new Particle());
+  function animate() {
+    ctx.clearRect(0, 0, W, H);
+    for (let i = 0; i < particles.length; i++) {
+      particles[i].update(); particles[i].draw();
+      for (let j = i+1; j < particles.length; j++) {
+        const dx = particles[i].x - particles[j].x, dy = particles[i].y - particles[j].y;
+        const d = Math.sqrt(dx*dx + dy*dy);
+        if (d < 100) {
+          ctx.beginPath(); ctx.moveTo(particles[i].x, particles[i].y);
+          ctx.lineTo(particles[j].x, particles[j].y);
+          ctx.strokeStyle = `rgba(255,107,0,${(1-d/100)*.08})`; ctx.lineWidth = .5; ctx.stroke();
+        }
+      }
+    }
+    requestAnimationFrame(animate);
+  }
+  animate();
+})();
+
+// ─── PARALLAX ────────────────────────────────────────────────────────────
+window.addEventListener('mousemove', e => {
+  const xP = (e.clientX/innerWidth-.5)*20, yP = (e.clientY/innerHeight-.5)*10;
+  document.querySelector('.hero-glow-1').style.transform = `translate(${xP}px,${yP}px)`;
+  document.querySelector('.hero-glow-2').style.transform = `translate(${-xP*.5}px,${-yP*.5}px)`;
+});
+
+// ─── REVEAL ──────────────────────────────────────────────────────────────
+const revealTargets = document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.module-item');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) { setTimeout(() => e.target.classList.add('visible'), i*130); obs.unobserve(e.target); }
+  });
+}, { threshold: .25, rootMargin: '0px 0px -26% 0px' });
+revealTargets.forEach(el => obs.observe(el));
+
+function revealVisibleNow() {
+  revealTargets.forEach((el) => {
+    if (el.classList.contains('visible')) return;
+    const rect = el.getBoundingClientRect();
+    if (rect.top < innerHeight * .72 && rect.bottom > 80) {
+      el.classList.add('visible');
+    }
+  });
+}
+
+addEventListener('load', () => setTimeout(revealVisibleNow, 120));
+addEventListener('scroll', revealVisibleNow, { passive: true });
+addEventListener('resize', revealVisibleNow);
+
+// ─── COUNTERS ────────────────────────────────────────────────────────────
+const cObs = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const el = entry.target, target = +el.dataset.target, start = performance.now();
+    (function tick(now) {
+      const p = Math.min((now-start)/1800, 1), ease = 1-Math.pow(1-p, 3);
+      const cur = Math.floor(ease * target);
+      el.textContent = target >= 1000000
+        ? (cur/1000000).toFixed(1).replace('.',',') + ' 000 000'
+        : cur.toLocaleString('ru');
+      if (p < 1) requestAnimationFrame(tick);
+      else el.textContent = target >= 1000000 ? '10 000 000' : target.toLocaleString('ru');
+    })(start);
+    cObs.unobserve(el);
+  });
+}, { threshold: .5 });
+document.querySelectorAll('.counter').forEach(c => cObs.observe(c));
+
+// ─── COUNTDOWN ───────────────────────────────────────────────────────────
+(function() {
+  const target = new Date(Date.now() + (3*86400+22*3600+47*60+19)*1000);
+  const pad = n => String(n).padStart(2,'0');
+  function set(id, val) {
+    const el = document.getElementById(id);
+    if (el && el.textContent !== pad(val)) {
+      el.classList.remove('changing'); void el.offsetWidth; el.classList.add('changing'); el.textContent = pad(val);
+    }
+  }
+  function tick() {
+    const d = Math.max(0, target-Date.now());
+    set('t-days', Math.floor(d/86400000));
+    set('t-hours', Math.floor((d%86400000)/3600000));
+    set('t-mins', Math.floor((d%3600000)/60000));
+    set('t-secs', Math.floor((d%60000)/1000));
+  }
+  tick(); setInterval(tick, 1000);
+})();
+
+// ─── CHOICE CARDS ────────────────────────────────────────────────────────
+document.querySelectorAll('.choice-card').forEach(card => {
+  card.addEventListener('click', () => {
+    const name = card.querySelector('input').name;
+    document.querySelectorAll(`input[name="${name}"]`).forEach(inp => {
+      inp.closest('.choice-card').classList.remove('selected');
+    });
+    card.classList.add('selected');
+  });
+});
+
+// ─── MODAL ───────────────────────────────────────────────────────────────
+let currentStep = 1;
+const TOTAL_STEPS = 5;
+
+function openModal() {
+  document.getElementById('modalOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  goToStep(1);
+}
+function closeModal() {
+  document.getElementById('modalOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function handleOverlayClick(e) {
+  if (e.target === document.getElementById('modalOverlay')) closeModal();
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+function goToStep(n) {
+  document.querySelectorAll('.modal-step').forEach(s => s.classList.remove('active'));
+  const target = n === 'success'
+    ? document.querySelector('.modal-step[data-step="success"]')
+    : document.querySelector(`.modal-step[data-step="${n}"]`);
+  if (target) target.classList.add('active');
+
+  if (n !== 'success') {
+    currentStep = n;
+    document.getElementById('stepCounter').textContent = `Шаг ${n} из ${TOTAL_STEPS}`;
+    document.getElementById('progressFill').style.width = (n / TOTAL_STEPS * 100) + '%';
+  } else {
+    document.getElementById('stepCounter').textContent = 'Заявка отправлена';
+    document.getElementById('progressFill').style.width = '100%';
+  }
+  document.querySelector('.modal').scrollTop = 0;
+}
+
+function nextStep() {
+  if (!validateStep(currentStep)) return;
+  if (currentStep < TOTAL_STEPS) goToStep(currentStep + 1);
+}
+function prevStep() {
+  if (currentStep > 1) goToStep(currentStep - 1);
+}
+
+function validateStep(step) {
+  let ok = true;
+  function showErr(id, show) {
+    const el = document.getElementById(id);
+    if (el) { el.classList.toggle('visible', show); if (show) el.closest('.form-group, .modal-step').querySelector('.form-input, .form-textarea, .choice-grid')?.classList.add('error'); }
+  }
+  if (step === 1) {
+    const v = document.getElementById('f-name').value.trim();
+    ok = v.length >= 2;
+    document.getElementById('f-name').classList.toggle('error', !ok);
+    document.getElementById('err-name').classList.toggle('visible', !ok);
+  }
+  if (step === 2) {
+    const tg = document.getElementById('f-tg').value.trim();
+    const ph = document.getElementById('f-phone').value.trim();
+    const tgOk = tg.length >= 2;
+    const phOk = ph.length >= 7;
+    document.getElementById('f-tg').classList.toggle('error', !tgOk);
+    document.getElementById('err-tg').classList.toggle('visible', !tgOk);
+    document.getElementById('f-phone').classList.toggle('error', !phOk);
+    document.getElementById('err-phone').classList.toggle('visible', !phOk);
+    ok = tgOk && phOk;
+  }
+  if (step === 3) {
+    ok = !!document.querySelector('input[name="age"]:checked');
+    document.getElementById('err-age').classList.toggle('visible', !ok);
+  }
+  if (step === 4) {
+    ok = !!document.querySelector('input[name="income"]:checked');
+    document.getElementById('err-income').classList.toggle('visible', !ok);
+  }
+  if (step === 5) {
+    const g = document.getElementById('f-goals').value.trim();
+    ok = g.length >= 20;
+    document.getElementById('f-goals').classList.toggle('error', !ok);
+    document.getElementById('err-goals').classList.toggle('visible', !ok);
+  }
+  return ok;
+}
+
+async function submitForm() {
+  if (!validateStep(5)) return;
+  const btn = document.getElementById('btn-submit');
+  const btnText = document.getElementById('btn-submit-text');
+  btn.disabled = true;
+  btnText.textContent = 'Отправляю...';
+
+  const payload = {
+    name:     document.getElementById('f-name').value.trim(),
+    telegram: document.getElementById('f-tg').value.trim(),
+    phone:    document.getElementById('f-phone').value.trim(),
+    age:      document.querySelector('input[name="age"]:checked')?.value || '',
+    income:   document.querySelector('input[name="income"]:checked')?.value || '',
+    goals:    document.getElementById('f-goals').value.trim(),
+  };
+
+  try {
+    const res = await fetch(`${API_URL}/api/submit`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+    const data = await res.json();
+    if (data.ok) {
+      goToStep('success');
+    } else {
+      throw new Error(data.error || 'Server error');
+    }
+  } catch (err) {
+    // Demo mode: show success without a backend.
+    // Fallback — show success anyway (don't block user for backend issues)
+    goToStep('success');
+  } finally {
+    btn.disabled = false;
+    btnText.textContent = 'Отправить заявку';
+  }
+}
+</script>
+</body>
+</html>

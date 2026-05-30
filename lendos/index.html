@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StackForge Go | Курс backend-разработки на Go</title>
+    <meta
+      name="description"
+      content="StackForge Go - практический курс backend-разработки: Go, архитектура сервисов, PostgreSQL, Redis, Docker, gRPC, code review и финальный проект."
+    />
+    <meta name="theme-color" content="#f4f0e8" />
+    <meta property="og:title" content="StackForge Go | Соберите backend, который выдержит ревью" />
+    <meta
+      property="og:description"
+      content="15 недель практики, code review и финальный backend-сервис на Go для портфолио."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Onest:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=stackforge7" />
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <a class="brand" href="#top" aria-label="StackForge Go">
+        <span>StackForge</span><strong>Go</strong>
+      </a>
+      <div class="build-pill" aria-label="Статус курса">
+        <span></span>
+        сборка проекта: 15 недель
+      </div>
+      <nav class="main-nav" aria-label="Навигация">
+        <a href="#shift">Зачем</a>
+        <a href="#program">Маршрут</a>
+        <a href="#lab">Проект</a>
+        <a href="#request">Заявка</a>
+      </nav>
+      <button class="menu-button" type="button" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="page-shell hero-grid">
+          <div class="hero-copy reveal">
+            <span class="eyebrow">backend bootcamp / Go / code review</span>
+            <h1>Соберите backend, который выдержит ревью</h1>
+            <p>
+              StackForge Go ведет от разрозненных уроков к понятному production-сервису:
+              архитектура, API, данные, тесты, Docker и финальный репозиторий для портфолио.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="#request">
+                Записаться на курс
+                <span aria-hidden="true">&rarr;</span>
+              </a>
+              <a class="button ghost" href="#program">Разобрать маршрут</a>
+            </div>
+            <dl class="hero-stats" aria-label="Параметры курса">
+              <div>
+                <dt><span class="stat-number" data-count="15">0</span></dt>
+                <dd>недель сборки сервиса</dd>
+              </div>
+              <div>
+                <dt><span class="stat-number" data-count="24">0</span></dt>
+                <dd>практических задания</dd>
+              </div>
+              <div>
+                <dt><span class="stat-number" data-count="6">0</span></dt>
+                <dd>модулей до проекта</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="build-board reveal" aria-label="Схема backend-сервиса">
+            <div class="board-header">
+              <div>
+                <span class="status-light"></span>
+                <strong>service assembly map</strong>
+              </div>
+              <small>branch: review-ready</small>
+            </div>
+            <div class="architecture-map">
+              <svg class="route-lines" viewBox="0 0 720 460" aria-hidden="true">
+                <path class="route route-a" d="M84 95 C180 95 180 206 286 206 S424 206 520 206 S604 304 662 304" />
+                <path class="route route-b" d="M286 206 C286 288 222 330 150 356" />
+                <path class="route route-c" d="M520 206 C520 128 580 102 648 92" />
+              </svg>
+              <article class="map-node node-client">
+                <small>01</small>
+                <strong>Client</strong>
+                <span>request</span>
+              </article>
+              <article class="map-node node-api">
+                <small>02</small>
+                <strong>HTTP API</strong>
+                <span>middleware / validation</span>
+              </article>
+              <article class="map-node node-service">
+                <small>03</small>
+                <strong>Service layer</strong>
+                <span>business rules</span>
+              </article>
+              <article class="map-node node-db">
+                <small>04</small>
+                <strong>PostgreSQL</strong>
+                <span>migrations / indexes</span>
+              </article>
+              <article class="map-node node-cache">
+                <small>05</small>
+                <strong>Redis</strong>
+                <span>cache / queues</span>
+              </article>
+              <article class="map-node node-deploy">
+                <small>06</small>
+                <strong>Docker</strong>
+                <span>deploy package</span>
+              </article>
+            </div>
+            <div class="terminal-strip" aria-label="Статус сборки">
+              <span>$ go test ./...</span>
+              <strong>ok</strong>
+              <span>$ docker compose up</span>
+              <strong>healthy</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="shift section-pad" id="shift">
+        <div class="page-shell shift-grid">
+          <div class="section-title reveal">
+            <span class="section-kicker">Смена уровня</span>
+            <h2>Не “выучил синтаксис”, а понял, как держится сервис</h2>
+            <p>
+              Переключите состояние и посмотрите, что меняется после курса. В фокусе не красивые слова,
+              а конкретные инженерные привычки.
+            </p>
+          </div>
+
+          <div class="compare-lab reveal">
+            <div class="compare-tabs" role="tablist" aria-label="Состояние студента">
+              <button class="compare-tab is-active" type="button" data-compare-target="before">До курса</button>
+              <button class="compare-tab" type="button" data-compare-target="after">После курса</button>
+            </div>
+
+            <div class="compare-state is-active" data-compare-state="before">
+              <div class="compare-copy">
+                <span>before</span>
+                <h3>Код работает, но его страшно менять</h3>
+                <p>HTTP-обработчики разрастаются, ошибки живут где попало, база подключена напрямую, тесты откладываются на потом.</p>
+              </div>
+              <ul class="trace-list">
+                <li><span></span>handlers знают слишком много</li>
+                <li><span></span>нет границ между слоями</li>
+                <li><span></span>миграции и конфиги в голове</li>
+              </ul>
+            </div>
+
+            <div class="compare-state" data-compare-state="after">
+              <div class="compare-copy">
+                <span>after</span>
+                <h3>Проект читается как система</h3>
+                <p>Есть слои, контракты, репозитории, обработка ошибок, тесты и Docker-окружение. Решения можно объяснить на ревью.</p>
+              </div>
+              <ul class="trace-list">
+                <li><span></span>архитектура разложена по слоям</li>
+                <li><span></span>API описан контрактами</li>
+                <li><span></span>проект готов к демонстрации</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="program section-pad" id="program">
+        <div class="page-shell">
+          <div class="section-title reveal">
+            <span class="section-kicker">Сборочный маршрут</span>
+            <h2>Шесть узлов, из которых складывается backend-проект</h2>
+            <p>Откройте любой модуль: панель справа пересоберет прогресс, уровень и карту навыков.</p>
+          </div>
+
+          <div class="program-layout">
+            <div class="module-list reveal" aria-label="Модули курса">
+              <article class="module-item is-open" data-module data-progress="18" data-weeks="2" data-tasks="4" data-level="Junior">
+                <button class="module-head" type="button" aria-expanded="true">
+                  <span>01</span>
+                  <strong>Go foundation</strong>
+                  <small>2 недели</small>
+                </button>
+                <div class="module-body">
+                  <ul>
+                    <li>Синтаксис, пакеты, модули и tooling</li>
+                    <li>Ошибки, интерфейсы, структуры данных</li>
+                    <li>Unit-тесты и первые CLI-задачи</li>
+                  </ul>
+                  <a href="#request">Начать с основы</a>
+                </div>
+              </article>
+
+              <article class="module-item" data-module data-progress="36" data-weeks="3" data-tasks="5" data-level="Junior+">
+                <button class="module-head" type="button" aria-expanded="false">
+                  <span>02</span>
+                  <strong>Service architecture</strong>
+                  <small>3 недели</small>
+                </button>
+                <div class="module-body">
+                  <ul>
+                    <li>Слои приложения и границы ответственности</li>
+                    <li>Dependency Injection и конфигурация</li>
+                    <li>Обработка ошибок, логирование, code review</li>
+                  </ul>
+                  <a href="#request">Разобрать архитектуру</a>
+                </div>
+              </article>
+
+              <article class="module-item" data-module data-progress="52" data-weeks="3" data-tasks="4" data-level="Middle-">
+                <button class="module-head" type="button" aria-expanded="false">
+                  <span>03</span>
+                  <strong>Data layer</strong>
+                  <small>3 недели</small>
+                </button>
+                <div class="module-body">
+                  <ul>
+                    <li>PostgreSQL, миграции и индексы</li>
+                    <li>Транзакции, репозитории и SQL-запросы</li>
+                    <li>Redis для кеша и очередей</li>
+                  </ul>
+                  <a href="#request">Собрать слой данных</a>
+                </div>
+              </article>
+
+              <article class="module-item" data-module data-progress="68" data-weeks="3" data-tasks="4" data-level="Middle">
+                <button class="module-head" type="button" aria-expanded="false">
+                  <span>04</span>
+                  <strong>API contracts</strong>
+                  <small>3 недели</small>
+                </button>
+                <div class="module-body">
+                  <ul>
+                    <li>HTTP, middleware и валидация</li>
+                    <li>OpenAPI и контрактное мышление</li>
+                    <li>gRPC, protobuf и внутренние сервисы</li>
+                  </ul>
+                  <a href="#request">Проектировать API</a>
+                </div>
+              </article>
+
+              <article class="module-item" data-module data-progress="84" data-weeks="2" data-tasks="3" data-level="Middle">
+                <button class="module-head" type="button" aria-expanded="false">
+                  <span>05</span>
+                  <strong>Runtime and deploy</strong>
+                  <small>2 недели</small>
+                </button>
+                <div class="module-body">
+                  <ul>
+                    <li>Docker, Compose и окружения</li>
+                    <li>Health-checks, graceful shutdown и метрики</li>
+                    <li>CI-подход и подготовка к деплою</li>
+                  </ul>
+                  <a href="#request">Подготовить сервис</a>
+                </div>
+              </article>
+
+              <article class="module-item" data-module data-progress="100" data-weeks="2" data-tasks="4" data-level="Middle">
+                <button class="module-head" type="button" aria-expanded="false">
+                  <span>06</span>
+                  <strong>Portfolio project</strong>
+                  <small>2 недели</small>
+                </button>
+                <div class="module-body">
+                  <ul>
+                    <li>Сервис с авторизацией, базой данных, кешем и API</li>
+                    <li>Code review и доработка архитектуры</li>
+                    <li>Оформление проекта в портфолио</li>
+                  </ul>
+                  <a href="#request">Дойти до проекта</a>
+                </div>
+              </article>
+            </div>
+
+            <aside class="program-dashboard reveal">
+              <div class="dashboard-head">
+                <span>build progress</span>
+                <strong>StackForge OS</strong>
+              </div>
+
+              <div class="dashboard-tabs" role="tablist" aria-label="Информация о программе">
+                <button class="dash-tab is-active" type="button" data-tab="overview">Обзор</button>
+                <button class="dash-tab" type="button" data-tab="skills">Навыки</button>
+                <button class="dash-tab" type="button" data-tab="project">Проект</button>
+              </div>
+
+              <div class="dashboard-content">
+                <div class="progress-panel">
+                  <span class="panel-label">Ваш прогресс</span>
+                  <p data-panel-text>Пройдите первый модуль и соберите фундамент Go-разработки.</p>
+                  <div class="progress-orbit" style="--progress: 18">
+                    <svg viewBox="0 0 120 120" aria-hidden="true">
+                      <circle class="progress-track" cx="60" cy="60" r="48"></circle>
+                      <circle class="progress-value" cx="60" cy="60" r="48"></circle>
+                    </svg>
+                    <strong><span data-progress-number>18</span>%</strong>
+                  </div>
+                </div>
+
+                <div class="dashboard-metrics">
+                  <div>
+                    <span>Длительность</span>
+                    <strong><b data-weeks>2</b> недели</strong>
+                  </div>
+                  <div>
+                    <span>Практика</span>
+                    <strong><b data-tasks>4</b> задания</strong>
+                  </div>
+                  <div>
+                    <span>Уровень</span>
+                    <strong data-level>Junior</strong>
+                  </div>
+                </div>
+              </div>
+
+              <div class="chart-panel">
+                <span class="panel-label">Рост навыков</span>
+                <svg class="skill-chart" viewBox="0 0 420 220" role="img" aria-label="График роста навыков">
+                  <defs>
+                    <linearGradient id="chartLine" x1="0" x2="1">
+                      <stop offset="0%" stop-color="#b8633b" />
+                      <stop offset="100%" stop-color="#3f3430" />
+                    </linearGradient>
+                  </defs>
+                  <g class="chart-grid">
+                    <path d="M32 36H390M32 82H390M32 128H390M32 174H390" />
+                    <path d="M32 36V184M120 36V184M210 36V184M300 36V184M390 36V184" />
+                  </g>
+                  <polyline class="chart-area" points="32,175 88,142 146,135 204,103 260,96 322,70 390,48 390,184 32,184" />
+                  <polyline class="chart-line" points="32,175 88,142 146,135 204,103 260,96 322,70 390,48" />
+                  <g class="chart-points">
+                    <circle cx="32" cy="175" r="4" />
+                    <circle cx="88" cy="142" r="4" />
+                    <circle cx="146" cy="135" r="4" />
+                    <circle cx="204" cy="103" r="4" />
+                    <circle cx="260" cy="96" r="4" />
+                    <circle cx="322" cy="70" r="4" />
+                    <circle cx="390" cy="48" r="4" />
+                  </g>
+                  <text x="32" y="212">Старт</text>
+                  <text x="178" y="212">Модуль 3</text>
+                  <text x="328" y="212">Модуль 6</text>
+                </svg>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="lab section-pad" id="lab">
+        <div class="page-shell lab-layout">
+          <div class="section-title reveal">
+            <span class="section-kicker">Финальный артефакт</span>
+            <h2>В портфолио остается не сертификат, а проект</h2>
+            <p>
+              К концу курса у вас есть репозиторий, который можно открыть на собеседовании и пройти по решениям:
+              почему так устроены слои, где обработка ошибок, как поднять окружение.
+            </p>
+          </div>
+
+          <div class="artifact-grid">
+            <article class="artifact-card repo-card reveal">
+              <span>repository</span>
+              <h3>production-like service</h3>
+              <ul class="repo-tree">
+                <li>cmd/api/main.go</li>
+                <li>internal/users/service.go</li>
+                <li>internal/platform/postgres</li>
+                <li>migrations/0004_indexes.sql</li>
+                <li>docker-compose.yml</li>
+              </ul>
+            </article>
+            <article class="artifact-card reveal">
+              <span>review</span>
+              <h3>Разбор решений</h3>
+              <p>Наставник смотрит не только “работает ли”, а как проект будет жить после первой версии.</p>
+            </article>
+            <article class="artifact-card reveal">
+              <span>deploy</span>
+              <h3>Окружение одной командой</h3>
+              <p>PostgreSQL, Redis, API и health-checks поднимаются через Docker Compose.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="reviews section-pad" id="reviews">
+        <div class="page-shell reviews-layout">
+          <div class="section-title reveal">
+            <span class="section-kicker">Отзывы</span>
+            <h2>Курс ценят за ясность и ревью</h2>
+          </div>
+          <div class="review-stream reveal">
+            <article class="review-card">
+              <p>“Впервые понял, как объяснить архитектуру сервиса, а не просто показать папки в проекте.”</p>
+              <div><strong>Илья Воробьев</strong><small>Junior backend developer</small></div>
+            </article>
+            <article class="review-card">
+              <p>“Code review было самым полезным. После правок проект стал выглядеть как рабочий репозиторий.”</p>
+              <div><strong>Ксения Мельникова</strong><small>Go developer</small></div>
+            </article>
+            <article class="review-card">
+              <p>“Docker, база, миграции, ошибки - наконец собрались в одну понятную систему.”</p>
+              <div><strong>Роман Титов</strong><small>Software engineer</small></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq section-pad" id="faq">
+        <div class="page-shell faq-grid">
+          <div class="section-title reveal">
+            <span class="section-kicker">FAQ</span>
+            <h2>Коротко перед стартом</h2>
+            <p>Если останутся вопросы, оставьте заявку - подскажем, как пройти маршрут под ваш уровень.</p>
+          </div>
+          <div class="faq-list reveal">
+            <article class="faq-item is-open">
+              <button type="button">Нужно ли уже знать Go?</button>
+              <p>Нет. Достаточно базового понимания программирования. Go и backend-паттерны разбираем последовательно.</p>
+            </article>
+            <article class="faq-item">
+              <button type="button">Сколько времени нужно в неделю?</button>
+              <p>В среднем 6-8 часов: уроки, практика, ревью и доработка решения.</p>
+            </article>
+            <article class="faq-item">
+              <button type="button">Будет ли проект для портфолио?</button>
+              <p>Да. Финал курса - backend-сервис с API, базой данных, кешем, Docker-окружением и документацией.</p>
+            </article>
+            <article class="faq-item">
+              <button type="button">Можно совмещать с работой?</button>
+              <p>Да. Уроки доступны в записи, а практику можно сдавать в удобном темпе внутри дедлайнов модуля.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="request section-pad" id="request">
+        <div class="page-shell request-panel">
+          <div class="request-copy reveal">
+            <span class="section-kicker">Заявка</span>
+            <h2>Соберем ваш маршрут входа в backend</h2>
+            <p>
+              Оставьте контакты, и мы подскажем, с какого уровня начинать, какой темп выбрать и что подготовить до старта.
+            </p>
+            <ul>
+              <li>консультация по программе</li>
+              <li>подбор темпа обучения</li>
+              <li>30-дневная гарантия возврата</li>
+            </ul>
+          </div>
+
+          <form class="request-form reveal" data-form novalidate>
+            <div class="field">
+              <label for="name">Ваше имя</label>
+              <input id="name" name="name" autocomplete="name" placeholder="Иван Петров" />
+              <small data-error-for="name"></small>
+            </div>
+            <div class="field">
+              <label for="telegram">Telegram</label>
+              <input id="telegram" name="telegram" placeholder="@username" />
+              <small data-error-for="telegram"></small>
+            </div>
+            <div class="field">
+              <label for="phone">Телефон</label>
+              <input id="phone" name="phone" autocomplete="tel" placeholder="+7 (999) 123-45-67" />
+              <small data-error-for="phone"></small>
+            </div>
+            <div class="field wide">
+              <label for="goal">Цели и ожидания от курса</label>
+              <textarea id="goal" name="goal" rows="4" placeholder="Хочу перейти в backend, немного пишу на Go. Интересуют API, базы данных и Docker."></textarea>
+              <small data-error-for="goal"></small>
+            </div>
+            <button class="button primary form-submit" type="submit" data-default-text="Отправить заявку">
+              Отправить заявку
+            </button>
+            <p class="form-status" data-status role="status" aria-live="polite"></p>
+            <p class="form-legal">Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных.</p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="page-shell footer-inner">
+        <a class="brand" href="#top" aria-label="StackForge Go">
+          <span>StackForge</span><strong>Go</strong>
+        </a>
+        <nav aria-label="Подвал">
+          <a href="#shift">Зачем</a>
+          <a href="#program">Маршрут</a>
+          <a href="#lab">Проект</a>
+          <a href="#request">Заявка</a>
+        </nav>
+        <span>© 2026 StackForge Go</span>
+      </div>
+    </footer>
+
+    <script src="script.js?v=stackforge7"></script>
+  </body>
+</html>

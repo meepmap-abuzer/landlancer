@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Северный сад — клубный дом у тихого центра</title>
+    <meta
+      name="description"
+      content="Премиальный лендинг клубного дома с выбором планировок, видом из окна, расчетом платежа и заявкой на подбор квартиры."
+    />
+    <meta property="og:title" content="Северный сад — клубный дом у тихого центра" />
+    <meta
+      property="og:description"
+      content="Квартиры с террасами, закрытым двором и спокойной архитектурой в зеленом районе."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="preload" as="image" href="assets/hero-complete.webp" />
+    <link rel="preload" as="image" href="assets/hero-start.webp" />
+    <link rel="preload" as="video" href="assets/hero-intro.mp4" type="video/mp4" />
+    <link rel="preload" as="image" href="assets/view-morning.webp" />
+    <link rel="preload" as="image" href="assets/map-minimal.webp" />
+    <link rel="stylesheet" href="styles.css?v=estate-v3" />
+  </head>
+  <body class="intro-playing">
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Северный сад">
+        <span class="brand-mark">С</span>
+        <span>
+          Северный сад
+          <small>клубный дом</small>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="Основная навигация">
+        <a href="#apartments">Планировки</a>
+        <a href="#courtyard">Двор</a>
+        <a href="#district">Район</a>
+        <a href="#mortgage">Ипотека</a>
+      </nav>
+      <a class="header-phone" href="tel:+73432648190">+7 343 264-81-90</a>
+      <button class="menu-button" type="button" aria-label="Открыть меню" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <video class="hero-intro-video" src="assets/hero-intro.mp4" muted playsinline autoplay preload="auto" aria-hidden="true"></video>
+        <div class="hero-intro-shade" aria-hidden="true"></div>
+        <div class="page-shell hero-grid">
+          <div class="hero-copy reveal">
+            <span class="eyebrow">Дом бизнес-класса · 4 минуты до набережной</span>
+            <h1>Апартаменты, где город становится тише</h1>
+            <p>
+              Клубный дом с закрытым садом, теплыми лобби и планировками, которые не приходится
+              переделывать после покупки.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#apartments">
+                Выбрать квартиру
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" /></svg>
+              </a>
+              <a class="button button-soft" href="#request">Получить подборку</a>
+            </div>
+            <dl class="hero-facts">
+              <div>
+                <dt><span data-count="162">0</span></dt>
+                <dd>квартиры</dd>
+              </div>
+              <div>
+                <dt><span data-count="3">0</span> м</dt>
+                <dd>окна в гостиных</dd>
+              </div>
+              <div>
+                <dt><span data-count="28">0</span>%</dt>
+                <dd>дома уже забронировано</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="build-stage reveal" aria-label="Архитектурная визуализация дома">
+            <img class="stage-image stage-start" src="assets/hero-start.webp" alt="" aria-hidden="true" />
+            <img
+              class="stage-image stage-complete"
+              src="assets/hero-complete.webp"
+              alt="Готовый клубный дом Северный сад с озеленением и теплым светом в окнах"
+            />
+            <div class="floor-rig" aria-hidden="true">
+              <span style="--i: 0"></span>
+              <span style="--i: 1"></span>
+              <span style="--i: 2"></span>
+              <span style="--i: 3"></span>
+              <span style="--i: 4"></span>
+            </div>
+            <div class="stage-note" aria-hidden="true">
+              <b>III кв. 2027</b>
+              <span>передача ключей</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad intro-section" id="courtyard">
+        <div class="page-shell intro-layout">
+          <div class="section-heading reveal">
+            <span class="section-kicker">Не просто фасад</span>
+            <h2>Дом собран вокруг тишины, света и нормального маршрута дня</h2>
+          </div>
+          <div class="intro-points">
+            <article class="point reveal">
+              <span>01</span>
+              <h3>Закрытый сад вместо проходного двора</h3>
+              <p>Дорожки, детская зона и места для спокойного разговора отделены от машин.</p>
+            </article>
+            <article class="point reveal">
+              <span>02</span>
+              <h3>Лобби с рабочей комнатой</h3>
+              <p>Можно принять курьера, провести созвон или дождаться такси без подъездной суеты.</p>
+            </article>
+            <article class="point reveal">
+              <span>03</span>
+              <h3>Планировки без случайных углов</h3>
+              <p>Гардеробные, мастер-спальни, кухни-гостиные и террасы уже заложены в сценарии жизни.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad apartments-section" id="apartments">
+        <div class="page-shell">
+          <div class="section-top reveal">
+            <div>
+              <span class="section-kicker">Выбор квартиры</span>
+              <h2>Подберите формат, а не просто метры</h2>
+            </div>
+            <a class="text-link" href="#request">Запросить все планировки</a>
+          </div>
+
+          <div class="apartment-console reveal">
+            <div class="plan-controls" role="tablist" aria-label="Тип квартиры">
+              <button class="is-active" type="button" data-plan="studio">Студия</button>
+              <button type="button" data-plan="one">1 спальня</button>
+              <button type="button" data-plan="two">2 спальни</button>
+              <button type="button" data-plan="terrace">С террасой</button>
+            </div>
+
+            <div class="plan-board">
+              <div class="floor-plan" data-plan-map="studio">
+                <span class="room room-living" data-room="living">Кухня-гостиная</span>
+                <span class="room room-kitchen" data-room="kitchen">Ниша кухни</span>
+                <span class="room room-bedroom" data-room="bedroom">Зона сна</span>
+                <span class="room room-bath" data-room="bath">Санузел</span>
+                <span class="room room-loggia" data-room="loggia">Лоджия</span>
+                <span class="room room-entry" data-room="entry">Холл</span>
+                <span class="room room-extra" data-room="extra">Кабинет</span>
+              </div>
+
+              <aside class="plan-details">
+                <span class="muted">выбранный формат</span>
+                <h3 data-plan-title>Студия с нишей под кабинет</h3>
+                <p data-plan-text>
+                  Для первого жилья или инвестиции: светлая кухня-гостиная, отдельная зона сна и глубокий шкаф у входа.
+                </p>
+                <dl>
+                  <div>
+                    <dt data-plan-area>39.4 м²</dt>
+                    <dd>площадь</dd>
+                  </div>
+                  <div>
+                    <dt data-plan-price>от 9.8 млн</dt>
+                    <dd>стоимость</dd>
+                  </div>
+                  <div>
+                    <dt data-plan-floor>7-12</dt>
+                    <dd>этажи</dd>
+                  </div>
+                </dl>
+                <button class="button button-primary" type="button" data-request-plan>
+                  Получить планировку
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" /></svg>
+                </button>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="view-section section-pad">
+        <div class="page-shell view-layout">
+          <div class="view-copy reveal">
+            <span class="section-kicker">Свет в квартире</span>
+            <h2>Посмотрите, как меняется настроение дома</h2>
+            <p>
+              Один и тот же фасад утром держит спокойный тон, а вечером становится теплым ориентиром во дворе.
+            </p>
+            <div class="view-tabs" role="tablist" aria-label="Время суток">
+              <button class="is-active" type="button" data-view="morning">Утро</button>
+              <button type="button" data-view="evening">Вечер</button>
+            </div>
+          </div>
+          <div class="view-stage reveal" data-view-stage="morning">
+            <img src="assets/view-morning.webp" alt="Утренний двор и фасад дома Северный сад" loading="lazy" decoding="async" data-view-image />
+            <div class="view-caption">
+              <strong data-view-title>Мягкий утренний свет</strong>
+              <span data-view-text>светлые комнаты и спокойный двор без транзитного движения</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad district-section" id="district">
+        <div class="page-shell district-grid">
+          <div class="district-map reveal" aria-label="Карта окружения дома">
+            <span class="map-building building-a"></span>
+            <span class="map-building building-b"></span>
+            <span class="map-building building-c"></span>
+            <span class="map-building building-d"></span>
+            <span class="map-park"></span>
+            <span class="map-line line-one"></span>
+            <span class="map-line line-two"></span>
+            <button class="pin pin-home is-active" type="button" data-place="Дом"><b>Дом</b><small>0 мин</small></button>
+            <button class="pin pin-park" type="button" data-place="Парк"><b>Парк</b><small>3 мин</small></button>
+            <button class="pin pin-school" type="button" data-place="Лицей"><b>Лицей</b><small>7 мин</small></button>
+            <button class="pin pin-cafe" type="button" data-place="Кафе"><b>Кафе</b><small>5 мин</small></button>
+            <button class="pin pin-water" type="button" data-place="Набережная"><b>Набережная</b><small>4 мин</small></button>
+          </div>
+          <div class="district-copy reveal">
+            <span class="section-kicker">Район</span>
+            <h2>В пешем радиусе есть всё, ради чего обычно едут через полгорода</h2>
+            <ul class="district-list">
+              <li><b>4 минуты</b><span>до набережной и утренних прогулок</span></li>
+              <li><b>7 минут</b><span>до частного лицея и детского сада</span></li>
+              <li><b>12 минут</b><span>до делового центра и ресторанов</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad mortgage-section" id="mortgage">
+        <div class="page-shell mortgage-panel reveal">
+          <div class="mortgage-copy">
+            <span class="section-kicker">Расчет платежа</span>
+            <h2>Прикиньте бюджет до звонка менеджеру</h2>
+            <p>Калькулятор показывает примерный ежемесячный платеж. Точные условия зависят от банка и программы.</p>
+          </div>
+          <div class="mortgage-calc">
+            <label class="range-field">
+              <span>
+                <b>Стоимость квартиры</b>
+                <output data-price-output>12.8 млн ₽</output>
+              </span>
+              <input type="range" min="9800000" max="24800000" step="200000" value="12800000" data-price-range />
+            </label>
+            <label class="range-field">
+              <span>
+                <b>Первый взнос</b>
+                <output data-payment-output>3.9 млн ₽</output>
+              </span>
+              <input type="range" min="1800000" max="9000000" step="100000" value="3900000" data-payment-range />
+            </label>
+            <div class="calc-output">
+              <span>ежемесячно</span>
+              <strong data-monthly>82 400 ₽</strong>
+              <small data-calc-note>при ставке 6.1% на 25 лет</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="request-section section-pad" id="request">
+        <div class="page-shell request-grid">
+          <div class="request-copy reveal">
+            <span class="section-kicker">Подборка квартир</span>
+            <h2>Пришлем планировки, цены и свободные этажи</h2>
+            <p>Оставьте контакт, и менеджер соберет варианты под ваш бюджет и сценарий жизни.</p>
+          </div>
+          <form class="lead-form reveal" data-lead-form novalidate>
+            <label>
+              Ваше имя
+              <input type="text" name="name" placeholder="Например, Антон" autocomplete="name" />
+              <small data-error-for="name"></small>
+            </label>
+            <label>
+              Телефон
+              <input type="tel" name="phone" placeholder="+7 900 000-00-00" autocomplete="tel" />
+              <small data-error-for="phone"></small>
+            </label>
+            <label>
+              Интересующий формат
+              <input type="text" name="plan" value="Студия" data-form-plan />
+            </label>
+            <button class="button button-primary" type="submit">Получить подборку</button>
+            <p class="form-status" data-form-status aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="page-shell footer-inner">
+        <span>Северный сад</span>
+        <a href="#top">Наверх</a>
+      </div>
+    </footer>
+
+    <script src="script.js?v=estate-v3"></script>
+  </body>
+</html>

@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>APEX GYM — Фитнес-центр нового уровня в Москве</title>
+  <meta name="description" content="APEX GYM — современный фитнес-центр в Москве. Профессиональные тренеры, 200+ тренажёров, групповые занятия, сауна. Работаем 24/7. Первая неделя бесплатно." />
+  <meta name="keywords" content="фитнес центр москва, тренажёрный зал, абонемент в зал, персональный тренер, йога, кроссфит, бокс" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="APEX GYM — Фитнес-центр нового уровня" />
+  <meta property="og:description" content="Современный фитнес-центр в Москве. 200+ тренажёров, профессиональные тренеры, сауна. Работаем 24/7." />
+  <meta property="og:locale" content="ru_RU" />
+  <meta name="theme-color" content="#08080f" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23080810'/><text y='.9em' font-size='72' x='50%' text-anchor='middle' dominant-baseline='hanging'>🏋️</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="assets/apex-hero.webp" />
+  <link rel="stylesheet" href="styles.css?v=apex5" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav__logo">APEX<span>GYM</span></div>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="#about">О нас</a></li>
+      <li><a href="#schedule">Расписание</a></li>
+      <li><a href="#trainers">Тренеры</a></li>
+      <li><a href="#plans">Абонементы</a></li>
+      <li><a href="#reviews">Отзывы</a></li>
+      <li><a href="#location">Контакты</a></li>
+    </ul>
+    <button class="btn btn--sm open-modal" data-plan="Про" data-price="4 990">Купить абонемент</button>
+    <button class="nav__burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__bg-grid"></div>
+    <div class="hero__glow hero__glow--1"></div>
+    <div class="hero__glow hero__glow--2"></div>
+    <div class="hero__content">
+      <div class="hero__badge reveal">Новый уровень тренировок</div>
+      <h1 class="hero__title reveal">
+        Преобразуй<br />
+        <span class="gradient-text">своё тело.</span><br />
+        Измени жизнь.
+      </h1>
+      <p class="hero__sub reveal">
+        Современное оборудование, профессиональные тренеры<br />
+        и атмосфера, которая заряжает на результат.
+      </p>
+      <div class="hero__cta reveal">
+        <button class="btn btn--primary open-modal" data-plan="Про" data-price="4 990">Начать сейчас</button>
+        <a href="#about" class="btn btn--ghost">Узнать больше</a>
+      </div>
+      <div class="hero__stats reveal">
+        <div class="stat">
+          <span class="stat__num" data-target="1200">0</span><span class="stat__plus">+</span>
+          <span class="stat__label">Членов клуба</span>
+        </div>
+        <div class="stat__divider"></div>
+        <div class="stat">
+          <span class="stat__num" data-target="15">0</span><span class="stat__plus">+</span>
+          <span class="stat__label">Тренеров</span>
+        </div>
+        <div class="stat__divider"></div>
+        <div class="stat">
+          <span class="stat__num" data-target="8">0</span>
+          <span class="stat__label">Лет опыта</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero__visual">
+      <div class="hero__img-wrap reveal">
+        <div class="hero__img-placeholder">
+          <img class="hero__img" src="assets/apex-hero.webp" alt="Атлетка с гантелями в зале APEX GYM" width="900" height="1125" />
+        </div>
+        <div class="hero__img-badge">
+          <div class="pulse-dot"></div>
+          <span>Открыто сейчас</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT / FEATURES -->
+  <section class="features" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Почему APEX GYM</span>
+        <h2>Всё, что нужно<br /><span class="gradient-text">для результата</span></h2>
+      </div>
+      <div class="features__grid">
+        <div class="feature-card reveal">
+          <div class="feature-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <h3>Современное оборудование</h3>
+          <p>Тренажёры последнего поколения от ведущих мировых брендов. Более 200 единиц техники.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0112 0v2"/></svg>
+          </div>
+          <h3>Персональный подход</h3>
+          <p>Каждый клиент получает индивидуальный план тренировок и питания от сертифицированного тренера.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <h3>Групповые занятия</h3>
+          <p>Йога, кроссфит, бокс, пилатес — более 30 видов групповых тренировок каждую неделю.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2z"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <h3>Работаем 24/7</h3>
+          <p>Тренируйтесь в любое удобное время. Зал открыт круглосуточно без выходных.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>
+          </div>
+          <h3>Раздевалки и спа</h3>
+          <p>Просторные раздевалки, сауна, хамам и зона восстановления после интенсивных тренировок.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Безопасность</h3>
+          <p>Видеонаблюдение 24/7, охрана, контроль доступа и безопасная атмосфера для каждого.</p>
+        </div>
+      </div>
+      <div class="club-showcase reveal">
+        <div class="club-showcase__media">
+          <img src="assets/apex-facility.webp" alt="Просторный тренажёрный зал APEX GYM" loading="lazy" width="1400" height="788" />
+        </div>
+        <div class="club-showcase__panel">
+          <span class="section-tag">Пространство</span>
+          <h3>Зал, в который хочется возвращаться</h3>
+          <p>Силовая зона, кардио, свободные веса, студия групповых занятий и восстановление после тренировки собраны в одном месте.</p>
+          <div class="club-showcase__facts">
+            <span>200+ тренажёров</span>
+            <span>1 600 м²</span>
+            <span>24/7 доступ</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAINERS -->
+  <section class="trainers" id="trainers">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Наша команда</span>
+        <h2>Тренеры <span class="gradient-text">мирового класса</span></h2>
+        <p>Профессионалы с многолетним опытом, готовые помочь вам достичь любых целей</p>
+      </div>
+      <div class="trainers__grid">
+        <div class="trainer-card reveal">
+          <div class="trainer-card__img">
+            <img src="assets/trainer-alex.webp" alt="Александр Громов, тренер по силовым тренировкам" loading="lazy" width="720" height="960" />
+            <div class="trainer-card__social">
+              <a href="#" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="trainer-card__info">
+            <h3>Александр Громов</h3>
+            <span class="trainer-card__spec">Силовые тренировки · Кроссфит</span>
+            <p>Мастер спорта по пауэрлифтингу. 12 лет тренерского опыта. Подготовил более 300 спортсменов.</p>
+          </div>
+        </div>
+        <div class="trainer-card reveal">
+          <div class="trainer-card__img">
+            <img src="assets/trainer-maria.webp" alt="Мария Соколова, инструктор йоги и пилатеса" loading="lazy" width="720" height="960" />
+            <div class="trainer-card__social">
+              <a href="#" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="trainer-card__info">
+            <h3>Мария Соколова</h3>
+            <span class="trainer-card__spec">Йога · Пилатес · Растяжка</span>
+            <p>Сертифицированный инструктор RYT-500. Специалист по реабилитации и работе с осанкой.</p>
+          </div>
+        </div>
+        <div class="trainer-card reveal">
+          <div class="trainer-card__img">
+            <img src="assets/trainer-denis.webp" alt="Денис Волков, тренер по боксу и функциональному тренингу" loading="lazy" width="720" height="960" />
+            <div class="trainer-card__social">
+              <a href="#" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="trainer-card__info">
+            <h3>Денис Волков</h3>
+            <span class="trainer-card__spec">Бокс · Функциональный тренинг</span>
+            <p>КМС по боксу, тренер по функциональным тренировкам. Специализируется на снижении веса.</p>
+          </div>
+        </div>
+        <div class="trainer-card reveal">
+          <div class="trainer-card__img">
+            <img src="assets/trainer-anna.webp" alt="Анна Крылова, нутрициолог APEX GYM" loading="lazy" width="720" height="960" />
+            <div class="trainer-card__social">
+              <a href="#" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="trainer-card__info">
+            <h3>Анна Крылова</h3>
+            <span class="trainer-card__spec">Диетология · Нутрициология</span>
+            <p>Дипломированный диетолог и нутрициолог. Разрабатывает персональные планы питания для клиентов.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCHEDULE -->
+  <section class="schedule" id="schedule">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Расписание</span>
+        <h2>Групповые <span class="gradient-text">занятия</span></h2>
+        <p>Более 30 видов тренировок каждую неделю — найди своё</p>
+      </div>
+      <div class="schedule-visual reveal">
+        <img src="assets/apex-classes.webp" alt="Групповая функциональная тренировка в APEX GYM" loading="lazy" width="1400" height="788" />
+        <div class="schedule-visual__note">
+          <span>Тренировки в малых группах</span>
+          <strong>до 12 человек</strong>
+        </div>
+      </div>
+      <div class="schedule__grid">
+        <div class="schedule-card reveal" style="--delay:0ms">
+          <div class="schedule-card__icon" style="--c:#a78bfa">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2z"/><path d="M12 8v4l3 3"/></svg>
+          </div>
+          <h3>Кроссфит</h3>
+          <p>Высокоинтенсивные функциональные тренировки</p>
+          <div class="schedule-card__times">
+            <span>Пн, Ср, Пт</span><span>07:00 / 12:00 / 19:00</span>
+          </div>
+          <span class="schedule-card__level level--hard">Интенсивно</span>
+        </div>
+        <div class="schedule-card reveal" style="--delay:80ms">
+          <div class="schedule-card__icon" style="--c:#34d399">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M12 22c4.97 0 9-4.03 9-9a9 9 0 00-9-9c-4.97 0-9 4.03-9 9 0 4.97 4.03 9 9 9z"/><path d="M8 12s1.5-2 4-2 4 2 4 2"/><path d="M9 9h.01M15 9h.01"/></svg>
+          </div>
+          <h3>Йога</h3>
+          <p>Растяжка, дыхание, баланс и внутренняя гармония</p>
+          <div class="schedule-card__times">
+            <span>Вт, Чт, Сб</span><span>08:00 / 11:00 / 18:00</span>
+          </div>
+          <span class="schedule-card__level level--easy">Для всех</span>
+        </div>
+        <div class="schedule-card reveal" style="--delay:160ms">
+          <div class="schedule-card__icon" style="--c:#fb923c">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg>
+          </div>
+          <h3>Бокс</h3>
+          <p>Техника удара, координация, кардио и самооборона</p>
+          <div class="schedule-card__times">
+            <span>Пн, Ср, Пт</span><span>18:00 / 20:00</span>
+          </div>
+          <span class="schedule-card__level level--medium">Средне</span>
+        </div>
+        <div class="schedule-card reveal" style="--delay:240ms">
+          <div class="schedule-card__icon" style="--c:#60a5fa">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+          </div>
+          <h3>Пилатес</h3>
+          <p>Глубокие мышцы, осанка, реабилитация и тонус</p>
+          <div class="schedule-card__times">
+            <span>Вт, Чт, Сб</span><span>09:00 / 13:00 / 17:00</span>
+          </div>
+          <span class="schedule-card__level level--easy">Для всех</span>
+        </div>
+        <div class="schedule-card reveal" style="--delay:320ms">
+          <div class="schedule-card__icon" style="--c:#f472b6">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M12 5v14M5 12l7-7 7 7"/></svg>
+          </div>
+          <h3>Стретчинг</h3>
+          <p>Гибкость, профилактика травм и восстановление</p>
+          <div class="schedule-card__times">
+            <span>Ежедневно</span><span>10:00 / 21:00</span>
+          </div>
+          <span class="schedule-card__level level--easy">Для всех</span>
+        </div>
+        <div class="schedule-card reveal" style="--delay:400ms">
+          <div class="schedule-card__icon" style="--c:#e879f9">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <h3>Зумба</h3>
+          <p>Танцевальные тренировки — кардио с удовольствием</p>
+          <div class="schedule-card__times">
+            <span>Пн, Ср, Пт</span><span>10:00 / 19:30</span>
+          </div>
+          <span class="schedule-card__level level--medium">Средне</span>
+        </div>
+      </div>
+      <div class="schedule__cta reveal">
+        <p>Полное расписание и запись на занятие — в приложении</p>
+        <button class="btn btn--primary open-modal" data-plan="Про" data-price="4 990">Записаться на занятие</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLANS -->
+  <section class="plans" id="plans">
+    <div class="plans__glow"></div>
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Абонементы</span>
+        <h2>Выберите <span class="gradient-text">свой план</span></h2>
+        <p>Гибкие условия для любого уровня подготовки и бюджета</p>
+      </div>
+      <div class="plans__toggle reveal">
+        <button class="toggle-btn active" data-period="month">Месяц</button>
+        <button class="toggle-btn" data-period="quarter">Квартал</button>
+        <button class="toggle-btn" data-period="year">Год</button>
+      </div>
+      <div class="plans__grid">
+        <div class="plan-card reveal">
+          <div class="plan-card__header">
+            <span class="plan-card__name">Старт</span>
+            <div class="plan-card__price">
+              <span class="plan-card__currency">₽</span>
+              <span class="plan-card__amount" data-month="2490" data-quarter="6990" data-year="21990">2490</span>
+              <span class="plan-card__period">/мес</span>
+            </div>
+          </div>
+          <ul class="plan-card__features">
+            <li class="included">Тренажёрный зал</li>
+            <li class="included">Раздевалки и душевые</li>
+            <li class="included">5 групповых занятий/мес</li>
+            <li class="included">Мобильное приложение</li>
+            <li class="excluded">Персональный тренер</li>
+            <li class="excluded">Сауна и хамам</li>
+            <li class="excluded">Нутрициолог</li>
+          </ul>
+          <button class="btn btn--ghost btn--full open-modal" data-plan="Старт" data-price="2 490">Выбрать план</button>
+        </div>
+        <div class="plan-card plan-card--featured reveal">
+          <div class="plan-card__popular">Популярный</div>
+          <div class="plan-card__header">
+            <span class="plan-card__name">Про</span>
+            <div class="plan-card__price">
+              <span class="plan-card__currency">₽</span>
+              <span class="plan-card__amount" data-month="4990" data-quarter="13990" data-year="44990">4990</span>
+              <span class="plan-card__period">/мес</span>
+            </div>
+          </div>
+          <ul class="plan-card__features">
+            <li class="included">Тренажёрный зал</li>
+            <li class="included">Раздевалки и душевые</li>
+            <li class="included">Безлимит групповых занятий</li>
+            <li class="included">Мобильное приложение</li>
+            <li class="included">2 занятия с тренером/мес</li>
+            <li class="included">Сауна и хамам</li>
+            <li class="excluded">Нутрициолог</li>
+          </ul>
+          <button class="btn btn--primary btn--full open-modal" data-plan="Про" data-price="4 990">Выбрать план</button>
+        </div>
+        <div class="plan-card reveal">
+          <div class="plan-card__header">
+            <span class="plan-card__name">Элит</span>
+            <div class="plan-card__price">
+              <span class="plan-card__currency">₽</span>
+              <span class="plan-card__amount" data-month="8990" data-quarter="24990" data-year="84990">8990</span>
+              <span class="plan-card__period">/мес</span>
+            </div>
+          </div>
+          <ul class="plan-card__features">
+            <li class="included">Тренажёрный зал</li>
+            <li class="included">Раздевалки и душевые</li>
+            <li class="included">Безлимит групповых занятий</li>
+            <li class="included">Мобильное приложение</li>
+            <li class="included">Безлимит с тренером</li>
+            <li class="included">Сауна и хамам</li>
+            <li class="included">Нутрициолог и план питания</li>
+          </ul>
+          <button class="btn btn--ghost btn--full open-modal" data-plan="Элит" data-price="8 990">Выбрать план</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION -->
+  <section class="location" id="location">
+    <div class="container">
+      <div class="location__inner">
+        <div class="location__info reveal">
+          <span class="section-tag">Как нас найти</span>
+          <h2>Мы в <span class="gradient-text">центре города</span></h2>
+          <p>Удобная локация с отличной транспортной доступностью и парковкой</p>
+          <div class="location__details">
+            <div class="location__detail">
+              <div class="location__detail-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <span class="location__detail-label">Адрес</span>
+                <span class="location__detail-value">ул. Спортивная, 42, г. Москва</span>
+              </div>
+            </div>
+            <div class="location__detail">
+              <div class="location__detail-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2z"/><path d="M12 6v6l4 2"/></svg>
+              </div>
+              <div>
+                <span class="location__detail-label">Режим работы</span>
+                <span class="location__detail-value">Круглосуточно, 7 дней в неделю</span>
+              </div>
+            </div>
+            <div class="location__detail">
+              <div class="location__detail-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 10.5a19.79 19.79 0 01-3.07-8.67A2 2 0 013.6 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              </div>
+              <div>
+                <span class="location__detail-label">Телефон</span>
+                <span class="location__detail-value">+7 (495) 123-45-67</span>
+              </div>
+            </div>
+            <div class="location__detail">
+              <div class="location__detail-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+              </div>
+              <div>
+                <span class="location__detail-label">Метро</span>
+                <span class="location__detail-value">Спортивная — 5 мин пешком</span>
+              </div>
+            </div>
+          </div>
+          <a href="https://yandex.ru/maps/?text=ул.+Спортивная+42+Москва" target="_blank" rel="noopener" class="btn btn--primary">Проложить маршрут</a>
+        </div>
+        <div class="location__map reveal">
+          <div class="map-wrap">
+            <iframe
+              class="yandex-map"
+              src="https://yandex.ru/map-widget/v1/?text=%D1%83%D0%BB.%20%D0%A1%D0%BF%D0%BE%D1%80%D1%82%D0%B8%D0%B2%D0%BD%D0%B0%D1%8F%2C%2042%2C%20%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0&z=15"
+              title="Карта проезда до APEX GYM"
+              loading="lazy"
+              allowfullscreen
+            ></iframe>
+            <a class="map-open-link" href="https://yandex.ru/maps/?text=ул.+Спортивная+42+Москва" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              Открыть в Яндекс.Картах
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" id="reviews">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Отзывы</span>
+        <h2>Говорят наши <span class="gradient-text">клиенты</span></h2>
+        <p>Реальные результаты реальных людей — лучшая мотивация</p>
+      </div>
+      <div class="testimonials__grid">
+
+        <div class="testi-card reveal">
+          <div class="testi-card__header">
+            <div class="testi-avatar">АК</div>
+            <div>
+              <span class="testi-name">Андрей Климов</span>
+              <span class="testi-plan">Тариф Про · 8 месяцев</span>
+            </div>
+            <div class="testi-stars">★★★★★</div>
+          </div>
+          <p>«Пришёл с целью похудеть на 15 кг — потерял 18. Тренер Александр выстроил программу под меня, никакой воды — только результат. Зал чистый, оборудование всегда работает, атмосфера заряжает.»</p>
+          <div class="testi-result">
+            <span class="testi-result__label">Результат</span>
+            <span class="testi-result__value">−18 кг за 6 месяцев</span>
+          </div>
+        </div>
+
+        <div class="testi-card testi-card--featured reveal">
+          <div class="testi-card__header">
+            <div class="testi-avatar">МС</div>
+            <div>
+              <span class="testi-name">Марина Соловьёва</span>
+              <span class="testi-plan">Тариф Элит · 1 год</span>
+            </div>
+            <div class="testi-stars">★★★★★</div>
+          </div>
+          <p>«До APEX перепробовала три разных зала. Здесь другой уровень — персональный подход, нутрициолог Анна составила мне план питания, занятия йогой с Марией просто волшебные. Сауна после тренировки — отдельная история.»</p>
+          <div class="testi-result">
+            <span class="testi-result__label">Результат</span>
+            <span class="testi-result__value">−12 кг + оздоровление спины</span>
+          </div>
+        </div>
+
+        <div class="testi-card reveal">
+          <div class="testi-card__header">
+            <div class="testi-avatar">ДВ</div>
+            <div>
+              <span class="testi-name">Дмитрий Власов</span>
+              <span class="testi-plan">Тариф Старт · 4 месяца</span>
+            </div>
+            <div class="testi-stars">★★★★★</div>
+          </div>
+          <p>«Начинал со Старта, через 3 месяца перешёл на Про. Денис по боксу — огонь, за 4 месяца я не узнаю своё тело. Зал работает круглосуточно — тренируюсь после работы в 23:00 без проблем.»</p>
+          <div class="testi-result">
+            <span class="testi-result__label">Результат</span>
+            <span class="testi-result__value">+9 кг сухой массы</span>
+          </div>
+        </div>
+
+        <div class="testi-card reveal">
+          <div class="testi-card__header">
+            <div class="testi-avatar">ЕП</div>
+            <div>
+              <span class="testi-name">Елена Павлова</span>
+              <span class="testi-plan">Тариф Про · 5 месяцев</span>
+            </div>
+            <div class="testi-stars">★★★★★</div>
+          </div>
+          <p>«После второй беременности думала, что форма не вернётся. Мария разработала мягкую программу, ничего лишнего. За 5 месяцев — плоский живот и энергия как в 20 лет. Рекомендую всем мамам!»</p>
+          <div class="testi-result">
+            <span class="testi-result__label">Результат</span>
+            <span class="testi-result__value">Восстановление после родов</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="testimonials__stats reveal">
+        <div class="testi-stat">
+          <span class="testi-stat__num">4.9</span>
+          <span class="testi-stat__label">Средняя оценка</span>
+          <div class="testi-stars small">★★★★★</div>
+        </div>
+        <div class="testi-stat__divider"></div>
+        <div class="testi-stat">
+          <span class="testi-stat__num">1 200+</span>
+          <span class="testi-stat__label">Довольных клиентов</span>
+        </div>
+        <div class="testi-stat__divider"></div>
+        <div class="testi-stat">
+          <span class="testi-stat__num">94%</span>
+          <span class="testi-stat__label">Продлевают абонемент</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section reveal">
+    <div class="cta-section__glow"></div>
+    <div class="container">
+      <div class="cta-section__inner">
+        <h2>Готов начать?<br /><span class="gradient-text">Первая неделя бесплатно.</span></h2>
+        <p>Зарегистрируйся сегодня и получи 7 дней бесплатного доступа ко всем тренировкам</p>
+        <button class="btn btn--primary btn--lg open-modal" data-plan="Пробная неделя" data-price="0">Начать бесплатно</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <div class="footer__logo">APEX<span>GYM</span></div>
+          <p>Фитнес-центр нового поколения. Твой путь к идеальному телу начинается здесь.</p>
+        </div>
+        <div class="footer__links">
+          <div class="footer__col">
+            <h4>Навигация</h4>
+            <ul>
+              <li><a href="#about">О нас</a></li>
+              <li><a href="#trainers">Тренеры</a></li>
+              <li><a href="#plans">Абонементы</a></li>
+              <li><a href="#location">Контакты</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4>Услуги</h4>
+            <ul>
+              <li><a href="#">Групповые занятия</a></li>
+              <li><a href="#">Персональный тренинг</a></li>
+              <li><a href="#">Диетология</a></li>
+              <li><a href="#">Сауна и спа</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4>Контакты</h4>
+            <ul>
+              <li><a href="tel:+74951234567">+7 (495) 123-45-67</a></li>
+              <li><a href="mailto:info@apexgym.ru">info@apexgym.ru</a></li>
+              <li>ул. Спортивная, 42</li>
+              <li>Москва</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2025 APEX GYM. Все права защищены.</span>
+        <div class="footer__socials">
+          <a href="https://vk.com/apexgym" target="_blank" rel="noopener" aria-label="VK">VK</a>
+          <a href="https://t.me/apexgym" target="_blank" rel="noopener" aria-label="Telegram">TG</a>
+          <a href="https://instagram.com/apexgym" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCROLL TO TOP -->
+  <button class="scroll-top" id="scrollTop" aria-label="Наверх">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modalOverlay" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal__close" id="modalClose" aria-label="Закрыть">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="18" height="18"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+      <div class="modal__header">
+        <span class="section-tag" id="modalPlanTag">Абонемент</span>
+        <h3 id="modalTitle">Оформление абонемента</h3>
+        <p id="modalSubtitle">Оставьте заявку — менеджер свяжется с вами в течение 15 минут</p>
+      </div>
+      <form class="modal__form" id="modalForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fieldName">Имя</label>
+            <input type="text" id="fieldName" name="name" placeholder="Ваше имя" autocomplete="given-name" required />
+            <span class="form-error">Введите имя (минимум 2 символа)</span>
+          </div>
+          <div class="form-group">
+            <label for="fieldPhone">Телефон</label>
+            <input type="tel" id="fieldPhone" name="phone" placeholder="+7 (___) ___-__-__" autocomplete="tel" required />
+            <span class="form-error">Введите корректный номер РФ</span>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fieldTelegram">Telegram <span class="optional">— необязательно</span></label>
+            <div class="input-with-prefix">
+              <span class="input-prefix">@</span>
+              <input type="text" id="fieldTelegram" name="telegram" placeholder="username" autocomplete="off" />
+            </div>
+            <span class="form-error">Только латиница, цифры и _ (мин. 4 символа)</span>
+          </div>
+          <div class="form-group">
+            <label for="fieldEmail">Email <span class="optional">— необязательно</span></label>
+            <input type="email" id="fieldEmail" name="email" placeholder="your@email.com" autocomplete="email" />
+            <span class="form-error">Введите корректный email</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="fieldPlan">Тариф</label>
+          <div class="plan-selector" id="planSelector">
+            <div class="plan-option" data-plan="Пробная неделя" data-price="Бесплатно · 7 дней">
+              <div class="plan-option__info">
+                <span class="plan-option__name">Пробная неделя</span>
+                <span class="plan-option__desc">Полный доступ на 7 дней</span>
+              </div>
+              <span class="plan-option__price free">Бесплатно</span>
+            </div>
+            <div class="plan-option" data-plan="Старт" data-price="от ₽2 490/мес">
+              <div class="plan-option__info">
+                <span class="plan-option__name">Старт</span>
+                <span class="plan-option__desc">Зал + 5 групповых/мес</span>
+              </div>
+              <span class="plan-option__price">₽2 490<small>/мес</small></span>
+            </div>
+            <div class="plan-option plan-option--popular" data-plan="Про" data-price="от ₽4 990/мес">
+              <div class="plan-option__badge">Хит</div>
+              <div class="plan-option__info">
+                <span class="plan-option__name">Про</span>
+                <span class="plan-option__desc">Зал + безлимит групп + сауна</span>
+              </div>
+              <span class="plan-option__price">₽4 990<small>/мес</small></span>
+            </div>
+            <div class="plan-option" data-plan="Элит" data-price="от ₽8 990/мес">
+              <div class="plan-option__info">
+                <span class="plan-option__name">Элит</span>
+                <span class="plan-option__desc">Всё включено + нутрициолог</span>
+              </div>
+              <span class="plan-option__price">₽8 990<small>/мес</small></span>
+            </div>
+          </div>
+          <span class="form-error" id="errPlan">Выберите тариф</span>
+        </div>
+        <div class="form-group">
+          <label for="fieldGoal">Ваша цель <span class="optional">— необязательно</span></label>
+          <select id="fieldGoal" name="goal">
+            <option value="">Выберите цель</option>
+            <option>Похудение и рельеф</option>
+            <option>Набор мышечной массы</option>
+            <option>Улучшение физической формы</option>
+            <option>Снятие стресса и восстановление</option>
+            <option>Подготовка к соревнованиям</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn--primary btn--full modal__submit">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          Отправить заявку
+        </button>
+        <p class="modal__legal">Нажимая кнопку, вы соглашаетесь с <a href="#" onclick="return false">политикой конфиденциальности</a></p>
+      </form>
+
+      <div class="modal__success" id="modalSuccess" hidden>
+        <div class="success-bg-glow"></div>
+        <div class="success-icon-wrap">
+          <div class="success-icon-ring success-ring-1"></div>
+          <div class="success-icon-ring success-ring-2"></div>
+          <div class="success-icon-core">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="32" height="32"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+        </div>
+        <h3 class="success-title">Заявка принята!</h3>
+        <p class="success-sub">Наш менеджер свяжется с вами<br/>в течение <strong>15 минут</strong></p>
+        <div class="success-details" id="successDetails"></div>
+        <div class="success-actions">
+          <button class="btn btn--primary" id="modalSuccessClose">Отлично, жду звонка</button>
+        </div>
+        <p class="success-note">Не забудь проверить Telegram — возможно, мы напишем туда</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js?v=apex3"></script>
+</body>
+</html>
