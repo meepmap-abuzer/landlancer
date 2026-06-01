@@ -1,0 +1,3 @@
+Contact: mailto:contact@landlancer.ru
+Preferred-Languages: ru
+Canonical: https://landlancer.ru/.well-known/security.txt
