@@ -1,3 +1,19 @@
+const isCoarseReveal = window.matchMedia("(pointer: coarse), (max-width: 768px)").matches;
+function getRevealThreshold() {
+  return isCoarseReveal ? 0.08 : 0.18;
+}
+function getRevealRootMargin() {
+  return isCoarseReveal ? "0px 0px -8% 0px" : "0px 0px -18% 0px";
+}
+function requestRevealClass(target, className) {
+  if (target.classList.contains(className)) return;
+  requestAnimationFrame(() => target.classList.add(className));
+}
+function isRevealReady(target) {
+  const rect = target.getBoundingClientRect();
+  return rect.top < window.innerHeight * (isCoarseReveal ? 0.9 : 0.78) && rect.bottom > (isCoarseReveal ? 32 : 64);
+}
+
 /* ============================================================
    APEX GYM — JS
    ============================================================ */
@@ -15,11 +31,11 @@ const revealObserver = new IntersectionObserver((entries) => {
     if (entry.isIntersecting) {
       const el = entry.target;
       const delay = el.dataset.delay || 0;
-      setTimeout(() => el.classList.add('visible'), delay);
+      setTimeout(() => requestRevealClass(el, "visible"), delay);
       revealObserver.unobserve(el);
     }
   });
-}, { threshold: 0.25, rootMargin: '0px 0px -26% 0px' });
+}, { threshold: getRevealThreshold(), rootMargin: getRevealRootMargin() });
 
 // Stagger children within grids
 document.querySelectorAll('.features__grid, .trainers__grid, .plans__grid, .hero__stats').forEach(grid => {
@@ -34,8 +50,8 @@ function revealVisibleNow() {
   reveals.forEach((el) => {
     if (el.classList.contains('visible')) return;
     const rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight * 0.72 && rect.bottom > 80) {
-      el.classList.add('visible');
+    if (isRevealReady(el)) {
+      requestRevealClass(el, "visible");
     }
   });
 }
@@ -381,3 +397,4 @@ if (scrollTopBtn) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 }
+

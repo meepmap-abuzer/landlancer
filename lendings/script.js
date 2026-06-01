@@ -1,14 +1,30 @@
+const isCoarseReveal = window.matchMedia("(pointer: coarse), (max-width: 768px)").matches;
+function getRevealThreshold() {
+  return isCoarseReveal ? 0.08 : 0.18;
+}
+function getRevealRootMargin() {
+  return isCoarseReveal ? "0px 0px -8% 0px" : "0px 0px -18% 0px";
+}
+function requestRevealClass(target, className) {
+  if (target.classList.contains(className)) return;
+  requestAnimationFrame(() => target.classList.add(className));
+}
+function isRevealReady(target) {
+  const rect = target.getBoundingClientRect();
+  return rect.top < window.innerHeight * (isCoarseReveal ? 0.9 : 0.78) && rect.bottom > (isCoarseReveal ? 32 : 64);
+}
+
 const revealItems = document.querySelectorAll(".reveal");
 const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
+        requestRevealClass(entry.target, "is-visible");
         revealObserver.unobserve(entry.target);
       }
     });
   },
-  { threshold: 0.25, rootMargin: "0px 0px -26% 0px" }
+  { threshold: getRevealThreshold(), rootMargin: getRevealRootMargin() }
 );
 
 revealItems.forEach((item, index) => {
@@ -20,8 +36,8 @@ function revealVisibleNow() {
   revealItems.forEach((item) => {
     if (item.classList.contains("is-visible")) return;
     const rect = item.getBoundingClientRect();
-    const isInView = rect.top < window.innerHeight * 0.72 && rect.bottom > 80;
-    if (isInView) item.classList.add("is-visible");
+    const isInView = isRevealReady(item);
+    if (isInView) requestRevealClass(item, "is-visible");
   });
 }
 

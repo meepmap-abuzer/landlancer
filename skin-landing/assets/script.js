@@ -1,5 +1,21 @@
 'use strict';
 
+const isCoarseReveal = window.matchMedia("(pointer: coarse), (max-width: 768px)").matches;
+function getRevealThreshold() {
+  return isCoarseReveal ? 0.08 : 0.18;
+}
+function getRevealRootMargin() {
+  return isCoarseReveal ? "0px 0px -8% 0px" : "0px 0px -18% 0px";
+}
+function requestRevealClass(target, className) {
+  if (target.classList.contains(className)) return;
+  requestAnimationFrame(() => target.classList.add(className));
+}
+function isRevealReady(target) {
+  const rect = target.getBoundingClientRect();
+  return rect.top < window.innerHeight * (isCoarseReveal ? 0.9 : 0.78) && rect.bottom > (isCoarseReveal ? 32 : 64);
+}
+
 const nav = document.querySelector('.nav');
 const navLinks = document.querySelector('.nav__links');
 const navBurger = document.querySelector('.nav__burger');
@@ -37,24 +53,24 @@ function revealVisibleNow() {
   revealItems.forEach((item) => {
     if (item.classList.contains('visible')) return;
     const rect = item.getBoundingClientRect();
-    if (rect.top < window.innerHeight * 0.72 && rect.bottom > 80) {
-      item.classList.add('visible');
+    if (isRevealReady(item)) {
+      requestRevealClass(item, "visible");
     }
   });
 }
 
 if (!supportsIntersectionObserver) {
-  revealItems.forEach((item) => item.classList.add('visible'));
+  revealItems.forEach((item) => requestRevealClass(item, "visible"));
 } else {
   document.documentElement.classList.add('anim-ready');
 
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
-      entry.target.classList.add('visible');
+      requestRevealClass(entry.target, "visible");
       revealObserver.unobserve(entry.target);
     });
-  }, { threshold: 0.25, rootMargin: '0px 0px -26% 0px' });
+  }, { threshold: getRevealThreshold(), rootMargin: getRevealRootMargin() });
 
   revealItems.forEach((item) => revealObserver.observe(item));
 }
@@ -211,3 +227,4 @@ appForm?.addEventListener('submit', async (event) => {
   formWrap.style.display = 'none';
   successWrap.classList.add('show');
 });
+

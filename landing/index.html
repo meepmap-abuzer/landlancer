@@ -1064,20 +1064,34 @@ window.addEventListener('mousemove', e => {
 });
 
 // ─── REVEAL ──────────────────────────────────────────────────────────────
+const isCoarseReveal = matchMedia('(pointer: coarse), (max-width: 768px)').matches;
+function getRevealThreshold() {
+  return isCoarseReveal ? 0.08 : 0.18;
+}
+function getRevealRootMargin() {
+  return isCoarseReveal ? '0px 0px -8% 0px' : '0px 0px -18% 0px';
+}
+function requestRevealClass(target) {
+  if (target.classList.contains('visible')) return;
+  requestAnimationFrame(() => target.classList.add('visible'));
+}
+function isRevealReady(target) {
+  const rect = target.getBoundingClientRect();
+  return rect.top < innerHeight * (isCoarseReveal ? 0.9 : 0.78) && rect.bottom > (isCoarseReveal ? 32 : 64);
+}
 const revealTargets = document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.module-item');
 const obs = new IntersectionObserver(entries => {
   entries.forEach((e, i) => {
-    if (e.isIntersecting) { setTimeout(() => e.target.classList.add('visible'), i*130); obs.unobserve(e.target); }
+    if (e.isIntersecting) { setTimeout(() => requestRevealClass(e.target), i*110); obs.unobserve(e.target); }
   });
-}, { threshold: .25, rootMargin: '0px 0px -26% 0px' });
+}, { threshold: getRevealThreshold(), rootMargin: getRevealRootMargin() });
 revealTargets.forEach(el => obs.observe(el));
 
 function revealVisibleNow() {
   revealTargets.forEach((el) => {
     if (el.classList.contains('visible')) return;
-    const rect = el.getBoundingClientRect();
-    if (rect.top < innerHeight * .72 && rect.bottom > 80) {
-      el.classList.add('visible');
+    if (isRevealReady(el)) {
+      requestRevealClass(el);
     }
   });
 }

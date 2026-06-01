@@ -1,3 +1,19 @@
+const isCoarseReveal = window.matchMedia("(pointer: coarse), (max-width: 768px)").matches;
+function getRevealThreshold() {
+  return isCoarseReveal ? 0.08 : 0.18;
+}
+function getRevealRootMargin() {
+  return isCoarseReveal ? "0px 0px -8% 0px" : "0px 0px -18% 0px";
+}
+function requestRevealClass(target, className) {
+  if (target.classList.contains(className)) return;
+  requestAnimationFrame(() => target.classList.add(className));
+}
+function isRevealReady(target) {
+  const rect = target.getBoundingClientRect();
+  return rect.top < window.innerHeight * (isCoarseReveal ? 0.9 : 0.78) && rect.bottom > (isCoarseReveal ? 32 : 64);
+}
+
 const modal = document.querySelector("[data-modal]");
 const modalFrame = document.querySelector("[data-modal-frame]");
 const modalTitle = document.querySelector("[data-modal-title]");
@@ -29,7 +45,7 @@ function setupReveal() {
         observer.unobserve(entry.target);
       });
     },
-    { threshold: 0.25, rootMargin: "0px 0px -26% 0px" }
+    { threshold: getRevealThreshold(), rootMargin: getRevealRootMargin() }
   );
 
   revealItems.forEach((item) => observer.observe(item));
@@ -39,8 +55,8 @@ function setupReveal() {
       if (item.classList.contains("visible")) return;
       const rect = item.getBoundingClientRect();
       const nearBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 24;
-      if ((rect.top < window.innerHeight * 0.72 && rect.bottom > 80) || (nearBottom && rect.top < window.innerHeight + 260)) {
-        item.classList.add("visible");
+      if ((isRevealReady(item)) || (nearBottom && rect.top < window.innerHeight + 260)) {
+        requestRevealClass(item, "visible");
       }
     });
   }
@@ -99,3 +115,4 @@ document.addEventListener("keydown", (event) => {
 setupReveal();
 setupMagnetic();
 setupTilt();
+

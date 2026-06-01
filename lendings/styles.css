@@ -907,3 +907,21 @@ input[type="range"] {
     bottom: 14px;
   }
 }
+
+
+/* Mobile reveal tuning */
+@media (prefers-reduced-motion: no-preference) and (pointer: coarse), (prefers-reduced-motion: no-preference) and (max-width: 768px) {
+  .reveal,
+  .reveal-card {
+    transition:
+      filter 720ms cubic-bezier(0.16, 1, 0.3, 1),
+      opacity 780ms cubic-bezier(0.16, 1, 0.3, 1),
+      transform 940ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .reveal:not(.is-visible),
+  .reveal-card:not(.is-visible) {
+    transform: translate3d(0, 42px, 0) scale(0.99);
+  }
+}
+

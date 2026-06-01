@@ -1,3 +1,19 @@
+const isCoarseReveal = window.matchMedia("(pointer: coarse), (max-width: 768px)").matches;
+function getRevealThreshold() {
+  return isCoarseReveal ? 0.08 : 0.18;
+}
+function getRevealRootMargin() {
+  return isCoarseReveal ? "0px 0px -8% 0px" : "0px 0px -18% 0px";
+}
+function requestRevealClass(target, className) {
+  if (target.classList.contains(className)) return;
+  requestAnimationFrame(() => target.classList.add(className));
+}
+function isRevealReady(target) {
+  const rect = target.getBoundingClientRect();
+  return rect.top < window.innerHeight * (isCoarseReveal ? 0.9 : 0.78) && rect.bottom > (isCoarseReveal ? 32 : 64);
+}
+
 const revealItems = document.querySelectorAll(".reveal");
 const introVideo = document.querySelector(".hero-intro-video");
 let introFinished = false;
@@ -63,11 +79,11 @@ const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
-      entry.target.classList.add("is-visible");
+      requestRevealClass(entry.target, "is-visible");
       revealObserver.unobserve(entry.target);
     });
   },
-  { threshold: 0.25, rootMargin: "0px 0px -26% 0px" }
+  { threshold: getRevealThreshold(), rootMargin: getRevealRootMargin() }
 );
 
 revealItems.forEach((item, index) => {
@@ -79,8 +95,8 @@ function revealVisibleNow() {
   revealItems.forEach((item) => {
     if (item.classList.contains("is-visible")) return;
     const rect = item.getBoundingClientRect();
-    if (rect.top < window.innerHeight * 0.72 && rect.bottom > 80) {
-      item.classList.add("is-visible");
+    if (isRevealReady(item)) {
+      requestRevealClass(item, "is-visible");
     }
   });
 }
@@ -385,3 +401,4 @@ leadForm?.addEventListener("submit", async (event) => {
     button.textContent = defaultText;
   }
 });
+
