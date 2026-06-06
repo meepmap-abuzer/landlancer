@@ -52,25 +52,78 @@ function finishIntro() {
 
 if (introVideo) {
   const introRate = 2.15;
+  let introTimers = [];
+  let videoStarted = false;
+
+  function scheduleIntro(delay, callback) {
+    const timer = window.setTimeout(callback, delay);
+    introTimers.push(timer);
+    return timer;
+  }
+
+  function clearIntroTimers() {
+    introTimers.forEach((timer) => window.clearTimeout(timer));
+    introTimers = [];
+  }
+
+  function finishWithoutLateVideo() {
+    if (introFinished) return;
+    document.body.classList.add("video-fallback");
+    try {
+      introVideo.pause();
+      introVideo.removeAttribute("src");
+      introVideo.load();
+    } catch (error) {
+      // The intro can still reveal normally if a browser refuses the video.
+    }
+    finishIntro();
+  }
+
   introVideo.playbackRate = introRate;
+  introVideo.muted = true;
+  introVideo.setAttribute("playsinline", "");
+  introVideo.preload = "auto";
+
+  introVideo.addEventListener("loadeddata", () => {
+    document.body.classList.add("video-ready");
+  });
+
+  introVideo.addEventListener("playing", () => {
+    videoStarted = true;
+    document.body.classList.add("video-ready");
+  });
+
   introVideo.addEventListener("loadedmetadata", () => {
     introVideo.playbackRate = introRate;
     if (Number.isFinite(introVideo.duration) && introVideo.duration > 0) {
       const visibleDuration = (introVideo.duration / introRate) * 1000;
-      window.setTimeout(showIntroTitle, Math.max(900, visibleDuration * 0.68));
-      window.setTimeout(finishIntro, visibleDuration + 620);
+      scheduleIntro(Math.max(900, visibleDuration * 0.68), showIntroTitle);
+      scheduleIntro(visibleDuration + 620, finishIntro);
     }
   });
+
   introVideo.addEventListener("timeupdate", () => {
     if (!Number.isFinite(introVideo.duration) || introVideo.duration <= 0) return;
     if (introVideo.currentTime >= introVideo.duration * 0.68) {
       showIntroTitle();
     }
   });
+
   introVideo.addEventListener("ended", finishIntro, { once: true });
-  window.setTimeout(showIntroTitle, 3000);
-  window.setTimeout(finishIntro, 5600);
-  introVideo.play().catch(() => window.setTimeout(finishIntro, 900));
+  introVideo.addEventListener("error", finishWithoutLateVideo, { once: true });
+
+  scheduleIntro(3800, () => {
+    if (!introTitleShown && videoStarted) showIntroTitle();
+  });
+
+  scheduleIntro(9200, () => {
+    if (!introFinished && !videoStarted) finishWithoutLateVideo();
+  });
+
+  introVideo.play().catch(() => {
+    clearIntroTimers();
+    scheduleIntro(900, finishWithoutLateVideo);
+  });
 } else {
   finishIntro();
 }

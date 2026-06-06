@@ -5,12 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Северный сад - демо лендинг жилого комплекса | LandLancer</title>
     <meta name="description" content="Демо-проект LandLancer: лендинг жилого комплекса с видео-шапкой, планировками, картой района и расчетом ипотеки.">
-    <link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/meepmap-abuzer/landlancer@c40a95b/residence-landing/assets/hero-complete.webp" />
-    <link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/meepmap-abuzer/landlancer@c40a95b/residence-landing/assets/hero-start.webp" />
-    <link rel="preload" as="video" href="https://cdn.jsdelivr.net/gh/meepmap-abuzer/landlancer@c40a95b/residence-landing/assets/hero-intro.mp4" type="video/mp4" />
-    <link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/meepmap-abuzer/landlancer@c40a95b/residence-landing/assets/view-morning.webp" />
-    <link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/meepmap-abuzer/landlancer@c40a95b/residence-landing/assets/map-minimal.webp" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/meepmap-abuzer/landlancer@c40a95b/residence-landing/styles.20260601m.css" />
+    <link rel="preload" as="video" href="assets/hero-intro.mp4?v=20260606-video2" type="video/mp4" fetchpriority="high" />
+    <link rel="preload" as="image" href="assets/view-morning.webp" />
+    <link rel="preload" as="image" href="assets/map-minimal.webp" />
+    <link rel="stylesheet" href="styles.css?v=20260606-video2" />
 <meta name="robots" content="noindex, follow, max-image-preview:large">
 <link rel="canonical" href="https://landlancer.ru/residence-landing/">
 <meta property="og:type" content="website">
@@ -19,12 +17,12 @@
 <meta property="og:site_name" content="Residence demo">
 <meta property="og:title" content="Северный сад - демо лендинг жилого комплекса | LandLancer">
 <meta property="og:description" content="Демо-проект LandLancer: лендинг жилого комплекса с видео-шапкой, планировками, картой района и расчетом ипотеки.">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/meepmap-abuzer/landlancer@c40a95b/residence-landing/assets/hero-complete.webp">
+<meta property="og:image" content="https://landlancer.ru/residence-landing/assets/hero-start.webp">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Северный сад - демо лендинг жилого комплекса | LandLancer">
 <meta name="twitter:description" content="Демо-проект LandLancer: лендинг жилого комплекса с видео-шапкой, планировками, картой района и расчетом ипотеки.">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/meepmap-abuzer/landlancer@c40a95b/residence-landing/assets/hero-complete.webp">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Северный сад - демо лендинг жилого комплекса | LandLancer","description":"Демо-проект LandLancer: лендинг жилого комплекса с видео-шапкой, планировками, картой района и расчетом ипотеки.","url":"https://landlancer.ru/residence-landing/","image":"https://cdn.jsdelivr.net/gh/meepmap-abuzer/landlancer@c40a95b/residence-landing/assets/hero-complete.webp","inLanguage":"ru-RU","isPartOf":{"@type":"WebSite","name":"LandLancer","url":"https://landlancer.ru/"},"creator":{"@type":"Person","name":"LandLancer","url":"https://landlancer.ru/"}}</script>
+<meta name="twitter:image" content="https://landlancer.ru/residence-landing/assets/hero-start.webp">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Северный сад - демо лендинг жилого комплекса | LandLancer","description":"Демо-проект LandLancer: лендинг жилого комплекса с видео-шапкой, планировками, картой района и расчетом ипотеки.","url":"https://landlancer.ru/residence-landing/","image":"https://landlancer.ru/residence-landing/assets/hero-start.webp","inLanguage":"ru-RU","isPartOf":{"@type":"WebSite","name":"LandLancer","url":"https://landlancer.ru/"},"creator":{"@type":"Person","name":"LandLancer","url":"https://landlancer.ru/"}}</script>
 </head>
   <body class="intro-playing">
     <header class="site-header">
@@ -50,7 +48,7 @@
 
     <main id="top">
       <section class="hero">
-        <video poster="https://cdn.jsdelivr.net/gh/meepmap-abuzer/landlancer@c40a95b/residence-landing/assets/hero-start.webp" class="hero-intro-video" src="https://cdn.jsdelivr.net/gh/meepmap-abuzer/landlancer@c40a95b/residence-landing/assets/hero-intro.mp4" muted playsinline autoplay preload="metadata" aria-hidden="true"></video>
+        <video class="hero-intro-video" src="assets/hero-intro.mp4?v=20260606-video2" muted playsinline autoplay preload="auto" aria-hidden="true"></video>
         <div class="hero-intro-shade" aria-hidden="true"></div>
         <div class="page-shell hero-grid">
           <div class="hero-copy reveal">
@@ -81,26 +79,6 @@
                 <dd>дома уже забронировано</dd>
               </div>
             </dl>
-          </div>
-
-          <div class="build-stage reveal" aria-label="Архитектурная визуализация дома">
-            <img class="stage-image stage-start" src="https://cdn.jsdelivr.net/gh/meepmap-abuzer/landlancer@c40a95b/residence-landing/assets/hero-start.webp" alt="" aria-hidden="true" / decoding="async">
-            <img
-              class="stage-image stage-complete"
-              src="https://cdn.jsdelivr.net/gh/meepmap-abuzer/landlancer@c40a95b/residence-landing/assets/hero-complete.webp"
-              alt="Готовый клубный дом Северный сад с озеленением и теплым светом в окнах"
-            / decoding="async" loading="lazy">
-            <div class="floor-rig" aria-hidden="true">
-              <span style="--i: 0"></span>
-              <span style="--i: 1"></span>
-              <span style="--i: 2"></span>
-              <span style="--i: 3"></span>
-              <span style="--i: 4"></span>
-            </div>
-            <div class="stage-note" aria-hidden="true">
-              <b>III кв. 2027</b>
-              <span>передача ключей</span>
-            </div>
           </div>
         </div>
       </section>
@@ -204,7 +182,7 @@
             </div>
           </div>
           <div class="view-stage reveal" data-view-stage="morning">
-            <img src="https://cdn.jsdelivr.net/gh/meepmap-abuzer/landlancer@c40a95b/residence-landing/assets/view-morning.webp" alt="Утренний двор и фасад дома Северный сад" loading="lazy" decoding="async" data-view-image />
+            <img src="assets/view-morning.webp" alt="Утренний двор и фасад дома Северный сад" loading="lazy" decoding="async" data-view-image />
             <div class="view-caption">
               <strong data-view-title>Мягкий утренний свет</strong>
               <span data-view-text>светлые комнаты и спокойный двор без транзитного движения</span>
@@ -308,6 +286,6 @@
       </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/gh/meepmap-abuzer/landlancer@c40a95b/residence-landing/script.20260601m.js"></script>
+    <script src="script.js?v=20260606-video2"></script>
   </body>
 </html>

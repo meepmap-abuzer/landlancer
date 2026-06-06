@@ -170,6 +170,9 @@ input {
   min-height: 760px;
   padding: 132px 0 70px;
   isolation: isolate;
+  background:
+    radial-gradient(circle at 50% 32%, rgba(255, 255, 247, 0.56), rgba(232, 229, 218, 0.18) 42%, rgba(223, 219, 207, 0.38) 100%),
+    #e8e5dc;
 }
 
 .hero-intro-video {
@@ -211,6 +214,10 @@ input {
   opacity: 1;
   filter: saturate(1.03) contrast(1.04);
   transform: scale(1);
+}
+
+.video-fallback .hero-intro-video {
+  opacity: 0;
 }
 
 .intro-playing .hero-intro-shade {
