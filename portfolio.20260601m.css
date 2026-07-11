@@ -330,6 +330,136 @@ h2 {
   gap: 28px;
 }
 
+.work-switcher {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  width: min(720px, 100%);
+  margin: -34px auto 44px;
+  padding: 8px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 18px 50px rgba(50, 56, 96, 0.06);
+}
+
+.work-tab {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: center;
+  min-height: 66px;
+  padding: 12px 16px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  text-align: left;
+  transition: background 180ms ease, border-color 180ms ease, box-shadow 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.work-tab:hover {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.66);
+  transform: translateY(-1px);
+}
+
+.work-tab.is-active {
+  border-color: rgba(93, 97, 223, 0.18);
+  color: var(--text);
+  background: #fff;
+  box-shadow: 0 14px 32px rgba(50, 56, 96, 0.08);
+}
+
+.work-tab span {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  color: var(--accent);
+  background: rgba(93, 97, 223, 0.09);
+  font-size: 0.84rem;
+  font-weight: 800;
+}
+
+.work-tab strong {
+  overflow: hidden;
+  font-size: 1rem;
+  font-weight: 800;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.work-tab small {
+  justify-self: end;
+  padding: 6px 9px;
+  border-radius: 999px;
+  background: var(--bg-soft);
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.work-panel {
+  animation: workPanelIn 260ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.work-panel:not(.is-active) {
+  display: none;
+}
+
+@keyframes workPanelIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+}
+
+.work-group + .work-group {
+  margin-top: 92px;
+}
+
+.work-subhead {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 18px;
+  align-items: start;
+  margin-bottom: 28px;
+}
+
+.work-subhead span {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(93, 97, 223, 0.22);
+  border-radius: 9px;
+  color: var(--accent);
+  background: #fff;
+  font-weight: 800;
+}
+
+.work-subhead h3 {
+  margin: 0 0 8px;
+  font-size: clamp(1.35rem, 2vw, 1.9rem);
+}
+
+.work-subhead p {
+  max-width: 620px;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
 .work-card {
   content-visibility: auto;
   contain-intrinsic-size: 620px 500px;
@@ -340,6 +470,11 @@ h2 {
   box-shadow: 0 18px 50px rgba(50, 56, 96, 0.06);
   cursor: pointer;
   transition: transform 240ms ease, box-shadow 240ms ease, border-color 240ms ease;
+}
+
+.work-card:focus-visible {
+  outline: 3px solid rgba(93, 97, 223, 0.28);
+  outline-offset: 4px;
 }
 
 .work-card-centered {
@@ -375,6 +510,118 @@ h2 {
 
 .work-card:hover .browser-preview img {
   transform: scale(1.035);
+}
+
+.project-card {
+  --project-accent: var(--accent);
+  --project-soft: #f5f6ff;
+  --project-ink: var(--ink);
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 78% 12%, color-mix(in srgb, var(--project-accent) 16%, transparent), transparent 32%),
+    linear-gradient(180deg, #fff 0%, #fbfbff 100%);
+}
+
+.project-card::before {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border: 1px solid color-mix(in srgb, var(--project-accent) 16%, transparent);
+  border-radius: inherit;
+  content: "";
+}
+
+.project-card--gift {
+  --project-accent: #83d82a;
+  --project-soft: #08100d;
+  --project-ink: #f5fff0;
+  background:
+    radial-gradient(circle at 80% 8%, rgba(131, 216, 42, 0.25), transparent 34%),
+    linear-gradient(180deg, #08100d 0%, #030706 100%);
+  color: #f5fff0;
+}
+
+.project-card--tailcare {
+  --project-accent: #2f7e48;
+  --project-soft: #f4f8ee;
+  background:
+    radial-gradient(circle at 78% 4%, rgba(70, 132, 76, 0.14), transparent 34%),
+    linear-gradient(180deg, #ffffff 0%, #f8faf4 100%);
+}
+
+.project-card--maverick {
+  --project-accent: #9b150e;
+  --project-soft: #fff1df;
+  background:
+    radial-gradient(circle at 78% 6%, rgba(155, 21, 14, 0.15), transparent 34%),
+    linear-gradient(180deg, #fff9ef 0%, #f8e8d5 100%);
+}
+
+.project-preview {
+  aspect-ratio: 4 / 3;
+  border-color: color-mix(in srgb, var(--project-accent) 18%, var(--line));
+  background: var(--project-soft);
+}
+
+.project-card--gift .project-preview {
+  border-color: rgba(131, 216, 42, 0.25);
+  background: #050907;
+}
+
+.project-card--maverick .project-preview {
+  background: #f5dfc8;
+}
+
+.project-preview img {
+  object-fit: cover;
+}
+
+.project-preview--phone {
+  display: grid;
+  place-items: center;
+}
+
+.project-preview--phone img {
+  width: min(58%, 210px);
+  height: calc(100% - 26px);
+  border: 1px solid color-mix(in srgb, var(--project-accent) 24%, var(--line));
+  border-radius: 22px;
+  object-fit: cover;
+  object-position: top center;
+  background: var(--project-soft);
+  box-shadow: 0 20px 48px color-mix(in srgb, var(--project-accent) 22%, transparent);
+}
+
+.project-card--gift .project-preview--phone img {
+  box-shadow: 0 20px 60px rgba(131, 216, 42, 0.18);
+}
+
+.project-card--tailcare .project-preview img {
+  object-position: top center;
+}
+
+.project-card--gift .work-meta p {
+  color: rgba(245, 255, 240, 0.72);
+}
+
+.project-card--gift .work-meta button {
+  border-color: rgba(131, 216, 42, 0.25);
+  background: rgba(131, 216, 42, 0.12);
+  color: #b9ff62;
+}
+
+.project-card--gift:hover .work-meta button {
+  color: #061006;
+  background: #83d82a;
+}
+
+.project-card--tailcare:hover {
+  border-color: rgba(47, 126, 72, 0.26);
+}
+
+.project-card--maverick:hover {
+  border-color: rgba(155, 21, 14, 0.25);
 }
 
 .work-meta {
@@ -584,6 +831,10 @@ h2 {
   .benefits {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 720px) {
@@ -600,12 +851,30 @@ h2 {
 
   .hero-services,
   .benefits,
-  .work-grid {
+  .work-grid,
+  .project-grid {
     grid-template-columns: 1fr;
+  }
+
+  .work-switcher {
+    margin-top: -42px;
+  }
+
+  .work-tab {
+    grid-template-columns: auto 1fr;
+  }
+
+  .work-tab small {
+    grid-column: 2;
+    justify-self: start;
   }
 
   .work-card-centered {
     width: 100%;
+  }
+
+  .work-subhead {
+    grid-template-columns: 1fr;
   }
 
   .hero-actions,

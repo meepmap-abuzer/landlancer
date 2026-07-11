@@ -72,13 +72,16 @@
               { "@type": "ListItem", "position": 6, "name": "Лендинг для курса по уходу", "url": "https://landlancer.ru/skin-landing/" },
               { "@type": "ListItem", "position": 7, "name": "Лендинг для подготовки к ЕГЭ", "url": "https://landlancer.ru/school_lending/" },
               { "@type": "ListItem", "position": 8, "name": "Лендинг для жилого комплекса", "url": "https://landlancer.ru/residence-landing/" },
-              { "@type": "ListItem", "position": 9, "name": "iStore - лендинг магазина техники Apple", "url": "https://landlancer.ru/orbit-supply/" }
+              { "@type": "ListItem", "position": 9, "name": "iStore - лендинг магазина техники Apple", "url": "https://landlancer.ru/orbit-supply/" },
+              { "@type": "ListItem", "position": 10, "name": "Gift Roulette - Telegram Mini App", "url": "https://landlancer.ru/cases/gift-roulette/" },
+              { "@type": "ListItem", "position": 11, "name": "Tailcare", "url": "https://landlancer.ru/cases/tailcare/" },
+              { "@type": "ListItem", "position": 12, "name": "Maverick - Telegram Mini App", "url": "https://landlancer.ru/cases/maverick/" }
             ]
           }
         ]
       }
     </script>
-    <link rel="stylesheet" href="./portfolio.20260601m.css?v=20260613-istore" />
+    <link rel="stylesheet" href="./portfolio.20260601m.css?v=20260709-real-cases" />
   </head>
   <body>
     <header class="header">
@@ -176,125 +179,200 @@
         <div class="section-head reveal">
           <p class="eyebrow">Мои работы</p>
           <h2>Примеры работ</h2>
+          <p>Выберите формат: быстрые лендинги с живым предпросмотром или крупные продуктовые проекты с разбором интерфейсов, логики и админок.</p>
         </div>
 
-        <div class="work-grid">
-          <article class="work-card reveal" data-url="./lendings/index.html" data-title="Belaya Linia">
-            <div class="browser-preview">
-              <img src="https://cdn.jsdelivr.net/gh/meepmap-abuzer/landlancer@c40a95b/portfolio-assets/work-cleaning.webp" alt="Главный экран лендинга для клининговой службы" loading="lazy" decoding="async" width="1240" height="720" />
-            </div>
-            <div class="work-meta">
-              <h3>Лендинг для клининговой службы</h3>
-              <p>Лендинг · Дизайн · Верстка</p>
-              <button aria-label="Открыть Belaya Linia">
-                <svg viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M9 7h8v8"/></svg>
-              </button>
-            </div>
-          </article>
+        <div class="work-switcher reveal" role="tablist" aria-label="Категории работ">
+          <button class="work-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="work-landings" data-work-tab="landings">
+            <span>01</span>
+            <strong>Лендинги</strong>
+            <small>9 работ</small>
+          </button>
+          <button class="work-tab" type="button" role="tab" aria-selected="false" aria-controls="work-products" data-work-tab="products">
+            <span>02</span>
+            <strong>Проекты</strong>
+            <small>3 кейса</small>
+          </button>
+        </div>
 
-          <article class="work-card reveal" data-url="./landing/index.html" data-title="LEVEL UP">
-            <div class="browser-preview">
-              <img src="https://cdn.jsdelivr.net/gh/meepmap-abuzer/landlancer@c40a95b/portfolio-assets/work-level-up.webp?v=20260530-2" alt="Главный экран лендинга для обучающего продукта" loading="lazy" decoding="async" width="1240" height="720" />
+        <div class="work-group work-panel is-active" id="work-landings" role="tabpanel" data-work-panel="landings">
+          <div class="work-subhead reveal">
+            <span>01</span>
+            <div>
+              <h3>Лендинги</h3>
+              <p>Одностраничные сайты, промо-страницы и витрины услуг.</p>
             </div>
-            <div class="work-meta">
-              <h3>Лендинг для обучающего продукта</h3>
-              <p>Лендинг · Анимации · Форма</p>
-              <button aria-label="Открыть LEVEL UP">
-                <svg viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M9 7h8v8"/></svg>
-              </button>
-            </div>
-          </article>
+          </div>
 
-          <article class="work-card reveal" data-url="./fitness-landing/index.html" data-title="APEX GYM">
-            <div class="browser-preview">
-              <img src="https://cdn.jsdelivr.net/gh/meepmap-abuzer/landlancer@c40a95b/portfolio-assets/work-apex-gym.webp" alt="Главный экран лендинга для фитнес-клуба" loading="lazy" decoding="async" width="1240" height="720" />
-            </div>
-            <div class="work-meta">
-              <h3>Лендинг для фитнес-клуба</h3>
-              <p>Лендинг · Тарифы · Заявка</p>
-              <button aria-label="Открыть APEX GYM">
-                <svg viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M9 7h8v8"/></svg>
-              </button>
-            </div>
-          </article>
+          <div class="work-grid">
+            <article class="work-card reveal" data-url="./lendings/index.html" data-title="Belaya Linia" tabindex="0">
+              <div class="browser-preview">
+                <img src="https://cdn.jsdelivr.net/gh/meepmap-abuzer/landlancer@c40a95b/portfolio-assets/work-cleaning.webp" alt="Главный экран лендинга для клининговой службы" loading="lazy" decoding="async" width="1240" height="720" />
+              </div>
+              <div class="work-meta">
+                <h3>Лендинг для клининговой службы</h3>
+                <p>Лендинг · Дизайн · Верстка</p>
+                <button aria-label="Открыть Belaya Linia">
+                  <svg viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M9 7h8v8"/></svg>
+                </button>
+              </div>
+            </article>
 
-          <article class="work-card reveal" data-url="./lendos/index.html" data-title="StackForge Go">
-            <div class="browser-preview">
-              <img src="https://cdn.jsdelivr.net/gh/meepmap-abuzer/landlancer@c40a95b/portfolio-assets/work-stackforge.webp" alt="Главный экран лендинга для backend-курса" loading="lazy" decoding="async" width="1240" height="720" />
-            </div>
-            <div class="work-meta">
-              <h3>Лендинг для backend-курса</h3>
-              <p>Лендинг · Обучение · Карьера</p>
-              <button aria-label="Открыть StackForge Go">
-                <svg viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M9 7h8v8"/></svg>
-              </button>
-            </div>
-          </article>
+            <article class="work-card reveal" data-url="./landing/index.html" data-title="LEVEL UP" tabindex="0">
+              <div class="browser-preview">
+                <img src="https://cdn.jsdelivr.net/gh/meepmap-abuzer/landlancer@c40a95b/portfolio-assets/work-level-up.webp?v=20260530-2" alt="Главный экран лендинга для обучающего продукта" loading="lazy" decoding="async" width="1240" height="720" />
+              </div>
+              <div class="work-meta">
+                <h3>Лендинг для обучающего продукта</h3>
+                <p>Лендинг · Анимации · Форма</p>
+                <button aria-label="Открыть LEVEL UP">
+                  <svg viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M9 7h8v8"/></svg>
+                </button>
+              </div>
+            </article>
 
-          <article class="work-card reveal" data-url="./nutritionist/index.html" data-title="Нутрициолог">
-            <div class="browser-preview">
-              <img src="https://cdn.jsdelivr.net/gh/meepmap-abuzer/landlancer@c40a95b/portfolio-assets/work-nutritionist.webp" alt="Главный экран лендинга для нутрициолога" loading="lazy" decoding="async" width="1240" height="720" />
-            </div>
-            <div class="work-meta">
-              <h3>Лендинг для нутрициолога</h3>
-              <p>Эксперт · Услуги · FAQ</p>
-              <button aria-label="Открыть Нутрициолог">
-                <svg viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M9 7h8v8"/></svg>
-              </button>
-            </div>
-          </article>
+            <article class="work-card reveal" data-url="./fitness-landing/index.html" data-title="APEX GYM" tabindex="0">
+              <div class="browser-preview">
+                <img src="https://cdn.jsdelivr.net/gh/meepmap-abuzer/landlancer@c40a95b/portfolio-assets/work-apex-gym.webp" alt="Главный экран лендинга для фитнес-клуба" loading="lazy" decoding="async" width="1240" height="720" />
+              </div>
+              <div class="work-meta">
+                <h3>Лендинг для фитнес-клуба</h3>
+                <p>Лендинг · Тарифы · Заявка</p>
+                <button aria-label="Открыть APEX GYM">
+                  <svg viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M9 7h8v8"/></svg>
+                </button>
+              </div>
+            </article>
 
-          <article class="work-card reveal" data-url="./skin-landing/index.html" data-title="Чистая Кожа">
-            <div class="browser-preview">
-              <img src="https://cdn.jsdelivr.net/gh/meepmap-abuzer/landlancer@c40a95b/portfolio-assets/work-skin.webp" alt="Главный экран лендинга для курса по уходу за кожей" loading="lazy" decoding="async" width="1240" height="720" />
-            </div>
-            <div class="work-meta">
-              <h3>Лендинг для курса по уходу</h3>
-              <p>Beauty · Курс · Заявка</p>
-              <button aria-label="Открыть Чистая Кожа">
-                <svg viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M9 7h8v8"/></svg>
-              </button>
-            </div>
-          </article>
+            <article class="work-card reveal" data-url="./lendos/index.html" data-title="StackForge Go" tabindex="0">
+              <div class="browser-preview">
+                <img src="https://cdn.jsdelivr.net/gh/meepmap-abuzer/landlancer@c40a95b/portfolio-assets/work-stackforge.webp" alt="Главный экран лендинга для backend-курса" loading="lazy" decoding="async" width="1240" height="720" />
+              </div>
+              <div class="work-meta">
+                <h3>Лендинг для backend-курса</h3>
+                <p>Лендинг · Обучение · Карьера</p>
+                <button aria-label="Открыть StackForge Go">
+                  <svg viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M9 7h8v8"/></svg>
+                </button>
+              </div>
+            </article>
 
-          <article class="work-card reveal" data-url="./school_lending/index.html" data-title="Линия ЕГЭ">
-            <div class="browser-preview">
-              <img src="https://cdn.jsdelivr.net/gh/meepmap-abuzer/landlancer@c40a95b/portfolio-assets/work-school.webp" alt="Главный экран лендинга для подготовки к ЕГЭ" loading="lazy" decoding="async" width="1240" height="720" />
-            </div>
-            <div class="work-meta">
-              <h3>Лендинг для подготовки к ЕГЭ</h3>
-              <p>Обучение · Тарифы · Форма</p>
-              <button aria-label="Открыть Линия ЕГЭ">
-                <svg viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M9 7h8v8"/></svg>
-              </button>
-            </div>
-          </article>
+            <article class="work-card reveal" data-url="./nutritionist/index.html" data-title="Нутрициолог" tabindex="0">
+              <div class="browser-preview">
+                <img src="https://cdn.jsdelivr.net/gh/meepmap-abuzer/landlancer@c40a95b/portfolio-assets/work-nutritionist.webp" alt="Главный экран лендинга для нутрициолога" loading="lazy" decoding="async" width="1240" height="720" />
+              </div>
+              <div class="work-meta">
+                <h3>Лендинг для нутрициолога</h3>
+                <p>Эксперт · Услуги · FAQ</p>
+                <button aria-label="Открыть Нутрициолог">
+                  <svg viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M9 7h8v8"/></svg>
+                </button>
+              </div>
+            </article>
 
-          <article class="work-card reveal" data-url="./residence-landing/index.html" data-title="Северный сад">
-            <div class="browser-preview">
-              <img src="https://cdn.jsdelivr.net/gh/meepmap-abuzer/landlancer@c40a95b/portfolio-assets/work-residence.webp?v=20260530-2" alt="Главный экран лендинга жилого комплекса Северный сад" loading="lazy" decoding="async" width="1240" height="720" />
-            </div>
-            <div class="work-meta">
-              <h3>Лендинг для жилого комплекса</h3>
-              <p>Недвижимость · Планировки · Заявка</p>
-              <button aria-label="Открыть Северный сад">
-                <svg viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M9 7h8v8"/></svg>
-              </button>
-            </div>
-          </article>
+            <article class="work-card reveal" data-url="./skin-landing/index.html" data-title="Чистая Кожа" tabindex="0">
+              <div class="browser-preview">
+                <img src="https://cdn.jsdelivr.net/gh/meepmap-abuzer/landlancer@c40a95b/portfolio-assets/work-skin.webp" alt="Главный экран лендинга для курса по уходу за кожей" loading="lazy" decoding="async" width="1240" height="720" />
+              </div>
+              <div class="work-meta">
+                <h3>Лендинг для курса по уходу</h3>
+                <p>Beauty · Курс · Заявка</p>
+                <button aria-label="Открыть Чистая Кожа">
+                  <svg viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M9 7h8v8"/></svg>
+                </button>
+              </div>
+            </article>
 
-          <article class="work-card work-card-centered reveal" data-url="./orbit-supply/index.html" data-title="iStore">
-            <div class="browser-preview">
-              <img src="./portfolio-assets/work-orbit-supply.webp?v=20260613-hero2" alt="Главный экран лендинга iStore для магазина техники Apple" loading="lazy" decoding="async" width="1240" height="720" />
+            <article class="work-card reveal" data-url="./school_lending/index.html" data-title="Линия ЕГЭ" tabindex="0">
+              <div class="browser-preview">
+                <img src="https://cdn.jsdelivr.net/gh/meepmap-abuzer/landlancer@c40a95b/portfolio-assets/work-school.webp" alt="Главный экран лендинга для подготовки к ЕГЭ" loading="lazy" decoding="async" width="1240" height="720" />
+              </div>
+              <div class="work-meta">
+                <h3>Лендинг для подготовки к ЕГЭ</h3>
+                <p>Обучение · Тарифы · Форма</p>
+                <button aria-label="Открыть Линия ЕГЭ">
+                  <svg viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M9 7h8v8"/></svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="work-card reveal" data-url="./residence-landing/index.html" data-title="Северный сад" tabindex="0">
+              <div class="browser-preview">
+                <img src="https://cdn.jsdelivr.net/gh/meepmap-abuzer/landlancer@c40a95b/portfolio-assets/work-residence.webp?v=20260530-2" alt="Главный экран лендинга жилого комплекса Северный сад" loading="lazy" decoding="async" width="1240" height="720" />
+              </div>
+              <div class="work-meta">
+                <h3>Лендинг для жилого комплекса</h3>
+                <p>Недвижимость · Планировки · Заявка</p>
+                <button aria-label="Открыть Северный сад">
+                  <svg viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M9 7h8v8"/></svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="work-card reveal" data-url="./orbit-supply/index.html" data-title="iStore" tabindex="0">
+              <div class="browser-preview">
+                <img src="./portfolio-assets/work-orbit-supply.webp?v=20260613-hero2" alt="Главный экран лендинга iStore для магазина техники Apple" loading="lazy" decoding="async" width="1240" height="720" />
+              </div>
+              <div class="work-meta">
+                <h3>iStore - магазин техники Apple</h3>
+                <p>Apple · Каталог · Премиум-ритейл</p>
+                <button aria-label="Открыть iStore">
+                  <svg viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M9 7h8v8"/></svg>
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="work-group work-panel" id="work-products" role="tabpanel" data-work-panel="products" hidden>
+          <div class="work-subhead reveal">
+            <span>02</span>
+            <div>
+              <h3>Продуктовые проекты</h3>
+              <p>Telegram Mini App, боты, каталоги, админки и backend-сервисы.</p>
             </div>
-            <div class="work-meta">
-              <h3>iStore — магазин техники Apple</h3>
-              <p>Apple · Каталог · Премиум-ритейл</p>
-              <button aria-label="Открыть iStore">
-                <svg viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M9 7h8v8"/></svg>
-              </button>
-            </div>
-          </article>
+          </div>
+
+          <div class="project-grid">
+            <article class="work-card project-card project-card--gift reveal" data-url="./cases/gift-roulette/" data-title="Gift Roulette" tabindex="0">
+              <div class="browser-preview project-preview project-preview--phone">
+                <img src="./portfolio-assets/cases/gift-roulette/overview_main.png" alt="Главный экран Gift Roulette Mini App" loading="lazy" decoding="async" width="390" height="844" />
+              </div>
+              <div class="work-meta">
+                <h3>Gift Roulette</h3>
+                <p>Telegram Mini App · Игры · RTP · Admin bot</p>
+                <button aria-label="Открыть кейс Gift Roulette">
+                  <svg viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M9 7h8v8"/></svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="work-card project-card project-card--tailcare reveal" data-url="./cases/tailcare/" data-title="Tailcare" tabindex="0">
+              <div class="browser-preview project-preview">
+                <img src="./portfolio-assets/cases/tailcare/home.png" alt="Главный экран Tailcare" loading="lazy" decoding="async" width="1440" height="1100" />
+              </div>
+              <div class="work-meta">
+                <h3>Tailcare</h3>
+                <p>Telegram-бот · Каталог · FastAPI · Модерация</p>
+                <button aria-label="Открыть кейс Tailcare">
+                  <svg viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M9 7h8v8"/></svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="work-card project-card project-card--maverick reveal" data-url="./cases/maverick/" data-title="Maverick" tabindex="0">
+              <div class="browser-preview project-preview project-preview--phone">
+                <img src="./portfolio-assets/cases/maverick/client-home-real.png" alt="Главный экран Maverick Mini App" loading="lazy" decoding="async" width="430" height="930" />
+              </div>
+              <div class="work-meta">
+                <h3>Maverick</h3>
+                <p>Mini App · QR · Рулетка · Мерч · Admin</p>
+                <button aria-label="Открыть кейс Maverick">
+                  <svg viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M9 7h8v8"/></svg>
+                </button>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -334,6 +412,6 @@
       </section>
     </div>
 
-    <script src="./portfolio.20260601m.js?v=20260613-istore"></script>
+    <script src="./portfolio.20260601m.js?v=20260708-cases"></script>
   </body>
 </html>

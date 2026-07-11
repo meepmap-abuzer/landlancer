@@ -100,8 +100,51 @@ function setupTilt() {
   });
 }
 
+function setupWorkTabs() {
+  const tabs = document.querySelectorAll("[data-work-tab]");
+  const panels = document.querySelectorAll("[data-work-panel]");
+  if (!tabs.length || !panels.length) return;
+
+  function activate(category) {
+    tabs.forEach((tab) => {
+      const isActive = tab.dataset.workTab === category;
+      tab.classList.toggle("is-active", isActive);
+      tab.setAttribute("aria-selected", String(isActive));
+    });
+
+    panels.forEach((panel) => {
+      const isActive = panel.dataset.workPanel === category;
+      panel.classList.toggle("is-active", isActive);
+      panel.hidden = !isActive;
+      if (isActive) {
+        panel.querySelectorAll(".reveal").forEach((item, index) => {
+          window.setTimeout(() => requestRevealClass(item, "visible"), index * 55);
+        });
+      }
+    });
+  }
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => activate(tab.dataset.workTab));
+  });
+
+  if (window.location.hash === "#work-products") {
+    activate("products");
+  }
+}
+
 document.querySelectorAll(".work-card").forEach((card) => {
-  card.addEventListener("click", () => openPreview(card));
+  card.addEventListener("click", () => {
+    if (!card.dataset.url) return;
+    window.location.href = card.dataset.url;
+  });
+
+  card.addEventListener("keydown", (event) => {
+    if (event.key !== "Enter" && event.key !== " ") return;
+    event.preventDefault();
+    if (!card.dataset.url) return;
+    window.location.href = card.dataset.url;
+  });
 });
 
 document.querySelectorAll("[data-close]").forEach((button) => {
@@ -115,4 +158,5 @@ document.addEventListener("keydown", (event) => {
 setupReveal();
 setupMagnetic();
 setupTilt();
+setupWorkTabs();
 
