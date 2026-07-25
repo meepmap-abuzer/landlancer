@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>ProfiMatika — подготовка к ЕГЭ как RPG | LandLancer</title>
+    <meta
+      name="description"
+      content="Кейс ProfiMatika: Telegram Mini App, где задачи по информатике управляют RPG-боями, картой мира, навыками, PvP и прогрессом ученика."
+    />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#07131f" />
+    <link rel="canonical" href="https://landlancer.ru/cases/profimatika/" />
+    <link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../../profimatika.css?v=20260725-case-v1" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="ProfiMatika — подготовка к ЕГЭ как RPG" />
+    <meta
+      property="og:description"
+      content="Карта приключения, задачи под таймером, тактические бои, PvP и честный учебный прогресс внутри Telegram."
+    />
+    <meta
+      property="og:image"
+      content="https://landlancer.ru/portfolio-assets/cases/profimatika/onboarding.webp"
+    />
+  </head>
+  <body class="prof-page">
+    <a class="prof-skip" href="#main-content">К содержанию</a>
+
+    <header class="prof-header">
+      <a class="prof-brand" href="../../" aria-label="Вернуться на главную LandLancer">
+        <span class="prof-brand-mark" aria-hidden="true"></span>
+        <strong>landlancer.ru</strong>
+      </a>
+      <span class="prof-case-id">Case / ProfiMatika</span>
+      <nav class="prof-nav" aria-label="Навигация по кейсу">
+        <a href="#idea">Идея</a>
+        <a href="#loop">Цикл</a>
+        <a href="#battle">Бой</a>
+        <a href="#system">Система</a>
+      </nav>
+      <a class="prof-all-cases" href="../../#works">
+        Все кейсы
+        <span aria-hidden="true">↗</span>
+      </a>
+    </header>
+
+    <main id="main-content">
+      <section class="prof-hero" id="top">
+        <div class="prof-stars" aria-hidden="true"></div>
+        <div class="prof-hero-copy">
+          <p class="prof-hero-label">
+            <span class="prof-telegram-mark" aria-hidden="true">↗</span>
+            Telegram Mini App · EdTech RPG
+          </p>
+          <h1><span>Profi</span>Matika</h1>
+          <p class="prof-hero-thesis">Подготовка к ЕГЭ, которая ощущается как приключение.</p>
+          <p class="prof-hero-lead">
+            Ученик исследует фэнтезийный мир, решает задачи по информатике под давлением времени,
+            заряжает навыки правильными ответами и побеждает противников тактикой, а не случайностью.
+          </p>
+          <div class="prof-hero-actions">
+            <a class="prof-button prof-button--primary" href="#loop">Исследовать проект</a>
+            <a class="prof-button prof-button--quiet" href="#system">Смотреть архитектуру</a>
+          </div>
+          <ul class="prof-hero-stack" aria-label="Технологии проекта">
+            <li>Vue 3</li>
+            <li>TypeScript</li>
+            <li>FastAPI</li>
+            <li>PostgreSQL</li>
+            <li>WebSocket</li>
+          </ul>
+        </div>
+
+        <div class="prof-hero-stage" aria-label="Экраны ProfiMatika">
+          <div class="prof-orbit prof-orbit--outer" aria-hidden="true"></div>
+          <div class="prof-orbit prof-orbit--inner" aria-hidden="true"></div>
+          <figure class="prof-device prof-device--battle">
+            <img
+              src="../../portfolio-assets/cases/profimatika/battle-phone.webp"
+              alt="Бой с задачей по информатике и таймером"
+              width="320"
+              height="700"
+              fetchpriority="high"
+              decoding="async"
+            />
+          </figure>
+          <figure class="prof-device prof-device--main">
+            <img
+              src="../../portfolio-assets/cases/profimatika/onboarding.webp"
+              alt="Главный экран ProfiMatika с магом алгоритмов"
+              width="720"
+              height="1278"
+              fetchpriority="high"
+              decoding="async"
+            />
+          </figure>
+          <figure class="prof-device prof-device--map">
+            <img
+              src="../../portfolio-assets/cases/profimatika/world-map-phone.webp"
+              alt="Карта мира ProfiMatika с развилками маршрута"
+              width="720"
+              height="1278"
+              fetchpriority="high"
+              decoding="async"
+            />
+          </figure>
+        </div>
+
+        <div class="prof-hero-foot" aria-label="Ключевые части продукта">
+          <span>Карта кампании</span>
+          <span>Боевая система</span>
+          <span>PvP-арена</span>
+          <span>Прогресс и навыки</span>
+        </div>
+      </section>
+
+      <section class="prof-idea" id="idea">
+        <div class="prof-idea-copy prof-view-reveal">
+          <p class="prof-chapter">Задача продукта</p>
+          <h2>Не ещё один банк задач.</h2>
+          <p>
+            Повторение помогает запомнить материал. Экзамен требует действовать быстро,
+            выбирать под давлением и возвращаться к подготовке каждый день.
+          </p>
+        </div>
+        <div class="prof-idea-contrast prof-view-reveal" aria-label="Переход от теста к игре">
+          <article>
+            <span>Обычная подготовка</span>
+            <strong>Задание → ответ → следующее задание</strong>
+            <p>Правильный ответ заканчивает действие.</p>
+          </article>
+          <div class="prof-idea-shift" aria-hidden="true">→</div>
+          <article class="prof-idea-result">
+            <span>ProfiMatika</span>
+            <strong>Ответ → заряд → выбор навыка → удар</strong>
+            <p>Знание продолжает действие и меняет исход боя.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="prof-loop" id="loop">
+        <div class="prof-section-heading prof-view-reveal">
+          <h2>Один учебный цикл.<br />Четыре игровых решения.</h2>
+          <p>
+            Карта задаёт цель, таймер создаёт честное давление, бой превращает ответ в действие,
+            а прогресс даёт причину вернуться.
+          </p>
+        </div>
+
+        <ol class="prof-loop-track" aria-label="Игровой цикл ProfiMatika">
+          <li class="prof-view-reveal">
+            <span class="prof-loop-number">1</span>
+            <div>
+              <strong>Выбрать маршрут</strong>
+              <p>Исследовать мир и открыть нужную тему.</p>
+            </div>
+          </li>
+          <li class="prof-view-reveal">
+            <span class="prof-loop-number">2</span>
+            <div>
+              <strong>Решить задачу</strong>
+              <p>Ответить до серверного дедлайна.</p>
+            </div>
+          </li>
+          <li class="prof-view-reveal">
+            <span class="prof-loop-number">3</span>
+            <div>
+              <strong>Применить навык</strong>
+              <p>Выбрать заклинание и живую цель.</p>
+            </div>
+          </li>
+          <li class="prof-view-reveal">
+            <span class="prof-loop-number">4</span>
+            <div>
+              <strong>Усилить героя</strong>
+              <p>Получить опыт, золото и новый навык.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="prof-map" id="map">
+        <div class="prof-map-art" aria-hidden="true">
+          <img
+            src="../../portfolio-assets/cases/profimatika/world-map.webp"
+            alt=""
+            width="1024"
+            height="7680"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <div class="prof-map-copy prof-view-reveal">
+          <p class="prof-map-kicker">Карта — это выбор</p>
+          <h2>Мир ветвится вместе с подготовкой.</h2>
+          <p>
+            Каждый узел привязан к нарисованному месту: лагерю, пещере, данжу или логову босса.
+            Две развилки дают выбрать тему и противника, а затем сходятся в общей точке кампании.
+          </p>
+          <ul>
+            <li>Пять связанных биомов</li>
+            <li>Повторяемые лагеря для практики</li>
+            <li>Данжи, боссы и открываемые навыки</li>
+          </ul>
+        </div>
+        <figure class="prof-map-phone prof-view-reveal">
+          <img
+            src="../../portfolio-assets/cases/profimatika/world-map-phone.webp"
+            alt="Длинная карта кампании с доступными и закрытыми узлами"
+            width="720"
+            height="1278"
+            loading="lazy"
+            decoding="async"
+          />
+          <figcaption>Маршрут виден целиком, прогресс — прямо на ландшафте.</figcaption>
+        </figure>
+      </section>
+
+      <section class="prof-battle" id="battle">
+        <div class="prof-battle-heading prof-view-reveal">
+          <p>Ядро продукта</p>
+          <h2>Знание превращается в силу.</h2>
+        </div>
+
+        <div class="prof-battle-stage">
+          <img
+            class="prof-battle-bg"
+            src="../../portfolio-assets/cases/profimatika/battle-meadow.webp"
+            alt=""
+            width="1536"
+            height="1024"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            class="prof-battle-mage"
+            src="../../portfolio-assets/cases/profimatika/algorithm-mage.webp"
+            alt=""
+            aria-hidden="true"
+            width="800"
+            height="1200"
+            loading="lazy"
+            decoding="async"
+          />
+          <figure class="prof-battle-screen prof-view-reveal">
+            <img
+              src="../../portfolio-assets/cases/profimatika/battle-phone.webp"
+              alt="Интерфейс боя ProfiMatika"
+              width="320"
+              height="700"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+          <div class="prof-battle-note prof-battle-note--timer prof-view-reveal">
+            <span>01</span>
+            <strong>Серверный таймер</strong>
+            <p>Интерфейс показывает время, но дедлайн определяет backend.</p>
+          </div>
+          <div class="prof-battle-note prof-battle-note--answer prof-view-reveal">
+            <span>02</span>
+            <strong>Ответ заряжает навык</strong>
+            <p>Правильное решение открывает тактический ход героя.</p>
+          </div>
+          <div class="prof-battle-note prof-battle-note--enemy prof-view-reveal">
+            <span>03</span>
+            <strong>Ошибка имеет цену</strong>
+            <p>Враг заранее показывает ответный ход и возможный штраф.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="prof-depth" id="depth">
+        <div class="prof-section-heading prof-view-reveal">
+          <h2>Прогресс не заканчивается после боя.</h2>
+          <p>
+            Сборка героя, PvP, рейтинг и косметическая лавка формируют продуктовый слой
+            вокруг учебного ядра — без pay-to-win и случайной подмены результата.
+          </p>
+        </div>
+
+        <div class="prof-phone-gallery" aria-label="Экраны прогрессии ProfiMatika">
+          <figure class="prof-gallery-shot prof-gallery-shot--hero prof-view-reveal">
+            <img
+              src="../../portfolio-assets/cases/profimatika/hero-loadout.webp"
+              alt="Герой, четыре активных навыка и книга навыков"
+              width="720"
+              height="1600"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption><strong>Герой и навыки</strong><span>Сборка перед боем</span></figcaption>
+          </figure>
+          <figure class="prof-gallery-shot prof-gallery-shot--pvp prof-view-reveal">
+            <img
+              src="../../portfolio-assets/cases/profimatika/pvp-result.webp"
+              alt="Результат PvP-битвы в ProfiMatika"
+              width="390"
+              height="844"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption><strong>PvP-арена</strong><span>Синхронная битва знаний</span></figcaption>
+          </figure>
+          <figure class="prof-gallery-shot prof-gallery-shot--rating prof-view-reveal">
+            <img
+              src="../../portfolio-assets/cases/profimatika/leaderboard.webp"
+              alt="Рейтинг магов в ProfiMatika"
+              width="390"
+              height="844"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption><strong>Рейтинг магов</strong><span>MMR, победы и поражения</span></figcaption>
+          </figure>
+          <figure class="prof-gallery-shot prof-gallery-shot--shop prof-view-reveal">
+            <img
+              src="../../portfolio-assets/cases/profimatika/shop.webp"
+              alt="Лавка артефактов ProfiMatika"
+              width="390"
+              height="844"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption><strong>Лавка обликов</strong><span>Косметика за игровое золото</span></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="prof-system" id="system">
+        <div class="prof-system-copy prof-view-reveal">
+          <p class="prof-system-kicker">Под интерфейсом</p>
+          <h2>Игра остаётся честной, потому что сервер решает исход.</h2>
+          <p>
+            Клиент отвечает за ощущение боя. Сервер — за правила: правильность ответа, дедлайн,
+            урон, награды, инвентарь, прогресс и рейтинг.
+          </p>
+        </div>
+
+        <div class="prof-system-flow prof-view-reveal" aria-label="Архитектура ProfiMatika">
+          <div>
+            <span>Вход</span>
+            <strong>Telegram Mini App</strong>
+            <p>Подписанные initData и знакомый мобильный сценарий.</p>
+          </div>
+          <span class="prof-flow-arrow" aria-hidden="true">→</span>
+          <div>
+            <span>Интерфейс</span>
+            <strong>Vue 3 + TypeScript</strong>
+            <p>Карта, бой, сборка героя и состояния кампании.</p>
+          </div>
+          <span class="prof-flow-arrow" aria-hidden="true">→</span>
+          <div>
+            <span>Правила</span>
+            <strong>FastAPI + WebSocket</strong>
+            <p>Авторитетный PvE/PvP-контур и валидация команд.</p>
+          </div>
+          <span class="prof-flow-arrow" aria-hidden="true">→</span>
+          <div>
+            <span>Память</span>
+            <strong>PostgreSQL</strong>
+            <p>Прогресс, экономика, навыки и рейтинг.</p>
+          </div>
+        </div>
+
+        <div class="prof-system-principles">
+          <p class="prof-view-reveal">Версионирование состояния защищает бой от повторных команд.</p>
+          <p class="prof-view-reveal">WebSocket-рамки проходят строгую проверку и rate limit.</p>
+          <p class="prof-view-reveal">Контент задач отделён от боевого движка и интерфейса.</p>
+        </div>
+      </section>
+
+      <section class="prof-final prof-view-reveal">
+        <div>
+          <p>ProfiMatika</p>
+          <h2>Учиться. Сражаться. Продвигаться дальше.</h2>
+        </div>
+        <a class="prof-button prof-button--primary" href="../../#works">Вернуться к проектам</a>
+      </section>
+    </main>
+
+    <footer class="prof-footer">
+      <a href="../../">LandLancer</a>
+      <span>© 2026 · Product design & development</span>
+      <a href="#top">Наверх ↑</a>
+    </footer>
+  </body>
+</html>
