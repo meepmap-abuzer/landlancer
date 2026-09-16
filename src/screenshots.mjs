@@ -95,7 +95,7 @@ export function screenshot([file, title, caption, width, height], group) {
 
 export function gallery(project) {
   const collection = collections[project.slug];
-  return `<section class="screenshots container" id="screens"><div class="screenshots-heading"><h2>Экраны проекта</h2><p>${collection.intro}</p></div><div class="screenshots-grid ${collection.layout}">${collection.images.map((image) => screenshot(image, project.slug)).join("")}</div></section>`;
+  return `<section class="screenshots container" id="screens"><div class="screenshots-heading"><h2>Экраны проекта</h2><p>${collection.intro}</p></div><div class="screenshots-grid ${collection.layout}" id="screen-gallery">${collection.images.map((image) => screenshot(image, project.slug)).join("")}</div><div class="gallery-controls" hidden><button data-gallery-step="-1" aria-label="Предыдущий экран" aria-controls="screen-gallery">←</button><span class="gallery-position" aria-live="polite"></span><button data-gallery-step="1" aria-label="Следующий экран" aria-controls="screen-gallery">→</button></div></section>`;
 }
 
 export function businessCabinet() {

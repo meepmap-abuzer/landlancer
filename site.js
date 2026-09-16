@@ -24,6 +24,78 @@ document.addEventListener("keydown", (e) => {
 document.addEventListener("click", (e) => {
   if (!e.target.closest(".header")) closeMenu();
 });
+window.matchMedia("(min-width: 801px)").addEventListener("change", (event) => {
+  if (event.matches) closeMenu();
+});
+
+document.querySelectorAll(".screenshots").forEach((section) => {
+  const grid = section.querySelector(".screenshots-grid");
+  const controls = section.querySelector(".gallery-controls");
+  if (!grid || !controls) return;
+  const slides = [...grid.querySelectorAll(".screen-figure")];
+  const back = controls.querySelector('[data-gallery-step="-1"]');
+  const forward = controls.querySelector('[data-gallery-step="1"]');
+  let current = 0;
+  function updateGallery() {
+    const canScroll = grid.scrollWidth > grid.clientWidth + 2;
+    controls.hidden = !canScroll;
+    if (!canScroll) return;
+    const origin =
+      grid.getBoundingClientRect().left +
+      parseFloat(getComputedStyle(grid).paddingLeft);
+    current = slides.reduce(
+      (best, slide, index) =>
+        Math.abs(slide.getBoundingClientRect().left - origin) <
+        Math.abs(slides[best].getBoundingClientRect().left - origin)
+          ? index
+          : best,
+      0,
+    );
+    controls.querySelector(".gallery-position").textContent =
+      `${current + 1} / ${slides.length}`;
+    back.disabled = current === 0;
+    forward.disabled = current === slides.length - 1;
+  }
+  controls.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-gallery-step]");
+    if (!button || button.disabled) return;
+    const target =
+      slides[
+        Math.max(
+          0,
+          Math.min(
+            slides.length - 1,
+            current + Number(button.dataset.galleryStep),
+          ),
+        )
+      ];
+    const padding = parseFloat(getComputedStyle(grid).paddingLeft);
+    const left =
+      grid.scrollLeft +
+      target.getBoundingClientRect().left -
+      grid.getBoundingClientRect().left -
+      padding;
+    grid.scrollTo({
+      left,
+      behavior: reducedMotion.matches ? "instant" : "smooth",
+    });
+  });
+  let queued = false;
+  grid.addEventListener(
+    "scroll",
+    () => {
+      if (queued) return;
+      queued = true;
+      requestAnimationFrame(() => {
+        updateGallery();
+        queued = false;
+      });
+    },
+    { passive: true },
+  );
+  new ResizeObserver(updateGallery).observe(grid);
+  updateGallery();
+});
 const progress = document.querySelector(".reading-progress");
 if (progress) {
   let scheduled = false;
@@ -269,6 +341,29 @@ if (lightbox) {
     if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
       event.preventDefault();
       showScreen(activeIndex + (event.key === "ArrowRight" ? 1 : -1));
+    }
+  });
+  let touchStart = null;
+  picture.addEventListener("pointerdown", (event) => {
+    touchStart =
+      event.pointerType === "touch" && event.isPrimary
+        ? { x: event.clientX, y: event.clientY, id: event.pointerId }
+        : null;
+  });
+  picture.addEventListener("pointercancel", () => {
+    touchStart = null;
+  });
+  picture.addEventListener("pointerup", (event) => {
+    if (!touchStart || event.pointerId !== touchStart.id) return;
+    const dx = event.clientX - touchStart.x;
+    const dy = event.clientY - touchStart.y;
+    touchStart = null;
+    if (
+      galleryLinks.length > 1 &&
+      Math.abs(dx) > 50 &&
+      Math.abs(dy) < Math.abs(dx) * 0.6
+    ) {
+      showScreen(activeIndex + (dx < 0 ? 1 : -1));
     }
   });
   lightbox.addEventListener("close", () =>
