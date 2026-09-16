@@ -211,3 +211,67 @@ document.querySelectorAll('[data-demo="card"]').forEach((demo) => {
       : "Нажмите на карту";
   });
 });
+
+const lightbox = document.querySelector(".lightbox");
+if (lightbox) {
+  let galleryLinks = [];
+  let activeIndex = 0;
+  let opener = null;
+  const picture = lightbox.querySelector(".lightbox-image");
+  const previous = lightbox.querySelector(".lightbox-prev");
+  const next = lightbox.querySelector(".lightbox-next");
+
+  function showScreen(index) {
+    activeIndex = (index + galleryLinks.length) % galleryLinks.length;
+    const link = galleryLinks[activeIndex];
+    picture.src = link.href;
+    picture.alt = link.querySelector("img").alt;
+    lightbox.querySelector(".lightbox-title").textContent =
+      link.dataset.caption;
+    lightbox.querySelector(".lightbox-count").textContent =
+      `${activeIndex + 1} / ${galleryLinks.length}`;
+    lightbox.querySelector(".lightbox-original").href = link.href;
+    previous.hidden = next.hidden = galleryLinks.length < 2;
+  }
+
+  const screenLinks = [...document.querySelectorAll("[data-lightbox]")];
+  for (const link of screenLinks) {
+    link.addEventListener("click", (event) => {
+      // Preserve opening the original image in a new tab with modifier keys.
+      if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey)
+        return;
+      event.preventDefault();
+      opener = link;
+      galleryLinks = screenLinks.filter(
+        (item) => item.dataset.lightbox === link.dataset.lightbox,
+      );
+      showScreen(galleryLinks.indexOf(link));
+      lightbox.showModal();
+    });
+  }
+  previous.addEventListener("click", () => showScreen(activeIndex - 1));
+  next.addEventListener("click", () => showScreen(activeIndex + 1));
+  lightbox
+    .querySelector(".lightbox-close")
+    .addEventListener("click", () => lightbox.close());
+  lightbox.addEventListener("click", (event) => {
+    if (event.target !== lightbox) return;
+    const bounds = lightbox.getBoundingClientRect();
+    if (
+      event.clientX < bounds.left ||
+      event.clientX > bounds.right ||
+      event.clientY < bounds.top ||
+      event.clientY > bounds.bottom
+    )
+      lightbox.close();
+  });
+  lightbox.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+      event.preventDefault();
+      showScreen(activeIndex + (event.key === "ArrowRight" ? 1 : -1));
+    }
+  });
+  lightbox.addEventListener("close", () =>
+    opener?.focus({ preventScroll: true }),
+  );
+}
