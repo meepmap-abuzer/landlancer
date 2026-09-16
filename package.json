@@ -1,0 +1,10 @@
+{
+  "name": "landlancer-portfolio",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node src/build.mjs",
+    "dev": "node src/serve.mjs",
+    "check": "node --check src/build.mjs && node --check site.js"
+  }
+}
