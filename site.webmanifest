@@ -1,13 +1,13 @@
 {
   "name": "LandLancer Portfolio",
   "short_name": "LandLancer",
-  "description": "Портфолио LandLancer: лендинги, Telegram-боты и мини-приложения.",
+  "description": "Веб-сервисы, Telegram-приложения и системы для бизнеса.",
   "lang": "ru-RU",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "background_color": "#f8f9fd",
-  "theme_color": "#f8f9fd",
+  "background_color": "#ffffff",
+  "theme_color": "#1760ee",
   "icons": [
     {
       "src": "/favicon.svg",
