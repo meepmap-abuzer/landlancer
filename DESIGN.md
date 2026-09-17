@@ -2,6 +2,8 @@
 
 White base, saturated blue accent, cool neutral text. Manrope is self-hosted and already existed in the original repository. Large type and generous spacing; no gradient text or stock laptop imagery.
 
+`glass.css` adds a restrained glass treatment requested for clearer grouping. Each numbered homepage project owns one translucent surface containing its description and demo. Case screenshots, interactive explanations and system sections use the same surface. Inner demo wrappers are transparent to avoid duplicate decorative frames. CSS blur, a white edge and subtle blue light provide depth; no animation loop or new dependency is needed. Reduced transparency/high contrast and browsers without backdrop filtering receive opaque surfaces. Visual references: Apple HIG Materials and MDN backdrop-filter.
+
 The homepage introduces the developer and contains exactly four alternating project rows. Case pages share the same identity and alternate explanatory text, restyled functional demos and system diagrams. Technical repository names remain in compatible URLs only.
 
 Motion is limited to the hero composition, occasional visual entrances, case reading progress and direct interaction feedback. All content is available without scroll reveal. Reduced-motion preferences disable ambient and transition animation. Interactive demos have explicit local state and no backend connection.

@@ -7,6 +7,7 @@ const files = [
   "404.html",
   "site.css",
   "responsive.css",
+  "glass.css",
   "site.js",
   "favicon.svg",
   "site.webmanifest",
