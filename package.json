@@ -3,8 +3,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node src/build.mjs",
+    "build": "node src/build-agency.mjs",
     "dev": "node src/serve.mjs",
-    "check": "node --check src/build.mjs && node --check site.js"
+    "check": "node --check src/build-agency.mjs && node --check agency.js && node --check glass-lens.mjs",
+    "test": "node --test src/glass-optics.test.mjs"
   }
 }

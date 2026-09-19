@@ -1,16 +1,33 @@
-# LandLancer design
+# Lancer Agency design
 
-White base, saturated blue accent, cool neutral text. Manrope is self-hosted and already existed in the original repository. Large type and generous spacing; no gradient text or stock laptop imagery.
+## Art direction
+Reference 1: blue alpine lake, thick transparent panels, sidebar, services, connected systems, a two-column portfolio, glass orbital sculpture and contact. Reference 2: pale green botanical Gift Roulette page with two phones, four feature rows, a central glass gift and technology flow. References 3–6 inform floating navigation, object-centred compositions and material depth.
 
-`glass.css` adds a restrained glass treatment requested for clearer grouping. Each numbered homepage project owns one translucent surface containing its description and demo. Case screenshots, interactive explanations and system sections use the same surface. Inner demo wrappers are transparent to avoid duplicate decorative frames. CSS blur, a white edge and subtle blue light provide depth; no animation loop or new dependency is needed. Reduced transparency/high contrast and browsers without backdrop filtering receive opaque surfaces. Visual references: Apple HIG Materials and MDN backdrop-filter.
+Manrope is retained from the existing brand. Blue-white agency palette, botanical green for Gift Roulette and TailCare, warm ivory/navy accents around Maverick's current cream/red/navy interface. Generated raster scenes support real HTML content; the page is not a single flattened image.
 
-The homepage introduces the developer and contains exactly four alternating project rows. Case pages share the same identity and alternate explanatory text, restyled functional demos and system diagrams. Technical repository names remain in compatible URLs only.
+## Source files
+- src/build-agency.mjs: static build entry, case routes, 404 and sitemap.
+- src/agency-shared.mjs: head, navigation, icons, image viewers and footer.
+- src/agency-home.mjs: homepage composition.
+- src/agency-cases.mjs: verified content and case template.
+- agency.css: responsive layout and glass materials.
+- agency.js: image viewer, focus restoration and entrance animation.
+- glass-optics.mjs: bounded refraction map calculation.
+- glass-lens.mjs: Chromium SVG backdrop lenses on selected controls; CSS fallback elsewhere.
 
-Motion is limited to the hero composition, occasional visual entrances, case reading progress and direct interaction feedback. All content is available without scroll reveal. Reduced-motion preferences disable ambient and transition animation. Interactive demos have explicit local state and no backend connection.
+The previous src/build.mjs and older styles are historical source; npm build now uses the agency entry. They are excluded from the static release.
 
-Editing: `src/build.mjs` contains page templates and case content, `site.css` owns layout, and `site.js` owns demo behavior. Run `npm run build` after changing templates.
+## Glass and motion
+Glass combines transparency, a bright inner rim, subtle opposite-edge shading, a soft shadow and refraction near the bevel. Maps are calculated only on resize and capped at 320 pixels per axis. The centre is neutral so labels remain clear. Chromium uses SVG backdrop refraction; other browsers use the CSS material. Tests verify symmetry, neutral centres and bounded allocations.
 
-`responsive.css` loads after the base stylesheet and contains shared responsive rules. Phone layouts use larger body text and touch targets; tablets (701–1023 px) keep a two-column hero and full-width project demos. Navigation switches at 800 px, phone galleries at 600 px. Gallery controls appear only when the track overflows. The screenshot dialog puts controls below portrait images on phones and beside images in short landscape windows. Safe-area insets and dynamic viewport heights keep controls reachable.
+Small hero objects drift slowly; entrances use transforms and opacity. Scroll remains native, with smooth anchor movement. Reduced-motion preferences disable animations and smooth scrolling. Main text never depends on JS to appear.
 
-The brand mark is a single geometric uppercase L, shared by the header and favicon. Noninteractive scope rows do not contain link arrows. Case screenshot galleries preserve original interface colors inside the blue-and-white page; mobile phone galleries scroll horizontally. The business cabinet uses a real report-screen capture rather than the generic system diagram. Screenshot zoom uses a native modal dialog with keyboard navigation and focus restoration.
-`glass.css` also uses a pale blue page canvas to separate glass surfaces, rounded translucent metadata pills, unboxed project numbers, and a single left-aligned case introduction with tags below the description.
+References:
+- https://kube.io/blog/liquid-glass-css-svg/
+- https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/backdrop-filter
+
+## Screenshot provenance
+All three frontends were launched locally on September 19, 2026. ASSET_PROVENANCE.md records individual images and local data limitations. Screenshots are not generated or restyled. Generated nature and glass objects live separately in assets/art.
+
+## Commands
+npm run build; npm run check; npm test; npm run dev (127.0.0.1:4173); node src/package.mjs.

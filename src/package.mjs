@@ -1,21 +1,21 @@
-import { cp, mkdir, writeFile } from "node:fs/promises";
+import { cp, mkdir, writeFile, readdir } from "node:fs/promises";
 import { resolve } from "node:path";
 const root = resolve(import.meta.dirname, "..");
 const output = resolve(root, "..", "landlancer-ready");
 const files = [
   "index.html",
   "404.html",
-  "site.css",
-  "responsive.css",
-  "glass.css",
-  "site.js",
+  "agency.css",
+  "agency.js",
+  "glass-lens.mjs",
+  "glass-optics.mjs",
   "favicon.svg",
   "site.webmanifest",
   "sitemap.xml",
   "robots.txt",
   "CNAME",
   ".nojekyll",
-  "assets",
+  "assets/art",
   "cases/gift-roulette/index.html",
   "cases/tailcare/index.html",
   "cases/maverick/index.html",
@@ -23,6 +23,8 @@ const files = [
   "portfolio-assets/fonts/manrope-cyrillic-v20.woff2",
   "portfolio-assets/fonts/manrope-latin-v20.woff2",
 ];
+const screenshots = await readdir(resolve(root, 'assets/screenshots'));
+files.push(...screenshots.filter(name=>name.endsWith('.webp')&&!name.startsWith('loyalty-')).map(name=>`assets/screenshots/${name}`));
 await mkdir(output, { recursive: true });
 for (const file of files) {
   const destination = resolve(output, file);

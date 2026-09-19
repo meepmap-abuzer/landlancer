@@ -1,5 +1,5 @@
 {
-  "name": "LandLancer Portfolio",
+  "name": "Lancer Agency",
   "short_name": "LandLancer",
   "description": "Веб-сервисы, Telegram-приложения и системы для бизнеса.",
   "lang": "ru-RU",
@@ -7,7 +7,7 @@
   "scope": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#1760ee",
+  "theme_color": "#e8f5fc",
   "icons": [
     {
       "src": "/favicon.svg",
