@@ -1,7 +1,7 @@
-import { c as z, _ as w } from "./_plugin-vue_export-helper-DagV1u3B.js";
-import { S as G } from "./star-M0S-IBQG.js";
-import { j as l, c as u, b as a, t as d, F as k, g as $, h as B, y as b, u as C, p as x, r as p, o as N, a as S, d as I, n as A, z as D, i as L, e as U, f as V } from "./mount-DpeSORhq.js";
-import { G as F } from "./gift-DTfqeF7K.js";
+import { c as z, _ as w } from "./_plugin-vue_export-helper-D7VY89rh.js";
+import { S as G } from "./star-N_dO0B_0.js";
+import { j as l, c as u, b as a, t as d, F as k, g as $, h as B, y as b, u as C, p as x, r as p, o as N, a as S, d as I, n as A, z as D, i as L, e as U, f as V } from "./mount-D_cTBYQE.js";
+import { G as F } from "./gift-Ds6Zsshp.js";
 /**
  * @license lucide-vue-next v0.468.0 - ISC
  *
@@ -197,7 +197,7 @@ const H = (r) => Number((1 + r * 0.18).toFixed(2)), O = (r) => Math.exp(Math.max
       a("p", ce, d(t.value === "crashed" ? "Краш! Запустите новый полёт." : t.value === "collected" ? `Остановлено на ×${e.value.toFixed(2)}` : t.value === "paused" ? "Раунд остановлен при уходе со страницы." : "Успейте остановиться до завершения полёта."), 1)
     ]));
   }
-}, de = /* @__PURE__ */ w(ue, [["__scopeId", "data-v-326c6ea9"]]), me = { class: "case-demo" }, ve = { class: "case-heading" }, pe = ["disabled"], he = {
+}, de = /* @__PURE__ */ w(ue, [["__scopeId", "data-v-2864c482"]]), me = { class: "case-demo" }, ve = { class: "case-heading" }, pe = ["disabled"], he = {
   class: "demo-status",
   role: "status"
 }, fe = {
@@ -331,7 +331,7 @@ const H = (r) => Number((1 + r * 0.18).toFixed(2)), O = (r) => Math.exp(Math.max
       a("p", xe, d(n.value || "Выберите цель и запустите вращение."), 1)
     ]));
   }
-}, ze = /* @__PURE__ */ w(Fe, [["__scopeId", "data-v-cb63e19a"]]), Be = {
+}, ze = /* @__PURE__ */ w(Fe, [["__scopeId", "data-v-33cde30e"]]), Be = {
   key: 0,
   class: "demo-tabs",
   "aria-label": "Режим игры"

@@ -34,3 +34,5 @@ Pinned runtime dependencies and their licenses are recorded in package-lock.json
 ## Verification
 
 Unit tests cover mine loss/repeated-click/completion boundaries, unique mine placement, displayed outcome sectors, original Stack trimming/axis/end rules and original Maverick winner centering, plus existing glass optics tests. Browser checks exercise the actual UI actions described above, QR flipping, screenshot dialog and keyboard Stack placement. All four case pages and the homepage were checked at 320, 390, 768, 1440 and 2560 px in Chromium. No Safari or Firefox claim is made.
+
+The rendered-size regression in src/demos/layout.browser-check.mjs runs through the in-app Browser session. At 320, 390 and 1280 px it checks a square Upgrade wheel (at least 130 px), six fully contained Crash history badges and the enlarged QR (at least 150 px), including page overflow. The agency's 22 px SVG icon rule excludes product demos so native component dimensions remain intact; Crash history wraps with content-driven height. Verified wheel sizes: 140, 140 and 218 px; enlarged QR: 200 px at each width.

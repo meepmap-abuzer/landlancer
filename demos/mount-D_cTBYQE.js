@@ -4252,7 +4252,7 @@ function Rl(e) {
 function Il(e) {
   return Y(e) ? document.querySelector(e) : e;
 }
-const Fl = { maverick: () => import("./Maverick-BTz1l3fK.js"), loyalty: () => import("./Loyalty-Cr5u3PrZ.js").then((e) => e.L), "gift-roulette": () => import("./Gift-CfVakPBz.js"), tailcare: () => import("./TailCare-Cqw22tMR.js") };
+const Fl = { maverick: () => import("./Maverick-BqSrbURt.js"), loyalty: () => import("./Loyalty-B47s-lUX.js").then((e) => e.L), "gift-roulette": () => import("./Gift-BV-AqEmY.js"), tailcare: () => import("./TailCare-CJMQlsn_.js") };
 async function Dl(e) {
   try {
     const { default: t } = await Fl[e.dataset.productDemo]();

@@ -1,6 +1,6 @@
-import { k as J, j as H, c as k, l as fe, b as v, u as w, m as P, r as O, p as Q, o as he, q as ve, F as W, d as G, s as ge, a as me, e as z, t as p, f as x, x as be, h as re, i as ne, y as _, z as De, A as Ce } from "./mount-DpeSORhq.js";
-import { c as ae, _ as X } from "./_plugin-vue_export-helper-DagV1u3B.js";
-import { G as we } from "./gift-DTfqeF7K.js";
+import { k as J, j as H, c as k, l as fe, b as v, u as w, m as P, r as O, p as Q, o as he, q as ve, F as W, d as G, s as ge, a as me, e as z, t as p, f as x, x as be, h as re, i as ne, y as _, z as De, A as Ce } from "./mount-D_cTBYQE.js";
+import { c as ae, _ as X } from "./_plugin-vue_export-helper-D7VY89rh.js";
+import { G as we } from "./gift-Ds6Zsshp.js";
 /**
  * @license lucide-vue-next v0.468.0 - ISC
  *
@@ -1034,7 +1034,7 @@ const Fe = {
   __name: "Loyalty",
   props: { compact: Boolean },
   setup(a) {
-    const f = Ce(() => import("./StackDemo-BWKKZxB3.js")), A = O("card"), i = O(!1), c = O(!1), l = O(), n = { available: "1240", pending: "120", held: "0" }, e = { customerId: "demo", displayName: "Алексей", membershipId: "demo", phoneMasked: "+7 ••• ••• 1200" }, t = { id: "demo", serialNumber: "DEMO", alternateText: "Демонстрационная карта", wallets: { appleUrl: null, googleUrl: null }, cardTypeName: "Карта участника", qrValue: "LANCER-PORTFOLIO-DEMO-12K" };
+    const f = Ce(() => import("./StackDemo-DkUuR7QG.js")), A = O("card"), i = O(!1), c = O(!1), l = O(), n = { available: "1240", pending: "120", held: "0" }, e = { customerId: "demo", displayName: "Алексей", membershipId: "demo", phoneMasked: "+7 ••• ••• 1200" }, t = { id: "demo", serialNumber: "DEMO", alternateText: "Демонстрационная карта", wallets: { appleUrl: null, googleUrl: null }, cardTypeName: "Карта участника", qrValue: "LANCER-PORTFOLIO-DEMO-12K" };
     async function r() {
       var o;
       c.value = !0, await ne(), (o = l.value) == null || o.focus();
