@@ -176,10 +176,6 @@ onBeforeUnmount(() => {
               <BrandMark />
               <strong>Карта участника</strong>
               <span>Покажите QR-код на кассе</span>
-              <span class="flip-back-hint" aria-hidden="true">
-                <RotateCw :size="14" :stroke-width="2" />
-                Данные
-              </span>
             </div>
 
             <button
@@ -440,23 +436,6 @@ onBeforeUnmount(() => {
   line-height: 1.35;
 }
 
-.flip-back-hint {
-  display: inline-flex;
-  width: max-content;
-  min-height: 44px;
-  align-items: center;
-  gap: 5px;
-  margin-top: 8px;
-  padding: 0 10px;
-  border: 1px solid #3e3e3e;
-  border-radius: 11px;
-  background: rgb(255 255 255 / 5%);
-  color: #41a4ec;
-  font-size: 11px;
-  font-weight: 760;
-  pointer-events: none;
-}
-
 .qr-button {
   position: relative;
   z-index: 4;
@@ -485,7 +464,6 @@ onBeforeUnmount(() => {
   .tier { max-width: 112px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .back-copy > span { display: none; }
   .back-copy strong { margin-top: 6px; }
-  .flip-back-hint { margin-top: 5px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
