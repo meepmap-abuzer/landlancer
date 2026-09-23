@@ -9,6 +9,7 @@ const files = [
   "agency.js",
   "experience.css",
   "playground.css",
+  "mobile.css",
   "demos",
   "assets/demos",
   "experience.mjs",

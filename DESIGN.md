@@ -1,5 +1,11 @@
 # Lancer Agency design — September 23 rebuild
 
+## Mobile refinement after launch
+
+`mobile.css` loads after the shared and product styles. It preserves the desktop composition while giving phones content-driven section heights, a single-column request flow, readable team and capability lists, wider product exhibits, larger touch controls and a stacked Maverick achievements view. TailCare details become a photo followed by text; its smallest catalog uses one column. Existing touch scrolling remains native. The release generator and static package include this stylesheet.
+
+`src/mobile.browser-check.mjs` verifies all five pages at 320, 390, 430, 768 and 1440 px in the in-app Chromium browser: no page or selected content overflow, no overlaps in custom development/team sections, successful demo mounting and contained Maverick profile. Gift wheel/history and 12К QR checks also pass at 320 and 390 px. Physical iOS/Android devices and Safari were not available for verification.
+
 The latest playable revision is documented in DEMOS.md and supersedes the screenshot-stage layout described below. Project cards now contain interactive Vue components; case pages place centered intros above full product exhibits. Function summaries and expandable screenshots replace the alternating screenshot/text rows. playground.css defines the new presentation while preserving the surrounding glass environment.
 
 The new user reference is the layout specification. Its centered CRM hero replaces the former left-aligned headline and floating slabs. The hero, services, workflow, case previews, team and contact sections have been rebuilt. All four project pages now use new presentation layouts, including a complete 12К case.
