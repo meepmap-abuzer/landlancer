@@ -1,21 +1,20 @@
-# Lancer Agency
+# Lancer Agency — product brief
 
-## Register
-brand
+Russian agency portfolio at landlancer.ru. Build custom websites, Telegram Mini Apps, CRM and integrations for founders and business teams.
 
-## Purpose
-Russian agency website for clients commissioning websites, Telegram Mini Apps, internal business tools and automation. Present three substantial products and direct enquiries to https://t.me/landlancer.
+## Current direction — September 23, 2026
 
-## Accepted direction — September 19, 2026
-Follow the supplied blue alpine Liquid Glass homepage and green Gift Roulette case reference. Preserve their composition, scenery, thick transparent materials, floating panels, sidebar, rounded frame and content sequence. The explicit references supersede the previous personal-developer portfolio direction.
+The user's new reference supersedes the September 19 layout. Match its composition closely: a centered headline over an alpine scene, a large translucent CRM, top navigation notch and sculpted lower panels, four service illustrations, custom-development strip, four-step request workflow, two-column real portfolio, central glass orbital sculpture with team panels, and a torus contact footer. Use real HTML text and interactions. Keep the Manrope identity, pale blue environment and high-refraction glass.
 
-The homepage includes services, custom development, connected business systems, four portfolio cards, project team roles and contact. Gift Roulette, Maverick and TailCare have individual case pages. 12K Mini App + Loyalty API has a non-clickable in-development card; the old URL remains a minimal compatibility placeholder.
+## Portfolio scope
 
-## Content integrity
-Use actual product screenshots and source-grounded descriptions. Do not invent clients, conversion statistics, revenue or business outcomes. Team cards describe roles assembled for a project, not named employees. Homepage CRM data is a labelled illustration. Contact links retain the existing public Telegram account.
+- Maverick: existing Mini App, QR activation, points, roulette, tasks and merchandise.
+- Gift Roulette: four game interfaces, profile, inventory and Telegram administration.
+- TailCare: pet listings, search, community and Telegram publishing.
+- 12К: now INCLUDED as a full case. Show current Mini App AND Loyalty API's business portal. The user has revoked the previous request to keep it as a placeholder.
 
-## Accessibility
-Responsive from 320px. Semantic navigation, keyboard-accessible screenshot dialogs with focus restoration, native details, reduced-motion and reduced-transparency treatment. No backend requests or tracking in the portfolio.
+No invented commercial results. Screenshots represent actual frontend code; presentation data is labelled as demonstration data. Generated imagery is only scenery and decorative objects. No publishing or production changes unless separately requested.
 
 ## Acceptance
-Three full case pages, four homepage cards, working links and image zoom, generated assets saved inside the repository, responsive browser checks, static GitHub Pages release.
+
+Five working public pages; keyboard-friendly CRM tabs, request demonstration, native details and screenshot viewer; responsive at 320–1440 px; reduced-motion support; static GitHub Pages build with existing domain preserved.

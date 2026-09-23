@@ -1,33 +1,35 @@
-# Lancer Agency design
+# Lancer Agency design — September 23 rebuild
 
-## Art direction
-Reference 1: blue alpine lake, thick transparent panels, sidebar, services, connected systems, a two-column portfolio, glass orbital sculpture and contact. Reference 2: pale green botanical Gift Roulette page with two phones, four feature rows, a central glass gift and technology flow. References 3–6 inform floating navigation, object-centred compositions and material depth.
+The new user reference is the layout specification. Its centered CRM hero replaces the former left-aligned headline and floating slabs. The hero, services, workflow, case previews, team and contact sections have been rebuilt. All four project pages now use new presentation layouts, including a complete 12К case.
 
-Manrope is retained from the existing brand. Blue-white agency palette, botanical green for Gift Roulette and TailCare, warm ivory/navy accents around Maverick's current cream/red/navy interface. Generated raster scenes support real HTML content; the page is not a single flattened image.
+## Visual system
 
-## Source files
-- src/build-agency.mjs: static build entry, case routes, 404 and sitemap.
-- src/agency-shared.mjs: head, navigation, icons, image viewers and footer.
-- src/agency-home.mjs: homepage composition.
-- src/agency-cases.mjs: verified content and case template.
-- agency.css: responsive layout and glass materials.
-- agency.js: image viewer, focus restoration and entrance animation.
-- glass-optics.mjs: bounded refraction map calculation.
-- glass-lens.mjs: Chromium SVG backdrop lenses on selected controls; CSS fallback elsewhere.
+Manrope, navy text, ice-blue atmosphere, bright white inner rims, cyan edge shading, transparent fills, restrained optical refraction. The page consists of HTML, CSS and real product screenshots, with separate generated scene backgrounds. SVG clipping creates the lower hero panel's curved profile. CSS creates the code sculpture, data panels and request flow.
 
-The previous src/build.mjs and older styles are historical source; npm build now uses the agency entry. They are excluded from the static release.
+New artwork: alpine-world.webp, team-orbit.webp, contact-ring.webp. Existing green botanical artwork remains for Gift Roulette and TailCare; warm navy/ivory for Maverick. 12К keeps its black/blue Mini App and quiet black/white/green owner portal. Screenshots are never recolored.
 
-## Glass and motion
-Glass combines transparency, a bright inner rim, subtle opposite-edge shading, a soft shadow and refraction near the bevel. Maps are calculated only on resize and capped at 320 pixels per axis. The centre is neutral so labels remain clear. Chromium uses SVG backdrop refraction; other browsers use the CSS material. Tests verify symmetry, neutral centres and bounded allocations.
+## Files and behavior
 
-Small hero objects drift slowly; entrances use transforms and opacity. Scroll remains native, with smooth anchor movement. Reduced-motion preferences disable animations and smooth scrolling. Main text never depends on JS to appear.
+- src/agency-home.mjs: complete homepage, CRM illustration, four-step example and four projects.
+- src/agency-cases.mjs: verified project content, four cases, responsive screenshots, related projects.
+- src/agency-shared.mjs: navigation, head, devices, footer, screenshot dialog.
+- src/build-agency.mjs: all pages, 404 and sitemap.
+- agency.css: desktop, tablet and phone layout, materials and reduced-motion fallbacks.
+- agency.js: keyboard tabs, local request demonstration, native screenshot dialog and focus restoration, entrances.
+- glass-optics.mjs and glass-lens.mjs: bounded optical maps on selected Chromium glass controls; CSS fallback in other engines.
 
-References:
+Native scrolling remains intact. Animations enhance already-visible content and are disabled by reduced motion. CRM and the workflow are clearly illustrative and never send data. Contact buttons use the existing Telegram address.
+
+## Verification
+
+Five pages × widths 320, 390, 768, 1024 and 1440: no horizontal overflow or heading overflow. Browser checks cover CRM click and keyboard selection, request sequence, case navigation, detail expansion, screenshot opening, Escape and focus restoration. Static link validation checks all six HTML pages including 404, local assets and anchors. Existing optical-map tests pass. Visual checks are in Chromium; other engines are not claimed as tested.
+
+## Build
+
+npm run build; npm run check; npm test; npm run dev. Preview: http://127.0.0.1:4173/. node src/package.mjs produces the static deployment folder. CNAME remains landlancer.ru.
+
+Sources for the optical approach:
 - https://kube.io/blog/liquid-glass-css-svg/
 - https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/backdrop-filter
 
-## Screenshot provenance
-All three frontends were launched locally on September 19, 2026. ASSET_PROVENANCE.md records individual images and local data limitations. Screenshots are not generated or restyled. Generated nature and glass objects live separately in assets/art.
-
-## Commands
-npm run build; npm run check; npm test; npm run dev (127.0.0.1:4173); node src/package.mjs.
+Screenshot origins and demonstration limitations: ASSET_PROVENANCE.md. Generated artwork prompts: ART_PROMPTS.md.

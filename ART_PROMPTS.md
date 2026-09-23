@@ -18,3 +18,16 @@ Glass controls are live HTML/CSS. Rounded highlights, transparent fills, backgro
 
 - https://kube.io/blog/liquid-glass-css-svg/
 - https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/backdrop-filter
+
+## September 23 reference rebuild — built-in GPT Image
+
+Reference: user-attached codex-clipboard-89ade600-71b9-4cda-911e-149c13e3ed43.png. Used as an environment and composition reference, not as a flattened webpage.
+
+### assets/art/alpine-world.webp
+Premium photorealistic landscape 3:2 background. Blue sky, fluffy white clouds, rugged Swiss alpine peaks, pine trees, ferns and white flowers at side edges, white modernist pillars, crystal-clear turquoise lake in lower third. Symmetrical centered scene; center and upper center open for HTML headline and wide transparent CRM. Bright pale sky, cyan and powder blue, rich natural green. No glass slabs, UI, text, logos, phones or frames.
+
+### assets/art/team-orbit.webp
+High-end photoreal 3D section background, very wide 3:1. Airy blue alpine lake and mountains, conifers at sides. Center: faceted clear diamond encircled by three fluid thick icy-blue glass rings, central 35 percent of width and 80 percent of height, fully visible. Both sides left open for HTML info panels; upper left suitable for white heading. Natural refraction and caustics. No text, UI or panels.
+
+### assets/art/contact-ring.webp
+Luxury airy website footer background, wide landscape. Right third: large tilted organic oval torus of transparent aquamarine glass, polished refracting edges, lake water, small pines and mountains at far right. Left two thirds: pale ice blue sky and distant mountains, empty for black text. White-cloud daylight, cyan palette. No text, logos, UI or cards.

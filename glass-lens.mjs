@@ -4,7 +4,7 @@ if(/Chrome|Chromium|Edg\//.test(navigator.userAgent)&&CSS.supports('backdrop-fil
  const ns='http://www.w3.org/2000/svg';
  const svg=document.createElementNS(ns,'svg');svg.setAttribute('aria-hidden','true');svg.setAttribute('width','0');svg.setAttribute('height','0');svg.style.cssText='position:absolute;width:0;height:0;overflow:hidden';
  const defs=document.createElementNS(ns,'defs');svg.append(defs);document.body.append(svg);
- const targets=[...document.querySelectorAll('.top-nav,.side-nav,.hero-preview,.team-card,.hero-callout')];
+ const targets=[...document.querySelectorAll('.top-nav,.side-nav,.hero-business,.team-card,.case-note,.case-scroll')];
  const filters=new WeakMap();let id=0;
  function update(el){
   const rect=el.getBoundingClientRect();if(!rect.width||!rect.height)return;

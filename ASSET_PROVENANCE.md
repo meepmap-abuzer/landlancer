@@ -23,5 +23,18 @@ Seven images generated using the built-in GPT Image tool and optimized to WebP. 
 - assets/art/tailcare-meadow.webp
 - assets/art/gift-center.webp
 
-## Scope
-12K Mini App and Loyalty API have no detailed case. Their homepage card is not linked. The old case URL renders a short placeholder for existing inbound links.
+## Previous scope
+The September 19 placeholder was replaced by the complete 12К case on September 23 at the user’s request.
+
+## September 23, 2026 rebuild
+
+The previous scope restriction on 12К has been superseded by the user's explicit request. 12К is now a full case at /cases/loyalty/.
+
+- 12k-home.png/webp, 12k-missions.png/webp, 12k-shop.png/webp: current Vue frontend from Z:/Users/smoke/OneDrive/Документы/ChatGPT/12K Mini App/frontend, launched on localhost:4314. Its own backend runs in isolated local preview mode using a task-local SQLite database, no production connections. Its built-in fictional member and demo catalog are used. No purchases, reward claims or prize transactions were made.
+- 12k-dashboard.png/webp: current Nuxt business portal from Z:/Users/smoke/OneDrive/Документы/Loyalty_API/web on localhost:4315. A task-local backend fixture supplies fictional company, user and financial figures, without real business data. The UI is the actual current source; the case explicitly labels figures as demo data.
+- club-home, club-roulette, club-tasks, club-shop refreshed from the current Maverick frontend on localhost:4323. The same local fictional presentation fixtures are used. No game or purchase actions performed.
+- Gift Roulette and TailCare use the real screens captured and documented on September 19; active Gift states remain the supplied project source screenshots.
+
+The product repositories were not edited. Local preview databases and fixture servers remain in the task's work directory and are excluded from the public build.
+
+New generated scenery: alpine-world.webp, team-orbit.webp, contact-ring.webp. Generated with the built-in GPT Image tool, not a CLI. These assets are separate from live text and real product screens.
