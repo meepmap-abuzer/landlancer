@@ -34,4 +34,110 @@ img{height:auto}.phone img{height:100%}.project-card .cover-phone img,.cover-min
 .service-art{background-size:400% auto;background-position-y:center}
 .theme-loyalty .case-ecosystem{background-image:url('/assets/art/team-orbit.webp');background-position:center}.theme-loyalty .case-orbit-object{display:none}.theme-loyalty .case-eco-heading{color:white;text-shadow:0 2px 10px #163b62}.theme-loyalty .case-eco-heading .eyebrow{color:#e6f7ff}.theme-loyalty .case-ecosystem:before{background:linear-gradient(#104d7c50,transparent 55%)}
 .phone{aspect-ratio:var(--phone-ratio,390/844)}
+/* Clear glass: sharp transmission, a refractive bevel and directional rims.
+   The material belongs to panels; actions deliberately use flat surfaces. */
+.glass:is(.top-nav,.side-nav,.crm,.hero-business,.hero-invite,.custom-steps,.stack-layer,.flow-card,.team-card,.orbit-card,.case-note,.progress-pill){
+ background:linear-gradient(125deg,#ffffff85 0%,#ffffff12 36%,#c0edff18 68%,#ffffff45 100%);
+ border:1px solid #ffffffa6;
+ box-shadow:inset 1px 1px 0 #fff,inset -1px -1px 0 #ffffffa8,inset 0 0 0 3px #ffffff18,inset 0 0 14px #ffffff22,0 8px 24px #16395720;
+ backdrop-filter:blur(1.2px) saturate(1.22);
+ -webkit-backdrop-filter:blur(1.2px) saturate(1.22);
+}
+.glass:is(.crm,.hero-business,.custom-steps,.stack-layer,.flow-card,.team-card,.orbit-card,.case-note){position:relative}
+.glass:is(.top-nav,.side-nav,.crm,.hero-business,.custom-steps,.stack-layer,.flow-card,.team-card,.orbit-card,.case-note):after{
+ content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;padding:2px;
+ background:linear-gradient(135deg,#fff 2%,#ffffff35 23%,transparent 38%,#c1f2ffba 60%,#fff 78%,#ffffff30 92%);
+ -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+ -webkit-mask-composite:xor;mask-composite:exclude;
+}
+.glass.crm{transform:none;background:linear-gradient(120deg,#dcf6ff48,#b9e3ff14);box-shadow:inset 1px 1px 0 #fff,inset -1px -1px 0 #b4e8ff,0 12px 35px #123f612e}
+.crm:before{inset:-5px;border:1px solid #ffffff85;box-shadow:none;border-radius:35px}
+.crm-projects,.crm-inbox{background:#f3faff9c;box-shadow:inset 0 1px 0 #ffffffad}
+.crm-sidebar{background:#f1faff75;border-radius:17px}
+.glass.hero-invite{background:linear-gradient(120deg,#ecfaffc7,#e5f7ff50);backdrop-filter:blur(1px)}
+.glass.hero-business{background:linear-gradient(130deg,#f1fbff94,#e4f6ff24);border-radius:38px}
+.glass:is(.team-card,.orbit-card){background:linear-gradient(115deg,#f7fcffb5,#e6f6ff64);text-shadow:0 1px 2px #fff8}
+.glass.stack-layer{transform:none;background:linear-gradient(105deg,#effaff85,#c7ecff24)}
+.glass.flow-card{background:linear-gradient(130deg,#ecfaff85,#ddf4ff30)}
+.glass.case-note{background:linear-gradient(125deg,#ffffffd9,#f1fbff9c);color:#183c49;font-weight:600}
+.side-nav a{background:#ffffff7a}
+.flow-card.is-active{outline:2px solid #1699ef;outline-offset:3px}
+.mini-form,.mini-list{background:#f4fcffc7}
+.project-caption,.showcase-label{backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px)}
+.glass.tags>span,.tags>.glass,.glass.tech-item{box-shadow:none;backdrop-filter:none;background:#ffffff85;border:1px solid #ffffffb0}
+.button,.button:hover,.button:active{box-shadow:none;transform:none;border:1px solid transparent;border-radius:9px;transition:background .2s,color .2s,scale .2s}
+.button.primary{background:#102e3a;color:#fff}
+.button.primary:hover{background:#204755}
+.button:active{scale:.96}
+.round-arrow,.side-nav a:first-child,.crm-tabs button[aria-selected=true]{box-shadow:none;background:#ffffffa6}
+.round-arrow{border-radius:10px}
+.crm-tabs button[aria-selected=true]{background:#1781eb;color:white}
+.mini-form button{background:#147cf3;box-shadow:none;border-radius:6px}
+.case-scroll.glass{background:#f6fbff;box-shadow:none;backdrop-filter:none;border:1px solid #ffffffb0;border-radius:9px;min-height:42px;transition:background .2s}
+.case-scroll:hover{background:#fff}
+.lightbox-toolbar button{border-radius:8px;box-shadow:none}
+/* Screens are editorial product captures, without fake hardware or cropping. */
+.phone,.desktop-screen{padding:0;border:1px solid #152a343d;border-radius:18px;background:#10151a;box-shadow:0 12px 28px #10233526;aspect-ratio:auto;transform:none;transition:box-shadow .25s}
+.phone img{display:block;width:100%;height:auto;object-fit:contain;border-radius:0}
+.phone:hover,.desktop-screen:hover{box-shadow:0 15px 32px #1023353b}
+.window-bar{background:#f8fbfd;color:#284353;height:22px;border-bottom:1px solid #10233515}
+.window-bar span{color:#45616c}.window-bar i{background:#aabac2}
+.desktop-screen{border-radius:10px;background:#f8fbfd}
+.case-devices{inset:55px 4% 115px 50%;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:20px;perspective:none}
+.case-devices .phone,.case-devices .device-secondary{position:relative;inset:auto;width:100%;max-width:250px;justify-self:center;transform:none}
+.case-devices .phone:hover{transform:none}
+.theme-loyalty .case-devices{inset:70px 4% 105px 46%;grid-template-columns:36% 1fr;gap:20px;align-items:center}
+.mixed-devices .phone.device-primary{position:relative;inset:auto;width:100%;max-width:225px}
+.mixed-devices .desktop-screen{position:relative;inset:auto;width:100%;max-width:none;transform:none}
+.theme-tailcare .case-devices{inset:35px 4% 95px 48%;grid-template-columns:1fr;gap:20px;align-content:center}
+.theme-tailcare .case-devices .desktop-screen,.theme-tailcare .case-devices .device-secondary{position:relative;inset:auto;width:100%;max-width:none;transform:none;max-height:none}
+.showcase-card{min-height:0;display:flex;flex-direction:column}
+.showcase-copy{min-height:0;padding-bottom:25px}
+.showcase-art{height:auto;min-height:0;flex:1;align-items:center;padding:10px 28px 30px;margin:0}
+.showcase-art .phone,.showcase-1 .showcase-art .phone,.showcase-3 .showcase-art .phone{width:min(240px,72%);transform:none}
+.showcase-art .phone:hover{transform:none}
+.showcase-symbol{width:58px;height:58px;border-radius:16px;right:22px;top:38%;transform:none;box-shadow:inset 0 1px 0 #fff,0 5px 15px #16395712;background:#ffffff66;backdrop-filter:blur(1px)}
+.showcase-symbol svg{width:30px;height:30px}
+.showcase-label{position:relative;inset:auto;margin-top:auto;min-height:57px}
+.showcase-wide .showcase-art,.theme-loyalty .showcase-wide .showcase-art{height:auto;min-height:0;padding:10px 22px 30px}
+.showcase-wide .desktop-screen,.theme-loyalty .showcase-wide .desktop-screen{width:100%;transform:none}
+.showcase-wide .showcase-symbol{display:none}
+.theme-tailcare .showcase-card{min-height:0;padding-bottom:0}
+.theme-tailcare .showcase-card:last-child{display:flex;grid-column:1/3;min-height:0}
+.theme-tailcare .showcase-card:last-child .showcase-art{height:auto;padding:10px 28px 30px;width:85%;align-self:center}
+.theme-tailcare .showcase-card:last-child .showcase-copy{padding:30px 34px 25px;max-width:650px}
+.extra-screen-grid .phone{border-radius:14px;padding:0}.extra-screen-grid .phone img{border-radius:0}
+.cover-phone,.project-gift-roulette .cover-phone,.cover-mini,.cover-browser{transform:none;border:1px solid #152a343d;border-radius:12px;box-shadow:0 8px 20px #10233533}
+.cover-phone,.project-gift-roulette .cover-phone{width:180px;height:auto;top:15px;right:22%}
+.cover-browser{width:78%;right:11%;top:20px;border-radius:8px}
+.project-loyalty .cover-browser{width:67%;right:28%;top:27px}.cover-mini{width:auto;height:calc(100% - 105px);aspect-ratio:390/844;right:7%;top:15px}
+@media(min-width:500px) and (max-width:760px){.cover-phone,.project-gift-roulette .cover-phone{width:130px;right:15%}}
+@media(max-width:1100px) and (min-width:761px){
+ .case-devices{inset:75px 3% 120px 53%;gap:14px}
+ .theme-loyalty .case-devices{inset:110px 3% 120px 49%;gap:12px}
+ .theme-tailcare .case-devices{inset:65px 3% 95px 50%;gap:15px}
+}
+@media(max-width:760px){
+ .case-hero,.theme-loyalty .case-hero,.theme-tailcare .case-hero{height:auto;display:flex;flex-direction:column}
+ .case-hero .side-nav{display:none}
+ .case-devices,.theme-loyalty .case-devices,.theme-tailcare .case-devices{position:relative;inset:auto;width:calc(100% - 44px);margin:30px auto;gap:14px;align-items:start;grid-template-columns:1fr 1fr}
+ .case-devices .phone,.case-devices .device-secondary,.mixed-devices .phone.device-primary{width:100%;max-width:220px;inset:auto;position:relative;border-radius:12px}
+ .theme-loyalty .case-devices{grid-template-columns:38% 1fr;align-items:center;gap:12px}
+ .theme-tailcare .case-devices{grid-template-columns:1fr;gap:18px;max-width:500px}
+ .theme-tailcare .case-devices .desktop-screen,.theme-tailcare .case-devices .device-secondary{inset:auto;width:100%}
+ .case-hero-bottom{position:relative;inset:auto;margin:0 20px 22px;gap:10px}
+ .showcase-card,.theme-loyalty .showcase-wide{min-height:0}
+ .showcase-copy{min-height:0;padding:25px 25px 24px}
+ .showcase-art,.showcase-wide .showcase-art,.theme-loyalty .showcase-wide .showcase-art{height:auto;min-height:0;padding:8px 20px 26px}
+ .showcase-art .phone{width:min(240px,77%)}
+ .showcase-symbol{width:48px;height:48px;right:14px;top:35%;border-radius:14px}
+ .showcase-symbol svg{width:26px;height:26px}
+ .theme-tailcare .showcase-card:last-child{grid-column:auto}
+ .theme-tailcare .showcase-card:last-child .showcase-art{width:100%;padding:8px 20px 26px}
+ .theme-tailcare .showcase-card:last-child .showcase-copy{padding:25px 25px 24px}
+ .glass.hero-business{position:absolute;border-radius:26px}.glass.custom-steps{position:absolute}
+ .glass.hero-business>.round-arrow{border-radius:8px}
+ .glass:is(.team-card,.orbit-card){background:linear-gradient(120deg,#f5fcffd1,#edfaff96)}
+}
+@media(prefers-reduced-transparency:reduce){.glass:is(.top-nav,.side-nav,.crm,.hero-business,.hero-invite,.custom-steps,.stack-layer,.flow-card,.team-card,.orbit-card,.case-note,.progress-pill){background:#eaf6fc;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}}
 .service-art{width:195px;height:260px;max-width:100%;margin-inline:auto;background-size:400% 100%;background-position-y:center}@media(max-width:1100px){.service-art{width:155px;height:207px}}@media(max-width:760px){.service-art{width:135px;height:180px}}@media(min-width:500px) and (max-width:760px){.service-art{width:190px;height:253px}}@media(max-width:370px){.service-art{width:118px;height:157px}}

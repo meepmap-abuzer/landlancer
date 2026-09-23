@@ -5,7 +5,7 @@
 export function createRefractionMap(cssWidth,cssHeight,radius){
  const ratio=Math.min(1,320/Math.max(cssWidth,cssHeight));
  const width=Math.max(1,Math.round(cssWidth*ratio)),height=Math.max(1,Math.round(cssHeight*ratio));
- const r=Math.min(radius,cssWidth/2,cssHeight/2),bevel=Math.min(18,r*.7,cssWidth/4,cssHeight/4);
+ const r=Math.min(radius,cssWidth/2,cssHeight/2),bevel=Math.min(28,r*.8,cssWidth/4,cssHeight/4);
  const pixels=new Uint8ClampedArray(width*height*4);
  for(let y=0;y<height;y++)for(let x=0;x<width;x++){
   const px=(x+.5)/width*cssWidth,py=(y+.5)/height*cssHeight;

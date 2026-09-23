@@ -31,5 +31,16 @@ npm run build; npm run check; npm test; npm run dev. Preview: http://127.0.0.1:4
 Sources for the optical approach:
 - https://kube.io/blog/liquid-glass-css-svg/
 - https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/backdrop-filter
+- https://jonbarber.co/lab/liquid-glass
+
+## Clear-glass refinement
+
+The latest feedback supersedes the tilted hardware presentation. All product captures now face forward, with thin neutral rims and no simulated camera notch. Case cards contain the entire capture at its native aspect ratio; intrinsic image dimensions prevent layout shifts while loading. The main portfolio thumbnails remain close-up previews. TailCare uses light browser frames, and the two 12К interfaces sit alongside one another without overlap.
+
+All action buttons are flat: solid fill, 9 px corners, no bevel, gradient or raised shadow. Hover changes color and active states use a small scale response. Decorative panels keep the glass material.
+
+The optical treatment follows the linked first-party experiments: a neutral center, inward displacement around a wider rounded bevel, directional specular rims and low-opacity fills. Large surfaces use 24–42 px displacement scale and only 0.65 px blur in Chromium. CSS fallback uses 1.2 px blur. Text layers have separate translucent backing for legibility. SVG filters are attached only near the viewport; maps are cached for re-entry and rebuilt only on size changes. Reduced transparency and forced-color preferences retain their fallbacks.
+
+Verified after refinement: all five pages at 320, 390, 768, 1024 and 1440 px have no horizontal overflow, no transformed product frames and no raised CTA styling. Native screenshot viewer still opens/closes. Visible filters detach outside the viewport and restore on return. Browser console is clear; optical-map tests and static-link checks pass. Safari/Firefox rendering is not separately tested.
 
 Screenshot origins and demonstration limitations: ASSET_PROVENANCE.md. Generated artwork prompts: ART_PROMPTS.md.
