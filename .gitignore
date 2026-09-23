@@ -2,3 +2,5 @@ node_modules/
 work/
 *.log
 .env*
+# Keep generated lossless masters locally; production uses the inspected WebP copies.
+concepts/assets/*.png
