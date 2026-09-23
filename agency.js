@@ -1,14 +1,16 @@
 (() => {
   const dialog = document.querySelector('.lightbox');
   let returnFocus;
-  document.querySelectorAll('[data-zoom]').forEach(button => button.addEventListener('click', () => {
+  document.addEventListener('click', event => {
+    const button = event.target.closest('[data-zoom]');
+    if (!button) return;
     if (!dialog) return;
     returnFocus = button;
     dialog.querySelector('img').src = button.dataset.zoom;
     dialog.querySelector('img').alt = button.dataset.caption;
     dialog.querySelector('p').textContent = button.dataset.caption;
     dialog.showModal();
-  }));
+  });
   if (dialog) {
     dialog.querySelector('button').addEventListener('click', () => dialog.close());
     dialog.addEventListener('click', event => {

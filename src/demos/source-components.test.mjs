@@ -1,0 +1,6 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {createStackState,placeMovingBlock} from './loyalty/app/stackEngine.ts';
+import {buildRouletteSpinStrip,calculateCenteredTranslate} from './maverick/rouletteStrip.ts';
+const rules={baseSizeMilli:3000,minOverlapMilli:120,perfectToleranceMilli:90,maxEvents:100};
+test('original Stack engine trims an overhang, alternates axes and ends on a miss',()=>{let state=createStackState(rules);state=placeMovingBlock(state,50,500);assert.equal(state.blocks[0].isPerfect,true);assert.equal(state.sizes.X,3000);state=placeMovingBlock(state,1000,1000);assert.equal(state.blocks[1].axis,'Z');assert.equal(state.sizes.Z,2000);state=placeMovingBlock(state,10000,1500);assert.equal(state.status,'ENDED');assert.equal(placeMovingBlock(state,0,2000),state)});
+test('original reel plan has one winner after the anchor and centers it',()=>{const prizes=[100,500].map(n=>({id:String(n),title:String(n),points_value:n}));const plan=buildRouletteSpinStrip({visiblePrizes:prizes,targetPrize:prizes[1]});const winner=plan.cells.findIndex(c=>c.isTarget),anchor=plan.cells.findIndex(c=>c.isAnchor);assert.ok(winner>anchor);assert.equal(plan.cells.filter(c=>c.isTarget).length,1);assert.equal(plan.cells[winner].points_value,500);assert.equal(calculateCenteredTranslate({cellLeft:400,cellWidth:100,containerWidth:600}),-150)});

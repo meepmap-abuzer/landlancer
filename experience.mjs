@@ -46,37 +46,9 @@ if(nav){
  document.fonts.ready.then(track);track();
 }
 
-document.querySelectorAll('[data-stage]').forEach(stage=>{
- const tabs=[...stage.querySelectorAll('[role=tab]')];
- const body=stage.querySelector('.stage-body'),capture=stage.querySelector('.stage-capture'),img=capture.querySelector('img');
- const heading=stage.querySelector('[data-stage-heading]'),copy=stage.querySelector('[data-stage-copy]'),note=stage.querySelector('[data-stage-note]');
- let request=0;
- async function select(tab){
-  const token=++request;
-  const source=`/assets/screenshots/${tab.dataset.stageSrc}`;
-  const preload=new Image();preload.src=source;
-  try{await preload.decode()}catch{return}
-  if(token!==request)return;
-  tabs.forEach(item=>{item.setAttribute('aria-selected',String(item===tab));item.tabIndex=item===tab?0:-1});
-  body.setAttribute('aria-labelledby',tab.id);body.classList.toggle('is-wide',tab.dataset.stageWide==='true');
-  img.src=source;img.alt=tab.dataset.stageTitle;capture.dataset.zoom=source;capture.dataset.caption=tab.dataset.stageTitle;
-  heading.textContent=tab.dataset.stageTitle;copy.textContent=tab.dataset.stageDescription;note.textContent=tab.dataset.stageCaption;
-  if(!reduced.matches){
-   [capture,heading,copy,note].forEach((element,i)=>{element.getAnimations().forEach(a=>a.cancel());element.animate([{opacity:0,translate:'0 14px'},{opacity:1,translate:'0 0'}],{duration:650,delay:i*45,fill:'backwards',easing:'cubic-bezier(.16,1,.3,1)'})});
-  }
- }
- tabs.forEach((tab,index)=>{
-  tab.addEventListener('click',()=>select(tab));
-  tab.addEventListener('keydown',event=>{
-   const next=event.key==='ArrowRight'?(index+1)%tabs.length:event.key==='ArrowLeft'?(index+tabs.length-1)%tabs.length:event.key==='Home'?0:event.key==='End'?tabs.length-1:-1;
-   if(next<0)return;event.preventDefault();tabs[next].focus();select(tabs[next]);
-  });
- });
-});
-
 // Each piece arrives separately. Content remains visible if JS is unavailable.
 if(!reduced.matches){
- const selectors='.hero-copy h1,.hero-copy p,.crm-sidebar,.crm-projects,.crm-inbox,.hero-invite,.hero-business,.hero-explore,.case-intro>* ,.product-stage,.service,.custom-copy,.custom-steps,.stack-layer,.flow-card,.project-card,.team-card,.orbit-card,.showcase-copy,.showcase-art,.contact-copy>*';
+ const selectors='.hero-copy h1,.hero-copy p,.crm-sidebar,.crm-projects,.crm-inbox,.hero-invite,.hero-business,.hero-explore,.case-intro>* ,.interactive-stage,.service,.custom-copy,.custom-steps,.stack-layer,.flow-card,.project-card,.team-card,.orbit-card,.case-function,.contact-copy>*';
  const elements=[...document.querySelectorAll(selectors)];
  const observer=new IntersectionObserver(entries=>{
   const entering=entries.filter(entry=>entry.isIntersecting);

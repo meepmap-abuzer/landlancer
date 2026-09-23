@@ -21,4 +21,6 @@ Five working public pages; keyboard-friendly CRM and product tabs, request demon
 
 ## Latest interaction requirements
 
+The subsequent revision replaces screenshot-switching showcases with embedded product components. All four homepage cards are interactive. Gift Roulette includes four locally simulated games; Maverick includes its prize strip and a demo profile; TailCare includes its actual animal cards with filtering/favorites; 12К includes the original flipping card and Stack scene, alongside a dashboard capture. Case intros are centered above the product exhibit, with concise feature tiles and an expandable screenshot gallery. Decorative green dots in custom-development steps are removed. DEMOS.md documents exact source reuse and simulation boundaries.
+
 Full-width environment that grows with the viewport, an integrated top notch, unclipped hero panels, slow staggered entrances, smooth wheel inertia in both directions and a moving rounded navigation selection. Present actual product screens inside an explanatory product stage with selectable scenarios. Preserve flat buttons and clear refractive glass. Fresh Gift Roulette captures come from the locally running frontend; source screenshots of active game states remain separately documented.

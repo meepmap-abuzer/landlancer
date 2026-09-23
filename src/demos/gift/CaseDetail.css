@@ -1,0 +1,536 @@
+
+.case-detail {
+  min-height: 100vh;
+  background: #141414;
+  color: #ffffff;
+  padding: 16px;
+  padding-bottom: 100px;
+  position: relative;
+}
+
+/* Свечение убрано */
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px;
+  gap: 12px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  border-top-color: #9AFF27;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.error-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #f87171;
+}
+
+.back-btn {
+  margin-top: 16px;
+  padding: 12px 24px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Баланс */
+.balance-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.balance-display:active {
+  transform: scale(0.97);
+}
+
+.balance-display .balance-icon {
+  font-size: 20px;
+  color: #f5a623;
+}
+
+.balance-amount {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.balance-display.bonus-active {
+  background: rgba(255, 165, 0, 0.15);
+  border-color: rgba(255, 165, 0, 0.4);
+  box-shadow: 0 0 15px rgba(255, 165, 0, 0.15);
+}
+
+.balance-display.bonus-active .balance-icon {
+  color: #ffa500;
+  text-shadow: 0 0 10px #ffa500;
+}
+
+.balance-type-label {
+  position: absolute;
+  bottom: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 9px;
+  color: #ffa500;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 2px 6px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+/* Название */
+.case-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* Рулетка */
+.roulette-container {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.03);
+  border: 2px solid #9AFF27;
+  border-radius: 16px;
+  margin-bottom: 20px;
+}
+
+.roulette-container::before,
+.roulette-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 72px;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.roulette-container::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(14, 14, 14, 0.82) 0%, transparent 100%);
+}
+
+.roulette-container::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(14, 14, 14, 0.82) 0%, transparent 100%);
+}
+
+.roulette-indicator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 4px;
+  height: 100%;
+  background: #9AFF27;
+  z-index: 10;
+  box-shadow: 0 0 20px rgba(154, 255, 39, 0.8);
+}
+
+.roulette-track {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 15px 20px;
+  transition: none;
+  will-change: transform;
+}
+
+.roulette-item {
+  flex-shrink: 0;
+  width: 130px;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.roulette-item.main-prize {
+  border-color: #f5a623;
+  box-shadow: 0 0 15px rgba(245, 166, 35, 0.5);
+}
+
+.roulette-item img {
+  width: 65px;
+  height: 65px;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+
+.item-name {
+  font-size: 12px;
+  text-align: center;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+/* Кнопка */
+.spin-btn {
+  width: 100%;
+  padding: 16px;
+  background: #9AFF27;
+  border: none;
+  border-radius: 14px;
+  color: #000;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.spin-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.spin-btn:hover:not(:disabled) {
+  background: #7DD622;
+}
+
+
+/* Секции */
+.section {
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+/* Главный приз */
+.main-prize-card {
+  border: 2px solid #f5a623;
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.prize-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.prize-info {
+  flex: 1;
+}
+
+.prize-name {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.prize-price {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #9AFF27;
+}
+
+
+/* Список призов */
+.prizes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.prize-row {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.prize-row-img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.prize-row-info {
+  flex: 1;
+}
+
+.prize-row-name {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.prize-row-chance {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.prize-row-price {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #9AFF27;
+}
+
+
+/* Модальное окно */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-content {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 32px 24px;
+  max-width: min(340px, calc(100vw - 32px));
+  width: 100%;
+  text-align: center;
+}
+
+.glow-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+.glow-icon.win {
+  background: rgba(154, 255, 39, 0.15);
+  border: 2px solid rgba(154, 255, 39, 0.4);
+  color: #9AFF27;
+  box-shadow: 0 0 30px rgba(154, 255, 39, 0.4), 0 0 60px rgba(154, 255, 39, 0.2);
+}
+
+.glow-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 30px rgba(154, 255, 39, 0.4), 0 0 60px rgba(154, 255, 39, 0.2);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(154, 255, 39, 0.6), 0 0 80px rgba(154, 255, 39, 0.3);
+  }
+}
+
+.modal-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.glow-title.win {
+  color: #9AFF27;
+  text-shadow: 0 0 20px rgba(154, 255, 39, 0.5);
+}
+
+.won-prize {
+  margin-bottom: 24px;
+  background: rgba(154, 255, 39, 0.05);
+  border: 1px solid rgba(154, 255, 39, 0.3);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 0 20px rgba(154, 255, 39, 0.15);
+}
+
+.won-prize-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 12px;
+  border-radius: 12px;
+}
+
+.nothing-img {
+  opacity: 0.4;
+  filter: grayscale(1);
+}
+
+.won-prize-name {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.won-prize-price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #9AFF27;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.action-btn {
+  flex: 1;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.action-btn.keep {
+  background: #9AFF27;
+  color: #000;
+  box-shadow: 0 0 20px rgba(154, 255, 39, 0.4);
+}
+
+.action-btn.sell {
+  background: rgba(154, 255, 39, 0.15);
+  color: #9AFF27;
+  border: 1px solid rgba(154, 255, 39, 0.3);
+}
+
+.action-btn:hover {
+  transform: scale(1.02);
+}
+
+/* Прomo кейс */
+.promo-input-section {
+  margin-bottom: 20px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+}
+
+.promo-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 10px;
+}
+
+.promo-input {
+  width: 100%;
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  outline: none;
+  letter-spacing: 2px;
+}
+
+.promo-input:focus {
+  border-color: #9AFF27;
+  background: rgba(154, 255, 39, 0.05);
+}
+
+.promo-input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+/* Special кнопки */
+.spin-btn.free-btn {
+  background: linear-gradient(135deg, #9AFF27 0%, #7DD622 100%);
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.spin-btn.promo-btn {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(154, 255, 39, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(154, 255, 39, 0.8);
+  }
+}
+
+@media (max-width: 360px) {
+  .case-detail { padding: 12px; }
+  .case-title { font-size: clamp(18px, 5vw, 24px); }
+  .roulette-item { width: clamp(100px, 28vw, 130px); height: clamp(90px, 25vw, 120px); }
+  .roulette-item img { width: clamp(48px, 14vw, 65px); height: clamp(48px, 14vw, 65px); }
+  .prize-row-name { font-size: 13px; }
+  .modal-content { padding: 24px 16px; }
+}

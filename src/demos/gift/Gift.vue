@@ -1,0 +1,6 @@
+<script setup>
+import {ref} from 'vue';import MinesDemo from './MinesDemo.vue';import CrashDemo from './CrashDemo.vue';import CaseDemo from './CaseDemo.vue';import UpgradeDemo from './UpgradeDemo.vue';
+defineProps({compact:Boolean});const mode=ref('mines'),modes=[['mines','Мины',MinesDemo],['case','Кейсы',CaseDemo],['crash','Краш',CrashDemo],['upgrade','Апгрейд',UpgradeDemo]];
+</script>
+<template><div class="gift-demo" :class="{compact}"><header class="demo-topbar"><span class="demo-wordmark">Gift Run<span>✳</span></span><small>Интерактивное демо</small></header><nav v-if="!compact" class="demo-tabs" aria-label="Режим игры"><button v-for="[key,label] in modes" :key="key" :aria-pressed="mode===key" @click="mode=key">{{label}}</button></nav><component :is="modes.find(m=>m[0]===mode)[2]" :compact="compact"/><p class="demo-note">Демонстрационные раунды · без ставок и реальных призов</p></div></template>
+<style scoped>.gift-demo{--demo-accent:#9aff27;color:#f3f6ef;background:#131710;padding:28px 36px;border-radius:24px;min-height:590px}.demo-wordmark span{color:#9aff27;margin-left:10px}.demo-tabs button[aria-pressed=true]{color:#152308}.compact{padding:22px 26px;min-height:0;height:390px}@media(max-width:600px){.gift-demo{padding:22px 16px;min-height:550px}.compact{min-height:0;height:390px}}</style>

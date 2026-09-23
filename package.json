@@ -3,12 +3,20 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node src/build-agency.mjs",
+    "build": "vite build --config src/demos/vite.config.mjs && node src/build-agency.mjs",
     "dev": "node src/serve.mjs",
     "check": "node --check src/build-agency.mjs && node --check src/product-stage.mjs && node --check agency.js && node --check experience.mjs && node --check glass-lens.mjs",
-    "test": "node --test src/glass-optics.test.mjs"
+    "test": "node --experimental-strip-types --test src/glass-optics.test.mjs src/demos/rounds.test.mjs src/demos/source-components.test.mjs"
   },
   "dependencies": {
-    "lenis": "1.3.26"
+    "lenis": "1.3.26",
+    "lucide-vue-next": "0.468.0",
+    "qrcode.vue": "3.10.0",
+    "three": "0.185.1",
+    "vue": "3.5.41"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "5.2.4",
+    "vite": "6.4.3"
   }
 }

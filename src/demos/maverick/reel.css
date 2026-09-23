@@ -1,0 +1,172 @@
+.mav-roulette-machine {
+  border-radius: 18px;
+  padding: 0 0 16px;
+}
+
+.mav-roulette-arch {
+  position: relative;
+  display: flex;
+  height: 70px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0 14px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.28);
+  padding-bottom: 10px;
+}
+
+.mav-roulette-arch::before {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 236px;
+  height: 104px;
+  border: 2px solid var(--mav-gold);
+  border-bottom: 0;
+  border-radius: 130px 130px 0 0;
+  background: linear-gradient(180deg, #6b4626, #4a3018);
+  content: "";
+  transform: translateX(-50%);
+}
+
+.mav-roulette-arch > * {
+  position: relative;
+  z-index: 1;
+}
+
+.mav-roulette-arch strong {
+  color: #ffd277;
+  font-family: "Oswald", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.mav-strip-window {
+  position: relative;
+  height: 112px;
+  margin: 16px 12px 0;
+  overflow: hidden;
+  border: 2px solid var(--mav-wood-3);
+  border-radius: 12px;
+  background: #1c1712;
+  box-shadow: inset 0 6px 14px rgba(0, 0, 0, 0.5);
+}
+
+.mav-strip-track {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  display: flex;
+  gap: 8px;
+  transition: none;
+}
+
+.mav-strip-track--spinning {
+  will-change: transform;
+}
+
+.mav-prize-cell {
+  display: flex;
+  width: 84px;
+  height: 92px;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border: 1.5px solid var(--mav-border);
+  border-radius: 10px;
+  background: var(--mav-paper);
+  color: var(--mav-blue);
+  text-align: center;
+}
+
+.mav-prize-cell[data-jackpot="true"] {
+  border: 2px solid var(--mav-gold);
+  background: linear-gradient(180deg, #fff7e6, #ffe9c2);
+  box-shadow: 0 0 16px rgba(255, 200, 90, 0.65);
+  transform: scale(1.05);
+}
+
+.mav-prize-cell[data-target="true"] {
+  border-color: var(--mav-gold);
+}
+
+.mav-prize-cell__image {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.mav-prize-cell strong {
+  max-width: 76px;
+  overflow: hidden;
+  color: currentColor;
+  font-family: "Oswald", sans-serif;
+  font-size: 18px;
+  line-height: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mav-prize-cell small {
+  color: var(--mav-muted);
+  font-size: 8.5px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.mav-strip-fade {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  width: 46px;
+  pointer-events: none;
+}
+
+.mav-strip-fade--left {
+  left: 0;
+  background: linear-gradient(90deg, #1c1712, rgba(28, 23, 18, 0));
+}
+
+.mav-strip-fade--right {
+  right: 0;
+  background: linear-gradient(270deg, #1c1712, rgba(28, 23, 18, 0));
+}
+
+.mav-strip-pointer {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: linear-gradient(180deg, #ffd277, var(--mav-red));
+  transform: translateX(-50%);
+}
+
+.mav-strip-pointer::before,
+.mav-strip-pointer::after {
+  position: absolute;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-right: 9px solid transparent;
+  border-left: 9px solid transparent;
+  content: "";
+  transform: translateX(-50%);
+}
+
+.mav-strip-pointer::before {
+  top: 0;
+  border-top: 14px solid var(--mav-red);
+}
+
+.mav-strip-pointer::after {
+  bottom: 0;
+  border-bottom: 14px solid var(--mav-red);
+}

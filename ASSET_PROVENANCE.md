@@ -1,5 +1,7 @@
 # Asset provenance
 
+The latest interactive exhibits additionally reuse product code and assets documented in DEMOS.md. TailCare sample photos in assets/demos are copied from FRONT/public/demo-dogs. 12К card texture and brand mark are copied alongside its Vue components and bundled by Vite. New gift inventory symbols are illustrative vector icons; they do not represent an actual inventory or rewards.
+
 Captured September 19, 2026 using the in-app browser. PNG originals are retained; optimized WebP derivatives are used by the site.
 
 | Files in assets/screenshots | Source |

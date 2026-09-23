@@ -1,0 +1,12 @@
+<script setup>
+import {nextTick,onBeforeUnmount,ref} from 'vue';
+import {Gift,Gem,Crown,Star} from 'lucide-vue-next';
+const pool=[{name:'Crystal',icon:Gem,color:'#71dfff'},{name:'Lucky Star',icon:Star,color:'#f9dc72'},{name:'Gift Box',icon:Gift,color:'#c292ff'},{name:'Crown',icon:Crown,color:'#a5ff77'}];
+const windowEl=ref(),items=ref(Array.from({length:32},(_,i)=>pool[i%4])),position=ref(0),spinning=ref(false),result=ref('');let timer;
+async function spin(){if(spinning.value)return;spinning.value=true;result.value='';position.value=0;await nextTick();const chosen=Math.floor(Math.random()*4),target=24+chosen;const distance=target*108+50-windowEl.value.clientWidth/2;
+ await nextTick();const track=windowEl.value.querySelector('.roulette-track');const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;const anim=track.animate([{transform:'translateX(0)'},{transform:`translateX(-${distance}px)`}],{duration:reduced?0:3200,easing:'cubic-bezier(.12,.75,.18,1)',fill:'forwards'});timer=anim;anim.onfinish=()=>{result.value=pool[chosen].name;position.value=distance;spinning.value=false;anim.cancel()}}
+onBeforeUnmount(()=>timer?.cancel());
+</script>
+<template><div class="case-demo"><div class="case-heading"><Gift :size="34"/><h3>Коллекция подарков</h3><p>Запустите ленту и посмотрите результат.</p></div><div ref="windowEl" class="roulette-container"><div class="roulette-indicator"></div><div class="roulette-track" :style="{transform:`translateX(-${position}px)`}"><div class="roulette-item" v-for="(item,i) in items" :key="i"><component :is="item.icon" :size="46" :color="item.color"/><span>{{item.name}}</span></div></div></div><button class="demo-action" :disabled="spinning" @click="spin">{{spinning?'Открываем…':'Открыть кейс'}}</button><p class="demo-status" role="status">{{result?`Ваш демо-подарок — ${result}`:'Все подарки в этой витрине виртуальные.'}}</p></div></template>
+<style scoped src="./CaseDetail.css"></style>
+<style scoped>.case-demo{width:min(100%,540px);margin:auto}.case-heading{text-align:center;padding:25px 0 35px;color:#9aff27}.case-heading h3{font-size:25px;color:white;margin:10px 0}.case-heading p{font-size:13px;color:#b4b6af}.roulette-container{height:155px;margin:10px 0 30px}.roulette-track{gap:8px;padding:0;transition:none}.roulette-item{width:100px;min-width:100px;height:135px;display:flex;flex-direction:column;justify-content:center;gap:16px}.roulette-item span{font-size:11px}.demo-action{width:100%;color:#152308}</style>

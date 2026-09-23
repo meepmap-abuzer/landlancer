@@ -1,5 +1,7 @@
 # Lancer Agency design — September 23 rebuild
 
+The latest playable revision is documented in DEMOS.md and supersedes the screenshot-stage layout described below. Project cards now contain interactive Vue components; case pages place centered intros above full product exhibits. Function summaries and expandable screenshots replace the alternating screenshot/text rows. playground.css defines the new presentation while preserving the surrounding glass environment.
+
 The new user reference is the layout specification. Its centered CRM hero replaces the former left-aligned headline and floating slabs. The hero, services, workflow, case previews, team and contact sections have been rebuilt. All four project pages now use new presentation layouts, including a complete 12К case.
 
 ## Visual system
