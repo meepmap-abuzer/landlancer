@@ -33,8 +33,14 @@ The previous scope restriction on 12К has been superseded by the user's explici
 - 12k-home.png/webp, 12k-missions.png/webp, 12k-shop.png/webp: current Vue frontend from Z:/Users/smoke/OneDrive/Документы/ChatGPT/12K Mini App/frontend, launched on localhost:4314. Its own backend runs in isolated local preview mode using a task-local SQLite database, no production connections. Its built-in fictional member and demo catalog are used. No purchases, reward claims or prize transactions were made.
 - 12k-dashboard.png/webp: current Nuxt business portal from Z:/Users/smoke/OneDrive/Документы/Loyalty_API/web on localhost:4315. A task-local backend fixture supplies fictional company, user and financial figures, without real business data. The UI is the actual current source; the case explicitly labels figures as demo data.
 - club-home, club-roulette, club-tasks, club-shop refreshed from the current Maverick frontend on localhost:4323. The same local fictional presentation fixtures are used. No game or purchase actions performed.
-- Gift Roulette and TailCare use the real screens captured and documented on September 19; active Gift states remain the supplied project source screenshots.
+- TailCare uses the real screens captured and documented on September 19. Gift Roulette now combines fresh captures below with the retained actual case/crash screenshots from the project.
 
 The product repositories were not edited. Local preview databases and fixture servers remain in the task's work directory and are excluded from the public build.
 
 New generated scenery: alpine-world.webp, team-orbit.webp, contact-ring.webp. Generated with the built-in GPT Image tool, not a CLI. These assets are separate from live text and real product screens.
+
+## Gift Roulette viewport revision — September 23
+
+gift-home-current.png/webp, gift-mines-current.png/webp and gift-upgrade-current.png/webp were captured at 430 × 865 from D:/Data/Projects/Code/gift_roulette/src/frontend/app running on localhost:4318. A task-local read-only fixture at localhost:4328 provides empty catalogs and fictional preview balance data; it rejects mutations. Home, idle Mines and empty Upgrade selection are the actual current frontend, with no simulated phone hardware. No game, payment or purchase actions were performed. The case explicitly identifies presentation data as demonstration data.
+
+The homepage and interactive product stage use the refreshed home capture; Mines and Upgrade feature stories use the refreshed idle captures. The existing gaming-case and gift-crash-active screens remain for their respective populated/active scenarios. These were not represented as newly captured active rounds. The source product code was not edited. Preview fixtures and services are not part of the public release.

@@ -17,4 +17,8 @@ No invented commercial results. Screenshots represent actual frontend code; pres
 
 ## Acceptance
 
-Five working public pages; keyboard-friendly CRM tabs, request demonstration, native details and screenshot viewer; responsive at 320–1440 px; reduced-motion support; static GitHub Pages build with existing domain preserved.
+Five working public pages; keyboard-friendly CRM and product tabs, request demonstration, native details and screenshot viewer; responsive at 320–2560 px; reduced-motion support; static GitHub Pages build with existing domain preserved.
+
+## Latest interaction requirements
+
+Full-width environment that grows with the viewport, an integrated top notch, unclipped hero panels, slow staggered entrances, smooth wheel inertia in both directions and a moving rounded navigation selection. Present actual product screens inside an explanatory product stage with selectable scenarios. Preserve flat buttons and clear refractive glass. Fresh Gift Roulette captures come from the locally running frontend; source screenshots of active game states remain separately documented.

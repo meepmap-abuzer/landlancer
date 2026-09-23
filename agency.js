@@ -58,12 +58,4 @@
     }
     advance();
   });
-  if (!reduced.matches) {
-    const observer = new IntersectionObserver(entries => entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      entry.target.animate([{ opacity: .6, transform: 'translateY(14px)' }, { opacity: 1, transform: 'translateY(0)' }], { duration: 650, easing: 'cubic-bezier(.16,1,.3,1)' });
-      observer.unobserve(entry.target);
-    }), { threshold: .1 });
-    document.querySelectorAll('.service,.project-card,.showcase-card').forEach(el => observer.observe(el));
-  }
 })();

@@ -5,7 +5,10 @@
   "scripts": {
     "build": "node src/build-agency.mjs",
     "dev": "node src/serve.mjs",
-    "check": "node --check src/build-agency.mjs && node --check agency.js && node --check glass-lens.mjs",
+    "check": "node --check src/build-agency.mjs && node --check src/product-stage.mjs && node --check agency.js && node --check experience.mjs && node --check glass-lens.mjs",
     "test": "node --test src/glass-optics.test.mjs"
+  },
+  "dependencies": {
+    "lenis": "1.3.26"
   }
 }
