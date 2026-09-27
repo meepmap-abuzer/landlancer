@@ -1,14 +1,14 @@
-import { c as z, _ as w } from "./_plugin-vue_export-helper-1zv-mmDB.js";
-import { S as G } from "./star-CHRdtovu.js";
-import { j as l, c as u, b as a, t as d, F as k, g as $, h as B, y as b, u as C, p as x, r as p, o as N, a as S, d as I, n as A, z as D, i as L, e as U, f as V } from "./mount-BvagNL2j.js";
-import { G as F } from "./gift-CauGOzu2.js";
+import { c as B, _ as w } from "./_plugin-vue_export-helper-BKg-xBEj.js";
+import { S as G } from "./star-BEOjZcX7.js";
+import { j as l, c as u, b as a, t as d, F as k, g as $, h as z, v as b, u as x, p as C, r as p, o as N, a as S, d as I, n as A, x as D, i as L, e as U, f as V } from "./runtime-core.esm-bundler-Ch0unMqb.js";
+import { G as F } from "./gift-D3zF9gYW.js";
 /**
  * @license lucide-vue-next v0.468.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const T = z("BombIcon", [
+const T = B("BombIcon", [
   ["circle", { cx: "11", cy: "13", r: "9", key: "hd149" }],
   [
     "path",
@@ -25,7 +25,7 @@ const T = z("BombIcon", [
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const j = z("CrownIcon", [
+const j = B("CrownIcon", [
   [
     "path",
     {
@@ -41,7 +41,7 @@ const j = z("CrownIcon", [
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const E = z("GemIcon", [
+const E = B("GemIcon", [
   ["path", { d: "M6 3h12l4 6-10 13L2 9Z", key: "1pcd5k" }],
   ["path", { d: "M11 3 8 9l4 13 4-13-3-6", key: "1fcu3u" }],
   ["path", { d: "M2 9h20", key: "16fsjt" }]
@@ -69,7 +69,7 @@ const H = (r) => Number((1 + r * 0.18).toFixed(2)), O = (r) => Math.exp(Math.max
   __name: "MinesDemo",
   props: { compact: Boolean },
   setup(r) {
-    const t = p(3), e = p({ status: "ready", mines: /* @__PURE__ */ new Set(), open: /* @__PURE__ */ new Set() }), o = x(() => H([...e.value.open].filter((m) => !e.value.mines.has(m)).length)), n = x(() => e.value.status === "lost" ? "Мина! Попробуйте ещё раз." : e.value.status === "won" ? `Раунд завершён · ×${o.value.toFixed(2)}` : e.value.status === "playing" ? "Открывайте клетки или завершите раунд." : "Найдите звёзды на поле 5 × 5.");
+    const t = p(3), e = p({ status: "ready", mines: /* @__PURE__ */ new Set(), open: /* @__PURE__ */ new Set() }), o = C(() => H([...e.value.open].filter((m) => !e.value.mines.has(m)).length)), n = C(() => e.value.status === "lost" ? "Мина! Попробуйте ещё раз." : e.value.status === "won" ? `Раунд завершён · ×${o.value.toFixed(2)}` : e.value.status === "playing" ? "Открывайте клетки или завершите раунд." : "Найдите звёзды на поле 5 × 5.");
     function c() {
       e.value = { status: "playing", mines: q(t.value), open: /* @__PURE__ */ new Set() };
     }
@@ -92,12 +92,12 @@ const H = (r) => Number((1 + r * 0.18).toFixed(2)), O = (r) => Math.exp(Math.max
       a("div", P, [
         (l(), u(k, null, $(25, (s) => a("button", {
           key: s,
-          class: B(["cell", { revealed: e.value.open.has(s - 1), mine: e.value.open.has(s - 1) && e.value.mines.has(s - 1), safe: e.value.open.has(s - 1) && !e.value.mines.has(s - 1) }]),
+          class: z(["cell", { revealed: e.value.open.has(s - 1), mine: e.value.open.has(s - 1) && e.value.mines.has(s - 1), safe: e.value.open.has(s - 1) && !e.value.mines.has(s - 1) }]),
           "aria-label": `Клетка ${s}${e.value.open.has(s - 1) ? e.value.mines.has(s - 1) ? ": мина" : ": звезда" : ""}`,
           disabled: e.value.status !== "playing" || e.value.open.has(s - 1),
           onClick: (i) => v(s - 1)
         }, [
-          e.value.open.has(s - 1) && e.value.mines.has(s - 1) ? (l(), b(C(T), { key: 0 })) : e.value.open.has(s - 1) ? (l(), b(C(G), {
+          e.value.open.has(s - 1) && e.value.mines.has(s - 1) ? (l(), b(x(T), { key: 0 })) : e.value.open.has(s - 1) ? (l(), b(x(G), {
             key: 1,
             fill: "currentColor"
           })) : (l(), u("span", Y, "?"))
@@ -129,7 +129,7 @@ const H = (r) => Number((1 + r * 0.18).toFixed(2)), O = (r) => Math.exp(Math.max
   setup(r) {
     const t = p("ready"), e = p(1), o = p([]);
     let n = 0, c = 0, v = 2;
-    const m = x(() => {
+    const m = C(() => {
       const f = Math.min((e.value - 1) / 3, 1);
       return Array.from({ length: 51 }, (g, y) => {
         const M = y / 50 * f;
@@ -181,7 +181,7 @@ const H = (r) => Number((1 + r * 0.18).toFixed(2)), O = (r) => Math.exp(Math.max
           }, null, 8, re)
         ])),
         a("div", {
-          class: B(["multiplier-display", { crashed: t.value === "crashed" }])
+          class: z(["multiplier-display", { crashed: t.value === "crashed" }])
         }, "×" + d(e.value.toFixed(2)), 3)
       ]),
       a("div", ie, [
@@ -217,7 +217,7 @@ const H = (r) => Number((1 + r * 0.18).toFixed(2)), O = (r) => Math.exp(Math.max
     }
     return S(() => m == null ? void 0 : m.cancel()), (s, i) => (l(), u("div", me, [
       a("div", ve, [
-        I(C(F), { size: 34 }),
+        I(x(F), { size: 34 }),
         i[0] || (i[0] = a("h3", null, "Коллекция подарков", -1)),
         i[1] || (i[1] = a("p", null, "Запустите ленту и посмотрите результат.", -1))
       ]),
@@ -254,7 +254,7 @@ const H = (r) => Number((1 + r * 0.18).toFixed(2)), O = (r) => Math.exp(Math.max
 }, _e = /* @__PURE__ */ w(fe, [["__scopeId", "data-v-f72bf811"]]), ge = { class: "upgrade-demo" }, ye = { class: "upgrade-picks" }, ke = { class: "upgrade-wheel" }, $e = {
   viewBox: "0 0 200 200",
   "aria-hidden": "true"
-}, be = ["stroke-dasharray"], we = { class: "target-picker" }, Me = ["disabled", "aria-pressed", "onClick"], Ce = ["disabled"], xe = {
+}, be = ["stroke-dasharray"], we = { class: "target-picker" }, Me = ["disabled", "aria-pressed", "onClick"], xe = ["disabled"], Ce = {
   class: "demo-status",
   role: "status"
 }, Fe = {
@@ -262,7 +262,7 @@ const H = (r) => Number((1 + r * 0.18).toFixed(2)), O = (r) => Math.exp(Math.max
   setup(r) {
     const t = p(0), e = p(0), o = p(!1), n = p("");
     let c;
-    const v = [{ name: "Crystal", chance: 65, icon: E }, { name: "Crown", chance: 35, icon: j }], m = x(() => v[t.value]);
+    const v = [{ name: "Crystal", chance: 65, icon: E }, { name: "Crown", chance: 35, icon: j }], m = C(() => v[t.value]);
     function _() {
       if (o.value) return;
       o.value = !0, n.value = "";
@@ -274,7 +274,7 @@ const H = (r) => Number((1 + r * 0.18).toFixed(2)), O = (r) => Math.exp(Math.max
     return S(() => clearTimeout(c)), (s, i) => (l(), u("div", ge, [
       a("div", ye, [
         a("div", null, [
-          I(C(F), { size: 48 }),
+          I(x(F), { size: 48 }),
           i[0] || (i[0] = a("span", null, "Gift Box", -1))
         ]),
         a("div", ke, [
@@ -327,11 +327,11 @@ const H = (r) => Number((1 + r * 0.18).toFixed(2)), O = (r) => Math.exp(Math.max
         class: "demo-action",
         disabled: o.value,
         onClick: _
-      }, d(o.value ? "Улучшаем…" : "Попробовать апгрейд"), 9, Ce),
-      a("p", xe, d(n.value || "Выберите цель и запустите вращение."), 1)
+      }, d(o.value ? "Улучшаем…" : "Попробовать апгрейд"), 9, xe),
+      a("p", Ce, d(n.value || "Выберите цель и запустите вращение."), 1)
     ]));
   }
-}, ze = /* @__PURE__ */ w(Fe, [["__scopeId", "data-v-33cde30e"]]), Be = {
+}, Be = /* @__PURE__ */ w(Fe, [["__scopeId", "data-v-33cde30e"]]), ze = {
   key: 0,
   class: "demo-tabs",
   "aria-label": "Режим игры"
@@ -339,9 +339,9 @@ const H = (r) => Number((1 + r * 0.18).toFixed(2)), O = (r) => Math.exp(Math.max
   __name: "Gift",
   props: { compact: Boolean },
   setup(r) {
-    const t = p("mines"), e = [["mines", "Мины", se], ["case", "Кейсы", _e], ["crash", "Краш", de], ["upgrade", "Апгрейд", ze]];
+    const t = p("mines"), e = [["mines", "Мины", se], ["case", "Кейсы", _e], ["crash", "Краш", de], ["upgrade", "Апгрейд", Be]];
     return (o, n) => (l(), u("div", {
-      class: B(["gift-demo", { compact: r.compact }])
+      class: z(["gift-demo", { compact: r.compact }])
     }, [
       n[0] || (n[0] = a("header", { class: "demo-topbar" }, [
         a("span", { class: "demo-wordmark" }, [
@@ -350,7 +350,7 @@ const H = (r) => Number((1 + r * 0.18).toFixed(2)), O = (r) => Math.exp(Math.max
         ]),
         a("small", null, "Интерактивное демо")
       ], -1)),
-      r.compact ? V("", !0) : (l(), u("nav", Be, [
+      r.compact ? V("", !0) : (l(), u("nav", ze, [
         (l(), u(k, null, $(e, ([c, v]) => a("button", {
           key: c,
           "aria-pressed": t.value === c,
