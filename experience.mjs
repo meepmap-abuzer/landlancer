@@ -49,8 +49,9 @@ if(nav){
 
 // Each piece arrives separately. Content remains visible if JS is unavailable.
 if(!reduced.matches){
- const selectors='.hero-copy h1,.hero-copy p,.crm-sidebar,.crm-projects,.crm-inbox,.hero-invite,.hero-business,.hero-explore,.case-intro>* ,.interactive-stage,.service,.custom-copy,.custom-steps,.stack-layer,.flow-card,.project-card,.team-card,.orbit-card,.case-function,.contact-copy>*';
- const elements=[...document.querySelectorAll(selectors)];
+ const selectors='.hero-copy p,.crm-sidebar,.crm-projects,.crm-inbox,.hero-invite,.hero-business,.hero-explore,.case-intro>* ,.interactive-stage,.service,.custom-copy,.custom-steps,.stack-layer,.flow-card,.project-card,.team-card,.orbit-card,.case-function,.contact-copy>*';
+ // Keep the primary heading visible immediately; opacity reveals delay LCP.
+ const elements=[...document.querySelectorAll(selectors)].filter(element=>element.tagName!=='H1');
  const observer=new IntersectionObserver(entries=>{
   const entering=entries.filter(entry=>entry.isIntersecting);
   entering.forEach(({target},i)=>{
