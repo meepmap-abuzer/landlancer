@@ -1,6 +1,7 @@
-import { k as Ll, r as Ft, D as Cr, o as Oo, i as Dl, a as Bo, j as mr, c as gr, h as Il, b as Vt, B as La, x as Pr, f as zo, t as Ci, p as Da, d as Ul, e as Nl } from "./mount-BvagNL2j.js";
-import { r as Fl } from "./Loyalty-doLOybkS.js";
-import { _ as Go } from "./_plugin-vue_export-helper-1zv-mmDB.js";
+import { a as La, w as Cr } from "./runtime-dom.esm-bundler-Dx4MR38Z.js";
+import { r as Ll } from "./Loyalty-OQ_-WDkT.js";
+import { k as Dl, r as Ft, Q as Pr, o as Oo, i as Il, a as Bo, j as mr, c as gr, h as Ul, b as Vt, f as zo, t as Ci, p as Da, d as Nl, e as Fl } from "./runtime-core.esm-bundler-Ch0unMqb.js";
+import { _ as Go } from "./_plugin-vue_export-helper-BKg-xBEj.js";
 function Lr(i) {
   return {
     status: "READY",
@@ -21042,7 +21043,7 @@ class Fo {
 const pm = ["disabled", "aria-describedby", "onKeydown"], mm = {
   key: 0,
   class: "stack-fallback-note"
-}, gm = { class: "sr-only" }, _m = /* @__PURE__ */ Ll({
+}, gm = { class: "sr-only" }, _m = /* @__PURE__ */ Dl({
   __name: "StackCanvas",
   props: {
     rules: {},
@@ -21056,17 +21057,17 @@ const pm = ["disabled", "aria-describedby", "onKeydown"], mm = {
     const t = i, n = e, r = Ft(null), s = Ft(null), a = Ft(null), o = Ft(Lr(t.rules)), c = Ft(!1), l = Ft(!1);
     let h = null, p = null, u = null, g = 0, v = 0, E = 0, m = -t.rules.movementRangeMilli, f = null, A = 0, w = null, M = !1;
     const b = Da(() => o.value.events.length), y = Da(
-      () => `${b.value} ${Fl(b.value, "блок", "блока", "блоков")}`
+      () => `${b.value} ${Ll(b.value, "блок", "блока", "блоков")}`
     );
-    Cr(() => t.runId, (Q) => {
+    Pr(() => t.runId, (Q) => {
       !Q || Q === f || (f = Q, T(t.rules));
-    }), Cr(() => t.rules, (Q) => {
+    }), Pr(() => t.rules, (Q) => {
       t.running && t.runId ? T(Q) : f || _(Q);
-    }, { deep: !0 }), Cr(() => t.running, (Q) => {
+    }, { deep: !0 }), Pr(() => t.running, (Q) => {
       Q && o.value.status !== "ENDED" ? (O(), ee()) : A > performance.now() ? O() : (se(), h == null || h.stop(), V(performance.now(), 0));
     }), Oo(() => {
       var Q;
-      u = window.matchMedia("(prefers-reduced-motion: reduce)"), c.value = u.matches, (Q = u.addEventListener) == null || Q.call(u, "change", P), R(), p = new ResizeObserver(X), r.value && p.observe(r.value), X(), document.addEventListener("visibilitychange", N), Dl(() => V(performance.now(), 0));
+      u = window.matchMedia("(prefers-reduced-motion: reduce)"), c.value = u.matches, (Q = u.addEventListener) == null || Q.call(u, "change", P), R(), p = new ResizeObserver(X), r.value && p.observe(r.value), X(), document.addEventListener("visibilitychange", N), Il(() => V(performance.now(), 0));
     }), Bo(() => {
       var Q, be, Re;
       se(), (Q = s.value) == null || Q.removeEventListener("webglcontextlost", q), (be = s.value) == null || be.removeEventListener("webglcontextrestored", Y), h == null || h.stop(), h == null || h.dispose(), h = null, p == null || p.disconnect(), (Re = u == null ? void 0 : u.removeEventListener) == null || Re.call(u, "change", P), document.removeEventListener("visibilitychange", N);
@@ -21173,7 +21174,7 @@ const pm = ["disabled", "aria-describedby", "onKeydown"], mm = {
     return (Q, be) => (mr(), gr("section", {
       ref_key: "stage",
       ref: r,
-      class: Il(["stack-stage", { "is-fallback": l.value }])
+      class: Ul(["stack-stage", { "is-fallback": l.value }])
     }, [
       Vt("canvas", {
         ref_key: "webglCanvas",
@@ -21193,10 +21194,10 @@ const pm = ["disabled", "aria-describedby", "onKeydown"], mm = {
         disabled: i.disabled || !i.running,
         "aria-label": "Игровое поле Stack",
         "aria-describedby": i.running ? "stack-control-help" : void 0,
-        onPointerdown: Pr(I, ["prevent"]),
+        onPointerdown: Cr(I, ["prevent"]),
         onKeydown: [
-          La(Pr(I, ["prevent"]), ["space"]),
-          La(Pr(I, ["prevent"]), ["enter"])
+          La(Cr(I, ["prevent"]), ["space"]),
+          La(Cr(I, ["prevent"]), ["enter"])
         ]
       }, [...be[0] || (be[0] = [
         Vt("span", { class: "sr-only" }, "Поставить движущийся блок", -1)
@@ -21240,7 +21241,7 @@ const pm = ["disabled", "aria-describedby", "onKeydown"], mm = {
       class: "stack-demo"
     }, [
       Vt("div", vm, [
-        Ul(xm, {
+        Nl(xm, {
           rules: e,
           "run-id": n.value,
           seed: r.value,
@@ -21250,7 +21251,7 @@ const pm = ["disabled", "aria-describedby", "onKeydown"], mm = {
           onTimeout: p
         }, null, 8, ["run-id", "seed", "running"]),
         Vt("div", Mm, [
-          Nl(Ci(s.value), 1),
+          Fl(Ci(s.value), 1),
           g[0] || (g[0] = Vt("span", null, "БЛОКОВ", -1))
         ]),
         t.value ? zo("", !0) : (mr(), gr("div", Sm, [
@@ -21264,7 +21265,7 @@ const pm = ["disabled", "aria-describedby", "onKeydown"], mm = {
       Vt("p", Em, Ci(a.value), 1)
     ], 512));
   }
-}, wm = /* @__PURE__ */ Go(ym, [["__scopeId", "data-v-5fe0561a"]]);
+}, Rm = /* @__PURE__ */ Go(ym, [["__scopeId", "data-v-5fe0561a"]]);
 export {
-  wm as default
+  Rm as default
 };

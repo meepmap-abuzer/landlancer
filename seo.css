@@ -1,0 +1,18 @@
+/* Supporting service content follows the existing agency typography and palette. */
+.seo-about,.seo-faq{display:grid;grid-template-columns:minmax(220px,1fr) minmax(0,1.6fr);gap:clamp(24px,5vw,80px);padding-block:clamp(40px,6vw,88px)}
+.seo-about h2,.seo-faq h2,.service-page h2{font-size:clamp(25px,3vw,38px);line-height:1.16;letter-spacing:-.035em}
+.seo-about p,.seo-faq p,.service-page p{font-size:16px;line-height:1.75;color:var(--muted);margin-top:16px;max-width:75ch}
+.seo-about a,.privacy-page p a{color:var(--ink);text-decoration:underline;text-underline-offset:4px}
+.seo-faq details{border-bottom:1px solid #8bacc955;padding:18px 0}.seo-faq details:first-child{border-top:1px solid #8bacc955}
+.seo-faq summary{font-size:17px;font-weight:650;cursor:pointer;min-height:28px;padding-right:8px}.seo-faq details p{margin:12px 0 4px}
+.seo-links{display:flex;flex-wrap:wrap;gap:10px 26px;padding-block:24px;border-bottom:1px solid #8bacc955}
+.seo-links a{font-size:13px;padding-block:8px;min-height:36px}.seo-links a:hover,.seo-breadcrumbs a:hover{color:var(--accent)}
+.seo-breadcrumbs{padding-block:24px;font-size:12px;color:var(--muted)}.seo-breadcrumbs ol{list-style:none;display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0}.seo-breadcrumbs li:not(:last-child):after{content:'/';margin-left:8px;opacity:.6}
+.case-intro .seo-breadcrumbs{padding:0 0 14px;font-size:11px}
+.service-page{padding-top:20px}.service-intro{padding:48px 0 64px;border-bottom:1px solid #8bacc955;background:radial-gradient(ellipse at 85% 20%,#c4eaff80,transparent 65%)}
+.service-intro h1{font-size:clamp(34px,5.2vw,72px);line-height:1.08;max-width:1000px;letter-spacing:-.045em;overflow-wrap:anywhere}.service-intro p{font-size:clamp(17px,2vw,22px);max-width:780px;margin-bottom:26px}
+.service-context{display:grid;grid-template-columns:1fr 1.6fr;gap:48px;padding-block:44px;border-bottom:1px solid #8bacc955}.service-context p{margin:0}
+.service-scope{padding-block:48px}.service-scope>div{display:grid;grid-template-columns:1fr 1fr;gap:24px 48px;margin-top:30px}.service-scope article{padding:24px 0;border-top:1px solid #8bacc955}.service-scope h3{font-size:23px;line-height:1.25}.service-scope p{margin-top:12px}
+.service-examples,.service-related{padding-block:36px}.service-examples h2,.service-related h2{margin-bottom:18px}.service-examples>a,.service-related>a{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:18px 0;border-bottom:1px solid #8bacc955;font-size:17px}.service-examples .round-arrow,.service-related .round-arrow{flex-shrink:0}
+.privacy-page{padding-block:50px}.privacy-page h1{font-size:clamp(30px,4vw,54px);overflow-wrap:anywhere}.privacy-page section{margin-block:34px}
+@media(max-width:760px){.seo-about,.seo-faq,.service-context{grid-template-columns:1fr;gap:22px}.service-page{padding-top:15px}.service-intro{padding-block:25px 40px}.service-scope>div{grid-template-columns:1fr;gap:0}.seo-about p,.seo-faq p,.service-page p{font-size:15px}.case-intro .seo-breadcrumbs{font-size:10px}.seo-links{gap:4px 18px}.service-context{padding-block:32px}.seo-faq summary{font-size:16px}.service-examples>a,.service-related>a{font-size:15px}}

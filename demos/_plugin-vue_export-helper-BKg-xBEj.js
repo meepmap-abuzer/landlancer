@@ -1,4 +1,4 @@
-import { m as a } from "./mount-BvagNL2j.js";
+import { m as a } from "./runtime-core.esm-bundler-Ch0unMqb.js";
 /**
  * @license lucide-vue-next v0.468.0 - ISC
  *

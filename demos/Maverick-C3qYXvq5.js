@@ -1,6 +1,7 @@
-import { r as v, o as O, a as R, c as C, b as a, d as m, u as h, e as k, t as L, f as M, w as A, v as $, n as D, F as U, g as V, h as B, i as F, j as x } from "./mount-BvagNL2j.js";
-import { c as T, _ as W } from "./_plugin-vue_export-helper-1zv-mmDB.js";
-import { S as z } from "./star-CHRdtovu.js";
+import { v as O } from "./runtime-dom.esm-bundler-Dx4MR38Z.js";
+import { c as T, _ as R } from "./_plugin-vue_export-helper-BKg-xBEj.js";
+import { r as v, o as A, a as $, c as C, b as a, d as m, u as h, e as k, t as L, f as M, w as D, n as U, F as V, g as B, h as F, i as W, j as x } from "./runtime-core.esm-bundler-Ch0unMqb.js";
+import { S as z } from "./star-BEOjZcX7.js";
 /**
  * @license lucide-vue-next v0.468.0 - ISC
  *
@@ -144,20 +145,20 @@ const Y = { class: "demo-topbar" }, ee = { class: "member-balance" }, te = {
       if (r.value) return;
       r.value = !0, g.value = "Лента выбирает награду…";
       const i = n[Math.floor(Math.random() * n.length)];
-      l.value = G({ visiblePrizes: n, targetPrize: i }), await F();
+      l.value = G({ visiblePrizes: n, targetPrize: i }), await W();
       const e = d(l.value.anchorCellKey), u = d(l.value.targetCellKey);
       o.value = e, f = s.value.animate([{ transform: `translateX(${e}px)` }, { transform: `translateX(${u}px)` }], { duration: matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 3500, easing: "cubic-bezier(.12,.75,.18,1)", fill: "forwards" }), f.onfinish = () => {
         o.value = u, y.value += i.points_value, g.value = `+${i.points_value} демо-баллов. Награда добавлена в профиль.`, r.value = !1, f.cancel();
       };
     }
-    return O(() => {
+    return A(() => {
       o.value = d(l.value.anchorCellKey), p = new ResizeObserver(() => {
         r.value || (o.value = d(l.value.targetCellKey));
       }), p.observe(I.value);
-    }), R(() => {
+    }), $(() => {
       f == null || f.cancel(), p == null || p.disconnect();
     }), (i, e) => (x(), C("div", {
-      class: B(["maverick-demo", { compact: t.compact }])
+      class: F(["maverick-demo", { compact: t.compact }])
     }, [
       a("header", Y, [
         e[2] || (e[2] = a("span", { class: "demo-wordmark" }, "MAVERICK", -1)),
@@ -178,7 +179,7 @@ const Y = { class: "demo-topbar" }, ee = { class: "member-balance" }, te = {
           onClick: e[1] || (e[1] = (u) => c.value = "profile")
         }, "Профиль участника", 8, le)
       ])),
-      A(a("div", ne, [
+      D(a("div", ne, [
         e[8] || (e[8] = a("div", { class: "roulette-heading" }, [
           a("span", null, "Бегущая дорожка"),
           a("h3", null, "Крути. Собирай. Возвращайся.")
@@ -197,9 +198,9 @@ const Y = { class: "demo-topbar" }, ee = { class: "member-balance" }, te = {
               ref_key: "trackEl",
               ref: s,
               class: "mav-strip-track",
-              style: D({ transform: `translateX(${o.value}px)` })
+              style: U({ transform: `translateX(${o.value}px)` })
             }, [
-              (x(!0), C(U, null, V(l.value.cells, (u) => (x(), C("article", {
+              (x(!0), C(V, null, B(l.value.cells, (u) => (x(), C("article", {
                 key: u.cellKey,
                 class: "mav-prize-cell",
                 "data-cell-key": u.cellKey,
@@ -233,7 +234,7 @@ const Y = { class: "demo-topbar" }, ee = { class: "member-balance" }, te = {
         ], 8, ie),
         a("p", ue, L(g.value), 1)
       ], 512), [
-        [$, c.value === "roulette"]
+        [O, c.value === "roulette"]
       ]),
       c.value === "profile" ? (x(), C("div", de, [
         e[13] || (e[13] = a("div", { class: "member-avatar" }, "А", -1)),
@@ -262,7 +263,7 @@ const Y = { class: "demo-topbar" }, ee = { class: "member-balance" }, te = {
       e[17] || (e[17] = a("p", { class: "demo-note" }, "Демо-профиль · баллы сохраняются только до обновления страницы", -1))
     ], 2));
   }
-}, he = /* @__PURE__ */ W(pe, [["__scopeId", "data-v-216799a6"]]);
+}, ye = /* @__PURE__ */ R(pe, [["__scopeId", "data-v-216799a6"]]);
 export {
-  he as default
+  ye as default
 };

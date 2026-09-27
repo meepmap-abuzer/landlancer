@@ -24,8 +24,9 @@ const nav=notch?.querySelector('.top-nav');
 if(nav){
  const links=[...nav.querySelectorAll('a')];
  const indicator=document.createElement('span');indicator.className='nav-indicator';indicator.setAttribute('aria-hidden','true');nav.prepend(indicator);
- let active=links[0],hovered;
- const sections=links.map(link=>({link,element:document.getElementById(new URL(link.href).hash.slice(1))})).filter(item=>item.element);
+ let active=(location.pathname.startsWith('/services/')?links.find(link=>new URL(link.href).hash==='#services'):undefined)||links[0],hovered;
+ const sections=links.filter(link=>new URL(link.href).pathname===location.pathname).map(link=>({link,element:document.getElementById(new URL(link.href).hash.slice(1))})).filter(item=>item.element);
+ if(location.pathname.startsWith('/services/'))active.setAttribute('aria-current','page');
  function move(link){indicator.style.width=`${link.offsetWidth}px`;indicator.style.transform=`translateX(${link.offsetLeft}px)`}
  function track(){
   notch.classList.toggle('is-scrolled',scrollY>70);
