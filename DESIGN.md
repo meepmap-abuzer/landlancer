@@ -1,28 +1,34 @@
 ---
-name: Lancer Agency — Sculpted orbital glass
-description: Clear sculpted glass over Earth and dark space, with authentic product exhibits.
+name: Lancer Agency — Light glass and natural photography
+description: Restored light agency layout with real landscape photography and authentic product exhibits.
 colors:
-  space: "#080e17"
-  space-raised: "#111e2d"
-  ice: "#c6e7ff"
-  paper: "#f3f8fc"
+  ink: "#081744"
+  muted: "#405c80"
+  blue: "#0078ff"
+  surface: "#f5faff"
+  rim: "#f5ffff"
+  accent: "#0879f8"
   action: "#102e3a"
   action-hover: "#204755"
-  focus: "#6fc8ff"
-  glass-edge: "#e5f5ffb8"
+  focus: "#0065db"
+  approach-copy: "#193e56"
+  progress-surface: "#eef8ffeb"
 typography:
   display:
     fontFamily: "Manrope, Arial, sans-serif"
-    fontSize: "clamp(44px, 4.9vw, 78px)"
+    fontSize: "clamp(48px, 4.7vw, 108px)"
     fontWeight: 650
-    lineHeight: 1.04
+    lineHeight: 1.02
+    letterSpacing: "-.04em"
+  headline:
+    fontFamily: "Manrope, Arial, sans-serif"
+    fontSize: "clamp(34px, 3.1vw, 68px)"
+    fontWeight: 650
+    lineHeight: 1.08
     letterSpacing: "-.04em"
   body:
     fontFamily: "Manrope, Arial, sans-serif"
     lineHeight: 1.5
-  service-title:
-    fontFamily: "Manrope, Arial, sans-serif"
-    fontSize: "clamp(18px, 1.4vw, 24px)"
   button:
     fontFamily: "Manrope, Arial, sans-serif"
     fontSize: "13px"
@@ -30,16 +36,13 @@ typography:
     lineHeight: 1.2
 rounded:
   action: "9px"
-  details: "14px"
-  support: "24px"
-  project: "34px"
-  scene: "42px"
-  hero: "64px"
-  service: "34px 34px 16px 34px"
+  hero-panel: "26px"
+  project: "30px"
+  navigation: "0 0 38px 38px"
 spacing:
   gutter: "clamp(24px, 6vw, 160px)"
-  service-gap: "22px"
-  scene-margin: "12px"
+  mobile-gutter: "18px"
+  project-gap: "32px"
 components:
   button-primary:
     backgroundColor: "{colors.action}"
@@ -50,99 +53,107 @@ components:
   button-primary-hover:
     backgroundColor: "{colors.action-hover}"
   navigation:
-    width: "clamp(440px, 38vw, 580px)"
+    backgroundColor: "#f5faffee"
+    width: "clamp(370px, 29vw, 540px)"
     height: "74px"
-    padding: "10px 64px 16px"
-  service-card:
-    rounded: "{rounded.service}"
-    padding: "18px 22px 46px"
+    rounded: "{rounded.navigation}"
+    padding: "10px 28px 16px"
+  project-card:
+    rounded: "{rounded.project}"
+    padding: "25px"
 ---
 
 # Design System: Lancer Agency
 
 ## Overview
 
-**Creative North Star: "Sculpted orbital glass."**
+**Creative North Star: "Light glass in a real landscape."**
 
-Earth supplies the atmosphere; clear optical surfaces, polished white edges and asymmetric contours frame real interfaces. Black, white and ice coexist within each section. Glass continues through services, workflow, projects and case exhibits without recoloring the embedded products.
+The restored agency layout combines pale blue surroundings, navy typography, translucent glass and real mountain, lake and forest photographs. The pictures supply natural texture and lighting; interface panels provide a stable reading surface. Product demonstrations retain their native themes and remain the evidence of delivered work.
 
-The user-pinned Orizon reference establishes continuous curved contours, the top notch and asymmetric lower panels. The implemented world preserves Manrope and the supplied Lancer logo. The logo retains its geometry and colors on light plates; assets/brand/lancer-original.png is the retained source and assets/brand/lancer.webp is the web asset. Earlier alpine scenery, opaque-card and capsule-navigation rules are superseded by this refresh.
+The user revoked the orbital/sculpted revision and asked to return to the earlier light layout while changing background imagery. Preserve the incumbent geometry, Manrope and the supplied Lancer logo. natural.css is the final stylesheet; orbital.css and decorative sculpted SVG surfaces are no longer loaded. The logo uses assets/brand/lancer.webp without recoloring or distorting the original mark.
 
 **Key Characteristics:**
 
-- Earth and dark space behind transparent surfaces.
-- Continuous sculpted contours and white reflective edges.
-- Complete optical-glass service sculptures.
-- Authentic product palettes and interactive exhibits.
-- Native scrolling and vertically stable navigation.
+- Real stock photography beneath pale readability overlays.
+- Light glass panels with white rims and restrained blue accents.
+- Original notch silhouette and rounded lower hero panels.
+- Native product themes and source-derived demonstrations.
+- Native scrolling and stable navigation placement.
 
 ## Colors
 
 ### Primary
 
-Icy blue connects atmospheric light, glass edges and supporting controls. Preserve each product's original colors inside demos and real captures.
+Blue and accent serve controls, icons and interaction feedback. Action and action-hover define the flat dark primary action. The photographic greens, blues and rock tones remain natural rather than being recolored to a single hue.
 
 ### Neutral
 
-Space and raised space support white text and pale translucent panels. Paper describes the cool-white surface family. Action and action-hover supply flat dark controls on light surroundings; contextual light actions reverse that relationship on dark surroundings. Focus supplies the visible keyboard ring.
+Surface is the light page ground; ink and muted supply navy text. Rim creates the pale glass edge. Approach-copy and progress-surface keep delivery-stage descriptions readable against the lake photo. Photo overlays and translucent surfaces vary with the section rather than introducing dark orbital bands.
 
-**The Shared Section Rule.** Compose dark atmosphere and light transparent surfaces within sections; preserve the native palettes of embedded products.
+**The Readable Landscape Rule.** Keep natural photography visible while providing sufficiently pale panels behind supporting text; use the delivery-stage contrast treatment as the incumbent example.
 
 ## Typography
 
-Manrope with Arial and sans-serif fallbacks serves headings, body and controls. Local Cyrillic and Latin font files remain, with Cyrillic preloaded. The display token describes the desktop hero, with tight tracking and no text shadow. Mobile hero display uses clamp(30px, 8.3vw, 48px); hero supporting copy is 14px on mobile and clamp(16px, 1.3vw, 23px) on desktop. Service copy uses 14px/1.6 on desktop and 12px/1.55 on mobile, with 17px mobile service titles and 16px at the narrowest breakpoint.
+Manrope with Arial and sans-serif fallbacks remains the single interface family. Local Cyrillic and Latin files are retained, with Cyrillic preloaded. The frontmatter display and headline values describe the desktop hero and section headings. Mobile hero type uses clamp(30px, 8.2vw, 52px); mobile section headings use clamp(29px, 7.7vw, 40px). Hero supporting copy is clamp(17px, 1.45vw, 30px) on desktop and 15px on mobile. Mobile service copy is 14px/1.55 and titles are 18px/1.25.
 
-Do not propagate decorative eyebrow labels as a system primitive. The redundant services, case-project and product-in-action labels were removed in this revision.
+Existing decorative eyebrow labels return with the restored markup. They are not promoted to a reusable type token or a requirement for new surfaces.
 
 ## Layout
 
-The hero is a framed Earth scene with centered copy, translucent CRM and opposing asymmetric lower panels. Its desktop margin is 12px, with a 64px outer and 58px inner radius. Lower panels use 37% side columns separated by flexible space; mobile stacks them without clipping their curved silhouettes. The desktop CRM is 77% wide with a 1060px maximum; the intermediate layout uses 83%, and mobile uses calc(100% - 26px).
+The page restores full-width landscape scenes and fluid content gutters. Desktop hero copy centers above a 76%-wide CRM. The lower hero uses 34% / 28% / 38% columns, with two rounded panels around empty central space; it does not use the superseded sculpted curves. Mobile CRM and lower hero are calc(100% - 36px) wide, and lower panels stack in normal flow. Project cards preserve the existing two-column presentation and content-driven mobile arrangements.
 
-Navigation is fixed outside clipped scenes. Desktop top is 12px, with frontmatter dimensions. At 761–1100px it is 420px wide with 60px horizontal padding. At 760px and below it is 7px from the top, min(390px, calc(100% - 26px)) wide and 64px tall, with 8px 44px 12px padding. Both normal and scrolled selectors use identical placement and transition:none. The mobile hero margin is 7px and its radius is 34px. Inset hero and section shells use width calc(100% - 24px) on desktop and calc(100% - 14px) on mobile so their margins remain inside the viewport. The side rail is hidden on mobile.
+The original top notch is fixed outside clipped scenes. Desktop placement is top:0, with frontmatter dimensions and CSS shoulders. Both normal and scrolled states share the same height, padding and transition:none. Mobile placement is max(10px, env(safe-area-inset-top)), with height 49px, width min(340px, calc(100% - 36px)), no padding, transparent outer background and 28px corners. The mobile header is 138px high with 82px top and 12px bottom padding, reserving space for the navigation. Mobile gutters are 18px, with inherited narrow-screen refinement.
 
-Service illustrations occupy square containers at every size. Cards and product layouts adapt to content; mobile feature groups stack. The final sculpted section in orbital.css wins over inherited orbital, mobile and experience rules. Inspect the cascade before extending these surfaces.
+The existing delivery-stage arrangement surrounds the lake on desktop and becomes stacked cards below the photographic opening on mobile. This revision changes its background and text contrast without changing the geometry. Inspect agency.css, experience.css, playground.css, mobile.css, seo.css and final natural.css in load order before extending the layout.
 
 ## Elevation & Depth
 
-Static reflective gradients, translucent fills, white rims and modest shadows create the liquid-glass impression. The CRM uses the shared glass shadow: inset 0 1px 0 #fff, inset 0 -2px 0 #a9d9f35c, 0 18px 40px #0003. Supporting glass uses inset 0 1px 0 #fff, inset 0 -2px 0 #93bed338, 0 12px 28px #020f201c. The case exhibit uses inset 0 1px 0 #fff, 0 18px 38px #0002.
+The inherited clear-glass material uses static gradients, reflective rims, translucent fills and soft shadows. The shared rim shadow is inset 1px 1px 0 #fff, inset -1px -1px 0 #ffffffa8, inset 0 0 0 3px #ffffff18, inset 0 0 14px #ffffff22, 0 8px 24px #16395720. The CRM uses inset 1px 1px 0 #fff, inset -1px -1px 0 #b4e8ff, 0 12px 35px #123f612e. Actions remain flat.
 
-**The Static Reflection Rule.** Build optical depth with static gradients and edges; retain only the 2px desktop CRM blur and 3px side-rail blur, with no backdrop displacement or live lens runtime.
+natural.css applies 2px blur to glass, top navigation, side navigation, about surface, project captions and product stages. Its mobile override removes blur from glass, top/side navigation, project captions and product stages. The about surface retains 2px and the inherited navigation indicator retains 1px; these exceptions are source observations, not a recommendation to expand mobile blur. Glass pseudo-elements have no filtering or backdrop blur.
+
+**The Native Scroll Rule.** Preserve browser wheel and touch scrolling, scrolling background attachment and stable header placement; do not restore Lenis, live SVG lenses or a perpetual scroll animation loop.
 
 ## Shapes
 
-The top notch and lower hero panels are continuous Bézier SVG silhouettes from src/sculpted-surfaces.mjs, not polygon clips or rounded rectangles. Decorative SVGs are aria-hidden and ignore pointer events; semantic text and controls sit above them. A 2px non-scaling gradient stroke follows each contour. The notch has a shallow center tray and flowing shoulders; lower panels have different inward curves and asymmetric bottoms.
-
-Service cards have asymmetric soft corners. Project cards, supporting cards and section shells use the frontmatter radii, adapting to 28px, 21px and 30px respectively on mobile. The side rail uses 30px 30px 34px 12px corners. Header logo plates retain asymmetric 20px 8px 20px 8px corners.
+The original desktop notch uses rounded bottom corners and radial-gradient shoulders in CSS. There is no loaded sculpted-surface SVG. Hero panels use rounded rectangles, with a 26px desktop radius and 22px mobile radius. Project cards use the frontmatter radius, adapting to 25px on mobile. Full-width scenes use straight outer edges; inner glass panels carry softness. The narrow side rail remains a capsule and is hidden on mobile.
 
 ## Components
 
+### Background photography
+
+Four real stock photographs have desktop and mobile WebP derivatives under assets/photos: glacier, lake, forest and peaks. Glacier appears in the hero, workflow, contact and selected projects; lake appears in custom development, delivery stages and agency information; forest supports Gift Roulette and TailCare; peaks supports Maverick. The 12К case uses glacier with the lake in its ecosystem region. CSS overlays handle text contrast separately from the images.
+
+ASSET_PROVENANCE.md records photographers, source links and the checked licenses permitting free website use. This revision uses local resizing/encoding only, with no new AI generation or generative editing. The prior service illustration sprite at assets/art/services.webp remains decorative service art; it is not one of the replacement landscape backgrounds. Contact and case orbital objects are hidden.
+
 ### Actions and navigation
 
-Actions remain flat, with compact corners, a traveling highlight on hover and .96 active scale. Keyboard focus is a 2px icy outline offset by 5px. The navigation's selected pill is measured from links and moves on hover, keyboard focus and section observation; only its transform transitions over 350ms. The containing notch never moves on scroll.
+Primary actions are flat dark rectangles with compact corners. Hover changes their background and retains the inherited traveling highlight and arrow movement; active scale is .96. Keyboard focus is a 3px focus outline offset by 5px. The supplied logo is 184×55px in the desktop header, 145×43px in the mobile header and 145×45px in the footer, with 136% artwork sizing trimming transparent margins.
 
-### Service sculptures
+The measured selection pill responds to pointer hover, keyboard focus and section observation, with a 350ms transform transition. Its containing notch stays vertically stable. Reduced motion disables applicable transitions and smooth anchor scrolling.
 
-Four transparent 640-square WebP assets depict websites, Mini Apps, CRM and automation. They are complete optical-glass illustrations in square containers using object-fit:contain, not cropped icons. The HTML currently reserves a square 1024×1024 ratio; that attribute is not the encoded asset resolution. Hover raises the art by 10px, disabled under reduced motion. These are decorative illustrations, not product evidence.
+### Cards and product exhibits
 
-### Glass cards and case exhibits
+Project cards retain their existing glass frame, local product components and 3px hover lift. Case pages retain centered introductions, light glass exhibits, concise features and expandable screenshot galleries. Preserve native details and screenshot-dialog focus restoration. Embedded products keep their own themes and interaction boundaries.
 
-Glass continues through services, workflow, project stages, delivery-stage cards, disclosures and case features. The case exhibit's outer surface is transparent dark glass with pale explanatory copy; its embedded demo keeps its original product styling. Homepage project cards retain a 3px hover lift. Native details and the screenshot dialog retain their existing interaction and focus behavior.
+Delivery-stage glass uses linear-gradient(120deg, #f2faffeb, #e7f4ffe0); descriptions and progress text use approach-copy, and the progress pill uses progress-surface. This contrast fix stabilizes secondary copy over the real lake photograph without changing placement.
 
 ### Demonstrations and motion
 
-CRM tabs and the request example remain local demonstrations. Source-derived product islands keep their functional and simulation boundaries in DEMOS.md. Decorative form rows are not a real agency input form. There is no standalone agency text-field primitive to document.
+CRM tabs and the request sequence are illustrative local interactions, not a submitted agency lead form. DEMOS.md records the exact product-source reuse and simulation boundaries. No standalone agency text-field component exists; decorative form rows are not inputs. experience.mjs retains native scrolling, without wheel interception or a perpetual scroll RAF. Selected subordinate headings use one-time 550ms opacity/16px translation reveals with 60ms stagger capped at 180ms; the hero heading remains immediately visible.
 
-Wheel and touch scrolling are native. experience.mjs has neither wheel interception nor a perpetual scrolling RAF. Native anchor smoothing yields to reduced motion. Selected subordinate headings use one-time 550ms opacity and 16px translation reveals, staggered by 60ms up to 180ms; the main heading is immediately visible. This implementation does not prove an FPS score or physical-device performance.
+Saved desktop, mobile, approach and case screenshots in ../natural-background-review document this revision's visual review. This document adds no fresh browser matrix, device verification, FPS score or deployment claim.
 
 ## Do's and Don'ts
 
-- **Do** keep Earth visible through the hero glass and preserve readable content.
-- **Do** retain the supplied logo's geometry and colors and the Manrope identity.
-- **Do** use complete contained service sculptures and authentic product interfaces.
-- **Do** keep the navigation's vertical position stable during native scrolling.
-- **Do** inspect the final CSS cascade before changing a shared surface.
-- **Don't** replace the sculpted contours with polygon cuts or a generic capsule.
-- **Don't** restore wheel interception, perpetual scroll RAF or backdrop displacement.
-- **Don't** recolor demos, invent business results or treat generated art as product evidence.
-- **Don't** propagate decorative eyebrows as a reusable design pattern.
-- **Don't** infer deployment or measured hardware performance from this documentation.
+- **Do** preserve the restored light layout and existing component geometry.
+- **Do** use real, locally hosted landscape photographs with recorded source and license provenance.
+- **Do** keep supporting text on pale, readable panels over photographs.
+- **Do** retain the supplied logo, Manrope and each product's native theme.
+- **Do** preserve native scrolling and stable navigation placement.
+- **Don't** reintroduce the revoked orbital or sculpted-surface design contract.
+- **Don't** generate replacement landscape art for this stock-photography revision.
+- **Don't** treat decorative photos or service art as evidence of delivered products.
+- **Don't** propagate inherited decorative eyebrows as a system primitive.
+- **Don't** infer deployment, physical-device performance or new test results from this documentation.

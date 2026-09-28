@@ -4,10 +4,11 @@ Russian agency portfolio at landlancer.ru. Lancer builds custom websites, Telegr
 
 ## Current direction — September 28, 2026
 
-The approved world is sculpted orbital glass: Earth in dark space, white and icy blue, the current supplied Lancer logo, a curved top navigation notch, asymmetric curved lower hero panels and a narrow side rail. The Orizon reference supplies the contour language, not its business content. Clear glass extends through the homepage and case surroundings. Four complete transparent service sculptures replace line-icon illustrations. DESIGN.md records the implemented visual system; ../sculpted-glass-review/direction.md records this revision's direction.
+The user revoked the orbital/sculpted redesign and requested the previous light agency layout with less artificial background imagery. The restored homepage and shared structure come from revision 2f80ed8. Preserve its pale blue glass, original top-notch silhouette, rounded lower hero panels, layout and service-illustration sprite. Preserve the current supplied Lancer logo and native-scroll performance fixes.
 
-This supersedes alpine scenery, opaque orbital cards, capsule-only navigation and custom wheel inertia. Scrolling is native; the fixed navigation does not change vertical position when scrolling. Decorative geometry must not interfere with semantic HTML content or controls.
+Four real stock photographs replace decorative landscape backgrounds across the homepage and cases: glacier, lake, forest and peaks. Eight locally hosted desktop/mobile WebP derivatives live under assets/photos. ASSET_PROVENANCE.md records the source photographers, URLs and license checks for free website use. No new image generation or generative photo editing belongs to this revision. The existing decorative service sprite remains; it is distinct from landscape backgrounds.
 
+DESIGN.md records the active implementation; ../natural-background-review/direction.md records the direction. natural.css loads last. Orbital Earth, the sculpted SVG notch and curved lower panels, and the four newer service sculptures are superseded and are not active design requirements. Native scrolling and fixed navigation placement remain.
 ## Portfolio scope
 
 - Maverick: Mini App with QR activation, points, roulette, tasks and merchandise; the portfolio offers a local prize-strip demo and participant profile.
@@ -15,11 +16,11 @@ This supersedes alpine scenery, opaque orbital cards, capsule-only navigation an
 - TailCare: pet listings, search, community and Telegram publishing; the portfolio offers original animal cards with local search, category filters and favorites.
 - 12К: a full case covering the Mini App and Loyalty API business portal; the portfolio includes the original flipping loyalty card, demonstration QR, local daily bonus, Stack and an actual dashboard capture.
 
-No invented commercial results. Real captures and reused product components provide evidence. Generated Earth and service sculptures are decorative assets, never screenshots of delivered products. DEMOS.md records source reuse and simulation boundaries. Portfolio demonstrations use local state without authentication, production transactions, real prizes, payouts or loyalty-point issuance.
+No invented commercial results. Real captures and reused product components provide evidence. Stock landscapes and the retained service illustrations are decorative assets, never screenshots of delivered products. DEMOS.md records source reuse and simulation boundaries. Portfolio demonstrations use local state without authentication, production transactions, real prizes, payouts or loyalty-point issuance.
 
 ## Experience and content
 
-The homepage presents services, a custom-development offer, a four-step request demonstration, four interactive portfolio exhibits, project delivery stages, agency information, FAQ and contact. The orbital cards describe delivery disciplines, not invented staff identities. Case pages center their introduction above a transparent glass exhibit, preserve each embedded product's theme, explain features and offer an expandable gallery of real captures. Dedicated service and privacy pages remain part of the site.
+The homepage presents services, a custom-development offer, a four-step request demonstration, four interactive portfolio exhibits, project delivery stages, agency information, FAQ and contact. The delivery-stage cards describe disciplines, not invented staff identities. Case pages center their introduction above the existing light glass exhibit, preserve each embedded product's theme, explain features and offer an expandable gallery of real captures. Dedicated service and privacy pages remain part of the site.
 
 Keep keyboard-friendly CRM and product controls, native disclosures, screenshot-dialog focus restoration and reduced-motion support. The request sequence is an illustrative local interaction, not a submitted agency lead form. Preserve the supplied logo's geometry and colors and the existing domain configuration.
 

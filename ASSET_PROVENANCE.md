@@ -67,3 +67,14 @@ Exact prompt: Create ONE premium 3D product illustration for a digital agency we
 ### Sculpted glass service illustration: automation
 `assets/art/service-automation.webp`: built-in GPT Image generation, September 28, 2026. Native transparent output encoded at 640×640 WebP, no cropping. Decorative illustration, not an actual client interface.
 Exact prompt: Create ONE premium 3D product illustration for a digital agency website. A complete sculptural assembly of four clear glass cubes linked by slim curved glass conduits, a small electric blue luminous core, precise engineered connections. Optical clear liquid glass, polished thick transparent beveled edges, pale ice blue reflections, black chrome tiny details, subtle cyan caustics. Refined physically based studio render, sophisticated Apple product advertising quality. Entire object fits completely inside square canvas with 12% transparent margin on every side, no clipping. Slight three-quarter perspective, consistent camera. Transparent background. No text, no letters, no words, no landscape scenery, no card background, no ground plane. Composition fills 76% canvas. Deliver one isolated cohesive sculpture.
+
+## September 28: return to the light design with real stock photography
+Backgrounds replaced throughout the homepage and case pages. No new AI-generated background imagery. All files hosted locally; desktop/mobile WebP encoding only, no generated edits. Natural lighting, subject and colors retained; readability overlays are CSS, separate from photos. Licenses checked September 28, 2026 and permit these website uses without payment or attribution requirement. Credits retained here.
+
+- assets/photos/glacier.webp and glacier-mobile.webp: Origin: real stock photograph by Zihao Wang. Source https://unsplash.com/photos/a-majestic-mountain-peak-overlooks-a-serene-alpine-lake-Flkv4kpZT6A. License https://unsplash.com/license, checked September 28, 2026. Local WebP desktop/mobile resizes; no generative editing.
+
+- assets/photos/lake.webp and lake-mobile.webp: Origin: real stock photograph by ConfinedRiley. Source https://unsplash.com/photos/a-lake-surrounded-by-mountains-mIj8Cn3oNDg. License https://unsplash.com/license, checked September 28, 2026. Local WebP desktop/mobile resizes; no generative editing.
+
+- assets/photos/forest.webp and forest-mobile.webp: Origin: real stock photograph by eberhard grossgasteiger. Source https://www.pexels.com/photo/sunlight-filtering-through-majestic-forest-trees-28871326/. License https://www.pexels.com/license/, checked September 28, 2026. Local WebP desktop/mobile resizes; no generative editing.
+
+- assets/photos/peaks.webp and peaks-mobile.webp: Origin: real stock photograph by Sean Oblizalo. Source https://unsplash.com/photos/jagged-mountain-peaks-reflecting-in-a-still-alpine-lake-FHL2Pc4sBIY. License https://unsplash.com/license, checked September 28, 2026. Local WebP desktop/mobile resizes; no generative editing.
