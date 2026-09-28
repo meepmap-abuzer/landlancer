@@ -1,0 +1,48 @@
+/* Restore the light agency layout; use real, locally hosted landscape photographs. */
+:root{--photo-glacier:url('/assets/photos/glacier.webp');--photo-lake:url('/assets/photos/lake.webp');--photo-forest:url('/assets/photos/forest.webp');--photo-peaks:url('/assets/photos/peaks.webp');--art-alpine-world:var(--photo-glacier)}
+html{scroll-behavior:smooth;scrollbar-color:#8cbbd1 #f5faff}
+::selection{background:#bee8ff;color:#102e48}
+.hero-shell,.case-shell{background-attachment:scroll!important}
+.hero-shell{background-image:linear-gradient(180deg,#f2faff80,#edf7ff18 55%,#d7efff26),var(--photo-glacier);background-position:center,center;background-size:cover}
+.hero-shell:before{display:none}
+.custom{background-image:linear-gradient(90deg,#e5f5ffc9,#e7f6ff52),var(--photo-lake);background-position:center,center 61%;background-size:cover}
+.workflow{background-image:linear-gradient(110deg,#e7f7ffcf,#e4f4ff69),var(--photo-glacier);background-size:cover;background-position:center}
+.approach,.theme-loyalty .case-ecosystem{background-image:linear-gradient(110deg,#e7f6ff75,#e4f4ff18),var(--photo-lake);background-size:cover;background-position:center,center 46%}
+.contact{background-image:linear-gradient(90deg,#eff9fff0,#edf8ffb8 55%,#edf8ff20),var(--photo-glacier);background-position:center,center 62%;background-size:cover}
+.contact-object,.case-orbit-object{display:none}
+.project-card{background-image:linear-gradient(#edf8ff65,#e7f7ff42),var(--photo-glacier)}
+.project-gift-roulette,.project-tailcare{background-image:linear-gradient(#eef9f288,#f0faf45c),var(--photo-forest)}
+.theme-maverick{--case-bg:var(--photo-peaks)}.theme-gift,.theme-tailcare{--case-bg:var(--photo-forest)}.theme-loyalty{--case-bg:var(--photo-glacier)}
+.case-shell{background-image:linear-gradient(180deg,#f5fbffcd,#f5fbff59),var(--case-bg);background-position:center;background-size:cover}
+.case-shell:before{background:linear-gradient(90deg,#f4fbff85,#f4fbff30)!important}
+.case-ecosystem,.theme-gift .case-ecosystem,.theme-tailcare .case-ecosystem{background-image:linear-gradient(#edf8ff80,#edf8ff48),var(--case-bg);background-size:cover;background-position:center}
+.theme-loyalty .case-eco-heading{color:var(--ink);text-shadow:none}.theme-loyalty .case-eco-heading .eyebrow{color:var(--muted)}
+.showcase-art,.showcase-symbol{background-image:none}.showcase-art{background-color:#e2eff580}
+.seo-about{background-image:linear-gradient(110deg,#ebf8ff80,#e5f5ff25),var(--photo-lake);background-position:center,center 57%}
+/* Retain the scrolling fixes while returning the original header silhouette. */
+.nav-notch,.nav-notch.is-scrolled{top:0;height:74px;padding:10px 28px 16px;transition:none;background:#f5faffee}
+.nav-indicator{transition:transform .35s var(--ease-out)}
+.top-nav a.is-highlighted{color:#092e50}
+.glass,.top-nav,.side-nav,.about-surface,.project-caption,.product-stage{backdrop-filter:blur(2px)!important;-webkit-backdrop-filter:blur(2px)!important}
+.glass:before,.glass:after{backdrop-filter:none!important;filter:none!important}
+.brand{position:relative;display:block;width:184px;height:55px;padding:0;overflow:hidden;flex-shrink:0;letter-spacing:normal}
+.brand img{position:absolute;width:136%;max-width:none;height:auto;left:50%;top:50%;transform:translate(-50%,-53%)}
+.footer .brand{width:145px;height:45px}
+.crm.glass{overflow:hidden;overflow-clip-margin:0}.crm-tabs button[aria-selected=true]{background:#0867bf;color:#fff}
+.crm-search,.crm-row small,.crm-bottom,.crm-bottom small,.crm-sidebar>small,.inbox-row small,.inbox-status{color:#3c607b}
+.crm-state{color:#075795;background:#d7edff}.crm-state.done{color:#085e51;background:#d0f3e6}
+@media(max-width:760px){
+ :root{--photo-glacier:url('/assets/photos/glacier-mobile.webp');--photo-lake:url('/assets/photos/lake-mobile.webp');--photo-forest:url('/assets/photos/forest-mobile.webp');--photo-peaks:url('/assets/photos/peaks-mobile.webp')}
+ .nav-notch,.nav-notch.is-scrolled{top:max(10px,env(safe-area-inset-top));height:49px;padding:0;width:min(340px,calc(100% - 36px));border-radius:28px;background:transparent;transition:none}
+ .header,.case-shell .header{height:138px;padding-top:82px;padding-bottom:12px;align-items:center}.header .brand{width:145px;height:43px}.header>.button{font-size:10px}
+ .hero-shell{background-position:center,60% center}.hero-copy{padding-top:0}
+ .approach{background-image:linear-gradient(180deg,#e7f5ff30,#e5f3ffb8),var(--photo-lake);background-size:cover;background-position:center,center 35%;background-repeat:no-repeat}
+ .theme-loyalty .case-ecosystem{background-size:cover;background-position:center}
+ .glass,.top-nav,.side-nav,.project-caption,.product-stage{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.nav-indicator{transition:none}}
+.hero-shell{background-image:linear-gradient(180deg,#f2faffb8,#edf7ff88 42%,#d7efff20 75%),var(--photo-glacier)}
+/* Photograph contrast: preserve the original panels while giving secondary copy a stable ground. */
+.approach .team-card.glass{background:linear-gradient(120deg,#f2faffeb,#e7f4ffe0)}
+.approach .team-card p,.approach .progress-pill,.approach .progress-pill span{color:#193e56}
+.approach .progress-pill.glass{background:#eef8ffeb}
