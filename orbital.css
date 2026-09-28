@@ -1,0 +1,101 @@
+/* Orbital environment. Dark space and white product surfaces coexist in each section. */
+:root{--space:#080e17;--space-raised:#111e2d;--ice:#c6e7ff;--paper:#f3f8fc;--earth:url('/assets/art/orbital-earth.webp')}
+html{background:var(--space);scroll-behavior:smooth;scrollbar-color:#58738b var(--space)}
+body{background:var(--space);color:#e9f4ff}
+::selection{background:#b6e2ff;color:#081421}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #6fc8ff;outline-offset:5px}
+/* No background repaint tied to wheel input, or live displacement sampling behind panels. */
+.hero-shell,.case-shell{background-attachment:scroll!important}
+.glass,.top-nav,.side-nav,.nav-indicator,.about-surface,.project-caption,.product-stage{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+.glass:before,.glass:after{backdrop-filter:none!important;filter:none!important}
+.nav-notch,.nav-notch.is-scrolled{top:14px;height:54px;padding:4px;width:clamp(340px,29vw,460px);border-radius:30px;background:#15202ef5;transition:none;box-shadow:0 6px 24px #0003;border:1px solid #ffffff24}
+.nav-notch:before,.nav-notch:after{display:none}
+.top-nav{height:44px;background:transparent!important;box-shadow:none!important;border:0}
+.top-nav a{color:#d8e7f5;min-height:36px}
+.top-nav a.is-highlighted{color:#102235}
+.nav-indicator{height:36px;background:#d9edfc;box-shadow:none;transition:transform .35s var(--ease-out)}
+.side-nav{background:#15202ef5;border-color:#ffffff24;box-shadow:none;color:#d9edfc}
+.side-nav a:first-child,.side-nav a:hover{background:#d9edfc;color:#102235}
+.header .brand{color:#fff}.header .brand span{color:#9cb9d2}
+.header>.button{background:#e3f1fb;color:#102235}
+.hero-shell{background-image:linear-gradient(180deg,#080e1700 55%,#080e17 100%),var(--earth);background-color:var(--space);background-size:100% 100%,cover;background-position:center,center 105px;background-repeat:no-repeat}
+.hero-shell:before{display:none}
+.hero{padding-top:32px;gap:38px;padding-bottom:54px}
+.hero-copy h1{color:#f8fcff;text-shadow:none;font-size:clamp(46px,5.1vw,86px);letter-spacing:-.04em}
+.hero-copy p{color:#c8dded;font-size:clamp(16px,1.3vw,23px)}
+.crm.glass{background:#d7eafaec;border:1px solid #f3fbffb3;box-shadow:0 24px 70px #0005,inset 0 1px 0 #fff;overflow:hidden;overflow-clip-margin:0;color:#0b233c;max-width:1140px;width:80%;min-height:300px}
+.crm-sidebar{color:#264968}.crm-sidebar strong{color:#10283f}
+.crm-projects,.crm-inbox{background:#f7fbfff0;border:1px solid #fff;border-radius:15px}
+.hero-invite.glass{background:#eff8fff2;color:#10283f;border:1px solid #fff8;box-shadow:none}
+.hero-business.glass{background:#142638ed;color:#edf8ff;border:1px solid #b4daf54d;box-shadow:none}
+.hero-business h2,.hero-business svg{color:#deefff}.hero-invite p{color:#3e5a71}
+.hero-bottom{grid-template-columns:36% 24% 40%;max-width:1360px}
+.hero-invite .button{background:#123349;color:#fff}
+.eyebrow{color:#91b6d4}.section-heading h2{color:#f1f8ff}.section-heading p,.section-heading>p,.all-projects{color:#a7bfd2}
+.services{padding-top:72px}.service{color:#f0f7ff;padding-bottom:46px}.service p{color:#adbfce}
+.service-art{height:180px;aspect-ratio:auto;max-width:none;width:100%;margin:0 0 26px;background:none!important;position:relative;display:flex;align-items:center;justify-content:center;border-radius:18px;border:1px solid #d6ebff29;overflow:hidden;background-color:#101d2b!important;color:#b8e0ff}
+.service-art:before{content:'';position:absolute;inset:24px 34px;border:1px solid #cfedff42;border-radius:12px;transform:rotate(-6deg);background:#e6f3ff0a}
+.service-art:after{content:'';position:absolute;inset:35px 24px;border:1px solid #cfedff28;border-radius:12px;transform:rotate(5deg)}
+.service-art svg{width:56px;height:56px;stroke-width:1;z-index:1}.service-art>span{position:absolute;right:16px;bottom:12px;font-size:10px;letter-spacing:.12em;color:#9cbcd4}
+.service:nth-child(2) .service-art,.service:nth-child(4) .service-art{background-color:#dcecf7!important;color:#183c58}.service:nth-child(2) .service-art:before,.service:nth-child(4) .service-art:before{border-color:#365e7b50}.service:nth-child(2) .service-art>span,.service:nth-child(4) .service-art>span{color:#31536d}
+.service .round-arrow{background:#c7e7fc;color:#153a54;box-shadow:none}
+.custom.scene{background:#111e2d;border-block:1px solid #9fbed629;border-radius:0;box-shadow:none;color:#f0f8ff}.custom-copy p{color:#b1c7d8}.custom-steps.glass{background:#edf5fc;color:#28475e;border:0;box-shadow:none}.custom-steps li{border-color:#7895ad33}.custom-icon.glass{background:#c6e7ff;color:#14446c;box-shadow:none}.code-sculpture .glass{background:#bfdff74d;box-shadow:none}
+.workflow.scene{background:radial-gradient(ellipse at 10% 65%,#173550,transparent 55%),#080e17;border-radius:0;box-shadow:none}.workflow .section-heading p{color:#adc7da}
+.stack-layer.glass{background:#d5ecf9;color:#16334b;border:1px solid #f3fbff8c;box-shadow:0 10px 20px #0002;transform:none}.flow-card.glass{background:#edf6fc;color:#0d2940;border:0;box-shadow:none}.mini-list,.mini-form{color:#193d59}.flow-caption{color:#b4d2e8;background:#132333;border:1px solid #749db437}.circuit-lines{opacity:.5}
+.project-card,.project-maverick,.project-loyalty,.project-gift-roulette,.project-tailcare{background:#e6f1f9;color:#102b40;border:0;box-shadow:none;transition:transform .3s}.project-card:hover{translate:none;transform:translateY(-3px);box-shadow:none}
+.project-card .eyebrow{color:#436b87}.project-editorial-head h3{color:#0b2b42}.project-editorial-foot{color:#153d59}
+.approach.scene{background:#101c2a;border-block:1px solid #a4cde22a;border-radius:0;box-shadow:none;position:relative;isolation:isolate;overflow:hidden}
+.approach .section-heading{position:relative;z-index:2}.approach .section-heading p{color:#b3cadb}
+.team-card.glass{background:#e3f0faf2;color:#102e46;border:1px solid #fff5;box-shadow:none}.team-card p{color:#37556c}.glass-icon{background:#c6e7ff;color:#18547e;box-shadow:none}
+.orbital-core{position:absolute;inset:20% 31% 10%;display:grid;place-items:center;color:#dff2ff;z-index:-1}
+.orbital-core b{font-size:clamp(90px,12vw,190px);font-weight:500;letter-spacing:-.06em;text-shadow:4px 8px 0 #87cfff18}
+.orbital-track{position:absolute;width:100%;aspect-ratio:1;border:1px solid #b9e3ff70;border-radius:50%;transform:rotate(-30deg) scaleY(.48);box-shadow:inset 0 8px 16px #b6e1ff0a}
+.orbital-track:nth-child(2){transform:rotate(55deg) scaleY(.48);width:115%;border-color:#b9e3ff35}
+.progress-pill.glass{background:#132a3f;color:#c8e2f5;border-color:#819fb34d;box-shadow:none}.progress-pill .status-dot{display:none}
+.seo-about{background:linear-gradient(105deg,#101e2c 40%,#1c405b);border:1px solid #91b6cf2b}.about-surface{background:#e7f2fa;color:#112e45;border:0;box-shadow:none}.seo-about .about-statement{color:#112e45}
+.seo-faq{color:#edf7ff}.faq-intro>p,.faq-contact span span{color:#a8c3d8}.faq-contact{border-color:#587b9745}.seo-faq details{color:#122e43;background:#dfedf7;border:0;box-shadow:none}.seo-faq details[open]{background:#f1f8fd}
+.contact.scene{background:linear-gradient(90deg,#0d1b2bf5 25%,#0a18265c),var(--earth) center 62%/cover;border-block:1px solid #c6e7ff26;border-radius:0;box-shadow:none;color:#f0f8ff}.contact h2{color:#f4faff}.contact p,.contact-words{color:#c5dae9}.contact .button{background:#d5ecfc;color:#14344c}.contact-copy{width:70%}
+.footer,.seo-links{color:#acc6db;border-color:#7898b83b}.footer .brand{color:#eef8ff}.seo-links a:hover{color:#fff}
+/* Case surroundings share the orbital material; the live products keep their own palettes. */
+.case-shell,.theme-gift .case-shell,.theme-maverick .case-shell,.theme-tailcare .case-shell,.theme-loyalty .case-shell{background:radial-gradient(ellipse at 50% 80%,#1b3b53,#080e17 75%)}
+.case-shell:before{display:none}.case-intro h1,.case-intro h2{color:#f0f8ff}.case-intro>p,.theme-tailcare .case-intro>p{color:#b5ccdd}.case-intro .eyebrow,.case-intro .seo-breadcrumbs{color:#a8c8df}
+.case-intro .tags>span{background:#1c3448;color:#cce9ff;border-color:#9abbce33}.interactive-stage.glass{background:#deedf8;color:#15344b;border:0;box-shadow:none}.interactive-stage .eyebrow{color:#356180}.case-note.glass,.case-scroll{background:#cbe7fa;color:#183d58;box-shadow:none}
+.case-brief{color:#edf7ff}.case-function{background:none;border-color:#6e98b44d}.case-function p,.case-function>header{color:#b6cddd}.case-gallery{background:#152536;border-color:#52708a80;color:#e6f3ff}.case-gallery>summary{border-color:#52708a80}
+.case-ecosystem,.theme-gift .case-ecosystem,.theme-loyalty .case-ecosystem,.theme-tailcare .case-ecosystem,.theme-maverick .case-ecosystem{background:#102333;border-radius:0;box-shadow:none;height:auto;min-height:400px;padding-block:48px}.case-ecosystem:before{display:none}.case-eco-heading{position:relative}.feature-orbit{position:relative;inset:auto;margin-top:32px;display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.orbit-card.glass{position:relative;inset:auto;background:#e1f0fa;color:#17344b}.orbit-card p{color:#3a596e}
+.details,.tech,.related-projects{color:#e3f3ff}.details-list details,.tech-item{color:#173b57;background:#e4f1fa}.tech-flow>span{color:#a8cce4}
+.service-page,.privacy-page{color:#eef7ff}.service-page h2{color:#ecf7ff}.service-intro{background:radial-gradient(ellipse at 80% 50%,#1c3b54,transparent 70%);border-color:#709cb83d}.service-page p,.privacy-page p,.seo-breadcrumbs{color:#b1c9db}.service-page .seo-faq details p{color:#36556e}.service-context,.service-scope article,.service-examples>a,.service-related>a{border-color:#709cb83d}.service-page .button{background:#d5ecfc;color:#15384f}.privacy-page p a{color:#c8e7ff}
+@media(max-width:760px){
+ :root{--earth:url('/assets/art/orbital-earth-mobile.webp')}
+ .nav-notch,.nav-notch.is-scrolled{top:max(10px,env(safe-area-inset-top));width:calc(100% - 36px);height:52px;padding:3px;background:#15202ef5;transform:translateX(-50%);border-radius:28px;transition:none}
+ .top-nav{height:44px!important;background:transparent!important}.nav-indicator{height:36px}.top-nav a{color:#d8e7f5}
+ .header,.case-shell .header{height:138px;padding-top:84px;padding-bottom:14px;align-items:center}.header .brand{font-size:15px}.header>.button{font-size:10px;padding:10px 12px}
+ .hero-shell{background-size:100% 100%,auto 900px;background-repeat:no-repeat;background-position:center,center top}
+ .hero{padding-top:16px;gap:28px}.hero-copy h1{font-size:clamp(32px,8.6vw,52px)}.hero-copy p{font-size:15px}
+ .crm.glass{width:calc(100% - 36px);min-height:0;background:#dceff8f5}.crm-projects{background:#f5faff}
+ .hero-bottom{grid-template-columns:1fr;gap:14px;width:calc(100% - 36px)}.hero-spacer{display:none}.hero-invite.glass,.hero-business.glass{min-height:0;padding:22px}
+ .service-art{height:140px;margin-bottom:18px}.service-art:before{inset:20px 16px}.service-art:after{inset:30px 14px}.service-art svg{width:44px;height:44px}.service-art>span{font-size:8px}.service h3{font-size:18px}.service p{font-size:13px}
+ .services{padding-top:30px}.custom.scene{padding-block:28px}.workflow.scene{padding-block:36px}.flow-card.glass{padding:18px}.system-stack{padding:0}
+ .approach.scene{padding:32px 18px}.orbital-core{position:relative;inset:auto;height:200px;width:220px;margin:20px auto;z-index:0}.orbital-core b{font-size:100px}.team-grid{margin-top:12px}
+ .seo-about{padding:10px}.about-surface{padding:26px 20px}.contact-copy{width:100%}.contact.scene{background-position:center,70% center}.contact-words{display:none}
+ .feature-orbit{grid-template-columns:1fr;margin-top:24px}.case-ecosystem{min-height:0}.case-function-grid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.nav-indicator,.project-card{transition:none}}
+
+/* Specificity matches the inherited glass bevel, without a second live lens. */
+.top-nav.glass:after,.side-nav.glass:after{display:none}
+.side-nav.glass{background:#15202ef5;border:1px solid #ffffff29;box-shadow:none}
+.side-nav a{color:#bedcf2}.side-nav a:first-child,.side-nav a:hover{color:#102b40}
+.case-orbit-object{display:none}.case-brief>p,.screenshot-note{color:#b0c8da}
+.other-cases{color:#e8f5ff}.other-cases a{background:#e0eef9;color:#123149}.other-cases a span{color:#3f627c}
+.details-list details{padding:16px 22px;border-radius:14px;margin-bottom:10px}.details-list details p{color:#3b5970}
+@media(max-width:760px){.hero-shell{background-position:center,center top}}
+
+/* Supplied brand artwork retains its original shape and colors. CSS trims transparent margins. */
+.brand{position:relative;display:block;width:202px;height:59px;background:#edf6fc;border-radius:9px;overflow:hidden;flex-shrink:0}
+.brand img,.orbital-brand img{position:absolute;width:136%;max-width:none;height:auto;left:50%;top:50%;transform:translate(-50%,-53%)}
+.orbital-brand{position:relative;width:240px;height:78px;background:#edf6fc;border-radius:14px;overflow:hidden}
+.crm-tabs button[aria-selected=true]{background:#0867bf;color:#fff}
+.crm-state{color:#075795;background:#d7edff}.crm-state.done{color:#085e51;background:#d0f3e6}
+.crm-search,.crm-row small,.crm-bottom,.crm-bottom small,.crm-sidebar>small,.inbox-row small,.inbox-status{color:#46647d}
+@media(max-width:760px){.header .brand{width:146px;height:44px}.footer .brand{width:146px;height:44px}.orbital-brand{width:200px;height:64px}}
+.header>.button:hover,.contact .button:hover,.service-page .button:hover{background:#f4faff;color:#102c43}
