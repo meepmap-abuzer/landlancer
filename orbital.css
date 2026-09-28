@@ -99,3 +99,70 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #6f
 .crm-search,.crm-row small,.crm-bottom,.crm-bottom small,.crm-sidebar>small,.inbox-row small,.inbox-status{color:#46647d}
 @media(max-width:760px){.header .brand{width:146px;height:44px}.footer .brand{width:146px;height:44px}.orbital-brand{width:200px;height:64px}}
 .header>.button:hover,.contact .button:hover,.service-page .button:hover{background:#f4faff;color:#102c43}
+
+/* Sculpted optical surfaces: transparent bodies, polished edges and static reflections.
+   No wheel interception, animated filters or backdrop displacement. */
+:root{--glass-edge:#e5f5ffb8;--glass-shadow:inset 0 1px 0 #fff,inset 0 -2px 0 #a9d9f35c,0 18px 40px #0003}
+.sculpted-surface{position:absolute!important;inset:0;width:100%!important;height:100%!important;pointer-events:none;z-index:0}
+.hero-shell{margin:12px;min-height:calc(100svh - 24px);border:2px solid #ecf9ffd9;border-radius:64px;box-shadow:inset 0 0 0 5px #b5dcff12;background-position:center,center 85px;isolation:isolate}
+.hero-shell:after{display:block;content:'';position:absolute;inset:5px;pointer-events:none;border:1px solid #d4eaff40;border-radius:58px;z-index:0}
+.header{position:relative;z-index:4;padding-inline:40px;height:98px}
+.nav-notch,.nav-notch.is-scrolled{top:12px;width:clamp(440px,38vw,580px);height:74px;padding:10px 64px 16px;border:0;border-radius:0;background:transparent;box-shadow:none}
+.nav-notch>.sculpted-surface{filter:drop-shadow(0 8px 10px #07152225)}
+.top-nav{position:relative;height:44px;color:#13324e;z-index:1}
+.top-nav a{color:#16354e}.top-nav a.is-highlighted{color:#09283c}
+.nav-indicator{background:#ffffffb8;box-shadow:inset 0 1px 0 #fff,0 3px 8px #245b7a12;border:1px solid #fff9}
+.header .brand{background:#eaf6ffe6;border-radius:20px 8px 20px 8px}
+.hero{gap:28px;min-height:calc(100svh - 124px);padding:12px 0 24px;position:relative;z-index:1}
+.hero-copy h1{font-size:clamp(44px,4.9vw,78px);line-height:1.04}
+.hero-copy p{margin-top:18px}
+.crm.glass{width:77%;max-width:1060px;min-height:280px;padding:16px;gap:12px;border-radius:32px;background:linear-gradient(120deg,#d9f2ff58,#a3d5f924 50%,#e5f7ff61);border:1px solid #e6f7ffd9;box-shadow:var(--glass-shadow);backdrop-filter:blur(2px)!important;-webkit-backdrop-filter:blur(2px)!important}
+.crm.glass:before,.crm.glass:after{display:none}
+.crm-sidebar{background:linear-gradient(125deg,#f3fbffb8,#c9eaff7d);border-radius:20px;color:#173b55;padding-bottom:16px}
+.crm-projects,.crm-inbox{background:linear-gradient(115deg,#f2faffdf,#e5f4ffc9);border:1px solid #ffffffc4;border-radius:20px;box-shadow:inset 0 1px 0 #fff}
+.crm-inbox{background:linear-gradient(125deg,#eefaffd9,#d3eaffb0)}
+.hero-bottom{width:94%;max-width:1440px;grid-template-columns:minmax(300px,37%) 1fr minmax(320px,37%);align-items:end;gap:0;margin-top:0}
+.hero-invite.glass,.hero-business.glass{isolation:isolate;border:0;border-radius:0;background:none;box-shadow:none;overflow:visible;min-height:220px;color:#102c45;padding:30px 26% 26px 30px;filter:drop-shadow(0 14px 20px #06132628)}
+.hero-invite.glass:before,.hero-invite.glass:after,.hero-business.glass:before,.hero-business.glass:after{display:none}
+.hero-invite>:not(.sculpted-surface),.hero-business>:not(.sculpted-surface){position:relative;z-index:1}
+.hero-invite h2{font-size:clamp(21px,1.7vw,29px);line-height:1.16;white-space:nowrap}.hero-invite p{font-size:13px;line-height:1.5;color:#23445e}
+.hero-invite>div{margin-top:20px}.hero-invite .button{padding:12px 16px;font-size:11px}
+.hero-business.glass{min-height:244px;padding:34px 26px 55px 20%;margin-bottom:0}
+.hero-business h2{font-size:clamp(20px,1.55vw,27px);color:#102c45;white-space:nowrap}
+.hero-business div span{font-size:13px;color:#18364e}.hero-business svg:not(.sculpted-surface){color:#155687}
+.hero-business>.round-arrow{position:absolute;bottom:19px;right:23px;background:#f8fcffbc;border:1px solid #fff;width:38px;height:38px;box-shadow:inset 0 1px 0 #fff}
+.side-nav.glass{left:24px;width:54px;padding:10px 6px;border-radius:30px 30px 34px 12px;background:linear-gradient(125deg,#f0faffcc,#c7e4fa75);border:1px solid #fff;box-shadow:inset 0 1px 0 #fff,0 10px 24px #071c332b;backdrop-filter:blur(3px)!important;-webkit-backdrop-filter:blur(3px)!important}
+.side-nav a{color:#173c58;width:40px;height:43px}.side-nav a:first-child{background:#f7fcfff0;box-shadow:0 4px 10px #2357711a}.side-nav a:hover{background:#f7fcffb3}
+/* Clear glass reads through an environment, rather than an opaque white fill. */
+.page-content{background:radial-gradient(ellipse at 93% 6%,#31648945,transparent 24%),radial-gradient(ellipse at 5% 39%,#29729b33,transparent 26%),#080e17}
+.services{padding-top:70px}.service-grid{gap:22px}.service{padding:18px 22px 46px;border-radius:34px 34px 16px 34px;background:linear-gradient(145deg,#dcefff22,#c1e7ff08 55%,#e9f7ff15);border:1px solid #cbe9ff55;box-shadow:inset 0 1px 0 #f0fbff85;overflow:hidden}
+.service-art,.service:nth-child(2) .service-art,.service:nth-child(4) .service-art{height:auto;aspect-ratio:1;max-width:none;margin:0 0 20px;background:none!important;border:0;border-radius:0;overflow:visible}
+.service-art:before,.service-art:after{display:none}.service-art img{display:block;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 14px 12px #0002)}
+.service h3{font-size:clamp(18px,1.4vw,24px)}.service p{max-width:100%;font-size:14px;line-height:1.6;color:#c0d5e5}.service .round-arrow{right:18px;bottom:16px;background:#d9efff33;color:#d5edff;border:1px solid #b5e5ff80}
+.custom.scene,.workflow.scene,.approach.scene,.case-ecosystem{background:radial-gradient(ellipse at 80% 20%,#69bce036,transparent 55%),linear-gradient(115deg,#122434,#0b1621 65%,#17364a);border:1px solid #acd7f346;border-radius:42px;margin-inline:12px;box-shadow:inset 0 1px 0 #edfbff87}
+.workflow.scene{background:radial-gradient(ellipse at 20% 60%,#b4e5ff38,transparent 50%),linear-gradient(110deg,#0e1e2b,#16394c 55%,#0b1623)}
+.stack-layer.glass,.flow-card.glass,.team-card.glass,.orbit-card.glass,.custom-steps.glass{background:linear-gradient(135deg,#ecf9ffdf,#c2e1f3b8 65%,#e9f8ffd6);border:1px solid #e9faffb3;box-shadow:inset 0 1px 0 #fff,inset 0 -2px 0 #93bed338,0 12px 28px #020f201c;border-radius:24px}
+.project-card{background:linear-gradient(125deg,#e7f7ffb8,#a4cced70 70%,#e8f8ffd6);border:1px solid #d5efffa1;box-shadow:inset 0 1px 0 #fff,0 18px 40px #0002;border-radius:34px;padding:18px}
+.project-caption,.product-stage,.interactive-stage{background:linear-gradient(130deg,#eaf8ffd9,#c7e4f5c2);border:1px solid #e5f7ffbd;box-shadow:inset 0 1px 0 #fff}
+.case-shell{background:radial-gradient(ellipse at 75% 70%,#205674bb,transparent 65%),linear-gradient(145deg,#060d15,#142a3c);border-bottom:1px solid #d3edff59}
+.case-function,.showcase-card{background:linear-gradient(130deg,#c2e9ff20,#c1e8ff08 65%,#e6f7ff20);border:1px solid #d9efff55;box-shadow:inset 0 1px 0 #e2f6ff7a;border-radius:28px}
+.about-surface{background:linear-gradient(125deg,#e9f6fff0,#c9e6f5d4 60%,#f5fbffed);border:1px solid #fff;box-shadow:inset 0 1px 0 #fff,0 18px 40px #0002}
+.seo-faq details,.details-list details{background:linear-gradient(110deg,#e3f5fff2,#cbe5f3d9);border:1px solid #f2fbff94;box-shadow:inset 0 1px 0 #fff}
+.tags>span,.case-note,.case-scroll,.progress-pill.glass{background:linear-gradient(125deg,#e6f6ffdd,#bfdff3bb);border:1px solid #eafaffaa;color:#15384e;box-shadow:inset 0 1px 0 #fff}
+@media(min-width:761px) and (max-width:1100px){.header{padding-inline:24px}.header .brand{width:160px;height:48px}.nav-notch,.nav-notch.is-scrolled{width:420px;padding-inline:60px}.hero-bottom{grid-template-columns:42% 1fr 43%;width:94%}.hero-invite h2{font-size:20px}.hero-business h2{font-size:19px}.hero-invite.glass{padding-left:24px}.hero-business div span{font-size:12px}.hero-business.glass{padding-left:19%}.crm.glass{width:83%}.service-grid{gap:14px}.service{padding:14px 16px 45px}.service p{font-size:13px}}
+@media(max-width:760px){
+ .hero-shell{margin:7px;border-radius:34px;min-height:calc(100svh - 14px);background-position:center,center 110px;background-size:100% 100%,auto 1000px}.hero-shell:after{border-radius:28px;inset:4px}
+ .nav-notch,.nav-notch.is-scrolled{top:7px;width:min(390px,calc(100% - 26px));height:64px;padding:8px 44px 12px;background:transparent;border-radius:0;transition:none}.nav-notch>.sculpted-surface{filter:none}.top-nav a{font-size:11px!important}.nav-indicator{height:34px}
+ .header,.case-shell .header{padding:80px 18px 12px;height:138px}.header .brand{width:132px;height:42px}.header>.button{font-size:9px;padding:11px 12px}.hero{padding-top:8px;gap:26px;padding-bottom:12px;min-height:0}.hero-copy{padding:0 12px}.hero-copy h1{font-size:clamp(30px,8.3vw,48px)}.hero-copy p{font-size:14px;margin-top:15px}
+ .crm.glass{width:calc(100% - 26px);margin-inline:auto;padding:10px;min-height:0;border-radius:24px;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}.crm-projects{background:linear-gradient(115deg,#eff9ffeb,#d6efffd9);border-radius:18px}.crm-row b{font-size:9px}.crm-state{font-size:8px}
+ .hero-bottom{width:calc(100% - 20px);grid-template-columns:1fr;gap:14px}.hero-invite.glass{min-height:216px;padding:28px 26% 24px 28px}.hero-invite h2{font-size:23px}.hero-invite p{font-size:13px}.hero-invite .button{font-size:11px}.hero-business.glass{min-height:220px;padding:30px 24px 52px 21%;width:100%;margin-left:0}.hero-business h2{font-size:23px}.hero-business div span{font-size:13px}.hero-business>.round-arrow{right:22px;bottom:20px}.hero-spacer{display:none}
+ .services{padding-top:42px}.service-grid{gap:14px}.service{padding:12px 12px 42px;border-radius:24px 24px 12px 24px}.service-art{height:auto;max-width:none;margin-bottom:12px}.service h3{font-size:17px}.service p{font-size:12px;line-height:1.55}.service .round-arrow{width:28px;height:28px;right:12px;bottom:12px}
+ .custom.scene,.workflow.scene,.approach.scene,.case-ecosystem{margin-inline:7px;border-radius:30px}.project-card{padding:12px;border-radius:28px}.stack-layer.glass,.flow-card.glass,.team-card.glass,.orbit-card.glass{border-radius:21px}.case-hero{padding-inline:18px}.interactive-stage{border-radius:26px}
+}
+@media(max-width:370px){.hero-invite h2{font-size:21px}.hero-business h2{font-size:21px}.hero-business div span{font-size:12px}.service h3{font-size:16px}}
+@media(prefers-reduced-motion:reduce){.service-art{transition:none;translate:none!important}}
+.interactive-stage.glass{background:linear-gradient(125deg,#d5efff4a,#9ac9e522 65%,#e8f8ff52);color:#e9f7ff;border:1px solid #e5f7ffaf;box-shadow:inset 0 1px 0 #fff,0 18px 38px #0002}
+.interactive-stage .stage-invitation p,.interactive-stage .eyebrow{color:#c4deef}.interactive-stage .stage-live-label{border-color:#c9eaff60;color:#dbf0ff}
+/* Inset frames include their margins in the available viewport width. */
+.hero-shell,.custom.scene,.workflow.scene,.approach.scene,.case-ecosystem{width:calc(100% - 24px)}
+@media(max-width:760px){.hero-shell,.custom.scene,.workflow.scene,.approach.scene,.case-ecosystem{width:calc(100% - 14px)}}

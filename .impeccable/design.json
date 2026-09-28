@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-28T18:28:29.4507467+05:00",
-  "title": "Design System: Lancer Agency — Orbital",
+  "generatedAt": "2026-09-28T19:05:41.2866737+05:00",
+  "title": "Design System: Lancer Agency — Sculpted orbital glass",
   "extensions": {
     "colorMeta": {
       "space": {
@@ -29,14 +29,19 @@
     },
     "shadows": [
       {
-        "name": "navigation",
-        "value": "0 6px 24px #0003",
-        "purpose": "Small static ambient shadow beneath the fixed capsule."
+        "purpose": "Clear CRM separation from Earth.",
+        "value": "inset 0 1px 0 #fff,inset 0 -2px 0 #a9d9f35c,0 18px 40px #0003",
+        "name": "crm"
       },
       {
-        "name": "crm",
-        "value": "0 24px 70px #0005, inset 0 1px 0 #fff",
-        "purpose": "Light CRM separation from Earth."
+        "purpose": "Supporting translucent workflow and delivery cards.",
+        "value": "inset 0 1px 0 #fff,inset 0 -2px 0 #93bed338,0 12px 28px #020f201c",
+        "name": "supporting-glass"
+      },
+      {
+        "purpose": "Transparent case exhibit outer surface.",
+        "value": "inset 0 1px 0 #fff,0 18px 38px #0002",
+        "name": "case-exhibit"
       }
     ],
     "motion": [
@@ -48,7 +53,7 @@
       {
         "name": "navigation-selection",
         "value": "transform .35s var(--ease-out)",
-        "purpose": "Selection pill only; capsule does not move on scroll."
+        "purpose": "Selection pill only; fixed sculpted notch never changes vertical position on scroll."
       },
       {
         "name": "heading-reveal",
@@ -58,22 +63,18 @@
     ],
     "breakpoints": [
       {
-        "name": "orbital-mobile",
+        "name": "narrow",
+        "value": "370px"
+      },
+      {
+        "name": "mobile",
         "value": "760px"
+      },
+      {
+        "name": "intermediate-max",
+        "value": "1100px"
       }
     ],
-    "verification": {
-      "currentBrowserObservations": [
-        "375px mobile navigation: 61px to 10px before fix; 10px to 10px after fix.",
-        "Six checked routes: no horizontal overflow at 375px."
-      ],
-      "unverified": [
-        "Physical iOS and Android rendering",
-        "Hardware FPS",
-        "Safari"
-      ],
-      "scope": "Earlier Chromium matrices belong to earlier revisions. Documentation does not imply deployment."
-    },
     "assets": [
       {
         "path": "assets/art/orbital-earth.webp",
@@ -94,8 +95,39 @@
         "path": "assets/brand/lancer.webp",
         "bytes": 28726,
         "purpose": "Lossless 800×320 logo; unchanged geometry and colors on light plates"
+      },
+      {
+        "purpose": "Complete decorative transparent service sculpture",
+        "encodedSize": "640x640",
+        "path": "assets/art/service-web.webp",
+        "fit": "contain"
+      },
+      {
+        "purpose": "Complete decorative transparent service sculpture",
+        "encodedSize": "640x640",
+        "path": "assets/art/service-mini.webp",
+        "fit": "contain"
+      },
+      {
+        "purpose": "Complete decorative transparent service sculpture",
+        "encodedSize": "640x640",
+        "path": "assets/art/service-crm.webp",
+        "fit": "contain"
+      },
+      {
+        "purpose": "Complete decorative transparent service sculpture",
+        "encodedSize": "640x640",
+        "path": "assets/art/service-automation.webp",
+        "fit": "contain"
       }
-    ]
+    ],
+    "materials": {
+      "geometrySource": "src/sculpted-surfaces.mjs",
+      "blur": "2px desktop CRM; 3px side rail; no mobile CRM blur",
+      "notch": "top 12px desktop / 7px mobile; height 74px / 64px; width clamp(440px,38vw,580px) / min(390px,calc(100% - 26px)); intermediate width 420px",
+      "scrolling": "Native wheel/touch; no displacement, wheel interception or perpetual scroll RAF",
+      "scope": "Source-derived documentation. No new browser or hardware-performance verification; no deployment."
+    }
   },
   "components": [
     {
@@ -111,64 +143,73 @@
       "kind": "button",
       "description": "Light action on the dark contact section.",
       "html": "<button class=\"ds-light-action\">Обсудить проект</button>",
-      "css": ".ds-light-action{font:600 13px/1.2 Manrope,Arial,sans-serif;padding:14px 24px;border:1px solid transparent;border-radius:9px;background:#d5ecfc;color:#14344c;cursor:pointer;transition:background .35s,scale .35s}.ds-light-action:hover{background:#204755;color:#14344c}.ds-light-action:focus-visible{outline:2px solid #6fc8ff;outline-offset:5px}.ds-light-action:active{scale:.96}@media(prefers-reduced-motion:reduce){.ds-light-action{transition:none}.ds-light-action:active{scale:none}}"
+      "css": ".ds-light-action{font:600 13px/1.2 Manrope,Arial,sans-serif;padding:14px 24px;border:1px solid transparent;border-radius:9px;background:#d5ecfc;color:#14344c;cursor:pointer;transition:background .35s,scale .35s}.ds-light-action:hover{background:#f4faff;color:#102c43}.ds-light-action:focus-visible{outline:2px solid #6fc8ff;outline-offset:5px}.ds-light-action:active{scale:.96}@media(prefers-reduced-motion:reduce){.ds-light-action{transition:none}.ds-light-action:active{scale:none}}"
     },
     {
-      "name": "Navigation capsule",
+      "name": "Sculpted navigation notch",
       "kind": "nav",
-      "description": "Static specimen of the fixed dark capsule; production selection is measured by experience.mjs.",
-      "html": "<nav class=\"ds-nav\" aria-label=\"Основная навигация\"><a href=\"#works\" aria-current=\"location\">Кейсы</a><a href=\"#services\">Услуги</a><a href=\"#contact\">Контакты</a></nav>",
-      "css": ".ds-nav{display:flex;gap:4px;padding:4px;background:#15202ef5;border:1px solid #ffffff24;border-radius:30px;box-shadow:0 6px 24px #0003;font-family:Manrope,Arial,sans-serif}.ds-nav a{display:flex;align-items:center;min-height:36px;padding:0 15px;color:#d8e7f5;text-decoration:none;border-radius:24px}.ds-nav a[aria-current],.ds-nav a:hover{background:#d9edfc;color:#102235}.ds-nav a:focus-visible{outline:2px solid #6fc8ff;outline-offset:5px}"
+      "description": "Self-contained contour specimen; production positioning is fixed and selection measurements come from experience.mjs.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Основная навигация\"><svg class=\"ds-shape\" viewBox=\"0 0 480 68\" preserveAspectRatio=\"none\" aria-hidden=\"true\"><defs><linearGradient id=\"ds-notch-glass\" x2=\"1\" y2=\"1\"><stop stop-color=\"#fff\" stop-opacity=\".97\"/><stop offset=\".42\" stop-color=\"#e0f4ff\" stop-opacity=\".92\"/><stop offset=\".72\" stop-color=\"#e5f6ff\" stop-opacity=\".87\"/><stop offset=\"1\" stop-color=\"#fff\" stop-opacity=\".96\"/></linearGradient></defs><path d=\"M2 2H478C441 2 446 66 392 66H88C34 66 39 2 2 2Z\" fill=\"url(#ds-notch-glass)\" stroke=\"#fff\" stroke-width=\"2\" vector-effect=\"non-scaling-stroke\"/></svg><a href=\"#works\" aria-current=\"location\">Кейсы</a><a href=\"#services\">Услуги</a><a href=\"#contact\">Контакты</a></nav>",
+      "css": ".ds-nav{position:relative;display:flex;justify-content:center;align-items:center;width:min(480px,100%);height:74px;padding:0;font:12px Manrope,Arial,sans-serif}.ds-shape{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}.ds-nav a{position:relative;padding:10px 13px;border-radius:24px;color:#16354e;text-decoration:none}.ds-nav a[aria-current],.ds-nav a:hover{background:#ffffffb8;color:#09283c;box-shadow:inset 0 1px 0 #fff}.ds-nav a:focus-visible{outline:2px solid #6fc8ff;outline-offset:5px}",
+      "refersTo": "navigation"
     },
     {
       "name": "Case tag",
       "kind": "chip",
-      "description": "Noninteractive metadata on a dark case introduction.",
+      "description": "Noninteractive metadata rendered as pale translucent glass.",
       "html": "<span class=\"ds-tag\">Telegram Mini App</span>",
-      "css": ".ds-tag{display:inline-block;padding:10px 14px;border-radius:30px;background:#1c3448;color:#cce9ff;font:10px Manrope,Arial,sans-serif}"
+      "css": ".ds-tag{display:inline-block;padding:10px 14px;border-radius:30px;background:linear-gradient(125deg,#e6f6ffdd,#bfdff3bb);border:1px solid #eafaffaa;color:#15384e;box-shadow:inset 0 1px 0 #fff;font:10px Manrope,Arial,sans-serif}"
     },
     {
       "name": "Case details",
       "kind": "card",
-      "description": "Native light disclosure within dark surroundings.",
+      "description": "Native translucent disclosure within dark surroundings.",
       "html": "<details class=\"ds-details\"><summary>Возможности</summary><p>Интерфейс продукта и его функции.</p></details>",
-      "css": ".ds-details{padding:16px 22px;border-radius:14px;margin-bottom:10px;background:#e4f1fa;color:#173b57;font-family:Manrope,Arial,sans-serif}.ds-details summary{cursor:pointer}.ds-details summary:hover{color:#204755}.ds-details summary:focus-visible{outline:2px solid #6fc8ff;outline-offset:5px}.ds-details p{color:#3b5970;line-height:1.5}"
+      "css": ".ds-details{padding:16px 22px;border-radius:14px;margin-bottom:10px;background:linear-gradient(110deg,#e3f5fff2,#cbe5f3d9);border:1px solid #f2fbff94;box-shadow:inset 0 1px 0 #fff;color:#173b57;font-family:Manrope,Arial,sans-serif}.ds-details summary{cursor:pointer}.ds-details summary:hover{color:#204755}.ds-details summary:focus-visible{outline:2px solid #6fc8ff;outline-offset:5px}.ds-details p{color:#3b5970;line-height:1.5}"
+    },
+    {
+      "kind": "custom",
+      "html": "<section class=\"ds-exhibit\"><p>Попробуйте интерфейс продукта</p><div class=\"ds-product\">Интерактивный продукт</div></section>",
+      "css": ".ds-exhibit{padding:24px;border-radius:26px;background:linear-gradient(125deg,#d5efff4a,#9ac9e522 65%,#e8f8ff52);color:#e9f7ff;border:1px solid #e5f7ffaf;box-shadow:inset 0 1px 0 #fff,0 18px 38px #0002;font:14px/1.5 Manrope,Arial,sans-serif}.ds-exhibit p{color:#c4deef}.ds-product{padding:28px;border-radius:18px;background:#f3f8fc;color:#102e3a}",
+      "description": "Agency surround only; embedded products keep their own palettes and controls.",
+      "name": "Transparent case exhibit"
     }
   ],
   "narrative": {
-    "northStar": "Quiet orbital control room",
-    "overview": "Realistic-looking Earth replaces the agency's alpine and botanical scenery. Near-black surroundings, light product exhibits and retained icy blue coexist within sections. The actual products remain the proof. Manrope and the user-supplied logo retain their identity.",
+    "northStar": "Sculpted orbital glass.",
+    "overview": "Earth supplies the atmosphere; clear optical surfaces, polished white edges and asymmetric contours frame real interfaces. Black, white and ice coexist within each section. Glass continues through services, workflow, projects and case exhibits without recoloring the embedded products.\n\nThe user-pinned Orizon reference establishes continuous curved contours, the top notch and asymmetric lower panels. The implemented world preserves Manrope and the supplied Lancer logo. The logo retains its geometry and colors on light plates; assets/brand/lancer-original.png is the retained source and assets/brand/lancer.webp is the web asset. Earlier alpine scenery, opaque-card and capsule-navigation rules are superseded by this refresh.",
     "keyCharacteristics": [
-      "Earth scenery",
-      "Light and dark within sections",
-      "Native scrolling",
-      "Stable navigation",
-      "Static materials",
-      "Authentic product interfaces"
+      "Earth and dark space behind transparent surfaces.",
+      "Continuous sculpted contours and white reflective edges.",
+      "Complete optical-glass service sculptures.",
+      "Authentic product palettes and interactive exhibits.",
+      "Native scrolling and vertically stable navigation."
     ],
     "rules": [
       {
-        "name": "Shared Section Rule",
-        "body": "Compose light and dark elements within sections instead of alternating monochrome bands.",
-        "section": "colors"
+        "body": "Compose dark atmosphere and light transparent surfaces within sections; preserve the native palettes of embedded products.",
+        "section": "colors",
+        "name": "Shared Section Rule"
       },
       {
-        "name": "Static Material Rule",
-        "body": "Use static tonal contrast and borders; do not restore Lenis or live SVG lens sampling.",
-        "section": "elevation"
+        "body": "Build optical depth with static gradients and edges; retain only the 2px desktop CRM blur and 3px side-rail blur, with no backdrop displacement or live lens runtime.",
+        "section": "elevation",
+        "name": "Static Reflection Rule"
       }
     ],
     "dos": [
-      "Do retain Manrope and the supplied logo's geometry and colors.",
-      "Do preserve product palettes and demonstration boundaries.",
-      "Do keep navigation at one safe-area-aware vertical position.",
-      "Do separate browser observations from hardware performance claims."
+      "Do keep Earth visible through the hero glass and preserve readable content.",
+      "Do retain the supplied logo's geometry and colors and the Manrope identity.",
+      "Do use complete contained service sculptures and authentic product interfaces.",
+      "Do keep the navigation's vertical position stable during native scrolling.",
+      "Do inspect the final CSS cascade before changing a shared surface."
     ],
     "donts": [
-      "Don't restore nature imagery as the agency environment.",
-      "Don't recolor actual product screens.",
-      "Don't promise measured FPS or Safari/device verification without evidence.",
-      "Don't infer deployment from documentation."
+      "Don't replace the sculpted contours with polygon cuts or a generic capsule.",
+      "Don't restore wheel interception, perpetual scroll RAF or backdrop displacement.",
+      "Don't recolor demos, invent business results or treat generated art as product evidence.",
+      "Don't propagate decorative eyebrows as a reusable design pattern.",
+      "Don't infer deployment or measured hardware performance from this documentation."
     ]
   }
 }
