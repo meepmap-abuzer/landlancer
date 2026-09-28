@@ -1,26 +1,28 @@
 # Lancer Agency — product brief
 
-Russian agency portfolio at landlancer.ru. Build custom websites, Telegram Mini Apps, CRM and integrations for founders and business teams.
+Russian agency portfolio at landlancer.ru. Lancer builds custom websites, Telegram Mini Apps, CRM, administration tools and integrations for founders and business teams. The principal contact action opens the agency's Telegram conversation.
 
-## Current direction — September 23, 2026
+## Current direction — September 28, 2026
 
-The user's new reference supersedes the September 19 layout. Match its composition closely: a centered headline over an alpine scene, a large translucent CRM, top navigation notch and sculpted lower panels, four service illustrations, custom-development strip, four-step request workflow, two-column real portfolio, central glass orbital sculpture with team panels, and a torus contact footer. Use real HTML text and interactions. Keep the Manrope identity, pale blue environment and high-refraction glass.
+The approved world is sculpted orbital glass: Earth in dark space, white and icy blue, the current supplied Lancer logo, a curved top navigation notch, asymmetric curved lower hero panels and a narrow side rail. The Orizon reference supplies the contour language, not its business content. Clear glass extends through the homepage and case surroundings. Four complete transparent service sculptures replace line-icon illustrations. DESIGN.md records the implemented visual system; ../sculpted-glass-review/direction.md records this revision's direction.
+
+This supersedes alpine scenery, opaque orbital cards, capsule-only navigation and custom wheel inertia. Scrolling is native; the fixed navigation does not change vertical position when scrolling. Decorative geometry must not interfere with semantic HTML content or controls.
 
 ## Portfolio scope
 
-- Maverick: existing Mini App, QR activation, points, roulette, tasks and merchandise.
-- Gift Roulette: four game interfaces, profile, inventory and Telegram administration.
-- TailCare: pet listings, search, community and Telegram publishing.
-- 12К: now INCLUDED as a full case. Show current Mini App AND Loyalty API's business portal. The user has revoked the previous request to keep it as a placeholder.
+- Maverick: Mini App with QR activation, points, roulette, tasks and merchandise; the portfolio offers a local prize-strip demo and participant profile.
+- Gift Roulette: four game interfaces, profile, inventory and Telegram administration; the portfolio offers locally simulated Mines, Case, Crash and Upgrade interactions.
+- TailCare: pet listings, search, community and Telegram publishing; the portfolio offers original animal cards with local search, category filters and favorites.
+- 12К: a full case covering the Mini App and Loyalty API business portal; the portfolio includes the original flipping loyalty card, demonstration QR, local daily bonus, Stack and an actual dashboard capture.
 
-No invented commercial results. Screenshots represent actual frontend code; presentation data is labelled as demonstration data. Generated imagery is only scenery and decorative objects. No publishing or production changes unless separately requested.
+No invented commercial results. Real captures and reused product components provide evidence. Generated Earth and service sculptures are decorative assets, never screenshots of delivered products. DEMOS.md records source reuse and simulation boundaries. Portfolio demonstrations use local state without authentication, production transactions, real prizes, payouts or loyalty-point issuance.
 
-## Acceptance
+## Experience and content
 
-Five working public pages; keyboard-friendly CRM and product tabs, request demonstration, native details and screenshot viewer; responsive at 320–2560 px; reduced-motion support; static GitHub Pages build with existing domain preserved.
+The homepage presents services, a custom-development offer, a four-step request demonstration, four interactive portfolio exhibits, project delivery stages, agency information, FAQ and contact. The orbital cards describe delivery disciplines, not invented staff identities. Case pages center their introduction above a transparent glass exhibit, preserve each embedded product's theme, explain features and offer an expandable gallery of real captures. Dedicated service and privacy pages remain part of the site.
 
-## Latest interaction requirements
+Keep keyboard-friendly CRM and product controls, native disclosures, screenshot-dialog focus restoration and reduced-motion support. The request sequence is an illustrative local interaction, not a submitted agency lead form. Preserve the supplied logo's geometry and colors and the existing domain configuration.
 
-The subsequent revision replaces screenshot-switching showcases with embedded product components. All four homepage cards are interactive. Gift Roulette includes four locally simulated games; Maverick includes its prize strip and a demo profile; TailCare includes its actual animal cards with filtering/favorites; 12К includes the original flipping card and Stack scene, alongside a dashboard capture. Case intros are centered above the product exhibit, with concise feature tiles and an expandable screenshot gallery. Decorative green dots in custom-development steps are removed. DEMOS.md documents exact source reuse and simulation boundaries.
+## Delivery and verification boundaries
 
-Full-width environment that grows with the viewport, an integrated top notch, unclipped hero panels, slow staggered entrances, smooth wheel inertia in both directions and a moving rounded navigation selection. Present actual product screens inside an explanatory product stage with selectable scenarios. Preserve flat buttons and clear refractive glass. Fresh Gift Roulette captures come from the locally running frontend; source screenshots of active game states remain separately documented.
+The site builds as a static GitHub Pages package. Responsive behavior is intended across mobile and desktop, with content-driven mobile layouts and native scrolling. Source implementation and saved screenshots do not establish hardware FPS, Safari or physical-device performance. Historical results in DEMOS.md describe their stated revision; do not turn them into fresh verification claims. This documentation refresh does not deploy or authorize production changes.
