@@ -1,0 +1,174 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-28T18:28:29.4507467+05:00",
+  "title": "Design System: Lancer Agency — Orbital",
+  "extensions": {
+    "colorMeta": {
+      "space": {
+        "role": "neutral",
+        "displayName": "Space"
+      },
+      "space-raised": {
+        "role": "neutral",
+        "displayName": "Raised space"
+      },
+      "ice": {
+        "role": "primary",
+        "displayName": "Icy blue"
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Cool paper"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Hero display",
+        "purpose": "Desktop agency hero; mobile scale is documented in DESIGN.md."
+      }
+    },
+    "shadows": [
+      {
+        "name": "navigation",
+        "value": "0 6px 24px #0003",
+        "purpose": "Small static ambient shadow beneath the fixed capsule."
+      },
+      {
+        "name": "crm",
+        "value": "0 24px 70px #0005, inset 0 1px 0 #fff",
+        "purpose": "Light CRM separation from Earth."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(.16,1,.3,1)",
+        "purpose": "Existing state and heading entrance easing."
+      },
+      {
+        "name": "navigation-selection",
+        "value": "transform .35s var(--ease-out)",
+        "purpose": "Selection pill only; capsule does not move on scroll."
+      },
+      {
+        "name": "heading-reveal",
+        "value": "550ms; 16px; 60ms stagger, capped at 180ms",
+        "purpose": "One-time selected subordinate heading reveals; no hero delay; disabled under reduced motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "orbital-mobile",
+        "value": "760px"
+      }
+    ],
+    "verification": {
+      "currentBrowserObservations": [
+        "375px mobile navigation: 61px to 10px before fix; 10px to 10px after fix.",
+        "Six checked routes: no horizontal overflow at 375px."
+      ],
+      "unverified": [
+        "Physical iOS and Android rendering",
+        "Hardware FPS",
+        "Safari"
+      ],
+      "scope": "Earlier Chromium matrices belong to earlier revisions. Documentation does not imply deployment."
+    },
+    "assets": [
+      {
+        "path": "assets/art/orbital-earth.webp",
+        "bytes": 275154,
+        "purpose": "Generated desktop Earth scenery"
+      },
+      {
+        "path": "assets/art/orbital-earth-mobile.webp",
+        "bytes": 99076,
+        "purpose": "Generated mobile Earth scenery"
+      },
+      {
+        "path": "assets/brand/lancer-original.png",
+        "bytes": 211393,
+        "purpose": "Unaltered user-supplied brand source"
+      },
+      {
+        "path": "assets/brand/lancer.webp",
+        "bytes": 28726,
+        "purpose": "Lossless 800×320 logo; unchanged geometry and colors on light plates"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Flat dark action on a light surface.",
+      "html": "<button class=\"ds-action\">Обсудить проект</button>",
+      "css": ".ds-action{font:600 13px/1.2 Manrope,Arial,sans-serif;padding:14px 24px;border:1px solid transparent;border-radius:9px;background:#102e3a;color:#fff;cursor:pointer;transition:background .35s,scale .35s}.ds-action:hover{background:#204755}.ds-action:focus-visible{outline:2px solid #6fc8ff;outline-offset:5px}.ds-action:active{scale:.96}@media(prefers-reduced-motion:reduce){.ds-action{transition:none}.ds-action:active{scale:none}}"
+    },
+    {
+      "name": "Light contact action",
+      "kind": "button",
+      "description": "Light action on the dark contact section.",
+      "html": "<button class=\"ds-light-action\">Обсудить проект</button>",
+      "css": ".ds-light-action{font:600 13px/1.2 Manrope,Arial,sans-serif;padding:14px 24px;border:1px solid transparent;border-radius:9px;background:#d5ecfc;color:#14344c;cursor:pointer;transition:background .35s,scale .35s}.ds-light-action:hover{background:#204755;color:#14344c}.ds-light-action:focus-visible{outline:2px solid #6fc8ff;outline-offset:5px}.ds-light-action:active{scale:.96}@media(prefers-reduced-motion:reduce){.ds-light-action{transition:none}.ds-light-action:active{scale:none}}"
+    },
+    {
+      "name": "Navigation capsule",
+      "kind": "nav",
+      "description": "Static specimen of the fixed dark capsule; production selection is measured by experience.mjs.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Основная навигация\"><a href=\"#works\" aria-current=\"location\">Кейсы</a><a href=\"#services\">Услуги</a><a href=\"#contact\">Контакты</a></nav>",
+      "css": ".ds-nav{display:flex;gap:4px;padding:4px;background:#15202ef5;border:1px solid #ffffff24;border-radius:30px;box-shadow:0 6px 24px #0003;font-family:Manrope,Arial,sans-serif}.ds-nav a{display:flex;align-items:center;min-height:36px;padding:0 15px;color:#d8e7f5;text-decoration:none;border-radius:24px}.ds-nav a[aria-current],.ds-nav a:hover{background:#d9edfc;color:#102235}.ds-nav a:focus-visible{outline:2px solid #6fc8ff;outline-offset:5px}"
+    },
+    {
+      "name": "Case tag",
+      "kind": "chip",
+      "description": "Noninteractive metadata on a dark case introduction.",
+      "html": "<span class=\"ds-tag\">Telegram Mini App</span>",
+      "css": ".ds-tag{display:inline-block;padding:10px 14px;border-radius:30px;background:#1c3448;color:#cce9ff;font:10px Manrope,Arial,sans-serif}"
+    },
+    {
+      "name": "Case details",
+      "kind": "card",
+      "description": "Native light disclosure within dark surroundings.",
+      "html": "<details class=\"ds-details\"><summary>Возможности</summary><p>Интерфейс продукта и его функции.</p></details>",
+      "css": ".ds-details{padding:16px 22px;border-radius:14px;margin-bottom:10px;background:#e4f1fa;color:#173b57;font-family:Manrope,Arial,sans-serif}.ds-details summary{cursor:pointer}.ds-details summary:hover{color:#204755}.ds-details summary:focus-visible{outline:2px solid #6fc8ff;outline-offset:5px}.ds-details p{color:#3b5970;line-height:1.5}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Quiet orbital control room",
+    "overview": "Realistic-looking Earth replaces the agency's alpine and botanical scenery. Near-black surroundings, light product exhibits and retained icy blue coexist within sections. The actual products remain the proof. Manrope and the user-supplied logo retain their identity.",
+    "keyCharacteristics": [
+      "Earth scenery",
+      "Light and dark within sections",
+      "Native scrolling",
+      "Stable navigation",
+      "Static materials",
+      "Authentic product interfaces"
+    ],
+    "rules": [
+      {
+        "name": "Shared Section Rule",
+        "body": "Compose light and dark elements within sections instead of alternating monochrome bands.",
+        "section": "colors"
+      },
+      {
+        "name": "Static Material Rule",
+        "body": "Use static tonal contrast and borders; do not restore Lenis or live SVG lens sampling.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do retain Manrope and the supplied logo's geometry and colors.",
+      "Do preserve product palettes and demonstration boundaries.",
+      "Do keep navigation at one safe-area-aware vertical position.",
+      "Do separate browser observations from hardware performance claims."
+    ],
+    "donts": [
+      "Don't restore nature imagery as the agency environment.",
+      "Don't recolor actual product screens.",
+      "Don't promise measured FPS or Safari/device verification without evidence.",
+      "Don't infer deployment from documentation."
+    ]
+  }
+}

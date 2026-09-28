@@ -1,20 +1,5 @@
 const reduced=matchMedia('(prefers-reduced-motion: reduce)');
-let scroll,scrollRequest=0;
-async function configureScroll(){
- const token=++scrollRequest;
- scroll?.destroy();scroll=undefined;
- if(reduced.matches)return;
- try{
-  const {default:Lenis}=await import('./vendor/lenis.mjs');
-  if(token!==scrollRequest||reduced.matches)return;
-  scroll=new Lenis({autoRaf:true,lerp:.075,smoothWheel:true,syncTouch:false,anchors:{offset:-105},stopInertiaOnNavigate:true,prevent:el=>!!el.closest('dialog,[data-lenis-prevent]')});
-  if(document.querySelector('dialog[open]'))scroll.stop();
- }catch{/* Native scrolling remains available if the enhancement cannot load. */}
-}
-configureScroll();reduced.addEventListener('change',configureScroll);
-const dialog=document.querySelector('.lightbox');
-if(dialog)new MutationObserver(()=>{if(dialog.open)scroll?.stop();else scroll?.start()}).observe(dialog,{attributes:true,attributeFilter:['open']});
-
+// Native scrolling stays on the browser compositor; no wheel interception or perpetual RAF.
 // The navigation belongs to the viewport, outside clipped scene backgrounds.
 const notch=document.querySelector('.nav-notch');
 const rail=document.querySelector('.side-nav');
@@ -27,16 +12,18 @@ if(nav){
  let active=(location.pathname.startsWith('/services/')?links.find(link=>new URL(link.href).hash==='#services'):undefined)||links[0],hovered;
  const sections=links.filter(link=>new URL(link.href).pathname===location.pathname).map(link=>({link,element:document.getElementById(new URL(link.href).hash.slice(1))})).filter(item=>item.element);
  if(location.pathname.startsWith('/services/'))active.setAttribute('aria-current','page');
- function move(link){indicator.style.width=`${link.offsetWidth}px`;indicator.style.transform=`translateX(${link.offsetLeft}px)`}
- function track(){
-  notch.classList.toggle('is-scrolled',scrollY>70);
-  let current=sections[0];
-  for(const section of [...sections].sort((a,b)=>a.element.offsetTop-b.element.offsetTop))if(section.element.getBoundingClientRect().top<innerHeight*.38)current=section;
-  if(current){active=current.link;links.forEach(link=>{if(link===active)link.setAttribute('aria-current','location');else link.removeAttribute('aria-current')})}
+ function move(link){links.forEach(item=>item.classList.toggle('is-highlighted',item===link));indicator.style.width=`${link.offsetWidth}px`;indicator.style.transform=`translateX(${link.offsetLeft}px)`}
+ function setActive(link){
+  if(!link||link===active)return;
+  active=link;
+  links.forEach(item=>{if(item===active)item.setAttribute('aria-current','location');else item.removeAttribute('aria-current')});
   if(!hovered)move(active);
  }
- let queued=false;
- addEventListener('scroll',()=>{if(!queued){queued=true;requestAnimationFrame(()=>{queued=false;track()})}},{passive:true});
+ // Observer callbacks run only when a section crosses the reading line.
+ const sectionObserver=new IntersectionObserver(entries=>{
+  for(const entry of entries)if(entry.isIntersecting)setActive(sections.find(item=>item.element===entry.target)?.link);
+ },{rootMargin:'-15% 0px -65% 0px',threshold:0});
+ sections.forEach(({element})=>sectionObserver.observe(element));
  links.forEach(link=>{
   link.addEventListener('pointerenter',()=>{hovered=link;move(link)});
   link.addEventListener('focus',()=>move(link));
@@ -44,18 +31,18 @@ if(nav){
  nav.addEventListener('pointerleave',()=>{hovered=undefined;move(active)});
  nav.addEventListener('focusout',()=>move(active));
  new ResizeObserver(()=>move(hovered||active)).observe(nav);
- document.fonts.ready.then(track);track();
+ document.fonts.ready.then(()=>move(active));move(active);
 }
 
 // Each piece arrives separately. Content remains visible if JS is unavailable.
 if(!reduced.matches){
- const selectors='.hero-copy p,.crm-sidebar,.crm-projects,.crm-inbox,.hero-invite,.hero-business,.hero-explore,.case-intro>* ,.interactive-stage,.service,.custom-copy,.custom-steps,.stack-layer,.flow-card,.project-card,.team-card,.orbit-card,.case-function,.contact-copy>*';
+ const selectors='.service h3,.case-function h3,.contact-copy h2';
  // Keep the primary heading visible immediately; opacity reveals delay LCP.
  const elements=[...document.querySelectorAll(selectors)].filter(element=>element.tagName!=='H1');
  const observer=new IntersectionObserver(entries=>{
   const entering=entries.filter(entry=>entry.isIntersecting);
   entering.forEach(({target},i)=>{
-   target.animate([{opacity:0,translate:'0 32px'},{opacity:1,translate:'0 0'}],{duration:1150,delay:Math.min(i,4)*110,fill:'backwards',easing:'cubic-bezier(.16,1,.3,1)'});
+   target.animate([{opacity:0,transform:'translateY(16px)'},{opacity:1,transform:'translateY(0)'}],{duration:550,delay:Math.min(i,3)*60,fill:'backwards',easing:'cubic-bezier(.16,1,.3,1)'});
    observer.unobserve(target);
   });
  },{threshold:.12});
