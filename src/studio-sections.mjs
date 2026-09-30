@@ -8,7 +8,7 @@ const sectors=[
  ['Модульные дома','Модели домов, планировки и выбор комплектации.','home','/concepts/homes/','Дизайн-концепт'],
  ['Автобизнес','Услуги детейлинга и подбор ухода за автомобилем.','settings','/concepts/detailing/','Дизайн-концепт']
 ];
-export function garden(){return `<section class="sculpture-stage" aria-label="Интерактивный трёхмерный ландшафт"><div class="sculpture-canvas"></div><div class="sculpture-controls"><span class="sculpture-hint">Проведите курсором — бабочки отзываются на движение</span><button type="button" class="sculpture-react">Разбудить сцену ↗</button><button type="button" class="garden-motion" aria-pressed="false">Пауза анимации</button></div><span class="sculpture-status sr-only" role="status"></span><noscript>Для интерактивной 3D-сцены включите JavaScript.</noscript></section>`}
+export function garden(){return `<section class="sculpture-stage" aria-label="Объёмная металлическая лента"><div class="sculpture-canvas"></div><div class="sculpture-controls"><span class="sculpture-hint">Двигайте курсор — меняется ракурс</span><button type="button" class="garden-motion" aria-pressed="false">Пауза анимации</button></div><span class="sculpture-status sr-only" role="status"></span><noscript>Для интерактивной 3D-сцены включите JavaScript.</noscript></section>`}
 const offerings=[
  ['Сайты и лендинги','Структура, дизайн и заявки.','websites','pets-home.webp','pets-catalog.webp','wide'],
  ['Веб-сервисы','Кабинеты и рабочие инструменты.','crm','12k-dashboard.webp','12k-missions.webp','wide'],

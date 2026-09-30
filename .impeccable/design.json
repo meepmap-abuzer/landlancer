@@ -71,7 +71,7 @@
     "lunarWorld": {
       "stylesheet": "studio-world.css",
       "script": "src/sculpture/main.mjs",
-      "scene": "Realtime Three.js terrain sculpture and mesh butterflies, adapted from Codrops InteractiveLandscape; replaces photographic 2.5D garden",
+      "scene": "Custom wide closed metallic ribbon mesh in Three.js; crossing loops and visible depth span full hero width",
       "cards": {
         "background": "#222222",
         "radius": "22px",
@@ -86,14 +86,16 @@
         "pause": true,
         "reducedMotion": true,
         "offscreenSuspension": true,
-        "frameCapTarget": 30,
-        "dprCap": {
-          "desktop": 1.6,
-          "below700px": 1.25
-        },
-        "hiddenTabSuspension": true
+        "dprCap": 1.5,
+        "hiddenTabSuspension": true,
+        "cadence": "requestAnimationFrame refresh cadence; no fixed frame cap",
+        "interaction": "Pointer tilt with delta-time exponential damping; subtle slow idle rocking"
       },
-      "footer": "Four-column navigation and dotted LANCER over abstract sculpture"
+      "footer": "Four-column navigation and dotted LANCER over abstract sculpture",
+      "controls": [
+        "pause"
+      ],
+      "attribution": "Three.js; src/sculpture/THREE-LICENSE.txt"
     },
     "caseEditorial": {
       "stylesheet": "case-editorial.css",
@@ -112,7 +114,9 @@
       ".impeccable/review/services-desktop.png",
       ".impeccable/review/case-desktop.png",
       ".impeccable/review/case-mobile.png",
-      ".impeccable/review/detect-webgl.json"
+      ".impeccable/review/detect-webgl.json",
+      ".impeccable/review/ribbon-desktop.png",
+      ".impeccable/review/ribbon-mobile.png"
     ],
     "deployment": "Local branch only; no deployment recorded"
   },
@@ -184,6 +188,6 @@
         "name": "Flat Content Rule"
       }
     ],
-    "overview": "The homepage uses a restrained text introduction, a realtime terrain sculpture, four photographic project covers and a sequence of illustrated services, industries, process, FAQ and contact. Near-black and charcoal surfaces provide the frame; actual product stories remain the purpose. The CRM hero, workflow scene, long roadmap and CSS devices are superseded on this surface.\n\nHomepage styling is scoped through studio-home.css then studio-world.css. Four case pages share case-editorial.css for their dark editorial shell; original screenshots and interactive productStage demos retain their product-specific content and behavior. Service routes remain intact."
+    "overview": "The homepage uses a restrained text introduction, a full-width metallic ribbon sculpture, four photographic project covers and a sequence of illustrated services, industries, process, FAQ and contact. Near-black and charcoal surfaces provide the frame; actual product stories remain the purpose. The CRM hero, workflow scene, long roadmap and CSS devices are superseded on this surface.\n\nHomepage styling is scoped through studio-home.css then studio-world.css. Four case pages share case-editorial.css for their dark editorial shell; original screenshots and interactive productStage demos retain their product-specific content and behavior. Service routes remain intact."
   }
 }

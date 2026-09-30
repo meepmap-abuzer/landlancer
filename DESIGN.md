@@ -60,7 +60,7 @@ components:
 
 **Creative North Star: "Compact dark studio."**
 
-The homepage uses a restrained text introduction, a realtime terrain sculpture, four photographic project covers and a sequence of illustrated services, industries, process, FAQ and contact. Near-black and charcoal surfaces provide the frame; actual product stories remain the purpose. The CRM hero, workflow scene, long roadmap and CSS devices are superseded on this surface.
+The homepage uses a restrained text introduction, a full-width metallic ribbon sculpture, four photographic project covers and a sequence of illustrated services, industries, process, FAQ and contact. Near-black and charcoal surfaces provide the frame; actual product stories remain the purpose. The CRM hero, workflow scene, long roadmap and CSS devices are superseded on this surface.
 
 Homepage styling is scoped through studio-home.css then studio-world.css. Four case pages share case-editorial.css for their dark editorial shell; original screenshots and interactive productStage demos retain their product-specific content and behavior. Service routes remain intact.
 
@@ -120,7 +120,7 @@ Homepage primary CTAs are white with dark text, at least 46px high. Header navig
 
 ### Realtime sculpture and footer
 
-src/sculpture/main.mjs implements Three.js terrain and mesh butterflies with pointer/button interaction. Terrain displacement adapts André Mattos / Codrops InteractiveLandscape; NOTICE.md and bundled Three.js/noise licenses retain attribution. The generated 2.5D landscape and beetle no longer describe the active scene. The render loop targets a 30fps cap; DPR is capped at 1.6, or 1.25 below 700px. Pause, reduced motion, offscreen visibility and hidden-tab state suspend continuous rendering. A fallback message handles unavailable WebGL. These limits do not establish measured FPS.
+src/sculpture/main.mjs implements a custom wide closed metallic ribbon mesh in Three.js. Crossing loops expose depth and span the full hero width. Pointer movement tilts the sculpture with delta-time exponential damping; subtle slow idle rocking follows requestAnimationFrame refresh cadence without a fixed frame cap. DPR is capped at 1.5. Pause is the only scene control. Pause, reduced motion, offscreen visibility and hidden-tab state suspend continuous rendering. A fallback message handles unavailable WebGL. Three.js attribution remains in THREE-LICENSE.txt. No measured FPS is claimed.
 
 The industry carousel uses native horizontal scroll snap. Footer navigation uses four columns desktop and two mobile, with the dotted LANCER wordmark and abstract sculpture treatment. Preserve pause and reduced-motion behavior.
 
@@ -130,7 +130,7 @@ case-editorial.css applies #141414 ground and #222 surfaces to all four cases. C
 
 Actual screen captures appear in alternating stories and open the existing lightbox. Only retained productStage sections are interactive demos. Architecture disclosures, technology details, related projects and the footer complete each case. Preserve simulation boundaries and never call static screenshots live interfaces.
 
-Review artifacts in .impeccable/review include desktop/mobile homepage, service and case snapshots plus detect-webgl.json. They record local review, not deployment or universal performance verification.
+Review artifacts in .impeccable/review include desktop/mobile homepage, service and case snapshots plus detect-webgl.json; ribbon-desktop.png and ribbon-mobile.png capture the final sculpture. They record local review, not deployment or universal performance verification.
 
 ## Do's and Don'ts
 
