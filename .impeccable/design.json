@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-30T17:29:04.2333649+05:00",
+  "generatedAt": "2026-09-30",
   "title": "Design System: Lancer Agency — Compact dark studio",
   "extensions": {
     "assets": [
@@ -19,13 +19,37 @@
       {
         "purpose": "Generated photographic presentation based on real UI references, not an unedited screenshot",
         "path": "assets/covers/tailcare.webp"
+      },
+      {
+        "path": "assets/services/websites.webp",
+        "purpose": "Generated editorial service illustration, not client screenshot; provenance.json and adjacent metadata"
+      },
+      {
+        "path": "assets/services/webapps.webp",
+        "purpose": "Generated editorial service illustration, not client screenshot; provenance.json and adjacent metadata"
+      },
+      {
+        "path": "assets/services/telegram.webp",
+        "purpose": "Generated editorial service illustration, not client screenshot; provenance.json and adjacent metadata"
+      },
+      {
+        "path": "assets/services/crm.webp",
+        "purpose": "Generated editorial service illustration, not client screenshot; provenance.json and adjacent metadata"
+      },
+      {
+        "path": "assets/services/automation.webp",
+        "purpose": "Generated editorial service illustration, not client screenshot; provenance.json and adjacent metadata"
+      },
+      {
+        "path": "assets/services/mvp.webp",
+        "purpose": "Generated editorial service illustration, not client screenshot; provenance.json and adjacent metadata"
       }
     ],
     "materials": {
       "header": "rgba(20,20,20,.93); backdrop-filter:blur(14px); border-bottom:1px solid #ffffff10",
-      "cases": "Existing case layout, source captures and demos unchanged",
+      "cases": "Shared case-editorial.css shell; original screenshots, lightbox and interactive productStage demos retained",
       "provenance": "Four generated photographic UI-reference covers, approximately 621 KB combined WebP; originals .codex/generated_images; generator model not selectable",
-      "scope": "Homepage studio-home only; studio-home.css after dark-glass.css"
+      "scope": "Homepage studio-home.css then studio-world.css; four case shells case-editorial.css"
     },
     "motion": [
       {
@@ -46,8 +70,8 @@
     ],
     "lunarWorld": {
       "stylesheet": "studio-world.css",
-      "script": "studio-world.mjs",
-      "scene": "2.5D generated lunar garden, transparent chrome beetle",
+      "script": "src/sculpture/main.mjs",
+      "scene": "Realtime Three.js terrain sculpture and mesh butterflies, adapted from Codrops InteractiveLandscape; replaces photographic 2.5D garden",
       "cards": {
         "background": "#222222",
         "radius": "22px",
@@ -59,13 +83,38 @@
       },
       "motion": {
         "revealMs": 700,
-        "beetleMs": 1100,
         "pause": true,
         "reducedMotion": true,
-        "offscreenSuspension": true
+        "offscreenSuspension": true,
+        "frameCapTarget": 30,
+        "dprCap": {
+          "desktop": 1.6,
+          "below700px": 1.25
+        },
+        "hiddenTabSuspension": true
       },
-      "footer": "four-column navigation and dotted LANCER over garden"
-    }
+      "footer": "Four-column navigation and dotted LANCER over abstract sculpture"
+    },
+    "caseEditorial": {
+      "stylesheet": "case-editorial.css",
+      "ground": "#141414",
+      "surface": "#222",
+      "container": "min(1220px,92%)",
+      "storyGap": "65px",
+      "coverRadius": "24px",
+      "capabilityRadius": "19px",
+      "header": "Readable sticky navigation without notch",
+      "screens": "Static actual captures with lightbox; productStage demos separately interactive"
+    },
+    "reviewEvidence": [
+      ".impeccable/review/desktop.png",
+      ".impeccable/review/mobile.png",
+      ".impeccable/review/services-desktop.png",
+      ".impeccable/review/case-desktop.png",
+      ".impeccable/review/case-mobile.png",
+      ".impeccable/review/detect-webgl.json"
+    ],
+    "deployment": "Local branch only; no deployment recorded"
   },
   "components": [
     {
@@ -111,11 +160,11 @@
       "Compact typography-led hero and photographic covers.",
       "White pill actions and subtle sticky-header glass.",
       "Native process disclosures and flat FAQ rows.",
-      "Unchanged product evidence and demos on case pages."
+      "Editorial case stories with original product evidence and retained interactive demos."
     ],
     "dos": [
-      "Do preserve the compact hero → projects → services → process → FAQ → contact sequence.",
-      "Do keep homepage changes scoped and case demos intact.",
+      "Do preserve the compact hero and sculpture → projects → services → industries → process → FAQ → contact sequence.",
+      "Do keep homepage and case editorial shells scoped and product demos intact.",
       "Do distinguish generated photographic presentations from original product captures."
     ],
     "donts": [
@@ -125,7 +174,7 @@
     "northStar": "Compact dark studio.",
     "rules": [
       {
-        "body": "Apply these tokens to the homepage; preserve the native product themes and existing case interfaces.",
+        "body": "Apply the dark studio palette to homepage and case editorial shells; preserve native product themes inside screenshots and interactive demos.",
         "section": "colors",
         "name": "Scope Rule"
       },
@@ -135,6 +184,6 @@
         "name": "Flat Content Rule"
       }
     ],
-    "overview": "The homepage uses a restrained text introduction, four photographic project covers and a short sequence of services, process, FAQ and contact. Near-black and charcoal surfaces provide the frame; actual product stories remain the purpose. The CRM hero, workflow scene, long roadmap and CSS devices are superseded on this surface.\n\nThis is a homepage-scoped system. studio-home.css loads after dark-glass.css only on the homepage. Case layouts, original screenshots, interactive demos and service routes retain their existing styles and behavior; do not apply homepage geometry globally."
+    "overview": "The homepage uses a restrained text introduction, a realtime terrain sculpture, four photographic project covers and a sequence of illustrated services, industries, process, FAQ and contact. Near-black and charcoal surfaces provide the frame; actual product stories remain the purpose. The CRM hero, workflow scene, long roadmap and CSS devices are superseded on this surface.\n\nHomepage styling is scoped through studio-home.css then studio-world.css. Four case pages share case-editorial.css for their dark editorial shell; original screenshots and interactive productStage demos retain their product-specific content and behavior. Service routes remain intact."
   }
 }

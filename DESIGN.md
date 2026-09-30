@@ -1,6 +1,6 @@
 ---
 name: Lancer Agency — Compact dark studio
-description: Compact dark homepage with photographic product covers, native disclosures and retained case demos.
+description: Dark studio with WebGL sculpture, editorial service images and readable case stories.
 colors:
   ground: "#141414"
   surface: "#222"
@@ -31,9 +31,12 @@ rounded:
   photo: "13px"
   delivery: "16px"
   contact: "24px"
+  case-cover: "24px"
+  capability: "19px"
 spacing:
   catalog-gap: "22px"
   section-gap: "70px"
+  case-story-gap: "65px"
 components:
   button-primary:
     backgroundColor: "{colors.ink}"
@@ -57,9 +60,9 @@ components:
 
 **Creative North Star: "Compact dark studio."**
 
-The homepage uses a restrained text introduction, four photographic project covers and a short sequence of services, process, FAQ and contact. Near-black and charcoal surfaces provide the frame; actual product stories remain the purpose. The CRM hero, workflow scene, long roadmap and CSS devices are superseded on this surface.
+The homepage uses a restrained text introduction, a realtime terrain sculpture, four photographic project covers and a sequence of illustrated services, industries, process, FAQ and contact. Near-black and charcoal surfaces provide the frame; actual product stories remain the purpose. The CRM hero, workflow scene, long roadmap and CSS devices are superseded on this surface.
 
-This is a homepage-scoped system. studio-home.css loads after dark-glass.css only on the homepage. Case layouts, original screenshots, interactive demos and service routes retain their existing styles and behavior; do not apply homepage geometry globally.
+Homepage styling is scoped through studio-home.css then studio-world.css. Four case pages share case-editorial.css for their dark editorial shell; original screenshots and interactive productStage demos retain their product-specific content and behavior. Service routes remain intact.
 
 **Key Characteristics:**
 
@@ -67,13 +70,13 @@ This is a homepage-scoped system. studio-home.css loads after dark-glass.css onl
 - Compact typography-led hero and photographic covers.
 - White pill actions and subtle sticky-header glass.
 - Native process disclosures and flat FAQ rows.
-- Unchanged product evidence and demos on case pages.
+- Editorial case stories with original product evidence and retained interactive demos.
 
 ## Colors
 
 Ground and surface are the normative homepage pair. Ink supplies primary text and actions; muted gray supplies descriptions. Headline-muted softens the second hero line. Thin translucent white dividers organize lists, while control is used for tags and disclosure circles. Avoid introducing scenery or tinted glass throughout the homepage.
 
-**The Scope Rule.** Apply these tokens to the homepage; preserve the native product themes and existing case interfaces.
+**The Scope Rule.** Apply the dark studio palette to homepage and case editorial shells; preserve native product themes inside screenshots and interactive demos.
 
 ## Typography
 
@@ -83,9 +86,9 @@ Manrope remains the inherited family. Hero typography uses the frontmatter displ
 
 Main content is min(1320px, 93%), reducing to 92% below 800px. The hero uses 1.6fr / 1fr columns, a 40px gap and 96px 0 72px padding. It becomes one column below 800px. The portfolio uses two columns, reducing to one below 540px. Covers maintain a 3:2 aspect ratio rather than a fixed device-stage height.
 
-Services, process and FAQ use 1fr / 1.65fr columns with a 70px gap and 110px top spacing. Below 800px they stack with a 25px gap and 65px top spacing. The contact panel is a separate charcoal block with 52px padding, reduced to 30px 24px on mobile.
+Process and FAQ use 1fr / 1.65fr columns with a 70px gap and 110px top spacing. Below 800px they stack with a 25px gap and 65px top spacing. The contact panel is a separate charcoal block with 52px padding, reduced to 30px 24px on mobile.
 
-The homepage header is sticky at top:0 with 18px 3.5% padding. Below 800px it uses 14px 4%, hides the header CTA and the Agency word, but keeps the three navigation links visible. The homepage no longer uses the original notch or side rail. Existing case navigation is outside this change.
+The homepage header is sticky at top:0 with 18px 3.5% padding. Below 800px it uses 14px 4%, hides the header CTA and the Agency word, but keeps the three navigation links visible. The homepage no longer uses the original notch or side rail. Cases use a separate readable sticky header without a notch.
 
 ## Elevation & Depth
 
@@ -107,7 +110,7 @@ Each cover links to its case. Images fill a 3:2 window using object-fit:cover an
 
 ### Services, process and FAQ
 
-Service rows pair an icon, title, description and case-independent service link. Five native details elements form the process accordion; shared name="process" requests exclusive opening in supporting browsers, and the first starts open. Each contains descriptive tags and two delivery blocks for the discussion/demo checkpoint and output. These are informational, not simulated task-status controls.
+Six service cards pair a title, description and service link with distinct generated editorial images from assets/services. provenance.json and adjacent metadata distinguish these illustrations from client screen captures. The grid has three columns, two below 900px and one below 540px. Five native details elements form the process accordion; shared name="process" requests exclusive opening in supporting browsers, and the first starts open. Each contains descriptive tags and two delivery blocks for the discussion/demo checkpoint and output. These are informational, not simulated task-status controls.
 
 FAQ disclosures are flat rows with thin dividers. Preserve native summary keyboard behavior. The homepage anchor and summary focus ring is 2px white, offset by 5px.
 
@@ -115,14 +118,24 @@ FAQ disclosures are flat rows with thin dividers. Preserve native summary keyboa
 
 Homepage primary CTAs are white with dark text, at least 46px high. Header navigation stays visible on mobile while the header CTA hides. Reduced-motion CSS suppresses homepage transitions and animations. Native scrolling and the existing case demo/dialog behavior remain. No new performance score, device verification or deployment is implied by these source-derived rules.
 
+### Realtime sculpture and footer
+
+src/sculpture/main.mjs implements Three.js terrain and mesh butterflies with pointer/button interaction. Terrain displacement adapts André Mattos / Codrops InteractiveLandscape; NOTICE.md and bundled Three.js/noise licenses retain attribution. The generated 2.5D landscape and beetle no longer describe the active scene. The render loop targets a 30fps cap; DPR is capped at 1.6, or 1.25 below 700px. Pause, reduced motion, offscreen visibility and hidden-tab state suspend continuous rendering. A fallback message handles unavailable WebGL. These limits do not establish measured FPS.
+
+The industry carousel uses native horizontal scroll snap. Footer navigation uses four columns desktop and two mobile, with the dotted LANCER wordmark and abstract sculpture treatment. Preserve pause and reduced-motion behavior.
+
+### Editorial case shell
+
+case-editorial.css applies #141414 ground and #222 surfaces to all four cases. Content width is min(1220px,92%); stories alternate .85fr / 1.3fr columns with 65px gaps and stack below 800px. The 24px-radius cover has a 620px maximum height. The readable sticky header removes the old notch. Capability cards have 19px corners and four columns, two below 800px and one below 540px.
+
+Actual screen captures appear in alternating stories and open the existing lightbox. Only retained productStage sections are interactive demos. Architecture disclosures, technology details, related projects and the footer complete each case. Preserve simulation boundaries and never call static screenshots live interfaces.
+
+Review artifacts in .impeccable/review include desktop/mobile homepage, service and case snapshots plus detect-webgl.json. They record local review, not deployment or universal performance verification.
+
 ## Do's and Don'ts
 
-- **Do** preserve the compact hero → projects → services → process → FAQ → contact sequence.
-- **Do** keep homepage changes scoped and case demos intact.
+- **Do** preserve the compact hero and sculpture → projects → services → industries → process → FAQ → contact sequence.
+- **Do** keep homepage and case editorial shells scoped and product demos intact.
 - **Do** distinguish generated photographic presentations from original product captures.
 - **Don't** restore the CRM hero, workflow scene, long roadmap or CSS device constructions on the homepage.
 - **Don't** invent generator model names, business outcomes or performance claims.
-
-## Lunar garden, services and footer
-
-Homepage loads studio-world.css after studio-home.css. Preserve #141414 canvas and #222 cards. Scene: charcoal basalt, glass botanical forms and a silver beetle, subtle ice-blue highlights; no external scene runtime. Landscape and transparent sprite in assets/garden carry generation provenance. Service grid: 3 columns desktop, 2 below 900px, 1 below 540px; cards use real screen previews and a small hover lift/scale. Industries are a native horizontal scroll-snap list, 260px cards, with desktop previous/next controls. Footer has four columns desktop/two mobile and dotted LANCER letters with staggered 6s movement. Reveal animations run once for 700ms; no always-running JS frame loop. User pause and prefers-reduced-motion disable decorative motion; CSS loops pause offscreen or in hidden tabs.

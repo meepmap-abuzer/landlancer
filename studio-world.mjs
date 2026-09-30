@@ -1,48 +1,12 @@
 const reduced = matchMedia('(prefers-reduced-motion: reduce)');
-const garden = document.querySelector('.lunar-garden');
-const beetle = document.querySelector('.garden-beetle');
-const pause = document.querySelector('.garden-motion');
 let paused = false;
-let moving = false;
-let perch = false;
-let pendingPointer = 0;
+const pause = document.querySelector('.garden-motion');
 const allowed = () => !paused && !reduced.matches;
 const animations = new Set();
 function animate(element, frames, options) {
-  const animation = element.animate(frames, options);
-  animations.add(animation);
-  animation.finished.catch(() => {}).finally(() => animations.delete(animation));
-  return animation;
+ const a=element.animate(frames,options);animations.add(a);
+ a.finished.catch(()=>{}).finally(()=>animations.delete(a));return a;
 }
-function scuttle() {
-  if (!beetle || moving || !allowed()) return;
-  moving = true;
-  perch = !perch;
-  beetle.style.left = perch ? '36%' : '70%';
-  beetle.style.top = perch ? '62%' : '45%';
-  const run = animate(beetle.querySelector('img'), [
-    {transform:'rotate(0deg)'},{transform:'rotate(-12deg) translateY(-3px)',offset:.2},
-    {transform:'rotate(-7deg) translateY(0)',offset:.5},{transform:'rotate(-15deg)',offset:.8},
-    {transform:'rotate(0deg)'}
-  ], {duration:1100,easing:'ease-in-out'});
-  run.finished.catch(() => {}).finally(() => { moving = false; });
-  document.querySelector('.garden-status').textContent = perch ? 'Жук перебрался на другой камень.' : 'Жук вернулся на свой камень.';
-}
-beetle?.addEventListener('pointerenter', event => { if(event.pointerType === 'mouse') scuttle(); });
-beetle?.addEventListener('click', scuttle);
-garden?.addEventListener('pointermove', event => {
-  if (!allowed() || event.pointerType !== 'mouse' || pendingPointer) return;
-  pendingPointer = requestAnimationFrame(() => {
-    const rect = garden.getBoundingClientRect();
-    garden.style.setProperty('--garden-x', `${((event.clientX-rect.left)/rect.width-.5)*10}px`);
-    garden.style.setProperty('--garden-y', `${((event.clientY-rect.top)/rect.height-.5)*6}px`);
-    pendingPointer = 0;
-  });
-});
-garden?.addEventListener('pointerleave', () => {
-  garden.style.setProperty('--garden-x','0px');
-  garden.style.setProperty('--garden-y','0px');
-});
 function syncMotion() {
   document.body.classList.toggle('motion-paused', !allowed());
   if(!allowed()) animations.forEach(animation => animation.cancel());
@@ -55,9 +19,9 @@ syncMotion();
 const visible = new IntersectionObserver(entries => {
   for(const {target,isIntersecting} of entries) target.classList.toggle('is-visible',isIntersecting && !document.hidden);
 }, {threshold:.05});
-[ garden, document.querySelector('.end-art') ].filter(Boolean).forEach(element => visible.observe(element));
+[document.querySelector('.end-art')].filter(Boolean).forEach(element => visible.observe(element));
 document.addEventListener('visibilitychange', () => {
-  [garden,document.querySelector('.end-art')].filter(Boolean).forEach(element => {
+  [document.querySelector('.end-art')].filter(Boolean).forEach(element => {
     const rect = element.getBoundingClientRect();
     element.classList.toggle('is-visible',!document.hidden && rect.bottom>0 && rect.top<innerHeight);
   });
@@ -70,7 +34,7 @@ const reveal = new IntersectionObserver(entries => {
     reveal.unobserve(target);
   });
 },{threshold:.08});
-document.querySelectorAll('.studio-project,.service-tile,.industry-card,.new-section-heading,.studio-process,.seo-faq,.end-contact,.end-columns').forEach(element => reveal.observe(element));
+document.querySelectorAll('.case-story,.case-capability-grid,.case-related,.studio-project,.service-tile,.industry-card,.new-section-heading,.studio-process,.seo-faq,.end-contact,.end-columns').forEach(element => reveal.observe(element));
 const track = document.querySelector('.industry-track');
 const controls = [...document.querySelectorAll('[data-industry-direction]')];
 function updateControls(){
@@ -79,3 +43,5 @@ function updateControls(){
 controls.forEach(button => button.addEventListener('click', () => track.scrollBy({left:Number(button.dataset.industryDirection)*(track.querySelector('.industry-card').offsetWidth+18),behavior:allowed()?'smooth':'instant'})));
 track?.addEventListener('scroll',updateControls,{passive:true});
 if(track){new ResizeObserver(updateControls).observe(track);updateControls();}
+
+if(document.querySelector('.sculpture-stage')) import('/sculpture/scene.js').catch(()=>{document.querySelector('.sculpture-hint').textContent='3D-сцена не загрузилась. Обновите страницу.'});
