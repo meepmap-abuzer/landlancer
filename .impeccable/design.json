@@ -1,252 +1,84 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-28T19:44:17.5097949+05:00",
-  "title": "Design System: Lancer Agency — Light glass and natural photography",
+  "generatedAt": "2026-09-30T17:01:24.3162205+05:00",
+  "title": "Design System: Lancer Agency — Original composition, dark glass",
   "extensions": {
-    "colorMeta": {
-      "rim": {
-        "displayName": "White glass rim",
-        "role": "neutral"
-      },
-      "accent": {
-        "displayName": "Interaction blue",
-        "role": "primary"
-      },
-      "blue": {
-        "displayName": "Interface blue",
-        "role": "primary"
-      },
-      "muted": {
-        "displayName": "Muted navy",
-        "role": "neutral"
-      },
-      "ink": {
-        "displayName": "Navy ink",
-        "role": "neutral"
-      },
-      "surface": {
-        "displayName": "Pale blue ground",
-        "role": "neutral"
-      },
-      "roadmap-ink": {
-        "role": "neutral",
-        "displayName": "Roadmap ink"
-      },
-      "roadmap-widget": {
-        "role": "neutral",
-        "displayName": "Roadmap widget ground"
-      }
-    },
-    "typographyMeta": {
-      "display": {
-        "purpose": "Restored centered headline over the landscape.",
-        "displayName": "Desktop hero"
-      },
-      "headline": {
-        "purpose": "Homepage section hierarchy.",
-        "displayName": "Section heading"
-      }
-    },
     "shadows": [
       {
-        "name": "glass-rim",
-        "purpose": "Inherited glass panels.",
-        "value": "inset 1px 1px 0 #fff,inset -1px -1px 0 #ffffffa8,inset 0 0 0 3px #ffffff18,inset 0 0 14px #ffffff22,0 8px 24px #16395720"
-      },
-      {
-        "name": "crm",
-        "purpose": "CRM over real landscape.",
-        "value": "inset 1px 1px 0 #fff,inset -1px -1px 0 #b4e8ff,0 12px 35px #123f612e"
-      },
-      {
-        "name": "project",
-        "purpose": "Product card frame.",
-        "value": "inset 0 1px 0 #fff,0 12px 35px #173c5810"
-      },
-      {
-        "name": "roadmap-stage",
-        "purpose": "Quiet roadmap stage surface.",
-        "value": "inset 0 1px 0 #fff,0 12px 28px #3d74950a"
+        "name": "quiet-glass",
+        "purpose": "Subdued agency panel separation.",
+        "value": "0 12px 35px #00000012"
       }
     ],
     "motion": [
       {
-        "name": "ease-out",
-        "purpose": "Inherited interface state transitions.",
-        "value": "cubic-bezier(.16,1,.3,1)"
-      },
-      {
-        "name": "navigation-selection",
-        "purpose": "Selection pill only; fixed notch placement does not animate.",
-        "value": "transform .35s var(--ease-out)"
-      },
-      {
-        "name": "heading-reveal",
-        "purpose": "One-time subordinate headings; disabled under reduced motion.",
-        "value": "550ms; 16px; 60ms stagger capped at 180ms"
-      },
-      {
-        "name": "roadmap-reveal",
-        "purpose": "Once per stage; skipped under reduced motion and active animations finish if preference changes.",
-        "value": "800ms; 0/90/180ms stagger; 16px node/copy, 24px widget"
+        "name": "device-hover",
+        "purpose": "CSS device groups; disabled under reduced motion.",
+        "value": "transform .65s cubic-bezier(.16,1,.3,1)"
       }
     ],
     "breakpoints": [
       {
-        "name": "mobile",
-        "value": "760px"
-      },
-      {
-        "name": "narrow",
-        "value": "370px"
-      },
-      {
-        "name": "large",
-        "value": "2000px"
-      },
-      {
-        "value": "1100px",
-        "name": "roadmap-intermediate"
+        "value": "760px",
+        "name": "mobile"
       }
     ],
     "materials": {
-      "sourceOrder": "agency.css, experience.css, playground.css, product demo styles, mobile.css, seo.css, natural.css, roadmap.css",
-      "mobileBlur": "none on glass, top/side navigation, project captions and product stages; about surface retains 2px and indicator retains inherited 1px",
-      "navigation": "top 0 desktop; max(10px,env(safe-area-inset-top)) mobile; height 74px / 49px; mobile width min(340px,calc(100% - 36px))",
-      "desktopBlur": "2px on glass, navigation, about surface, project captions and product stages",
-      "verification": "Source-derived refresh with saved review screenshots; no new FPS, physical-device or deployment claims",
-      "scrolling": "Native scrolling; scrolling background attachment; no Lenis or live SVG lens runtime",
-      "roadmap": "No photographic background or added blur. Sticky 245px aside at top 112px; 70px layout gap. At 1100px aside 185px, gap 55px and single-column stage. At 760px static wrapping stage links."
-    },
-    "assets": [
-      {
-        "mobilePath": "assets/photos/glacier-mobile.webp",
-        "path": "assets/photos/glacier.webp",
-        "source": "https://unsplash.com/photos/a-majestic-mountain-peak-overlooks-a-serene-alpine-lake-Flkv4kpZT6A",
-        "purpose": "Real stock landscape: hero, workflow, contact and 12К case; excluded from homepage project cards",
-        "credit": "Zihao Wang"
-      },
-      {
-        "mobilePath": "assets/photos/lake-mobile.webp",
-        "path": "assets/photos/lake.webp",
-        "source": "https://unsplash.com/photos/a-lake-surrounded-by-mountains-mIj8Cn3oNDg",
-        "purpose": "Real stock landscape: custom development, agency information and 12К ecosystem; removed from homepage approach",
-        "credit": "ConfinedRiley"
-      },
-      {
-        "mobilePath": "assets/photos/forest-mobile.webp",
-        "path": "assets/photos/forest.webp",
-        "source": "https://www.pexels.com/photo/sunlight-filtering-through-majestic-forest-trees-28871326/",
-        "purpose": "Real stock landscape: Gift Roulette and TailCare case pages; excluded from homepage project cards",
-        "credit": "eberhard grossgasteiger"
-      },
-      {
-        "mobilePath": "assets/photos/peaks-mobile.webp",
-        "path": "assets/photos/peaks.webp",
-        "source": "https://unsplash.com/photos/jagged-mountain-peaks-reflecting-in-a-still-alpine-lake-FHL2Pc4sBIY",
-        "purpose": "Real stock landscape: Maverick",
-        "credit": "Sean Oblizalo"
-      },
-      {
-        "purpose": "Retained decorative service illustration sprite; not a replacement landscape",
-        "path": "assets/art/services.webp"
-      },
-      {
-        "purpose": "Supplied logo, unchanged geometry and colors",
-        "path": "assets/brand/lancer.webp"
-      }
-    ]
+      "photography": "Nature backgrounds disabled; exact product screenshots retained",
+      "verification": "No new performance or deployment claims",
+      "logo": "Supplied image with grayscale/invert and screen blending",
+      "source": "dark-glass.css loaded last after restored styles",
+      "glass": "12px desktop blur; mobile scope documented in DESIGN.md"
+    }
   },
   "components": [
     {
-      "name": "Primary action",
+      "name": "White agency action",
       "kind": "button",
-      "description": "Flat dark action on pale glass.",
-      "css": ".ds-action{font:600 13px/1.2 Manrope,Arial,sans-serif;padding:14px 24px;border:1px solid transparent;border-radius:9px;background:#102e3a;color:#fff;cursor:pointer;transition:background .35s,scale .35s}.ds-action:hover{background:#204755}.ds-action:focus-visible{outline:3px solid #0065db;outline-offset:5px}.ds-action:active{scale:.96}@media(prefers-reduced-motion:reduce){.ds-action{transition:none}.ds-action:active{scale:none}}",
+      "description": "White agency control within the restored dark layout.",
       "refersTo": "button-primary",
-      "html": "<button class=\"ds-action\">Обсудить проект</button>"
+      "html": "<button class=\"ds-action\">Обсудить проект</button>",
+      "css": ".ds-action{padding:14px 24px;border:1px solid transparent;border-radius:9px;background:#f4f5f6;color:#16191b;font:600 13px/1.2 Manrope,Arial,sans-serif;cursor:pointer}.ds-action:hover{background:#dce4ea}.ds-action:focus-visible{outline:2px solid #dddddd;outline-offset:5px}"
     },
     {
-      "name": "Original navigation notch",
-      "kind": "nav",
-      "description": "CSS shoulder silhouette; production wrapper is fixed with stable desktop/mobile placement.",
-      "css": ".ds-notch{position:relative;margin:0 38px;width:clamp(250px,60vw,440px);height:74px;padding:10px 28px 16px;background:#f5faffee;border-radius:0 0 38px 38px;font:12px Manrope,Arial,sans-serif}.ds-notch:before,.ds-notch:after{content:\"\";position:absolute;width:38px;height:38px;top:0;left:-37px;background:radial-gradient(circle at 0 100%,transparent 37px,#f5faff 38px)}.ds-notch:after{left:auto;right:-37px;transform:scaleX(-1)}.ds-nav{display:flex;align-items:center;height:46px;padding:4px;border-radius:30px;background:#e1f4ff75;box-shadow:inset 0 1px 0 #fff,0 5px 22px #2f658214;backdrop-filter:blur(2px)}.ds-nav a{flex:1;padding:10px 12px;text-align:center;border-radius:24px;color:#081744;text-decoration:none}.ds-nav a[aria-current],.ds-nav a:hover{background:linear-gradient(130deg,#fff9,#ffffff38);color:#092e50}.ds-nav a:focus-visible{outline:3px solid #0065db;outline-offset:5px}",
-      "refersTo": "navigation",
-      "html": "<div class=\"ds-notch\"><nav class=\"ds-nav\" aria-label=\"Основная навигация\"><a href=\"#works\" aria-current=\"location\">Кейсы</a><a href=\"#services\">Услуги</a><a href=\"#contact\">Контакты</a></nav></div>"
-    },
-    {
-      "name": "Project demo label",
-      "kind": "chip",
-      "css": ".ds-label{display:inline-block;color:#405866;border:1px solid #526e7530;border-radius:20px;padding:7px 10px;white-space:nowrap;font:9px Manrope,Arial,sans-serif}",
-      "description": "Noninteractive status tag on a real product exhibit.",
-      "html": "<span class=\"ds-label\">Интерактивный пример</span>"
-    },
-    {
-      "name": "CRM tab",
-      "kind": "button",
-      "css": ".ds-tab{min-height:36px;padding:8px 12px;border:0;border-radius:6px;background:#0867bf;color:#fff;font:12px Manrope,Arial,sans-serif;cursor:pointer}.ds-tab:hover{background:#1781eb}.ds-tab:focus-visible{outline:3px solid #0065db;outline-offset:5px}",
-      "description": "Interactive local CRM filter; selected state is shown in this specimen.",
-      "html": "<button class=\"ds-tab\" aria-pressed=\"true\">Все</button>"
-    },
-    {
-      "css": ".ds-stage{padding:32px;border:1px solid #c9dfeec9;border-radius:24px;background:linear-gradient(120deg,#ffffffeb,#edf7ffb8);box-shadow:inset 0 1px 0 #fff,0 12px 28px #3d74950a;color:#102b48;font-family:Manrope,Arial,sans-serif}.ds-stage h3{font-size:25px;line-height:1.18;letter-spacing:-.035em;font-weight:650;margin:0 0 16px}.ds-stage>p{font-size:14px;line-height:1.7;color:#3e5c74;margin:0}.ds-result{margin-top:20px;padding-top:17px;border-top:1px solid #cadde8}.ds-result>span{font-size:11px;color:#496b82}.ds-result p{font-size:13px;line-height:1.6;font-weight:600;margin:5px 0 0}",
-      "name": "Roadmap stage",
-      "html": "<article class=\"ds-stage\"><h3>Разрабатываем по частям</h3><p>Проверяем каждый законченный сценарий и показываем его в работающей версии.</p><div class=\"ds-result\"><span>На выходе</span><p>Рабочие функции на тестовом адресе.</p></div></article>",
-      "description": "Sequential process explanation with discussion checkpoint, deliverable and a local widget.",
-      "refersTo": "roadmap-stage",
-      "kind": "card"
-    },
-    {
-      "css": ".ds-widget{padding:20px;background:#e4f0f8;border:1px solid #d4e6f3;border-radius:18px;box-shadow:inset 0 1px 0 #fff;font-family:Manrope,Arial,sans-serif}.ds-toggle{display:flex;gap:3px;padding:3px;background:#d3e5f2;border-radius:10px}.ds-toggle button{flex:1;min-height:34px;font-size:11px;border:0;background:transparent;color:#32546e;border-radius:7px;cursor:pointer}.ds-toggle button[aria-pressed=true]{background:#fff;color:#0d3d61;box-shadow:0 2px 5px #16466812}.ds-toggle button:focus-visible{outline:2px solid #077ac4;outline-offset:4px}",
-      "name": "Roadmap design switch",
-      "html": "<div class=\"ds-widget\"><div class=\"ds-toggle\" role=\"group\" aria-label=\"Пример интерфейса\"><button aria-pressed=\"true\">Прототип</button><button aria-pressed=\"false\">Макет</button></div></div>",
-      "description": "Selected-state specimen; production scoped handlers update aria-pressed and the local preview.",
-      "refersTo": "roadmap-widget",
-      "kind": "custom"
-    },
-    {
-      "name": "Roadmap checklist",
-      "description": "Native local checklist; production change handlers update the demonstration count and progress.",
-      "css": ".ds-check{display:flex;align-items:center;gap:9px;padding:14px 0;border-bottom:1px solid #c9dfed;font:12px/1.5 Manrope,Arial,sans-serif;color:#102b48;cursor:pointer}.ds-check input{width:17px;height:17px;accent-color:#147bb1;flex-shrink:0}.ds-check input:focus-visible{outline:2px solid #077ac4;outline-offset:4px}",
-      "kind": "input",
-      "html": "<label class=\"ds-check\"><input type=\"checkbox\"><span>Заявка доходит до получателя</span></label>"
+      "name": "Quiet glass panel",
+      "html": "<section class=\"ds-glass\"><h3>Есть идея проекта?</h3><p>Обсудим первую версию.</p></section>",
+      "kind": "card",
+      "description": "Material specimen; production retains the original component geometry.",
+      "css": ".ds-glass{padding:24px;border-radius:26px;border:1px solid #ffffff12;background:#222222;box-shadow:0 12px 35px #00000012;backdrop-filter:blur(12px);font-family:Manrope,Arial,sans-serif;color:#f4f4f4}.ds-glass h3{margin:0 0 12px}.ds-glass p{margin:0;color:#aaaaaa}@media(max-width:760px){.ds-glass{backdrop-filter:none}}"
     }
   ],
   "narrative": {
-    "northStar": "Light glass in a real landscape.",
-    "overview": "The restored agency layout combines pale blue surroundings, navy typography, translucent glass and real mountain, lake and forest photographs. The pictures supply natural texture and lighting; interface panels provide a stable reading surface. Product demonstrations retain their native themes and remain the evidence of delivered work.\r\n\r\nThe user revoked the orbital/sculpted revision and asked to return to the earlier light layout while changing background imagery. Preserve the incumbent geometry, Manrope and the supplied Lancer logo. natural.css defines the landscape treatment; roadmap.css follows it for the scoped roadmap and quiet homepage project backgrounds; orbital.css and decorative sculpted SVG surfaces are no longer loaded. The logo uses assets/brand/lancer.webp without recoloring or distorting the original mark.",
     "keyCharacteristics": [
-      "Real stock photography beneath pale readability overlays.",
-      "Light glass panels with white rims and restrained blue accents.",
-      "Original notch silhouette and rounded lower hero panels.",
-      "Native product themes and source-derived demonstrations.",
-      "Native scrolling and stable navigation placement."
-    ],
-    "rules": [
-      {
-        "name": "Readable Landscape Rule",
-        "section": "colors",
-        "body": "Keep natural photography visible where retained while providing pale panels behind supporting text; keep homepage product exhibits and the development roadmap free of photographic backgrounds."
-      },
-      {
-        "name": "Native Scroll Rule",
-        "section": "elevation",
-        "body": "Preserve browser wheel and touch scrolling, scrolling background attachment and stable header placement; do not restore Lenis, live SVG lenses or a perpetual scroll animation loop."
-      }
-    ],
-    "dos": [
-      "Do extend the restored light world with quiet sequential process surfaces.",
-      "Do use real, locally hosted landscape photographs with recorded source and license provenance.",
-      "Do keep supporting text readable and homepage project demos free of photo backgrounds.",
-      "Do retain the supplied logo, Manrope and each product's native theme.",
-      "Do preserve native scrolling and stable navigation placement."
+      "Original notch and CRM composition.",
+      "Quiet dark glass with thin low-contrast borders.",
+      "White agency actions and pale blue accents.",
+      "Exact product captures inside CSS device mockups.",
+      "Retained case demos, roadmap and native scrolling."
     ],
     "donts": [
-      "Don't reintroduce the revoked orbital or sculpted-surface design contract.",
-      "Don't generate replacement landscape art for this stock-photography revision.",
-      "Don't treat decorative photos or service art as evidence of delivered products.",
-      "Don't propagate inherited decorative eyebrows as a system primitive.",
-      "Don't infer deployment, physical-device performance or new test results from this documentation."
+      "Don't reintroduce nature backgrounds or the rejected editorial composition.",
+      "Don't invent product imagery, business outcomes or performance claims."
+    ],
+    "overview": "Retain the original notch, CRM hero, lower panels and complete section sequence. Dark graphite, pale type, subdued translucent panels and white actions replace the light photographic treatment. The user rejected the editorial alternative; its article/catalog composition is not active authority.\n\nThe restored styles establish geometry, while dark-glass.css loads last and controls materials. The supplied image logo remains, displayed with grayscale/invert and screen blending in this theme. No nature imagery is loaded and no new image generation was used.",
+    "rules": [
+      {
+        "name": "Original Composition Rule",
+        "body": "Preserve the restored layout and section sequence; apply the dark material without introducing the rejected editorial geometry.",
+        "section": "overview"
+      },
+      {
+        "name": "Quiet Glass Rule",
+        "body": "Use subdued translucent fills and thin edges; do not restore bright glass bevels or landscape scenery.",
+        "section": "elevation"
+      }
+    ],
+    "northStar": "Original composition, quiet dark glass.",
+    "dos": [
+      "Do preserve the original notch/CRM layout and complete section sequence.",
+      "Do use subdued dark glass, thin borders and white agency buttons.",
+      "Do compose device mockups around exact original product captures.",
+      "Do retain interactive demos on cases and local roadmap behavior."
     ]
   }
 }
