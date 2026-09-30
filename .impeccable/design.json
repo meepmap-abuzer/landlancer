@@ -43,7 +43,29 @@
         "value": "540px",
         "name": "single-column-projects"
       }
-    ]
+    ],
+    "lunarWorld": {
+      "stylesheet": "studio-world.css",
+      "script": "studio-world.mjs",
+      "scene": "2.5D generated lunar garden, transparent chrome beetle",
+      "cards": {
+        "background": "#222222",
+        "radius": "22px",
+        "columns": [
+          3,
+          2,
+          1
+        ]
+      },
+      "motion": {
+        "revealMs": 700,
+        "beetleMs": 1100,
+        "pause": true,
+        "reducedMotion": true,
+        "offscreenSuspension": true
+      },
+      "footer": "four-column navigation and dotted LANCER over garden"
+    }
   },
   "components": [
     {

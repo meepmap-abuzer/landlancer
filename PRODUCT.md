@@ -22,3 +22,7 @@ The five native process disclosures cover discovery, interface design, developme
 ## Durable requirements
 
 Preserve service and privacy routes, SEO content and metadata, existing domain configuration, native scrolling, keyboard access, reduced-motion support, case screenshot dialogs and product demo boundaries. Homepage branding is the compact icon plus Lancer Agency text; case branding and navigation retain their existing implementation. No nature-background imagery belongs to the homepage. Documentation does not authorize deployment or establish new browser, device or FPS verification.
+
+## Lunar garden extension — September 30, 2026
+
+Approved miniature lunar garden implemented as generated 2.5D photographic landscape and transparent chrome beetle, not a realtime 3D model. The beetle changes perches on hover, tap or keyboard; pointer movement adds slight scene depth. Six service preview cards link to existing service pages. Industry carousel links three actual case categories and three explicitly labelled design concepts. Homepage footer now has contact, four navigation columns and a dotted animated LANCER wordmark over the garden. Case pages remain unchanged. Native scrolling, pause control, reduced-motion and offscreen/hidden-tab suspension are retained.

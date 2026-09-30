@@ -122,3 +122,7 @@ Homepage primary CTAs are white with dark text, at least 46px high. Header navig
 - **Do** distinguish generated photographic presentations from original product captures.
 - **Don't** restore the CRM hero, workflow scene, long roadmap or CSS device constructions on the homepage.
 - **Don't** invent generator model names, business outcomes or performance claims.
+
+## Lunar garden, services and footer
+
+Homepage loads studio-world.css after studio-home.css. Preserve #141414 canvas and #222 cards. Scene: charcoal basalt, glass botanical forms and a silver beetle, subtle ice-blue highlights; no external scene runtime. Landscape and transparent sprite in assets/garden carry generation provenance. Service grid: 3 columns desktop, 2 below 900px, 1 below 540px; cards use real screen previews and a small hover lift/scale. Industries are a native horizontal scroll-snap list, 260px cards, with desktop previous/next controls. Footer has four columns desktop/two mobile and dotted LANCER letters with staggered 6s movement. Reveal animations run once for 700ms; no always-running JS frame loop. User pause and prefers-reduced-motion disable decorative motion; CSS loops pause offscreen or in hidden tabs.
