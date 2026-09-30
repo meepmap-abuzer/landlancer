@@ -1,29 +1,24 @@
 # Lancer Agency — product brief
 
-Russian agency portfolio at landlancer.ru. Lancer builds custom websites, Telegram Mini Apps, CRM, administration tools and integrations for founders and business teams. The principal contact action opens the agency's Telegram conversation.
+Russian agency portfolio at landlancer.ru. Lancer builds websites, Telegram Mini Apps, CRM, administration tools and integrations for founders and business teams. Contact actions open the agency Telegram conversation.
 
-## Current direction — September 30, 2026
+## Current homepage — September 30, 2026
 
-The user rejected the editorial redesign and explicitly restored the original notch/CRM composition and all homepage sections. The active branch is based on archive/pre-editorial-redesign; the rejected editorial branch is preserved separately. Change the materials to restrained dark glass, thin borders and white agency actions. dark-glass.css loads last after the restored styles and roadmap. No nature backgrounds are loaded, and no image generation was used.
+The user rejected the dark CRM hero, counter/workflow scene, long roadmap and CSS device mockups. The active homepage now follows this sequence: compact text hero, four photographic product covers, service rows, native process accordion, flat FAQ and contact. Its ground is #141414, card surfaces #222 and primary actions white. studio-home.css loads last on the homepage, scoped with studio-home. Existing cases and their interactive demos remain unchanged by this homepage revision.
 
-The homepage retains its CRM hero, lower panels, services, custom development, workflow, portfolio, five-stage roadmap, agency information, FAQ and contact. Portfolio entries are now static CSS laptop/phone mockups composed around exact original product captures via src/project-cover.mjs. They link to cases; interactive product demonstrations remain on the case pages. Preserve the original notch and mobile navigation behavior, supplied image logo, native scrolling and existing SEO routes.
-## Portfolio scope
+The four assets under assets/covers are generated photographic presentations based on real product UI references, not literal unedited product screenshots or documentary photographs. The available image generator was used; its model was not selectable, so do not assert a named model. The four WebP assets total approximately 621 KB; originals remain under .codex/generated_images. Case screenshots and demos remain the authoritative interface evidence. No CSS laptop/phone constructions remain in the active homepage covers.
 
-- Maverick: Mini App with QR activation, points, roulette, tasks and merchandise; the portfolio offers a local prize-strip demo and participant profile.
-- Gift Roulette: four game interfaces, profile, inventory and Telegram administration; the portfolio offers locally simulated Mines, Case, Crash and Upgrade interactions.
-- TailCare: pet listings, search, community and Telegram publishing; the portfolio offers original animal cards with local search, category filters and favorites.
-- 12К: a full case covering the Mini App and Loyalty API business portal; the portfolio includes the original flipping loyalty card, demonstration QR, local daily bonus, Stack and an actual dashboard capture.
+## Portfolio and process
 
-No invented commercial results. Real captures and reused product components provide evidence. CSS device framing and the retained service illustrations are decorative assets, never screenshots of delivered products. DEMOS.md records source reuse and simulation boundaries. Portfolio demonstrations use local state without authentication, production transactions, real prizes, payouts or loyalty-point issuance.
+- Maverick: loyalty Mini App covering QR activation, points, tasks, rewards and merchandise.
+- 12К: Mini App and Loyalty API business portal, with the full case and retained local card, QR, bonus and Stack demonstrations.
+- Gift Roulette: four game interfaces and Telegram administration, with locally simulated case, Mines, Crash and Upgrade demonstrations.
+- TailCare: pet listings, search, community and Telegram publishing, with retained local filtering and favorites.
 
-## Experience and content
+Homepage covers link to the corresponding cases. DEMOS.md records source reuse and simulation boundaries. Do not invent commercial outcomes or imply real prizes, payments, loyalty issuance or authenticated transactions in the portfolio demos.
 
-The homepage presents services, a custom-development offer, a four-step request demonstration, four static product mockup covers, project delivery stages, agency information, FAQ and contact. The development roadmap replaces the lake-backed delivery scene with five sequential stages: task definition, design, development, QA and launch. Every stage explains its discussion/demo checkpoint and deliverable. Desktop stage navigation is sticky; mobile navigation wraps. Local widgets illustrate MVP scope, prototype versus visual design, task progression, an acceptance checklist and handoff materials. They do not display real project status, submit data or promise durations, metrics or named team members. Homepage covers use CSS studio gradients and exact original captures; nature photographs are disabled throughout the active theme. Case pages center their introduction above the existing light glass exhibit, preserve each embedded product's theme, explain features and offer an expandable gallery of real captures. Dedicated service and privacy pages remain part of the site.
+The five native process disclosures cover discovery, interface design, development, QA and handoff. Each explains the discussion or demonstration checkpoint and resulting deliverable. The first is initially open. They replace the long interactive roadmap; no timeline, task-status widget, checklist or invented duration is promised on the homepage.
 
-Keep keyboard-friendly CRM and product controls, native disclosures, screenshot-dialog focus restoration and reduced-motion support. The request sequence is an illustrative local interaction, not a submitted agency lead form. Preserve the supplied logo's geometry and colors and the existing domain configuration.
+## Durable requirements
 
-## Delivery and verification boundaries
-
-The site builds as a static GitHub Pages package. Responsive behavior is intended across mobile and desktop, with content-driven mobile layouts and native scrolling. Source implementation and saved screenshots do not establish hardware FPS, Safari or physical-device performance. Historical results in DEMOS.md describe their stated revision; do not turn them into fresh verification claims. This documentation refresh does not deploy or authorize production changes.
-
-
+Preserve service and privacy routes, SEO content and metadata, existing domain configuration, native scrolling, keyboard access, reduced-motion support, case screenshot dialogs and product demo boundaries. Homepage branding is the compact icon plus Lancer Agency text; case branding and navigation retain their existing implementation. No nature-background imagery belongs to the homepage. Documentation does not authorize deployment or establish new browser, device or FPS verification.

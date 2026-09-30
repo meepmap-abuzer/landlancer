@@ -1,0 +1,26 @@
+[
+  {
+    "file": "maverick.webp",
+    "reference": "assets/screenshots/club-home.webp",
+    "tool": "built-in image_gen; model selection unavailable",
+    "prompt": "Create ONE premium photographic website portfolio cover, landscape 3:2 composition. One graphite smartphone resting diagonally on a sculptural burgundy leather lounge chair, warm cream studio wall, beautiful tactile leather stitching. The attached image is the exact app screenshot: place it faithfully on the device screen, preserving its recognizable layout, colors, logo, text and imagery. Device must be physically realistic, fully inside frame, screen large and legible, subtle three-quarter camera perspective. High-end restrained art direction, beautiful material detail, soft realistic shadows, editorial product shot. No additional text, captions, labels, floating UI, decorative icons, nature landscapes or extra screens. No fake fantasy hardware. Screen is the focal point."
+  },
+  {
+    "file": "loyalty.webp",
+    "reference": "assets/screenshots/12k-dashboard.webp",
+    "tool": "built-in image_gen; model selection unavailable",
+    "prompt": "Create ONE premium photographic website portfolio cover, landscape 3:2 composition. One open aluminum laptop on a translucent frosted acrylic circular low pedestal, pale grey seamless studio, precise industrial photography. The attached image is the exact app screenshot: place it faithfully on the device screen, preserving its recognizable layout, colors, logo, text and imagery. Device must be physically realistic, fully inside frame, screen large and legible, subtle three-quarter camera perspective. High-end restrained art direction, beautiful material detail, soft realistic shadows, editorial product shot. No additional text, captions, labels, floating UI, decorative icons, nature landscapes or extra screens. No fake fantasy hardware. Screen is the focal point."
+  },
+  {
+    "file": "gift-roulette.webp",
+    "reference": "assets/screenshots/gift-home-current.webp",
+    "tool": "built-in image_gen; model selection unavailable",
+    "prompt": "Create ONE premium photographic website portfolio cover, landscape 3:2 composition. One graphite smartphone leaning against an architectural lime-green tubular chair arm, charcoal studio background, playful premium product photography. The attached image is the exact app screenshot: place it faithfully on the device screen, preserving its recognizable layout, colors, logo, text and imagery. Device must be physically realistic, fully inside frame, screen large and legible, subtle three-quarter camera perspective. High-end restrained art direction, beautiful material detail, soft realistic shadows, editorial product shot. No additional text, captions, labels, floating UI, decorative icons, nature landscapes or extra screens. No fake fantasy hardware. Screen is the focal point."
+  },
+  {
+    "file": "tailcare.webp",
+    "reference": "assets/screenshots/pets-home.webp",
+    "tool": "built-in image_gen; model selection unavailable",
+    "prompt": "Create ONE premium photographic website portfolio cover, landscape 3:2 composition. One open graphite laptop resting on a natural oak chair with cream boucle cushion, pale warm studio backdrop, soft daylight. The attached image is the exact app screenshot: place it faithfully on the device screen, preserving its recognizable layout, colors, logo, text and imagery. Device must be physically realistic, fully inside frame, screen large and legible, subtle three-quarter camera perspective. High-end restrained art direction, beautiful material detail, soft realistic shadows, editorial product shot. No additional text, captions, labels, floating UI, decorative icons, nature landscapes or extra screens. No fake fantasy hardware. Screen is the focal point."
+  }
+]

@@ -1,84 +1,118 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-30T17:01:24.3162205+05:00",
-  "title": "Design System: Lancer Agency — Original composition, dark glass",
+  "generatedAt": "2026-09-30T17:29:04.2333649+05:00",
+  "title": "Design System: Lancer Agency — Compact dark studio",
   "extensions": {
-    "shadows": [
+    "assets": [
       {
-        "name": "quiet-glass",
-        "purpose": "Subdued agency panel separation.",
-        "value": "0 12px 35px #00000012"
+        "purpose": "Generated photographic presentation based on real UI references, not an unedited screenshot",
+        "path": "assets/covers/maverick.webp"
+      },
+      {
+        "purpose": "Generated photographic presentation based on real UI references, not an unedited screenshot",
+        "path": "assets/covers/loyalty.webp"
+      },
+      {
+        "purpose": "Generated photographic presentation based on real UI references, not an unedited screenshot",
+        "path": "assets/covers/gift-roulette.webp"
+      },
+      {
+        "purpose": "Generated photographic presentation based on real UI references, not an unedited screenshot",
+        "path": "assets/covers/tailcare.webp"
       }
     ],
+    "materials": {
+      "header": "rgba(20,20,20,.93); backdrop-filter:blur(14px); border-bottom:1px solid #ffffff10",
+      "cases": "Existing case layout, source captures and demos unchanged",
+      "provenance": "Four generated photographic UI-reference covers, approximately 621 KB combined WebP; originals .codex/generated_images; generator model not selectable",
+      "scope": "Homepage studio-home only; studio-home.css after dark-glass.css"
+    },
     "motion": [
       {
-        "name": "device-hover",
-        "purpose": "CSS device groups; disabled under reduced motion.",
-        "value": "transform .65s cubic-bezier(.16,1,.3,1)"
+        "purpose": "Photographic covers; disabled under reduced motion.",
+        "name": "cover-hover",
+        "value": "transform .45s ease; scale(1.025)"
       }
     ],
     "breakpoints": [
       {
-        "value": "760px",
-        "name": "mobile"
+        "value": "800px",
+        "name": "stacked-sections"
+      },
+      {
+        "value": "540px",
+        "name": "single-column-projects"
       }
-    ],
-    "materials": {
-      "photography": "Nature backgrounds disabled; exact product screenshots retained",
-      "verification": "No new performance or deployment claims",
-      "logo": "Supplied image with grayscale/invert and screen blending",
-      "source": "dark-glass.css loaded last after restored styles",
-      "glass": "12px desktop blur; mobile scope documented in DESIGN.md"
-    }
+    ]
   },
   "components": [
     {
-      "name": "White agency action",
       "kind": "button",
-      "description": "White agency control within the restored dark layout.",
-      "refersTo": "button-primary",
+      "description": "Homepage white pill CTA.",
+      "css": ".ds-action{min-height:46px;padding:12px 22px;border:1px solid transparent;border-radius:30px;background:#f4f4f4;color:#141414;font:600 14px Manrope,Arial,sans-serif;cursor:pointer}.ds-action:focus-visible{outline:2px solid #fff;outline-offset:5px}",
+      "name": "White primary action",
       "html": "<button class=\"ds-action\">Обсудить проект</button>",
-      "css": ".ds-action{padding:14px 24px;border:1px solid transparent;border-radius:9px;background:#f4f5f6;color:#16191b;font:600 13px/1.2 Manrope,Arial,sans-serif;cursor:pointer}.ds-action:hover{background:#dce4ea}.ds-action:focus-visible{outline:2px solid #dddddd;outline-offset:5px}"
+      "refersTo": "button-primary"
     },
     {
-      "name": "Quiet glass panel",
-      "html": "<section class=\"ds-glass\"><h3>Есть идея проекта?</h3><p>Обсудим первую версию.</p></section>",
+      "description": "Native disclosure; production group shares name process and first item starts open.",
+      "html": "<details class=\"ds-process\" open><summary>Разбираемся в задаче</summary><p>Обсуждаем пользователей, сценарии и ограничения.</p><div class=\"ds-delivery\">На выходе: согласованный состав MVP.</div></details>",
       "kind": "card",
-      "description": "Material specimen; production retains the original component geometry.",
-      "css": ".ds-glass{padding:24px;border-radius:26px;border:1px solid #ffffff12;background:#222222;box-shadow:0 12px 35px #00000012;backdrop-filter:blur(12px);font-family:Manrope,Arial,sans-serif;color:#f4f4f4}.ds-glass h3{margin:0 0 12px}.ds-glass p{margin:0;color:#aaaaaa}@media(max-width:760px){.ds-glass{backdrop-filter:none}}"
+      "name": "Process disclosure",
+      "css": ".ds-process{border-block:1px solid #ffffff20;color:#f4f4f4;font-family:Manrope,Arial,sans-serif}.ds-process summary{padding:25px 0;font-size:23px;font-weight:500;cursor:pointer}.ds-process p{color:#aaa;font-size:15px;line-height:1.7}.ds-delivery{padding:24px;margin-bottom:26px;background:#222;border-radius:16px;font-size:14px}.ds-process summary:focus-visible{outline:2px solid #fff;outline-offset:5px}"
+    },
+    {
+      "description": "Informational process topic.",
+      "html": "<span class=\"ds-tag\">Состав MVP</span>",
+      "kind": "chip",
+      "name": "Process tag",
+      "css": ".ds-tag{display:inline-block;background:#292929;color:#f4f4f4;padding:9px 14px;border-radius:8px;font:12px Manrope,Arial,sans-serif}"
+    },
+    {
+      "description": "Native FAQ disclosure without a rounded card shell.",
+      "html": "<details class=\"ds-faq\"><summary>Как начинается работа?</summary><p>Обсуждаем задачу и первую версию.</p></details>",
+      "kind": "card",
+      "name": "Flat FAQ row",
+      "css": ".ds-faq{border-bottom:1px solid #ffffff22;color:#f4f4f4;font-family:Manrope,Arial,sans-serif}.ds-faq summary{padding:24px 0;font-size:16px;cursor:pointer}.ds-faq p{padding:0 30px 22px 0;margin:0;color:#aaa;font-size:15px;line-height:1.7}.ds-faq summary:focus-visible{outline:2px solid #fff;outline-offset:5px}"
+    },
+    {
+      "description": "Sticky homepage header specimen; mobile retains navigation links and hides CTA.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Основная навигация\"><a href=\"#works\">Проекты</a><a href=\"#services\">Услуги</a><a href=\"#approach\">Процесс</a></nav>",
+      "kind": "nav",
+      "name": "Studio navigation",
+      "css": ".ds-nav{display:flex;gap:28px;padding:18px 24px;background:rgba(20,20,20,.93);backdrop-filter:blur(14px);border-bottom:1px solid #ffffff10;font:14px Manrope,Arial,sans-serif}.ds-nav a{color:#bdbdbd;text-decoration:none}.ds-nav a:hover{color:#fff}.ds-nav a:focus-visible{outline:2px solid #fff;outline-offset:5px}"
     }
   ],
   "narrative": {
     "keyCharacteristics": [
-      "Original notch and CRM composition.",
-      "Quiet dark glass with thin low-contrast borders.",
-      "White agency actions and pale blue accents.",
-      "Exact product captures inside CSS device mockups.",
-      "Retained case demos, roadmap and native scrolling."
+      "Exact near-black ground and charcoal card surfaces.",
+      "Compact typography-led hero and photographic covers.",
+      "White pill actions and subtle sticky-header glass.",
+      "Native process disclosures and flat FAQ rows.",
+      "Unchanged product evidence and demos on case pages."
+    ],
+    "dos": [
+      "Do preserve the compact hero → projects → services → process → FAQ → contact sequence.",
+      "Do keep homepage changes scoped and case demos intact.",
+      "Do distinguish generated photographic presentations from original product captures."
     ],
     "donts": [
-      "Don't reintroduce nature backgrounds or the rejected editorial composition.",
-      "Don't invent product imagery, business outcomes or performance claims."
+      "Don't restore the CRM hero, workflow scene, long roadmap or CSS device constructions on the homepage.",
+      "Don't invent generator model names, business outcomes or performance claims."
     ],
-    "overview": "Retain the original notch, CRM hero, lower panels and complete section sequence. Dark graphite, pale type, subdued translucent panels and white actions replace the light photographic treatment. The user rejected the editorial alternative; its article/catalog composition is not active authority.\n\nThe restored styles establish geometry, while dark-glass.css loads last and controls materials. The supplied image logo remains, displayed with grayscale/invert and screen blending in this theme. No nature imagery is loaded and no new image generation was used.",
+    "northStar": "Compact dark studio.",
     "rules": [
       {
-        "name": "Original Composition Rule",
-        "body": "Preserve the restored layout and section sequence; apply the dark material without introducing the rejected editorial geometry.",
-        "section": "overview"
+        "body": "Apply these tokens to the homepage; preserve the native product themes and existing case interfaces.",
+        "section": "colors",
+        "name": "Scope Rule"
       },
       {
-        "name": "Quiet Glass Rule",
-        "body": "Use subdued translucent fills and thin edges; do not restore bright glass bevels or landscape scenery.",
-        "section": "elevation"
+        "body": "Keep content surfaces flat and separate them with tone, spacing and thin dividers; reserve glass for the header and small image overlays.",
+        "section": "elevation",
+        "name": "Flat Content Rule"
       }
     ],
-    "northStar": "Original composition, quiet dark glass.",
-    "dos": [
-      "Do preserve the original notch/CRM layout and complete section sequence.",
-      "Do use subdued dark glass, thin borders and white agency buttons.",
-      "Do compose device mockups around exact original product captures.",
-      "Do retain interactive demos on cases and local roadmap behavior."
-    ]
+    "overview": "The homepage uses a restrained text introduction, four photographic project covers and a short sequence of services, process, FAQ and contact. Near-black and charcoal surfaces provide the frame; actual product stories remain the purpose. The CRM hero, workflow scene, long roadmap and CSS devices are superseded on this surface.\n\nThis is a homepage-scoped system. studio-home.css loads after dark-glass.css only on the homepage. Case layouts, original screenshots, interactive demos and service routes retain their existing styles and behavior; do not apply homepage geometry globally."
   }
 }

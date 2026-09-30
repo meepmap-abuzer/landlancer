@@ -1,166 +1,124 @@
 ---
-name: Lancer Agency — Original composition, dark glass
-description: Original notch and CRM layout with quiet dark glass and source-capture device mockups.
+name: Lancer Agency — Compact dark studio
+description: Compact dark homepage with photographic product covers, native disclosures and retained case demos.
 colors:
+  ground: "#141414"
+  surface: "#222"
   ink: "#f4f4f4"
-  muted: "#aaaaaa"
-  blue: "#dddddd"
-  surface: "#141414"
-  rim: "#ffffff18"
-  accent: "#e5e5e5"
-  action: "#f4f5f6"
-  action-hover: "#dce4ea"
-  glass: "#222222"
-  roadmap-ink: "#f4f4f4"
-  roadmap-copy: "#acbac5"
-  roadmap-widget: "#2c2c2c"
-  roadmap-selected: "#34424c"
-  roadmap-focus: "#077ac4"
+  muted: "#aaa"
+  headline-muted: "#a7a7a7"
+  line: "#ffffff22"
+  control: "#292929"
 typography:
   display:
     fontFamily: "Manrope, Arial, sans-serif"
-    fontSize: "clamp(48px, 4.7vw, 108px)"
-    fontWeight: 650
-    lineHeight: 1.02
-    letterSpacing: "-.04em"
+    fontSize: "clamp(42px, 5.3vw, 76px)"
+    fontWeight: 600
+    lineHeight: 1.06
+    letterSpacing: "-.065em"
   headline:
     fontFamily: "Manrope, Arial, sans-serif"
-    fontSize: "clamp(34px, 3.1vw, 68px)"
-    fontWeight: 650
-    lineHeight: 1.08
-    letterSpacing: "-.04em"
-  roadmap-heading:
-    fontFamily: "Manrope, Arial, sans-serif"
-    fontSize: "clamp(36px, 4vw, 60px)"
-    fontWeight: 650
-    lineHeight: 1.04
-    letterSpacing: "-.04em"
-  roadmap-title:
-    fontFamily: "Manrope, Arial, sans-serif"
-    fontSize: "25px"
-    fontWeight: 650
-    lineHeight: 1.18
-    letterSpacing: "-.035em"
-  body:
-    fontFamily: "Manrope, Arial, sans-serif"
-    lineHeight: 1.5
+    fontSize: "clamp(28px, 3vw, 42px)"
+    lineHeight: 1.16
+    letterSpacing: "-.055em"
   button:
     fontFamily: "Manrope, Arial, sans-serif"
-    fontSize: "13px"
+    fontSize: "14px"
     fontWeight: 600
-    lineHeight: 1.2
 rounded:
-  action: "9px"
-  hero-panel: "26px"
-  project: "24px"
-  roadmap-stage: "24px"
-  roadmap-widget: "18px"
-  navigation: "0 0 38px 38px"
+  action: "30px"
+  project: "22px"
+  photo: "13px"
+  delivery: "16px"
+  contact: "24px"
 spacing:
-  gutter: "clamp(24px, 6vw, 160px)"
-  mobile-gutter: "18px"
-  project-gap: "26px"
-  roadmap-layout-gap: "70px"
-  roadmap-stage-gap: "26px"
+  catalog-gap: "22px"
+  section-gap: "70px"
 components:
   button-primary:
-    backgroundColor: "{colors.action}"
-    textColor: "#16191b"
-    typography: "{typography.button}"
+    backgroundColor: "{colors.ink}"
+    textColor: "{colors.ground}"
     rounded: "{rounded.action}"
-    padding: "14px 24px"
-  button-primary-hover:
-    backgroundColor: "{colors.action-hover}"
-  navigation:
-    backgroundColor: "#141414f0"
-    width: "clamp(370px, 29vw, 540px)"
-    height: "74px"
-    rounded: "{rounded.navigation}"
-    padding: "10px 28px 16px"
-  roadmap-stage:
-    textColor: "{colors.roadmap-ink}"
-    rounded: "{rounded.roadmap-stage}"
-    padding: "32px"
-  roadmap-widget:
-    backgroundColor: "{colors.roadmap-widget}"
-    rounded: "{rounded.roadmap-widget}"
-    padding: "20px"
+    typography: "{typography.button}"
+    padding: "12px 22px"
   project-card:
+    backgroundColor: "{colors.surface}"
     rounded: "{rounded.project}"
     padding: "12px"
+  process-delivery:
+    backgroundColor: "{colors.surface}"
+    rounded: "{rounded.delivery}"
+    padding: "24px"
 ---
 
 # Design System: Lancer Agency
 
 ## Overview
 
-**Creative North Star: "Original composition, quiet dark glass."**
+**Creative North Star: "Compact dark studio."**
 
-Retain the original notch, CRM hero, lower panels and complete section sequence. Dark graphite, pale type, subdued translucent panels and white actions replace the light photographic treatment. The user rejected the editorial alternative; its article/catalog composition is not active authority.
+The homepage uses a restrained text introduction, four photographic project covers and a short sequence of services, process, FAQ and contact. Near-black and charcoal surfaces provide the frame; actual product stories remain the purpose. The CRM hero, workflow scene, long roadmap and CSS devices are superseded on this surface.
 
-The restored styles establish geometry, while dark-glass.css loads last and controls materials. The supplied image logo remains, displayed with grayscale/invert and screen blending in this theme. No nature imagery is loaded and no new image generation was used.
+This is a homepage-scoped system. studio-home.css loads after dark-glass.css only on the homepage. Case layouts, original screenshots, interactive demos and service routes retain their existing styles and behavior; do not apply homepage geometry globally.
 
 **Key Characteristics:**
 
-- Original notch and CRM composition.
-- Quiet dark glass with thin low-contrast borders.
-- White agency actions and pale blue accents.
-- Exact product captures inside CSS device mockups.
-- Retained case demos, roadmap and native scrolling.
+- Exact near-black ground and charcoal card surfaces.
+- Compact typography-led hero and photographic covers.
+- White pill actions and subtle sticky-header glass.
+- Native process disclosures and flat FAQ rows.
+- Unchanged product evidence and demos on case pages.
 
 ## Colors
 
-Surface supplies the graphite ground; ink and muted separate primary and supporting text. Glass supplies translucent charcoal panels. Blue and accent support selected states and icons. White actions use dark text. Embedded products retain their own palettes.
+Ground and surface are the normative homepage pair. Ink supplies primary text and actions; muted gray supplies descriptions. Headline-muted softens the second hero line. Thin translucent white dividers organize lists, while control is used for tags and disclosure circles. Avoid introducing scenery or tinted glass throughout the homepage.
 
-**The Original Composition Rule.** Preserve the restored layout and section sequence; apply the dark material without introducing the rejected editorial geometry.
+**The Scope Rule.** Apply these tokens to the homepage; preserve the native product themes and existing case interfaces.
 
 ## Typography
 
-Retain the inherited Manrope hierarchy recorded in frontmatter. The homepage display remains clamp(48px, 4.7vw, 108px), with mobile clamp(30px, 8.2vw, 52px). Portfolio descriptions use 20px titles and 12px copy, reducing to 18px and 11px on mobile. Retained decorative eyebrows are not a reusable design requirement.
+Manrope remains the inherited family. Hero typography uses the frontmatter display token, with a 42px size below 540px. Service and process titles use 23px, weight 500 and -.04em tracking; below 800px they use 20px. Project titles use 19px/1.3 and supporting copy 13px/1.5. Section titles use the headline token and become 34px below 800px. Existing small section labels and the hero kicker are observed markup, not a pattern to propagate as a new decorative type primitive.
 
 ## Layout
 
-The original viewport-wide hero centers the headline and CRM above two lower panels. Desktop fluid gutters, section order, two-column portfolio and content-driven mobile stacks remain. The CRM receives 18px padding and a 26px radius, reducing to 10px padding on mobile.
+Main content is min(1320px, 93%), reducing to 92% below 800px. The hero uses 1.6fr / 1fr columns, a 40px gap and 96px 0 72px padding. It becomes one column below 800px. The portfolio uses two columns, reducing to one below 540px. Covers maintain a 3:2 aspect ratio rather than a fixed device-stage height.
 
-Desktop navigation retains the original fixed notch silhouette, top:0, 74px height and 10px 28px 16px padding. Mobile retains max(10px, env(safe-area-inset-top)), 49px height and min(340px, calc(100% - 36px)) width. Both scroll states share placement. The mobile header reserves space with 138px height and 82px top padding. The original side rail remains hidden on mobile; do not substitute an editorial header or case contents rail.
+Services, process and FAQ use 1fr / 1.65fr columns with a 70px gap and 110px top spacing. Below 800px they stack with a 25px gap and 65px top spacing. The contact panel is a separate charcoal block with 52px padding, reduced to 30px 24px on mobile.
 
-The five-stage roadmap retains its sticky desktop navigation, compact wrapped mobile links, ordered nodes, checkpoints, deliverables and local widgets. Case pages preserve the restored case layout and playable product exhibits. Inspect the full cascade, with dark-glass.css last, before altering geometry.
+The homepage header is sticky at top:0 with 18px 3.5% padding. Below 800px it uses 14px 4%, hides the header CTA and the Agency word, but keeps the three navigation links visible. The homepage no longer uses the original notch or side rail. Existing case navigation is outside this change.
 
 ## Elevation & Depth
 
-Agency glass uses a 1px #ffffff12 border, #222222 fill and 0 12px 35px #00000012 shadow. Polished pseudo-element bevels are suppressed. Shared desktop glass uses 12px backdrop blur. The mobile override removes blur from glass, top/side navigation, about surface and interactive stages; other specifically styled elements retain their own rules. Studio labels use 10px blur. This is source behavior, not a performance score.
+The header alone supplies the prominent homepage glass treatment: rgba(20,20,20,.93), 14px backdrop blur and a 1px #ffffff10 bottom edge. Cards, native disclosure delivery panels and the contact block are flat charcoal surfaces. Photo labels inherit their small overlay treatment; avoid claiming that every inherited blur rule has been removed.
 
-**The Quiet Glass Rule.** Use subdued translucent fills and thin edges; do not restore bright glass bevels or landscape scenery.
+**The Flat Content Rule.** Keep content surfaces flat and separate them with tone, spacing and thin dividers; reserve glass for the header and small image overlays.
 
 ## Shapes
 
-Original rounded hero panels and CSS notch shoulders remain. Portfolio shells use 24px corners with 12px padding, reducing to 21px and 10px on mobile. Studio interiors use 15px corners. Device frames, keyboards, trackpads, plinths and camera details are CSS decoration surrounding real captures.
+Project shells use 22px corners and 12px padding, changing to 17px and 9px below 800px. Photo windows use 13px corners. Primary actions are 30px pills; service-icon blocks use 14px corners. Process tags use 8px corners; delivery panels use 16px. FAQ rows have no rounded card shell.
 
 ## Components
 
-### Original agency sections
+### Photographic project covers
 
-CRM tabs, local request workflow, service illustrations, custom-development block, roadmap, agency information, FAQ and contact remain. Service artwork is retained with reduced saturation and brightness. Contact scenery and orbital objects are hidden. Agency actions are white with dark text; hover shifts to a cool pale gray. The prior traveling button highlight is disabled.
+src/project-cover.mjs loads assets/covers/maverick.webp, loyalty.webp, gift-roulette.webp and tailcare.webp as 1536×1024 image elements. They depict photographic device/product presentations generated from real UI references. They are not guaranteed pixel-identical screenshots; unchanged case captures and demos provide interface evidence. The available generator's model was not selectable. The four WebP files total approximately 621 KB; original outputs remain under .codex/generated_images.
 
-### Static portfolio covers
+Each cover links to its case. Images fill a 3:2 window using object-fit:cover and scale to 1.025 on hover over 450ms. No CSS laptop keyboard, phone frame or live gameplay remains in the homepage cards.
 
-src/project-cover.mjs maps 12К to its dashboard laptop and loyalty-phone capture; Maverick and Gift Roulette to paired phone captures; TailCare to its original desktop capture. No generated UI is substituted. Studio gradients and CSS plinths supply context without nature photos. Each full cover links to its case; homepage covers contain no product gameplay.
+### Services, process and FAQ
 
-Studios are 360px high on desktop and 320px on mobile. Laptop and phone groups have restrained rotation and translate slightly on hover over 650ms, disabled under reduced motion. Captures use object-fit:cover aligned to the top inside device frames. The case exhibits retain the original interactive products and DEMOS.md simulation boundaries.
+Service rows pair an icon, title, description and case-independent service link. Five native details elements form the process accordion; shared name="process" requests exclusive opening in supporting browsers, and the first starts open. Each contains descriptive tags and two delivery blocks for the discussion/demo checkpoint and output. These are informational, not simulated task-status controls.
 
-### Roadmap and motion
+FAQ disclosures are flat rows with thin dividers. Preserve native summary keyboard behavior. The homepage anchor and summary focus ring is 2px white, offset by 5px.
 
-The roadmap retains task definition, design, development, QA and launch, with local design switching, task progression and acceptance checklist. Dark stage and widget materials replace pale surfaces without changing the process. No durations, metrics, staff identities or real project status are invented.
+### Actions and behavior
 
-Native scrolling and stable navigation remain. Preserve reduced-motion behavior, keyboard controls, native disclosures and screenshot-dialog focus handling. This document records source-derived design, not fresh device testing, measured FPS or deployment.
+Homepage primary CTAs are white with dark text, at least 46px high. Header navigation stays visible on mobile while the header CTA hides. Reduced-motion CSS suppresses homepage transitions and animations. Native scrolling and the existing case demo/dialog behavior remain. No new performance score, device verification or deployment is implied by these source-derived rules.
 
 ## Do's and Don'ts
 
-- **Do** preserve the original notch/CRM layout and complete section sequence.
-- **Do** use subdued dark glass, thin borders and white agency buttons.
-- **Do** compose device mockups around exact original product captures.
-- **Do** retain interactive demos on cases and local roadmap behavior.
-- **Don't** reintroduce nature backgrounds or the rejected editorial composition.
-- **Don't** invent product imagery, business outcomes or performance claims.
-
-Exact palette correction: user screenshot samples are #141414 for the page and #222222 for panels. UI glass, navigation and roadmap are neutral grayscale; screenshot pixels and product-cover staging retain their own colors. Final dark-glass.css overrides earlier theme rules.
+- **Do** preserve the compact hero → projects → services → process → FAQ → contact sequence.
+- **Do** keep homepage changes scoped and case demos intact.
+- **Do** distinguish generated photographic presentations from original product captures.
+- **Don't** restore the CRM hero, workflow scene, long roadmap or CSS device constructions on the homepage.
+- **Don't** invent generator model names, business outcomes or performance claims.
