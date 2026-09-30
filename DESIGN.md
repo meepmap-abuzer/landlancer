@@ -1,6 +1,6 @@
 ---
 name: Lancer Agency — Compact dark studio
-description: Dark studio with WebGL sculpture, editorial service images and readable case stories.
+description: Dark studio with central BioTech 3D, editorial service images and readable case stories.
 colors:
   ground: "#141414"
   surface: "#222"
@@ -12,10 +12,10 @@ colors:
 typography:
   display:
     fontFamily: "Manrope, Arial, sans-serif"
-    fontSize: "clamp(42px, 5.3vw, 76px)"
+    fontSize: "clamp(34px, 3.5vw, 56px)"
     fontWeight: 600
-    lineHeight: 1.06
-    letterSpacing: "-.065em"
+    lineHeight: 1.12
+    letterSpacing: "-.04em"
   headline:
     fontFamily: "Manrope, Arial, sans-serif"
     fontSize: "clamp(28px, 3vw, 42px)"
@@ -60,9 +60,9 @@ components:
 
 **Creative North Star: "Compact dark studio."**
 
-The homepage uses a restrained text introduction, a full-width metallic ribbon sculpture, four photographic project covers and a sequence of illustrated services, industries, process, FAQ and contact. Near-black and charcoal surfaces provide the frame; actual product stories remain the purpose. The CRM hero, workflow scene, long roadmap and CSS devices are superseded on this surface.
+The homepage uses a central BioTech 3D scene with text on either side, four photographic project covers and a sequence of illustrated services, industries, process, FAQ and contact. Near-black and charcoal surfaces provide the frame; actual product stories remain the purpose. The CRM hero, workflow scene, long roadmap and CSS devices are superseded on this surface.
 
-Homepage styling is scoped through studio-home.css then studio-world.css. Four case pages share case-editorial.css for their dark editorial shell; original screenshots and interactive productStage demos retain their product-specific content and behavior. Service routes remain intact.
+Homepage styling is scoped through studio-home.css, studio-world.css and the hero-specific biotech-hero.css. Four case pages share case-editorial.css for their dark editorial shell; original screenshots and interactive productStage demos retain their product-specific content and behavior. Service routes remain intact.
 
 **Key Characteristics:**
 
@@ -80,11 +80,11 @@ Ground and surface are the normative homepage pair. Ink supplies primary text an
 
 ## Typography
 
-Manrope remains the inherited family. Hero typography uses the frontmatter display token, with a 42px size below 540px. Service and process titles use 23px, weight 500 and -.04em tracking; below 800px they use 20px. Project titles use 19px/1.3 and supporting copy 13px/1.5. Section titles use the headline token and become 34px below 800px. Existing small section labels and the hero kicker are observed markup, not a pattern to propagate as a new decorative type primitive.
+Manrope remains the inherited family. Hero typography uses the frontmatter display token, with a 42px size below 600px. Service and process titles use 23px, weight 500 and -.04em tracking; below 800px they use 20px. Project titles use 19px/1.3 and supporting copy 13px/1.5. Section titles use the headline token and become 34px below 800px. Existing small section labels and the hero kicker are observed markup, not a pattern to propagate as a new decorative type primitive.
 
 ## Layout
 
-Main content is min(1320px, 93%), reducing to 92% below 800px. The hero uses 1.6fr / 1fr columns, a 40px gap and 96px 0 72px padding. It becomes one column below 800px. The portfolio uses two columns, reducing to one below 540px. Covers maintain a 3:2 aspect ratio rather than a fixed device-stage height.
+Main content is min(1320px, 93%), reducing to 92% below 800px. The BioTech hero uses 1fr / 1.65fr / .85fr columns with 24px gaps and 55px 0 70px padding. Below 950px it uses two columns with supporting copy beneath; below 600px, text, scene and supporting copy stack. The scene viewport is 520px high, 450px below 950px and 370px below 600px. The portfolio uses two columns, reducing to one below 540px. Covers maintain a 3:2 aspect ratio rather than a fixed device-stage height.
 
 Process and FAQ use 1fr / 1.65fr columns with a 70px gap and 110px top spacing. Below 800px they stack with a 25px gap and 65px top spacing. The contact panel is a separate charcoal block with 52px padding, reduced to 30px 24px on mobile.
 
@@ -118,9 +118,9 @@ FAQ disclosures are flat rows with thin dividers. Preserve native summary keyboa
 
 Homepage primary CTAs are white with dark text, at least 46px high. Header navigation stays visible on mobile while the header CTA hides. Reduced-motion CSS suppresses homepage transitions and animations. Native scrolling and the existing case demo/dialog behavior remain. No new performance score, device verification or deployment is implied by these source-derived rules.
 
-### Realtime sculpture and footer
+### BioTech hero and footer
 
-src/sculpture/main.mjs implements a custom wide closed metallic ribbon mesh in Three.js. Crossing loops expose depth and span the full hero width. Pointer movement tilts the sculpture with delta-time exponential damping; subtle slow idle rocking follows requestAnimationFrame refresh cadence without a fixed frame cap. DPR is capped at 1.5. Pause is the only scene control. Pause, reduced motion, offscreen visibility and hidden-tab state suspend continuous rendering. A fallback message handles unavailable WebGL. Three.js attribution remains in THREE-LICENSE.txt. No measured FPS is claimed.
+biotech-hero.css, biotech-hero.mjs and src/agency-home.mjs implement the selected BioTech by lucidesign, with central 3D and text left/right. The owned Spline Remix is cb064aca-e581-4dfc-867a-fcc5e2a12b1f; its export is https://my.spline.design/biotech-OpiuGUCa88h9CbZq8RTMNfkg/. Original typography and label groups are hidden against #141414; retain the free export watermark and CC BY 4.0 attribution in assets/biotech/NOTICE.md. The iframe is removed offscreen, in hidden tabs and when disabled. Reduced motion defaults to assets/biotech/poster.png; the user can explicitly enable 3D. Runtime performance has not been benchmarked.
 
 The industry carousel uses native horizontal scroll snap. Footer navigation uses four columns desktop and two mobile, with the dotted LANCER wordmark and abstract sculpture treatment. Preserve pause and reduced-motion behavior.
 
@@ -130,11 +130,11 @@ case-editorial.css applies #141414 ground and #222 surfaces to all four cases. C
 
 Actual screen captures appear in alternating stories and open the existing lightbox. Only retained productStage sections are interactive demos. Architecture disclosures, technology details, related projects and the footer complete each case. Preserve simulation boundaries and never call static screenshots live interfaces.
 
-Review artifacts in .impeccable/review include desktop/mobile homepage, service and case snapshots plus detect-webgl.json; ribbon-desktop.png and ribbon-mobile.png capture the final sculpture. They record local review, not deployment or universal performance verification.
+Review artifacts in .impeccable/review include desktop/mobile homepage, service and case snapshots plus detect-webgl.json; ribbon-desktop.png and ribbon-mobile.png record the earlier version, while biotech-desktop.png and biotech-mobile.png capture the current hero. Fresh reviewer biotech_finish reported no material findings in this scoped desktop/mobile review. They record local review, not deployment or universal performance verification.
 
 ## Do's and Don'ts
 
-- **Do** preserve the compact hero and sculpture → projects → services → industries → process → FAQ → contact sequence.
+- **Do** preserve the BioTech hero → projects → services → industries → process → FAQ → contact sequence.
 - **Do** keep homepage and case editorial shells scoped and product demos intact.
 - **Do** distinguish generated photographic presentations from original product captures.
 - **Don't** restore the CRM hero, workflow scene, long roadmap or CSS device constructions on the homepage.
