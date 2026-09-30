@@ -49,7 +49,7 @@
       "header": "rgba(20,20,20,.93); backdrop-filter:blur(14px); border-bottom:1px solid #ffffff10",
       "cases": "Shared case-editorial.css shell; original screenshots, lightbox and interactive productStage demos retained",
       "provenance": "Four generated photographic UI-reference covers, approximately 621 KB combined WebP; originals .codex/generated_images; generator model not selectable",
-      "scope": "Homepage studio-home.css, studio-world.css and biotech-hero.css; four case shells case-editorial.css"
+      "scope": "Homepage studio-home.css, studio-world.css and particle-hero.css; four case shells case-editorial.css"
     },
     "motion": [
       {
@@ -88,43 +88,12 @@
       ".impeccable/review/detect-webgl.json",
       ".impeccable/review/ribbon-desktop.png",
       ".impeccable/review/ribbon-mobile.png",
-      ".impeccable/review/biotech-desktop.png",
-      ".impeccable/review/biotech-mobile.png"
+      ".impeccable/review/particle-desktop.png",
+      ".impeccable/review/particle-mobile.png"
     ],
     "deployment": "Local branch only; no deployment recorded",
-    "biotechHero": {
-      "stylesheet": "biotech-hero.css",
-      "script": "biotech-hero.mjs",
-      "scene": "BioTech by lucidesign; central 3D with text left/right, stacked mobile",
-      "cards": {
-        "background": "#222222",
-        "radius": "22px",
-        "columns": [
-          3,
-          2,
-          1
-        ]
-      },
-      "motion": {
-        "offscreenIframeRemoval": true,
-        "hiddenTabIframeRemoval": true,
-        "disabledIframeRemoval": true,
-        "reducedMotionDefault": "poster; explicit enable 3D available",
-        "performance": "Not benchmarked"
-      },
-      "footer": "Four-column navigation and dotted LANCER over abstract sculpture",
-      "controls": [
-        "enable/disable 3D"
-      ],
-      "attribution": "CC BY 4.0; assets/biotech/NOTICE.md; free Spline export watermark retained",
-      "markup": "src/agency-home.mjs",
-      "spline": {
-        "ownedRemix": "cb064aca-e581-4dfc-867a-fcc5e2a12b1f",
-        "export": "https://my.spline.design/biotech-OpiuGUCa88h9CbZq8RTMNfkg/",
-        "adaptation": "Original typography and label groups hidden; #141414 background"
-      }
-    },
-    "heroReview": "biotech_finish: no material findings in scoped desktop/mobile review; runtime performance not benchmarked"
+    "particleHero": "The homepage now uses an authored Canvas dot field with cursor repulsion and spring return, plus two small ASCII animations (hero orb and process wireframe cube). particle-hero.css and particle-hero.mjs own this surface. No Spline embed, watermark, remote scene or paid dependency remains. Pause and reduced motion stop animation; hidden/offscreen animation is suspended. Desktop has two text columns over the field; below 700px these stack. User explicitly requested restrained ASCII decoration.",
+    "heroReview": "particle_finish: no material findings in scoped desktop/mobile review; runtime performance not benchmarked"
   },
   "components": [
     {
@@ -173,7 +142,7 @@
       "Editorial case stories with original product evidence and retained interactive demos."
     ],
     "dos": [
-      "Do preserve the BioTech hero → projects → services → industries → process → FAQ → contact sequence.",
+      "Do preserve the particle hero → projects → services → industries → process → FAQ → contact sequence.",
       "Do keep homepage and case editorial shells scoped and product demos intact.",
       "Do distinguish generated photographic presentations from original product captures."
     ],
@@ -194,6 +163,6 @@
         "name": "Flat Content Rule"
       }
     ],
-    "overview": "The homepage uses a central BioTech 3D scene with text on either side, four photographic project covers and a sequence of illustrated services, industries, process, FAQ and contact. Near-black and charcoal surfaces provide the frame; actual product stories remain the purpose. The CRM hero, workflow scene, long roadmap and CSS devices are superseded on this surface.\n\nHomepage styling is scoped through studio-home.css, studio-world.css and the hero-specific biotech-hero.css. Four case pages share case-editorial.css for their dark editorial shell; original screenshots and interactive productStage demos retain their product-specific content and behavior. Service routes remain intact."
+    "overview": "The homepage uses a cursor-reactive particle field, four photographic project covers and a sequence of illustrated services, industries, process, FAQ and contact. Near-black and charcoal surfaces provide the frame; actual product stories remain the purpose. The CRM hero, workflow scene, long roadmap and CSS devices are superseded on this surface.\n\nHomepage styling is scoped through studio-home.css, studio-world.css and the hero-specific particle-hero.css. Four case pages share case-editorial.css for their dark editorial shell; original screenshots and interactive productStage demos retain their product-specific content and behavior. Service routes remain intact."
   }
 }
