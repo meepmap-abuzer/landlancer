@@ -82,7 +82,8 @@
       "cases": "Text openings, eight generated real-device editorial spreads; original captures and interactive productStage demos retained. Neutral dark image lightbox.",
       "provenance": "Four generated photographic UI-reference covers, approximately 621 KB combined WebP; originals .codex/generated_images; generator model not selectable",
       "scope": "Homepage studio-home.css, studio-world.css, particle-hero.css; cases case-editorial.css; services service-editorial.css; shared final overrides interface-polish.css.",
-      "services": "Three-node service-specific diagrams and four horizontal roadmap stages; small ASCII motifs, generous section spacing. Mobile roadmaps scroll internally. Soft illustration-edge masks blend into homepage #222 service cards."
+      "services": "Three-node service-specific diagrams and four horizontal roadmap stages; small ASCII motifs, generous section spacing. Mobile roadmaps scroll internally. Soft illustration-edge masks blend into homepage #222 service cards.",
+      "heroFraming": "Fully visible crown; camera aim y=2.8, tree z=3.3 ahead of rocks. No top canvas mask; side/lower fades remain. One description paragraph beneath the headline."
     },
     "motion": [
       {
@@ -152,10 +153,12 @@
       ".impeccable/review/silver-tree-mobile.png",
       ".impeccable/review/blended-services.png",
       ".impeccable/review/service-flow-desktop.png",
-      ".impeccable/review/service-roadmap-desktop.png"
+      ".impeccable/review/service-roadmap-desktop.png",
+      ".impeccable/review/tree-foreground-desktop.png",
+      ".impeccable/review/tree-foreground-mobile.png"
     ],
     "deployment": "Local branch only; no deployment recorded",
-    "particleHero": "The homepage has a document-wide Canvas dot field: dense in the hero, sparse below, with gentle autonomous drift, cursor repulsion and spring return. Its full-width authored Three.js lunar garden contains grey rocks, terrain, gravel and instanced silver grass, with shader wind and cursor bending. A volumetric silver tree stands on the right, with tapered curved branches, instanced curved leaves, subtle sway and a few slowly falling leaves. Local RoomEnvironment lighting supplies neutral metallic reflections. The description and actions sit under the left headline. On screens below 700px, text and garden stack. Reduced motion stops animation; rendering pauses offscreen and in hidden tabs. No Spline embed, remote scene or paid dependency remains.",
+    "particleHero": "The homepage has a document-wide Canvas dot field: dense in the hero, sparse below, with gentle autonomous drift, cursor repulsion and spring return. Its full-width authored Three.js lunar garden contains grey rocks, terrain, gravel and instanced silver grass, with shader wind and cursor bending. A volumetric silver tree stands in the right foreground, with tapered curved branches, instanced curved leaves, subtle sway and a few slowly falling leaves. Local RoomEnvironment lighting supplies neutral metallic reflections. The description and actions sit under the left headline. On screens below 700px, text and garden stack. Reduced motion stops animation; rendering pauses offscreen and in hidden tabs. No Spline embed, remote scene or paid dependency remains.",
     "heroReview": "Local 1440px desktop and 390px mobile review, scene readiness and console errors checked. Tree and garden use shared offscreen/hidden/reduced-motion controls. No physical-device frame-rate benchmark."
   },
   "components": [

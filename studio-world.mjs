@@ -59,4 +59,4 @@ controls.forEach(button => button.addEventListener('click', () => track.scrollBy
 track?.addEventListener('scroll',updateControls,{passive:true});
 if(track){new ResizeObserver(updateControls).observe(track);updateControls();}
 
-if(document.querySelector('.lunar-stage')) import('/sculpture/scene.js?v=lunar-4').catch(()=>{document.querySelector('.lunar-status').textContent='Не удалось загрузить сад. Обновите страницу.'});
+if(document.querySelector('.lunar-stage')) import('/sculpture/scene.js?v=lunar-5').catch(()=>{document.querySelector('.lunar-status').textContent='Не удалось загрузить сад. Обновите страницу.'});

@@ -27,7 +27,7 @@ function createGarden(renderer,host,stage){
  studio.dispose();environment.dispose();
  scene.fog=new THREE.FogExp2(0x141414,.032);
  const camera=new THREE.PerspectiveCamera(34,1,.1,100);
- const aim=new THREE.Vector3(0,1.25,0);
+ const aim=new THREE.Vector3(0,2.8,0);
  camera.position.set(0,5.6,17);camera.lookAt(aim);
  const hemi=new THREE.HemisphereLight(0xe3ebf4,0x161819,1.7);scene.add(hemi);
  const sun=new THREE.DirectionalLight(0xf1f4f9,4.3);sun.position.set(-7,10,2);sun.castShadow=true;
@@ -128,9 +128,11 @@ function createGarden(renderer,host,stage){
  function resize(){
   const w=host.clientWidth,h=host.clientHeight;renderer.setSize(w,h,false);camera.aspect=w/h;
   const compact=w<700;
-  silverTree.tree.scale.setScalar(compact ? .95 : 1.24);
-  silverTree.tree.position.x=compact?2.8:w<1050?4.8:6.5;
-  silverTree.tree.position.y=heightAt(silverTree.tree.position.x,-3.8);
+  // Keep the entire crown in frame, with the tree in front of the rocks.
+  silverTree.tree.scale.setScalar(compact ? 1 : 1.1);
+  silverTree.tree.position.x=compact?1.3:w<1050?3.8:4.7;
+  silverTree.tree.position.z=3.3;
+  silverTree.tree.position.y=heightAt(silverTree.tree.position.x,3.3);
   camera.position.set(0,compact?10.5:7.1,compact?27:22);camera.lookAt(aim);camera.updateProjectionMatrix();render();
  }
  function render(){renderer.render(scene,camera);}

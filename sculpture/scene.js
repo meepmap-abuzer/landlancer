@@ -22144,7 +22144,7 @@ function Hf(i, e, t) {
   i.setPixelRatio(Math.min(devicePixelRatio || 1, n ? 1.2 : 1.5)), i.setClearColor(1315860, 0), i.outputColorSpace = Ct, i.toneMapping = 4, i.toneMappingExposure = 1.15, i.shadowMap.enabled = !0, i.shadowMap.type = 1, e.append(i.domElement);
   const r = new la(), s = new Vf(), a = new wr(i);
   r.environment = a.fromScene(s, 0.04).texture, r.environmentIntensity = 0.6, s.dispose(), a.dispose(), r.fog = new Ir(1315860, 0.032);
-  const o = new It(34, 1, 0.1, 100), l = new D(0, 1.25, 0);
+  const o = new It(34, 1, 0.1, 100), l = new D(0, 2.8, 0);
   o.position.set(0, 5.6, 17), o.lookAt(l);
   const c = new Fo(14937076, 1447961, 1.7);
   r.add(c);
@@ -22249,7 +22249,7 @@ diffuseColor.rgb*=mix(.38,1.18,vBladeHeight);`);
     const S = e.clientWidth, f = e.clientHeight;
     i.setSize(S, f, !1), o.aspect = S / f;
     const L = S < 700;
-    K.tree.scale.setScalar(L ? 0.95 : 1.24), K.tree.position.x = L ? 2.8 : S < 1050 ? 4.8 : 6.5, K.tree.position.y = x(K.tree.position.x, -3.8), o.position.set(0, L ? 10.5 : 7.1, L ? 27 : 22), o.lookAt(l), o.updateProjectionMatrix(), st();
+    K.tree.scale.setScalar(L ? 1 : 1.1), K.tree.position.x = L ? 1.3 : S < 1050 ? 3.8 : 4.7, K.tree.position.z = 3.3, K.tree.position.y = x(K.tree.position.x, 3.3), o.position.set(0, L ? 10.5 : 7.1, L ? 27 : 22), o.lookAt(l), o.updateProjectionMatrix(), st();
   }
   function st() {
     i.render(r, o);
