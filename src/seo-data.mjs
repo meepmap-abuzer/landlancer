@@ -1,4 +1,4 @@
-export const site = {name:'Lancer Agency',url:'https://landlancer.ru',contact:'https://t.me/landlancer'};
+export const site = {name:'Lancer Agency',url:'https://landlancer.ru',contact:'https://t.me/LancerManager'};
 export const services = [
  {slug:'websites',name:'Сайты и лендинги',title:'Разработка сайтов и лендингов под ключ',intro:'Создаём сайты для бизнеса: от структуры и дизайна до адаптивной вёрстки, заявок и связи с рабочими инструментами.',
  description:'Разработка сайтов и лендингов под ключ в Lancer Agency: структура, индивидуальный дизайн, адаптивная вёрстка, формы заявок и интеграции. Обсудите вашу задачу.',
