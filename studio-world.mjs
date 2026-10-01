@@ -15,6 +15,7 @@ function syncMotion() {
 }
 pause?.addEventListener('click', () => { paused = !paused; syncMotion(); });
 reduced.addEventListener('change', syncMotion);
+document.addEventListener('lancer:motion', ({detail}) => { paused = detail.paused; syncMotion(); });
 syncMotion();
 const visible = new IntersectionObserver(entries => {
   for(const {target,isIntersecting} of entries) target.classList.toggle('is-visible',isIntersecting && !document.hidden);
@@ -44,4 +45,4 @@ controls.forEach(button => button.addEventListener('click', () => track.scrollBy
 track?.addEventListener('scroll',updateControls,{passive:true});
 if(track){new ResizeObserver(updateControls).observe(track);updateControls();}
 
-if(document.querySelector('.sculpture-stage')) import('/sculpture/scene.js').catch(()=>{document.querySelector('.sculpture-hint').textContent='3D-сцена не загрузилась. Обновите страницу.'});
+if(document.querySelector('.lunar-stage')) import('/sculpture/scene.js?v=lunar-1').catch(()=>{document.querySelector('.lunar-hint').textContent='Не удалось загрузить сад. Обновите страницу.'});

@@ -120,9 +120,9 @@ Homepage primary CTAs are white with dark text, at least 46px high. Header navig
 
 ### particle hero and footer
 
-The homepage now uses an authored Canvas dot field with cursor repulsion and spring return, plus two small ASCII animations (hero orb and process wireframe cube). particle-hero.css and particle-hero.mjs own this surface. No Spline embed, watermark, remote scene or paid dependency remains. Pause and reduced motion stop animation; hidden/offscreen animation is suspended. Desktop has two text columns over the field; below 700px these stack. User explicitly requested restrained ASCII decoration.
+The homepage has a document-wide Canvas dot field: dense in the hero, sparse below, with gentle autonomous drift, cursor repulsion and spring return. A full-width authored Three.js lunar garden replaces the ASCII hero orb. Procedural grey rocks, terrain, gravel and instanced silver grass provide real depth; the grass has shader wind and bends around the cursor. One small ASCII cube remains in the process section. Pause and reduced motion stop animation; the garden stops rendering offscreen and all animation stops in hidden tabs. No Spline embed, remote scene or paid dependency remains. Desktop hero text uses two columns and stacks below 700px.
 
-The industry carousel uses native horizontal scroll snap. Footer navigation uses four columns desktop and two mobile, with the dotted LANCER wordmark and abstract sculpture treatment. Preserve pause and reduced-motion behavior.
+The homepage industry carousel is removed. Footer navigation uses four columns desktop and two mobile, with the dotted LANCER wordmark and abstract sculpture treatment. Preserve pause and reduced-motion behavior.
 
 ### Editorial case shell
 
@@ -130,11 +130,11 @@ case-editorial.css applies #141414 ground and #222 surfaces to all four cases. C
 
 Actual screen captures appear in alternating stories and open the existing lightbox. Only retained productStage sections are interactive demos. Architecture disclosures, technology details, related projects and the footer complete each case. Preserve simulation boundaries and never call static screenshots live interfaces.
 
-Current evidence: .impeccable/review/particles-desktop.png and particles-mobile.png. Local only; performance is not benchmarked across devices.
+Current evidence: .impeccable/review/lunar-desktop.png and lunar-mobile.png. Desktop and mobile viewport, cursor response and pause checked locally; performance is not benchmarked across physical devices.
 
 ## Do's and Don'ts
 
-- **Do** preserve the particle hero → projects → services → industries → process → FAQ → contact sequence.
+- **Do** preserve the particle hero → projects → services → process → FAQ → contact sequence.
 - **Do** keep homepage and case editorial shells scoped and product demos intact.
 - **Do** distinguish generated photographic presentations from original product captures.
 - **Don't** restore the CRM hero, workflow scene, long roadmap or CSS device constructions on the homepage.

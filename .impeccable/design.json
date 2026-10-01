@@ -88,12 +88,12 @@
       ".impeccable/review/detect-webgl.json",
       ".impeccable/review/ribbon-desktop.png",
       ".impeccable/review/ribbon-mobile.png",
-      ".impeccable/review/particle-desktop.png",
-      ".impeccable/review/particle-mobile.png"
+      ".impeccable/review/lunar-desktop.png",
+      ".impeccable/review/lunar-mobile.png"
     ],
     "deployment": "Local branch only; no deployment recorded",
-    "particleHero": "The homepage now uses an authored Canvas dot field with cursor repulsion and spring return, plus two small ASCII animations (hero orb and process wireframe cube). particle-hero.css and particle-hero.mjs own this surface. No Spline embed, watermark, remote scene or paid dependency remains. Pause and reduced motion stop animation; hidden/offscreen animation is suspended. Desktop has two text columns over the field; below 700px these stack. User explicitly requested restrained ASCII decoration.",
-    "heroReview": "particle_finish: no material findings in scoped desktop/mobile review; runtime performance not benchmarked"
+    "particleHero": "The homepage has a document-wide Canvas dot field: dense in the hero, sparse below, with gentle autonomous drift, cursor repulsion and spring return. A full-width authored Three.js lunar garden replaces the ASCII hero orb. Procedural grey rocks, terrain, gravel and instanced silver grass provide real depth; the grass has shader wind and bends around the cursor. One small ASCII cube remains in the process section. Pause and reduced motion stop animation; the garden stops rendering offscreen and all animation stops in hidden tabs. No Spline embed, remote scene or paid dependency remains. Desktop hero text uses two columns and stacks below 700px.",
+    "heroReview": "Local desktop/mobile viewport review, cursor grass response and shared pause verified. No physical-device performance benchmark."
   },
   "components": [
     {
@@ -142,7 +142,7 @@
       "Editorial case stories with original product evidence and retained interactive demos."
     ],
     "dos": [
-      "Do preserve the particle hero → projects → services → industries → process → FAQ → contact sequence.",
+      "Do preserve the particle hero → projects → services → process → FAQ → contact sequence.",
       "Do keep homepage and case editorial shells scoped and product demos intact.",
       "Do distinguish generated photographic presentations from original product captures."
     ],
@@ -163,6 +163,6 @@
         "name": "Flat Content Rule"
       }
     ],
-    "overview": "The homepage uses a cursor-reactive particle field, four photographic project covers and a sequence of illustrated services, industries, process, FAQ and contact. Near-black and charcoal surfaces provide the frame; actual product stories remain the purpose. The CRM hero, workflow scene, long roadmap and CSS devices are superseded on this surface.\n\nHomepage styling is scoped through studio-home.css, studio-world.css and the hero-specific particle-hero.css. Four case pages share case-editorial.css for their dark editorial shell; original screenshots and interactive productStage demos retain their product-specific content and behavior. Service routes remain intact."
+    "overview": "The homepage uses a cursor-reactive particle field, four photographic project covers and a sequence of illustrated services, process, FAQ and contact. Near-black and charcoal surfaces provide the frame; actual product stories remain the purpose. The CRM hero, workflow scene, long roadmap and CSS devices are superseded on this surface.\n\nHomepage styling is scoped through studio-home.css, studio-world.css and the hero-specific particle-hero.css. Four case pages share case-editorial.css for their dark editorial shell; original screenshots and interactive productStage demos retain their product-specific content and behavior. Service routes remain intact."
   }
 }
