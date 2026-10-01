@@ -7,7 +7,7 @@ export function metadata(title,description,path){
  if(path.startsWith('/cases/')&&caseMeta[slug])return caseMeta[slug];
  return [title,description];
 }
-export function breadcrumbItems(path,title){return [{name:'Главная',url:site.url+'/'},...(path.startsWith('/services/')?[{name:'Услуги',url:site.url+'/#services'}]:path.startsWith('/cases/')?[{name:'Кейсы',url:site.url+'/#works'}]:[]),{name:title,url:site.url+path}];}
+export function breadcrumbItems(path,title){return [{name:'Главная',url:site.url+'/'},...(path.startsWith('/services/')&&path!=='/services/'?[{name:'Услуги',url:site.url+'/services/'}]:path.startsWith('/cases/')?[{name:'Кейсы',url:site.url+'/#works'}]:[]),{name:title,url:site.url+path}];}
 export function breadcrumbs(path,title){return `<nav class="seo-breadcrumbs" aria-label="Хлебные крошки"><ol>${breadcrumbItems(path,title).map((item,i,items)=>`<li>${i===items.length-1?`<span aria-current="page">${escapeHtml(item.name)}</span>`:`<a href="${escapeHtml(item.url.replace(site.url,''))}">${escapeHtml(item.name)}</a>`}</li>`).join('')}</ol></nav>`;}
 export function seoHead(inputTitle,inputDescription,path){
  const [title,description]=metadata(inputTitle,inputDescription,path),url=site.url+path,image=site.url+'/assets/seo/social.png';
@@ -17,7 +17,7 @@ export function seoHead(inputTitle,inputDescription,path){
  const webpage={'@type':'WebPage','@id':url+'#page',url,name:title+' — '+site.name,description,inLanguage:'ru',isPartOf:{'@id':site.url+'/#website'},about:{'@id':site.url+'/#organization'}};
  const graph=[organization,{'@type':'WebSite','@id':site.url+'/#website',url:site.url+'/',name:site.name,inLanguage:'ru',publisher:{'@id':site.url+'/#organization'}},webpage];
  if(path!=='/'&&!noindex)graph.push({'@type':'BreadcrumbList',itemListElement:breadcrumbItems(path,title).map((item,i)=>({'@type':'ListItem',position:i+1,name:item.name,item:item.url}))});
- const offered=path==='/'?services:service?[service]:[];
+ const offered=path==='/'||path==='/services/'?services:service?[service]:[];
  for(const s of offered)graph.push({'@type':'Service','@id':site.url+`/services/${s.slug}/#service`,name:s.name,serviceType:s.title,description:s.intro,url:site.url+`/services/${s.slug}/`,provider:{'@id':site.url+'/#organization'}});
  const answers=path==='/'?faq:service?.faq;
  if(answers)graph.push({'@type':'FAQPage','@id':url+'#faq',mainEntity:answers.map(([q,a])=>({'@type':'Question',name:q,acceptedAnswer:{'@type':'Answer',text:a}}))});

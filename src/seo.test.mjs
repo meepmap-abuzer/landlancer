@@ -5,7 +5,7 @@ import {resolve} from 'node:path';
 import {services,caseMeta,faq} from './seo-data.mjs';
 import {seoHead} from './seo.mjs';
 const root=resolve(import.meta.dirname,'..');
-const routes=['/',...Object.keys(caseMeta).map(s=>`/cases/${s}/`),...services.map(s=>`/services/${s.slug}/`),'/privacy/','/404.html'];
+const routes=['/','/services/',...Object.keys(caseMeta).map(s=>`/cases/${s}/`),...services.map(s=>`/services/${s.slug}/`),'/privacy/','/404.html'];
 const fileFor=path=>resolve(root,'.'+path+(path.endsWith('/')?'index.html':''));
 const pages=new Map(await Promise.all(routes.map(async path=>[path,await readFile(fileFor(path),'utf8')])));
 const tags=(html,name)=>[...html.matchAll(new RegExp(`<${name}\\b[^>]*>`, 'g'))];
@@ -74,4 +74,22 @@ test('loading feedback preserves static content and responsive image assets reso
  }
  assert.ok(!pages.get('/').includes('/demos/interactive.js'));
  assert.ok(pages.get('/cases/maverick/').includes('/demos/interactive.js'));
+});
+
+test('every advertised service has its own page and a bounded starting budget',()=>{
+ const expected={websites:30000,'web-apps':90000,'telegram-mini-apps':80000,crm:80000,automation:100000,mvp:200000};
+ assert.deepEqual(Object.fromEntries(services.map(s=>[s.slug,s.startingPrice])),expected);
+ for(const s of services){
+  const path=`/services/${s.slug}/`,html=pages.get(path);
+  assert.ok(pages.get('/services/').includes(`href="${path}"`),path);
+  assert.ok(pages.get('/').includes(`href="${path}"`),path);
+  assert.match(s.prices[0][2],/од(?:ин|на)/i,path+': starting scope must be limited');
+  assert.ok(html.includes(s.prices[0][2]),path+': visible scope');
+  assert.ok(html.includes(`от ${new Intl.NumberFormat('ru-RU').format(s.startingPrice)} ₽`),path);
+  assert.ok(html.includes('Стартовая цена относится к указанному объёму'),path);
+  assert.ok(html.includes('https://t.me/LancerManager'),path);
+ }
+ const automation=pages.get('/services/automation/');
+ for(const example of services.find(s=>s.slug==='automation').aiExamples){assert.ok(automation.includes(example.title));assert.ok(automation.includes(example.text));}
+ assert.ok(automation.includes('Кейс 12К демонстрирует интеграцию и обмен данными, а не внедрение AI.'));
 });

@@ -9,45 +9,92 @@ colors:
   headline-muted: "#a7a7a7"
   line: "#ffffff22"
   control: "#292929"
+  service-ink: "#eee"
+  service-muted: "#b7b7b7"
+  sage-detail: "#c4d4bf"
 typography:
   display:
     fontFamily: "Manrope, Arial, sans-serif"
-    fontSize: "clamp(34px, 3.5vw, 56px)"
+    fontSize: "clamp(40px, 3.6vw, 56px)"
     fontWeight: 600
-    lineHeight: 1.12
+    lineHeight: 1.08
     letterSpacing: "-.04em"
   headline:
     fontFamily: "Manrope, Arial, sans-serif"
-    fontSize: "clamp(28px, 3vw, 42px)"
+    fontSize: "clamp(28px, 2.6vw, 36px)"
     lineHeight: 1.16
     letterSpacing: "-.055em"
   button:
     fontFamily: "Manrope, Arial, sans-serif"
-    fontSize: "14px"
+    fontSize: "13px"
     fontWeight: 600
+  service-display:
+    fontFamily: "Manrope, Arial, sans-serif"
+    fontSize: "clamp(34px, 3.2vw, 48px)"
+    fontWeight: 600
+    lineHeight: 1.15
+    letterSpacing: "-.03em"
+  service-headline:
+    fontFamily: "Manrope, Arial, sans-serif"
+    fontSize: "clamp(26px, 2.2vw, 34px)"
+    fontWeight: 600
+    lineHeight: 1.25
+    letterSpacing: "-.03em"
+  service-title:
+    fontFamily: "Manrope, Arial, sans-serif"
+    fontSize: "19px"
+    fontWeight: 600
+    lineHeight: 1.4
+    letterSpacing: "-.03em"
+  service-body:
+    fontFamily: "Manrope, Arial, sans-serif"
+    fontSize: "15px"
+    lineHeight: 1.75
+  service-ascii:
+    fontFamily: "ui-monospace, Consolas, monospace"
+    fontSize: "12px"
+    lineHeight: 1.35
 rounded:
-  action: "30px"
-  project: "22px"
-  photo: "13px"
+  action: "999px"
+  project: "18px"
+  photo: "10px"
+  service-work: "14px"
+  service-case: "16px"
   delivery: "16px"
   contact: "24px"
   case-cover: "24px"
   capability: "19px"
 spacing:
-  catalog-gap: "22px"
-  section-gap: "70px"
-  case-story-gap: "65px"
+  catalog-gap: "16px"
+  layout-gap: "clamp(32px, 4vw, 72px)"
+  service-section: "88px"
+  service-section-mobile: "64px"
+  directory-intro-copy: "20px"
 components:
   button-primary:
     backgroundColor: "{colors.ink}"
     textColor: "{colors.ground}"
     rounded: "{rounded.action}"
     typography: "{typography.button}"
-    padding: "12px 22px"
+    padding: "11px 20px"
+  button-primary-service:
+    backgroundColor: "{colors.ink}"
+    textColor: "{colors.ground}"
+    rounded: "{rounded.action}"
+    typography: "{typography.button}"
+    padding: "14px 24px"
   project-card:
     backgroundColor: "{colors.surface}"
     rounded: "{rounded.project}"
-    padding: "12px"
+    padding: "10px"
+  service-work-card:
+    backgroundColor: "{colors.surface}"
+    rounded: "{rounded.service-work}"
+    padding: "23px"
+  service-case-card:
+    backgroundColor: "{colors.surface}"
+    rounded: "{rounded.service-case}"
+    padding: "10px"
   process-delivery:
     backgroundColor: "{colors.surface}"
     rounded: "{rounded.delivery}"
@@ -60,9 +107,9 @@ components:
 
 **Creative North Star: "Compact dark studio."**
 
-The homepage uses a interactive particle field scene with text on either side, four photographic project covers and a sequence of illustrated services, process, FAQ and contact. Near-black and charcoal surfaces provide the frame; actual product stories remain the purpose. The CRM hero, workflow scene, long roadmap and CSS devices are superseded on this surface.
+The homepage uses a cursor-reactive particle field and authored garden, a headline and description at left, a foreground tree at right, four photographic project covers and a sequence of illustrated services, process, FAQ and contact. Near-black and charcoal surfaces provide the frame; actual product stories remain the purpose. The CRM hero, workflow scene, long roadmap and CSS devices are superseded on this surface.
 
-Homepage styling is scoped through studio-home.css, studio-world.css and the hero-specific particle-hero.css. Four case pages share case-editorial.css for their dark editorial shell; original screenshots and interactive productStage demos retain their product-specific content and behavior. Service routes remain intact.
+Homepage styling is scoped through studio-home.css, studio-world.css and the hero-specific particle-hero.css. Four case pages share case-editorial.css for their dark editorial shell; original screenshots and interactive productStage demos retain their product-specific content and behavior. Six service pages and the /services/ directory extend the same world through service-editorial.css; studio-layout.css is the final fluid-layout layer. Their surface strategy is recorded in PRODUCT.md and the service surface contract.
 
 **Key Characteristics:**
 
@@ -74,31 +121,37 @@ Homepage styling is scoped through studio-home.css, studio-world.css and the her
 
 ## Colors
 
-Ground and surface are the normative homepage pair. Ink supplies primary text and actions; muted gray supplies descriptions. Headline-muted softens the second hero line. Thin translucent white dividers organize lists, while control is used for tags and disclosure circles. Avoid introducing scenery or tinted glass throughout the homepage.
+Ground and surface are the normative homepage pair. Ink supplies primary text and actions; muted gray supplies descriptions. Headline-muted softens the second hero line. Thin translucent white dividers organize lists, while control is used for tags and disclosure circles. The authored garden is the native scene; service pages use small sage details for roadmap dots, ASCII and selection. Service headings use service-ink, prose uses service-muted, and tertiary captions use inherited grays. Price amounts retain their scoped pale-sage treatments rather than defining a new brand accent.
 
-**The Scope Rule.** Apply the dark studio palette to homepage and case editorial shells; preserve native product themes inside screenshots and interactive demos.
+**The Scope Rule.** Apply the dark studio palette to homepage, service and case editorial shells; preserve native product themes inside screenshots and interactive demos.
 
 ## Typography
 
-Manrope remains the inherited family. Hero typography uses the frontmatter display token, with a 42px size below 600px. Service and process titles use 23px, weight 500 and -.04em tracking; below 800px they use 20px. Project titles use 19px/1.3 and supporting copy 13px/1.5. Section titles use the headline token and become 34px below 800px. Existing small section labels and the hero kicker are observed markup, not a pattern to propagate as a new decorative type primitive.
+Manrope remains the inherited family with Arial and sans-serif fallbacks. The current homepage display and section scale are recorded in frontmatter; below 900px its display becomes clamp(36px, 5.2vw, 48px). Existing small homepage labels are observed markup, not a decorative type primitive to propagate.
+
+Services use the scoped service-display, service-headline, service-title and service-body roles. Below 750px these become 34px, 27px and 18px for h1/h2/h3. Hero prose is 16px with a 55ch measure on desktop and 15px on mobile; ordinary prose is at most 65ch. Included-work titles are 18px and descriptions 13px (14px below 540px); factual hero fields use 11px labels and 13px values. FAQ titles use 15px/1.5, answers 14px/1.8. The ASCII companion uses the scoped mono role and becomes 10px on mobile. These smaller supporting roles are service-specific exceptions, not replacements for the shared hierarchy.
+
+**The Content Hierarchy Rule.** Let the actual title, factual summary and body copy establish the hierarchy; service pages have no decorative contact eyebrow.
 
 ## Layout
 
-Main content is min(1320px, 93%). Particle hero uses 1.5fr / 1fr columns, a 670px minimum height and a full-area dotted canvas. Below 700px it stacks. Project grid and all remaining sections retain their existing breakpoints.
+The final studio-layout.css layer gives homepage, service and case content fluid viewport width minus clamp(20px, 2vw, 44px) side gutters. Below 750px gutters are 18px and the principal gap is 28px. Paragraphs and artwork keep their own measures as the shell expands. The homepage garden hero is clamp(520px, 65svh, 600px), stacking below 900px with a 380px scene; projects form four columns from 1200px. Homepage process and FAQ retain the 1fr / 1.65fr relationship and stack on smaller screens.
 
-Process and FAQ use 1fr / 1.65fr columns with a 70px gap and 110px top spacing. Below 800px they stack with a 25px gap and 65px top spacing. The contact panel is a separate charcoal block with 52px padding, reduced to 30px 24px on mobile.
+Service heroes use equal columns with a compact text/facts/action block and an overlapping device composition; below 750px they stack. Main service sections end with the service-section spacing token, changing to service-section-mobile. Audience blocks use two columns; six work cards use three columns, two below 1000px and one below 540px. The directory uses the same three/two/one progression with 16px gaps. The directory introduction's paragraph starts 20px below the heading; card descriptions retain their separate 9px margin.
 
-The homepage header is sticky at top:0 with 18px 3.5% padding. Below 800px it uses 14px 4%, hides the header CTA and the Agency word, but keeps the three navigation links visible. The homepage no longer uses the original notch or side rail. Cases use a separate readable sticky header without a notch.
+Related-case grids use the actual number of cases, up to three columns; single-case sections pair the card with explanatory copy and a diagram. Service diagrams have a 560px maximum width and case spreads a 660px maximum. Four roadmap stops share a desktop row; below 750px the keyboard-focusable track scrolls internally, with 230px stops and proximity snapping. Pricing has a 1.35fr / .8fr composition; rows and the sidebar stack at the observed responsive breakpoints. The AI example grid is two columns and stacks below 750px.
+
+Headers remain readable and sticky. The final desktop header has a 64px minimum and gutter-aligned padding; below 750px it has a 56px minimum. Service navigation keeps “Все услуги” and “Кейсы” while hiding the header CTA on mobile. Footer navigation keeps three desktop columns and the dotted wordmark.
 
 ## Elevation & Depth
 
 The header alone supplies the prominent homepage glass treatment: rgba(20,20,20,.93), 14px backdrop blur and a 1px #ffffff10 bottom edge. Cards, native disclosure delivery panels and the contact block are flat charcoal surfaces. Photo labels inherit their small overlay treatment; avoid claiming that every inherited blur rule has been removed.
 
-**The Flat Content Rule.** Keep content surfaces flat and separate them with tone, spacing and thin dividers; reserve glass for the header and small image overlays.
+**The Flat Content Rule.** Keep content surfaces flat and separate them with tone, spacing and thin dividers; reserve glass for the header and small image overlays. The overlapping service hero photographs may use diffuse image depth; ordinary work and directory cards remain flat.
 
 ## Shapes
 
-Project shells use 22px corners and 12px padding, changing to 17px and 9px below 800px. Photo windows use 13px corners. Primary actions are 30px pills; service-icon blocks use 14px corners. Process tags use 8px corners; delivery panels use 16px. FAQ rows have no rounded card shell.
+The final homepage project shells use 18px corners, 10px padding and 10px photo windows. Primary actions are full pills. Service work cards use 14px corners, related-case and directory shells use 16px, and hero image windows use 14px. Process tags use 8px corners; delivery panels use 16px. FAQ rows have no rounded card shell.
 
 ## Components
 
@@ -106,7 +159,7 @@ Project shells use 22px corners and 12px padding, changing to 17px and 9px below
 
 src/project-cover.mjs loads assets/covers/maverick.webp, loyalty.webp, gift-roulette.webp and tailcare.webp as 1536×1024 image elements. They depict photographic device/product presentations generated from real UI references. They are not guaranteed pixel-identical screenshots; unchanged case captures and demos provide interface evidence. The available generator's model was not selectable. The four WebP files total approximately 621 KB; original outputs remain under .codex/generated_images.
 
-Each cover links to its case. Images fill a 3:2 window using object-fit:cover and scale to 1.025 on hover over 450ms. No CSS laptop keyboard, phone frame or live gameplay remains in the homepage cards.
+Each cover links to its case. Homepage images fill a 16:11 window using object-fit:cover and scale to 1.025 on hover over 450ms. No CSS laptop keyboard, phone frame or live gameplay remains in the homepage cards.
 
 ### Services, process and FAQ
 
@@ -116,7 +169,7 @@ FAQ disclosures are flat rows with thin dividers. Preserve native summary keyboa
 
 ### Actions and behavior
 
-Homepage primary CTAs are white with dark text, at least 46px high. Header navigation stays visible on mobile while the header CTA hides. Reduced-motion CSS suppresses homepage transitions and animations. Native scrolling and the existing case demo/dialog behavior remain. No new performance score, device verification or deployment is implied by these source-derived rules.
+Homepage primary CTAs use the final 44px minimum, 13px type and 11px 20px padding. The homepage service-overview link independently has a 44px target. Service primary CTAs inherit 13px Manrope, 14px 24px padding and a full pill; the 22px SVG produces a measured 50px desktop height at 1440px (min-height remains auto). Header navigation stays visible on mobile while the header CTA hides. Reduced-motion CSS suppresses homepage transitions and animations. Native scrolling and the existing case demo/dialog behavior remain. No new performance score, device verification or deployment is implied by these source-derived rules.
 
 ### particle hero and footer
 
@@ -132,6 +185,18 @@ Generated real-device visualizations appear in alternating stories and open the 
 
 Current evidence: .impeccable/review/lunar-desktop.png and lunar-mobile.png. Desktop and mobile viewport, cursor response and pause checked locally; performance is not benchmarked across physical devices.
 
+### Service catalog extension — October 1, 2026
+
+The seven current service surfaces are /services/ and the websites, web-apps, telegram-mini-apps, crm, automation and mvp routes. They reuse existing generated service and case-visual assets; no new raster generation belongs to this update. A visible caption distinguishes these interface visualizations from exact screens in the cases.
+
+The individual-page pattern is hero, audience, six included-work cards, truthful related cases, a service-specific example diagram, four-stage roadmap, handover, bounded price rows, a related-service link and native FAQ with a small ASCII companion. AI adds four hypothetical examples between cases and its mechanism. The directory presents six linked cards with starting prices. This composition is scoped to services; the homepage garden and retained productStage demos keep their existing roles.
+
+Service hero photographs overlap with back/front rotations of −6° / 3° and diffuse shadow (0 16px 35px #0006). Hover softens their rotation and lifts them 4–5px over 700ms. Work cards lift 3px and lighten on hover; directory cards lift 4px, with image scale 1.025. Related-case images scale 1.035. Reduced motion removes these transforms and transitions. Diagrams show an example page map, role/data relationship, Telegram/bot/Mini App relationship, categorical CRM states, integration success/error branches or the bounded MVP structure. Mini App diagram marks are inline SVG.
+
+The first native FAQ disclosure starts open. The existing disclosures.mjs supplies interruptible 440ms height transitions while preserving summary keyboard behavior and the no-JavaScript fallback. Shared 850ms one-time reveals and 480ms ASCII updates run only when permitted; offscreen/hidden motifs stop and reduced motion settles immediately. Service links, buttons and summaries use a 2px light focus outline with a 5px offset.
+
+Source provenance: src/service-catalog-data.mjs, src/service-pages.mjs, src/seo-data.mjs, src/service-stories.mjs, src/service-visuals.mjs, service-editorial.css and the shared final CSS/runtime layers. Final local captures: .impeccable/review/service-new-desktop.png, service-new-mobile.png, service-directory-desktop.png, service-directory-mobile.png, service-ai-desktop.png and service-ai-mobile.png. The 20px directory-intro margin and service button dimensions were confirmed in the browser. No deployment or physical-device benchmark is inferred from these captures.
+
 ## Do's and Don'ts
 
 - **Do** preserve the particle hero → projects → services → process → FAQ → contact sequence.
@@ -139,6 +204,8 @@ Current evidence: .impeccable/review/lunar-desktop.png and lunar-mobile.png. Des
 - **Do** distinguish generated photographic presentations from original product captures.
 - **Don't** restore the CRM hero, workflow scene, long roadmap or CSS device constructions on the homepage.
 - **Don't** invent generator model names, business outcomes or performance claims.
+
+The dated notes below preserve prior local evidence. Their older four-service descriptions and measurements are historical snapshots; the current frontmatter, canonical sections and service catalog extension above describe the active service surface. Pre-existing homepage/footer eyebrows and obsolete layered selectors are not canonized as future patterns or repaired by this scoped documentation pass.
 
 ## Editorial polish — October 1, 2026
 

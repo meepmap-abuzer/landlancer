@@ -37,7 +37,7 @@ const reveal = new IntersectionObserver(entries => {
     reveal.unobserve(target);
   });
 },{threshold:.08});
-document.querySelectorAll('.case-opening-copy,.case-story,.case-capability-grid,.case-related,.studio-project,.service-tile,.industry-card,.new-section-heading,.studio-process,.seo-faq,.end-contact,.end-columns,.service-roadmap,.service-schematic,.service-intro,.service-context,.service-scope article,.service-examples,.service-related').forEach(element => reveal.observe(element));
+document.querySelectorAll('.case-opening-copy,.case-story,.case-capability-grid,.case-related,.studio-project,.service-tile,.industry-card,.new-section-heading,.studio-process,.seo-faq,.end-contact,.end-columns,.service-roadmap,.service-schematic,.service-intro,.service-context,.service-scope article,.service-examples,.service-related,.service-hero,.service-audience,.service-includes,.service-proof,.service-ai,.service-mechanism,.service-handover,.service-pricing,.service-questions,.directory-intro,.directory-service,.directory-help').forEach(element => reveal.observe(element));
 setupDisclosures({reduced,allowed});
 // A few moving ASCII pixels, only while the small motif is in view.
 const motifs=[...document.querySelectorAll('[data-motif]')].map(element=>({element,original:element.textContent,visible:false}));

@@ -68,3 +68,29 @@ Service pages retain roadmaps and factual copy while adding service-specific arc
 ### Wide studio layout — October 1, 2026
 
 The homepage, services and cases now use nearly the full viewport width with small responsive side gutters. Smaller headings, shorter hero/section spacing and four projects per desktop row reduce vertical scrolling. The full-height tree is fitted into the shorter garden without stretching; grass and leaves use a stronger natural green. Mobile layouts remain stacked and the existing progressive loading, cursor reactions and entrance remain intact. Desktop/mobile browser review and six SEO/loading tests passed. The site publishes through GitHub Pages from main at https://landlancer.ru/.
+
+
+## Current service catalog — October 1, 2026
+
+/services/ now links six individual pages: websites, web-apps, telegram-mini-apps, crm, automation and mvp. This supersedes the earlier four-service layout described in historical notes above. The visitor is a founder or business team selecting a concrete first development scope; primary actions open https://t.me/LancerManager. The service structure follows the user's https://atoms.technology/ru/websites reference while retaining Lancer's dark studio identity.
+
+Each page explains audience situations, six included-work areas, real related portfolio work, a bespoke example diagram, four stages with visible deliverables, handover, prices and FAQ. No stage promises an invented duration, business outcome or guarantee. The directory provides service descriptions and supplied starting budgets; the homepage retains its garden, projects, service illustrations, process and FAQ.
+
+| Service | Supplied starting budget | Bounded starting scope |
+| --- | ---: | --- |
+| Сайты и лендинги | 30 000 ₽ | One page for one offer: structure, individual design, responsive layout and lead form; client supplies materials. |
+| Веб-сервисы | 90 000 ₽ | One main user scenario, sign-in, responsive interface, server and database. |
+| Telegram Mini Apps | 80 000 ₽ | One completed scenario, Telegram sign-in, responsive screens, bot and basic server logic. |
+| CRM и админ-панели | 80 000 ₽ | One work process: list, record, statuses and basic access separation. |
+| AI и автоматизация | 100 000 ₽ | One limited process: data source, processing, result in a work service, event log and checks. |
+| MVP для стартапа | 200 000 ₽ | One core scenario: design, responsive interface, server/database, simple administration and launch. |
+
+The Mini App loyalty tier starts at 220 000 ₽ for points, tasks, rewards and an administration interface; rules and integrations are fixed in the estimate. Other larger tiers display “По составу работ”. Every starting amount applies to its stated scope; the final scope and price are agreed before development. Hosting, model APIs and outside service fees are separate. Portfolio products demonstrate capability and do not imply that all their functions fit the starting tier.
+
+Related work is factual: TailCare supports websites; TailCare and 12К support web services; Maverick, 12К and Gift Roulette support Mini Apps; 12К supports CRM; TailCare publishing and 12К API operations support automation; TailCare and Maverick illustrate bounded MVP scenarios. Exact product behavior remains in original captures and retained local demos, with simulation boundaries in DEMOS.md.
+
+AI examples are explicitly hypothetical: document fields with human confirmation, knowledge-base answers with sources and escalation, incoming requests classified into CRM with draft replies, and checked summaries of CRM/table data. These are possible project scenarios, not delivered AI client cases. 12К demonstrates integration, Loyalty API operations and data exchange; it does not establish an AI implementation claim. AI scope, process and handover copy explicitly cover input samples, quality criteria, approved sources, human confirmation, errors/retries, provider limits, accounts and tariffs.
+
+Hero compositions reuse a case visualization and an existing minimal service image; related cards reuse existing portfolio covers. All are identified as generated interface visualizations, not documentary photography or exact product screenshots. assets/device-visuals.json and the existing adjacent provenance remain the asset authority; no raster was generated for this service update.
+
+Confirmed sources: src/service-catalog-data.mjs, src/service-pages.mjs, src/seo-data.mjs, src/service-stories.mjs, src/service-visuals.mjs, service-editorial.css, studio-home.css, studio-layout.css and studio-world.mjs. Final local desktop/mobile evidence is .impeccable/review/service-new-desktop.png, service-new-mobile.png, service-directory-desktop.png, service-directory-mobile.png, service-ai-desktop.png and service-ai-mobile.png. The corrected directory-intro margin is 20px, service contact eyebrow is removed, Mini App diagram icons are SVG, the homepage overview link has a 44px target, and AI-specific process/handover copy is present. These are local confirmations; no new deployment or physical-device performance benchmark is claimed.
