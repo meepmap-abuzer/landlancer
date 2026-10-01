@@ -1,496 +1,340 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-01T11:30:48.594Z",
-  "title": "Design System: Lancer Agency — Compact dark studio",
+  "generatedAt": "2026-10-01T16:10:47Z",
+  "title": "Design System: Lancer Agency",
   "extensions": {
-    "assets": [
-      {
-        "purpose": "Generated photographic presentation based on real UI references, not an unedited screenshot",
-        "path": "assets/covers/maverick.webp"
-      },
-      {
-        "purpose": "Generated photographic presentation based on real UI references, not an unedited screenshot",
-        "path": "assets/covers/loyalty.webp"
-      },
-      {
-        "purpose": "Generated photographic presentation based on real UI references, not an unedited screenshot",
-        "path": "assets/covers/gift-roulette.webp"
-      },
-      {
-        "purpose": "Generated photographic presentation based on real UI references, not an unedited screenshot",
-        "path": "assets/covers/tailcare.webp"
-      },
-      {
-        "path": "assets/services/websites.webp",
-        "purpose": "Minimal generated device illustration; assets/device-visuals.json records provenance"
-      },
-      {
-        "path": "assets/services/webapps.webp",
-        "purpose": "Minimal generated device illustration; assets/device-visuals.json records provenance"
-      },
-      {
-        "path": "assets/services/telegram.webp",
-        "purpose": "Minimal generated device illustration; assets/device-visuals.json records provenance"
-      },
-      {
-        "path": "assets/services/crm.webp",
-        "purpose": "Minimal generated device illustration; assets/device-visuals.json records provenance"
-      },
-      {
-        "path": "assets/services/automation.webp",
-        "purpose": "Minimal generated device illustration; assets/device-visuals.json records provenance"
-      },
-      {
-        "path": "assets/services/mvp.webp",
-        "purpose": "Minimal generated device illustration; assets/device-visuals.json records provenance"
-      },
-      {
-        "path": "assets/case-visuals/maverick-activation.webp",
-        "purpose": "Generated real-device visualization based on actual UI references; not an original screenshot"
-      },
-      {
-        "path": "assets/case-visuals/maverick-engagement.webp",
-        "purpose": "Generated real-device visualization based on actual UI references; not an original screenshot"
-      },
-      {
-        "path": "assets/case-visuals/gift-games.webp",
-        "purpose": "Generated real-device visualization based on actual UI references; not an original screenshot"
-      },
-      {
-        "path": "assets/case-visuals/gift-rounds.webp",
-        "purpose": "Generated real-device visualization based on actual UI references; not an original screenshot"
-      },
-      {
-        "path": "assets/case-visuals/loyalty-member.webp",
-        "purpose": "Generated real-device visualization based on actual UI references; not an original screenshot"
-      },
-      {
-        "path": "assets/case-visuals/loyalty-business.webp",
-        "purpose": "Generated real-device visualization based on actual UI references; not an original screenshot"
-      },
-      {
-        "path": "assets/case-visuals/tailcare-home.webp",
-        "purpose": "Generated real-device visualization based on actual UI references; not an original screenshot"
-      },
-      {
-        "path": "assets/case-visuals/tailcare-catalog.webp",
-        "purpose": "Generated real-device visualization based on actual UI references; not an original screenshot"
-      }
-    ],
-    "materials": {
-      "header": "rgba(20,20,20,.93); backdrop-filter:blur(14px); border-bottom:1px solid #ffffff10",
-      "cases": "Text openings, eight generated real-device editorial spreads; original captures and interactive productStage demos retained. Neutral dark image lightbox.",
-      "provenance": "Four generated photographic UI-reference covers, approximately 621 KB combined WebP; originals .codex/generated_images; generator model not selectable",
-      "scope": "Homepage studio-home.css, studio-world.css and particle-hero.css; cases case-editorial.css; six service pages and directory service-editorial.css; interface-polish.css followed by studio-layout.css are shared final layers.",
-      "services": "Existing generated interface visualizations overlap beside compact title, facts and actions; flat work cards and truthful case cards, bespoke example diagrams, four-stage roadmap, scoped prices, native FAQ and small ASCII. No new service rasters.",
-      "heroFraming": "Current fluid homepage hero uses clamp(520px,65svh,600px), with a 380px stacked garden below 900px. Full tree proportions, cursor reactions, radial garden entrance and proportional growth remain; source/runtime pauses rendering offscreen, hidden or under reduced motion."
-    },
-    "motion": [
-      {
-        "purpose": "Photographic covers; disabled under reduced motion.",
-        "name": "cover-hover",
-        "value": "transform .45s ease; scale(1.025)"
-      },
-      {
-        "name": "editorial-reveal",
-        "value": "850ms translateY(32px) to 0; reduced-motion disabled",
-        "purpose": "Services and case editorial sections; once per visit"
-      },
-      {
-        "name": "service-ascii",
-        "value": "Small ASCII pixel changes every 480ms, only visible and motion allowed",
-        "purpose": "Service-specific decorative motifs"
-      },
-      {
-        "name": "native-disclosures",
-        "value": "440ms interruptible CSS height, from current rendered height",
-        "purpose": "Process, FAQ and case details; native keyboard and no-JS fallback preserved; reduced motion settles immediately"
-      },
-      {
-        "name": "silver-tree",
-        "value": "Slow shader leaf wind, gentle sway, sparse falling leaves",
-        "purpose": "Authored volumetric Three.js tree on the right of the garden; instanced leaves; pauses offscreen, hidden and reduced motion"
-      },
-      {
-        "name": "loading-feedback",
-        "value": "2px entry/navigation line; small media spinners; 250ms image fade",
-        "purpose": "Nonblocking progress on every page and local image/scene/demo loading, with reduced-motion fallback"
-      },
-      {
-        "name": "service-photo-hover",
-        "value": "700ms cubic-bezier(.16,1,.3,1); back rotation −6° to −4° and translateY(-5px); front 3° to 1° and translateY(-4px)",
-        "purpose": "Overlapping service hero photographs; disabled under reduced motion."
-      }
-    ],
-    "breakpoints": [
-      {
-        "name": "wide-project-row",
-        "value": "1200px"
-      },
-      {
-        "name": "service-two-columns",
-        "value": "1000px"
-      },
-      {
-        "name": "garden-stack",
-        "value": "900px"
-      },
-      {
-        "name": "homepage-section-stack",
-        "value": "800px"
-      },
-      {
-        "name": "service-stack",
-        "value": "750px"
-      },
-      {
-        "name": "single-column-cards",
-        "value": "540px"
-      }
-    ],
-    "caseEditorial": {
-      "stylesheet": "case-editorial.css",
-      "container": "Fluid viewport minus responsive side gutters",
-      "storyGap": "clamp(32px,4vw,72px); 28px mobile",
-      "header": "Readable sticky navigation without notch",
-      "screens": "Static actual captures with lightbox; productStage demos separately interactive"
-    },
-    "reviewEvidence": [
-      ".impeccable/review/desktop.png",
-      ".impeccable/review/mobile.png",
-      ".impeccable/review/services-desktop.png",
-      ".impeccable/review/case-desktop.png",
-      ".impeccable/review/case-mobile.png",
-      ".impeccable/review/detect-webgl.json",
-      ".impeccable/review/ribbon-desktop.png",
-      ".impeccable/review/ribbon-mobile.png",
-      ".impeccable/review/lunar-desktop.png",
-      ".impeccable/review/lunar-mobile.png",
-      ".impeccable/review/silver-tree-desktop.png",
-      ".impeccable/review/silver-tree-mobile.png",
-      ".impeccable/review/blended-services.png",
-      ".impeccable/review/service-flow-desktop.png",
-      ".impeccable/review/service-roadmap-desktop.png",
-      ".impeccable/review/tree-foreground-desktop.png",
-      ".impeccable/review/tree-foreground-mobile.png",
-      ".impeccable/review/tree-volume-desktop.png",
-      ".impeccable/review/tree-volume-mobile.png",
-      ".impeccable/review/wide-green-desktop.png",
-      ".impeccable/review/wide-green-mobile.png",
-      ".impeccable/review/service-new-desktop.png",
-      ".impeccable/review/service-new-mobile.png",
-      ".impeccable/review/service-directory-desktop.png",
-      ".impeccable/review/service-directory-mobile.png",
-      ".impeccable/review/service-ai-desktop.png",
-      ".impeccable/review/service-ai-mobile.png"
-    ],
-    "deployment": "GitHub Pages from main, repository meepmap-abuzer/landlancer, custom domain https://landlancer.ru/",
-    "particleHero": "Authored full-width Three.js garden with a large foreground silver/green tree at right, headline and description at left. World-space radial entrance originates near the lower-left foreground; the tree grows proportionally from its base and foliage blooms. No round scene loading indicator. Cursor bending applies to grass and nearby leaves on the GPU. Ambient wind and falling leaves remain. Rendering and the entrance pause offscreen/hidden; reduced motion reveals the complete static scene.",
-    "heroReview": "Local desktop and 390px mobile review: full model framing, entrance progression, canopy pointer hit, readiness and console errors. No physical-device frame-rate benchmark.",
-    "progressiveLoading": "Every canonical, utility and case page has a small, nonblocking entry/navigation progress line. Images show local loading indicators, decode asynchronously, and keep real src, alt and dimensions in static HTML. Native lazy loading and srcset choose 18 optimized 768px WebP variants (457,060 bytes combined versus 1,692,824 bytes for full sources, 73% smaller); large screens and image zoom retain originals. src/image-policy.mjs applies this during document build. src/build-responsive-images.mjs recreates derivatives with Sharp, optionally supplied as a module path. The homepage no longer requests the unused demo entry/style; case demos still load near the viewport. The garden import waits for viewport intersection and idle time after first text paint, with local loading/error states. No blocking page overlay or simulated percentage hides the content.",
-    "serviceStructure": "Six individual pages and /services/ directory. Individual pages: compact text/facts/action hero beside two reused generated device visuals; audience; six work cards; truthful related cases; bespoke example diagram; four deliverable stages; handover; bounded pricing; related service; native FAQ and small ASCII. AI inserts four hypothetical examples and records human verification, quality criteria and provider limitations. The homepage garden and case demos keep their established identity.",
-    "footerStructure": "Three desktop navigation columns: services, projects, agency. Directions removed; dotted wordmark sculpture retained.",
-    "wideLayout": {
-      "stylesheet": "studio-layout.css",
-      "container": "Fluid viewport width minus two gutters",
-      "heroHeight": "clamp(520px,65svh,600px); 380px stacked garden below 900px",
-      "projects": "Four columns from 1200px, two until 540px, then one",
-      "artwork": "Service diagrams max 560px; case device spreads max 660px",
-      "garden": "Expanded terrain and grass area, unchanged instance counts; full-height camera fit preserves tree proportions"
-    },
     "colorMeta": {
       "ground": {
         "role": "neutral",
-        "displayName": "Near-black ground",
+        "displayName": "Graphite",
         "tonalRamp": [
-          "oklch(15% 0 0)",
-          "oklch(25% 0 0)",
-          "oklch(35% 0 0)",
-          "oklch(45% 0 0)",
-          "oklch(55% 0 0)",
-          "oklch(65% 0 0)",
-          "oklch(80% 0 0)",
-          "oklch(95% 0 0)"
+          "oklch(15% 0.0043 264.5)",
+          "oklch(25% 0.0043 264.5)",
+          "oklch(35% 0.0043 264.5)",
+          "oklch(45% 0.0043 264.5)",
+          "oklch(55% 0.0043 264.5)",
+          "oklch(65% 0.0043 264.5)",
+          "oklch(80% 0.0043 264.5)",
+          "oklch(95% 0.0043 264.5)"
         ]
       },
       "surface": {
         "role": "neutral",
-        "displayName": "Charcoal surface",
+        "displayName": "Dark satin",
         "tonalRamp": [
-          "oklch(15% 0 0)",
-          "oklch(25% 0 0)",
-          "oklch(35% 0 0)",
-          "oklch(45% 0 0)",
-          "oklch(55% 0 0)",
-          "oklch(65% 0 0)",
-          "oklch(80% 0 0)",
-          "oklch(95% 0 0)"
+          "oklch(15% 0.0048 248.0)",
+          "oklch(25% 0.0048 248.0)",
+          "oklch(35% 0.0048 248.0)",
+          "oklch(45% 0.0048 248.0)",
+          "oklch(55% 0.0048 248.0)",
+          "oklch(65% 0.0048 248.0)",
+          "oklch(80% 0.0048 248.0)",
+          "oklch(95% 0.0048 248.0)"
         ]
       },
       "ink": {
         "role": "neutral",
-        "displayName": "White studio ink",
+        "displayName": "Pearl",
         "tonalRamp": [
-          "oklch(15% 0 0)",
-          "oklch(25% 0 0)",
-          "oklch(35% 0 0)",
-          "oklch(45% 0 0)",
-          "oklch(55% 0 0)",
-          "oklch(65% 0 0)",
-          "oklch(80% 0 0)",
-          "oklch(95% 0 0)"
+          "oklch(15% 0.0041 91.4)",
+          "oklch(25% 0.0041 91.4)",
+          "oklch(35% 0.0041 91.4)",
+          "oklch(45% 0.0041 91.4)",
+          "oklch(55% 0.0041 91.4)",
+          "oklch(65% 0.0041 91.4)",
+          "oklch(80% 0.0041 91.4)",
+          "oklch(95% 0.0041 91.4)"
         ]
       },
       "muted": {
         "role": "neutral",
-        "displayName": "Muted studio gray",
+        "displayName": "Warm gray",
         "tonalRamp": [
-          "oklch(15% 0 0)",
-          "oklch(25% 0 0)",
-          "oklch(35% 0 0)",
-          "oklch(45% 0 0)",
-          "oklch(55% 0 0)",
-          "oklch(65% 0 0)",
-          "oklch(80% 0 0)",
-          "oklch(95% 0 0)"
-        ]
-      },
-      "headline-muted": {
-        "role": "neutral",
-        "displayName": "Soft headline gray",
-        "tonalRamp": [
-          "oklch(15% 0 0)",
-          "oklch(25% 0 0)",
-          "oklch(35% 0 0)",
-          "oklch(45% 0 0)",
-          "oklch(55% 0 0)",
-          "oklch(65% 0 0)",
-          "oklch(80% 0 0)",
-          "oklch(95% 0 0)"
+          "oklch(15% 0.0044 91.5)",
+          "oklch(25% 0.0044 91.5)",
+          "oklch(35% 0.0044 91.5)",
+          "oklch(45% 0.0044 91.5)",
+          "oklch(55% 0.0044 91.5)",
+          "oklch(65% 0.0044 91.5)",
+          "oklch(80% 0.0044 91.5)",
+          "oklch(95% 0.0044 91.5)"
         ]
       },
       "line": {
         "role": "neutral",
-        "displayName": "Translucent white rule",
+        "displayName": "Translucent rule",
         "tonalRamp": [
-          "oklch(15% 0 0)",
-          "oklch(25% 0 0)",
-          "oklch(35% 0 0)",
-          "oklch(45% 0 0)",
-          "oklch(55% 0 0)",
-          "oklch(65% 0 0)",
-          "oklch(80% 0 0)",
-          "oklch(95% 0 0)"
+          "oklch(15% 0.0000 89.9)",
+          "oklch(25% 0.0000 89.9)",
+          "oklch(35% 0.0000 89.9)",
+          "oklch(45% 0.0000 89.9)",
+          "oklch(55% 0.0000 89.9)",
+          "oklch(65% 0.0000 89.9)",
+          "oklch(80% 0.0000 89.9)",
+          "oklch(95% 0.0000 89.9)"
         ]
       },
-      "control": {
+      "accent": {
+        "role": "primary",
+        "displayName": "Copper",
+        "tonalRamp": [
+          "oklch(15% 0.0681 50.7)",
+          "oklch(25% 0.0681 50.7)",
+          "oklch(35% 0.0681 50.7)",
+          "oklch(45% 0.0681 50.7)",
+          "oklch(55% 0.0681 50.7)",
+          "oklch(65% 0.0681 50.7)",
+          "oklch(80% 0.0681 50.7)",
+          "oklch(95% 0.0681 50.7)"
+        ]
+      },
+      "hover-ink": {
         "role": "neutral",
-        "displayName": "Charcoal control",
+        "displayName": "Clear white",
         "tonalRamp": [
-          "oklch(15% 0 0)",
-          "oklch(25% 0 0)",
-          "oklch(35% 0 0)",
-          "oklch(45% 0 0)",
-          "oklch(55% 0 0)",
-          "oklch(65% 0 0)",
-          "oklch(80% 0 0)",
-          "oklch(95% 0 0)"
-        ]
-      },
-      "service-ink": {
-        "role": "neutral",
-        "displayName": "Service heading ink",
-        "tonalRamp": [
-          "oklch(15% 0 0)",
-          "oklch(25% 0 0)",
-          "oklch(35% 0 0)",
-          "oklch(45% 0 0)",
-          "oklch(55% 0 0)",
-          "oklch(65% 0 0)",
-          "oklch(80% 0 0)",
-          "oklch(95% 0 0)"
-        ]
-      },
-      "service-muted": {
-        "role": "neutral",
-        "displayName": "Service body gray",
-        "tonalRamp": [
-          "oklch(15% 0 0)",
-          "oklch(25% 0 0)",
-          "oklch(35% 0 0)",
-          "oklch(45% 0 0)",
-          "oklch(55% 0 0)",
-          "oklch(65% 0 0)",
-          "oklch(80% 0 0)",
-          "oklch(95% 0 0)"
-        ]
-      },
-      "sage-detail": {
-        "role": "secondary",
-        "displayName": "Quiet sage detail",
-        "tonalRamp": [
-          "oklch(15% 0.028 134)",
-          "oklch(25% 0.028 134)",
-          "oklch(35% 0.028 134)",
-          "oklch(45% 0.028 134)",
-          "oklch(55% 0.028 134)",
-          "oklch(65% 0.028 134)",
-          "oklch(80% 0.028 134)",
-          "oklch(95% 0.028 134)"
+          "oklch(15% 0.0000 89.9)",
+          "oklch(25% 0.0000 89.9)",
+          "oklch(35% 0.0000 89.9)",
+          "oklch(45% 0.0000 89.9)",
+          "oklch(55% 0.0000 89.9)",
+          "oklch(65% 0.0000 89.9)",
+          "oklch(80% 0.0000 89.9)",
+          "oklch(95% 0.0000 89.9)"
         ]
       }
     },
     "typographyMeta": {
       "display": {
-        "displayName": "Homepage display",
-        "purpose": "Current fluid homepage heading."
+        "displayName": "Homepage offer",
+        "purpose": "Compact hero heading; mobile clamp lives in the responsive layout."
       },
       "headline": {
-        "displayName": "Studio section heading",
-        "purpose": "Shared homepage section hierarchy."
+        "displayName": "Section heading",
+        "purpose": "Shared medium-weight h2 hierarchy."
       },
-      "button": {
+      "title": {
+        "displayName": "Tertiary heading",
+        "purpose": "Shared h3; ruled lists have the described local 18px treatment."
+      },
+      "body": {
+        "displayName": "Body copy",
+        "purpose": "Base paragraph role; source-specific service and case roles remain smaller."
+      },
+      "action": {
         "displayName": "Action label",
-        "purpose": "White pill actions; exact padding is surface-scoped."
+        "purpose": "Primary and text action label."
+      },
+      "faq": {
+        "displayName": "FAQ question",
+        "purpose": "Native disclosure summary."
       },
       "service-display": {
-        "displayName": "Service display",
-        "purpose": "Individual service and directory h1; 34px below 750px."
+        "displayName": "Service offer",
+        "purpose": "Individual service h1."
       },
-      "service-headline": {
-        "displayName": "Service section heading",
-        "purpose": "Service h2; 27px below 750px."
+      "case-display": {
+        "displayName": "Case name",
+        "purpose": "Text-only case opening."
       },
-      "service-title": {
-        "displayName": "Service title",
-        "purpose": "Default service h3; cards have their recorded exceptions."
-      },
-      "service-body": {
-        "displayName": "Service body",
-        "purpose": "Main service prose; hero, FAQ and card copy use documented exceptions."
-      },
-      "service-ascii": {
-        "displayName": "Small ASCII companion",
-        "purpose": "Decorative service motif; 10px on mobile."
+      "motif": {
+        "displayName": "Decorative ASCII",
+        "purpose": "Small process motif; service uses its local Consolas role."
       }
     },
-    "shadows": [
+    "shadows": [],
+    "motion": [
       {
-        "name": "service-photo-depth",
-        "value": "0 16px 35px #0006",
-        "purpose": "Diffuse depth beneath overlapping hero image planes; ordinary cards remain flat."
+        "name": "studio-ease",
+        "value": "cubic-bezier(.16,1,.3,1)",
+        "purpose": "Shared transforms, photo scale and 260ms tab-panel settling."
+      },
+      {
+        "name": "action-color",
+        "value": "200ms",
+        "purpose": "Primary background and navigation color response."
+      },
+      {
+        "name": "action-transform",
+        "value": "300ms",
+        "purpose": "2px primary lift and 3px link-arrow movement."
+      },
+      {
+        "name": "photo-scale",
+        "value": "650ms",
+        "purpose": "Project photo 1.025 and generated-device 1.018 hover scale."
+      },
+      {
+        "name": "object-arrival",
+        "value": "950ms",
+        "purpose": "Single assembly; progress += dt/.95, quartic ease-out."
+      },
+      {
+        "name": "object-damping",
+        "value": "1 - exp(-dt * 4.5)",
+        "purpose": "Pointer/hover settle; animated only when visible and document active."
+      },
+      {
+        "name": "object-drift",
+        "value": "rotation sin(t*.26)*.035; height sin(t*.55)*.025",
+        "purpose": "Tiny authored ambient motion; static pose for reduced motion."
+      },
+      {
+        "name": "disclosure-height",
+        "value": "440ms cubic-bezier(.22,1,.36,1)",
+        "purpose": "Reversible native disclosure height; settle immediately hidden/reduced."
+      },
+      {
+        "name": "disclosure-copy",
+        "value": "opacity 220ms ease; transform 280ms ease",
+        "purpose": "Closing text fades and shifts -4px; closing indicator follows requested state."
+      },
+      {
+        "name": "motif-interval",
+        "value": "700ms",
+        "purpose": "Small ASCII character update; pause offscreen, hidden and reduced."
       }
     ],
-    "serviceReview": {
-      "date": "2026-10-01",
-      "scope": "Local desktop/mobile confirmation; no physical-device performance or deployment claim.",
-      "confirmed": [
-        "Directory introduction paragraph margin-top 20px; card paragraph margin-top 9px remains scoped.",
-        "Service-only contact eyebrow removed.",
-        "Mini App diagram icons are inline SVG.",
-        "Homepage overview link target min-height 44px.",
-        "AI-specific scope, process and handover copy present."
-      ],
-      "serviceCta1440": "Computed Manrope,Arial,sans-serif 13px; padding 14px 24px; radius 999px; min-height auto; rendered height 50px with 22px SVG."
+    "breakpoints": [
+      {
+        "name": "wide",
+        "value": "1600px",
+        "purpose": "Minimum-width enlargement of hero/object and photo ratio."
+      },
+      {
+        "name": "compact-desktop",
+        "value": "1000px",
+        "purpose": "Maximum-width gaps, hero size and object size."
+      },
+      {
+        "name": "stacked",
+        "value": "750px",
+        "purpose": "Maximum-width main stacking, mobile gutters/header and internal roadmaps."
+      },
+      {
+        "name": "narrow-home",
+        "value": "500px",
+        "purpose": "Maximum-width one-column work and 2×2 production tabs."
+      },
+      {
+        "name": "narrow-services",
+        "value": "420px",
+        "purpose": "Maximum-width one-column audience/included/AI and related cases."
+      }
+    ],
+    "reducedMotion": "No continuous animation or entrance. Supported WebGL draws the complete static object; inline SVG is the loading/failure fallback.",
+    "evidence": {
+      "scope": "Local source and prior independent desktop/mobile review; no new deployment or physical-device performance claim.",
+      "review": ".impeccable/review/redesign-finish-review.md",
+      "verdict": ".impeccable/review/redesign-finish-verdict.md",
+      "disclosureMetrics": ".impeccable/review/redesign-faq-motion-metrics.json",
+      "rasterProvenance": "Pre-existing generation; assets/device-visuals.json and adjacent sidecars. No new raster generated."
     },
-    "notCanonized": "Pre-existing homepage/footer eyebrows and obsolete layered selectors are reported as drift, not inherited service patterns or repaired by this scoped documentation pass. Dated DESIGN.md notes retain historical evidence and are superseded by the current canonical sections for services."
+    "notCanonized": "Inherited obsolete selectors and dated homepage-exhibit/local-state wording in DEMOS.md are not future-system rules. Diagram textual arrows are allowed directed relationships. Utility/concept legacy shells and native demo themes are separate artifacts."
   },
   "components": [
     {
-      "name": "White homepage action",
+      "name": "Primary action",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "Final homepage white pill action; minimum height is surface-scoped.",
-      "html": "<button class=\"ds-action\">Обсудить проект<svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"M5 19 19 5M6 5h13v13\"/></svg></button>",
-      "css": ".ds-action{display:inline-flex;align-items:center;justify-content:center;gap:26px;min-height:44px;padding:11px 20px;border:0;border-radius:999px;background:#f4f4f4;color:#141414;font:600 13px/1.2 Manrope,Arial,sans-serif;cursor:pointer;transition:transform .3s,background .3s}.ds-action:hover{background:#fff;transform:translateY(-2px)}.ds-action:focus-visible{outline:2px solid #fff;outline-offset:5px}.ds-action:active{transform:translateY(0)}"
+      "description": "Pearl action with tight corners, 44px minimum target and inline arrow.",
+      "html": "<a class=\"ds-primary\" href=\"https://t.me/LancerManager\" target=\"_blank\" rel=\"noopener noreferrer\">Обсудить проект<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 19 19 5M5 5h14v14\"/></svg></a>",
+      "css": ".ds-primary{display:inline-flex;align-items:center;justify-content:center;gap:25px;min-height:44px;padding:12px 18px;border:0;border-radius:6px;background:var(--studio-ink,#f1f0ed);color:var(--studio-ground,#161719);font:500 13px/1.4 Manrope,Arial,sans-serif;text-decoration:none;transition:background .2s,transform .3s cubic-bezier(.16,1,.3,1)}.ds-primary svg{width:17px;height:17px;flex-shrink:0}.ds-primary:hover{background:#fff;transform:translateY(-2px)}.ds-primary:focus-visible{outline:2px solid var(--studio-accent,#d6a68b);outline-offset:5px}.ds-primary:active{transform:translateY(0)}@media(prefers-reduced-motion:reduce){.ds-primary{transition:none}.ds-primary:hover{transform:none}}"
     },
     {
-      "description": "Native disclosure; production group shares name process and first item starts open.",
-      "html": "<details class=\"ds-process\" open><summary>Разбираемся в задаче</summary><p>Обсуждаем пользователей, сценарии и ограничения.</p><div class=\"ds-delivery\">На выходе: согласованный состав MVP.</div></details>",
-      "kind": "card",
-      "name": "Process disclosure",
-      "css": ".ds-process{border-block:1px solid #ffffff20;color:#f4f4f4;font-family:Manrope,Arial,sans-serif}.ds-process summary{padding:21px 0;font-size:21px;font-weight:500;cursor:pointer}.ds-process p{color:#aaa;font-size:15px;line-height:1.7}.ds-delivery{padding:24px;margin-bottom:26px;background:#222;border-radius:16px;font-size:14px}.ds-process summary:focus-visible{outline:2px solid #fff;outline-offset:5px}"
-    },
-    {
-      "description": "Informational process topic.",
-      "html": "<span class=\"ds-tag\">Состав MVP</span>",
-      "kind": "chip",
-      "name": "Process tag",
-      "css": ".ds-tag{display:inline-block;background:#292929;color:#f4f4f4;padding:9px 14px;border-radius:8px;font:12px Manrope,Arial,sans-serif}"
-    },
-    {
-      "description": "Native FAQ disclosure without a rounded card shell.",
-      "html": "<details class=\"ds-faq\"><summary>Как начинается работа?</summary><p>Обсуждаем задачу и первую версию.</p></details>",
-      "kind": "card",
-      "name": "Flat FAQ row",
-      "css": ".ds-faq{border-bottom:1px solid #ffffff22;color:#f4f4f4;font-family:Manrope,Arial,sans-serif}.ds-faq summary{padding:24px 0;font-size:16px;cursor:pointer}.ds-faq p{padding:0 30px 22px 0;margin:0;color:#aaa;font-size:15px;line-height:1.7}.ds-faq summary:focus-visible{outline:2px solid #fff;outline-offset:5px}"
-    },
-    {
-      "description": "Sticky homepage header specimen; mobile retains navigation links and hides CTA.",
-      "html": "<nav class=\"ds-nav\" aria-label=\"Основная навигация\"><a href=\"#works\">Проекты</a><a href=\"#services\">Услуги</a><a href=\"#approach\">Процесс</a></nav>",
-      "kind": "nav",
-      "name": "Studio navigation",
-      "css": ".ds-nav{display:flex;gap:24px;padding:10px 24px;background:rgba(20,20,20,.93);backdrop-filter:blur(14px);border-bottom:1px solid #ffffff10;font:13px Manrope,Arial,sans-serif}.ds-nav a{color:#bdbdbd;text-decoration:none;transition:color .2s}.ds-nav a:hover{color:#fff}.ds-nav a:focus-visible{outline:2px solid #fff;outline-offset:5px}"
-    },
-    {
-      "name": "White service action",
+      "name": "Text action",
       "kind": "button",
-      "refersTo": "button-primary-service",
-      "description": "Shared service CTA; 22px SVG and vertical padding produce its measured 50px desktop height.",
-      "html": "<button class=\"ds-service-action\">Обсудить проект<svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"M5 19 19 5M6 5h13v13\"/></svg></button>",
-      "css": ".ds-service-action{display:inline-flex;align-items:center;justify-content:center;gap:26px;padding:14px 24px;border:0;border-radius:999px;background:#f4f4f4;color:#141414;font:600 13px/1.2 Manrope,Arial,sans-serif;cursor:pointer;transition:transform .3s,background .3s}.ds-service-action:hover{background:#fff;transform:translateY(-2px)}.ds-service-action:focus-visible{outline:2px solid #eee;outline-offset:5px}.ds-service-action:active{transform:translateY(0)}"
+      "refersTo": "text-action",
+      "description": "Secondary in-field link, with arrow and hover underline.",
+      "html": "<a class=\"ds-text-action\" href=\"#works\">Смотреть работы<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 19 19 5M5 5h14v14\"/></svg></a>",
+      "css": ".ds-text-action{display:inline-flex;align-items:center;gap:12px;min-height:44px;color:var(--studio-ink,#f1f0ed);font:400 13px/1.4 Manrope,Arial,sans-serif;text-decoration:none;text-underline-offset:5px}.ds-text-action svg{width:17px;height:17px}.ds-text-action:hover{color:#fff;text-decoration:underline}.ds-text-action:focus-visible{outline:2px solid var(--studio-accent,#d6a68b);outline-offset:5px}.ds-text-action:active{color:var(--studio-ink,#f1f0ed)}"
     },
     {
-      "name": "Included service work",
-      "kind": "card",
-      "refersTo": "service-work-card",
-      "description": "One of six service work areas; flat at rest with a restrained hover response.",
-      "html": "<article class=\"ds-service-work\"><svg viewBox=\"0 0 24 24\" width=\"19\" height=\"19\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"m12 3 9 5-9 5-9-5 9-5Zm-9 9 9 5 9-5M3 16l9 5 9-5\"/></svg><h3>Сценарии и структура</h3><p>Определяем основное действие и данные, с которыми работает пользователь.</p></article>",
-      "css": ".ds-service-work{padding:23px;background:#222;border-radius:14px;color:#eee;font-family:Manrope,Arial,sans-serif;transition:background .3s,transform .45s cubic-bezier(.16,1,.3,1)}.ds-service-work>svg{color:#aaa;margin-bottom:18px}.ds-service-work h3{margin:0;font-size:18px;font-weight:600;line-height:1.4;letter-spacing:-.03em}.ds-service-work p{margin:10px 0 0;color:#b7b7b7;font-size:13px;line-height:1.75;max-width:65ch}.ds-service-work:hover{background:#272727;transform:translateY(-3px)}"
+      "name": "Studio navigation",
+      "kind": "nav",
+      "description": "Opaque 64px navigation; current/hover links brighten and mobile keeps links.",
+      "html": "<header class=\"ds-nav\"><a class=\"ds-logo\" href=\"/\" aria-label=\"Lancer Agency — главная\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m12 3 10 5-10 5L2 8zM2 12l10 5 10-5M2 16l10 5 10-5\"/></svg><span>Lancer <small>Agency</small></span></a><nav aria-label=\"Основная навигация\"><a href=\"/#works\">Работы</a><a href=\"/services/\" aria-current=\"page\">Услуги</a><a href=\"/#approach\">Процесс</a></nav></header>",
+      "css": ".ds-nav{display:flex;align-items:center;gap:32px;min-height:64px;background:var(--studio-ground,#161719);border-bottom:1px solid var(--studio-line,#ffffff20);font-family:Manrope,Arial,sans-serif;padding-inline:22px}.ds-logo{display:inline-flex;gap:10px;align-items:center;white-space:nowrap;font-size:23px;font-weight:600;letter-spacing:-.025em;color:var(--studio-ink,#f1f0ed);text-decoration:none}.ds-logo svg{width:25px;height:25px;color:var(--studio-accent,#d6a68b)}.ds-logo small{font-size:12px;letter-spacing:0;font-weight:400;color:var(--studio-muted,#b1b0ad);margin-left:4px}.ds-nav nav{display:flex;gap:28px;margin-left:auto;font-size:13px}.ds-nav nav a{display:inline-flex;align-items:center;min-height:44px;color:var(--studio-muted,#b1b0ad);text-decoration:none;transition:color .2s}.ds-nav nav a:hover,.ds-nav nav a[aria-current]{color:var(--studio-ink,#f1f0ed)}.ds-nav a:focus-visible{outline:2px solid var(--studio-accent,#d6a68b);outline-offset:5px}@media(max-width:750px){.ds-nav{min-height:58px;gap:15px;padding-inline:20px}.ds-logo{font-size:21px}.ds-logo small{display:none}.ds-nav nav{gap:19px;font-size:12px}}@media(prefers-reduced-motion:reduce){.ds-nav nav a{transition:none}}"
     },
     {
-      "name": "Service FAQ row",
-      "kind": "card",
-      "description": "Native disclosure; first service item starts open and production height animation is interruptible.",
-      "html": "<details class=\"ds-service-faq\" open><summary>Можно начать с одного сценария?</summary><p>Сначала согласуем один законченный сценарий и необходимые данные.</p></details>",
-      "css": ".ds-service-faq{border-block:1px solid #ffffff24;color:#eee;font-family:Manrope,Arial,sans-serif}.ds-service-faq summary{padding:20px 0;min-height:60px;font-size:15px;line-height:1.5;cursor:pointer;transition:color .25s}.ds-service-faq summary:hover{color:#fff}.ds-service-faq summary:focus-visible{outline:2px solid #eee;outline-offset:5px}.ds-service-faq p{padding:0 26px 22px 0;margin:0;color:#aaa;font-size:14px;line-height:1.8;max-width:65ch}"
+      "name": "Ruled service row",
+      "kind": "custom",
+      "refersTo": "service-row",
+      "description": "Flat title, bounded starting price and description; no card shell.",
+      "html": "<a class=\"ds-service-row\" href=\"/services/websites/\"><h3>Сайты и лендинги</h3><p>Структура, дизайн и понятный путь к заявке.</p><span>от 30 000 ₽</span><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 19 19 5M5 5h14v14\"/></svg></a>",
+      "css": ".ds-service-row{display:grid;grid-template-columns:1fr auto 20px;gap:8px 18px;align-items:center;padding:22px 0;border-top:1px solid var(--studio-line,#ffffff20);color:var(--studio-ink,#f1f0ed);text-decoration:none;font-family:Manrope,Arial,sans-serif}.ds-service-row h3{margin:0;font-size:18px;font-weight:500;line-height:1.35;letter-spacing:-.025em}.ds-service-row p{grid-column:1/-1;grid-row:2;margin:0;font-size:12px;line-height:1.7;color:var(--studio-muted,#b1b0ad)}.ds-service-row>span{font-size:12px;white-space:nowrap;font-variant-numeric:tabular-nums;color:var(--studio-muted,#b1b0ad)}.ds-service-row>svg{width:17px;height:17px;transition:transform .3s cubic-bezier(.16,1,.3,1)}.ds-service-row:hover>svg{transform:translate(3px,-3px);color:var(--studio-accent,#d6a68b)}.ds-service-row:focus-visible{outline:2px solid var(--studio-accent,#d6a68b);outline-offset:5px}@media(max-width:500px){.ds-service-row{gap:8px 12px;grid-template-columns:1fr auto 17px}.ds-service-row h3{font-size:16px}.ds-service-row>span{font-size:11px}}@media(prefers-reduced-motion:reduce){.ds-service-row>svg{transition:none}}"
+    },
+    {
+      "name": "Production tabs",
+      "kind": "custom",
+      "description": "Selected/unselected/focus states. Production runtime supplies roving tabindex, keyboard selection and one labelled panel.",
+      "html": "<div class=\"ds-tabs\" role=\"tablist\" aria-label=\"Этапы работы\"><button class=\"ds-tab\" type=\"button\" role=\"tab\" aria-selected=\"true\" aria-controls=\"ds-panel-task\" id=\"ds-tab-task\">Задача<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 19 19 5M5 5h14v14\"/></svg></button><button class=\"ds-tab\" type=\"button\" role=\"tab\" aria-selected=\"false\" tabindex=\"-1\">Интерфейс<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 19 19 5M5 5h14v14\"/></svg></button><button class=\"ds-tab\" type=\"button\" role=\"tab\" aria-selected=\"false\" tabindex=\"-1\">Разработка<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 19 19 5M5 5h14v14\"/></svg></button><button class=\"ds-tab\" type=\"button\" role=\"tab\" aria-selected=\"false\" tabindex=\"-1\">Запуск<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 19 19 5M5 5h14v14\"/></svg></button></div><article class=\"ds-panel\" id=\"ds-panel-task\" role=\"tabpanel\" aria-labelledby=\"ds-tab-task\"><p>Разбираем пользователей, сценарии и ограничения.</p><span>Результат этапа</span><strong>Согласованный состав работ</strong></article>",
+      "css": ".ds-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-block:1px solid var(--studio-line,#ffffff20);font-family:Manrope,Arial,sans-serif}.ds-tab{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px;padding:12px 20px 12px 0;border:0;background:none;color:var(--studio-muted,#b1b0ad);text-align:left;cursor:pointer;font:400 17px Manrope,Arial,sans-serif;transition:color .2s}.ds-tab+.ds-tab{padding-left:22px}.ds-tab[aria-selected=true]{color:var(--studio-ink,#f1f0ed)}.ds-tab svg{width:17px;height:17px;transition:transform .3s}.ds-tab[aria-selected=true] svg{color:var(--studio-accent,#d6a68b);transform:rotate(45deg)}.ds-tab:focus-visible{outline:2px solid var(--studio-accent,#d6a68b);outline-offset:5px}.ds-panel{padding-top:25px;font:14px/1.7 Manrope,Arial,sans-serif;color:var(--studio-muted,#b1b0ad)}.ds-panel p{margin:0 0 20px}.ds-panel span,.ds-panel strong{display:block;font-size:12px}.ds-panel strong{font-weight:400;color:var(--studio-ink,#f1f0ed);margin-top:7px}@media(max-width:500px){.ds-tabs{grid-template-columns:repeat(2,minmax(0,1fr))}.ds-tab{padding:12px 0;min-height:50px;font-size:14px}.ds-tab+.ds-tab{padding-left:0}.ds-tab:nth-child(even){padding-left:15px}.ds-tab:nth-child(-n+2){border-bottom:1px solid var(--studio-line,#ffffff20)}.ds-tab svg{display:none}}@media(prefers-reduced-motion:reduce){.ds-tab,.ds-tab svg{transition:none}}"
+    },
+    {
+      "name": "Native FAQ row",
+      "kind": "custom",
+      "refersTo": "faq-row",
+      "description": "Interactive native disclosure, drawn plus/minus and warm-gray answer. Production height animation is supplied by disclosures.mjs.",
+      "html": "<details class=\"ds-faq\"><summary><span>Как начинается работа?</span><i aria-hidden=\"true\"></i></summary><p>Обсуждаем задачу, основной сценарий и состав первой версии.</p></details>",
+      "css": ".ds-faq{border-block:1px solid var(--studio-line,#ffffff20);color:var(--studio-ink,#f1f0ed);font-family:Manrope,Arial,sans-serif}.ds-faq summary{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:59px;padding:17px 0;list-style:none;cursor:pointer;font:400 14px/1.5 Manrope,Arial,sans-serif}.ds-faq summary::-webkit-details-marker{display:none}.ds-faq summary:hover{color:var(--studio-accent,#d6a68b)}.ds-faq summary:focus-visible{outline:2px solid var(--studio-accent,#d6a68b);outline-offset:5px}.ds-faq i{position:relative;width:18px;height:18px;flex:none}.ds-faq i::before,.ds-faq i::after{content:\"\";position:absolute;left:4px;top:8px;width:10px;height:1px;background:var(--studio-muted,#b1b0ad)}.ds-faq i::after{transform:rotate(90deg);transition:transform .25s}.ds-faq[open] i::after{transform:rotate(0)}.ds-faq p{margin:0;padding:0 32px 23px 0;color:var(--studio-muted,#b1b0ad);font-size:13px;line-height:1.8}.ds-faq[data-disclosure-state]{transition:height 440ms cubic-bezier(.22,1,.36,1)}.ds-faq[data-disclosure-state]>p{transition:opacity 220ms ease,transform 280ms ease}.ds-faq[data-disclosure-state=closing]>p{opacity:0;transform:translateY(-4px)}.ds-faq[data-disclosure-state=closing] i::after{transform:rotate(90deg)}@media(prefers-reduced-motion:reduce){.ds-faq,.ds-faq i::after,.ds-faq p{transition:none}}"
+    },
+    {
+      "name": "Functional page map",
+      "kind": "custom",
+      "refersTo": "diagram-node",
+      "description": "Connected diagram with local satin nodes; no outer panel or card.",
+      "html": "<figure class=\"ds-map\"><figcaption>Структура под сценарий посетителя</figcaption><div class=\"ds-map-root\">Главная</div><div class=\"ds-map-branches\"><span>Предложение</span><span>Каталог</span><span>О компании</span></div><div class=\"ds-map-action\">Заявка</div><p>Пример связей между страницами.</p></figure>",
+      "css": ".ds-map{margin:0;padding:20px 22px;color:var(--studio-ink,#f1f0ed);font-family:Manrope,Arial,sans-serif}.ds-map figcaption{font-size:19px;letter-spacing:-.02em;line-height:1.4;margin-bottom:30px}.ds-map-root,.ds-map-action{position:relative;width:max-content;min-width:135px;padding:17px 24px;border:1px solid #ffffff30;border-radius:6px;text-align:center;font-size:14px;margin:auto;background:var(--studio-surface,#202224)}.ds-map-action{color:var(--studio-accent,#d6a68b)}.ds-map-branches{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:30px 0;margin:30px 0}.ds-map-branches::before,.ds-map-branches::after{content:\"\";position:absolute;left:16.66%;right:16.66%;height:1px;background:#ffffff30;top:0}.ds-map-branches::after{top:auto;bottom:0}.ds-map-branches span{position:relative;font-size:12px;line-height:1.4;padding:16px 7px;text-align:center;border:1px solid #ffffff1a;border-radius:6px;background:var(--studio-surface,#202224)}.ds-map-root::after,.ds-map-action::before,.ds-map-branches span::before,.ds-map-branches span::after{content:\"\";position:absolute;left:50%;width:1px;height:30px;background:#ffffff30;top:100%}.ds-map-action::before,.ds-map-branches span::before{top:auto;bottom:100%}.ds-map p{margin:27px 0 0;font-size:11px;line-height:1.7;color:var(--studio-muted,#b1b0ad)}"
+    },
+    {
+      "name": "Layer fallback mark",
+      "kind": "custom",
+      "description": "Exact inline SVG fallback used while the physical stack loads or cannot render; this is not a substitute for the WebGL signature when supported.",
+      "html": "<div class=\"ds-object-fallback\" role=\"img\" aria-label=\"Знак Lancer: три слоя\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m12 3 10 5-10 5L2 8zM2 12l10 5 10-5M2 16l10 5 10-5\"/></svg></div>",
+      "css": ".ds-object-fallback{display:grid;place-items:center;min-height:180px;color:var(--studio-accent,#d6a68b)}.ds-object-fallback svg{width:90px;height:90px}"
     }
   ],
   "narrative": {
-    "northStar": "Compact dark studio.",
-    "overview": "The homepage uses a cursor-reactive particle field and authored garden, a headline and description at left, a foreground tree at right, four photographic project covers and a sequence of illustrated services, process, FAQ and contact. Near-black and charcoal surfaces provide the frame; actual product stories remain the purpose. The CRM hero, workflow scene, long roadmap and CSS devices are superseded on this surface.\n\nHomepage styling is scoped through studio-home.css, studio-world.css and the hero-specific particle-hero.css. Four case pages share case-editorial.css for their dark editorial shell; original screenshots and interactive productStage demos retain their product-specific content and behavior. Six service pages and the /services/ directory extend the same world through service-editorial.css; studio-layout.css is the final fluid-layout layer. Their surface strategy is recorded in PRODUCT.md and the service surface contract.",
+    "northStar": "Model table",
+    "overview": "Lancer presents software as a considered, assembled product. Graphite fields, pearl lettering, restrained copper and a reflective three-layer mark establish a quiet industrial studio. Photographic product presentations carry the evidence; short medium-weight headings and ruled information keep the surrounding interface compact.\n\nThe current identity applies to the homepage, service directory, six service pages and four case editorial shells. Original product captures and interactive demos keep their native product themes. Historical concept pages are separate artifacts. This system supersedes the garden, global particle field, pill actions, illustrated service cards and enclosing portfolio shells previously recorded here.",
     "keyCharacteristics": [
-      "Exact near-black ground and charcoal card surfaces.",
-      "Compact typography-led hero and photographic covers.",
-      "White pill actions and subtle sticky-header glass.",
-      "Native process disclosures and flat FAQ rows.",
-      "Editorial case stories with original product evidence and retained interactive demos."
+      "Compact type and generous horizontal relationships.",
+      "Flat graphite fields, pearl text and restrained copper.",
+      "Shell-free photographic work and thin ruled information.",
+      "Tight action corners and softly clipped photo windows.",
+      "One authored material object with damped, visibility-aware motion.",
+      "Native disclosures and keyboard-operable production tabs."
     ],
     "rules": [
       {
-        "name": "Scope Rule",
-        "body": "Apply the dark studio palette to homepage, service and case editorial shells; preserve native product themes inside screenshots and interactive demos.",
+        "name": "Product Theme Rule",
+        "body": "Apply the shared palette to Lancer's editorial shell; preserve the original product colors within captures and interactive demos.",
         "section": "colors"
       },
       {
-        "name": "Content Hierarchy Rule",
-        "body": "Let the actual title, factual summary and body copy establish the hierarchy; service pages have no decorative contact eyebrow.",
+        "name": "Short Offer Rule",
+        "body": "Establish hierarchy with the actual title and a short useful description; keep detailed scope on service and case surfaces.",
         "section": "typography"
       },
       {
-        "name": "Flat Content Rule",
-        "body": "Keep content surfaces flat and separate them with tone, spacing and thin dividers; reserve glass for the header and small image overlays. The overlapping service hero photographs may use diffuse image depth; ordinary work and directory cards remain flat.",
+        "name": "Flat Field Rule",
+        "body": "Keep editorial content on the shared field; use thin rules, spacing and artifact scale instead of enclosing cards or ambient panel shadows.",
         "section": "elevation"
       }
     ],
     "dos": [
-      "Do preserve the particle hero → projects → services → process → FAQ → contact sequence.",
-      "Do keep homepage and case editorial shells scoped and product demos intact.",
-      "Do distinguish generated photographic presentations from original product captures."
+      "Do use the Model table palette, medium Manrope hierarchy and compact horizontal relationships.",
+      "Do present photographic work without outer cards and keep captions outside the image.",
+      "Do preserve native product themes, demo behavior and explicit simulation boundaries.",
+      "Do keep native keyboard behavior, visible copper focus and static content fallbacks.",
+      "Do distinguish generated interface visualizations from original product captures.",
+      "Do stop decorative motion offscreen, in hidden tabs and for reduced motion."
     ],
     "donts": [
-      "Don't restore the CRM hero, workflow scene, long roadmap or CSS device constructions on the homepage.",
-      "Don't invent generator model names, business outcomes or performance claims."
+      "Don't restore the garden, global particles, pill actions or illustrated service-card grid as the current Lancer identity.",
+      "Don't turn functional diagram nodes or local product-demo surfaces into a general content-card system.",
+      "Don't invent business outcomes, durations, model names, benchmark scores or AI delivery claims.",
+      "Don't replace inline SVG or drawn control indicators with text glyph icons."
     ]
   }
 }
