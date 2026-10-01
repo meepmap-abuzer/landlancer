@@ -1,0 +1,92 @@
+{
+  "/assets/covers/gift-roulette.webp": {
+    "sourceWidth": 1536,
+    "small": "/assets/responsive/covers-gift-roulette-768.webp",
+    "width": 768
+  },
+  "/assets/covers/loyalty.webp": {
+    "sourceWidth": 1536,
+    "small": "/assets/responsive/covers-loyalty-768.webp",
+    "width": 768
+  },
+  "/assets/covers/maverick.webp": {
+    "sourceWidth": 1536,
+    "small": "/assets/responsive/covers-maverick-768.webp",
+    "width": 768
+  },
+  "/assets/covers/tailcare.webp": {
+    "sourceWidth": 1536,
+    "small": "/assets/responsive/covers-tailcare-768.webp",
+    "width": 768
+  },
+  "/assets/services/automation.webp": {
+    "sourceWidth": 1536,
+    "small": "/assets/responsive/services-automation-768.webp",
+    "width": 768
+  },
+  "/assets/services/crm.webp": {
+    "sourceWidth": 1536,
+    "small": "/assets/responsive/services-crm-768.webp",
+    "width": 768
+  },
+  "/assets/services/mvp.webp": {
+    "sourceWidth": 1536,
+    "small": "/assets/responsive/services-mvp-768.webp",
+    "width": 768
+  },
+  "/assets/services/telegram.webp": {
+    "sourceWidth": 1536,
+    "small": "/assets/responsive/services-telegram-768.webp",
+    "width": 768
+  },
+  "/assets/services/webapps.webp": {
+    "sourceWidth": 1536,
+    "small": "/assets/responsive/services-webapps-768.webp",
+    "width": 768
+  },
+  "/assets/services/websites.webp": {
+    "sourceWidth": 1536,
+    "small": "/assets/responsive/services-websites-768.webp",
+    "width": 768
+  },
+  "/assets/case-visuals/gift-games.webp": {
+    "sourceWidth": 1536,
+    "small": "/assets/responsive/case-visuals-gift-games-768.webp",
+    "width": 768
+  },
+  "/assets/case-visuals/gift-rounds.webp": {
+    "sourceWidth": 1536,
+    "small": "/assets/responsive/case-visuals-gift-rounds-768.webp",
+    "width": 768
+  },
+  "/assets/case-visuals/loyalty-business.webp": {
+    "sourceWidth": 1536,
+    "small": "/assets/responsive/case-visuals-loyalty-business-768.webp",
+    "width": 768
+  },
+  "/assets/case-visuals/loyalty-member.webp": {
+    "sourceWidth": 1536,
+    "small": "/assets/responsive/case-visuals-loyalty-member-768.webp",
+    "width": 768
+  },
+  "/assets/case-visuals/maverick-activation.webp": {
+    "sourceWidth": 1536,
+    "small": "/assets/responsive/case-visuals-maverick-activation-768.webp",
+    "width": 768
+  },
+  "/assets/case-visuals/maverick-engagement.webp": {
+    "sourceWidth": 1536,
+    "small": "/assets/responsive/case-visuals-maverick-engagement-768.webp",
+    "width": 768
+  },
+  "/assets/case-visuals/tailcare-catalog.webp": {
+    "sourceWidth": 1536,
+    "small": "/assets/responsive/case-visuals-tailcare-catalog-768.webp",
+    "width": 768
+  },
+  "/assets/case-visuals/tailcare-home.webp": {
+    "sourceWidth": 1536,
+    "small": "/assets/responsive/case-visuals-tailcare-home-768.webp",
+    "width": 768
+  }
+}

@@ -4,8 +4,6 @@ import {mergeGeometries} from 'three/addons/utils/BufferGeometryUtils.js';
 // An authored, volumetric tree: tapered branches and curved individual leaves.
 export function createSilverTree({scene,rand,heightAt,mobile}){
  const tree=new THREE.Group();
- tree.position.set(mobile?2.8:6.5,heightAt(mobile?2.8:6.5,-3.8),-3.8);
- tree.scale.setScalar(mobile ? .82 : 1);
  scene.add(tree);
  const branches=[],tips=[];
  function branch(points,radius){
@@ -24,8 +22,8 @@ export function createSilverTree({scene,rand,heightAt,mobile}){
  // Uneven levels and forked tips keep the crown open and asymmetric.
  for(let i=0;i<13;i++){
   const t=.31+i*.046,root=trunk.getPoint(t),angle=i*2.399+.2;
-  const reach=1.2+Math.sin(i/13*Math.PI)*1.2;
-  const end=new THREE.Vector3(Math.cos(angle)*reach,4.2+rand()*1.55,Math.sin(angle)*reach*.68);
+  const reach=1.6+Math.sin(i/13*Math.PI)*1.15;
+  const end=new THREE.Vector3(Math.cos(angle)*reach,4.35+Math.cos(angle)*.45+rand()*1.35,Math.sin(angle)*reach*.95);
   const mid=root.clone().lerp(end,.58);mid.y-=.28;
   branch([root,mid,end],.065+(1-t)*.06);
   for(let fork=0;fork<3;fork++){
@@ -37,11 +35,11 @@ export function createSilverTree({scene,rand,heightAt,mobile}){
  const merged=mergeGeometries(branches),trunkMesh=new THREE.Mesh(merged,wood);
  branches.forEach(g=>g.dispose());trunkMesh.castShadow=trunkMesh.receiveShadow=true;tree.add(trunkMesh);
  const vertices=[],uv=[],indices=[];
- for(let row=0;row<=8;row++){
-  const t=row/8,w=Math.pow(Math.sin(t*Math.PI),.85)*.09;
-  vertices.push(-w,t*.4,Math.sin(t*Math.PI)*.015,0,t*.4,Math.sin(t*Math.PI)*.055,w,t*.4,Math.sin(t*Math.PI)*.015);
+ for(let row=0;row<=6;row++){
+  const t=row/6,w=Math.pow(Math.sin(t*Math.PI),.85)*.115;
+  vertices.push(-w,t*.43,Math.sin(t*Math.PI)*.015,0,t*.43,Math.sin(t*Math.PI)*.07,w,t*.43,Math.sin(t*Math.PI)*.015);
   uv.push(0,t,.5,t,1,t);
-  if(row<8){const a=row*3;indices.push(a,a+1,a+3,a+1,a+4,a+3,a+1,a+2,a+4,a+2,a+5,a+4);}
+  if(row<6){const a=row*3;indices.push(a,a+1,a+3,a+1,a+4,a+3,a+1,a+2,a+4,a+2,a+5,a+4);}
  }
  const leafGeometry=new THREE.BufferGeometry();leafGeometry.setAttribute('position',new THREE.Float32BufferAttribute(vertices,3));leafGeometry.setAttribute('uv',new THREE.Float32BufferAttribute(uv,2));leafGeometry.setIndex(indices);leafGeometry.computeVertexNormals();
  const wind={value:0};
@@ -51,17 +49,21 @@ export function createSilverTree({scene,rand,heightAt,mobile}){
   shader.vertexShader=shader.vertexShader.replace('#include <common>','#include <common>\nuniform float uTreeTime;').replace('#include <begin_vertex>',`#include <begin_vertex>
    transformed.z+=sin(uTreeTime*1.15+instanceMatrix[3].x*2.1+instanceMatrix[3].y)*.045*uv.y*uv.y;`);
  };
- const count=mobile?760:1250,leaves=new THREE.InstancedMesh(leafGeometry,material,count);
- const dummy=new THREE.Object3D(),origins=[];
+ const count=mobile?1400:3000,leaves=new THREE.InstancedMesh(leafGeometry,material,count);
+ const dummy=new THREE.Object3D(),origins=[],framePoints=[new THREE.Vector3()];
  for(let i=0;i<count;i++){
   const tip=tips[i%tips.length],r=Math.cbrt(rand()),a=rand()*Math.PI*2,z=rand()*2-1;
-  dummy.position.copy(tip).add(new THREE.Vector3(Math.cos(a)*Math.sqrt(1-z*z)*r*.68,z*r*.58,Math.sin(a)*Math.sqrt(1-z*z)*r*.55));
+  const spherical=Math.sqrt(1-z*z)*r;
+  if(i%5<3)dummy.position.copy(tip).add(new THREE.Vector3(Math.cos(a)*spherical*.8,z*r*.85,Math.sin(a)*spherical*.9));
+  else dummy.position.set(Math.cos(a)*spherical*2.65,5.35+z*r*1.55,Math.sin(a)*spherical*2.25);
   dummy.rotation.set(rand()*Math.PI,rand()*Math.PI*2,(rand()-.5)*2.1);
   dummy.scale.setScalar(.65+rand()*.65);dummy.updateMatrix();leaves.setMatrixAt(i,dummy.matrix);
+  // Sample real leaf outlines for framing, rather than oversized box corners.
+  if(i%4===0)for(const point of [[0,0,0],[0,.43,0],[-.115,.215,.07],[.115,.215,.07]])framePoints.push(new THREE.Vector3(...point).applyMatrix4(dummy.matrix));
   leaves.setColorAt(i,new THREE.Color().setScalar(.65+rand()*.35));
   if(i%83===0)origins.push(dummy.position.clone());
  }
- leaves.frustumCulled=false;leaves.instanceMatrix.needsUpdate=true;leaves.instanceColor.needsUpdate=true;tree.add(leaves);
+ leaves.frustumCulled=false;leaves.castShadow=leaves.receiveShadow=true;leaves.instanceMatrix.needsUpdate=true;leaves.instanceColor.needsUpdate=true;tree.add(leaves);
  const fallingCount=mobile?7:12,falling=new THREE.InstancedMesh(leafGeometry,material,fallingCount);
  falling.frustumCulled=false;falling.instanceMatrix.setUsage(THREE.DynamicDrawUsage);tree.add(falling);
  const falls=Array.from({length:fallingCount},(_,i)=>({origin:origins[i%origins.length],phase:i*36/fallingCount,spin:rand()*Math.PI*2,drift:(rand()-.5)*.7}));
@@ -80,5 +82,5 @@ export function createSilverTree({scene,rand,heightAt,mobile}){
   falling.instanceMatrix.needsUpdate=true;
  }
  update(0);
- return {update,setMotion:enabled=>{falling.visible=enabled;},tree};
+ return {update,setMotion:enabled=>{falling.visible=enabled;},tree,framePoints};
 }

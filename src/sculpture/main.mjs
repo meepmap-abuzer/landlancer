@@ -7,7 +7,7 @@ if (stage) {
  const host = stage.querySelector('.lunar-canvas');
  let renderer;
  try { renderer = new THREE.WebGLRenderer({alpha:true,antialias:true,powerPreference:'high-performance'}); }
- catch { stage.querySelector('.lunar-status').textContent='Ваш браузер не поддерживает WebGL.'; }
+ catch { stage.dataset.sceneReady='failed';stage.querySelector('.lunar-status').textContent='Ваш браузер не поддерживает WebGL.'; }
  if(renderer) createGarden(renderer,host,stage);
 }
 
@@ -19,6 +19,7 @@ function createGarden(renderer,host,stage){
  renderer.toneMapping=THREE.ACESFilmicToneMapping;
  renderer.toneMappingExposure=1.15;
  renderer.shadowMap.enabled=true;
+ renderer.shadowMap.autoUpdate=false;
  renderer.shadowMap.type=THREE.PCFShadowMap;
  host.append(renderer.domElement);
  const scene=new THREE.Scene();
@@ -105,7 +106,7 @@ function createGarden(renderer,host,stage){
     transformed.y-=push*.3*uv.y*uv.y;`);
   shader.fragmentShader=shader.fragmentShader.replace('#include <common>','#include <common>\nvarying float vBladeHeight;').replace('#include <color_fragment>','#include <color_fragment>\ndiffuseColor.rgb*=mix(.38,1.18,vBladeHeight);');
  };
- const count=mobile?14000:34000,grass=new THREE.InstancedMesh(blade,grassMat,count);
+ const count=mobile?9500:26000,grass=new THREE.InstancedMesh(blade,grassMat,count);
  let placed=0,attempts=0;
  while(placed<count && attempts<count*8){
   attempts++;const x=(rand()-.5)*48,z=(rand()-.5)*24;
@@ -127,17 +128,35 @@ function createGarden(renderer,host,stage){
  const reduced=matchMedia('(prefers-reduced-motion: reduce)');let paused=document.body.classList.contains('motion-paused')||reduced.matches;
  function resize(){
   const w=host.clientWidth,h=host.clientHeight;renderer.setSize(w,h,false);camera.aspect=w/h;
-  const compact=w<700;
+  const compact=w<900;
   // Keep the entire crown in frame, with the tree in front of the rocks.
-  silverTree.tree.scale.setScalar(compact ? 1 : 1.1);
-  silverTree.tree.position.x=compact?1.3:w<1050?3.8:4.7;
+  silverTree.tree.scale.setScalar(compact ? 1.05 : Math.min(1.55,1.3+(w-1000)/1600));
+  silverTree.tree.position.x=compact?1.3:6+(w-1265)*.005;
   silverTree.tree.position.z=3.3;
   silverTree.tree.position.y=heightAt(silverTree.tree.position.x,3.3);
-  camera.position.set(0,compact?10.5:7.1,compact?27:22);camera.lookAt(aim);camera.updateProjectionMatrix();render();
+  aim.y=compact?2.8:4.3;
+  camera.position.set(0,compact?10.5:8.6,compact?27:28);camera.lookAt(aim);camera.updateProjectionMatrix();
+  const screen=new THREE.Vector3(),targetTop=compact?h*.18:Math.max(22,document.querySelector('.particle-heading h1').getBoundingClientRect().top-host.getBoundingClientRect().top+8);
+  function projectedFrame(){
+   silverTree.tree.updateMatrixWorld(true);camera.updateMatrixWorld();
+   let left=Infinity,right=-Infinity,top=Infinity;
+   for(const point of silverTree.framePoints){screen.copy(point).applyMatrix4(silverTree.tree.matrixWorld).project(camera);left=Math.min(left,(1+screen.x)*w/2);right=Math.max(right,(1+screen.x)*w/2);top=Math.min(top,(1-screen.y)*h/2);}
+   return {left,right,top};
+  }
+  for(let i=0;i<4;i++){
+   const frame=projectedFrame(),span=2*camera.position.distanceTo(silverTree.tree.position)*Math.tan(THREE.MathUtils.degToRad(camera.fov/2));
+   silverTree.tree.scale.multiplyScalar(Math.min(1,w*(compact ? .8 : .4)/(frame.right-frame.left)));
+   silverTree.tree.position.x+=(w*(compact ? .53 : .765)-(frame.left+frame.right)/2)*span*camera.aspect/w;
+   silverTree.tree.position.y=heightAt(silverTree.tree.position.x,3.3);
+   aim.y+=(targetTop-frame.top)*span/h;camera.lookAt(aim);
+  }
+  renderer.shadowMap.needsUpdate=true;render();
+  if(/^(localhost|127\.0\.0\.1)$/.test(location.hostname)){const frame=projectedFrame();stage.dataset.treeFrame=JSON.stringify({...frame,top:Math.round(host.getBoundingClientRect().top+scrollY+frame.top),scale:silverTree.tree.scale.x});}
  }
  function render(){renderer.render(scene,camera);}
  function tick(now){
   frame=0;if(!visible||paused||document.hidden)return;
+  if(now-last<(mobile?1000/30:1000/60)-1){frame=requestAnimationFrame(tick);return;}
   const dt=Math.min((now-last)/1000||.016,.05);last=now;time+=dt;
   uniforms.uTime.value=time;
   silverTree.update(time);
@@ -158,6 +177,6 @@ function createGarden(renderer,host,stage){
  new IntersectionObserver(([e])=>{visible=e.isIntersecting;sync();},{rootMargin:'80px'}).observe(stage);
  new ResizeObserver(resize).observe(host);
  renderer.domElement.addEventListener('webglcontextlost',e=>{e.preventDefault();cancelAnimationFrame(frame);frame=0;stage.querySelector('.lunar-status').textContent='Графическая сцена приостановлена. Обновите страницу.';});
- stage.dataset.sceneReady='true';
  resize();
+ stage.dataset.sceneReady='true';
 }

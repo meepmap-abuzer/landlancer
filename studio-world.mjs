@@ -59,4 +59,9 @@ controls.forEach(button => button.addEventListener('click', () => track.scrollBy
 track?.addEventListener('scroll',updateControls,{passive:true});
 if(track){new ResizeObserver(updateControls).observe(track);updateControls();}
 
-if(document.querySelector('.lunar-stage')) import('/sculpture/scene.js?v=lunar-5').catch(()=>{document.querySelector('.lunar-status').textContent='Не удалось загрузить сад. Обновите страницу.'});
+const garden=document.querySelector('.lunar-stage');
+if(garden){
+ const loadGarden=()=>{const rect=garden.getBoundingClientRect();if(rect.bottom<0||rect.top>innerHeight+150){gardenObserver.observe(garden);return;}import('/sculpture/scene.js?v=lunar-6').catch(()=>{garden.dataset.sceneReady='failed';garden.querySelector('.lunar-status').textContent='Не удалось загрузить сад. Обновите страницу.';});};
+ const gardenObserver=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)){gardenObserver.disconnect();requestAnimationFrame(()=>requestAnimationFrame(()=>{if('requestIdleCallback' in window)requestIdleCallback(loadGarden,{timeout:1500});else setTimeout(loadGarden,80);}));}},{rootMargin:'150px'});
+ gardenObserver.observe(garden);
+}

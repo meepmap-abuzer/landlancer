@@ -56,3 +56,22 @@ test('metadata escapes HTML and JSON-LD script boundaries',()=>{
  assert.ok(html.includes('&lt;/script&gt;'));assert.ok(!html.includes('<img src=x>'));
  const graph=schemas(html);assert.ok(graph.some(n=>n.name?.includes('</script>')));
 });
+
+test('loading feedback preserves static content and responsive image assets resolve',async()=>{
+ for(const [path,html] of pages){
+  assert.match(html,/<div class="page-loader" hidden role="status">/,path);
+  assert.ok(html.includes('/page-loading.mjs'),path);
+  assert.doesNotMatch(html,/<main\b[^>]*(?:\bhidden\b|\binert\b)/,path);
+  for(const [tag] of html.matchAll(/<img\b[^>]*\bsrc="[^"]+"[^>]*>/g)){
+   assert.match(tag,/decoding="async"/,path);
+   assert.match(tag,/loading="(?:lazy|eager)"/,path);
+   const srcset=tag.match(/srcset="([^"]+)"/)?.[1];
+   if(srcset)for(const candidate of srcset.split(',')){
+    const [url,width]=candidate.trim().split(/\s+/);assert.match(width,/^\d+w$/);
+    assert.ok((await stat(resolve(root,'.'+url))).size>0,path+': '+url);
+   }
+  }
+ }
+ assert.ok(!pages.get('/').includes('/demos/interactive.js'));
+ assert.ok(pages.get('/cases/maverick/').includes('/demos/interactive.js'));
+});
