@@ -44,7 +44,7 @@ export function createSilverTree({scene,rand,heightAt,mobile}){
  const leafGeometry=new THREE.BufferGeometry();leafGeometry.setAttribute('position',new THREE.Float32BufferAttribute(vertices,3));leafGeometry.setAttribute('uv',new THREE.Float32BufferAttribute(uv,2));leafGeometry.setIndex(indices);leafGeometry.computeVertexNormals();
  const wind={value:0},leafBloom={value:1},leafTouch={value:new THREE.Vector3(1000,1000,1000)},leafPower={value:0};
  const pointerTarget=new THREE.Vector3(1000,1000,1000);let pointerActive=false,motionEnabled=true,growth=1;
- const material=new THREE.MeshStandardMaterial({color:0xa8b9a0,metalness:.24,roughness:.58,side:THREE.DoubleSide});
+ const material=new THREE.MeshStandardMaterial({color:0x537d3f,metalness:.12,roughness:.7,side:THREE.DoubleSide});
  material.onBeforeCompile=shader=>{
   Object.assign(shader.uniforms,{uTreeTime:wind,uLeafBloom:leafBloom,uLeafTouch:leafTouch,uLeafPower:leafPower});
   shader.vertexShader=shader.vertexShader.replace('#include <common>','#include <common>\nuniform float uTreeTime; uniform float uLeafBloom; uniform vec3 uLeafTouch; uniform float uLeafPower;').replace('#include <begin_vertex>',`#include <begin_vertex>

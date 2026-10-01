@@ -1,0 +1,103 @@
+/* Fluid editorial layout; typography and 3D objects keep their proportions. */
+:is(.studio-home,.case-editorial,.service-editorial){--layout-gutter:clamp(20px,2vw,44px);--layout-gap:clamp(32px,4vw,72px)}
+.studio-main,.case-editorial main,.service-editorial .wrap,.service-editorial .seo-faq,
+:is(.studio-home,.case-editorial,.service-editorial) :is(.end-contact,.end-columns,.end-legal){width:calc(100% - var(--layout-gutter)*2);max-width:none;margin-inline:auto}
+.studio-header,.case-editorial .case-header,.service-editorial .case-header{padding:10px var(--layout-gutter);min-height:64px;gap:24px}
+.studio-brand{font-size:20px}.studio-brand svg{width:25px;height:25px}
+.studio-header nav{font-size:13px;gap:24px}
+.studio-home .button.primary{min-height:44px;padding:11px 20px;font-size:13px}
+.studio-home .studio-hero.particle-hero{--hero-height:clamp(520px,65svh,600px);min-height:var(--hero-height);padding:44px 0 24px}
+.studio-home .particle-hero h1{font-size:clamp(40px,3.6vw,56px);line-height:1.08}
+.particle-hero .particle-heading{width:min(680px,56%)}
+.particle-hero .studio-hero-note{margin-top:20px;max-width:52ch;font-size:15px;line-height:1.65}
+.particle-hero .studio-hero-note .button{margin:12px 18px 0 0;vertical-align:middle}
+.particle-hero .studio-hero-note>a:last-child{display:inline-flex;vertical-align:middle;margin-top:12px;font-size:13px}
+.lunar-stage{top:12px;left:calc(-1*var(--layout-gutter));right:calc(-1*var(--layout-gutter));height:calc(var(--hero-height) - 24px)}
+.studio-work-heading{padding:20px 0}
+.studio-projects{gap:16px}.studio-project{padding:10px;border-radius:18px}
+.studio-project .project-photo{aspect-ratio:16/11;border-radius:10px}
+.studio-project .portfolio-description{padding:16px 4px 8px;align-items:start;gap:10px}
+.studio-project .portfolio-description h3{font-size:17px;letter-spacing:-.03em;line-height:1.35}
+.studio-project .portfolio-description p{font-size:12px;line-height:1.55}
+.studio-project .portfolio-arrow{width:34px;height:34px}
+.studio-project .studio-label{top:12px;left:12px;font-size:10px;padding:6px 9px}
+.studio-home .service-showcase,.studio-home .studio-section{padding-top:80px}
+.studio-home .service-showcase-grid{gap:16px}
+.studio-home .service-tile{min-height:300px;padding:22px 22px 0;border-radius:18px}
+.studio-home .service-tile h3{font-size:20px}.studio-home .service-tile>p{font-size:12px;margin-top:10px}
+.studio-home .new-section-heading h2,.studio-section-title h2,.studio-home .faq-intro h2{font-size:clamp(28px,2.6vw,36px)}
+.studio-section{grid-template-columns:minmax(0,1fr) minmax(0,1.65fr);gap:var(--layout-gap)}
+.studio-home .seo-faq{padding:80px 0;gap:var(--layout-gap)}
+.process-list summary{padding:21px 0}.process-list h3{font-size:21px}
+.studio-home .faq-answers summary{padding:21px 0}
+:is(.studio-home,.case-editorial,.service-editorial) .end-contact{padding:48px 0 52px}
+.end-contact h2{font-size:clamp(34px,3.5vw,52px);letter-spacing:-.04em}
+.end-columns{padding:32px 0 48px}.end-columns nav a{margin-bottom:14px}
+.end-art{height:320px}.end-wordmark{font-size:clamp(85px,15vw,230px);padding-top:40px}
+.service-editorial .service-page{padding-bottom:72px}
+.service-editorial .breadcrumbs{padding-top:28px}
+.service-editorial .service-intro{grid-template-columns:minmax(0,1.3fr) minmax(0,.85fr);gap:var(--layout-gap);padding:48px 0 80px}
+.service-editorial .service-intro h1{font-size:clamp(38px,3.6vw,58px);letter-spacing:-.04em;max-width:23ch;margin-bottom:24px}
+.service-editorial .service-intro>div>p{font-size:16px;line-height:1.75;margin-bottom:26px;max-width:62ch}
+.service-editorial .service-schematic{width:100%;max-width:560px;justify-self:center;padding:12px 0}
+.service-editorial h2{font-size:clamp(26px,2.4vw,34px)}
+.service-editorial .service-context,.service-editorial .service-context-illustrated,.service-editorial .service-context-reverse{padding:64px 0 88px;gap:var(--layout-gap)}
+.service-editorial .service-context p{font-size:16px;line-height:1.8}
+.service-context-visual{width:100%;max-width:560px;justify-self:center;padding:12px 0}
+.service-editorial .service-context-copy p{max-width:62ch;margin-top:24px}
+.service-editorial .service-context-copy h2{max-width:28ch}
+.service-roadmap{padding:8px 0 88px}.roadmap-heading{margin-bottom:40px}
+.roadmap-stop{padding-top:30px}.roadmap-stop h3{font-size:20px}.roadmap-stop>p{min-height:60px;max-width:32ch}
+.service-editorial .service-scope{padding:8px 0 88px}.service-editorial .service-scope>div{margin-top:28px}
+.service-editorial .service-scope article{padding:24px 0;gap:var(--layout-gap)}
+.service-editorial .service-scope h3{font-size:21px}
+.service-editorial .service-examples{padding:8px 0 72px}
+.service-editorial .seo-faq{padding:8px 0 72px;gap:var(--layout-gap)}
+.case-editorial .case-opening{padding-top:40px}
+.case-opening-copy{gap:var(--layout-gap);margin-bottom:28px}
+.case-opening h1{font-size:clamp(42px,4.5vw,66px);margin:20px 0 12px}
+.case-type{font-size:17px}.case-opening-note{max-width:62ch}
+.case-opening-note>p{font-size:16px}.case-pills{margin:20px 0}
+.case-editorial .case-story-intro{padding:48px 0 16px;max-width:900px}
+.case-story-intro h2,.case-demo-heading h2,.case-capabilities h2{font-size:clamp(28px,2.8vw,40px)}
+.case-story-intro p{font-size:16px}.case-visual-note{margin-bottom:28px}
+.case-editorial .case-story,.case-editorial .case-story:nth-child(even){padding:48px 0 64px;gap:var(--layout-gap)}
+.story-art{width:100%;max-width:660px;justify-self:center}
+.case-editorial .story-copy{max-width:65ch}.case-editorial .story-copy article+article{margin-top:32px}
+.case-editorial .story-copy h2{font-size:26px}
+.case-demo-section,.case-capabilities,.case-details{padding:48px 0}
+.case-capability-grid{margin-top:28px}.case-capability-grid article{padding:22px}
+.case-capability-grid article>svg{margin-bottom:28px}
+.case-related{padding:32px 0 64px}.case-details{gap:var(--layout-gap)}
+@media(min-width:1200px){.studio-projects{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(min-width:1700px){.studio-home .service-tile{min-height:325px}.studio-home .service-illustration img{object-fit:contain}}
+@media(max-width:800px){.studio-section{grid-template-columns:1fr}}
+@media(max-width:900px){
+ .studio-home .studio-hero.particle-hero{min-height:0;padding:32px 0 20px;gap:20px}
+ .studio-home .particle-hero h1{font-size:clamp(36px,5.2vw,48px)}
+ .particle-hero .particle-heading{width:100%;max-width:680px}
+ .particle-hero .studio-hero-note{font-size:15px;margin-top:18px;max-width:52ch}
+ .lunar-stage{position:relative;inset:auto;height:380px;margin:-12px calc(-1*var(--layout-gutter)) 0}
+ .studio-home .service-tile{min-height:300px}.end-art{height:280px}
+}
+@media(max-width:750px){
+ :is(.studio-home,.case-editorial,.service-editorial){--layout-gutter:18px;--layout-gap:28px}
+ .studio-header,.case-editorial .case-header,.service-editorial .case-header{padding:12px var(--layout-gutter);min-height:56px;gap:16px}
+ .studio-brand{font-size:18px}.studio-header nav{gap:16px;font-size:12px}
+ .studio-home .service-showcase,.studio-home .studio-section{padding-top:56px}
+ .studio-home .seo-faq{padding:56px 0}.process-list h3{font-size:20px}
+ .studio-home .service-tile{min-height:290px}.studio-home .service-tile h3{font-size:20px}
+ .end-art{height:240px}.end-columns{padding:28px 0 40px}
+ .service-editorial .service-intro{grid-template-columns:1fr;padding:32px 0 56px;gap:28px}
+ .service-editorial .service-intro h1{font-size:36px;max-width:24ch}
+ .service-editorial .service-context,.service-editorial .service-context-illustrated,.service-editorial .service-context-reverse{padding:40px 0 64px;gap:28px}
+ .service-roadmap,.service-editorial .service-scope{padding-bottom:64px}
+ .roadmap-stop>p{min-height:85px}.roadmap-stop h3{font-size:20px}
+ .service-editorial .service-scope article{padding:24px 0;gap:12px}
+ .service-editorial .service-examples,.service-editorial .seo-faq{padding-bottom:56px}
+ .case-editorial .case-opening{padding-top:28px}.case-opening h1{font-size:44px}
+ .case-editorial .case-story,.case-editorial .case-story:nth-child(even){grid-template-columns:1fr;padding:32px 0 48px;gap:28px}
+ .case-editorial .case-story-intro{padding-top:36px}.story-art{max-width:560px}
+ .case-demo-section,.case-capabilities,.case-details{padding:36px 0}
+ .case-editorial .story-copy h2{font-size:25px}
+}

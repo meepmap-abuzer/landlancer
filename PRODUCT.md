@@ -64,3 +64,7 @@ Verification: six SEO/loading tests passed; static content, metadata, canonical 
 Homepage foliage now responds smoothly to hovering. Grass and leaves have a muted green tint. The circular scene loader is replaced by a small lower-left seed point and a radial garden entrance followed by proportional tree growth and leaf opening. Reduced-motion visitors see the completed scene immediately. Existing lazy images, responsive WebP variants and viewport-triggered scene loading remain.
 
 Service pages retain roadmaps and factual copy while adding service-specific architecture diagrams and alternating copy/ASCII handover sections. Example diagrams do not claim actual customer metrics. The footer directions column is removed. These changes are verified locally; no deployment is implied.
+
+### Wide studio layout — October 1, 2026
+
+The homepage, services and cases now use nearly the full viewport width with small responsive side gutters. Smaller headings, shorter hero/section spacing and four projects per desktop row reduce vertical scrolling. The full-height tree is fitted into the shorter garden without stretching; grass and leaves use a stronger natural green. Mobile layouts remain stacked and the existing progressive loading, cursor reactions and entrance remain intact. Desktop/mobile browser review and six SEO/loading tests passed. The site publishes through GitHub Pages from main at https://landlancer.ru/.

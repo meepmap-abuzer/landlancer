@@ -53,8 +53,8 @@ function createGarden(renderer,host,stage){
  const bump=new THREE.CanvasTexture(noiseTexture);bump.wrapS=bump.wrapT=THREE.RepeatWrapping;bump.repeat.set(5,5);
  const stoneMap=new THREE.CanvasTexture(noiseTexture);stoneMap.colorSpace=THREE.SRGBColorSpace;stoneMap.wrapS=stoneMap.wrapT=THREE.RepeatWrapping;stoneMap.repeat.set(2,2);
  const stoneMat=new THREE.MeshStandardMaterial({color:0xc0c2c5,map:stoneMap,roughness:.95,bumpMap:bump,bumpScale:.26});
- const groundMat=new THREE.MeshStandardMaterial({color:0x394139,roughness:1,bumpMap:bump,bumpScale:.1});
- const groundGeo=new THREE.PlaneGeometry(68,44,110,65);groundGeo.rotateX(-Math.PI/2);
+ const groundMat=new THREE.MeshStandardMaterial({color:0x27382a,roughness:1,bumpMap:bump,bumpScale:.1});
+ const groundGeo=new THREE.PlaneGeometry(96,44,110,65);groundGeo.rotateX(-Math.PI/2);
  const gp=groundGeo.attributes.position;
  for(let i=0;i<gp.count;i++)gp.setY(i,heightAt(gp.getX(i),gp.getZ(i)));
  groundGeo.computeVertexNormals();
@@ -89,7 +89,7 @@ function createGarden(renderer,host,stage){
  }
  const blade=new THREE.BufferGeometry();blade.setAttribute('position',new THREE.Float32BufferAttribute(positions,3));blade.setAttribute('uv',new THREE.Float32BufferAttribute(uvs,2));blade.setIndex(indices);blade.computeVertexNormals();
  const uniforms={uTime:{value:0},uTouch:{value:new THREE.Vector3(1000,0,1000)},uMotion:{value:1}};
- const grassMat=new THREE.MeshStandardMaterial({color:0x9eae97,roughness:.82,metalness:.05,side:THREE.DoubleSide});
+ const grassMat=new THREE.MeshStandardMaterial({color:0x4b7745,roughness:.88,metalness:.02,side:THREE.DoubleSide});
  grassMat.onBeforeCompile=shader=>{
   Object.assign(shader.uniforms,uniforms);
   shader.vertexShader=shader.vertexShader.replace('#include <common>',`#include <common>
@@ -110,7 +110,7 @@ function createGarden(renderer,host,stage){
  const count=mobile?9500:26000,grass=new THREE.InstancedMesh(blade,grassMat,count);
  let placed=0,attempts=0;
  while(placed<count && attempts<count*8){
-  attempts++;const x=(rand()-.5)*48,z=(rand()-.5)*24;
+  attempts++;const x=(rand()-.5)*68,z=(rand()-.5)*24;
   if(rocks.some(([rx,rz,sx,,sz])=>((x-rx)/sx)**2+((z-rz)/sz)**2<.9))continue;
   const path=Math.sin(z*.3)*1.8;
   if(Math.abs(x-path)<.75 && rand()<.9)continue;
@@ -151,13 +151,13 @@ function createGarden(renderer,host,stage){
   const screen=new THREE.Vector3(),targetTop=compact?h*.18:Math.max(22,document.querySelector('.particle-heading h1').getBoundingClientRect().top-host.getBoundingClientRect().top+8);
   function projectedFrame(){
    silverTree.tree.updateMatrixWorld(true);camera.updateMatrixWorld();
-   let left=Infinity,right=-Infinity,top=Infinity;
-   for(const point of silverTree.framePoints){screen.copy(point).applyMatrix4(silverTree.tree.matrixWorld).project(camera);left=Math.min(left,(1+screen.x)*w/2);right=Math.max(right,(1+screen.x)*w/2);top=Math.min(top,(1-screen.y)*h/2);}
-   return {left,right,top};
+   let left=Infinity,right=-Infinity,top=Infinity,bottom=-Infinity;
+   for(const point of silverTree.framePoints){screen.copy(point).applyMatrix4(silverTree.tree.matrixWorld).project(camera);left=Math.min(left,(1+screen.x)*w/2);right=Math.max(right,(1+screen.x)*w/2);top=Math.min(top,(1-screen.y)*h/2);bottom=Math.max(bottom,(1-screen.y)*h/2);}
+   return {left,right,top,bottom};
   }
   for(let i=0;i<4;i++){
    const frame=projectedFrame(),span=2*camera.position.distanceTo(silverTree.tree.position)*Math.tan(THREE.MathUtils.degToRad(camera.fov/2));
-   silverTree.tree.scale.multiplyScalar(Math.min(1,w*(compact ? .8 : .4)/(frame.right-frame.left)));
+   silverTree.tree.scale.multiplyScalar(Math.min(1,w*(compact ? .8 : .4)/(frame.right-frame.left),(h*.91-targetTop)/(frame.bottom-frame.top)));
    silverTree.tree.position.x+=(w*(compact ? .53 : .765)-(frame.left+frame.right)/2)*span*camera.aspect/w;
    silverTree.tree.position.y=heightAt(silverTree.tree.position.x,3.3);
    aim.y+=(targetTop-frame.top)*span/h;camera.lookAt(aim);

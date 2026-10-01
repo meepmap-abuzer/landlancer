@@ -61,7 +61,7 @@ if(track){new ResizeObserver(updateControls).observe(track);updateControls();}
 
 const garden=document.querySelector('.lunar-stage');
 if(garden){
- const loadGarden=()=>{const rect=garden.getBoundingClientRect();if(rect.bottom<0||rect.top>innerHeight+150){gardenObserver.observe(garden);return;}import('/sculpture/scene.js?v=lunar-8').catch(()=>{garden.dataset.sceneReady='failed';garden.querySelector('.lunar-status').textContent='Не удалось загрузить сад. Обновите страницу.';});};
+ const loadGarden=()=>{const rect=garden.getBoundingClientRect();if(rect.bottom<0||rect.top>innerHeight+150){gardenObserver.observe(garden);return;}import('/sculpture/scene.js?v=lunar-9').catch(()=>{garden.dataset.sceneReady='failed';garden.querySelector('.lunar-status').textContent='Не удалось загрузить сад. Обновите страницу.';});};
  const gardenObserver=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)){gardenObserver.disconnect();requestAnimationFrame(()=>requestAnimationFrame(()=>{if('requestIdleCallback' in window)requestIdleCallback(loadGarden,{timeout:1500});else setTimeout(loadGarden,80);}));}},{rootMargin:'150px'});
  gardenObserver.observe(garden);
 }
