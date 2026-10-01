@@ -92,13 +92,18 @@ html{scroll-behavior:smooth;scroll-padding-top:86px}
 .lancer-site .faq-answers{display:block}
 .lancer-site .faq-answers details{margin:0;border:0;border-bottom:1px solid var(--studio-line);border-radius:0;background:none;box-shadow:none;padding:0}
 .lancer-site .faq-answers details:first-child{border-top:1px solid var(--studio-line)}
-.lancer-site .faq-answers summary{display:flex;align-items:center;justify-content:space-between;gap:24px;cursor:pointer;list-style:none;min-height:59px;padding:17px 0;font-size:14px;line-height:1.5;font-weight:400}
+.lancer-site .faq-answers summary{display:flex;align-items:center;justify-content:space-between;gap:24px;cursor:pointer;list-style:none;min-height:59px;padding:17px 0;font-size:14px;line-height:1.5;font-weight:400;color:var(--studio-ink)}
+.lancer-site .faq-answers summary:hover{color:var(--studio-accent)}
 .lancer-site .faq-answers summary::-webkit-details-marker{display:none}
 .lancer-site .faq-answers summary i{position:relative;width:18px;height:18px;flex:none;font-style:normal;background:none}
 .faq-answers summary i::before,.faq-answers summary i::after{content:'';position:absolute;left:4px;top:8px;width:10px;height:1px;background:var(--studio-muted)}
 .faq-answers summary i::after{transform:rotate(90deg);transition:transform .25s}
 .faq-answers details[open] summary i::after{transform:rotate(0)}
-.lancer-site .faq-answers details p{font-size:13px;line-height:1.8;margin:0;padding:0 32px 23px 0}
+.lancer-site details[data-disclosure-state]{transition:height 440ms cubic-bezier(.22,1,.36,1)}
+.lancer-site details[data-disclosure-state]>p{transition:opacity 220ms ease,transform 280ms ease}
+.lancer-site details[data-disclosure-state=closing]>p{opacity:0;transform:translateY(-4px)}
+.lancer-site details[data-disclosure-state=closing] summary i::after{transform:rotate(90deg)}
+.lancer-site .faq-answers details p{color:var(--studio-muted);font-size:13px;line-height:1.8;margin:0;padding:0 32px 23px 0}
 .lancer-site .studio-end{width:min(var(--studio-width),calc(100% - var(--studio-gutter)*2));margin:0 auto;padding:0;border-top:1px solid var(--studio-line);background:none;color:var(--studio-ink)}
 .end-contact{display:grid;grid-template-columns:1.4fr 1fr;gap:60px;align-items:center;padding:58px 0}
 .lancer-site .end-contact h2{font-size:clamp(32px,4vw,54px);line-height:1.1;font-weight:500}
