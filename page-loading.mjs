@@ -19,8 +19,6 @@ for(const image of document.images){
  image.addEventListener('load',loaded);image.addEventListener('error',settle);begin();
  new MutationObserver(begin).observe(image,{attributes:true,attributeFilter:['src','srcset']});
 }
-const stage=document.querySelector('.lunar-stage'),sceneLoader=stage?.querySelector('.scene-loader');
-if(sceneLoader){const sync=()=>{sceneLoader.hidden=!!stage.dataset.sceneReady;};sync();new MutationObserver(sync).observe(stage,{attributes:true,attributeFilter:['data-scene-ready']});}
 // Local QA only: expose measured network results through DOM for browser review.
 if(/^(localhost|127\.0\.0\.1)$/.test(location.hostname))setTimeout(()=>{
  const resources=performance.getEntriesByType('resource');

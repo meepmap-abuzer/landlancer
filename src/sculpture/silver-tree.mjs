@@ -31,7 +31,7 @@ export function createSilverTree({scene,rand,heightAt,mobile}){
    branch([mid.clone().lerp(end,.7),end,tip],.026);tips.push(tip);
   }
  }
- const wood=new THREE.MeshStandardMaterial({color:0xb9c0c5,metalness:.5,roughness:.46});
+ const wood=new THREE.MeshStandardMaterial({color:0xb4beb3,metalness:.42,roughness:.5});
  const merged=mergeGeometries(branches),trunkMesh=new THREE.Mesh(merged,wood);
  branches.forEach(g=>g.dispose());trunkMesh.castShadow=trunkMesh.receiveShadow=true;tree.add(trunkMesh);
  const vertices=[],uv=[],indices=[];
@@ -42,11 +42,22 @@ export function createSilverTree({scene,rand,heightAt,mobile}){
   if(row<6){const a=row*3;indices.push(a,a+1,a+3,a+1,a+4,a+3,a+1,a+2,a+4,a+2,a+5,a+4);}
  }
  const leafGeometry=new THREE.BufferGeometry();leafGeometry.setAttribute('position',new THREE.Float32BufferAttribute(vertices,3));leafGeometry.setAttribute('uv',new THREE.Float32BufferAttribute(uv,2));leafGeometry.setIndex(indices);leafGeometry.computeVertexNormals();
- const wind={value:0};
- const material=new THREE.MeshStandardMaterial({color:0xc3cbd1,metalness:.42,roughness:.48,side:THREE.DoubleSide});
+ const wind={value:0},leafBloom={value:1},leafTouch={value:new THREE.Vector3(1000,1000,1000)},leafPower={value:0};
+ const pointerTarget=new THREE.Vector3(1000,1000,1000);let pointerActive=false,motionEnabled=true,growth=1;
+ const material=new THREE.MeshStandardMaterial({color:0xa8b9a0,metalness:.24,roughness:.58,side:THREE.DoubleSide});
  material.onBeforeCompile=shader=>{
-  shader.uniforms.uTreeTime=wind;
-  shader.vertexShader=shader.vertexShader.replace('#include <common>','#include <common>\nuniform float uTreeTime;').replace('#include <begin_vertex>',`#include <begin_vertex>
+  Object.assign(shader.uniforms,{uTreeTime:wind,uLeafBloom:leafBloom,uLeafTouch:leafTouch,uLeafPower:leafPower});
+  shader.vertexShader=shader.vertexShader.replace('#include <common>','#include <common>\nuniform float uTreeTime; uniform float uLeafBloom; uniform vec3 uLeafTouch; uniform float uLeafPower;').replace('#include <begin_vertex>',`#include <begin_vertex>
+   transformed*=uLeafBloom;
+   vec3 root=(modelMatrix*instanceMatrix*vec4(0.,0.,0.,1.)).xyz;
+   vec3 delta=root-uLeafTouch;float dist=length(delta);
+   float push=exp(-dist*dist/3.5)*uLeafPower*.36;
+   vec3 direction=delta/max(dist,.01);
+   vec3 axisX=normalize((modelMatrix*vec4(instanceMatrix[0].xyz,0.)).xyz);
+   vec3 axisY=normalize((modelMatrix*vec4(instanceMatrix[1].xyz,0.)).xyz);
+   vec3 axisZ=normalize((modelMatrix*vec4(instanceMatrix[2].xyz,0.)).xyz);
+   transformed+=vec3(dot(direction,axisX),dot(direction,axisY),dot(direction,axisZ))*push;
+   transformed.z+=sin(uTreeTime*7.+root.x*3.+root.y)*push*.25*uv.y;
    transformed.z+=sin(uTreeTime*1.15+instanceMatrix[3].x*2.1+instanceMatrix[3].y)*.045*uv.y*uv.y;`);
  };
  const count=mobile?1400:3000,leaves=new THREE.InstancedMesh(leafGeometry,material,count);
@@ -67,8 +78,9 @@ export function createSilverTree({scene,rand,heightAt,mobile}){
  const fallingCount=mobile?7:12,falling=new THREE.InstancedMesh(leafGeometry,material,fallingCount);
  falling.frustumCulled=false;falling.instanceMatrix.setUsage(THREE.DynamicDrawUsage);tree.add(falling);
  const falls=Array.from({length:fallingCount},(_,i)=>({origin:origins[i%origins.length],phase:i*36/fallingCount,spin:rand()*Math.PI*2,drift:(rand()-.5)*.7}));
- function update(time){
+ function update(time,dt=.016){
   wind.value=time;tree.rotation.z=Math.sin(time*.31)*.004;
+  const blend=1-Math.exp(-dt*9);leafTouch.value.lerp(pointerTarget,blend);leafPower.value+=(Number(pointerActive&&motionEnabled)-leafPower.value)*blend;
   falls.forEach((leaf,i)=>{
    const age=(time+leaf.phase)%36;
    if(age<10){
@@ -82,5 +94,6 @@ export function createSilverTree({scene,rand,heightAt,mobile}){
   falling.instanceMatrix.needsUpdate=true;
  }
  update(0);
- return {update,setMotion:enabled=>{falling.visible=enabled;},tree,framePoints};
+ function setGrowth(value){growth=value;leafBloom.value=THREE.MathUtils.smoothstep(value,.35,.95);leaves.visible=value>.1;falling.visible=motionEnabled&&value>.99;}
+ return {update,setGrowth,setPointer:(point,active)=>{if(point)pointerTarget.copy(point);pointerActive=active;},setMotion:enabled=>{motionEnabled=enabled;falling.visible=enabled&&growth>.99;if(!enabled)leafPower.value=0;},tree,framePoints};
 }

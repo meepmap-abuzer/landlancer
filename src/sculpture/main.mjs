@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import {createSilverTree} from './silver-tree.mjs';
 import {RoomEnvironment} from 'three/addons/environments/RoomEnvironment.js';
+import {radialReveal} from './garden-reveal.mjs';
 
 const stage = document.querySelector('.lunar-stage');
 if (stage) {
@@ -52,7 +53,7 @@ function createGarden(renderer,host,stage){
  const bump=new THREE.CanvasTexture(noiseTexture);bump.wrapS=bump.wrapT=THREE.RepeatWrapping;bump.repeat.set(5,5);
  const stoneMap=new THREE.CanvasTexture(noiseTexture);stoneMap.colorSpace=THREE.SRGBColorSpace;stoneMap.wrapS=stoneMap.wrapT=THREE.RepeatWrapping;stoneMap.repeat.set(2,2);
  const stoneMat=new THREE.MeshStandardMaterial({color:0xc0c2c5,map:stoneMap,roughness:.95,bumpMap:bump,bumpScale:.26});
- const groundMat=new THREE.MeshStandardMaterial({color:0x373c40,roughness:1,bumpMap:bump,bumpScale:.1});
+ const groundMat=new THREE.MeshStandardMaterial({color:0x394139,roughness:1,bumpMap:bump,bumpScale:.1});
  const groundGeo=new THREE.PlaneGeometry(68,44,110,65);groundGeo.rotateX(-Math.PI/2);
  const gp=groundGeo.attributes.position;
  for(let i=0;i<gp.count;i++)gp.setY(i,heightAt(gp.getX(i),gp.getZ(i)));
@@ -88,7 +89,7 @@ function createGarden(renderer,host,stage){
  }
  const blade=new THREE.BufferGeometry();blade.setAttribute('position',new THREE.Float32BufferAttribute(positions,3));blade.setAttribute('uv',new THREE.Float32BufferAttribute(uvs,2));blade.setIndex(indices);blade.computeVertexNormals();
  const uniforms={uTime:{value:0},uTouch:{value:new THREE.Vector3(1000,0,1000)},uMotion:{value:1}};
- const grassMat=new THREE.MeshStandardMaterial({color:0xb3b8bd,roughness:.75,metalness:.08,side:THREE.DoubleSide});
+ const grassMat=new THREE.MeshStandardMaterial({color:0x9eae97,roughness:.82,metalness:.05,side:THREE.DoubleSide});
  grassMat.onBeforeCompile=shader=>{
   Object.assign(shader.uniforms,uniforms);
   shader.vertexShader=shader.vertexShader.replace('#include <common>',`#include <common>
@@ -120,12 +121,23 @@ function createGarden(renderer,host,stage){
   grass.setColorAt(placed,new THREE.Color().setScalar(.6+rand()*.4));placed++;
  }
  grass.count=placed;grass.instanceMatrix.needsUpdate=true;grass.instanceColor.needsUpdate=true;grass.receiveShadow=true;grass.frustumCulled=false;scene.add(grass);
+ const reveal={radius:{value:-4},origin:{value:new THREE.Vector2(-14,10)}};
+ [groundMat,stoneMat,grassMat].forEach(material=>radialReveal(material,reveal));
  const silverTree=createSilverTree({scene,rand,heightAt,mobile});
  const pointer=new THREE.Vector2(),raycaster=new THREE.Raycaster();
  const target=new THREE.Vector3(1000,0,1000),touch=uniforms.uTouch.value;
  const plane=new THREE.Plane(new THREE.Vector3(0,1,0),0);
  const hit=new THREE.Vector3(),away=new THREE.Vector3(1000,0,1000);let active=false,visible=false,frame=0,last=0,time=0;
  const reduced=matchMedia('(prefers-reduced-motion: reduce)');let paused=document.body.classList.contains('motion-paused')||reduced.matches;
+ let introTime=0,baseScale=1,growth=paused?1:0,lastShadowGrowth=-1;
+ const canopyPlane=new THREE.Plane(),canopyHit=new THREE.Vector3(),canopyCenter=new THREE.Vector3(),cameraDirection=new THREE.Vector3(),localHit=new THREE.Vector3();
+ function intro(){
+  if(paused){growth=1;reveal.radius.value=90;introTime=3;}
+  else{const p=Math.min(1,introTime/2.8);reveal.radius.value=-4+94*(1-(1-p)**3);const g=Math.max(0,Math.min(1,(introTime-.65)/2.2));growth=1-(1-g)**3;}
+  silverTree.tree.scale.setScalar(baseScale*Math.max(.001,growth));silverTree.setGrowth(growth);
+  const state=growth>=1?'complete':'running';if(stage.dataset.intro!==state)stage.dataset.intro=state;
+  if(Math.abs(growth-lastShadowGrowth)>.08||growth===1&&lastShadowGrowth!==1){renderer.shadowMap.needsUpdate=true;lastShadowGrowth=growth;}
+ }
  function resize(){
   const w=host.clientWidth,h=host.clientHeight;renderer.setSize(w,h,false);camera.aspect=w/h;
   const compact=w<900;
@@ -150,28 +162,41 @@ function createGarden(renderer,host,stage){
    silverTree.tree.position.y=heightAt(silverTree.tree.position.x,3.3);
    aim.y+=(targetTop-frame.top)*span/h;camera.lookAt(aim);
   }
-  renderer.shadowMap.needsUpdate=true;render();
+  baseScale=silverTree.tree.scale.x;
+  raycaster.setFromCamera(new THREE.Vector2(-.84,-.68),camera);
+  if(raycaster.ray.intersectPlane(plane,hit))reveal.origin.value.set(hit.x,hit.z);
   if(/^(localhost|127\.0\.0\.1)$/.test(location.hostname)){const frame=projectedFrame();stage.dataset.treeFrame=JSON.stringify({...frame,top:Math.round(host.getBoundingClientRect().top+scrollY+frame.top),scale:silverTree.tree.scale.x});}
+  intro();renderer.shadowMap.needsUpdate=true;render();
  }
  function render(){renderer.render(scene,camera);}
  function tick(now){
   frame=0;if(!visible||paused||document.hidden)return;
   if(now-last<(mobile?1000/30:1000/60)-1){frame=requestAnimationFrame(tick);return;}
-  const dt=Math.min((now-last)/1000||.016,.05);last=now;time+=dt;
-  uniforms.uTime.value=time;
-  silverTree.update(time);
+   const dt=Math.min((now-last)/1000||.016,.05);last=now;time+=dt;
+  if(introTime<3){introTime+=dt;intro();}
+   uniforms.uTime.value=time;
+  silverTree.update(time,dt);
   if(active)touch.lerp(target,1-Math.exp(-dt*9));else touch.lerp(away,1-Math.exp(-dt*2));
   render();frame=requestAnimationFrame(tick);
  }
  function wake(){if(!frame&&visible&&!paused&&!document.hidden){last=performance.now();frame=requestAnimationFrame(tick);}}
- function sync(){cancelAnimationFrame(frame);frame=0;silverTree.setMotion(!paused);render();wake();}
+ function sync(){cancelAnimationFrame(frame);frame=0;silverTree.setMotion(!paused);if(paused)intro();render();wake();}
  stage.addEventListener('pointermove',e=>{
   if(e.pointerType==='touch')return;
   const r=host.getBoundingClientRect();pointer.set((e.clientX-r.left)/r.width*2-1,-(e.clientY-r.top)/r.height*2+1);
   raycaster.setFromCamera(pointer,camera);
   if(raycaster.ray.intersectPlane(plane,hit)){target.copy(hit);active=true;}
+  silverTree.tree.updateMatrixWorld(true);canopyCenter.set(0,5.3,0).applyMatrix4(silverTree.tree.matrixWorld);
+  canopyPlane.setFromNormalAndCoplanarPoint(camera.getWorldDirection(cameraDirection),canopyCenter);
+  let overLeaves=false;
+  if(growth>.95&&raycaster.ray.intersectPlane(canopyPlane,canopyHit)){
+   localHit.copy(canopyHit);silverTree.tree.worldToLocal(localHit);
+   overLeaves=(localHit.x/3.8)**2+((localHit.y-5.3)/2.25)**2+(localHit.z/3.4)**2<1.5;
+  }
+  silverTree.setPointer(canopyHit,overLeaves);
+  if(/^(localhost|127\.0\.0\.1)$/.test(location.hostname))stage.dataset.leafInteraction=overLeaves?'active':'idle';
  },{passive:true});
- stage.addEventListener('pointerleave',()=>{active=false;});
+ stage.addEventListener('pointerleave',()=>{active=false;silverTree.setPointer(null,false);stage.dataset.leafInteraction='idle';});
  document.addEventListener('lancer:motion',({detail})=>{paused=detail.paused;sync();});
  document.addEventListener('visibilitychange',sync);
  new IntersectionObserver(([e])=>{visible=e.isIntersecting;sync();},{rootMargin:'80px'}).observe(stage);
