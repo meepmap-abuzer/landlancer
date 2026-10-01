@@ -1,13 +1,65 @@
 {
-  "source": "OpenAI image generation tool",
-  "created": "2026-09-30",
-  "purpose": "Editorial service illustrations, not client project screenshots",
-  "prompts": {
-    "websites": "Create a premium editorial product photograph for one website service card. Landscape 3:2. An open ultra-thin silver laptop on an oversized folded ivory sheet of paper with a vermilion edge, screen showing a sophisticated architectural website layout with large monochrome photo and tiny abstract typesetting. Strong diagonal composition. Background and floor exactly neutral dark charcoal #222222, no bright gradients. Main composition in center lower two-thirds, all objects contained with generous margin, top 20% mostly empty for live HTML heading. Beautiful realistic materials, controlled large softbox highlights, tactile detail, confident art direction, physically plausible. No large text, no title, no watermarks, no decorative floating UI panels, no nature, no neon. Restrained boutique design studio quality. This is one coherent image, not a collage.",
-    "webapps": "Create a premium editorial product photograph for one website service card. Landscape 3:2. A modular miniature server workstation made from three precisely machined silver and smoke-glass blocks, a floating slim landscape display with a beautiful quiet analytics interface, one warm amber translucent connector. Industrial product sculpture. Background and floor exactly neutral dark charcoal #222222, no bright gradients. Main composition in center lower two-thirds, all objects contained with generous margin, top 20% mostly empty for live HTML heading. Beautiful realistic materials, controlled large softbox highlights, tactile detail, confident art direction, physically plausible. No large text, no title, no watermarks, no decorative floating UI panels, no nature, no neon. Restrained boutique design studio quality. This is one coherent image, not a collage.",
-    "telegram": "Create a premium editorial product photograph for one website service card. Landscape 3:2. A graphite smartphone resting in a curved ice-blue acrylic cradle shaped like a folded paper airplane, beautiful minimalist messaging application visible on its screen. Phone fully visible, sculptural blue acrylic ribbon. Background and floor exactly neutral dark charcoal #222222, no bright gradients. Main composition in center lower two-thirds, all objects contained with generous margin, top 20% mostly empty for live HTML heading. Beautiful realistic materials, controlled large softbox highlights, tactile detail, confident art direction, physically plausible. No large text, no title, no watermarks, no decorative floating UI panels, no nature, no neon. Restrained boutique design studio quality. This is one coherent image, not a collage.",
-    "crm": "Create a premium editorial product photograph for one website service card. Landscape 3:2. Three elegant smoked-glass index card drawers arranged in an architectural staircase, precise cream cards within, one small landscape dashboard screen integrated into the top drawer, small chart forms, sage-green translucent divider. Background and floor exactly neutral dark charcoal #222222, no bright gradients. Main composition in center lower two-thirds, all objects contained with generous margin, top 20% mostly empty for live HTML heading. Beautiful realistic materials, controlled large softbox highlights, tactile detail, confident art direction, physically plausible. No large text, no title, no watermarks, no decorative floating UI panels, no nature, no neon. Restrained boutique design studio quality. This is one coherent image, not a collage.",
-    "automation": "Create a premium editorial product photograph for one website service card. Landscape 3:2. A sculptural closed-loop brushed-aluminum conveyor with three frosted glass cubes travelling through an elegant cobalt-blue arch sensor. High-end functional kinetic sculpture, no robot, no gears, no icons. Background and floor exactly neutral dark charcoal #222222, no bright gradients. Main composition in center lower two-thirds, all objects contained with generous margin, top 20% mostly empty for live HTML heading. Beautiful realistic materials, controlled large softbox highlights, tactile detail, confident art direction, physically plausible. No large text, no title, no watermarks, no decorative floating UI panels, no nature, no neon. Restrained boutique design studio quality. This is one coherent image, not a collage.",
-    "mvp": "Create a premium editorial product photograph for one website service card. Landscape 3:2. An exploded-view physical prototype kit: precise white ceramic, charcoal aluminum and muted terracotta modules assembling into one compact digital device, tiny screws and alignment pins, beautiful industrial design model on a slate pedestal. Background and floor exactly neutral dark charcoal #222222, no bright gradients. Main composition in center lower two-thirds, all objects contained with generous margin, top 20% mostly empty for live HTML heading. Beautiful realistic materials, controlled large softbox highlights, tactile detail, confident art direction, physically plausible. No large text, no title, no watermarks, no decorative floating UI panels, no nature, no neon. Restrained boutique design studio quality. This is one coherent image, not a collage."
-  }
+  "mode": "Built-in image_gen",
+  "assets": [
+    {
+      "id": "service-websites",
+      "prompt": "Create a minimalist premium photographic illustration for a digital studio service card. Landscape 3:2, matte uniform charcoal #222 background. ONE physically realistic modern graphite device, restrained soft lighting, small contact shadow, very few elements. Device is in the LOWER 65 percent of the composition, leaving the upper 35 percent empty charcoal for the website title overlay. Complete hardware and all corners visible within frame. Slightly angled, not dramatically tilted. No props, furniture, glass ribbons, pedestals, exploded components, machinery, cubes, plants, rocks, ornamental sci-fi, text outside screen, neon, heavy reflections or gradients. Screen is a calm clear designed interface, white/light gray with dark typography and tiny muted blue accents, minimal readable labels. Beautiful proportions and believable real hardware. A thin graphite laptop displaying a refined editorial architecture website, big monochrome building photograph on left, brief typography on right, generous white space. Keyboard visible. No floating panels.",
+      "references": [],
+      "original": "Z:/Users/smoke/.codex/generated_images/01a0ba0f-366c-7831-a716-46acf74a1410/exec-399450cc-7cd2-4cf0-968b-01496a30f1d4.png",
+      "file": "assets/services/websites.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 64770
+    },
+    {
+      "id": "service-webapps",
+      "prompt": "Create a minimalist premium photographic illustration for a digital studio service card. Landscape 3:2, matte uniform charcoal #222 background. ONE physically realistic modern graphite device, restrained soft lighting, small contact shadow, very few elements. Device is in the LOWER 65 percent of the composition, leaving the upper 35 percent empty charcoal for the website title overlay. Complete hardware and all corners visible within frame. Slightly angled, not dramatically tilted. No props, furniture, glass ribbons, pedestals, exploded components, machinery, cubes, plants, rocks, ornamental sci-fi, text outside screen, neon, heavy reflections or gradients. Screen is a calm clear designed interface, white/light gray with dark typography and tiny muted blue accents, minimal readable labels. Beautiful proportions and believable real hardware. A single graphite desktop monitor on a simple real monitor stand displaying a clean web application: thin sidebar, three small statistics, one subtle line chart and neat table with generous spacing. No keyboard, no extra objects.",
+      "references": [],
+      "original": "Z:/Users/smoke/.codex/generated_images/01a0ba0f-366c-7831-a716-46acf74a1410/exec-1eb894ce-fb01-4aee-9341-eb8abf91d82a.png",
+      "file": "assets/services/webapps.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 40404
+    },
+    {
+      "id": "service-telegram",
+      "prompt": "Create a minimalist premium photographic illustration for a digital studio service card. Landscape 3:2, matte uniform charcoal #222 background. ONE physically realistic modern graphite device, restrained soft lighting, small contact shadow, very few elements. Device is in the LOWER 65 percent of the composition, leaving the upper 35 percent empty charcoal for the website title overlay. Complete hardware and all corners visible within frame. Slightly angled, not dramatically tilted. No props, furniture, glass ribbons, pedestals, exploded components, machinery, cubes, plants, rocks, ornamental sci-fi, text outside screen, neon, heavy reflections or gradients. Screen is a calm clear designed interface, white/light gray with dark typography and tiny muted blue accents, minimal readable labels. Beautiful proportions and believable real hardware. A single realistic titanium smartphone, nearly front-on, displaying a refined messenger Mini App with two tidy product cards and simple bottom navigation. A proper black Dynamic Island, 9:41 time, cellular Wi-Fi and battery at top and home indicator below. Device height 62 percent of image height; not cropped.",
+      "references": [],
+      "original": "Z:/Users/smoke/.codex/generated_images/01a0ba0f-366c-7831-a716-46acf74a1410/exec-6ea6d90d-1861-47c2-b846-3015af233a8d.png",
+      "file": "assets/services/telegram.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 36760
+    },
+    {
+      "id": "service-crm",
+      "prompt": "Create a minimalist premium photographic illustration for a digital studio service card. Landscape 3:2, matte uniform charcoal #222 background. ONE physically realistic modern graphite device, restrained soft lighting, small contact shadow, very few elements. Device is in the LOWER 65 percent of the composition, leaving the upper 35 percent empty charcoal for the website title overlay. Complete hardware and all corners visible within frame. Slightly angled, not dramatically tilted. No props, furniture, glass ribbons, pedestals, exploded components, machinery, cubes, plants, rocks, ornamental sci-fi, text outside screen, neon, heavy reflections or gradients. Screen is a calm clear designed interface, white/light gray with dark typography and tiny muted blue accents, minimal readable labels. Beautiful proportions and believable real hardware. A single thin graphite laptop displaying a calm CRM: customer list with 5 neat rows, tiny circular avatars, a compact contact detail column on right. Minimal grayscale white interface. Physical keyboard visible.",
+      "references": [],
+      "original": "Z:/Users/smoke/.codex/generated_images/01a0ba0f-366c-7831-a716-46acf74a1410/exec-4d6fed5d-12af-4d1e-b820-05f7ed127e13.png",
+      "file": "assets/services/crm.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 65156
+    },
+    {
+      "id": "service-automation",
+      "prompt": "Create a minimalist premium photographic illustration for a digital studio service card. Landscape 3:2, matte uniform charcoal #222 background. ONE physically realistic modern graphite device, restrained soft lighting, small contact shadow, very few elements. Device is in the LOWER 65 percent of the composition, leaving the upper 35 percent empty charcoal for the website title overlay. Complete hardware and all corners visible within frame. Slightly angled, not dramatically tilted. No props, furniture, glass ribbons, pedestals, exploded components, machinery, cubes, plants, rocks, ornamental sci-fi, text outside screen, neon, heavy reflections or gradients. Screen is a calm clear designed interface, white/light gray with dark typography and tiny muted blue accents, minimal readable labels. Beautiful proportions and believable real hardware. A single real thin graphite tablet in landscape orientation displaying a clear automation workflow: three rectangular nodes connected by thin arrows, label Request then Processing then Ready, one small green completion check. Plenty of screen white space.",
+      "references": [],
+      "original": "Z:/Users/smoke/.codex/generated_images/01a0ba0f-366c-7831-a716-46acf74a1410/exec-bf6d939a-af90-4bea-aa31-553695cf994f.png",
+      "file": "assets/services/automation.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 35824
+    },
+    {
+      "id": "service-mvp",
+      "prompt": "Create a minimalist premium photographic illustration for a digital studio service card. Landscape 3:2, matte uniform charcoal #222 background. ONE physically realistic modern graphite device, restrained soft lighting, small contact shadow, very few elements. Device is in the LOWER 65 percent of the composition, leaving the upper 35 percent empty charcoal for the website title overlay. Complete hardware and all corners visible within frame. Slightly angled, not dramatically tilted. No props, furniture, glass ribbons, pedestals, exploded components, machinery, cubes, plants, rocks, ornamental sci-fi, text outside screen, neon, heavy reflections or gradients. Screen is a calm clear designed interface, white/light gray with dark typography and tiny muted blue accents, minimal readable labels. Beautiful proportions and believable real hardware. A single realistic graphite tablet in landscape orientation showing a clean clickable wireframe prototype: small sidebar, simple catalog layout, three white product tiles, tiny gray placeholders and a small blue preview button. All hardware visible.",
+      "references": [],
+      "original": "Z:/Users/smoke/.codex/generated_images/01a0ba0f-366c-7831-a716-46acf74a1410/exec-2895db4a-fa7e-4c2c-8a3e-7e5ada1cf4e1.png",
+      "file": "assets/services/mvp.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 40088
+    }
+  ]
 }

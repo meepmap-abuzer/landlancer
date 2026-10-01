@@ -5,7 +5,7 @@ if (stage) {
  const host = stage.querySelector('.lunar-canvas');
  let renderer;
  try { renderer = new THREE.WebGLRenderer({alpha:true,antialias:true,powerPreference:'high-performance'}); }
- catch { stage.querySelector('.lunar-hint').textContent='Ваш браузер не поддерживает WebGL.'; }
+ catch { stage.querySelector('.lunar-status').textContent='Ваш браузер не поддерживает WebGL.'; }
  if(renderer) createGarden(renderer,host,stage);
 }
 
@@ -47,7 +47,7 @@ function createGarden(renderer,host,stage){
  const stoneMap=new THREE.CanvasTexture(noiseTexture);stoneMap.colorSpace=THREE.SRGBColorSpace;stoneMap.wrapS=stoneMap.wrapT=THREE.RepeatWrapping;stoneMap.repeat.set(2,2);
  const stoneMat=new THREE.MeshStandardMaterial({color:0xc0c2c5,map:stoneMap,roughness:.95,bumpMap:bump,bumpScale:.26});
  const groundMat=new THREE.MeshStandardMaterial({color:0x373c40,roughness:1,bumpMap:bump,bumpScale:.1});
- const groundGeo=new THREE.PlaneGeometry(38,22,110,65);groundGeo.rotateX(-Math.PI/2);
+ const groundGeo=new THREE.PlaneGeometry(68,44,110,65);groundGeo.rotateX(-Math.PI/2);
  const gp=groundGeo.attributes.position;
  for(let i=0;i<gp.count;i++)gp.setY(i,heightAt(gp.getX(i),gp.getZ(i)));
  groundGeo.computeVertexNormals();
@@ -103,7 +103,7 @@ function createGarden(renderer,host,stage){
  const count=mobile?14000:34000,grass=new THREE.InstancedMesh(blade,grassMat,count);
  let placed=0,attempts=0;
  while(placed<count && attempts<count*8){
-  attempts++;const x=(rand()-.5)*32,z=(rand()-.5)*17;
+  attempts++;const x=(rand()-.5)*48,z=(rand()-.5)*24;
   if(rocks.some(([rx,rz,sx,,sz])=>((x-rx)/sx)**2+((z-rz)/sz)**2<.9))continue;
   const path=Math.sin(z*.3)*1.8;
   if(Math.abs(x-path)<.75 && rand()<.9)continue;
@@ -144,7 +144,7 @@ function createGarden(renderer,host,stage){
  document.addEventListener('visibilitychange',sync);
  new IntersectionObserver(([e])=>{visible=e.isIntersecting;sync();},{rootMargin:'80px'}).observe(stage);
  new ResizeObserver(resize).observe(host);
- renderer.domElement.addEventListener('webglcontextlost',e=>{e.preventDefault();cancelAnimationFrame(frame);frame=0;stage.querySelector('.lunar-hint').textContent='Графическая сцена приостановлена. Обновите страницу.';});
+ renderer.domElement.addEventListener('webglcontextlost',e=>{e.preventDefault();cancelAnimationFrame(frame);frame=0;stage.querySelector('.lunar-status').textContent='Графическая сцена приостановлена. Обновите страницу.';});
  stage.dataset.sceneReady='true';
  resize();
 }

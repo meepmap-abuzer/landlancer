@@ -30,12 +30,38 @@ document.addEventListener('visibilitychange', () => {
 });
 const reveal = new IntersectionObserver(entries => {
   entries.filter(entry => entry.isIntersecting).forEach(({target},index) => {
-    if(allowed()) animate(target,[{opacity:0,transform:'translateY(20px)'},{opacity:1,transform:'translateY(0)'}],
-      {duration:700,delay:Math.min(index,2)*70,easing:'cubic-bezier(.16,1,.3,1)',fill:'backwards'});
+    if(allowed()) animate(target,[{opacity:0,transform:'translateY(32px)'},{opacity:1,transform:'translateY(0)'}],
+      {duration:850,delay:Math.min(index,3)*85,easing:'cubic-bezier(.16,1,.3,1)',fill:'backwards'});
     reveal.unobserve(target);
   });
 },{threshold:.08});
-document.querySelectorAll('.case-story,.case-capability-grid,.case-related,.studio-project,.service-tile,.industry-card,.new-section-heading,.studio-process,.seo-faq,.end-contact,.end-columns').forEach(element => reveal.observe(element));
+document.querySelectorAll('.case-opening-copy,.case-story,.case-capability-grid,.case-related,.studio-project,.service-tile,.industry-card,.new-section-heading,.studio-process,.seo-faq,.end-contact,.end-columns,.service-intro,.service-context,.service-scope article,.service-examples,.service-related').forEach(element => reveal.observe(element));
+// Native details remain usable without JavaScript; height settles to auto after motion.
+document.querySelectorAll('.faq-answers details,.case-details details').forEach(details=>{
+ const summary=details.querySelector('summary');let active;
+ summary.addEventListener('click',event=>{
+  if(!allowed())return;
+  event.preventDefault();if(active)return;
+  const opening=!details.open,from=details.offsetHeight;
+  if(opening)details.open=true;
+  const to=opening?details.offsetHeight:summary.offsetHeight;
+  details.style.overflow='hidden';
+  active=animate(details,[{height:`${from}px`},{height:`${to}px`}],{duration:320,easing:'cubic-bezier(.22,1,.36,1)'});
+  active.finished.catch(()=>{}).finally(()=>{if(!opening)details.open=false;details.style.overflow='';active=null;});
+  if(opening){const p=details.querySelector('p');if(p)animate(p,[{opacity:0,transform:'translateY(8px)'},{opacity:1,transform:'translateY(0)'}],{duration:380,easing:'ease-out'});}
+ });
+});
+// A few moving ASCII pixels, only while the small motif is in view.
+const motifs=[...document.querySelectorAll('[data-motif]')].map(element=>({element,original:element.textContent,visible:false}));
+let motifFrame=0,motifLast=0,motifStep=0;
+function motifTick(now){motifFrame=0;if(!allowed()||document.hidden||!motifs.some(m=>m.visible))return;
+ if(now-motifLast>480){motifLast=now;motifStep++;motifs.forEach(m=>{if(!m.visible)return;let dot=0;m.element.textContent=m.original.replace(/[.+]/g,c=>(dot++===motifStep%6?'*':c));});}
+ motifFrame=requestAnimationFrame(motifTick);
+}
+function syncMotifs(){cancelAnimationFrame(motifFrame);motifFrame=0;if(allowed()&&!document.hidden&&motifs.some(m=>m.visible))motifFrame=requestAnimationFrame(motifTick);else motifs.forEach(m=>m.element.textContent=m.original);}
+const motifObserver=new IntersectionObserver(entries=>{entries.forEach(e=>{const m=motifs.find(m=>m.element===e.target);m.visible=e.isIntersecting;m.element.toggleAttribute('data-active',m.visible);});syncMotifs();},{threshold:.1});
+motifs.forEach(m=>motifObserver.observe(m.element));
+document.addEventListener('visibilitychange',syncMotifs);reduced.addEventListener('change',syncMotifs);document.addEventListener('lancer:motion',syncMotifs);
 const track = document.querySelector('.industry-track');
 const controls = [...document.querySelectorAll('[data-industry-direction]')];
 function updateControls(){
@@ -45,4 +71,4 @@ controls.forEach(button => button.addEventListener('click', () => track.scrollBy
 track?.addEventListener('scroll',updateControls,{passive:true});
 if(track){new ResizeObserver(updateControls).observe(track);updateControls();}
 
-if(document.querySelector('.lunar-stage')) import('/sculpture/scene.js?v=lunar-1').catch(()=>{document.querySelector('.lunar-hint').textContent='Не удалось загрузить сад. Обновите страницу.'});
+if(document.querySelector('.lunar-stage')) import('/sculpture/scene.js?v=lunar-2').catch(()=>{document.querySelector('.lunar-status').textContent='Не удалось загрузить сад. Обновите страницу.'});

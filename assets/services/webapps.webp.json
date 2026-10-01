@@ -1,4 +1,10 @@
 {
-  "prompt": "Create a premium editorial product photograph for one website service card. Landscape 3:2. A modular miniature server workstation made from three precisely machined silver and smoke-glass blocks, a floating slim landscape display with a beautiful quiet analytics interface, one warm amber translucent connector. Industrial product sculpture. Background and floor exactly neutral dark charcoal #222222, no bright gradients. Main composition in center lower two-thirds, all objects contained with generous margin, top 20% mostly empty for live HTML heading. Beautiful realistic materials, controlled large softbox highlights, tactile detail, confident art direction, physically plausible. No large text, no title, no watermarks, no decorative floating UI panels, no nature, no neon. Restrained boutique design studio quality. This is one coherent image, not a collage.",
-  "createdAt": "2026-09-30T13:52:18.976Z"
+  "id": "service-webapps",
+  "prompt": "Create a minimalist premium photographic illustration for a digital studio service card. Landscape 3:2, matte uniform charcoal #222 background. ONE physically realistic modern graphite device, restrained soft lighting, small contact shadow, very few elements. Device is in the LOWER 65 percent of the composition, leaving the upper 35 percent empty charcoal for the website title overlay. Complete hardware and all corners visible within frame. Slightly angled, not dramatically tilted. No props, furniture, glass ribbons, pedestals, exploded components, machinery, cubes, plants, rocks, ornamental sci-fi, text outside screen, neon, heavy reflections or gradients. Screen is a calm clear designed interface, white/light gray with dark typography and tiny muted blue accents, minimal readable labels. Beautiful proportions and believable real hardware. A single graphite desktop monitor on a simple real monitor stand displaying a clean web application: thin sidebar, three small statistics, one subtle line chart and neat table with generous spacing. No keyboard, no extra objects.",
+  "references": [],
+  "original": "Z:/Users/smoke/.codex/generated_images/01a0ba0f-366c-7831-a716-46acf74a1410/exec-1eb894ce-fb01-4aee-9341-eb8abf91d82a.png",
+  "file": "assets/services/webapps.webp",
+  "width": 1536,
+  "height": 1024,
+  "bytes": 40404
 }

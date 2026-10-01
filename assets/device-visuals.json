@@ -1,0 +1,169 @@
+{
+  "created": "2026-10-01",
+  "mode": "Built-in image_gen",
+  "purpose": "Generated device visualizations; exact application behavior remains in interactive demos.",
+  "assets": [
+    {
+      "id": "maverick-activation",
+      "prompt": "Generate a NEW photographic product image using these screenshots only as interface references. Do not return a bare screenshot or a screenshot in a simple drawn frame. Minimalist premium studio product photography, landscape 3:2. Two physically convincing modern titanium smartphones, one almost straight-on, the other at a very slight angle, complete hardware visible, generously spaced side by side on a neutral matte charcoal #222 background. Devices occupy 80% of image height; full screen and all device edges are inside frame. Real glass, thin black bezels, side buttons, correct rounded display corners. Each has a black Dynamic Island at the very top and a proper iOS status bar with 9:41 at left, cellular/Wi-Fi and battery at right, plus a bottom home indicator. Redraw supplied actual application screens faithfully below system bar, preserving colors, branding, navigation and prominent Russian labels; legible UI, no warped/stretch text. Soft broad studio lighting, restrained reflections and small contact shadows. No furniture, pedestals, stones, glass ribbons, decorations, floating UI, flowers, shiny sci-fi props, gradients or promotional text outside screens. Maverick: cream, wood, navy and red. Show home QR activation and roulette screens.",
+      "references": [
+        "assets/screenshots/club-home.png",
+        "assets/screenshots/club-roulette.png"
+      ],
+      "original": "Z:/Users/smoke/.codex/generated_images/01a0ba0f-366c-7831-a716-46acf74a1410/exec-a9288041-a5d3-4132-80ad-768f606d375f.png",
+      "file": "assets/case-visuals/maverick-activation.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 104564
+    },
+    {
+      "id": "maverick-engagement",
+      "prompt": "Generate a NEW photographic product image using these screenshots only as interface references. Do not return a bare screenshot or a screenshot in a simple drawn frame. Minimalist premium studio product photography, landscape 3:2. Two physically convincing modern titanium smartphones, one almost straight-on, the other at a very slight angle, complete hardware visible, generously spaced side by side on a neutral matte charcoal #222 background. Devices occupy 80% of image height; full screen and all device edges are inside frame. Real glass, thin black bezels, side buttons, correct rounded display corners. Each has a black Dynamic Island at the very top and a proper iOS status bar with 9:41 at left, cellular/Wi-Fi and battery at right, plus a bottom home indicator. Redraw supplied actual application screens faithfully below system bar, preserving colors, branding, navigation and prominent Russian labels; legible UI, no warped/stretch text. Soft broad studio lighting, restrained reflections and small contact shadows. No furniture, pedestals, stones, glass ribbons, decorations, floating UI, flowers, shiny sci-fi props, gradients or promotional text outside screens. Maverick: show the daily tasks and merchandise shop screens.",
+      "references": [
+        "assets/screenshots/club-tasks.png",
+        "assets/screenshots/club-shop.png"
+      ],
+      "original": "Z:/Users/smoke/.codex/generated_images/01a0ba0f-366c-7831-a716-46acf74a1410/exec-b204efed-5c61-46e4-99fb-c74664537217.png",
+      "file": "assets/case-visuals/maverick-engagement.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 108064
+    },
+    {
+      "id": "gift-games",
+      "prompt": "Generate a NEW photographic product image using these screenshots only as interface references. Do not return a bare screenshot or a screenshot in a simple drawn frame. Minimalist premium studio product photography, landscape 3:2. Two physically convincing modern titanium smartphones, one almost straight-on, the other at a very slight angle, complete hardware visible, generously spaced side by side on a neutral matte charcoal #222 background. Devices occupy 80% of image height; full screen and all device edges are inside frame. Real glass, thin black bezels, side buttons, correct rounded display corners. Each has a black Dynamic Island at the very top and a proper iOS status bar with 9:41 at left, cellular/Wi-Fi and battery at right, plus a bottom home indicator. Redraw supplied actual application screens faithfully below system bar, preserving colors, branding, navigation and prominent Russian labels; legible UI, no warped/stretch text. Soft broad studio lighting, restrained reflections and small contact shadows. No furniture, pedestals, stones, glass ribbons, decorations, floating UI, flowers, shiny sci-fi props, gradients or promotional text outside screens. Gift Run: dark and lime. Show cases and 5x5 Mines. Replace the old screenshot system bars with a single proper island status bar; no duplicate bars.",
+      "references": [
+        "assets/screenshots/gaming-case.png",
+        "assets/screenshots/gift-mines-current.png"
+      ],
+      "original": "Z:/Users/smoke/.codex/generated_images/01a0ba0f-366c-7831-a716-46acf74a1410/exec-459e33ef-2cd3-4a8e-895b-7a2b24dc1440.png",
+      "file": "assets/case-visuals/gift-games.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 72016
+    },
+    {
+      "id": "gift-rounds",
+      "prompt": "Generate a NEW photographic product image using these screenshots only as interface references. Do not return a bare screenshot or a screenshot in a simple drawn frame. Minimalist premium studio product photography, landscape 3:2. Two physically convincing modern titanium smartphones, one almost straight-on, the other at a very slight angle, complete hardware visible, generously spaced side by side on a neutral matte charcoal #222 background. Devices occupy 80% of image height; full screen and all device edges are inside frame. Real glass, thin black bezels, side buttons, correct rounded display corners. Each has a black Dynamic Island at the very top and a proper iOS status bar with 9:41 at left, cellular/Wi-Fi and battery at right, plus a bottom home indicator. Redraw supplied actual application screens faithfully below system bar, preserving colors, branding, navigation and prominent Russian labels; legible UI, no warped/stretch text. Soft broad studio lighting, restrained reflections and small contact shadows. No furniture, pedestals, stones, glass ribbons, decorations, floating UI, flowers, shiny sci-fi props, gradients or promotional text outside screens. Gift Run: dark and lime. Show Upgrade and Crash x4.27 screens.",
+      "references": [
+        "assets/screenshots/gift-upgrade-current.png",
+        "assets/screenshots/gift-crash-active.webp"
+      ],
+      "original": "Z:/Users/smoke/.codex/generated_images/01a0ba0f-366c-7831-a716-46acf74a1410/exec-5d38dc13-7031-44d3-8c61-8c2f5347595c.png",
+      "file": "assets/case-visuals/gift-rounds.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 68654
+    },
+    {
+      "id": "loyalty-member",
+      "prompt": "Generate a NEW photographic product image using the attached screenshots only as interface references. Minimalist premium studio product photography, landscape 3:2. Real hardware, accurate thin bezels, glass, side buttons, proper display corners, restrained reflections, soft broad lighting and small contact shadows on matte charcoal #222. Complete devices generously framed with clear space around all edges. Faithfully redraw the referenced actual application interfaces; preserve branding, colors and prominent Russian labels. Do not return bare screenshots or flat CSS-style frames. No furniture, scenery, plinths, stones, glass ribbons, floating UI, decorative objects, advertising text or extravagant effects. Three realistic titanium smartphones side by side, nearly frontal. Each screen has a proper black Dynamic Island, 9:41 system time at upper left, cellular, Wi-Fi and battery indicators at upper right, and bottom home indicator. Show the dark blue 12K member card, daily missions and merchandise store below the status bars. No duplicate system bars.",
+      "references": [
+        "assets/screenshots/12k-home.png",
+        "assets/screenshots/12k-missions.png",
+        "assets/screenshots/12k-shop.png"
+      ],
+      "original": "Z:/Users/smoke/.codex/generated_images/01a0ba0f-366c-7831-a716-46acf74a1410/exec-5475346a-e01d-416a-bde9-d03585221a90.png",
+      "file": "assets/case-visuals/loyalty-member.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 121406
+    },
+    {
+      "id": "loyalty-business",
+      "prompt": "Generate a NEW photographic product image using the attached screenshots only as interface references. Minimalist premium studio product photography, landscape 3:2. Real hardware, accurate thin bezels, glass, side buttons, proper display corners, restrained reflections, soft broad lighting and small contact shadows on matte charcoal #222. Complete devices generously framed with clear space around all edges. Faithfully redraw the referenced actual application interfaces; preserve branding, colors and prominent Russian labels. Do not return bare screenshots or flat CSS-style frames. No furniture, scenery, plinths, stones, glass ribbons, floating UI, decorative objects, advertising text or extravagant effects. One real elegant graphite laptop, open screen almost front-on, keyboard visible in gentle perspective. Show the actual white 12K business dashboard with dark sidebar and green selected menu. Clear clean presentation, laptop occupies 80 percent image width, all hardware fully visible.",
+      "references": [
+        "assets/screenshots/12k-dashboard.png"
+      ],
+      "original": "Z:/Users/smoke/.codex/generated_images/01a0ba0f-366c-7831-a716-46acf74a1410/exec-b7a53d99-cc8f-4a0d-aab3-cbfe0fbde28c.png",
+      "file": "assets/case-visuals/loyalty-business.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 80266
+    },
+    {
+      "id": "tailcare-home",
+      "prompt": "Generate a NEW photographic product image using the attached screenshots only as interface references. Minimalist premium studio product photography, landscape 3:2. Real hardware, accurate thin bezels, glass, side buttons, proper display corners, restrained reflections, soft broad lighting and small contact shadows on matte charcoal #222. Complete devices generously framed with clear space around all edges. Faithfully redraw the referenced actual application interfaces; preserve branding, colors and prominent Russian labels. Do not return bare screenshots or flat CSS-style frames. No furniture, scenery, plinths, stones, glass ribbons, floating UI, decorative objects, advertising text or extravagant effects. One realistic graphite laptop, open nearly front-on, keyboard gently angled. Display the actual white and green TailCare homepage with dog photograph and Russian headline. Device fully visible, occupies 80 percent image width.",
+      "references": [
+        "assets/screenshots/pets-home.png"
+      ],
+      "original": "Z:/Users/smoke/.codex/generated_images/01a0ba0f-366c-7831-a716-46acf74a1410/exec-7cf1433c-8eaf-48a8-ab78-769de4b19b28.png",
+      "file": "assets/case-visuals/tailcare-home.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 127952
+    },
+    {
+      "id": "tailcare-catalog",
+      "prompt": "Generate a NEW photographic product image using the attached screenshots only as interface references. Minimalist premium studio product photography, landscape 3:2. Real hardware, accurate thin bezels, glass, side buttons, proper display corners, restrained reflections, soft broad lighting and small contact shadows on matte charcoal #222. Complete devices generously framed with clear space around all edges. Faithfully redraw the referenced actual application interfaces; preserve branding, colors and prominent Russian labels. Do not return bare screenshots or flat CSS-style frames. No furniture, scenery, plinths, stones, glass ribbons, floating UI, decorative objects, advertising text or extravagant effects. One realistic thin graphite tablet in landscape orientation, nearly frontal with mild perspective. Complete hardware visible. Display the actual white and green TailCare catalog of pets, with correct toolbar, animal photos, cards and filters. Tablet occupies 80 percent image width.",
+      "references": [
+        "assets/screenshots/pets-catalog.png"
+      ],
+      "original": "Z:/Users/smoke/.codex/generated_images/01a0ba0f-366c-7831-a716-46acf74a1410/exec-c2078b38-ea3c-4d43-971f-e9d12841feb6.png",
+      "file": "assets/case-visuals/tailcare-catalog.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 106258
+    },
+    {
+      "id": "service-websites",
+      "prompt": "Create a minimalist premium photographic illustration for a digital studio service card. Landscape 3:2, matte uniform charcoal #222 background. ONE physically realistic modern graphite device, restrained soft lighting, small contact shadow, very few elements. Device is in the LOWER 65 percent of the composition, leaving the upper 35 percent empty charcoal for the website title overlay. Complete hardware and all corners visible within frame. Slightly angled, not dramatically tilted. No props, furniture, glass ribbons, pedestals, exploded components, machinery, cubes, plants, rocks, ornamental sci-fi, text outside screen, neon, heavy reflections or gradients. Screen is a calm clear designed interface, white/light gray with dark typography and tiny muted blue accents, minimal readable labels. Beautiful proportions and believable real hardware. A thin graphite laptop displaying a refined editorial architecture website, big monochrome building photograph on left, brief typography on right, generous white space. Keyboard visible. No floating panels.",
+      "references": [],
+      "original": "Z:/Users/smoke/.codex/generated_images/01a0ba0f-366c-7831-a716-46acf74a1410/exec-399450cc-7cd2-4cf0-968b-01496a30f1d4.png",
+      "file": "assets/services/websites.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 64770
+    },
+    {
+      "id": "service-webapps",
+      "prompt": "Create a minimalist premium photographic illustration for a digital studio service card. Landscape 3:2, matte uniform charcoal #222 background. ONE physically realistic modern graphite device, restrained soft lighting, small contact shadow, very few elements. Device is in the LOWER 65 percent of the composition, leaving the upper 35 percent empty charcoal for the website title overlay. Complete hardware and all corners visible within frame. Slightly angled, not dramatically tilted. No props, furniture, glass ribbons, pedestals, exploded components, machinery, cubes, plants, rocks, ornamental sci-fi, text outside screen, neon, heavy reflections or gradients. Screen is a calm clear designed interface, white/light gray with dark typography and tiny muted blue accents, minimal readable labels. Beautiful proportions and believable real hardware. A single graphite desktop monitor on a simple real monitor stand displaying a clean web application: thin sidebar, three small statistics, one subtle line chart and neat table with generous spacing. No keyboard, no extra objects.",
+      "references": [],
+      "original": "Z:/Users/smoke/.codex/generated_images/01a0ba0f-366c-7831-a716-46acf74a1410/exec-1eb894ce-fb01-4aee-9341-eb8abf91d82a.png",
+      "file": "assets/services/webapps.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 40404
+    },
+    {
+      "id": "service-telegram",
+      "prompt": "Create a minimalist premium photographic illustration for a digital studio service card. Landscape 3:2, matte uniform charcoal #222 background. ONE physically realistic modern graphite device, restrained soft lighting, small contact shadow, very few elements. Device is in the LOWER 65 percent of the composition, leaving the upper 35 percent empty charcoal for the website title overlay. Complete hardware and all corners visible within frame. Slightly angled, not dramatically tilted. No props, furniture, glass ribbons, pedestals, exploded components, machinery, cubes, plants, rocks, ornamental sci-fi, text outside screen, neon, heavy reflections or gradients. Screen is a calm clear designed interface, white/light gray with dark typography and tiny muted blue accents, minimal readable labels. Beautiful proportions and believable real hardware. A single realistic titanium smartphone, nearly front-on, displaying a refined messenger Mini App with two tidy product cards and simple bottom navigation. A proper black Dynamic Island, 9:41 time, cellular Wi-Fi and battery at top and home indicator below. Device height 62 percent of image height; not cropped.",
+      "references": [],
+      "original": "Z:/Users/smoke/.codex/generated_images/01a0ba0f-366c-7831-a716-46acf74a1410/exec-6ea6d90d-1861-47c2-b846-3015af233a8d.png",
+      "file": "assets/services/telegram.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 36760
+    },
+    {
+      "id": "service-crm",
+      "prompt": "Create a minimalist premium photographic illustration for a digital studio service card. Landscape 3:2, matte uniform charcoal #222 background. ONE physically realistic modern graphite device, restrained soft lighting, small contact shadow, very few elements. Device is in the LOWER 65 percent of the composition, leaving the upper 35 percent empty charcoal for the website title overlay. Complete hardware and all corners visible within frame. Slightly angled, not dramatically tilted. No props, furniture, glass ribbons, pedestals, exploded components, machinery, cubes, plants, rocks, ornamental sci-fi, text outside screen, neon, heavy reflections or gradients. Screen is a calm clear designed interface, white/light gray with dark typography and tiny muted blue accents, minimal readable labels. Beautiful proportions and believable real hardware. A single thin graphite laptop displaying a calm CRM: customer list with 5 neat rows, tiny circular avatars, a compact contact detail column on right. Minimal grayscale white interface. Physical keyboard visible.",
+      "references": [],
+      "original": "Z:/Users/smoke/.codex/generated_images/01a0ba0f-366c-7831-a716-46acf74a1410/exec-4d6fed5d-12af-4d1e-b820-05f7ed127e13.png",
+      "file": "assets/services/crm.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 65156
+    },
+    {
+      "id": "service-automation",
+      "prompt": "Create a minimalist premium photographic illustration for a digital studio service card. Landscape 3:2, matte uniform charcoal #222 background. ONE physically realistic modern graphite device, restrained soft lighting, small contact shadow, very few elements. Device is in the LOWER 65 percent of the composition, leaving the upper 35 percent empty charcoal for the website title overlay. Complete hardware and all corners visible within frame. Slightly angled, not dramatically tilted. No props, furniture, glass ribbons, pedestals, exploded components, machinery, cubes, plants, rocks, ornamental sci-fi, text outside screen, neon, heavy reflections or gradients. Screen is a calm clear designed interface, white/light gray with dark typography and tiny muted blue accents, minimal readable labels. Beautiful proportions and believable real hardware. A single real thin graphite tablet in landscape orientation displaying a clear automation workflow: three rectangular nodes connected by thin arrows, label Request then Processing then Ready, one small green completion check. Plenty of screen white space.",
+      "references": [],
+      "original": "Z:/Users/smoke/.codex/generated_images/01a0ba0f-366c-7831-a716-46acf74a1410/exec-bf6d939a-af90-4bea-aa31-553695cf994f.png",
+      "file": "assets/services/automation.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 35824
+    },
+    {
+      "id": "service-mvp",
+      "prompt": "Create a minimalist premium photographic illustration for a digital studio service card. Landscape 3:2, matte uniform charcoal #222 background. ONE physically realistic modern graphite device, restrained soft lighting, small contact shadow, very few elements. Device is in the LOWER 65 percent of the composition, leaving the upper 35 percent empty charcoal for the website title overlay. Complete hardware and all corners visible within frame. Slightly angled, not dramatically tilted. No props, furniture, glass ribbons, pedestals, exploded components, machinery, cubes, plants, rocks, ornamental sci-fi, text outside screen, neon, heavy reflections or gradients. Screen is a calm clear designed interface, white/light gray with dark typography and tiny muted blue accents, minimal readable labels. Beautiful proportions and believable real hardware. A single realistic graphite tablet in landscape orientation showing a clean clickable wireframe prototype: small sidebar, simple catalog layout, three white product tiles, tiny gray placeholders and a small blue preview button. All hardware visible.",
+      "references": [],
+      "original": "Z:/Users/smoke/.codex/generated_images/01a0ba0f-366c-7831-a716-46acf74a1410/exec-2895db4a-fa7e-4c2c-8a3e-7e5ada1cf4e1.png",
+      "file": "assets/services/mvp.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 40088
+    }
+  ]
+}

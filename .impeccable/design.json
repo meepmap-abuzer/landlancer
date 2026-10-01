@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-30",
+  "generatedAt": "2026-10-01",
   "title": "Design System: Lancer Agency — Compact dark studio",
   "extensions": {
     "assets": [
@@ -22,40 +22,82 @@
       },
       {
         "path": "assets/services/websites.webp",
-        "purpose": "Generated editorial service illustration, not client screenshot; provenance.json and adjacent metadata"
+        "purpose": "Minimal generated device illustration; assets/device-visuals.json records provenance"
       },
       {
         "path": "assets/services/webapps.webp",
-        "purpose": "Generated editorial service illustration, not client screenshot; provenance.json and adjacent metadata"
+        "purpose": "Minimal generated device illustration; assets/device-visuals.json records provenance"
       },
       {
         "path": "assets/services/telegram.webp",
-        "purpose": "Generated editorial service illustration, not client screenshot; provenance.json and adjacent metadata"
+        "purpose": "Minimal generated device illustration; assets/device-visuals.json records provenance"
       },
       {
         "path": "assets/services/crm.webp",
-        "purpose": "Generated editorial service illustration, not client screenshot; provenance.json and adjacent metadata"
+        "purpose": "Minimal generated device illustration; assets/device-visuals.json records provenance"
       },
       {
         "path": "assets/services/automation.webp",
-        "purpose": "Generated editorial service illustration, not client screenshot; provenance.json and adjacent metadata"
+        "purpose": "Minimal generated device illustration; assets/device-visuals.json records provenance"
       },
       {
         "path": "assets/services/mvp.webp",
-        "purpose": "Generated editorial service illustration, not client screenshot; provenance.json and adjacent metadata"
+        "purpose": "Minimal generated device illustration; assets/device-visuals.json records provenance"
+      },
+      {
+        "path": "assets/case-visuals/maverick-activation.webp",
+        "purpose": "Generated real-device visualization based on actual UI references; not an original screenshot"
+      },
+      {
+        "path": "assets/case-visuals/maverick-engagement.webp",
+        "purpose": "Generated real-device visualization based on actual UI references; not an original screenshot"
+      },
+      {
+        "path": "assets/case-visuals/gift-games.webp",
+        "purpose": "Generated real-device visualization based on actual UI references; not an original screenshot"
+      },
+      {
+        "path": "assets/case-visuals/gift-rounds.webp",
+        "purpose": "Generated real-device visualization based on actual UI references; not an original screenshot"
+      },
+      {
+        "path": "assets/case-visuals/loyalty-member.webp",
+        "purpose": "Generated real-device visualization based on actual UI references; not an original screenshot"
+      },
+      {
+        "path": "assets/case-visuals/loyalty-business.webp",
+        "purpose": "Generated real-device visualization based on actual UI references; not an original screenshot"
+      },
+      {
+        "path": "assets/case-visuals/tailcare-home.webp",
+        "purpose": "Generated real-device visualization based on actual UI references; not an original screenshot"
+      },
+      {
+        "path": "assets/case-visuals/tailcare-catalog.webp",
+        "purpose": "Generated real-device visualization based on actual UI references; not an original screenshot"
       }
     ],
     "materials": {
       "header": "rgba(20,20,20,.93); backdrop-filter:blur(14px); border-bottom:1px solid #ffffff10",
-      "cases": "Shared case-editorial.css shell; original screenshots, lightbox and interactive productStage demos retained",
+      "cases": "Text openings, eight generated real-device editorial spreads; original captures and interactive productStage demos retained. Neutral dark image lightbox.",
       "provenance": "Four generated photographic UI-reference covers, approximately 621 KB combined WebP; originals .codex/generated_images; generator model not selectable",
-      "scope": "Homepage studio-home.css, studio-world.css and particle-hero.css; four case shells case-editorial.css"
+      "scope": "Homepage studio-home.css, studio-world.css, particle-hero.css; cases case-editorial.css; services service-editorial.css; shared final overrides interface-polish.css."
     },
     "motion": [
       {
         "purpose": "Photographic covers; disabled under reduced motion.",
         "name": "cover-hover",
         "value": "transform .45s ease; scale(1.025)"
+      },
+      {
+        "name": "editorial-reveal",
+        "value": "850ms translateY(32px) to 0; reduced-motion disabled",
+        "purpose": "Services and case editorial sections; once per visit"
+      },
+      {
+        "name": "service-ascii",
+        "value": "Small ASCII pixel changes every 480ms, only visible and motion allowed",
+        "purpose": "Service-specific decorative motifs"
       }
     ],
     "breakpoints": [

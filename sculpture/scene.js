@@ -21085,7 +21085,7 @@ if (Pi) {
   try {
     e = new id({ alpha: !0, antialias: !0, powerPreference: "high-performance" });
   } catch {
-    Pi.querySelector(".lunar-hint").textContent = "Ваш браузер не поддерживает WebGL.";
+    Pi.querySelector(".lunar-status").textContent = "Ваш браузер не поддерживает WebGL.";
   }
   e && rd(e, i, Pi);
 }
@@ -21124,7 +21124,7 @@ function rd(i, e, t) {
   E.wrapS = E.wrapT = 1e3, E.repeat.set(5, 5);
   const C = new hs(g);
   C.colorSpace = Rt, C.wrapS = C.wrapT = 1e3, C.repeat.set(2, 2);
-  const M = new ur({ color: 12632773, map: C, roughness: 0.95, bumpMap: E, bumpScale: 0.26 }), R = new ur({ color: 3619904, roughness: 1, bumpMap: E, bumpScale: 0.1 }), T = new ri(38, 22, 110, 65);
+  const M = new ur({ color: 12632773, map: C, roughness: 0.95, bumpMap: E, bumpScale: 0.26 }), R = new ur({ color: 3619904, roughness: 1, bumpMap: E, bumpScale: 0.1 }), T = new ri(68, 44, 110, 65);
   T.rotateX(-Math.PI / 2);
   const w = T.attributes.position;
   for (let A = 0; A < w.count; A++) w.setY(A, u(w.getX(A), w.getZ(A)));
@@ -21181,7 +21181,7 @@ diffuseColor.rgb*=mix(.38,1.18,vBladeHeight);`);
   let me = 0, ke = 0;
   for (; me < ae && ke < ae * 8; ) {
     ke++;
-    const A = (f() - 0.5) * 32, ge = (f() - 0.5) * 17;
+    const A = (f() - 0.5) * 48, ge = (f() - 0.5) * 24;
     if (y.some(([I, O, k, , te]) => ((A - I) / k) ** 2 + ((ge - O) / te) ** 2 < 0.9)) continue;
     const Ae = Math.sin(ge * 0.3) * 1.8;
     if (Math.abs(A - Ae) < 0.75 && f() < 0.9) continue;
@@ -21224,6 +21224,6 @@ diffuseColor.rgb*=mix(.38,1.18,vBladeHeight);`);
   }), document.addEventListener("visibilitychange", at), new IntersectionObserver(([A]) => {
     it = A.isIntersecting, at();
   }, { rootMargin: "80px" }).observe(t), new ResizeObserver(lt).observe(e), i.domElement.addEventListener("webglcontextlost", (A) => {
-    A.preventDefault(), cancelAnimationFrame(De), De = 0, t.querySelector(".lunar-hint").textContent = "Графическая сцена приостановлена. Обновите страницу.";
+    A.preventDefault(), cancelAnimationFrame(De), De = 0, t.querySelector(".lunar-status").textContent = "Графическая сцена приостановлена. Обновите страницу.";
   }), t.dataset.sceneReady = "true", lt();
 }

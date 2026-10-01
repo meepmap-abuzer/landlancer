@@ -55,11 +55,11 @@ if (canvas) {
     frame=requestAnimationFrame(tick);
   }
   function wake(){if(!frame&&!paused&&!document.hidden){last=performance.now();frame=requestAnimationFrame(tick);}}
-  function sync(){cancelAnimationFrame(frame);frame=0;document.body.classList.toggle('motion-paused',paused);toggle.textContent=paused?'Включить анимацию':'Пауза анимации';toggle.setAttribute('aria-pressed',String(paused));document.dispatchEvent(new CustomEvent('lancer:motion',{detail:{paused}}));wake();}
+  function sync(){cancelAnimationFrame(frame);frame=0;document.body.classList.toggle('motion-paused',paused);if(toggle){toggle.textContent=paused?'Включить анимацию':'Пауза анимации';toggle.setAttribute('aria-pressed',String(paused));}document.dispatchEvent(new CustomEvent('lancer:motion',{detail:{paused}}));wake();}
   document.addEventListener('pointermove',e=>{if(e.pointerType==='touch')return;pointer.x=e.clientX;pointer.y=e.clientY+scrollY;},{passive:true});
   document.addEventListener('pointerleave',()=>{pointer.x=-1000;pointer.y=-1000;});
   document.addEventListener('scroll',()=>{pointer.x=-1000;collect();draw();},{passive:true});
-  toggle.addEventListener('click',()=>{paused=!paused;sync();});
+  toggle?.addEventListener('click',()=>{paused=!paused;sync();});
   reduced.addEventListener('change',()=>{paused=reduced.matches;sync();});
   document.addEventListener('visibilitychange',sync);
   new ResizeObserver(()=>{if(width!==innerWidth||height!==innerHeight||pageHeight!==document.documentElement.scrollHeight)resize();}).observe(document.body);

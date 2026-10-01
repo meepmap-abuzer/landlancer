@@ -1,0 +1,35 @@
+.service-editorial{background:#141414;color:#eee}
+.service-editorial svg{width:22px;height:22px;flex:none}
+.service-editorial .case-header{position:sticky;top:0;z-index:30;background:#141414ed;backdrop-filter:blur(12px);border-bottom:1px solid #ffffff12;padding:20px 4%;display:flex;align-items:center;gap:30px}
+.service-editorial .case-brand{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:600}
+.service-editorial .case-header nav{display:flex;gap:25px;margin-left:auto;color:#bbb;font-size:13px}
+.service-editorial .service-page{padding:0 0 100px;width:auto;max-width:none;margin:0}
+.service-editorial .wrap,.service-editorial .seo-faq{width:min(1180px,92%);margin-inline:auto}
+.service-editorial .breadcrumbs{padding-top:42px;color:#aaa}
+.service-editorial .service-intro{display:grid;grid-template-columns:1.5fr .5fr;gap:70px;align-items:center;padding:55px 0 95px;margin:0;max-width:none}
+.service-editorial .service-intro h1{font-size:clamp(42px,5.5vw,74px);line-height:1.12;font-weight:500;letter-spacing:-.045em;max-width:18ch;margin:0 0 28px}
+.service-editorial .service-intro p{font-size:18px;line-height:1.75;max-width:58ch;color:#b7b7b7;margin:0 0 32px}
+.service-ascii{font:17px/1.35 ui-monospace,Consolas,monospace;white-space:pre;color:#999;background:none;border:0;padding:0;margin:0;justify-self:center;user-select:none;min-width:20ch}
+.service-editorial .service-context{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start;margin:0;padding:65px 0 95px;border-top:1px solid #ffffff20;background:none;box-shadow:none;border-radius:0}
+.service-editorial h2{font-size:clamp(27px,3vw,38px);line-height:1.2;font-weight:500;letter-spacing:-.035em;margin:0}
+.service-editorial .service-context p{font-size:17px;line-height:1.85;color:#b7b7b7;max-width:56ch;margin:0}
+.service-editorial .service-scope{padding:25px 0 100px;margin:0}
+.service-editorial .service-scope>div{display:block;gap:0;margin-top:38px}
+.service-editorial .service-scope article{display:grid;grid-template-columns:1fr 1fr;gap:70px;background:none;box-shadow:none;border:0;border-top:1px solid #ffffff20;border-radius:0;padding:32px 0;margin:0}
+.service-editorial .service-scope h3{font-size:23px;font-weight:500;line-height:1.4;margin:0}
+.service-editorial .service-scope p{font-size:16px;line-height:1.8;color:#b7b7b7;margin:0;max-width:54ch}
+.service-editorial .service-examples{padding:20px 0 100px;margin:0}
+.service-editorial .service-examples>div,.service-editorial .service-related>div{margin-top:35px;display:flex;flex-direction:column;gap:0}
+.service-editorial .service-examples a,.service-editorial .service-related a{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:26px 0;border:0;border-top:1px solid #ffffff20;border-radius:0;background:none;font-size:21px;color:#eee;margin:0}
+.service-editorial .round-arrow{display:grid;place-items:center;border:0;background:#282828;color:#eee;width:40px;height:40px;border-radius:50%;transition:transform .35s}
+.service-editorial .service-examples a:hover .round-arrow,.service-editorial .service-related a:hover .round-arrow{transform:translate(3px,-3px)}
+.service-editorial .seo-faq{padding:25px 0 100px;display:grid;grid-template-columns:1fr 1.5fr;gap:75px}
+.service-editorial .faq-intro p{font-size:16px;line-height:1.75;color:#aaa;max-width:30ch}
+.service-editorial .faq-answers{display:flex;flex-direction:column;gap:0}
+.service-editorial .faq-answers details{background:none;border:0;border-bottom:1px solid #ffffff20;border-radius:0;box-shadow:none;margin:0}
+.service-editorial .faq-answers details:first-child{border-top:1px solid #ffffff20}
+.service-editorial .faq-answers summary{padding:26px 0;font-size:16px;color:#eee}
+.service-editorial .faq-answers details p{font-size:16px;line-height:1.8;color:#aaa;padding:0 24px 25px 0}
+.service-editorial .service-related{padding:0;margin-inline:auto}
+.service-editorial :is(a,button,summary):focus-visible{outline:2px solid #eee;outline-offset:5px}
+@media(max-width:750px){.service-editorial .case-header{padding:16px 4%;gap:16px}.service-editorial .case-brand{font-size:17px}.service-editorial .case-header nav{gap:16px}.service-editorial .case-header>.button{display:none}.service-editorial .breadcrumbs{padding-top:28px}.service-editorial .service-intro{grid-template-columns:1fr;gap:35px;padding:40px 0 65px}.service-ascii{justify-self:start;font-size:12px;margin-left:-4ch}.service-editorial .service-intro p{font-size:16px}.service-editorial .service-context,.service-editorial .service-scope article{grid-template-columns:1fr;gap:24px}.service-editorial .service-context{padding:38px 0 65px}.service-editorial .service-context p{font-size:16px}.service-editorial .service-scope{padding:10px 0 65px}.service-editorial .service-scope article{padding:28px 0;gap:12px}.service-editorial .service-scope h3{font-size:21px}.service-editorial .service-examples{padding:0 0 65px}.service-editorial .seo-faq{grid-template-columns:1fr;gap:36px;padding:0 0 65px}.service-editorial .service-examples a,.service-editorial .service-related a{font-size:18px;padding:22px 0}}

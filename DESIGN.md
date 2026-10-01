@@ -60,7 +60,7 @@ components:
 
 **Creative North Star: "Compact dark studio."**
 
-The homepage uses a interactive particle field scene with text on either side, four photographic project covers and a sequence of illustrated services, industries, process, FAQ and contact. Near-black and charcoal surfaces provide the frame; actual product stories remain the purpose. The CRM hero, workflow scene, long roadmap and CSS devices are superseded on this surface.
+The homepage uses a interactive particle field scene with text on either side, four photographic project covers and a sequence of illustrated services, process, FAQ and contact. Near-black and charcoal surfaces provide the frame; actual product stories remain the purpose. The CRM hero, workflow scene, long roadmap and CSS devices are superseded on this surface.
 
 Homepage styling is scoped through studio-home.css, studio-world.css and the hero-specific particle-hero.css. Four case pages share case-editorial.css for their dark editorial shell; original screenshots and interactive productStage demos retain their product-specific content and behavior. Service routes remain intact.
 
@@ -120,15 +120,15 @@ Homepage primary CTAs are white with dark text, at least 46px high. Header navig
 
 ### particle hero and footer
 
-The homepage has a document-wide Canvas dot field: dense in the hero, sparse below, with gentle autonomous drift, cursor repulsion and spring return. A full-width authored Three.js lunar garden replaces the ASCII hero orb. Procedural grey rocks, terrain, gravel and instanced silver grass provide real depth; the grass has shader wind and bends around the cursor. One small ASCII cube remains in the process section. Pause and reduced motion stop animation; the garden stops rendering offscreen and all animation stops in hidden tabs. No Spline embed, remote scene or paid dependency remains. Desktop hero text uses two columns and stacks below 700px.
+The homepage has a document-wide Canvas dot field: dense in the hero, sparse below, with gentle autonomous drift, cursor repulsion and spring return. A full-width authored Three.js lunar garden replaces the ASCII hero orb. Procedural grey rocks, terrain, gravel and instanced silver grass provide real depth; the grass has shader wind and bends around the cursor. One small ASCII cube remains in the process section. Reduced motion stops animation; the garden stops rendering offscreen and all animation stops in hidden tabs. No Spline embed, remote scene or paid dependency remains. Desktop hero text uses two columns and stacks below 700px.
 
-The homepage industry carousel is removed. Footer navigation uses four columns desktop and two mobile, with the dotted LANCER wordmark and abstract sculpture treatment. Preserve pause and reduced-motion behavior.
+The homepage industry carousel is removed. Footer navigation uses four columns desktop and two mobile, with the dotted LANCER wordmark and abstract sculpture treatment. Preserve reduced-motion behavior; visible scene controls were removed at the user’s request.
 
 ### Editorial case shell
 
 case-editorial.css applies #141414 ground and #222 surfaces to all four cases. Content width is min(1220px,92%); stories alternate .85fr / 1.3fr columns with 65px gaps and stack below 800px. The 24px-radius cover has a 620px maximum height. The readable sticky header removes the old notch. Capability cards have 19px corners and four columns, two below 800px and one below 540px.
 
-Actual screen captures appear in alternating stories and open the existing lightbox. Only retained productStage sections are interactive demos. Architecture disclosures, technology details, related projects and the footer complete each case. Preserve simulation boundaries and never call static screenshots live interfaces.
+Generated real-device visualizations appear in alternating stories and open the dark image lightbox. Original captures remain available as interface evidence. Only retained productStage sections are interactive demos. Architecture disclosures, technology details, related projects and the footer complete each case. Preserve simulation boundaries and never call static screenshots live interfaces.
 
 Current evidence: .impeccable/review/lunar-desktop.png and lunar-mobile.png. Desktop and mobile viewport, cursor response and pause checked locally; performance is not benchmarked across physical devices.
 
@@ -139,3 +139,13 @@ Current evidence: .impeccable/review/lunar-desktop.png and lunar-mobile.png. Des
 - **Do** distinguish generated photographic presentations from original product captures.
 - **Don't** restore the CRM hero, workflow scene, long roadmap or CSS device constructions on the homepage.
 - **Don't** invent generator model names, business outcomes or performance claims.
+
+## Editorial polish — October 1, 2026
+
+The shared final layer is interface-polish.css. FAQ actions use #f4f4f4 with #141414 text (including child spans); image dialogs use #222 and a neutral backdrop. Service cards contain single-device photographs, without ornamental props or CSS device frames. New service pages use service-editorial.css with 65–100px section spacing, typography-led scope rows and one small service-specific ASCII drawing. Mobile spacing is 38–65px.
+
+Case openings are text only. Generated real-device spreads replace framed screenshot stories, grouping related descriptions and preserving every feature. Stories use .8fr / 1.35fr columns, a 55px gap, 65–90px vertical spacing, and stack below 750px. Eight assets live in assets/case-visuals; all generation records are in assets/device-visuals.json. Exact screens remain in original captures and retained demonstrations.
+
+Motion: 850ms reveal at most once, gentle device scaling on hover, 320ms disclosure-height transitions, ASCII pixel changes at 480ms intervals. Reduced motion cancels continuous and entrance effects. Lunar terrain spans beyond the camera frame, its canvas blends into the page at the sides/bottom, and no instruction or pause caption appears.
+
+Current browser evidence: .impeccable/review/case-polished.png, services-polished.png, service-covers-polished.png, service-mobile-polished.png and home-mobile-polished.png. Desktop and 390px mobile layouts, FAQ opening, image enlargement, scene readiness and console errors were checked; no cross-device frame-rate benchmark is claimed.

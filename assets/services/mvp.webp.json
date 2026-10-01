@@ -1,4 +1,10 @@
 {
-  "prompt": "Create a premium editorial product photograph for one website service card. Landscape 3:2. An exploded-view physical prototype kit: precise white ceramic, charcoal aluminum and muted terracotta modules assembling into one compact digital device, tiny screws and alignment pins, beautiful industrial design model on a slate pedestal. Background and floor exactly neutral dark charcoal #222222, no bright gradients. Main composition in center lower two-thirds, all objects contained with generous margin, top 20% mostly empty for live HTML heading. Beautiful realistic materials, controlled large softbox highlights, tactile detail, confident art direction, physically plausible. No large text, no title, no watermarks, no decorative floating UI panels, no nature, no neon. Restrained boutique design studio quality. This is one coherent image, not a collage.",
-  "createdAt": "2026-09-30T13:52:19.397Z"
+  "id": "service-mvp",
+  "prompt": "Create a minimalist premium photographic illustration for a digital studio service card. Landscape 3:2, matte uniform charcoal #222 background. ONE physically realistic modern graphite device, restrained soft lighting, small contact shadow, very few elements. Device is in the LOWER 65 percent of the composition, leaving the upper 35 percent empty charcoal for the website title overlay. Complete hardware and all corners visible within frame. Slightly angled, not dramatically tilted. No props, furniture, glass ribbons, pedestals, exploded components, machinery, cubes, plants, rocks, ornamental sci-fi, text outside screen, neon, heavy reflections or gradients. Screen is a calm clear designed interface, white/light gray with dark typography and tiny muted blue accents, minimal readable labels. Beautiful proportions and believable real hardware. A single realistic graphite tablet in landscape orientation showing a clean clickable wireframe prototype: small sidebar, simple catalog layout, three white product tiles, tiny gray placeholders and a small blue preview button. All hardware visible.",
+  "references": [],
+  "original": "Z:/Users/smoke/.codex/generated_images/01a0ba0f-366c-7831-a716-46acf74a1410/exec-2895db4a-fa7e-4c2c-8a3e-7e5ada1cf4e1.png",
+  "file": "assets/services/mvp.webp",
+  "width": 1536,
+  "height": 1024,
+  "bytes": 40088
 }
