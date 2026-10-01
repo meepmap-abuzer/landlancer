@@ -1,4 +1,6 @@
 import * as THREE from 'three';
+import {createSilverTree} from './silver-tree.mjs';
+import {RoomEnvironment} from 'three/addons/environments/RoomEnvironment.js';
 
 const stage = document.querySelector('.lunar-stage');
 if (stage) {
@@ -20,9 +22,12 @@ function createGarden(renderer,host,stage){
  renderer.shadowMap.type=THREE.PCFShadowMap;
  host.append(renderer.domElement);
  const scene=new THREE.Scene();
+ const studio=new RoomEnvironment(),environment=new THREE.PMREMGenerator(renderer);
+ scene.environment=environment.fromScene(studio,.04).texture;scene.environmentIntensity=.6;
+ studio.dispose();environment.dispose();
  scene.fog=new THREE.FogExp2(0x141414,.032);
  const camera=new THREE.PerspectiveCamera(34,1,.1,100);
- const aim=new THREE.Vector3(0,.5,0);
+ const aim=new THREE.Vector3(0,1.25,0);
  camera.position.set(0,5.6,17);camera.lookAt(aim);
  const hemi=new THREE.HemisphereLight(0xe3ebf4,0x161819,1.7);scene.add(hemi);
  const sun=new THREE.DirectionalLight(0xf1f4f9,4.3);sun.position.set(-7,10,2);sun.castShadow=true;
@@ -52,7 +57,7 @@ function createGarden(renderer,host,stage){
  for(let i=0;i<gp.count;i++)gp.setY(i,heightAt(gp.getX(i),gp.getZ(i)));
  groundGeo.computeVertexNormals();
  const ground=new THREE.Mesh(groundGeo,groundMat);ground.receiveShadow=true;scene.add(ground);
- const rocks=[[-5.5,-1.5,2.1,1.3,1.5],[-3.4,-2,1.3,.75,1.1],[5,-2,1.8,2.8,1.45],[7.1,-1,1.1,1.75,1.1],[3.4,-.4,1.2,.8,1.15],[-8,3,.7,.4,.8]];
+ const rocks=[[-5.5,-1.5,2.1,1.3,1.5],[-3.4,-2,1.3,.75,1.1],[6,-1,1.4,1.1,1.2],[3.4,-.4,1.2,.8,1.15],[-8,3,.7,.4,.8]];
  function rockGeometry(){
   const g=new THREE.SphereGeometry(1,48,32),p=g.attributes.position;
   const offset=rand()*12;
@@ -114,6 +119,7 @@ function createGarden(renderer,host,stage){
   grass.setColorAt(placed,new THREE.Color().setScalar(.6+rand()*.4));placed++;
  }
  grass.count=placed;grass.instanceMatrix.needsUpdate=true;grass.instanceColor.needsUpdate=true;grass.receiveShadow=true;grass.frustumCulled=false;scene.add(grass);
+ const silverTree=createSilverTree({scene,rand,heightAt,mobile});
  const pointer=new THREE.Vector2(),raycaster=new THREE.Raycaster();
  const target=new THREE.Vector3(1000,0,1000),touch=uniforms.uTouch.value;
  const plane=new THREE.Plane(new THREE.Vector3(0,1,0),0);
@@ -121,18 +127,23 @@ function createGarden(renderer,host,stage){
  const reduced=matchMedia('(prefers-reduced-motion: reduce)');let paused=document.body.classList.contains('motion-paused')||reduced.matches;
  function resize(){
   const w=host.clientWidth,h=host.clientHeight;renderer.setSize(w,h,false);camera.aspect=w/h;
-  camera.position.set(0,w<600?9.5:5.6,w<600?23:17);camera.lookAt(aim);camera.updateProjectionMatrix();render();
+  const compact=w<700;
+  silverTree.tree.scale.setScalar(compact ? .95 : 1.24);
+  silverTree.tree.position.x=compact?2.8:w<1050?4.8:6.5;
+  silverTree.tree.position.y=heightAt(silverTree.tree.position.x,-3.8);
+  camera.position.set(0,compact?10.5:7.1,compact?27:22);camera.lookAt(aim);camera.updateProjectionMatrix();render();
  }
  function render(){renderer.render(scene,camera);}
  function tick(now){
   frame=0;if(!visible||paused||document.hidden)return;
   const dt=Math.min((now-last)/1000||.016,.05);last=now;time+=dt;
   uniforms.uTime.value=time;
+  silverTree.update(time);
   if(active)touch.lerp(target,1-Math.exp(-dt*9));else touch.lerp(away,1-Math.exp(-dt*2));
   render();frame=requestAnimationFrame(tick);
  }
  function wake(){if(!frame&&visible&&!paused&&!document.hidden){last=performance.now();frame=requestAnimationFrame(tick);}}
- function sync(){cancelAnimationFrame(frame);frame=0;render();wake();}
+ function sync(){cancelAnimationFrame(frame);frame=0;silverTree.setMotion(!paused);render();wake();}
  stage.addEventListener('pointermove',e=>{
   if(e.pointerType==='touch')return;
   const r=host.getBoundingClientRect();pointer.set((e.clientX-r.left)/r.width*2-1,-(e.clientY-r.top)/r.height*2+1);

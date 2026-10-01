@@ -1,3 +1,4 @@
+import {setupDisclosures} from '/disclosures.mjs?v=1';
 const reduced = matchMedia('(prefers-reduced-motion: reduce)');
 let paused = false;
 const pause = document.querySelector('.garden-motion');
@@ -20,9 +21,10 @@ syncMotion();
 const visible = new IntersectionObserver(entries => {
   for(const {target,isIntersecting} of entries) target.classList.toggle('is-visible',isIntersecting && !document.hidden);
 }, {threshold:.05});
-[document.querySelector('.end-art')].filter(Boolean).forEach(element => visible.observe(element));
+const animatedSurfaces=[document.querySelector('.end-art'),...document.querySelectorAll('.service-schematic')].filter(Boolean);
+animatedSurfaces.forEach(element => visible.observe(element));
 document.addEventListener('visibilitychange', () => {
-  [document.querySelector('.end-art')].filter(Boolean).forEach(element => {
+  animatedSurfaces.forEach(element => {
     const rect = element.getBoundingClientRect();
     element.classList.toggle('is-visible',!document.hidden && rect.bottom>0 && rect.top<innerHeight);
   });
@@ -35,22 +37,8 @@ const reveal = new IntersectionObserver(entries => {
     reveal.unobserve(target);
   });
 },{threshold:.08});
-document.querySelectorAll('.case-opening-copy,.case-story,.case-capability-grid,.case-related,.studio-project,.service-tile,.industry-card,.new-section-heading,.studio-process,.seo-faq,.end-contact,.end-columns,.service-intro,.service-context,.service-scope article,.service-examples,.service-related').forEach(element => reveal.observe(element));
-// Native details remain usable without JavaScript; height settles to auto after motion.
-document.querySelectorAll('.faq-answers details,.case-details details').forEach(details=>{
- const summary=details.querySelector('summary');let active;
- summary.addEventListener('click',event=>{
-  if(!allowed())return;
-  event.preventDefault();if(active)return;
-  const opening=!details.open,from=details.offsetHeight;
-  if(opening)details.open=true;
-  const to=opening?details.offsetHeight:summary.offsetHeight;
-  details.style.overflow='hidden';
-  active=animate(details,[{height:`${from}px`},{height:`${to}px`}],{duration:320,easing:'cubic-bezier(.22,1,.36,1)'});
-  active.finished.catch(()=>{}).finally(()=>{if(!opening)details.open=false;details.style.overflow='';active=null;});
-  if(opening){const p=details.querySelector('p');if(p)animate(p,[{opacity:0,transform:'translateY(8px)'},{opacity:1,transform:'translateY(0)'}],{duration:380,easing:'ease-out'});}
- });
-});
+document.querySelectorAll('.case-opening-copy,.case-story,.case-capability-grid,.case-related,.studio-project,.service-tile,.industry-card,.new-section-heading,.studio-process,.seo-faq,.end-contact,.end-columns,.service-roadmap,.service-schematic,.service-intro,.service-context,.service-scope article,.service-examples,.service-related').forEach(element => reveal.observe(element));
+setupDisclosures({reduced,allowed});
 // A few moving ASCII pixels, only while the small motif is in view.
 const motifs=[...document.querySelectorAll('[data-motif]')].map(element=>({element,original:element.textContent,visible:false}));
 let motifFrame=0,motifLast=0,motifStep=0;
@@ -71,4 +59,4 @@ controls.forEach(button => button.addEventListener('click', () => track.scrollBy
 track?.addEventListener('scroll',updateControls,{passive:true});
 if(track){new ResizeObserver(updateControls).observe(track);updateControls();}
 
-if(document.querySelector('.lunar-stage')) import('/sculpture/scene.js?v=lunar-2').catch(()=>{document.querySelector('.lunar-status').textContent='Не удалось загрузить сад. Обновите страницу.'});
+if(document.querySelector('.lunar-stage')) import('/sculpture/scene.js?v=lunar-4').catch(()=>{document.querySelector('.lunar-status').textContent='Не удалось загрузить сад. Обновите страницу.'});

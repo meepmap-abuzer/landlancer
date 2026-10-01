@@ -120,7 +120,7 @@ Homepage primary CTAs are white with dark text, at least 46px high. Header navig
 
 ### particle hero and footer
 
-The homepage has a document-wide Canvas dot field: dense in the hero, sparse below, with gentle autonomous drift, cursor repulsion and spring return. A full-width authored Three.js lunar garden replaces the ASCII hero orb. Procedural grey rocks, terrain, gravel and instanced silver grass provide real depth; the grass has shader wind and bends around the cursor. One small ASCII cube remains in the process section. Reduced motion stops animation; the garden stops rendering offscreen and all animation stops in hidden tabs. No Spline embed, remote scene or paid dependency remains. Desktop hero text uses two columns and stacks below 700px.
+The homepage has a document-wide Canvas dot field: dense in the hero, sparse below, with gentle autonomous drift, cursor repulsion and spring return. A full-width authored Three.js lunar garden replaces the ASCII hero orb. Procedural grey rocks, terrain, gravel and instanced silver grass provide real depth; the grass has shader wind and bends around the cursor. One small ASCII cube remains in the process section. Reduced motion stops animation; the garden stops rendering offscreen and all animation stops in hidden tabs. No Spline embed, remote scene or paid dependency remains. Desktop description and actions sit under the left headline, with a silver tree on the right; text and garden stack below 700px.
 
 The homepage industry carousel is removed. Footer navigation uses four columns desktop and two mobile, with the dotted LANCER wordmark and abstract sculpture treatment. Preserve reduced-motion behavior; visible scene controls were removed at the user’s request.
 
@@ -146,6 +146,16 @@ The shared final layer is interface-polish.css. FAQ actions use #f4f4f4 with #14
 
 Case openings are text only. Generated real-device spreads replace framed screenshot stories, grouping related descriptions and preserving every feature. Stories use .8fr / 1.35fr columns, a 55px gap, 65–90px vertical spacing, and stack below 750px. Eight assets live in assets/case-visuals; all generation records are in assets/device-visuals.json. Exact screens remain in original captures and retained demonstrations.
 
-Motion: 850ms reveal at most once, gentle device scaling on hover, 320ms disclosure-height transitions, ASCII pixel changes at 480ms intervals. Reduced motion cancels continuous and entrance effects. Lunar terrain spans beyond the camera frame, its canvas blends into the page at the sides/bottom, and no instruction or pause caption appears.
+Motion: 850ms reveal at most once, gentle device scaling on hover, 440ms interruptible disclosure-height transitions, ASCII pixel changes at 480ms intervals. Reduced motion cancels continuous and entrance effects. Lunar terrain spans beyond the camera frame, its canvas blends into the page at the sides/bottom, and no instruction or pause caption appears.
 
 Current browser evidence: .impeccable/review/case-polished.png, services-polished.png, service-covers-polished.png, service-mobile-polished.png and home-mobile-polished.png. Desktop and 390px mobile layouts, FAQ opening, image enlargement, scene readiness and console errors were checked; no cross-device frame-rate benchmark is claimed.
+
+## Silver tree and service diagrams — October 1, 2026
+
+The homepage has a document-wide Canvas dot field: dense in the hero, sparse below, with gentle autonomous drift, cursor repulsion and spring return. Its full-width authored Three.js lunar garden contains grey rocks, terrain, gravel and instanced silver grass, with shader wind and cursor bending. A volumetric silver tree stands on the right, with tapered curved branches, instanced curved leaves, subtle sway and a few slowly falling leaves. Local RoomEnvironment lighting supplies neutral metallic reflections. The description and actions sit under the left headline. On screens below 700px, text and garden stack. Reduced motion stops animation; rendering pauses offscreen and in hidden tabs. No Spline embed, remote scene or paid dependency remains.
+
+The native process, FAQ and case disclosures use disclosures.mjs: a 440ms CSS height transition that reverses from the current rendered height when clicked again. Native summary keyboard behavior and the no-JavaScript fallback remain. Reduced motion and hidden tabs settle immediately.
+
+All four service pages now pair their introduction with a relevant three-node flow diagram and a small ASCII motif. Four horizontal roadmap stages show a visible deliverable at each step, with no invented duration or performance metric. Mobile stages scroll within the page. Sections have greater separation. Homepage service illustrations fade softly at their edges into the #222 card surface.
+
+Local evidence: .impeccable/review/silver-tree-desktop.png, silver-tree-mobile.png, blended-services.png, service-flow-desktop.png and service-roadmap-desktop.png. Desktop and 390px layouts, scene readiness, console errors, interruptible opening and closing, and mobile roadmap overflow were checked. No physical-device performance benchmark is claimed.

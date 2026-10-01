@@ -11,9 +11,14 @@
 :is(.studio-home,.service-editorial,.case-editorial) .button svg{transition:transform .3s}
 :is(.studio-home,.service-editorial,.case-editorial) .button:hover svg{transform:translate(3px,-3px)}
 .studio-home .service-tile{min-height:350px;padding:25px 24px 0}
-.studio-home .service-illustration{inset:92px 0 0;overflow:hidden}
-.studio-home .service-illustration img{object-fit:contain;object-position:center bottom;mask-image:none;transform:scale(1.05);transition:transform .75s cubic-bezier(.16,1,.3,1)}
-.studio-home .service-tile:hover .service-illustration img,.studio-home .service-tile:focus-visible .service-illustration img{transform:translateY(-6px) scale(1.075)}
+.studio-home .service-illustration{inset:68px 0 0;overflow:hidden;mask-image:linear-gradient(to right,transparent,#000 5%,#000 95%,transparent),linear-gradient(to bottom,transparent,#000 26%,#000 91%,transparent);mask-composite:intersect}
+.studio-home .service-illustration img{object-fit:cover;object-position:center bottom;mask-image:none;transform:scale(1);transition:transform .75s cubic-bezier(.16,1,.3,1)}
+.studio-home .service-tile:hover,.studio-home .service-tile:focus-visible{background:#222}
+.studio-home .service-tile:hover .service-illustration img,.studio-home .service-tile:focus-visible .service-illustration img{transform:translateY(-4px) scale(1.035)}
+details[data-disclosure-state]{transition:height 440ms cubic-bezier(.22,1,.36,1)}
+details[data-disclosure-state] :is(.process-content,details>p){transition:opacity 220ms ease,transform 280ms ease}
+details[data-disclosure-state=closing]>.process-content,details[data-disclosure-state=closing]>p{opacity:0;transform:translateY(-4px)}
+.studio-home .process-list details[data-disclosure-state=closing] .disclosure{transform:rotate(0)}
 .case-editorial .case-opening{padding-bottom:20px;border-bottom:1px solid #ffffff18}
 .case-editorial .case-story-intro{padding:65px 0 20px}
 .case-visual-note{color:#999;font-size:12px;line-height:1.7;max-width:60ch;margin:0 0 42px}

@@ -1,13 +1,14 @@
 import {head,nav,footer,cta,arrow,icon} from './agency-shared.mjs';
 import {studioFooter} from './studio-sections.mjs';
-import {asciiMotif} from './ascii-motif.mjs';
+import {serviceDiagram,serviceRoadmap} from './service-visuals.mjs';
 import {services} from './seo-data.mjs';
 import {breadcrumbs,faqBlock} from './seo.mjs';
 export function servicePage(s){const path=`/services/${s.slug}/`;return head(s.title,s.description,path).replace('class="theme-blue"','class="theme-blue service-editorial"')+`
 <header class="case-header"><a class="case-brand" href="/">${icon('layers')} Lancer Agency</a><nav aria-label="Основная навигация"><a href="/#works">Проекты</a><a href="/#services">Услуги</a></nav>${cta()}</header>
 <main class="service-page" id="main"><div class="wrap">${breadcrumbs(path,s.name)}
-<section class="service-intro"><div><h1>${s.title}</h1><p>${s.intro}</p>${cta('Обсудить задачу')}</div>${asciiMotif(s.slug)}</section>
+<section class="service-intro"><div><h1>${s.title}</h1><p>${s.intro}</p>${cta('Обсудить задачу')}</div>${serviceDiagram(s.slug)}</section>
 <section class="service-context"><h2>${s.question}</h2><p>${s.answer}</p></section>
+${serviceRoadmap(s.slug)}
 <section class="service-scope" aria-labelledby="scope-title"><h2 id="scope-title">Что входит в работу</h2><div>${s.items.map(([title,text])=>`<article><h3>${title}</h3><p>${text}</p></article>`).join('')}</div></section>
 <section class="service-context"><h2>Что будет на выходе</h2><p>${s.result}</p></section>
 <section class="service-context"><h2>От чего зависят сроки и стоимость</h2><p>${s.scope}</p></section>
