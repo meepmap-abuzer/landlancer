@@ -2,15 +2,15 @@
 
 Russian agency portfolio for landlancer.ru. Lancer builds websites, web services, Telegram Mini Apps, CRM and administration tools, AI integrations and bounded MVPs for founders and business teams. Primary actions open https://t.me/LancerManager.
 
-## Current identity and homepage — October 1, 2026
+## Current identity and homepage — October 2, 2026
 
-The user delegated replacement of the incumbent identity and asked for compact horizontal proportions, little text and a result distinct from the supplied Atoms reference. The active identity is **Model table**: graphite, pearl, warm gray and restrained copper; self-hosted Manrope; flat ruled information; tight actions; photographic work without outer cards. DESIGN.md and .impeccable/design.json describe the implemented system.
+The user explicitly rejected the Model table identity and pinned their ТИШЕ site from “Создай сайт в стиле Green Rock”, including its frosted matte glass atmosphere. The active identity is **Frosted studio**: olive charcoal, ivory and sage; self-hosted Manrope; an architectural studio illustration; rounded media and image-backed tinted glass. This approved replacement supersedes the old identity. DESIGN.md and .impeccable/design.json record the shipped visual system.
 
-The homepage sequence is a compact offer beside an authored reflective three-layer Lancer object, four actual project covers, six service rows with supplied starting prices, four accessible production tabs, native FAQ and a direct Telegram close. Desktop has a 64px header and horizontal hero with a 470px minimum. Mobile stacks offer and object, then work; process tabs become 2×2 below 500px and their panel is sized to actual content. Detailed scope belongs on service and case pages.
+The homepage sequence is a bounded full-width studio scene with a short left offer, a small right 12К case panel and floating capsule navigation; four equal project covers in a 2×2 desktop grid; six equal illustrated service cards with supplied starting prices; four accessible production tabs; native FAQ; and an image-backed Telegram close. The hero is about 620px in the reviewed 1265px desktop viewport and 690px at wide sizes, with a source height clamp from 580px to 690px. Narrow mobile uses 710px. Navigation is in normal flow on inner pages. Mobile projects and services become single-column; process tabs become 2×2 below 500px and their panel fits actual content. Detailed scope belongs on service and case pages.
 
 The four production stages are task, interface, development and launch. Each has a short description and observable deliverable. Tabs provide keyboard navigation and a labelled panel. No duration, task-status simulation or guarantee is invented.
 
-This composition supersedes the garden/tree hero, global particles, illustrated service cards, five process disclosures, pill actions, four-project desktop row and dotted footer. Historical implementations, old review captures and the concept lab are separate artifacts rather than prescriptions for the current Lancer identity. Utility privacy/404 pages and historical concept pages retain their legacy shells; the new identity covers home, services and case editorial pages.
+The current scene replaces the reflective home object, garden/tree hero and global particles. Old implementations, review captures, conditional object code and the concept lab remain historical artifacts. Utility privacy/404 pages and historical concept pages keep separate legacy shells; the Frosted studio identity covers home, services and case editorial pages. This was a code-led adaptation of the pinned rendered reference, with no approved full comp.
 
 ## Portfolio evidence and demonstrations
 
@@ -19,17 +19,17 @@ This composition supersedes the garden/tree hero, global particles, illustrated 
 - **TailCare:** pet listings, search, community, volunteer/organization information and Telegram publishing/moderation.
 - **Gift Roulette:** four game interfaces, participant profile and Telegram administration.
 
-Homepage covers link to four cases. Each starts with text, shows two alternating generated device spreads, retains a functional product demo in its original styling, and explains capabilities, architecture, technology and related work.
+Homepage covers link to four cases. Each uses a text-led opening within the shared rounded shell, shows two alternating generated device spreads, retains a functional product demo in its original styling, and explains capabilities, architecture, technology and related work.
 
-Original product captures and reused source components provide exact interface/behavior evidence. Generated photographic covers and device spreads are interface visualizations, not documentary photographs or guaranteed pixel-identical captures. Do not assert a generator model that was not selectable.
+Original product captures and reused source components provide exact interface/behavior evidence. Generated photographic covers and device spreads are interface visualizations, not documentary photographs or guaranteed pixel-identical captures. The generated architectural studio scene is a fictional decorative illustration, not the agency’s actual office. Do not assert a generator model that was not selectable.
 
 DEMOS.md records source reuse and simulation boundaries. Visitors can explore local Mines/case/Crash/Upgrade fragments, Maverick prize strip/profile, TailCare filters/favorites, and 12К card/QR/local bonus/Stack. These demos do not authenticate production accounts, issue real prizes or loyalty points, make payments, or reproduce production server odds. Persistence/reset follows each actual demo; dated homepage-exhibit and universal reload-reset wording in DEMOS.md does not override current case-only composition or runtime.
 
 ## Service catalog and bounded prices
 
-/services/ links websites, web-apps, telegram-mini-apps, crm, automation and mvp. The directory and homepage state supplied starting budgets. Detailed pages present offer/facts beside a functional example diagram, audience situations, six flat included-work rows, real cases, four horizontal stages, handover, bounded prices, a related service and native FAQ with a small ASCII companion.
+/services/ links websites, web-apps, telegram-mini-apps, crm, automation and mvp. The directory and homepage use six equal illustrated cards with supplied starting budgets. Detailed pages present offer/facts beside a service illustration, concise audience disclosures, a separate functional example diagram, six included-work cards, real cases, four horizontal stages, a handover disclosure, bounded price rows, a related service and native FAQ with a small ASCII companion.
 
-Heroes use functional diagrams rather than overlapping service photographs. Related work uses existing portfolio covers. Diagrams represent example structure, statuses and success/error paths, without customer measurements. Mobile roadmaps scroll within a focusable track.
+Heroes use generated service-interface illustrations; the practical diagrams have their own frosted section below the hero. Related work uses existing portfolio covers. Diagrams represent example structure, statuses and success/error paths, without customer measurements. Mobile roadmaps scroll within a focusable track.
 
 | Service | Supplied starting budget | Bounded starting scope |
 | --- | ---: | --- |
@@ -52,26 +52,30 @@ Four automation examples are explicitly possible scenarios: document fields with
 
 ## Rendering, motion and accessibility
 
-The site emits static HTML with useful content, SEO metadata, canonical URLs, structured data, links and image markup before JavaScript. JavaScript enhances tabs, disclosures, hero object, image dialogs and locally mounted demos.
+The site emits static HTML with useful content, SEO metadata, canonical URLs, structured data, links and image markup before JavaScript. JavaScript enhances tabs, native disclosures, one-shot scene/panel entrances, case image dialogs and locally mounted demos.
 
-The authored Three.js object has one 950ms assembly, damped pointer separation/tilt and tiny drift. Rendering pauses offscreen and in hidden tabs. Reduced motion uses a complete static WebGL pose when supported; inline layer SVG is the loading/failure fallback. Local environment lighting and existing dependencies require no remote scene or paid embed. The current shell has no global particle field or recurring whole-section opacity entrance.
+The homepage uses the locally hosted studio WebP, not a continuously rendered WebGL object. The image has one 1700ms scale/blur settle; offer and case-preview settles take 900ms and 1100ms. Projects, service cards, diagrams and case stories have a visible-default one-shot entrance. Hero content and proof do not wait for a hidden reveal. Hover responses use restrained transforms. Reduced motion skips JavaScript entrances, finishes active ones and removes CSS animations/transitions. Historical object loading remains conditional on a brand-object element that the current homepage does not emit; no continuous homepage scene is mounted.
 
-FAQ and case architecture use native details/summary and authored two-stroke plus/minus indicators. Enhanced opening/closing uses a 440ms height transition and can reverse from current height; reduced motion and hidden tabs settle immediately. The first service FAQ starts open. Focus, native scrolling and touch panning remain accessible. Image dialogs assign src/alt/caption before opening and return focus on close.
+FAQ, audience, handover and case architecture use native details/summary and authored two-stroke plus/minus indicators. Enhanced opening/closing uses a 440ms height transition and can reverse from current height; reduced motion and hidden tabs settle immediately. The first service FAQ starts open. Focus uses sage outlines; native scrolling and touch panning remain accessible. Case image dialogs assign src/alt/caption before opening and return focus on close. Small ASCII motifs update at 700ms only while visible in an active tab and with motion allowed.
 
-Static images retain real src, alt, width and height, async decoding, native lazy loading and responsive WebP candidates. A nonblocking progress line and local indicators support pending assets. Hero import waits for viewport intersection and idle scheduling; demos mount near the viewport. No blocking overlay or simulated percentage hides content.
+Matte panels use tint, light borders and 22px backdrop blur, with an opaque fallback on the shared frost/navigation/project-caption/process-panel selectors when backdrop filtering is unavailable. Service artwork is inset to 86% width and 65.4% height, with intersecting top/side masks that blend it into the card matte field while preserving readable device scale.
+
+Static images retain real src, alt, width and height, async decoding, native lazy loading and responsive WebP candidates. The decorative hero is eager and high priority, with full-width and 960px candidates. A nonblocking progress line and local indicators support pending assets; demos mount near the viewport. No blocking overlay or simulated percentage hides content.
 
 ## Assets and provenance
 
-This redesign reused four existing cover rasters and eight existing case-device visualizations, generated no new raster and introduced no new dependency. Six older service illustrations remain historical assets rather than active service-hero presentations.
+This replacement adds one generated studio scene and its 960px WebP derivative, reuses four existing cover rasters, six existing service illustrations and eight existing case-device visualizations, and introduces no new dependency. The service illustrations are active on the homepage, directory and individual service heroes.
 
-assets/device-visuals.json records pre-existing prompts, references, originals and delivery paths. Existing cover provenance, eight case-visual sidecars and eighteen responsive derivative sidecars preserve origin. The shipping-raster audit covered 30 rasters with zero missing records. Responsive variants remain rebuildable through src/build-responsive-images.mjs; originals are available for large displays and image zoom.
+assets/studio/glass-studio.webp.json and its derivative sidecar record the exact prompt, origin and original path. The scene is a fictional decorative architectural illustration generated with the built-in image tool. Covers and device spreads remain generated interface visualizations; original product captures remain separate evidence of the real interfaces.
+
+assets/device-visuals.json, cover/service provenance, adjacent case-visual sidecars and responsive derivative sidecars preserve origin. The current shipping-raster audit covered 38 files with zero missing records. Responsive variants remain rebuildable through src/build-responsive-images.mjs; originals are available for large displays and case image zoom. Historical art, stock photographs and sculpture code may remain unused in the checkout; their presence does not make them current visual authority.
 
 ## Source, verification and publishing
 
-Visual authority: lancer.css, service-editorial.css, case-editorial.css, src/agency-home.mjs, src/studio-sections.mjs, src/agency-shared.mjs, src/service-pages.mjs, src/agency-cases.mjs, src/sculpture/brand-object.mjs and studio-world.mjs. Facts remain in src/seo-data.mjs and src/service-catalog-data.mjs; static generation and image policy remain in the existing build.
+Visual authority: frost.css loaded after lancer.css, service-editorial.css and case-editorial.css; src/agency-home.mjs, src/studio-sections.mjs, src/agency-shared.mjs, src/service-pages.mjs, src/agency-cases.mjs, studio-world.mjs and disclosures.mjs. Facts remain in src/seo-data.mjs and src/service-catalog-data.mjs; static generation and image policy remain in the existing build.
 
-Seven local SEO/link/schema/loading/price tests passed. .impeccable/review/redesign-finish-review.md records the full independent review. redesign-finish-verdict.md clears four named fixes: missing mobile copy spaces, long mobile AI flows, process-panel empty tail and glyph case disclosure icons. Corrected regions supplement the prior full review; no new corrected full-page capture is claimed.
+The final local build succeeded. Eight demo/glass-optics tests and seven SEO/link/schema/loading/price checks passed. The pinned direction is .impeccable/review/greenrock-direction.md. .impeccable/review/frost-finish-review.md records the complete independent review and two material fixes: the service-media matte seam and stale design/product documentation. .impeccable/review/frost-finish-verdict.md records the repaired service-media regions; final documentation reconciliation is assessed separately before handoff.
 
-Evidence under .impeccable/review/ includes desktop/1265/mobile home, corrected process/work regions, desktop/mobile websites, automation, service directory, Maverick and demo, plus corrected AI and case-indicator regions. The detector's one warning concerned the empty image in a closed dialog; its source/caption are set before opening. Old token advisories came from the superseded design documentation. A final source check restored the scoped disclosure transition and explicit warm-gray answers/copper question hover; browser open/close/reversal evidence is redesign-faq-motion-fixed.png and redesign-faq-motion-metrics.json.
+All 34 frost-final captures were inspected by the independent reviewer: native desktop 1265×712 with CSS viewport 1280, mobile 375×750 with CSS viewport 390, and explicit home clips at 1440×900 and 1920×1080. Coverage includes the homepage, directory, websites, automation, Maverick and its native local demo. Four final service-grid desktop/mobile recaptures resolve the matte seam and preserve device scale without a visible regression. These captures prove the sampled layouts and wide-page density; they do not prove actual browser-zoom behavior. Safari and Firefox were not separately verified.
 
-GitHub Pages publishes landlancer.ru from main. This brief records the locally verified redesign, without claiming this revision is deployed, a Lighthouse score or physical-device frame-rate results.
+GitHub Pages publishes landlancer.ru from main. This brief records the locally verified replacement, without claiming this revision is deployed, a Lighthouse score or physical-device frame-rate results.

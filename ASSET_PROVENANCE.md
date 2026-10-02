@@ -1,5 +1,9 @@
 # Asset provenance
 
+## October 2: Frosted studio
+
+`assets/studio/glass-studio.webp` (1672×941) and `glass-studio-960.webp` (960×540) were generated with the built-in image_gen tool and encoded to WebP. They depict a fictional studio; they are decorative illustrations, not photographs of Lancer's office. The exact generation prompt, origin and original output path are preserved in the adjacent `.webp.json` sidecars. No client work is attributed to the interfaces within this decorative scene. Existing project covers and case device visualizations retain their recorded origins.
+
 The latest interactive exhibits additionally reuse product code and assets documented in DEMOS.md. TailCare sample photos in assets/demos are copied from FRONT/public/demo-dogs. 12К card texture and brand mark are copied alongside its Vue components and bundled by Vite. New gift inventory symbols are illustrative vector icons; they do not represent an actual inventory or rewards.
 
 Captured September 19, 2026 using the in-app browser. PNG originals are retained; optimized WebP derivatives are used by the site.

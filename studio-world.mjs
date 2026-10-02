@@ -1,4 +1,5 @@
 import {setupDisclosures} from '/disclosures.mjs?v=1';
+// Shared disclosures preserve their native no-JS behavior.
 const reduced=matchMedia('(prefers-reduced-motion: reduce)');
 setupDisclosures({reduced,allowed:()=>!reduced.matches});
 const tabs=[...document.querySelectorAll('.process-tabs [role="tab"]')];
@@ -51,4 +52,23 @@ if(object){
   }
  },{rootMargin:'100px'});
  objectObserver.observe(object);
+}
+// The entrance belongs to the photographed scene; no content waits for a reveal.
+if(!reduced.matches){
+ const photograph=document.querySelector('.hero-photograph');
+ const copy=document.querySelector('.hero-copy');
+ const preview=document.querySelector('.hero-project');
+ photograph?.animate([{transform:'scale(1.035)',filter:'blur(3px)'},{transform:'scale(1)',filter:'blur(0px)'}],{duration:1700,easing:'cubic-bezier(.16,1,.3,1)'});
+ copy?.animate([{opacity:.7,transform:'translateY(14px)'},{opacity:1,transform:'none'}],{duration:900,easing:'cubic-bezier(.16,1,.3,1)'});
+ preview?.animate([{opacity:.75,transform:'translateY(20px)',backdropFilter:'blur(8px)'},{opacity:1,transform:'none',backdropFilter:'blur(22px)'}],{duration:1100,easing:'cubic-bezier(.16,1,.3,1)'});
+ const panels=[...document.querySelectorAll('.studio-project,.service-list>a,.service-system,.case-story')];
+ const entrance=new IntersectionObserver(entries=>{
+  const arriving=entries.filter(e=>e.isIntersecting);
+  arriving.forEach(({target},i)=>{
+   target.animate([{opacity:.72,transform:'translateY(16px)'},{opacity:1,transform:'none'}],{duration:650,delay:Math.min(i,2)*75,easing:'cubic-bezier(.16,1,.3,1)'});
+   entrance.unobserve(target);
+  });
+ },{threshold:.08});
+ panels.forEach(p=>entrance.observe(p));
+ reduced.addEventListener('change',()=>{if(reduced.matches){entrance.disconnect();[photograph,copy,preview,...panels].filter(Boolean).forEach(p=>p.getAnimations().forEach(a=>a.finish()));}},{once:true});
 }

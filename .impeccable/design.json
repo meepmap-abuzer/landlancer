@@ -1,309 +1,457 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-01T16:10:47Z",
+  "generatedAt": "2026-10-02T00:43:36Z",
   "title": "Design System: Lancer Agency",
   "extensions": {
     "colorMeta": {
       "ground": {
         "role": "neutral",
-        "displayName": "Graphite",
-        "tonalRamp": [
-          "oklch(15% 0.0043 264.5)",
-          "oklch(25% 0.0043 264.5)",
-          "oklch(35% 0.0043 264.5)",
-          "oklch(45% 0.0043 264.5)",
-          "oklch(55% 0.0043 264.5)",
-          "oklch(65% 0.0043 264.5)",
-          "oklch(80% 0.0043 264.5)",
-          "oklch(95% 0.0043 264.5)"
-        ]
+        "displayName": "Olive charcoal"
       },
       "surface": {
         "role": "neutral",
-        "displayName": "Dark satin",
-        "tonalRamp": [
-          "oklch(15% 0.0048 248.0)",
-          "oklch(25% 0.0048 248.0)",
-          "oklch(35% 0.0048 248.0)",
-          "oklch(45% 0.0048 248.0)",
-          "oklch(55% 0.0048 248.0)",
-          "oklch(65% 0.0048 248.0)",
-          "oklch(80% 0.0048 248.0)",
-          "oklch(95% 0.0048 248.0)"
-        ]
+        "displayName": "Studio green"
       },
       "ink": {
         "role": "neutral",
-        "displayName": "Pearl",
-        "tonalRamp": [
-          "oklch(15% 0.0041 91.4)",
-          "oklch(25% 0.0041 91.4)",
-          "oklch(35% 0.0041 91.4)",
-          "oklch(45% 0.0041 91.4)",
-          "oklch(55% 0.0041 91.4)",
-          "oklch(65% 0.0041 91.4)",
-          "oklch(80% 0.0041 91.4)",
-          "oklch(95% 0.0041 91.4)"
-        ]
+        "displayName": "Ivory"
       },
       "muted": {
         "role": "neutral",
-        "displayName": "Warm gray",
-        "tonalRamp": [
-          "oklch(15% 0.0044 91.5)",
-          "oklch(25% 0.0044 91.5)",
-          "oklch(35% 0.0044 91.5)",
-          "oklch(45% 0.0044 91.5)",
-          "oklch(55% 0.0044 91.5)",
-          "oklch(65% 0.0044 91.5)",
-          "oklch(80% 0.0044 91.5)",
-          "oklch(95% 0.0044 91.5)"
-        ]
+        "displayName": "Soft gray green"
       },
       "line": {
         "role": "neutral",
-        "displayName": "Translucent rule",
-        "tonalRamp": [
-          "oklch(15% 0.0000 89.9)",
-          "oklch(25% 0.0000 89.9)",
-          "oklch(35% 0.0000 89.9)",
-          "oklch(45% 0.0000 89.9)",
-          "oklch(55% 0.0000 89.9)",
-          "oklch(65% 0.0000 89.9)",
-          "oklch(80% 0.0000 89.9)",
-          "oklch(95% 0.0000 89.9)"
-        ]
+        "displayName": "Light translucent edge"
       },
       "accent": {
         "role": "primary",
-        "displayName": "Copper",
-        "tonalRamp": [
-          "oklch(15% 0.0681 50.7)",
-          "oklch(25% 0.0681 50.7)",
-          "oklch(35% 0.0681 50.7)",
-          "oklch(45% 0.0681 50.7)",
-          "oklch(55% 0.0681 50.7)",
-          "oklch(65% 0.0681 50.7)",
-          "oklch(80% 0.0681 50.7)",
-          "oklch(95% 0.0681 50.7)"
-        ]
+        "displayName": "Sage"
       },
-      "hover-ink": {
+      "action-text": {
         "role": "neutral",
-        "displayName": "Clear white",
-        "tonalRamp": [
-          "oklch(15% 0.0000 89.9)",
-          "oklch(25% 0.0000 89.9)",
-          "oklch(35% 0.0000 89.9)",
-          "oklch(45% 0.0000 89.9)",
-          "oklch(55% 0.0000 89.9)",
-          "oklch(65% 0.0000 89.9)",
-          "oklch(80% 0.0000 89.9)",
-          "oklch(95% 0.0000 89.9)"
-        ]
+        "displayName": "Deep action green"
+      },
+      "action-hover": {
+        "role": "neutral",
+        "displayName": "Pale action sage"
+      },
+      "image-copy": {
+        "role": "neutral",
+        "displayName": "Image ivory"
+      },
+      "panel-tint": {
+        "role": "neutral",
+        "displayName": "Tinted glass"
+      },
+      "service-matte": {
+        "role": "neutral",
+        "displayName": "Artwork matte"
+      },
+      "scope-surface": {
+        "role": "neutral",
+        "displayName": "Scope wash"
+      },
+      "open-surface": {
+        "role": "neutral",
+        "displayName": "Open wash"
+      },
+      "fallback-glass": {
+        "role": "neutral",
+        "displayName": "Opaque glass fallback"
       }
     },
     "typographyMeta": {
       "display": {
-        "displayName": "Homepage offer",
-        "purpose": "Compact hero heading; mobile clamp lives in the responsive layout."
+        "displayName": "Homepage offer"
       },
       "headline": {
-        "displayName": "Section heading",
-        "purpose": "Shared medium-weight h2 hierarchy."
+        "displayName": "Section heading"
       },
       "title": {
-        "displayName": "Tertiary heading",
-        "purpose": "Shared h3; ruled lists have the described local 18px treatment."
+        "displayName": "Tertiary heading"
       },
       "body": {
-        "displayName": "Body copy",
-        "purpose": "Base paragraph role; source-specific service and case roles remain smaller."
+        "displayName": "Body copy"
       },
       "action": {
-        "displayName": "Action label",
-        "purpose": "Primary and text action label."
+        "displayName": "Primary control label"
+      },
+      "text-action": {
+        "displayName": "Secondary link label"
       },
       "faq": {
-        "displayName": "FAQ question",
-        "purpose": "Native disclosure summary."
+        "displayName": "FAQ question"
       },
       "service-display": {
-        "displayName": "Service offer",
-        "purpose": "Individual service h1."
+        "displayName": "Service offer"
       },
       "case-display": {
-        "displayName": "Case name",
-        "purpose": "Text-only case opening."
+        "displayName": "Case name"
       },
       "motif": {
-        "displayName": "Decorative ASCII",
-        "purpose": "Small process motif; service uses its local Consolas role."
+        "displayName": "Decorative ASCII"
       }
     },
     "shadows": [],
+    "blur": [
+      {
+        "name": "matte-glass",
+        "value": "blur(22px) saturate(110%)",
+        "purpose": "Shared frost, navigation, process panels and pricing aside."
+      },
+      {
+        "name": "project-caption",
+        "value": "blur(22px)",
+        "purpose": "Dark tinted caption over actual cover imagery."
+      },
+      {
+        "name": "price-chip-and-dialog",
+        "value": "blur(14px)",
+        "purpose": "Service budget chips and image-dialog backdrop."
+      }
+    ],
+    "borders": [
+      {
+        "name": "panel-edge",
+        "value": "1px solid #f3f2ec25",
+        "purpose": "Matte surface edge."
+      },
+      {
+        "name": "price-chip-edge",
+        "value": "1px solid #f3f2ec2b",
+        "purpose": "Service starting-budget chip."
+      }
+    ],
+    "focus": [
+      {
+        "name": "keyboard-focus",
+        "value": "2px solid var(--studio-accent); outline-offset:5px",
+        "purpose": "Links, buttons, summaries and focusable tracks."
+      }
+    ],
     "motion": [
       {
         "name": "studio-ease",
         "value": "cubic-bezier(.16,1,.3,1)",
-        "purpose": "Shared transforms, photo scale and 260ms tab-panel settling."
+        "purpose": "Shared scene entrances, image scaling and settling."
       },
       {
-        "name": "action-color",
+        "name": "action-background",
         "value": "200ms",
-        "purpose": "Primary background and navigation color response."
+        "purpose": "Primary action background."
       },
       {
-        "name": "action-transform",
+        "name": "action-lift",
+        "value": "300ms; translateY(-2px)",
+        "purpose": "Primary hover, returning to rest on active."
+      },
+      {
+        "name": "nav-background",
         "value": "300ms",
-        "purpose": "2px primary lift and 3px link-arrow movement."
+        "purpose": "Capsule link hover and current wash."
       },
       {
-        "name": "photo-scale",
-        "value": "650ms",
-        "purpose": "Project photo 1.025 and generated-device 1.018 hover scale."
+        "name": "hero-photograph",
+        "value": "1700ms; scale(1.035) / blur(3px) to scale(1) / blur(0px)",
+        "purpose": "One composed scene arrival."
       },
       {
-        "name": "object-arrival",
-        "value": "950ms",
-        "purpose": "Single assembly; progress += dt/.95, quartic ease-out."
+        "name": "hero-copy",
+        "value": "900ms; opacity .7 / translateY(14px) to visible / none",
+        "purpose": "Visible-default offer settle."
       },
       {
-        "name": "object-damping",
-        "value": "1 - exp(-dt * 4.5)",
-        "purpose": "Pointer/hover settle; animated only when visible and document active."
+        "name": "hero-preview",
+        "value": "1100ms; opacity .75 / translateY(20px) / blur(8px) to visible / none / blur(22px)",
+        "purpose": "One preview settle."
       },
       {
-        "name": "object-drift",
-        "value": "rotation sin(t*.26)*.035; height sin(t*.55)*.025",
-        "purpose": "Tiny authored ambient motion; static pose for reduced motion."
+        "name": "visible-panel-entrance",
+        "value": "650ms; opacity .72 / translateY(16px); delay Math.min(i,2)*75ms",
+        "purpose": "One-shot project, service, diagram and story entrances at intersection threshold .08."
+      },
+      {
+        "name": "project-image-hover",
+        "value": "900ms; scale(1.045)",
+        "purpose": "Project media hover."
+      },
+      {
+        "name": "service-image-hover",
+        "value": "800ms; scale(1.035)",
+        "purpose": "Service artwork hover."
+      },
+      {
+        "name": "service-card-hover",
+        "value": "550ms; translateY(-4px)",
+        "purpose": "Service card response."
+      },
+      {
+        "name": "hero-card-hover",
+        "value": "550ms; translateY(-5px); background-color 400ms",
+        "purpose": "Home proof preview response."
+      },
+      {
+        "name": "tab-panel",
+        "value": "260ms; opacity .7 / translateY(4px) to visible / none",
+        "purpose": "Selected tab-panel settle."
       },
       {
         "name": "disclosure-height",
         "value": "440ms cubic-bezier(.22,1,.36,1)",
-        "purpose": "Reversible native disclosure height; settle immediately hidden/reduced."
+        "purpose": "Reversible native disclosure; runtime settles at transitionend with 460ms fallback timer."
       },
       {
         "name": "disclosure-copy",
-        "value": "opacity 220ms ease; transform 280ms ease",
-        "purpose": "Closing text fades and shifts -4px; closing indicator follows requested state."
+        "value": "opacity 220ms ease; transform 280ms ease; translateY(-4px)",
+        "purpose": "Closing answer response."
+      },
+      {
+        "name": "disclosure-indicator",
+        "value": "250ms; rotate(90deg) to none",
+        "purpose": "Authored vertical stroke becomes minus."
       },
       {
         "name": "motif-interval",
         "value": "700ms",
-        "purpose": "Small ASCII character update; pause offscreen, hidden and reduced."
+        "purpose": "Small ASCII update only visible, active-tab and motion-allowed."
       }
     ],
     "breakpoints": [
       {
-        "name": "wide",
-        "value": "1600px",
-        "purpose": "Minimum-width enlargement of hero/object and photo ratio."
+        "name": "wide-home",
+        "value": "1800px",
+        "purpose": "Minimum-width fixed 690px hero and 80px copy anchor."
       },
       {
         "name": "compact-desktop",
-        "value": "1000px",
-        "purpose": "Maximum-width gaps, hero size and object size."
+        "value": "1100px",
+        "purpose": "Maximum-width smaller typography, gaps and two-column capabilities."
       },
       {
         "name": "stacked",
         "value": "750px",
-        "purpose": "Maximum-width main stacking, mobile gutters/header and internal roadmaps."
+        "purpose": "Maximum-width 22px gutter, static inner header, mobile stacking, two-column service cards and internally scrolling roadmap."
       },
       {
-        "name": "narrow-home",
+        "name": "narrow",
         "value": "500px",
-        "purpose": "Maximum-width one-column work and 2×2 production tabs."
+        "purpose": "Maximum-width 710px hero, single-column project/services, 2×2 tabs and single-column included work."
       },
       {
-        "name": "narrow-services",
+        "name": "legacy-local-diagrams",
         "value": "420px",
-        "purpose": "Maximum-width one-column audience/included/AI and related cases."
+        "purpose": "Retained local service/related-case rules from underlying editorial stylesheet."
       }
     ],
-    "reducedMotion": "No continuous animation or entrance. Supported WebGL draws the complete static object; inline SVG is the loading/failure fallback.",
-    "evidence": {
-      "scope": "Local source and prior independent desktop/mobile review; no new deployment or physical-device performance claim.",
-      "review": ".impeccable/review/redesign-finish-review.md",
-      "verdict": ".impeccable/review/redesign-finish-verdict.md",
-      "disclosureMetrics": ".impeccable/review/redesign-faq-motion-metrics.json",
-      "rasterProvenance": "Pre-existing generation; assets/device-visuals.json and adjacent sidecars. No new raster generated."
+    "padding": [
+      {
+        "name": "primary-mobile",
+        "value": "13px 18px",
+        "purpose": "Narrow hero action keeps inherited block padding with 18px inline override."
+      },
+      {
+        "name": "navigation-mobile",
+        "value": "4px",
+        "purpose": "Capsule inset below 750px; links use 7px 10px."
+      },
+      {
+        "name": "hero-proof-desktop",
+        "value": "20px",
+        "purpose": "Home proof preview."
+      },
+      {
+        "name": "hero-proof-tablet",
+        "value": "20px 155px 20px 20px",
+        "purpose": "Text beside the fixed mobile preview image below 750px."
+      },
+      {
+        "name": "hero-proof-narrow",
+        "value": "20px 132px 20px 20px",
+        "purpose": "Text beside the 100px preview image below 500px."
+      },
+      {
+        "name": "caption-tablet",
+        "value": "14px",
+        "purpose": "Project caption below 750px."
+      },
+      {
+        "name": "caption-narrow",
+        "value": "17px",
+        "purpose": "Project caption below 500px."
+      },
+      {
+        "name": "service-card-compact-desktop",
+        "value": "20px",
+        "purpose": "Service card below 1100px; narrow mobile returns to 25px."
+      },
+      {
+        "name": "included-tablet",
+        "value": "21px",
+        "purpose": "Included-work card below 750px."
+      },
+      {
+        "name": "included-narrow",
+        "value": "22px",
+        "purpose": "Single-column included-work card below 500px."
+      },
+      {
+        "name": "diagram-mobile",
+        "value": "12px",
+        "purpose": "Outer diagram frost below 750px; its figure uses 18px 8px."
+      },
+      {
+        "name": "process-compact-desktop",
+        "value": "32px 155px 32px 32px",
+        "purpose": "Panel retains vertical/left padding, reduces right reserve below 1100px."
+      },
+      {
+        "name": "process-mobile",
+        "value": "25px",
+        "purpose": "Content-sized panel below 750px."
+      },
+      {
+        "name": "process-tab-mobile",
+        "value": "13px 15px",
+        "purpose": "Mobile tab below 750px."
+      },
+      {
+        "name": "case-opening",
+        "value": "30px",
+        "purpose": "Rounded opening shell; mobile uses 24px."
+      }
+    ],
+    "layout": {
+      "maxContentWidth": "1560px",
+      "hero": {
+        "desktopHeight": "clamp(580px,49vw,690px)",
+        "desktopMinHeight": "580px",
+        "wideHeight": "690px",
+        "tabletHeight": "730px",
+        "narrowHeight": "710px"
+      },
+      "minTargets": {
+        "primary": "48px",
+        "textAction": "44px",
+        "navLink": "40px",
+        "faqSummary": "66px"
+      },
+      "serviceMedia": {
+        "inset": "auto auto 0 7%",
+        "width": "86%",
+        "height": "65.4%",
+        "objectFit": "cover",
+        "objectPosition": "center bottom",
+        "maskImage": "linear-gradient(transparent,#000 18%),linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)",
+        "maskComposite": "intersect",
+        "webkitMaskComposite": "source-in",
+        "purpose": "Keep device scale below the title/price and blend matte artwork edges."
+      },
+      "processPanelMinHeight": {
+        "desktop": "190px",
+        "mobile": "0"
+      },
+      "roadmapMobileStop": "240px"
     },
-    "notCanonized": "Inherited obsolete selectors and dated homepage-exhibit/local-state wording in DEMOS.md are not future-system rules. Diagram textual arrows are allowed directed relationships. Utility/concept legacy shells and native demo themes are separate artifacts."
+    "fallbackGlass": {
+      "query": "@supports not (backdrop-filter:blur(1px))",
+      "selectors": [
+        ".frost",
+        ".studio-nav nav",
+        ".portfolio-description",
+        ".process-panels"
+      ],
+      "backgroundToken": "fallback-glass"
+    },
+    "reducedMotion": "Skip JavaScript scene/entrance/tab animations, finish active scene entrances when the preference changes, remove CSS animation/transition, disable project/service image hover transforms. Motifs stop and native disclosures settle.",
+    "paletteRamps": "No palette ramps are defined in the shipped source; none were fabricated in this extraction.",
+    "evidence": {
+      "scope": "Code-led adaptation of pinned rendered ТИШЕ reference; no approved full comp, actual browser-zoom proof, Safari/Firefox or physical-device performance claim.",
+      "direction": ".impeccable/review/greenrock-direction.md",
+      "review": ".impeccable/review/frost-finish-review.md",
+      "captures": ".impeccable/review/frost-final-*.png",
+      "viewports": "Native desktop 1265×712 / CSS 1280; mobile 375×750 / CSS 390; explicit home clips 1440×900 and 1920×1080.",
+      "tests": "8 demo/glass tests and 7 SEO tests passed per final task validation.",
+      "rasterProvenance": "38 shipping-raster sidecars, zero missing records; new fictional studio origin/prompt in assets/studio/*.webp.json."
+    },
+    "notCanonized": "Legacy selectors, conditional unused brand-object/WebGL code, historical scenes/assets, hidden project-type labels and dated DEMOS.md homepage/reset wording are not current visual-system rules. Native product-demo themes and functional diagram relationships remain valid local systems."
   },
   "components": [
     {
       "name": "Primary action",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "Pearl action with tight corners, 44px minimum target and inline arrow.",
+      "description": "Ivory capsule, 48px minimum target,SVG arrow and sage focus.",
       "html": "<a class=\"ds-primary\" href=\"https://t.me/LancerManager\" target=\"_blank\" rel=\"noopener noreferrer\">Обсудить проект<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 19 19 5M5 5h14v14\"/></svg></a>",
-      "css": ".ds-primary{display:inline-flex;align-items:center;justify-content:center;gap:25px;min-height:44px;padding:12px 18px;border:0;border-radius:6px;background:var(--studio-ink,#f1f0ed);color:var(--studio-ground,#161719);font:500 13px/1.4 Manrope,Arial,sans-serif;text-decoration:none;transition:background .2s,transform .3s cubic-bezier(.16,1,.3,1)}.ds-primary svg{width:17px;height:17px;flex-shrink:0}.ds-primary:hover{background:#fff;transform:translateY(-2px)}.ds-primary:focus-visible{outline:2px solid var(--studio-accent,#d6a68b);outline-offset:5px}.ds-primary:active{transform:translateY(0)}@media(prefers-reduced-motion:reduce){.ds-primary{transition:none}.ds-primary:hover{transform:none}}"
+      "css": ".ds-primary{display:inline-flex;align-items:center;justify-content:center;gap:24px;min-height:48px;padding:13px 21px;border:0;border-radius:40px;background:var(--studio-ink,#f3f2ec);color:#182721;font:500 13px/1.4 Manrope,Arial,sans-serif;text-decoration:none;transition:background .2s,transform .3s var(--studio-ease,cubic-bezier(.16,1,.3,1))}.ds-primary svg{width:17px;height:17px}.ds-primary:hover{background:#dce2cf;transform:translateY(-2px)}.ds-primary:active{transform:none}.ds-primary:focus-visible{outline:2px solid var(--studio-accent,#d0d3b9);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-primary{transition:none}.ds-primary:hover{transform:none}}"
     },
     {
       "name": "Text action",
       "kind": "button",
       "refersTo": "text-action",
-      "description": "Secondary in-field link, with arrow and hover underline.",
+      "description": "Readable secondary action with underline response.",
       "html": "<a class=\"ds-text-action\" href=\"#works\">Смотреть работы<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 19 19 5M5 5h14v14\"/></svg></a>",
-      "css": ".ds-text-action{display:inline-flex;align-items:center;gap:12px;min-height:44px;color:var(--studio-ink,#f1f0ed);font:400 13px/1.4 Manrope,Arial,sans-serif;text-decoration:none;text-underline-offset:5px}.ds-text-action svg{width:17px;height:17px}.ds-text-action:hover{color:#fff;text-decoration:underline}.ds-text-action:focus-visible{outline:2px solid var(--studio-accent,#d6a68b);outline-offset:5px}.ds-text-action:active{color:var(--studio-ink,#f1f0ed)}"
+      "css": ".ds-text-action{display:inline-flex;align-items:center;gap:12px;min-height:44px;color:var(--studio-ink,#f3f2ec);font:400 14px/1.4 Manrope,Arial,sans-serif;text-decoration:none;text-underline-offset:5px}.ds-text-action svg{width:17px;height:17px}.ds-text-action:hover{color:#fff;text-decoration:underline}.ds-text-action:focus-visible{outline:2px solid var(--studio-accent,#d0d3b9);outline-offset:5px}"
     },
     {
-      "name": "Studio navigation",
+      "name": "Frosted navigation",
       "kind": "nav",
-      "description": "Opaque 64px navigation; current/hover links brighten and mobile keeps links.",
-      "html": "<header class=\"ds-nav\"><a class=\"ds-logo\" href=\"/\" aria-label=\"Lancer Agency — главная\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m12 3 10 5-10 5L2 8zM2 12l10 5 10-5M2 16l10 5 10-5\"/></svg><span>Lancer <small>Agency</small></span></a><nav aria-label=\"Основная навигация\"><a href=\"/#works\">Работы</a><a href=\"/services/\" aria-current=\"page\">Услуги</a><a href=\"/#approach\">Процесс</a></nav></header>",
-      "css": ".ds-nav{display:flex;align-items:center;gap:32px;min-height:64px;background:var(--studio-ground,#161719);border-bottom:1px solid var(--studio-line,#ffffff20);font-family:Manrope,Arial,sans-serif;padding-inline:22px}.ds-logo{display:inline-flex;gap:10px;align-items:center;white-space:nowrap;font-size:23px;font-weight:600;letter-spacing:-.025em;color:var(--studio-ink,#f1f0ed);text-decoration:none}.ds-logo svg{width:25px;height:25px;color:var(--studio-accent,#d6a68b)}.ds-logo small{font-size:12px;letter-spacing:0;font-weight:400;color:var(--studio-muted,#b1b0ad);margin-left:4px}.ds-nav nav{display:flex;gap:28px;margin-left:auto;font-size:13px}.ds-nav nav a{display:inline-flex;align-items:center;min-height:44px;color:var(--studio-muted,#b1b0ad);text-decoration:none;transition:color .2s}.ds-nav nav a:hover,.ds-nav nav a[aria-current]{color:var(--studio-ink,#f1f0ed)}.ds-nav a:focus-visible{outline:2px solid var(--studio-accent,#d6a68b);outline-offset:5px}@media(max-width:750px){.ds-nav{min-height:58px;gap:15px;padding-inline:20px}.ds-logo{font-size:21px}.ds-logo small{display:none}.ds-nav nav{gap:19px;font-size:12px}}@media(prefers-reduced-motion:reduce){.ds-nav nav a{transition:none}}"
+      "refersTo": "navigation",
+      "description": "Capsule floats on the home scene; inner pages keep it in document flow.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Основная навигация\"><a href=\"/#works\">Работы</a><a href=\"/services/\" aria-current=\"page\">Услуги</a><a href=\"/#approach\">Процесс</a></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;gap:3px;padding:6px;border-radius:40px;background:linear-gradient(135deg,#e7ede017,#e7ede00a);border:1px solid #f3f2ec25;backdrop-filter:blur(22px) saturate(110%);-webkit-backdrop-filter:blur(22px) saturate(110%);font:400 13px/1.6 Manrope,Arial,sans-serif}.ds-nav a{display:inline-flex;align-items:center;min-height:40px;padding:8px 19px;border-radius:30px;color:var(--studio-ink,#f3f2ec);text-decoration:none;transition:background .3s}.ds-nav a:hover,.ds-nav a[aria-current]{background:#f3f2ec16}.ds-nav a:focus-visible{outline:2px solid var(--studio-accent,#d0d3b9);outline-offset:5px}@media(max-width:750px){.ds-nav{padding:4px}.ds-nav a{padding:7px 10px;font-size:11px}}@supports not (backdrop-filter:blur(1px)){.ds-nav{background:#273b32ed}}@media(prefers-reduced-motion:reduce){.ds-nav a{transition:none}}"
     },
     {
-      "name": "Ruled service row",
+      "name": "Frosted diagram panel",
+      "kind": "card",
+      "refersTo": "diagram-panel",
+      "description": "The actual service-system outer material, with readable tint, edge and 22px blur.",
+      "html": "<section class=\"ds-frost-panel\"><figure><figcaption>Структура под сценарий посетителя</figcaption><p>Пример связей между страницами.</p></figure></section>",
+      "css": ".ds-frost-panel{background:linear-gradient(135deg,#e7ede017,#e7ede00a);border:1px solid #f3f2ec25;backdrop-filter:blur(22px) saturate(110%);-webkit-backdrop-filter:blur(22px) saturate(110%);border-radius:22px;padding:22px;color:var(--studio-ink,#f3f2ec);font-family:Manrope,Arial,sans-serif}.ds-frost-panel figure{margin:0;padding:20px 22px}.ds-frost-panel figcaption{font-size:20px;letter-spacing:-.02em;line-height:1.4;margin-bottom:30px}.ds-frost-panel p{margin:27px 0 0;color:var(--studio-muted,#c2cbc4);font-size:12px;line-height:1.7;max-width:48ch}@media(max-width:750px){.ds-frost-panel{padding:12px}.ds-frost-panel figure{padding:18px 8px}}@supports not (backdrop-filter:blur(1px)){.ds-frost-panel{background:#273b32ed}}"
+    },
+    {
+      "name": "Included-work card",
+      "kind": "card",
+      "refersTo": "included-card",
+      "description": "Quiet translucent scope card; actual card padding and font hierarchy.",
+      "html": "<article class=\"ds-included\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m5 12 4 4L19 6\"/></svg><h3>Адаптивный интерфейс</h3><p>Экраны для телефона и компьютера.</p></article>",
+      "css": ".ds-included{border:1px solid var(--studio-line,#f3f2ec25);background:#f3f2ec08;border-radius:16px;padding:26px;min-height:170px;color:var(--studio-ink,#f3f2ec);font-family:Manrope,Arial,sans-serif}.ds-included>svg{width:19px;height:19px;margin-bottom:18px}.ds-included h3{margin:0 0 11px;font-size:19px;font-weight:500;letter-spacing:-.02em;line-height:1.35}.ds-included p{margin:0;color:var(--studio-muted,#c2cbc4);font-size:14px;line-height:1.65}@media(max-width:750px){.ds-included{padding:21px;min-height:0}.ds-included h3{font-size:18px}.ds-included p{font-size:13px}}"
+    },
+    {
+      "name": "Starting-price chip",
+      "kind": "chip",
+      "refersTo": "price-chip",
+      "description": "A scope label, not a filter or extra action.",
+      "html": "<span class=\"ds-price-chip\">от 30 000 ₽</span>",
+      "css": ".ds-price-chip{display:inline-block;padding:6px 11px;border:1px solid #f3f2ec2b;border-radius:25px;background:#14221d96;backdrop-filter:blur(14px);color:var(--studio-ink,#f3f2ec);font:400 11px/1.6 Manrope,Arial,sans-serif}"
+    },
+    {
+      "name": "Production tab",
       "kind": "custom",
-      "refersTo": "service-row",
-      "description": "Flat title, bounded starting price and description; no card shell.",
-      "html": "<a class=\"ds-service-row\" href=\"/services/websites/\"><h3>Сайты и лендинги</h3><p>Структура, дизайн и понятный путь к заявке.</p><span>от 30 000 ₽</span><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 19 19 5M5 5h14v14\"/></svg></a>",
-      "css": ".ds-service-row{display:grid;grid-template-columns:1fr auto 20px;gap:8px 18px;align-items:center;padding:22px 0;border-top:1px solid var(--studio-line,#ffffff20);color:var(--studio-ink,#f1f0ed);text-decoration:none;font-family:Manrope,Arial,sans-serif}.ds-service-row h3{margin:0;font-size:18px;font-weight:500;line-height:1.35;letter-spacing:-.025em}.ds-service-row p{grid-column:1/-1;grid-row:2;margin:0;font-size:12px;line-height:1.7;color:var(--studio-muted,#b1b0ad)}.ds-service-row>span{font-size:12px;white-space:nowrap;font-variant-numeric:tabular-nums;color:var(--studio-muted,#b1b0ad)}.ds-service-row>svg{width:17px;height:17px;transition:transform .3s cubic-bezier(.16,1,.3,1)}.ds-service-row:hover>svg{transform:translate(3px,-3px);color:var(--studio-accent,#d6a68b)}.ds-service-row:focus-visible{outline:2px solid var(--studio-accent,#d6a68b);outline-offset:5px}@media(max-width:500px){.ds-service-row{gap:8px 12px;grid-template-columns:1fr auto 17px}.ds-service-row h3{font-size:16px}.ds-service-row>span{font-size:11px}}@media(prefers-reduced-motion:reduce){.ds-service-row>svg{transition:none}}"
+      "refersTo": "process-tab",
+      "description": "Selected/unselected capsule panel states. Production runtime supplies roving tabindex and panel selection.",
+      "html": "<div class=\"ds-tabs\" role=\"tablist\" aria-label=\"Этапы работы\"><button class=\"ds-tab\" type=\"button\" role=\"tab\" aria-selected=\"true\">Задача<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 19 19 5M5 5h14v14\"/></svg></button><button class=\"ds-tab\" type=\"button\" role=\"tab\" aria-selected=\"false\" tabindex=\"-1\">Интерфейс<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 19 19 5M5 5h14v14\"/></svg></button><button class=\"ds-tab\" type=\"button\" role=\"tab\" aria-selected=\"false\" tabindex=\"-1\">Разработка<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 19 19 5M5 5h14v14\"/></svg></button><button class=\"ds-tab\" type=\"button\" role=\"tab\" aria-selected=\"false\" tabindex=\"-1\">Запуск<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 19 19 5M5 5h14v14\"/></svg></button></div>",
+      "css": ".ds-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.ds-tab{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px;padding:16px 20px;border:1px solid var(--studio-line,#f3f2ec25);border-radius:12px;background:#ffffff06;color:var(--studio-muted,#c2cbc4);font:400 16px/1.6 Manrope,Arial,sans-serif;text-align:left;cursor:pointer;transition:color .2s}.ds-tab:hover{background:#f3f2ec0b}.ds-tab[aria-selected=true]{background:#d8dfcd19;border-color:#d8dfcd58;color:var(--studio-ink,#f3f2ec)}.ds-tab svg{width:17px;height:17px;transition:transform .3s}.ds-tab[aria-selected=true] svg{color:var(--studio-accent,#d0d3b9);transform:rotate(45deg)}.ds-tab:focus-visible{outline:2px solid var(--studio-accent,#d0d3b9);outline-offset:5px}@media(max-width:750px){.ds-tab{min-height:52px;padding:13px 15px;font-size:14px}.ds-tab svg{display:none}}@media(prefers-reduced-motion:reduce){.ds-tab,.ds-tab svg{transition:none}}@media(max-width:500px){.ds-tabs{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}}"
     },
     {
-      "name": "Production tabs",
-      "kind": "custom",
-      "description": "Selected/unselected/focus states. Production runtime supplies roving tabindex, keyboard selection and one labelled panel.",
-      "html": "<div class=\"ds-tabs\" role=\"tablist\" aria-label=\"Этапы работы\"><button class=\"ds-tab\" type=\"button\" role=\"tab\" aria-selected=\"true\" aria-controls=\"ds-panel-task\" id=\"ds-tab-task\">Задача<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 19 19 5M5 5h14v14\"/></svg></button><button class=\"ds-tab\" type=\"button\" role=\"tab\" aria-selected=\"false\" tabindex=\"-1\">Интерфейс<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 19 19 5M5 5h14v14\"/></svg></button><button class=\"ds-tab\" type=\"button\" role=\"tab\" aria-selected=\"false\" tabindex=\"-1\">Разработка<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 19 19 5M5 5h14v14\"/></svg></button><button class=\"ds-tab\" type=\"button\" role=\"tab\" aria-selected=\"false\" tabindex=\"-1\">Запуск<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 19 19 5M5 5h14v14\"/></svg></button></div><article class=\"ds-panel\" id=\"ds-panel-task\" role=\"tabpanel\" aria-labelledby=\"ds-tab-task\"><p>Разбираем пользователей, сценарии и ограничения.</p><span>Результат этапа</span><strong>Согласованный состав работ</strong></article>",
-      "css": ".ds-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-block:1px solid var(--studio-line,#ffffff20);font-family:Manrope,Arial,sans-serif}.ds-tab{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px;padding:12px 20px 12px 0;border:0;background:none;color:var(--studio-muted,#b1b0ad);text-align:left;cursor:pointer;font:400 17px Manrope,Arial,sans-serif;transition:color .2s}.ds-tab+.ds-tab{padding-left:22px}.ds-tab[aria-selected=true]{color:var(--studio-ink,#f1f0ed)}.ds-tab svg{width:17px;height:17px;transition:transform .3s}.ds-tab[aria-selected=true] svg{color:var(--studio-accent,#d6a68b);transform:rotate(45deg)}.ds-tab:focus-visible{outline:2px solid var(--studio-accent,#d6a68b);outline-offset:5px}.ds-panel{padding-top:25px;font:14px/1.7 Manrope,Arial,sans-serif;color:var(--studio-muted,#b1b0ad)}.ds-panel p{margin:0 0 20px}.ds-panel span,.ds-panel strong{display:block;font-size:12px}.ds-panel strong{font-weight:400;color:var(--studio-ink,#f1f0ed);margin-top:7px}@media(max-width:500px){.ds-tabs{grid-template-columns:repeat(2,minmax(0,1fr))}.ds-tab{padding:12px 0;min-height:50px;font-size:14px}.ds-tab+.ds-tab{padding-left:0}.ds-tab:nth-child(even){padding-left:15px}.ds-tab:nth-child(-n+2){border-bottom:1px solid var(--studio-line,#ffffff20)}.ds-tab svg{display:none}}@media(prefers-reduced-motion:reduce){.ds-tab,.ds-tab svg{transition:none}}"
-    },
-    {
-      "name": "Native FAQ row",
+      "name": "Native FAQ",
       "kind": "custom",
       "refersTo": "faq-row",
-      "description": "Interactive native disclosure, drawn plus/minus and warm-gray answer. Production height animation is supplied by disclosures.mjs.",
+      "description": "Native details with drawn indicator and open wash; production runtime adds reversible height.",
       "html": "<details class=\"ds-faq\"><summary><span>Как начинается работа?</span><i aria-hidden=\"true\"></i></summary><p>Обсуждаем задачу, основной сценарий и состав первой версии.</p></details>",
-      "css": ".ds-faq{border-block:1px solid var(--studio-line,#ffffff20);color:var(--studio-ink,#f1f0ed);font-family:Manrope,Arial,sans-serif}.ds-faq summary{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:59px;padding:17px 0;list-style:none;cursor:pointer;font:400 14px/1.5 Manrope,Arial,sans-serif}.ds-faq summary::-webkit-details-marker{display:none}.ds-faq summary:hover{color:var(--studio-accent,#d6a68b)}.ds-faq summary:focus-visible{outline:2px solid var(--studio-accent,#d6a68b);outline-offset:5px}.ds-faq i{position:relative;width:18px;height:18px;flex:none}.ds-faq i::before,.ds-faq i::after{content:\"\";position:absolute;left:4px;top:8px;width:10px;height:1px;background:var(--studio-muted,#b1b0ad)}.ds-faq i::after{transform:rotate(90deg);transition:transform .25s}.ds-faq[open] i::after{transform:rotate(0)}.ds-faq p{margin:0;padding:0 32px 23px 0;color:var(--studio-muted,#b1b0ad);font-size:13px;line-height:1.8}.ds-faq[data-disclosure-state]{transition:height 440ms cubic-bezier(.22,1,.36,1)}.ds-faq[data-disclosure-state]>p{transition:opacity 220ms ease,transform 280ms ease}.ds-faq[data-disclosure-state=closing]>p{opacity:0;transform:translateY(-4px)}.ds-faq[data-disclosure-state=closing] i::after{transform:rotate(90deg)}@media(prefers-reduced-motion:reduce){.ds-faq,.ds-faq i::after,.ds-faq p{transition:none}}"
-    },
-    {
-      "name": "Functional page map",
-      "kind": "custom",
-      "refersTo": "diagram-node",
-      "description": "Connected diagram with local satin nodes; no outer panel or card.",
-      "html": "<figure class=\"ds-map\"><figcaption>Структура под сценарий посетителя</figcaption><div class=\"ds-map-root\">Главная</div><div class=\"ds-map-branches\"><span>Предложение</span><span>Каталог</span><span>О компании</span></div><div class=\"ds-map-action\">Заявка</div><p>Пример связей между страницами.</p></figure>",
-      "css": ".ds-map{margin:0;padding:20px 22px;color:var(--studio-ink,#f1f0ed);font-family:Manrope,Arial,sans-serif}.ds-map figcaption{font-size:19px;letter-spacing:-.02em;line-height:1.4;margin-bottom:30px}.ds-map-root,.ds-map-action{position:relative;width:max-content;min-width:135px;padding:17px 24px;border:1px solid #ffffff30;border-radius:6px;text-align:center;font-size:14px;margin:auto;background:var(--studio-surface,#202224)}.ds-map-action{color:var(--studio-accent,#d6a68b)}.ds-map-branches{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:30px 0;margin:30px 0}.ds-map-branches::before,.ds-map-branches::after{content:\"\";position:absolute;left:16.66%;right:16.66%;height:1px;background:#ffffff30;top:0}.ds-map-branches::after{top:auto;bottom:0}.ds-map-branches span{position:relative;font-size:12px;line-height:1.4;padding:16px 7px;text-align:center;border:1px solid #ffffff1a;border-radius:6px;background:var(--studio-surface,#202224)}.ds-map-root::after,.ds-map-action::before,.ds-map-branches span::before,.ds-map-branches span::after{content:\"\";position:absolute;left:50%;width:1px;height:30px;background:#ffffff30;top:100%}.ds-map-action::before,.ds-map-branches span::before{top:auto;bottom:100%}.ds-map p{margin:27px 0 0;font-size:11px;line-height:1.7;color:var(--studio-muted,#b1b0ad)}"
-    },
-    {
-      "name": "Layer fallback mark",
-      "kind": "custom",
-      "description": "Exact inline SVG fallback used while the physical stack loads or cannot render; this is not a substitute for the WebGL signature when supported.",
-      "html": "<div class=\"ds-object-fallback\" role=\"img\" aria-label=\"Знак Lancer: три слоя\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m12 3 10 5-10 5L2 8zM2 12l10 5 10-5M2 16l10 5 10-5\"/></svg></div>",
-      "css": ".ds-object-fallback{display:grid;place-items:center;min-height:180px;color:var(--studio-accent,#d6a68b)}.ds-object-fallback svg{width:90px;height:90px}"
+      "css": ".ds-faq{border:0;border-bottom:1px solid var(--studio-line,#f3f2ec25);padding-inline:18px;color:var(--studio-ink,#f3f2ec);font-family:Manrope,Arial,sans-serif}.ds-faq[open]{background:#f3f2ec09;border-radius:14px;border-bottom-color:transparent}.ds-faq summary{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:66px;padding:19px 0;list-style:none;cursor:pointer;font:400 15px/1.5 Manrope,Arial,sans-serif}.ds-faq summary::-webkit-details-marker{display:none}.ds-faq summary:hover{color:var(--studio-accent,#d0d3b9)}.ds-faq summary:focus-visible{outline:2px solid var(--studio-accent,#d0d3b9);outline-offset:5px}.ds-faq i{position:relative;width:18px;height:18px;flex:none}.ds-faq i::before,.ds-faq i::after{content:\"\";position:absolute;left:4px;top:8px;height:1px;width:10px;background:var(--studio-muted,#c2cbc4)}.ds-faq i::after{transform:rotate(90deg);transition:transform .25s}.ds-faq[open] i::after{transform:none}.ds-faq p{margin:0;padding:0 32px 24px 0;color:var(--studio-muted,#c2cbc4);font-size:14px;line-height:1.8}.ds-faq[data-disclosure-state]{transition:height 440ms cubic-bezier(.22,1,.36,1)}.ds-faq[data-disclosure-state]>p{transition:opacity 220ms ease,transform 280ms ease}.ds-faq[data-disclosure-state=closing]>p{opacity:0;transform:translateY(-4px)}.ds-faq[data-disclosure-state=closing] i::after{transform:rotate(90deg)}@media(max-width:750px){.ds-faq summary{font-size:14px}}@media(prefers-reduced-motion:reduce){.ds-faq,.ds-faq i::after,.ds-faq p{transition:none}}"
     }
   ],
   "narrative": {
-    "northStar": "Model table",
-    "overview": "Lancer presents software as a considered, assembled product. Graphite fields, pearl lettering, restrained copper and a reflective three-layer mark establish a quiet industrial studio. Photographic product presentations carry the evidence; short medium-weight headings and ruled information keep the surrounding interface compact.\n\nThe current identity applies to the homepage, service directory, six service pages and four case editorial shells. Original product captures and interactive demos keep their native product themes. Historical concept pages are separate artifacts. This system supersedes the garden, global particle field, pill actions, illustrated service cards and enclosing portfolio shells previously recorded here.",
+    "northStar": "Frosted studio",
+    "overview": "Lancer places working digital products inside a quiet architectural studio. Olive charcoal, ivory lettering, muted sage and photographic light give the interface a calm, tactile atmosphere. Matte glass borrows depth from imagery beneath it; light borders and tint keep the content readable.\n\nThis is the user's pinned ТИШЕ / Green Rock direction adapted to Lancer, replacing the rejected Model table identity. It governs the homepage, service directory, six service pages and four case editorial shells. Genuine product captures and local demos keep their own product themes. The studio scene is a generated decorative illustration, not evidence of an actual agency office.",
     "keyCharacteristics": [
-      "Compact type and generous horizontal relationships.",
-      "Flat graphite fields, pearl text and restrained copper.",
-      "Shell-free photographic work and thin ruled information.",
-      "Tight action corners and softly clipped photo windows.",
-      "One authored material object with damped, visibility-aware motion.",
-      "Native disclosures and keyboard-operable production tabs."
+      "Olive charcoal, ivory and restrained sage.",
+      "Self-hosted Manrope with regular display weight and compact copy.",
+      "Photographic scenes, rounded media and tinted matte glass.",
+      "Equal project and service geometry with a bounded opening scene.",
+      "Visible static content enhanced by one-shot motion.",
+      "Native disclosures, keyboard-operable tabs and genuine product demonstrations."
     ],
     "rules": [
       {
@@ -317,24 +465,26 @@
         "section": "typography"
       },
       {
-        "name": "Flat Field Rule",
-        "body": "Keep editorial content on the shared field; use thin rules, spacing and artifact scale instead of enclosing cards or ambient panel shadows.",
+        "name": "Matter Beneath Rule",
+        "body": "Use matte glass where the scene or tonal field beneath supplies depth; pair blur with a readable tint and a light edge.",
         "section": "elevation"
       }
     ],
     "dos": [
-      "Do use the Model table palette, medium Manrope hierarchy and compact horizontal relationships.",
-      "Do present photographic work without outer cards and keep captions outside the image.",
+      "Do use the Frosted studio palette, regular Manrope display hierarchy and concise copy.",
+      "Do keep matte glass readable with tint, light borders and the authored backdrop fallback.",
+      "Do keep project and service media equal within each responsive grid.",
       "Do preserve native product themes, demo behavior and explicit simulation boundaries.",
-      "Do keep native keyboard behavior, visible copper focus and static content fallbacks.",
-      "Do distinguish generated interface visualizations from original product captures.",
-      "Do stop decorative motion offscreen, in hidden tabs and for reduced motion."
+      "Do retain keyboard access, sage focus and useful static content.",
+      "Do distinguish decorative studio imagery and generated device visualizations from original product captures.",
+      "Do respect reduced motion and stop small decorative loops offscreen or in hidden tabs."
     ],
     "donts": [
-      "Don't restore the garden, global particles, pill actions or illustrated service-card grid as the current Lancer identity.",
-      "Don't turn functional diagram nodes or local product-demo surfaces into a general content-card system.",
+      "Don't restore Model table, the garden or global particles as the current Lancer identity.",
+      "Don't turn the bounded hero into a mandatory viewport-height empty stage.",
+      "Don't present the fictional studio illustration as an actual agency office.",
       "Don't invent business outcomes, durations, model names, benchmark scores or AI delivery claims.",
-      "Don't replace inline SVG or drawn control indicators with text glyph icons."
+      "Don't replace inline SVG or drawn disclosure controls with text glyph icons."
     ]
   }
 }

@@ -1,6 +1,6 @@
 // Keep native details as the no-JS fallback; enhanced transitions can reverse mid-flight.
 export function setupDisclosures({reduced,allowed}){
- const states=[...document.querySelectorAll('.process-list details,.faq-answers details,.case-details details')].map(element=>({element,summary:element.querySelector('summary'),group:element.getAttribute('name'),wanted:element.open,timer:0,frame:0}));
+ const states=[...document.querySelectorAll('.process-list details,.faq-answers details,.case-details details,.service-audience details,.service-handover details')].map(element=>({element,summary:element.querySelector('summary'),group:element.getAttribute('name'),wanted:element.open,timer:0,frame:0}));
  states.forEach(state=>{state.element.removeAttribute('name');state.element.dataset.disclosureState=state.wanted?'open':'closed';});
  function settle(state){
   clearTimeout(state.timer);cancelAnimationFrame(state.frame);
