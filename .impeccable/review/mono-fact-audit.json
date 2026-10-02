@@ -1,0 +1,34 @@
+[
+  {
+    "scope": "intro/contact",
+    "preserved": true
+  },
+  {
+    "scope": "portfolio facts",
+    "preserved": true
+  },
+  {
+    "scope": "demo boundaries",
+    "preserved": true
+  },
+  {
+    "scope": "price/scope table",
+    "preserved": true
+  },
+  {
+    "scope": "loyalty tier and exclusions",
+    "preserved": true
+  },
+  {
+    "scope": "related work",
+    "preserved": true
+  },
+  {
+    "scope": "AI scope/truth",
+    "preserved": true
+  },
+  {
+    "scope": "phase claims",
+    "preserved": true
+  }
+]

@@ -6,6 +6,7 @@ import {breadcrumbs,escapeHtml} from './seo.mjs';
 import {serviceRoadmap} from './service-visuals.mjs';
 import {serviceContextVisual} from './service-stories.mjs';
 import {asciiMotif} from './ascii-motif.mjs';
+import {serviceSignal} from './digital-visuals.mjs';
 
 export const money=amount=>`от ${new Intl.NumberFormat('ru-RU').format(amount)} ₽`;
 const names={maverick:'Maverick',loyalty:'12К · Программа лояльности','gift-roulette':'Gift Roulette',tailcare:'TailCare'};
@@ -39,7 +40,7 @@ const includedCopy={
 function shell(title,description,path){return head(title,description,path).replace('class="theme-blue"','class="theme-blue lancer-site service-editorial"')+studioHeader('service');}
 const footer=()=>studioFooter().replace('<span>ЕСТЬ ИДЕЯ?</span>','').replaceAll('href="#','href="/#');
 
-function heroArt(s){return `<figure class="service-hero-art"><img src="/assets/services/${s.image}.webp" width="1536" height="1024" alt="Визуализация интерфейса: ${s.name}" loading="eager"></figure>`;}
+function heroArt(s){return `<div class="service-hero-art" aria-hidden="true">${serviceSignal(s.slug)}</div>`;}
 function included(s){const items=[...s.items.map(([title,text],i)=>[symbols[i%4],title,includedCopy[s.slug]?.[i]||text]),...s.extras];return `<section class="service-includes" id="includes" aria-labelledby="includes-title"><h2 id="includes-title">Что входит</h2><div class="included-grid">${items.map(([symbol,title,text])=>`<article>${icon(symbol)}<h3>${title}</h3><p>${text}</p></article>`).join('')}</div></section>`;}
 function caseProof(s){return `<section class="service-proof" aria-labelledby="proof-title"><div class="service-section-heading"><h2 id="proof-title">Кейсы</h2><p>${s.slug==='automation'?'Пример интеграции и обмена данными. AI-сценарии ниже — идеи для вашего проекта.':'Интерфейсы, устройство продукта и демонстрации.'}</p></div><div class="service-case-grid" data-count="${s.cases.length}">${s.cases.map(([slug])=>`<article class="service-case-card">${projectCover(slug,names[slug])}</article>`).join('')}${s.cases.length===1?`<div class="service-proof-context"><h3>Посмотрите систему в работе</h3><p>На странице проекта — интерфейсы, устройство продукта и интерактивная демонстрация.</p><a class="text-action" href="/cases/${s.cases[0][0]}/">Открыть проект ${icon('arrow')}</a></div>`:''}</div></section>`;}
 function examples(s){if(!s.aiExamples)return '';return `<section class="service-ai" aria-labelledby="ai-title"><div class="service-section-heading"><h2 id="ai-title">Где AI может быть полезен</h2><p>Возможные сценарии. Источники, проверки и права на действия определяем под ваш процесс.</p></div><div class="ai-example-grid">${s.aiExamples.map(example=>`<article>${icon(example.symbol)}<h3>${example.title}</h3><p>${example.text}</p><ol aria-label="Шаги примера">${example.flow.map(step=>`<li>${step}</li>`).join('')}</ol></article>`).join('')}</div></section>`;}

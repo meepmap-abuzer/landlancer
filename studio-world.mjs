@@ -53,12 +53,19 @@ if(object){
  },{rootMargin:'100px'});
  objectObserver.observe(object);
 }
-// The entrance belongs to the photographed scene; no content waits for a reveal.
+// The interface diagram is visible without JS. Pause decorative loops offscreen.
+const digitalScenes=[...document.querySelectorAll('[data-digital-scene]')];
+const sceneVisibility=new Map(digitalScenes.map(scene=>[scene,false]));
+function syncScenes(){digitalScenes.forEach(scene=>scene.classList.toggle('digital-running',sceneVisibility.get(scene)&&!reduced.matches&&!document.hidden));}
+const sceneObserver=new IntersectionObserver(entries=>{entries.forEach(entry=>sceneVisibility.set(entry.target,entry.isIntersecting));syncScenes();},{threshold:.05});
+digitalScenes.forEach(scene=>sceneObserver.observe(scene));
+document.addEventListener('visibilitychange',syncScenes);reduced.addEventListener('change',syncScenes);
+// Content is never hidden while waiting for an entrance.
 if(!reduced.matches){
- const photograph=document.querySelector('.hero-photograph');
+ const scene=document.querySelector('.hero-signal');
  const copy=document.querySelector('.hero-copy');
  const preview=document.querySelector('.hero-project');
- photograph?.animate([{transform:'scale(1.035)',filter:'blur(3px)'},{transform:'scale(1)',filter:'blur(0px)'}],{duration:1700,easing:'cubic-bezier(.16,1,.3,1)'});
+ scene?.animate([{opacity:.65,filter:'blur(4px)',transform:'translateY(12px)'},{opacity:1,filter:'blur(0px)',transform:'none'}],{duration:1200,easing:'cubic-bezier(.16,1,.3,1)'});
  copy?.animate([{opacity:.7,transform:'translateY(14px)'},{opacity:1,transform:'none'}],{duration:900,easing:'cubic-bezier(.16,1,.3,1)'});
  preview?.animate([{opacity:.75,transform:'translateY(20px)',backdropFilter:'blur(8px)'},{opacity:1,transform:'none',backdropFilter:'blur(22px)'}],{duration:1100,easing:'cubic-bezier(.16,1,.3,1)'});
  const panels=[...document.querySelectorAll('.studio-project,.service-list>a,.service-system,.case-story')];
@@ -70,5 +77,5 @@ if(!reduced.matches){
   });
  },{threshold:.08});
  panels.forEach(p=>entrance.observe(p));
- reduced.addEventListener('change',()=>{if(reduced.matches){entrance.disconnect();[photograph,copy,preview,...panels].filter(Boolean).forEach(p=>p.getAnimations().forEach(a=>a.finish()));}},{once:true});
+ reduced.addEventListener('change',()=>{if(reduced.matches){entrance.disconnect();[scene,copy,preview,...panels].filter(Boolean).forEach(p=>p.getAnimations().forEach(a=>a.finish()));}},{once:true});
 }

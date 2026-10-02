@@ -1,21 +1,22 @@
 ---
-name: Lancer Agency — Frosted studio
-description: A quiet photographic studio with olive charcoal, ivory, sage and image-backed matte glass.
+name: Lancer Agency — Monochrome studio
+description: A restrained digital studio with graphite grounds, pale Manrope, borderless matte groups and authored interface geometry.
 colors:
-  ground: "#192824"
-  surface: "#263730"
-  ink: "#f3f2ec"
-  muted: "#c2cbc4"
-  line: "#f3f2ec25"
-  accent: "#d0d3b9"
-  action-text: "#182721"
-  action-hover: "#dce2cf"
-  image-copy: "#e0e5dc"
-  panel-tint: "#1b2b24ad"
-  service-matte: "#242424"
-  scope-surface: "#f3f2ec08"
-  open-surface: "#f3f2ec09"
-  fallback-glass: "#273b32ed"
+  ground: "#141415"
+  surface: "#252527"
+  ink: "#f4f4f4"
+  muted: "#bdbdbf"
+  line: "#f4f4f425"
+  accent: "#dddddf"
+  action-text: "#171718"
+  panel-wash: "#ffffff06"
+  nav-wash: "#ffffff0a"
+  price-wash: "#ffffff0d"
+  selected-wash: "#ffffff15"
+  caption-tint: "#18181bcc"
+  service-matte: "#1e1e20"
+  diagram-matte: "#1d1d20"
+  open-wash: "#f4f4f409"
 typography:
   display:
     fontFamily: "Manrope, Arial, sans-serif"
@@ -63,7 +64,7 @@ typography:
     letterSpacing: "-.035em"
   case-display:
     fontFamily: "Manrope, Arial, sans-serif"
-    fontSize: "58px"
+    fontSize: "clamp(46px, 4.6vw, 68px)"
     fontWeight: 400
     lineHeight: 1.08
     letterSpacing: "-.035em"
@@ -81,6 +82,8 @@ rounded:
   disclosure-open: "14px"
   tab: "12px"
   chip: "25px"
+  diagram: "18px"
+  node: "6px"
 spacing:
   gutter: "clamp(22px, 4.4vw, 70px)"
   gutter-mobile: "22px"
@@ -99,11 +102,12 @@ components:
     rounded: "{rounded.action}"
     padding: "13px 21px"
   button-primary-hover:
-    backgroundColor: "{colors.action-hover}"
+    backgroundColor: "{colors.accent}"
   text-action:
     textColor: "{colors.ink}"
     typography: "{typography.text-action}"
   navigation:
+    backgroundColor: "{colors.nav-wash}"
     textColor: "{colors.ink}"
     rounded: "{rounded.action}"
     padding: "6px"
@@ -112,7 +116,7 @@ components:
     rounded: "{rounded.nav-link}"
     padding: "8px 19px"
   project-caption:
-    backgroundColor: "{colors.panel-tint}"
+    backgroundColor: "{colors.caption-tint}"
     textColor: "{colors.ink}"
     rounded: "{rounded.caption}"
     padding: "16px 19px"
@@ -122,22 +126,28 @@ components:
     rounded: "{rounded.panel}"
     padding: "25px"
   price-chip:
+    backgroundColor: "{colors.price-wash}"
     textColor: "{colors.ink}"
     rounded: "{rounded.chip}"
     padding: "6px 11px"
   included-card:
-    backgroundColor: "{colors.scope-surface}"
+    backgroundColor: "{colors.panel-wash}"
     textColor: "{colors.ink}"
     rounded: "{rounded.scope}"
     padding: "26px"
   diagram-panel:
+    backgroundColor: "{colors.diagram-matte}"
     textColor: "{colors.ink}"
-    rounded: "{rounded.media}"
-    padding: "22px"
+    rounded: "{rounded.diagram}"
+    padding: "28px"
   process-tab:
+    backgroundColor: "{colors.panel-wash}"
     rounded: "{rounded.tab}"
     padding: "16px 20px"
+  process-tab-selected:
+    backgroundColor: "{colors.selected-wash}"
   process-panel:
+    backgroundColor: "{colors.panel-wash}"
     rounded: "{rounded.panel}"
     padding: "32px 200px 32px 32px"
   faq-row:
@@ -149,153 +159,171 @@ components:
 
 ## Overview
 
-**Creative North Star: "Frosted studio"**
+**Creative North Star: "Monochrome studio"**
 
-Lancer places working digital products inside a quiet architectural studio. Olive charcoal, ivory lettering, muted sage and photographic light give the interface a calm, tactile atmosphere. Matte glass borrows depth from imagery beneath it; light borders and tint keep the content readable.
+Lancer's editorial shell uses graphite fields, pale lettering and quiet tonal groups. Regular Manrope headings give short offers room; authored interface windows, routes and cursor geometry make digital work visible without decorative interior photography. Large groups are borderless. Thin strokes inside diagrams describe interfaces and relationships.
 
-This is the user's pinned ТИШЕ / Green Rock direction adapted to Lancer, replacing the rejected Model table identity. It governs the homepage, service directory, six service pages and four case editorial shells. Genuine product captures and local demos keep their own product themes. The studio scene is a generated decorative illustration, not evidence of an actual agency office.
+This is the user's approved monochrome amendment to the established homepage, service directory, six service pages and four case shells. It preserves their structure and working demonstrations. Homepage work covers are individually generated device visualizations grounded in original product captures, with neutral graphite and silver surroundings. Real screenshots on service proof cards and native product demos retain their source colors.
 
 **Key Characteristics:**
 
-- Olive charcoal, ivory and restrained sage.
-- Self-hosted Manrope with regular display weight and compact copy.
-- Photographic scenes, rounded media and tinted matte glass.
-- Equal project and service geometry with a bounded opening scene.
-- Visible static content enhanced by one-shot motion.
-- Native disclosures, keyboard-operable tabs and genuine product demonstrations.
+- Neutral black, gray and white agency surfaces.
+- Self-hosted Manrope with regular display weight and compact supporting copy.
+- Borderless matte groups, capsule actions and gently curved media.
+- Meaningful interface geometry and bounded opening compositions.
+- Equal project and service geometry within each responsive grid.
+- Visible static content, keyboard access and restrained motion.
 
 ## Colors
 
-The palette pairs a green charcoal field with warm pale text and a quiet sage interaction accent. The frontmatter records the shipped CSS values.
+The palette uses pale type and gray emphasis on a continuous graphite field; the frontmatter is the normative token source.
 
 ### Primary
 
-- **Sage** (accent): selection, focus outlines, diagram connections, selected-tab arrows and small decorative motifs.
+- **Pale gray** (accent): focus, selection, selected-tab arrows, functional diagram emphasis and primary-action hover.
 
 ### Neutral
 
-- **Olive charcoal** (ground): the continuous agency field.
-- **Studio green** (surface): functional diagram nodes and structured example surfaces.
-- **Ivory** (ink): headings, navigation and solid primary actions.
-- **Soft gray green** (muted): descriptions and secondary information.
-- **Light translucent edge** (line): panel borders, disclosure dividers and price rows.
-- **Deep action green** (action-text) and **pale action sage** (action-hover): action lettering and hover fill.
-- **Image ivory** (image-copy): copy over the hero and project photographs.
-- **Tinted glass** (panel-tint): image-backed project captions.
-- **Artwork matte** (service-matte): the six service illustration grounds.
-- **Scope wash** (scope-surface) and **open wash** (open-surface): subtle card and disclosure separation.
-- **Opaque glass fallback** (fallback-glass): the authored fallback on supported selector groups when backdrop filtering is unavailable.
+- **Graphite** (ground): continuous page field.
+- **Dark gray** (surface): functional diagram nodes and native structured examples.
+- **Pale white** (ink): headings, navigation, solid actions and arrow controls.
+- **Soft gray** (muted): descriptions and secondary information.
+- **Quiet line** (line): disclosure, price and functional editorial dividers.
+- **Action graphite** (action-text): lettering on solid pale controls.
+- **Matte wash** (panel-wash): scope, process, example and capability groups.
+- **Navigation wash** (nav-wash): the capsule navigation and case-category pills.
+- **Price wash** (price-wash): the borderless starting-price pill.
+- **Selected wash** (selected-wash): the selected production tab.
+- **Graphite caption** (caption-tint): readable image-overlay captions.
+- **Service matte** (service-matte) and **diagram matte** (diagram-matte): grounds for authored service graphics.
+- **Open wash** (open-wash): expanded disclosure state.
 
-**The Product Theme Rule.** Apply the shared palette to Lancer's editorial shell; preserve the original product colors within captures and interactive demos.
+**The Product Theme Rule.** Apply monochrome to Lancer's editorial shell; preserve original interface colors inside product captures, generated device visualizations and interactive demos.
 
 ## Typography
 
 **Display Font:** Manrope, with Arial and sans-serif fallbacks.
 **Body Font:** Manrope, with the same fallbacks.
-**Label/Mono Font:** UI monospace / Consolas for the small process drawing; service ASCII uses Consolas / monospace.
+**Label/Mono Font:** UI monospace / Consolas for the decorative process drawing; service ASCII uses Consolas / monospace.
 
-Manrope is self-hosted in Cyrillic and Latin WOFF2 files, with variable weights 200–800 and font-display swap. Regular display weight and close tracking make the scene calm; medium tertiary titles and short sentence-case labels keep controls practical.
+Manrope is self-hosted in Cyrillic and Latin WOFF2 files, with variable weights 200–800 and font-display swap. Regular display weight and close tracking establish the calm voice. Medium tertiary titles and sentence-case action labels support everyday reading.
 
 ### Hierarchy
 
-- **Display:** the opening offer. Compact desktop overrides it to 46px at 1100px; the narrow homepage uses 36px at 500px.
-- **Headline:** section titles, with the shared headline token. Local service/system and case-story titles use 30–34px, becoming 25–28px on mobile.
+- **Display:** homepage offer. Compact desktop uses 46px at 1100px, mobile 40px at 750px and 36px at 500px.
+- **Headline:** the shared section-title ramp. Functional service headings use 34px, becoming 28px on mobile; case-story headings use 30px, becoming 25px.
 - **Title:** the tertiary base. Project captions use 23px; service and included-work titles use 18–19px.
-- **Body:** the base and paragraph rhythm are recorded above. Main offer and service/case copy generally use 14–15px; compact descriptions and metadata use 11–13px. Paragraphs inherit a 65ch maximum, with tighter local measures.
-- **Action:** the primary control label; text actions use their own slightly larger role.
-- **FAQ:** question text; answers use 14px and inherit the 1.8 line height.
+- **Body:** the base paragraph rhythm. Offer, service and case copy generally use 14–15px; compact metadata uses 11–13px. Paragraphs have a 65ch maximum, with tighter local measures.
+- **Action / text action:** solid controls and secondary links use the separate recorded roles.
+- **FAQ:** question text; answers use 14px and a 1.8 line height.
 - **Service display:** individual offers, becoming 35px below 750px.
-- **Case display:** the product name, becoming 44px below 750px.
-- **Motif:** a small decorative drawing with no information role.
+- **Case display:** centered product names, becoming 46px below 750px.
+- **Motif:** decorative drawing with no information role.
 
-**The Short Offer Rule.** Establish hierarchy with the actual title and a short useful description; keep detailed scope on service and case surfaces.
+**The Useful Type Rule.** Let the actual offer, project name and useful description create hierarchy; detailed scope belongs in the supporting content.
 
 ## Layout
 
-The shared content width is at most 1560px, minus two responsive gutters. The implemented gutter clamp reaches 70px; below 750px it is 22px. Native browser scrolling and anchor links remain available.
+Content is at most 1560px wide, with the recorded fluid gutters. Below 750px the gutter is 22px. Native scrolling and anchor links remain available.
 
-The homepage navigation floats over the full-width scene; inner-page navigation is in normal flow. The navigation row has a 70px minimum, becoming 64px below 750px. The desktop hero uses height clamp(580px,49vw,690px), giving about 620px at the reviewed 1265px viewport; wide screens use 690px. It becomes 730px below 750px and 710px below 500px. The offer is anchored left and the compact case preview right; mobile keeps copy above the case preview inside the scene.
+The homepage navigation floats over a full-width opening. Inner-page navigation stays in normal flow. The navigation row has a 70px minimum, becoming 64px below 750px. The desktop hero is 570px high, 540px at the compact 1100px breakpoint and 610px at 1800px and above. A left offer and two actions face a meaningful authored interface assembly. Below 750px the hero becomes content-sized, with copy above a bounded scene and no mandatory viewport height.
 
-Four projects share equal two-column geometry and a 24px gap; below 500px they form one column. Their photo ratio is 1.55 on desktop, 1.1 on tablet and 1.25 on narrow mobile. Captions overlay the bottom of each photograph. Six service cards share equal three-column geometry, a 22px gap and a 1.33 ratio; tablet uses two columns, narrow mobile one. Final service artwork occupies 86% of the card width and 65.4% of its height, inset 7% from the left and aligned to the bottom. Intersecting masks blend the top 18% and each horizontal edge 10% into the matte ground while preserving device scale.
+Four homepage projects share equal two-column geometry and a 24px gap, becoming one column below 500px. Their media ratio is 1.55 on desktop, 1.1 on tablet and 1.25 on narrow mobile. Captions overlay the bottom of the generated device covers. Service proof cards use actual captures with their own screen-fitting inset, rather than reusing those generated homepage covers.
 
-Homepage section ends generally use 80–90px on desktop and 64px on mobile. Service sections use the recorded 68px / 44px rhythm. Four process tabs share a desktop row and become 2×2 below 500px. Their frosted panel has a 190px desktop minimum and becomes content-sized below 750px. FAQ has two desktop columns and one mobile column. The close repeats the studio image, a glass contact panel and a large subdued wordmark.
+Six service cards share three equal desktop columns and a 22px gap. They become two columns below 750px and one below 500px. The final desktop ratio is 1.25 with a 310px minimum; compact desktop uses a 270px minimum and mobile a 300px minimum. The artwork is a contained SVG interface diagram under the title and above the price.
 
-Service heroes pair copy, facts and actions with an illustration, then show a separate functional diagram. Included work uses three equal columns, two on tablet and one below 500px. Audience situations and handover use concise native disclosures. Related cases retain equal cover treatment. Four roadmap stops stay horizontal; mobile scrolls within a focusable track with 240px stops. Price rows remain open and ruled, beside a frosted scope aside; mobile stacks them. AI examples retain their labelled hypothetical scenarios and connected mobile 2×2 flows.
+Homepage section ends use the recorded 80–90px desktop / 64px mobile rhythm. Service sections use the 68px / 44px rhythm. Four production tabs form a desktop row and become 2×2 below 500px. Their panel has a 190px desktop minimum and fits content below 750px. FAQ uses two desktop columns and one mobile column. A plain dark contact close and subdued large wordmark finish the shell.
 
-Case openings remain text-led, followed by two alternating generated device spreads and a genuine local product demo. The shell uses rounded containers, light borders and shared spacing around those artifacts. Story sections stack below 750px. Capabilities use four columns at full desktop and two at 1100px. Product-specific demos keep their original dimensions and visual language.
+Service heroes pair copy, facts and actions with an authored diagram. A separate functional diagram explains the system. Scope cards use three columns, two on tablet and one below 500px. Four roadmap stops stay horizontal; mobile scrolls within a focusable track with 240px stops. Price rows remain open and ruled beside a matte scope aside. AI examples retain connected four-step flows, becoming a compact 2×2 sequence on mobile.
+
+Case openings and story introductions are centered single-column compositions with bounded copy, pills and a demo action. No outer opening box or empty right text column remains. Alternating device spreads, source-style demos, capabilities and architecture keep the established structure. Story and demo sections stack below 750px; capability cards use four full-desktop columns and two at 1100px.
+
+**The Bounded Stage Rule.** Keep openings proportionate to their useful content; mobile text and diagrams establish their own height.
 
 ## Elevation & Depth
 
-Depth comes from the photographic scene, tinted translucent panels, blur and light borders. The shared editorial panel system has no ambient card shadow. Primary actions are flat at rest. Native product-demo shadows remain local to their product.
+Depth comes from tonal separation, overlapping interface geometry and the generated device covers. Shared editorial panels have no ambient shadow and no perimeter frame. Solid actions are flat at rest. Product-demo shadows remain local to their product.
 
-Matte surfaces use a restrained diagonal translucent wash, a light 1px edge and backdrop blur (22px) with saturation (110%). Project captions combine their own darker tint with the same blur. Price chips and the image-dialog backdrop use blur (14px). The source provides an opaque fallback for the shared frost, navigation, project-caption and process-panel selectors; retain readable tint when extending the treatment.
+Some existing navigation, caption, process and shared matte selectors retain backdrop blur (22px). Image captions have a darker tint so they stay readable over covers. The image-dialog backdrop uses blur (14px). The existing shared fallback supplies an opaque dark tint where backdrop filtering is unsupported. Border removal supersedes older frosted-border declarations; retaining a functional diagram stroke or editorial divider does not authorize an outer panel frame.
 
-**The Matter Beneath Rule.** Use matte glass where the scene or tonal field beneath supplies depth; pair blur with a readable tint and a light edge.
+**The Tonal Grouping Rule.** Separate major groups with a dark wash and spacing. Reserve thin strokes for functional relationships and dividers.
 
 ## Shapes
 
-Primary actions and navigation use capsules; nav links have a slightly tighter capsule. Media, hero proof, diagram panels, case opening and demo surrounds use the media radius. Service cards and process panels use the panel radius. Included-work and capability cards use the scope radius. Image captions are softly curved; open disclosures get a small curved wash. Price and case-category chips are pills. Small circular arrows remain functional directional controls.
+Actions and navigation use capsules; nav links use a tighter capsule. Project media and device spreads use the media radius, becoming 18px on mobile. Service cards and process panels use the panel radius. Scope and capability cards use the scope radius. Captions and expanded disclosures use their own smaller curves. Prices and category labels are pills. Functional diagram nodes use compact corners, and small circular arrow controls remain directional actions.
+
+Centered case openings and the closing contact area are open compositions without a surrounding card shape.
 
 ## Components
 
 ### Actions
 
-The ivory primary action uses deep green lettering, an inline SVG arrow, the recorded padding and a 48px minimum target. Hover shifts to pale sage and rises 2px; active returns to rest. Text links use a 44px target and hover underline. Shared keyboard focus is a 2px sage outline, offset 5px. The header CTA and case-return action hide below 750px while navigation stays visible.
+Pale solid actions use dark lettering, inline SVG arrows, the recorded padding and a 48px minimum target. Hover changes to pale gray and rises 2px; active returns to rest. Text actions have a 44px target and hover underline. Keyboard focus is a 2px accent outline, offset 5px. Header CTA and case-return controls hide below 750px while navigation remains visible.
 
 ### Navigation
 
-A small authored layer SVG and Manrope wordmark anchor the floating homepage bar. The navigation capsule has matte blur, light edging and a 6px inset; links use the recorded padding and a subtle translucent hover/current wash. Inner pages keep the same material in normal document flow. Home/service links lead to work, services and process; case links lead to overview, screens and demo.
+An authored layer SVG and Manrope wordmark anchor the capsule. The navigation has a subtle wash, a 6px inset, no perimeter border and a restrained translucent hover/current state. The homepage places it over the opening field; inner pages keep it in normal flow. Link padding narrows responsively to fit the same visible routes.
 
 ### Project media and service cards
 
-Equal rounded project media carry a bottom glass caption and a circular inline arrow. Image hover scales to 1.045 over 900ms; the arrow rotates 45 degrees. Six illustrated service links use the same card dimensions, a short title/description and a small frosted price chip. The service card rises 4px over 550ms; its image scales to 1.035 over 800ms. Generated case spreads retain the native image dialog and explanatory visualization captions.
+Equal homepage media hold generated graphite/silver device covers with colored product interfaces. A dark borderless caption overlays each cover with a circular inline arrow. Image hover scales to 1.045 over 900ms; the arrow rotates 45 degrees. Service proof previews use actual screenshots; phone captures are contained vertically and wide captures are fitted at the top.
 
-### Scope cards and diagrams
+Six service links use equal matte cards with authored SVG graphics, short titles/descriptions and a borderless starting-price pill. The whole card rises 4px over 550ms; its diagram rises 5px over 700ms. Case-story device spreads retain image dialogs and explicit visualization captions.
 
-Included-work cards use a quiet translucent fill, a light border, concise text and an inline SVG. Their desktop padding is 26px, 21px on tablet and 22px in the narrow single-column layout. Functional page maps, Telegram connections, CRM states and success/error paths sit within a frosted panel; their nodes remain literal examples of structure. The horizontal roadmap and ruled price rows remain readable functional information.
+### Scope cards and functional diagrams
+
+Scope cards use a subtle wash, no perimeter border, concise copy and an inline SVG. Desktop padding is 26px, tablet 21px and narrow single-column 22px. Practical maps, Telegram connections, CRM states and error/success paths sit in borderless grouped fields. Diagram strokes retain their functional purpose. All three website branches join both buses, with 24px vertical connectors and gap-corrected horizontal spans.
 
 ### Chips
 
-Service starting-price chips use a dark translucent fill, light border, 14px backdrop blur and the recorded inset. Case-category chips use a subtle wash and light border. These describe scope or category; they do not imply an interactive filter.
+Starting-price pills have a quiet translucent fill, no border and no blur. Their source fill is slightly stronger than category pills. Case-category pills use the navigation wash and no perimeter stroke. These labels describe price scope or category rather than an interactive filter.
 
 ### Production tabs
 
-Four native buttons use tablist/tab/tabpanel semantics, aria-selected, aria-controls and roving tabindex. Click selects; Left/Right, Home and End move selection and focus. A selected button gets a sage wash and edge; its arrow rotates 45 degrees. The selected panel settles by 4px over 260ms. Mobile keeps the description and deliverable together and hides the decorative drawing.
+Native buttons use tablist/tab/tabpanel semantics, aria-selected, aria-controls and roving tabindex. Click selects; Left/Right, Home and End move selection and focus. The selected button gets the selected wash and an accent arrow rotated 45 degrees. The panel settles by 4px over 260ms. Mobile keeps description and deliverable together and hides the decorative drawing.
 
 ### Native disclosures
 
-FAQ, audience, handover and case architecture preserve native details/summary behavior without JavaScript. Authored horizontal/vertical strokes form plus/minus indicators. FAQ hover uses sage; an open answer receives a curved translucent wash. Enhanced height transitions take 440ms with cubic-bezier(.22,1,.36,1), reverse from the current rendered height and settle immediately in hidden tabs or reduced motion. Closing text fades over 220ms and shifts 4px over 280ms. The first service FAQ starts open.
+FAQ, audience, handover and case architecture preserve details/summary behavior without JavaScript. Two authored strokes form plus/minus indicators. FAQ hover uses the accent; expanded answers receive a curved wash. Enhanced height transitions take 440ms with cubic-bezier(.22,1,.36,1), reverse from the current rendered height and settle in hidden tabs or reduced motion. Closing text fades over 220ms and shifts 4px over 280ms. The first service FAQ starts open.
 
-### Scene and motion
+### Interface assembly and motion
 
-The generated studio image settles from scale 1.035 and blur 3px over 1700ms. Hero copy and case preview settle over 900ms and 1100ms. Project/service/diagram/story entrances are one-shot, visible by default and take 650ms with at most 150ms of local stagger. All use the shared studio easing. Reduced motion skips these JavaScript entrances, finishes active ones and removes CSS animations/transitions. The homepage mounts no brand-object or continuous WebGL scene.
+The hero's idea, interface, system and launch geometry is a decorative digital illustration. It carries no performance metric or claim about a delivered product. Authored stroke arrows replace text glyphs; AI flow arrows likewise use drawn chevrons.
 
-Small ASCII motifs update at 700ms only while visible in an active tab and without reduced motion. Native disclosures settle when hidden. Historical WebGL loading code remains conditional on an absent brand-object element; it is not a current homepage signature.
+The scene settles from blur 4px and a 12px shift over 1200ms; copy settles over 900ms. Project, service, diagram and story entrances are visible by default, run once for 650ms and stagger by at most 150ms. The common ease is cubic-bezier(.16,1,.3,1). Reduced motion skips entrances, finishes active ones and removes CSS animations/transitions.
 
-### Images and loading
+Connection pulses take 5.6s and cursor/click cycles 8s. They run only while a scene intersects the viewport, the document is visible and reduced motion is off. Small ASCII motifs update at 700ms under the same visibility policy. The homepage emits no brand-object element and mounts no continuous WebGL scene.
 
-Static markup retains real sources, alt text, intrinsic sizes, async decoding and native lazy loading. The decorative hero is eager and high priority, with full and 960px WebP candidates. Product covers, service illustrations and device spreads use responsive candidates from the static build. A nonblocking progress line and local indicators preserve the content while assets load. Case image dialogs assign their source/caption before opening and return focus on close.
+**The Visible Default Rule.** Useful text, media and diagrams are present before JavaScript; decoration must pause offscreen, in hidden documents and under reduced motion.
+
+### Images and browser surfaces
+
+Images retain real sources, alt text, intrinsic dimensions, async decoding, native lazy loading and responsive WebP candidates. Current work-cover originals are 1536×1024 with 768px derivatives. The hero and service diagrams use inline SVG, with no decorative photograph to preload. A nonblocking progress line and local indicators preserve useful content while assets load. Dialogs assign image/caption before opening and restore focus on close.
+
+The root agency viewport uses a dark color scheme, a graphite scrollbar track and gray thumb. WebKit width/height is 7px; the standard scrollbar width is thin. Preserve this browser-surface treatment when extending canonical agency pages.
 
 ## Do's and Don'ts
 
 ### Do:
 
-- **Do** use the Frosted studio palette, regular Manrope display hierarchy and concise copy.
-- **Do** keep matte glass readable with tint, light borders and the authored backdrop fallback.
+- **Do** use monochrome editorial surfaces, regular Manrope and concise useful copy.
+- **Do** group major panels with tonal washes and spacing.
 - **Do** keep project and service media equal within each responsive grid.
-- **Do** preserve native product themes, demo behavior and explicit simulation boundaries.
-- **Do** retain keyboard access, sage focus and useful static content.
-- **Do** distinguish decorative studio imagery and generated device visualizations from original product captures.
-- **Do** respect reduced motion and stop small decorative loops offscreen or in hidden tabs.
+- **Do** preserve authentic product colors, demo behavior and simulation boundaries.
+- **Do** retain keyboard access, visible pale-gray focus and useful static content.
+- **Do** distinguish generated device visualizations from original product captures.
+- **Do** pause decorative loops offscreen, in hidden documents and under reduced motion.
 
 ### Don't:
 
-- **Don't** restore Model table, the garden or global particles as the current Lancer identity.
-- **Don't** turn the bounded hero into a mandatory viewport-height empty stage.
-- **Don't** present the fictional studio illustration as an actual agency office.
+- **Don't** restore olive studio photography, Model table, the garden or global particles as the current identity.
+- **Don't** add decorative perimeter frames to major matte panels.
+- **Don't** leave an empty visual column beside centered case copy.
+- **Don't** turn a bounded opening into a mandatory viewport-height empty stage.
+- **Don't** present generated devices as guaranteed pixel-identical interface captures.
 - **Don't** invent business outcomes, durations, model names, benchmark scores or AI delivery claims.
 - **Don't** replace inline SVG or drawn disclosure controls with text glyph icons.
 
-Source authority: frost.css loaded after lancer.css, service-editorial.css and case-editorial.css; src/agency-home.mjs, src/studio-sections.mjs, src/agency-shared.mjs, src/service-pages.mjs, src/agency-cases.mjs, studio-world.mjs and disclosures.mjs. The pinned code-led direction is .impeccable/review/greenrock-direction.md; .impeccable/review/frost-finish-review.md records the full finish review and its two material fixes. Final service-seam verification is recorded by the subsequent frost verdict; do not read the pre-repair finding as the final disposition.
+Source authority: frost.css loaded after lancer.css, service-editorial.css and case-editorial.css; src/agency-home.mjs, src/digital-visuals.mjs, src/project-cover.mjs, src/studio-sections.mjs, src/agency-shared.mjs, src/service-pages.mjs, src/agency-cases.mjs, studio-world.mjs and disclosures.mjs. The user's amendment is .impeccable/review/monochrome-direction.md. mono-finish-review.md and mono-fix-verdict.md record the material review and resolved scrollbar/icon findings; mono-runtime.md records local runtime evidence. mono-cover-review.md records the separate shipped review of all four final homepage covers and their responsive placement; this scoped review does not repeat full-surface QA. Public deployment verification is outside these local gates.
 
-Not canonized or repaired by this documentation pass: legacy selectors and unused historical scenes/assets; dated homepage-exhibit and universal local-reset wording in DEMOS.md; hidden historical project-type labels. These are retained historical code, not rules for new screens. Product-demo styles and functional directed relationships remain their own legitimate systems. No actual browser-zoom proof or Safari/Firefox verification is claimed.
+Not canonized or repaired by this documentation pass: superseded photographic selectors/assets and conditional object code; dated homepage-exhibit and universal local-reset wording in DEMOS.md; hidden historical project-type labels. These remain source/history drift, not reusable visual rules. Native product-demo styles and functional directed relationships remain legitimate local systems. No actual browser-zoom proof, Safari/Firefox check or deployment claim is made here.

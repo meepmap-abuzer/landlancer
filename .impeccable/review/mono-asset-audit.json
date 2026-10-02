@@ -1,0 +1,68 @@
+{
+  "activeRasterCount": 36,
+  "missing": [],
+  "activeRasters": [
+    "assets/covers/loyalty-mono-v2.webp",
+    "assets/responsive/covers-loyalty-mono-v2-768.webp",
+    "assets/covers/maverick-mono-v2.webp",
+    "assets/responsive/covers-maverick-mono-v2-768.webp",
+    "assets/covers/tailcare-mono-v2.webp",
+    "assets/responsive/covers-tailcare-mono-v2-768.webp",
+    "assets/covers/gift-roulette-mono-v2.webp",
+    "assets/responsive/covers-gift-roulette-mono-v2-768.webp",
+    "assets/screenshots/pets-home.webp",
+    "assets/screenshots/12k-dashboard.webp",
+    "assets/screenshots/club-home.webp",
+    "assets/screenshots/gift-home-current.webp",
+    "assets/case-visuals/loyalty-member.webp",
+    "assets/responsive/case-visuals-loyalty-member-768.webp",
+    "assets/case-visuals/loyalty-business.webp",
+    "assets/responsive/case-visuals-loyalty-business-768.webp",
+    "assets/covers/gift-roulette.webp",
+    "assets/responsive/covers-gift-roulette-768.webp",
+    "assets/covers/maverick.webp",
+    "assets/responsive/covers-maverick-768.webp",
+    "assets/covers/tailcare.webp",
+    "assets/responsive/covers-tailcare-768.webp",
+    "assets/case-visuals/maverick-activation.webp",
+    "assets/responsive/case-visuals-maverick-activation-768.webp",
+    "assets/case-visuals/maverick-engagement.webp",
+    "assets/responsive/case-visuals-maverick-engagement-768.webp",
+    "assets/covers/loyalty.webp",
+    "assets/responsive/covers-loyalty-768.webp",
+    "assets/case-visuals/tailcare-home.webp",
+    "assets/responsive/case-visuals-tailcare-home-768.webp",
+    "assets/case-visuals/tailcare-catalog.webp",
+    "assets/responsive/case-visuals-tailcare-catalog-768.webp",
+    "assets/case-visuals/gift-games.webp",
+    "assets/responsive/case-visuals-gift-games-768.webp",
+    "assets/case-visuals/gift-rounds.webp",
+    "assets/responsive/case-visuals-gift-rounds-768.webp"
+  ],
+  "captures": [
+    {
+      "name": "mono-covers-row1",
+      "width": 1270,
+      "height": 714,
+      "format": "jpeg"
+    },
+    {
+      "name": "mono-covers-row2",
+      "width": 1270,
+      "height": 714,
+      "format": "jpeg"
+    },
+    {
+      "name": "mono-covers-mobile-row1",
+      "width": 380,
+      "height": 760,
+      "format": "jpeg"
+    },
+    {
+      "name": "mono-covers-mobile-row2",
+      "width": 380,
+      "height": 760,
+      "format": "jpeg"
+    }
+  ]
+}

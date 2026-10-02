@@ -1,5 +1,15 @@
 # Asset provenance
 
+## October 2: Monochrome studio amendment
+
+The user's later instruction restores illustrated covers specifically to the homepage “Работы” grid. Four new built-in image_gen renders in `assets/covers/*-mono-v2.webp` depict the actual project's interface on a realistic device, in neutral graphite/silver/frosted-glass studio compositions. Original product captures were supplied as interface references. These are fictional visualizations, not documentary photographs or guaranteed pixel-exact captures. The four 768px WebP derivatives and every original record the exact prompt and input origin in adjacent sidecars. Home uses these new covers; service proof cards retain actual captures, and hero/service illustrations remain vector geometry.
+
+The initial monochrome request removed decorative photography while retaining the page structure. Home hero and service illustrations use authored vector interface geometry from `src/digital-visuals.mjs`, and the footer is a plain neutral field. Those regions introduce no new raster. The diagram is a conceptual explanation of design and development, not a captured product or performance claim.
+
+Service case previews reuse the original `club-home.webp`, `12k-dashboard.webp`, `pets-home.webp` and `gift-home-current.webp` captures described below; those same captures are references for the new homepage covers. Their adjacent provenance sidecars record the existing capture origins and fictional demo fixtures. Product colors remain native inside the captured interfaces. Generated physical device spreads inside case stories remain interface visualizations with the visible caveat; original captures and interactive demos are separate evidence.
+
+The earlier studio, service and cover illustrations remain in versioned historical assets but are no longer used by the primary home/service presentations. They are retained because the user asked to remove them “for now”; this does not make them current design authority.
+
 ## October 2: Frosted studio
 
 `assets/studio/glass-studio.webp` (1672×941) and `glass-studio-960.webp` (960×540) were generated with the built-in image_gen tool and encoded to WebP. They depict a fictional studio; they are decorative illustrations, not photographs of Lancer's office. The exact generation prompt, origin and original output path are preserved in the adjacent `.webp.json` sidecars. No client work is attributed to the interfaces within this decorative scene. Existing project covers and case device visualizations retain their recorded origins.

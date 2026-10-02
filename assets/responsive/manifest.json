@@ -88,5 +88,25 @@
     "sourceWidth": 1536,
     "small": "/assets/responsive/case-visuals-tailcare-home-768.webp",
     "width": 768
+  },
+  "/assets/covers/loyalty-mono-v2.webp": {
+    "sourceWidth": 1536,
+    "small": "/assets/responsive/covers-loyalty-mono-v2-768.webp",
+    "width": 768
+  },
+  "/assets/covers/maverick-mono-v2.webp": {
+    "sourceWidth": 1536,
+    "small": "/assets/responsive/covers-maverick-mono-v2-768.webp",
+    "width": 768
+  },
+  "/assets/covers/tailcare-mono-v2.webp": {
+    "sourceWidth": 1536,
+    "small": "/assets/responsive/covers-tailcare-mono-v2-768.webp",
+    "width": 768
+  },
+  "/assets/covers/gift-roulette-mono-v2.webp": {
+    "sourceWidth": 1536,
+    "small": "/assets/responsive/covers-gift-roulette-mono-v2-768.webp",
+    "width": 768
   }
 }
