@@ -1,6 +1,6 @@
 /* Graphite studio: frosted surfaces with a restrained saffron action accent. */
 :root{--studio-ground:#141415;--studio-surface:#252527;--studio-ink:#f4f4f4;--studio-muted:#bdbdbf;--studio-line:#f4f4f425;--studio-accent:#e4c369;--studio-accent-hover:#f0d58d;--studio-accent-wash:#e4c36914;--studio-action-ink:#171718;--studio-gutter:clamp(22px,4.4vw,70px);--studio-width:1560px;--studio-ease:cubic-bezier(.16,1,.3,1)}
-:root{--studio-glass-pane:linear-gradient(135deg,#ffffff26 0%,#ffffff0a 55%,#ffffff12 100%);--studio-glass-caption:#141417ad;--studio-glass-shadow:0 14px 34px #00000026;--studio-glass-filter:blur(24px) saturate(105%)}
+:root{--studio-glass-pane:#ffffff08;--studio-glass-caption:#141417ad;--studio-glass-shadow:none;--studio-glass-filter:blur(24px) saturate(105%)}
 html:has(body.lancer-site){color-scheme:dark;scrollbar-color:#717174 #141415;scrollbar-width:thin}
 html:has(body.lancer-site)::-webkit-scrollbar{width:7px;height:7px}
 html:has(body.lancer-site)::-webkit-scrollbar-track{background:#141415}
@@ -217,7 +217,7 @@ html:has(body.lancer-site)::-webkit-scrollbar-thumb{background:#717174;border-ra
 /* Open page structure and borderless groups remain independent of the material. */
 .frost,.studio-nav nav,.process-panels,.pricing-columns aside,.portfolio-description,.included-grid article,.ai-example-grid article,.service-faq-art,.directory-intro>div:last-child,.service-handover details,.case-opening-copy,.case-capability-grid article,.case-related a,.end-contact>div{border:0;background:#ffffff06}
 .studio-nav nav{background:var(--studio-glass-pane)}
-.portfolio-description{background:linear-gradient(120deg,#ffffff0f,transparent 60%,#ffffff05),var(--studio-glass-caption)}
+.portfolio-description{background:var(--studio-glass-caption)}
 .portfolio-description p{color:var(--studio-ink)!important}
 .project-photo.project-interface{display:flex;align-items:flex-start;justify-content:center;padding:39px 38px 110px;background:#202023}
 .project-photo.project-interface::after{display:none}
@@ -284,13 +284,6 @@ html:has(body.lancer-site)::-webkit-scrollbar-thumb{background:#717174;border-ra
 .case-story-intro h2{max-width:30ch;margin-inline:auto}
 .case-story-intro p{max-width:58ch;margin:16px auto 0}
 .case-visual-note{text-align:center;max-width:68ch;margin-inline:auto!important;padding-bottom:20px}
-.map-branches{column-gap:12px;row-gap:0;margin-block:24px;padding-block:24px}
-.map-branches::before,.map-branches::after{left:calc((100% - 24px)/6);right:calc((100% - 24px)/6)}
-.map-root::after,.map-action::before,.map-branches>span::before,.map-branches>span::after{content:'';display:block;position:absolute;left:50%;width:1px;height:24px;background:#ffffff35}
-.map-branches>span::after{top:100%;bottom:auto}.map-branches>span::before{bottom:100%;top:auto}
-.map-root,.map-action,.map-branches>span{border:0;background:#ffffff08}
-.lancer-site .map-action>svg{width:14px;height:14px;display:inline-block;vertical-align:middle;margin-left:10px}
-.lancer-site .board-arrow>svg{width:15px;height:15px;transform:rotate(45deg)}
 @media(min-width:1800px){.lancer-site .studio-hero{height:610px}}
 @media(max-width:1100px){.lancer-site .studio-hero{height:540px;gap:14px}.lancer-site .hero-copy h1{font-size:46px}.hero-signal{max-width:500px}.service-list>a{min-height:270px}.service-list>a>.service-signal{inset:75px 5px 10px}}
 @media(max-width:750px){
@@ -304,15 +297,17 @@ html:has(body.lancer-site)::-webkit-scrollbar-thumb{background:#717174;border-ra
  .case-opening-copy{padding:18px 0 25px;gap:18px}.case-opening-note>p{font-size:14px}.case-editorial .case-opening h1{font-size:46px}
  .case-story-intro{padding-top:10px}.case-story-intro h2{font-size:27px}.case-visual-note{font-size:11px}
  .end-contact{min-height:0;padding:44px var(--studio-gutter);gap:25px}.end-contact>div{padding:0}
- .map-branches{column-gap:8px}.map-branches::before,.map-branches::after{left:calc((100% - 16px)/6);right:calc((100% - 16px)/6)}
 }
 @media(max-width:500px){.lancer-site .hero-copy h1{font-size:36px}.hero-copy>p{font-size:14px}.hero-actions{gap:18px}.hero-actions .text-action{font-size:12px}}
 @media(prefers-reduced-motion:reduce){.digital-running .signal-cursor{transform:none}.signal-trace{stroke-dasharray:none;opacity:.2}.service-list>a:hover .digital-signal{transform:none}}
 
-/* A diffuse highlight describes the pane; there is no perimeter frame. */
+/* Quiet tonal groups; blur is reserved for content seen through a surface. */
 .lancer-site :is(.frost,.studio-nav nav,.process-panels,.pricing-columns aside,.included-grid article,.ai-example-grid article,.service-faq-art,.directory-intro>div:last-child,.service-handover details,.case-capability-grid article,.case-related a,.service-list>a,.service-hero-art):not(:where(.product-demo *)){background:var(--studio-glass-pane);border:0;box-shadow:var(--studio-glass-shadow)}
-.lancer-site :is(.frost,.studio-nav nav,.portfolio-description,.process-panels,.pricing-columns aside,.service-hero-art):not(:where(.product-demo *)){backdrop-filter:var(--studio-glass-filter);-webkit-backdrop-filter:var(--studio-glass-filter)}
+.lancer-site :is(.studio-nav nav,.portfolio-description):not(:where(.product-demo *)){backdrop-filter:var(--studio-glass-filter);-webkit-backdrop-filter:var(--studio-glass-filter)}
+.lancer-site :is(.frost,.process-panels,.pricing-columns aside,.service-hero-art):not(:where(.product-demo *)){backdrop-filter:none;-webkit-backdrop-filter:none}
 .portfolio-description{box-shadow:var(--studio-glass-shadow)}
 @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
- .lancer-site :is(.frost,.studio-nav nav,.portfolio-description,.process-panels,.pricing-columns aside,.service-hero-art):not(:where(.product-demo *)){background:#252527}
+ .lancer-site :is(.studio-nav nav,.portfolio-description):not(:where(.product-demo *)){background:#252527}
 }
+.lancer-site .service-page :is(.service-system>.frost,.service-hero-art){background:transparent;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none;border-radius:0}
+.service-system>.frost{padding:0}

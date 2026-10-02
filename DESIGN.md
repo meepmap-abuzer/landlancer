@@ -1,6 +1,6 @@
 ---
 name: Lancer Agency — Monochrome studio
-description: A restrained digital studio with graphite grounds, pale Manrope, a saffron action accent, borderless frosted groups and authored interface geometry.
+description: A restrained digital studio with graphite grounds, pale Manrope, a saffron action accent, quiet borderless groups, selective frosted glass and authored interface geometry.
 colors:
   ground: "#141415"
   surface: "#252527"
@@ -16,6 +16,8 @@ colors:
   price-wash: "#ffffff0d"
   selected-wash: "#e4c36914"
   caption-tint: "#141417ad"
+  glass-tint: "#ffffff08"
+  diagram-line: "#939396"
   service-matte: "#1e1e20"
   diagram-matte: "#1d1d20"
   open-wash: "#f4f4f409"
@@ -97,10 +99,10 @@ spacing:
   home-section-end: "90px"
   home-section-end-mobile: "64px"
 effects:
-  glass-pane: "linear-gradient(135deg,#ffffff26 0%,#ffffff0a 55%,#ffffff12 100%)"
-  glass-caption-highlight: "linear-gradient(120deg,#ffffff0f,transparent 60%,#ffffff05)"
+  glass-pane: "none"
+  glass-caption-highlight: "none"
   glass-filter: "blur(24px) saturate(105%)"
-  glass-shadow: "0 14px 34px #00000026"
+  glass-shadow: "none"
 components:
   button-primary:
     backgroundColor: "{colors.accent}"
@@ -114,8 +116,8 @@ components:
     textColor: "{colors.ink}"
     typography: "{typography.text-action}"
   navigation:
-    backgroundColor: "transparent"
-    backgroundImage: "{effects.glass-pane}"
+    backgroundColor: "{colors.glass-tint}"
+    backgroundImage: "none"
     backdropFilter: "{effects.glass-filter}"
     boxShadow: "{effects.glass-shadow}"
     textColor: "{colors.ink}"
@@ -134,8 +136,8 @@ components:
     rounded: "{rounded.caption}"
     padding: "16px 19px"
   service-card:
-    backgroundColor: "transparent"
-    backgroundImage: "{effects.glass-pane}"
+    backgroundColor: "{colors.glass-tint}"
+    backgroundImage: "none"
     boxShadow: "{effects.glass-shadow}"
     textColor: "{colors.ink}"
     rounded: "{rounded.panel}"
@@ -146,20 +148,19 @@ components:
     rounded: "{rounded.chip}"
     padding: "6px 11px"
   included-card:
-    backgroundColor: "transparent"
-    backgroundImage: "{effects.glass-pane}"
+    backgroundColor: "{colors.glass-tint}"
+    backgroundImage: "none"
     boxShadow: "{effects.glass-shadow}"
     textColor: "{colors.ink}"
     rounded: "{rounded.scope}"
     padding: "26px"
   diagram-panel:
     backgroundColor: "transparent"
-    backgroundImage: "{effects.glass-pane}"
-    backdropFilter: "{effects.glass-filter}"
-    boxShadow: "{effects.glass-shadow}"
+    backgroundImage: "none"
+    backdropFilter: "none"
+    boxShadow: "none"
     textColor: "{colors.ink}"
-    rounded: "{rounded.diagram}"
-    padding: "28px"
+    padding: "20px 22px"
   process-tab:
     backgroundColor: "{colors.panel-wash}"
     rounded: "{rounded.tab}"
@@ -168,10 +169,10 @@ components:
     backgroundColor: "{colors.selected-wash}"
     textColor: "{colors.accent}"
   process-panel:
-    backgroundColor: "transparent"
-    backgroundImage: "{effects.glass-pane}"
-    backdropFilter: "{effects.glass-filter}"
-    boxShadow: "{effects.glass-shadow}"
+    backgroundColor: "{colors.glass-tint}"
+    backgroundImage: "none"
+    backdropFilter: "none"
+    boxShadow: "none"
     rounded: "{rounded.panel}"
     padding: "32px 200px 32px 32px"
   faq-row:
@@ -262,7 +263,7 @@ Six service cards share three equal desktop columns and a 22px gap. They become 
 
 Homepage section ends use the recorded 80–90px desktop / 64px mobile rhythm. Service sections use the 68px / 44px rhythm. Four production tabs form a desktop row and become 2×2 below 500px. Their panel has a 190px desktop minimum and fits content below 750px. FAQ uses two desktop columns and one mobile column. A plain dark contact close and subdued large wordmark finish the shell.
 
-Service heroes pair copy, facts and actions with an authored diagram. A separate functional diagram explains the system. Scope cards use three columns, two on tablet and one below 500px. Four roadmap stops stay horizontal; mobile scrolls within a focusable track with 240px stops. Price rows remain open and ruled beside a matte scope aside. AI examples retain connected four-step flows, becoming a compact 2×2 sequence on mobile.
+Service heroes pair copy, facts and actions with an authored diagram. A separate functional diagram explains the system. Scope cards use three columns, two on tablet and one below 500px. Four roadmap stops stay horizontal; mobile scrolls within a focusable track with 240px stops. Price rows remain open and ruled beside a matte scope aside. AI examples retain connected four-step flows, becoming a vertical sequence on mobile.
 
 Case openings and story introductions are centered single-column compositions with bounded copy, pills and a demo action. No outer opening box or empty right text column remains. Alternating device spreads, source-style demos, capabilities and architecture keep the established structure. Story and demo sections stack below 750px; capability cards use four full-desktop columns and two at 1100px.
 
@@ -270,9 +271,7 @@ Case openings and story introductions are centered single-column compositions wi
 
 ## Elevation & Depth
 
-The user's later October 2 amendment restores frosted glass. Depth comes from transmitted imagery, a broad diffuse highlight, overlapping interface geometry and the generated device covers. Shared grouped panels use the glass-pane and glass-shadow effects, with no perimeter frame. Solid actions are flat at rest. Product-demo shadows remain local to their product.
-
-Navigation, image captions, process panels, pricing asides, shared frost groups and service hero artwork use the 24px glass filter. Smaller scope/service groups share the diffuse material without adding individual backdrop filters. Image captions use a 68% dark tint and pale body text for readable transmission; they no longer use the former 80% flat tint. The image-dialog backdrop stays at 14px. A final support fallback supplies opaque #252527 when neither standard nor WebKit backdrop filtering is supported. Reflections and blur are static, not continuously animated. Case openings and the contact close remain open compositions. Border removal still supersedes older frosted-border declarations.
+The latest October 2 amendment removes gradient backplates and broad panel shadows. Service hero graphics and functional diagrams sit directly on the page ground. Other groups use a uniform #ffffff08 wash. Navigation and image captions retain 24px frosted blur; captions use a uniform 68% dark tint for readable image transmission. Glass does not require a painted gradient. The image-dialog backdrop remains local at 14px. Native product demos retain their own materials. Border removal still supersedes older frosted-border declarations.
 
 **The Tonal Grouping Rule.** Separate major groups with diffuse translucent panes and spacing. Reserve thin strokes for functional relationships and dividers.
 
@@ -300,7 +299,7 @@ Six service links use equal matte cards with authored SVG graphics, short titles
 
 ### Scope cards and functional diagrams
 
-Scope cards use a subtle wash, no perimeter border, concise copy and an inline SVG. Desktop padding is 26px, tablet 21px and narrow single-column 22px. Practical maps, Telegram connections, CRM states and error/success paths sit in borderless grouped fields. Diagram strokes retain their functional purpose. All three website branches join both buses, with 24px vertical connectors and gap-corrected horizontal spans.
+Scope cards use a subtle wash, no perimeter border, concise copy and an inline SVG. Desktop padding is 26px, tablet 21px and narrow single-column 22px. Practical maps, Telegram connections, CRM states and error/success paths sit on the open page ground. Equal-width HTML node rows and 36px SVG connector strips share the same column centres, so wrapped labels do not detach lines. Directed paths use the diagram-line token; the active or resulting node uses the subtle saffron wash. Web-service roles appear above the service, with data and integrations below. CRM states form a horizontal sequence on desktop and a vertical one on mobile. Labels remain searchable HTML; connector SVGs are decorative.
 
 ### Chips
 
@@ -352,6 +351,6 @@ The root agency viewport uses a dark color scheme, a graphite scrollbar track an
 - **Don't** invent business outcomes, durations, model names, benchmark scores or AI delivery claims.
 - **Don't** replace inline SVG or drawn disclosure controls with text glyph icons.
 
-Source authority: frost.css loaded after lancer.css, service-editorial.css and case-editorial.css; src/agency-home.mjs, src/digital-visuals.mjs, src/project-cover.mjs, src/studio-sections.mjs, src/agency-shared.mjs, src/service-pages.mjs, src/agency-cases.mjs, studio-world.mjs and disclosures.mjs. The user's amendment is .impeccable/review/monochrome-direction.md. mono-finish-review.md and mono-fix-verdict.md record the material review and resolved scrollbar/icon findings; mono-runtime.md records local runtime evidence. mono-cover-review.md records the separate shipped review of all four final homepage covers and their responsive placement; this scoped review does not repeat full-surface QA. Public deployment verification is outside these local gates.
+Source authority: frost.css loaded after lancer.css, service-editorial.css and case-editorial.css; src/agency-home.mjs, src/digital-visuals.mjs, src/project-cover.mjs, src/studio-sections.mjs, src/agency-shared.mjs, src/service-pages.mjs, src/service-stories.mjs, src/service-flow.mjs, src/agency-cases.mjs, studio-world.mjs and disclosures.mjs. The user's amendment is .impeccable/review/monochrome-direction.md. mono-finish-review.md and mono-fix-verdict.md record the material review and resolved scrollbar/icon findings; mono-runtime.md records local runtime evidence. mono-cover-review.md records the separate shipped review of all four final homepage covers and their responsive placement; this scoped review does not repeat full-surface QA. Public deployment verification is outside these local gates.
 
 Not canonized or repaired by this documentation pass: superseded photographic selectors/assets and conditional object code; dated homepage-exhibit and universal local-reset wording in DEMOS.md; hidden historical project-type labels. These remain source/history drift, not reusable visual rules. Native product-demo styles and functional directed relationships remain legitimate local systems. No actual browser-zoom proof, Safari/Firefox check or deployment claim is made here.

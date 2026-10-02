@@ -51,7 +51,7 @@ export function servicePage(s){const path=`/services/${s.slug}/`,related=service
 <main class="service-page" id="main"><div class="wrap">${breadcrumbs(path,s.name)}
 <section class="service-hero"><div class="service-hero-copy"><h1>${s.title}</h1><p>${s.intro}</p><dl class="service-facts"><div><dt>Стоимость</dt><dd>${money(s.startingPrice)}</dd></div><div><dt>Первая версия</dt><dd>${s.format}</dd></div><div><dt>Передача</dt><dd>Код и инструкции</dd></div></dl><div class="service-hero-actions">${cta()}<a href="#pricing">Посмотреть стоимость ${icon('arrow')}</a></div></div>${heroArt(s)}</section>
 <section class="service-audience" aria-labelledby="audience-title"><h2 id="audience-title">Кому подходит</h2><div>${s.audience.map(([title,text])=>`<details><summary><span>${title}</span><i aria-hidden="true"></i></summary><p>${text}</p></details>`).join('')}</div></section>
-<section class="service-system"><div><h2>От сценария<br>к работающей системе</h2><p>${s.answer}</p></div><div class="frost">${serviceContextVisual(s.slug)}</div></section>
+<section class="service-system" id="system"><div><h2>От сценария<br>к работающей системе</h2><p>${s.answer}</p></div><div class="frost">${serviceContextVisual(s.slug)}</div></section>
 ${included(s)}${caseProof(s)}${examples(s)}
 ${s.cases.length>1?`<section class="service-mechanism"><h2>${s.question}</h2><p>${s.answer}</p></section>`:''}
 ${serviceRoadmap(s.slug)}
