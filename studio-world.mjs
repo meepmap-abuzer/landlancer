@@ -1,5 +1,6 @@
 import {setupDisclosures} from '/disclosures.mjs?v=1';
-import {setupStudioMotion} from '/studio-motion.mjs?v=ascii-1';
+import {setupStudioMotion} from '/studio-motion.mjs?v=mascot-1';
+import {setupStudioScroll} from '/studio-scroll.mjs?v=mascot-1';
 // Shared disclosures preserve their native no-JS behavior.
 const reduced=matchMedia('(prefers-reduced-motion: reduce)');
 setupDisclosures({reduced,allowed:()=>!reduced.matches});
@@ -48,12 +49,4 @@ const sceneObserver=new IntersectionObserver(entries=>{entries.forEach(entry=>sc
 digitalScenes.forEach(scene=>sceneObserver.observe(scene));
 document.addEventListener('visibilitychange',syncScenes);reduced.addEventListener('change',syncScenes);
 setupStudioMotion(reduced);
-const asciiScene=document.querySelector('[data-ascii-scene]');
-if(asciiScene&&!reduced.matches){
- const lazyAscii=new IntersectionObserver(entries=>{
-  if(!entries.some(e=>e.isIntersecting))return;
-  lazyAscii.disconnect();
-  import('/ascii-scene.mjs?v=ascii-1').then(({mountAscii})=>mountAscii(asciiScene,reduced)).catch(()=>{asciiScene.dataset.asciiState='fallback';});
- },{rootMargin:'120px'});
- lazyAscii.observe(asciiScene);
-}
+setupStudioScroll(reduced);

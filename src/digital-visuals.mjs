@@ -1,5 +1,5 @@
 // Authored interface geometry, not product screenshots or performance claims.
-import {ribbonSvg} from '../ascii-geometry.mjs';
+import {mascot} from './mascot.mjs';
 const rect=(x,y,w,h,r=8,cls='signal-panel')=>`<rect class="${cls}" x="${x}" y="${y}" width="${w}" height="${h}" rx="${r}"/>`;
 const line=(x,y,w,cls='signal-line')=>`<path class="${cls}" d="M${x} ${y}h${w}"/>`;
 const text=(x,y,label)=>`<text x="${x}" y="${y}">${label}</text>`;
@@ -7,7 +7,7 @@ const window=(x,y,w,h)=>rect(x,y,w,h,14)+line(x,y+34,w,'signal-divider')+`<g cla
 const view=body=>`<svg class="digital-signal" viewBox="0 0 600 390" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">${body}</svg>`;
 
 export function studioSignal(){
- return `<div class="hero-signal hero-ascii" data-ascii-scene aria-hidden="true">${ribbonSvg()}<canvas width="644" height="396"></canvas></div>`;
+ return mascot();
 }
 
 const graphics={

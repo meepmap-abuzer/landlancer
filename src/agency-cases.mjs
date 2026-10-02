@@ -1,3 +1,4 @@
+import {mascot} from './mascot.mjs';
 import {illustratedCoverFile} from './project-cover.mjs';
 import {studioFooter} from './studio-sections.mjs';
 import {breadcrumbs} from './seo.mjs';
@@ -38,9 +39,10 @@ function stories(p){return visualGroups[p.slug].map(([asset,indices])=>{
  const title=indices.map(i=>p.features[i][0]).join(' · '),src=`/assets/case-visuals/${asset}.webp`;
  return `<section class="case-story"><div class="story-copy">${indices.map(i=>{const [t,d,a]=p.features[i];return `<article><h2>${t}</h2><p>${d}</p><span class="story-aside">${a}</span></article>`;}).join('')}</div><figure class="story-art"><button type="button" class="generated-device" data-zoom="${src}" data-caption="${p.name}: ${title}" aria-label="Рассмотреть визуализацию ${p.name}"><img src="${src}" width="1536" height="1024" alt="${p.name}: интерфейсы в настоящих устройствах" loading="lazy"></button><figcaption>${title}</figcaption></figure></section>`;
 }).join('');}
+const companionPoses={maverick:'wave',loyalty:'carry','gift-roulette':'inspect',tailcare:'sit'};
 export function casePage(p){return head(`${p.name} — ${p.type}`,p.intro,`/cases/${p.slug}/`,p.theme).replace(`class="theme-${p.theme}"`,`class="theme-${p.theme} lancer-site case-editorial"`)+`
 ${studioHeader('case')}
-<main id="main"><section class="case-opening" id="overview"><div class="case-opening-copy"><div>${breadcrumbs(`/cases/${p.slug}/`,p.name)}<h1>${p.name}</h1><p class="case-type">${p.type}</p></div><div class="case-opening-note"><p>${p.intro}</p><div class="case-pills">${p.tags.map(t=>`<span>${t}</span>`).join('')}</div><a class="case-play" href="#demo">Попробовать продукт ${icon('arrow')}</a></div></div></section>
+<main id="main"><section class="case-opening" id="overview"><aside class="case-companion" aria-hidden="true">${mascot(companionPoses[p.slug],true)}</aside><div class="case-opening-copy"><div>${breadcrumbs(`/cases/${p.slug}/`,p.name)}<h1>${p.name}</h1><p class="case-type">${p.type}</p></div><div class="case-opening-note"><p>${p.intro}</p><div class="case-pills">${p.tags.map(t=>`<span>${t}</span>`).join('')}</div><a class="case-play" href="#demo">Попробовать продукт ${icon('arrow')}</a></div></div></section>
 <section class="case-story-intro" id="screens"><h2>${p.section}</h2><p>${p.sub}</p></section>
 <p class="case-visual-note">Визуализации на основе интерфейсов. Механику продукта можно проверить в демо.</p><div class="case-stories">${stories(p)}</div>
 <section class="case-demo-section"><div class="case-demo-heading"><h2>Попробуйте сами.</h2><p>Интерактивный фрагмент ${p.name}. Можно нажимать и исследовать.</p></div>${productStage(p)}</section>

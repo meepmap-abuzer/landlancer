@@ -11,9 +11,13 @@ export function setupStudioMotion(reduced){
  add('.hero-copy,.service-hero-copy,.case-opening-copy',element=>{
   [...element.children].forEach((child,i)=>play(child,[{opacity:.65,transform:'translateY(12px)'},{opacity:1,transform:'none'}],{duration:900,delay:Math.min(i,2)*65}));
  });
- add('.hero-ascii',element=>play(element,[{opacity:.5,transform:'rotate(-5deg) scale(.92)'},{opacity:1,transform:'none'}],{duration:1400}));
+ add('.mascot-hero>.mascot',element=>play(element,[{opacity:.55,clipPath:'inset(0 0 18% 0)',transform:'translateY(10px)'},{opacity:1,clipPath:'inset(0)',transform:'none'}],{duration:1100}));
  add('.section-heading h2,.service-page section h2,.case-editorial section h2,.faq-intro h2',element=>play(element,[{clipPath:'inset(0 0 35% 0)',transform:'translateY(9px)'},{clipPath:'inset(0)',transform:'none'}],{duration:850}));
- add('.studio-project .project-photo,.service-case-card .project-photo,.case-related a',element=>play(element,[{clipPath:'inset(7% 0 0 round 16px)',opacity:.8},{clipPath:'inset(0 round 16px)',opacity:1}],{duration:1000}));
+ add('.studio-project',element=>{
+  const index=[...element.parentElement.children].indexOf(element);
+  play(element,[{opacity:.25,transform:'perspective(1000px) translateY(64px) rotateX(4deg) scale(.96)'},{opacity:1,transform:'none'}],{duration:1100,delay:index%2*140,fill:'backwards'});
+ });
+ add('.service-case-card .project-photo,.case-related a',element=>play(element,[{clipPath:'inset(7% 0 0 round 16px)',opacity:.8},{clipPath:'inset(0 round 16px)',opacity:1}],{duration:1000}));
  add('.service-list .digital-signal,.service-hero-art .digital-signal,.service-system>.frost',element=>play(element,[{opacity:.45,transform:'scale(.96)'},{opacity:1,transform:'none'}],{duration:1000}));
  add('.included-grid article,.ai-example-grid article,.case-capability-grid article',element=>play(element,[{clipPath:'inset(0 0 12% 0)',opacity:.7},{clipPath:'inset(0)',opacity:1}],{duration:750}));
  add('.service-roadmap,.studio-process,.service-pricing,.service-questions,.case-story',element=>{
