@@ -302,22 +302,31 @@ html:has(body.lancer-site)::-webkit-scrollbar-thumb{background:#717174;border-ra
 .lancer-site .service-page :is(.service-system>.frost,.service-hero-art){background:transparent;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none;border-radius:0}
 .service-system>.frost{padding:0}
 
-/* Electric lime: one action, an abstract point field, an open contact close. */
+/* Electric lime: one action, an ASCII ribbon, an open contact close. */
 .header-contact{padding:12px 0 12px 22px;font-size:13px;color:var(--studio-muted);transition:color .2s}
 .header-contact:hover{color:var(--studio-accent)}
 .lancer-site .hero-actions .button.primary{min-height:48px;padding-inline:26px}
 .hero-actions .text-action{color:var(--studio-muted);text-decoration:underline;text-underline-offset:6px;text-decoration-color:#f4f4f440}
 .hero-actions .text-action:hover{color:var(--studio-ink);text-decoration-color:var(--studio-accent)}
-.hero-weave{max-width:620px;aspect-ratio:600/390}
-.lancer-site .hero-weave>.digital-weave{display:block;width:100%;height:auto;overflow:visible}
-.weave-plane{transform-box:view-box;transform-origin:50% 50%;fill:#d4d5ce}
-.weave-plane-0{opacity:.58}.weave-plane-1{opacity:.85}.weave-plane-2{fill:var(--studio-accent);opacity:.78}
-.weave-bright{fill:var(--studio-accent)}
-.weave-field{transform-box:view-box;transform-origin:center}
-.digital-running .weave-plane{animation:weave-breathe 11s ease-in-out infinite}
-.digital-running .weave-plane-1{animation-delay:-3.5s;animation-direction:reverse}
-.digital-running .weave-plane-2{animation-delay:-7s}
-@keyframes weave-breathe{0%,100%{transform:translate(0,0)}50%{transform:translate(-7px,-12px)}}
+.hero-ascii{position:relative;width:100%;max-width:680px;aspect-ratio:644/396;contain:layout paint;touch-action:pan-y}
+.lancer-site .hero-ascii>.ascii-rest,.hero-ascii>canvas{position:absolute;inset:0;display:block;width:100%;height:100%;pointer-events:none;transition:opacity .5s}
+.hero-ascii>canvas{opacity:0}
+.hero-ascii[data-ascii-ready=true]>.ascii-rest{opacity:0}
+.hero-ascii[data-ascii-ready=true]>canvas{opacity:1}
+.studio-works{position:relative;padding-top:72px}
+.studio-works::before{content:'';position:absolute;top:-80px;left:10%;width:80%;height:150px;background:radial-gradient(ellipse at 50% 40%,#bded521c,transparent 68%);pointer-events:none}
+.signal-seam{position:absolute;top:-54px;left:0;width:100%;height:100px;overflow:hidden;pointer-events:none;mask-image:linear-gradient(90deg,transparent,#000 15%,#000 85%,transparent)}
+.lancer-site .signal-seam>svg{display:block;width:100%;height:100%;overflow:visible;stroke:var(--studio-accent);stroke-width:.8}
+.signal-seam path:nth-child(1){opacity:.38}.signal-seam path:nth-child(2){opacity:.18}.signal-seam path:nth-child(3){opacity:.08}
+.lancer-site .process-tabs button[aria-selected=true]{background:#ffffff06;color:var(--studio-accent)}
+.lancer-site .faq-answers details,.lancer-site .faq-answers details[open],.lancer-site .case-details details[open]{background:transparent;border-radius:0;border-bottom:1px solid var(--studio-line);box-shadow:none}
+.lancer-site .faq-answers summary i{position:relative;width:20px;height:20px;flex:none;color:var(--studio-muted)}
+.lancer-site .faq-answers summary i::before,.lancer-site .faq-answers summary i::after{content:'';position:absolute;background:currentColor;border-radius:1px;transform:none;transition:transform .28s var(--studio-ease)}
+.lancer-site .faq-answers summary i::before{left:3px;top:9px;width:14px;height:2px}
+.lancer-site .faq-answers summary i::after{left:9px;top:3px;width:2px;height:14px;transform:scaleY(1)}
+.lancer-site .faq-answers details[open] summary i::after{transform:scaleY(0)}
+.lancer-site .faq-answers details[data-disclosure-state=closing] summary i::after{transform:scaleY(1)}
+.lancer-site .faq-answers details[open] summary,.lancer-site .faq-answers summary:hover{color:var(--studio-accent)}
 .service-card-title>svg{opacity:0;transition:opacity .25s,transform .25s;transform:translate(-3px,3px)}
 .service-list>a:is(:hover,:focus-visible) .service-card-title>svg{opacity:1;transform:none}
 .process-panels{padding-right:32px}
@@ -341,10 +350,11 @@ html:has(body.lancer-site)::-webkit-scrollbar-thumb{background:#717174;border-ra
 .end-wordmark{font-size:clamp(90px,20vw,320px);letter-spacing:-.04em;line-height:1.06;color:#f4f4f421;padding:25px 0 8px}
 .end-wordmark>span{color:var(--studio-accent)}
 .end-legal{padding-block:20px 24px}
-@media(max-width:1100px){.end-contact{gap:35px}.end-directory{gap:35px}.hero-weave{max-width:520px}}
+@media(max-width:1100px){.end-contact{gap:35px}.end-directory{gap:35px}.hero-ascii{max-width:560px}}
 @media(max-width:750px){
  .header-contact{display:none}
- .hero-weave{width:min(100%,480px);aspect-ratio:600/350;margin:0 auto}
+ .hero-ascii{width:min(100%,480px);aspect-ratio:644/396;margin:0 auto}
+ .studio-works{padding-top:64px}.signal-seam{top:-40px;height:80px}.studio-works::before{top:-60px;height:120px;left:0;width:100%}
  .process-panels{padding:25px}
  .service-faq-art{display:block;padding:15px 0;background:transparent}
  .service-faq-art p{margin-bottom:16px}
@@ -359,4 +369,17 @@ html:has(body.lancer-site)::-webkit-scrollbar-thumb{background:#717174;border-ra
  .end-wordmark{font-size:23vw;padding:30px 0 12px}
  .end-legal{gap:14px 22px;font-size:11px}
 }
-@media(prefers-reduced-motion:reduce){.digital-running .weave-plane{animation:none}}
+@supports (animation-timeline:view()){
+ @media(prefers-reduced-motion:no-preference){
+  .studio-project .project-photo img{scale:1.035;animation:studio-image-depth linear both;animation-timeline:view();animation-range:entry 0% exit 100%}
+  .signal-seam svg{animation:studio-seam-flow linear both;animation-timeline:view();animation-range:entry 0% exit 100%}
+ }
+}
+@keyframes studio-image-depth{from{translate:0 8px}to{translate:0 -8px}}
+@keyframes studio-seam-flow{from{translate:-24px 4px}to{translate:24px -4px}}
+@media(prefers-reduced-motion:reduce){
+ .hero-ascii[data-ascii-ready=true]>.ascii-rest{opacity:1}.hero-ascii[data-ascii-ready=true]>canvas{opacity:0}
+ .hero-ascii>.ascii-rest,.hero-ascii>canvas{transition:none}
+ .studio-project .project-photo img,.signal-seam svg{animation:none;translate:none;scale:1}
+ .lancer-site .faq-answers summary i::after{transition:none}
+}

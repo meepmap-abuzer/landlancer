@@ -1,4 +1,5 @@
 import {setupDisclosures} from '/disclosures.mjs?v=1';
+import {setupStudioMotion} from '/studio-motion.mjs?v=ascii-1';
 // Shared disclosures preserve their native no-JS behavior.
 const reduced=matchMedia('(prefers-reduced-motion: reduce)');
 setupDisclosures({reduced,allowed:()=>!reduced.matches});
@@ -11,7 +12,8 @@ function selectTab(tab,focus=false){
  });
  if(focus)tab.focus();
  const panel=document.getElementById(tab.getAttribute('aria-controls'));
- if(!reduced.matches)panel.animate([{opacity:.7,transform:'translateY(4px)'},{opacity:1,transform:'none'}],{duration:260,easing:'cubic-bezier(.16,1,.3,1)'});
+ tabs.forEach(item=>document.getElementById(item.getAttribute('aria-controls')).getAnimations({subtree:true}).forEach(a=>a.cancel()));
+ if(!reduced.matches)[...panel.children].forEach((child,i)=>child.animate([{opacity:.2,transform:'translateY(7px)'},{opacity:1,transform:'none'}],{duration:460,delay:i*35,easing:'cubic-bezier(.16,1,.3,1)'}));
 }
 tabs.forEach((tab,index)=>{
  tab.addEventListener('click',()=>selectTab(tab));
@@ -24,6 +26,8 @@ tabs.forEach((tab,index)=>{
   if(target){event.preventDefault();selectTab(target,true);}
  });
 });
+function settleTabMotion(){if(reduced.matches||document.hidden)tabs.forEach(tab=>document.getElementById(tab.getAttribute('aria-controls')).getAnimations({subtree:true}).forEach(a=>a.finish()));}
+reduced.addEventListener('change',settleTabMotion);document.addEventListener('visibilitychange',settleTabMotion);
 const object=document.querySelector('.brand-object');
 if(object){
  let loaded=false;
@@ -43,23 +47,13 @@ function syncScenes(){digitalScenes.forEach(scene=>scene.classList.toggle('digit
 const sceneObserver=new IntersectionObserver(entries=>{entries.forEach(entry=>sceneVisibility.set(entry.target,entry.isIntersecting));syncScenes();},{threshold:.05});
 digitalScenes.forEach(scene=>sceneObserver.observe(scene));
 document.addEventListener('visibilitychange',syncScenes);reduced.addEventListener('change',syncScenes);
-// Content is never hidden while waiting for an entrance.
-if(!reduced.matches){
- const scene=document.querySelector('.hero-signal');
- const copy=document.querySelector('.hero-copy');
- const preview=document.querySelector('.hero-project');
- const weaveFields=[...scene?.querySelectorAll('.weave-field')||[]];
- weaveFields.forEach((field,i)=>field.animate([{opacity:.25,transform:`translate(${(i-1)*32}px,${(i-1)*28}px) scale(.9)`,filter:'blur(2px)'},{opacity:1,transform:'none',filter:'none'}],{duration:1600,delay:i*100,easing:'cubic-bezier(.16,1,.3,1)'}));
- copy?.animate([{opacity:.7,transform:'translateY(14px)'},{opacity:1,transform:'none'}],{duration:900,easing:'cubic-bezier(.16,1,.3,1)'});
- preview?.animate([{opacity:.75,transform:'translateY(20px)',backdropFilter:'blur(8px)'},{opacity:1,transform:'none',backdropFilter:'blur(22px)'}],{duration:1100,easing:'cubic-bezier(.16,1,.3,1)'});
- const panels=[...document.querySelectorAll('.studio-project,.service-list>a,.service-system,.case-story')];
- const entrance=new IntersectionObserver(entries=>{
-  const arriving=entries.filter(e=>e.isIntersecting);
-  arriving.forEach(({target},i)=>{
-   target.animate([{opacity:.72,transform:'translateY(16px)'},{opacity:1,transform:'none'}],{duration:650,delay:Math.min(i,2)*75,easing:'cubic-bezier(.16,1,.3,1)'});
-   entrance.unobserve(target);
-  });
- },{threshold:.08});
- panels.forEach(p=>entrance.observe(p));
- reduced.addEventListener('change',()=>{if(reduced.matches){entrance.disconnect();[scene,copy,preview,...weaveFields,...panels].filter(Boolean).forEach(p=>p.getAnimations().forEach(a=>a.finish()));}});
+setupStudioMotion(reduced);
+const asciiScene=document.querySelector('[data-ascii-scene]');
+if(asciiScene&&!reduced.matches){
+ const lazyAscii=new IntersectionObserver(entries=>{
+  if(!entries.some(e=>e.isIntersecting))return;
+  lazyAscii.disconnect();
+  import('/ascii-scene.mjs?v=ascii-1').then(({mountAscii})=>mountAscii(asciiScene,reduced)).catch(()=>{asciiScene.dataset.asciiState='fallback';});
+ },{rootMargin:'120px'});
+ lazyAscii.observe(asciiScene);
 }

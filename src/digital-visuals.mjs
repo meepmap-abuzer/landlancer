@@ -1,25 +1,13 @@
 // Authored interface geometry, not product screenshots or performance claims.
+import {ribbonSvg} from '../ascii-geometry.mjs';
 const rect=(x,y,w,h,r=8,cls='signal-panel')=>`<rect class="${cls}" x="${x}" y="${y}" width="${w}" height="${h}" rx="${r}"/>`;
 const line=(x,y,w,cls='signal-line')=>`<path class="${cls}" d="M${x} ${y}h${w}"/>`;
 const text=(x,y,label)=>`<text x="${x}" y="${y}">${label}</text>`;
 const window=(x,y,w,h)=>rect(x,y,w,h,14)+line(x,y+34,w,'signal-divider')+`<g class="signal-dots"><circle cx="${x+16}" cy="${y+17}" r="2"/><circle cx="${x+25}" cy="${y+17}" r="2"/><circle cx="${x+34}" cy="${y+17}" r="2"/></g>`;
 const view=body=>`<svg class="digital-signal" viewBox="0 0 600 390" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">${body}</svg>`;
 
-// Three folded point planes echo the layered Lancer mark. The resting geometry
-// is complete in static HTML; motion only separates and rejoins those planes.
 export function studioSignal(){
- const layers=Array.from({length:3},(_,layer)=>{
-  const dots=[];
-  for(let row=0;row<13;row++)for(let column=0;column<37;column++){
-   const u=column/36,v=row/12;
-   const x=85+u*392+v*56;
-   const y=121+layer*58+v*60+Math.sin(u*Math.PI*2-.4)*29-u*52;
-   const bright=(column+row+layer*3)%9===0;
-   dots.push(`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${bright?1.8:1.2}"${bright?' class="weave-bright"':''}/>`);
-  }
-  return `<g class="weave-plane weave-plane-${layer}"><g class="weave-field">${dots.join('')}</g></g>`;
- }).join('');
- return `<div class="hero-signal hero-weave" data-digital-scene aria-hidden="true"><svg class="digital-weave" viewBox="0 0 600 390" fill="none" xmlns="http://www.w3.org/2000/svg">${layers}</svg></div>`;
+ return `<div class="hero-signal hero-ascii" data-ascii-scene aria-hidden="true">${ribbonSvg()}<canvas width="644" height="396"></canvas></div>`;
 }
 
 const graphics={

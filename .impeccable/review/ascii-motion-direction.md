@@ -1,0 +1,15 @@
+# ASCII ribbon / motion refinement — October 2, 2026
+
+Mode: Persuade. Code-led local refinement of the established Manrope, graphite and electric lime studio. The user authorizes an expressive ASCII opening, green light at its transition into work, smooth motion throughout, clear plus/minus controls, no gray FAQ highlight, and text-only green selection on production tabs. Existing copy, proportions, proof, pricing, navigation and native demos remain authoritative.
+
+FIRST VIEWPORT: a single large, shaded, mathematically twisted ASCII ribbon on the right of the short left offer. Its narrow character density and lime/pale shading reveal an actual continuous surface. It turns gently, responds slightly to pointer position using the native cursor, and retains a complete static vector character frame before runtime initialization. No fake cursor or extra launch/contact actions. A low green horizon and three thin curved signal lines connect the opening to work.
+
+Motion thesis: one ribbon is the focal authored sequence. Work images get a small scroll-linked depth shift; section headings settle through bounded masks; service geometry arrives as geometry; production text changes in a short stagger; FAQ height and plus/minus explain state; the closing wordmark draws in once. Each content area has a relevant treatment rather than the old repeated fade-and-rise. Native scrolling remains native. No new dependency.
+
+Budget: one lazy canvas renderer only while the hero is visible, capped at the 60Hz frame budget, cached mesh/rotation matrix, character grid and capped pixel density. No background canvas, perpetual page RAF or blur repaint loop. CSS scroll timelines are progressive enhancement with a static fallback. All content is visible without scripts. Reduced motion uses the exact static ribbon frame, removes scroll displacement and loops, and preserves immediate state feedback. Hidden tabs stop work.
+
+QUALITY BAR: recognisable real ASCII geometry at desktop/mobile sizes; no screenshot placeholders or ornamental text noise; restrained green light only at the hero/work seam; closed disclosure is a clear plus and opened is a minus; backgrounds do not jump; selected phase changes only text colour; motion can be interrupted without broken content; keyboard operation, product links and current Gift Roulette cover remain functional.
+
+Research: original geometry and implementation, informed by Codrops' real-time ASCII/dithering discussion (https://tympanus.net/codrops/2026/01/04/efecto-building-real-time-ascii-and-dithering-effects-with-webgl-shaders/) and MDN's native scroll-animation timelines (https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines). No copied artwork, downloaded animation kit or third-party runtime.
+
+Required evidence: homepage at 1280×720 and 390×844; process selected and FAQ closed/open states at both widths; service FAQ and schematic sample; console/overflow; hero loop offscreen/hidden handling; static/reduced-motion source path; bounded render timing sample. Inspect in one desktop/mobile batch, correct once, then a fresh finish review and documentation handoff.
