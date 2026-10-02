@@ -1,670 +1,469 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-02T13:56:10.245966Z",
+  "generatedAt": "2026-10-02T16:03:53Z",
   "title": "Design System: Lancer Agency",
   "extensions": {
     "colorMeta": {
       "ground": {
         "role": "neutral",
-        "displayName": "Graphite",
+        "displayName": "Graphite Ground",
         "tonalRamp": [
-          "oklch(15% 0.0020 286.21)",
-          "oklch(26% 0.0020 286.21)",
-          "oklch(38% 0.0020 286.21)",
-          "oklch(49% 0.0020 286.21)",
-          "oklch(61% 0.0020 286.21)",
-          "oklch(72% 0.0020 286.21)",
-          "oklch(84% 0.0020 286.21)",
-          "oklch(95% 0.0020 286.21)"
+          "oklch(15% 0.0020 286.2)",
+          "oklch(25% 0.0020 286.2)",
+          "oklch(35% 0.0020 286.2)",
+          "oklch(45% 0.0020 286.2)",
+          "oklch(55% 0.0020 286.2)",
+          "oklch(65% 0.0020 286.2)",
+          "oklch(80% 0.0020 286.2)",
+          "oklch(95% 0.0020 286.2)"
         ]
       },
       "surface": {
         "role": "neutral",
-        "displayName": "Dark gray",
+        "displayName": "Matte Surface",
         "tonalRamp": [
-          "oklch(15% 0.0037 286.15)",
-          "oklch(26% 0.0037 286.15)",
-          "oklch(38% 0.0037 286.15)",
-          "oklch(49% 0.0037 286.15)",
-          "oklch(61% 0.0037 286.15)",
-          "oklch(72% 0.0037 286.15)",
-          "oklch(84% 0.0037 286.15)",
-          "oklch(95% 0.0037 286.15)"
+          "oklch(15% 0.0037 286.1)",
+          "oklch(25% 0.0037 286.1)",
+          "oklch(35% 0.0037 286.1)",
+          "oklch(45% 0.0037 286.1)",
+          "oklch(55% 0.0037 286.1)",
+          "oklch(65% 0.0037 286.1)",
+          "oklch(80% 0.0037 286.1)",
+          "oklch(95% 0.0037 286.1)"
         ]
       },
       "ink": {
         "role": "neutral",
-        "displayName": "Pale white",
+        "displayName": "Pale Ink",
         "tonalRamp": [
-          "oklch(15% 0.0000 0.00)",
-          "oklch(26% 0.0000 0.00)",
-          "oklch(38% 0.0000 0.00)",
-          "oklch(49% 0.0000 0.00)",
-          "oklch(61% 0.0000 0.00)",
-          "oklch(72% 0.0000 0.00)",
-          "oklch(84% 0.0000 0.00)",
-          "oklch(95% 0.0000 0.00)"
+          "oklch(15% 0.0000 89.9)",
+          "oklch(25% 0.0000 89.9)",
+          "oklch(35% 0.0000 89.9)",
+          "oklch(45% 0.0000 89.9)",
+          "oklch(55% 0.0000 89.9)",
+          "oklch(65% 0.0000 89.9)",
+          "oklch(80% 0.0000 89.9)",
+          "oklch(95% 0.0000 89.9)"
         ]
       },
       "muted": {
         "role": "neutral",
-        "displayName": "Soft gray",
+        "displayName": "Soft Gray",
         "tonalRamp": [
-          "oklch(15% 0.0028 286.34)",
-          "oklch(26% 0.0028 286.34)",
-          "oklch(38% 0.0028 286.34)",
-          "oklch(49% 0.0028 286.34)",
-          "oklch(61% 0.0028 286.34)",
-          "oklch(72% 0.0028 286.34)",
-          "oklch(84% 0.0028 286.34)",
-          "oklch(95% 0.0028 286.34)"
+          "oklch(15% 0.0028 286.3)",
+          "oklch(25% 0.0028 286.3)",
+          "oklch(35% 0.0028 286.3)",
+          "oklch(45% 0.0028 286.3)",
+          "oklch(55% 0.0028 286.3)",
+          "oklch(65% 0.0028 286.3)",
+          "oklch(80% 0.0028 286.3)",
+          "oklch(95% 0.0028 286.3)"
         ]
       },
       "line": {
         "role": "neutral",
-        "displayName": "Quiet line",
+        "displayName": "Quiet Line",
         "tonalRamp": [
-          "oklch(15% 0.0000 0.00 / 0.145)",
-          "oklch(26% 0.0000 0.00 / 0.145)",
-          "oklch(38% 0.0000 0.00 / 0.145)",
-          "oklch(49% 0.0000 0.00 / 0.145)",
-          "oklch(61% 0.0000 0.00 / 0.145)",
-          "oklch(72% 0.0000 0.00 / 0.145)",
-          "oklch(84% 0.0000 0.00 / 0.145)",
-          "oklch(95% 0.0000 0.00 / 0.145)"
+          "oklch(15% 0.0000 89.9 / 0.145)",
+          "oklch(25% 0.0000 89.9 / 0.145)",
+          "oklch(35% 0.0000 89.9 / 0.145)",
+          "oklch(45% 0.0000 89.9 / 0.145)",
+          "oklch(55% 0.0000 89.9 / 0.145)",
+          "oklch(65% 0.0000 89.9 / 0.145)",
+          "oklch(80% 0.0000 89.9 / 0.145)",
+          "oklch(95% 0.0000 89.9 / 0.145)"
         ]
       },
       "accent": {
         "role": "primary",
-        "displayName": "Electric lime",
+        "displayName": "Electric Lime",
         "tonalRamp": [
-          "oklch(15% 0.1864 124.91)",
-          "oklch(26% 0.1864 124.91)",
-          "oklch(38% 0.1864 124.91)",
-          "oklch(49% 0.1864 124.91)",
-          "oklch(61% 0.1864 124.91)",
-          "oklch(72% 0.1864 124.91)",
-          "oklch(84% 0.1864 124.91)",
-          "oklch(95% 0.1864 124.91)"
-        ]
-      },
-      "action-text": {
-        "role": "neutral",
-        "displayName": "Action graphite",
-        "tonalRamp": [
-          "oklch(15% 0.0020 286.23)",
-          "oklch(26% 0.0020 286.23)",
-          "oklch(38% 0.0020 286.23)",
-          "oklch(49% 0.0020 286.23)",
-          "oklch(61% 0.0020 286.23)",
-          "oklch(72% 0.0020 286.23)",
-          "oklch(84% 0.0020 286.23)",
-          "oklch(95% 0.0020 286.23)"
-        ]
-      },
-      "panel-wash": {
-        "role": "neutral",
-        "displayName": "Matte wash",
-        "tonalRamp": [
-          "oklch(15% 0.0000 0.00 / 0.024)",
-          "oklch(26% 0.0000 0.00 / 0.024)",
-          "oklch(38% 0.0000 0.00 / 0.024)",
-          "oklch(49% 0.0000 0.00 / 0.024)",
-          "oklch(61% 0.0000 0.00 / 0.024)",
-          "oklch(72% 0.0000 0.00 / 0.024)",
-          "oklch(84% 0.0000 0.00 / 0.024)",
-          "oklch(95% 0.0000 0.00 / 0.024)"
-        ]
-      },
-      "nav-wash": {
-        "role": "neutral",
-        "displayName": "Historical navigation / category wash",
-        "tonalRamp": [
-          "oklch(15% 0.0000 0.00 / 0.039)",
-          "oklch(26% 0.0000 0.00 / 0.039)",
-          "oklch(38% 0.0000 0.00 / 0.039)",
-          "oklch(49% 0.0000 0.00 / 0.039)",
-          "oklch(61% 0.0000 0.00 / 0.039)",
-          "oklch(72% 0.0000 0.00 / 0.039)",
-          "oklch(84% 0.0000 0.00 / 0.039)",
-          "oklch(95% 0.0000 0.00 / 0.039)"
-        ]
-      },
-      "price-wash": {
-        "role": "neutral",
-        "displayName": "Price wash",
-        "tonalRamp": [
-          "oklch(15% 0.0000 0.00 / 0.051)",
-          "oklch(26% 0.0000 0.00 / 0.051)",
-          "oklch(38% 0.0000 0.00 / 0.051)",
-          "oklch(49% 0.0000 0.00 / 0.051)",
-          "oklch(61% 0.0000 0.00 / 0.051)",
-          "oklch(72% 0.0000 0.00 / 0.051)",
-          "oklch(84% 0.0000 0.00 / 0.051)",
-          "oklch(95% 0.0000 0.00 / 0.051)"
-        ]
-      },
-      "selected-wash": {
-        "role": "primary",
-        "displayName": "Historical selected wash",
-        "tonalRamp": [
-          "oklch(15% 0.1864 124.91 / 0.078)",
-          "oklch(26% 0.1864 124.91 / 0.078)",
-          "oklch(38% 0.1864 124.91 / 0.078)",
-          "oklch(49% 0.1864 124.91 / 0.078)",
-          "oklch(61% 0.1864 124.91 / 0.078)",
-          "oklch(72% 0.1864 124.91 / 0.078)",
-          "oklch(84% 0.1864 124.91 / 0.078)",
-          "oklch(95% 0.1864 124.91 / 0.078)"
-        ]
-      },
-      "caption-tint": {
-        "role": "neutral",
-        "displayName": "Graphite caption",
-        "tonalRamp": [
-          "oklch(15% 0.0060 285.82 / 0.678)",
-          "oklch(26% 0.0060 285.82 / 0.678)",
-          "oklch(38% 0.0060 285.82 / 0.678)",
-          "oklch(49% 0.0060 285.82 / 0.678)",
-          "oklch(61% 0.0060 285.82 / 0.678)",
-          "oklch(72% 0.0060 285.82 / 0.678)",
-          "oklch(84% 0.0060 285.82 / 0.678)",
-          "oklch(95% 0.0060 285.82 / 0.678)"
-        ]
-      },
-      "service-matte": {
-        "role": "neutral",
-        "displayName": "Service matte",
-        "tonalRamp": [
-          "oklch(15% 0.0038 286.11)",
-          "oklch(26% 0.0038 286.11)",
-          "oklch(38% 0.0038 286.11)",
-          "oklch(49% 0.0038 286.11)",
-          "oklch(61% 0.0038 286.11)",
-          "oklch(72% 0.0038 286.11)",
-          "oklch(84% 0.0038 286.11)",
-          "oklch(95% 0.0038 286.11)"
-        ]
-      },
-      "diagram-matte": {
-        "role": "neutral",
-        "displayName": "Diagram matte",
-        "tonalRamp": [
-          "oklch(15% 0.0057 285.95)",
-          "oklch(26% 0.0057 285.95)",
-          "oklch(38% 0.0057 285.95)",
-          "oklch(49% 0.0057 285.95)",
-          "oklch(61% 0.0057 285.95)",
-          "oklch(72% 0.0057 285.95)",
-          "oklch(84% 0.0057 285.95)",
-          "oklch(95% 0.0057 285.95)"
-        ]
-      },
-      "open-wash": {
-        "role": "neutral",
-        "displayName": "Open wash",
-        "tonalRamp": [
-          "oklch(15% 0.0000 0.00 / 0.035)",
-          "oklch(26% 0.0000 0.00 / 0.035)",
-          "oklch(38% 0.0000 0.00 / 0.035)",
-          "oklch(49% 0.0000 0.00 / 0.035)",
-          "oklch(61% 0.0000 0.00 / 0.035)",
-          "oklch(72% 0.0000 0.00 / 0.035)",
-          "oklch(84% 0.0000 0.00 / 0.035)",
-          "oklch(95% 0.0000 0.00 / 0.035)"
+          "oklch(15% 0.1864 124.9)",
+          "oklch(25% 0.1864 124.9)",
+          "oklch(35% 0.1864 124.9)",
+          "oklch(45% 0.1864 124.9)",
+          "oklch(55% 0.1864 124.9)",
+          "oklch(65% 0.1864 124.9)",
+          "oklch(80% 0.1864 124.9)",
+          "oklch(95% 0.1864 124.9)"
         ]
       },
       "accent-hover": {
         "role": "primary",
-        "displayName": "Light lime",
+        "displayName": "Lime Hover",
         "tonalRamp": [
-          "oklch(15% 0.1612 124.66)",
-          "oklch(26% 0.1612 124.66)",
-          "oklch(38% 0.1612 124.66)",
-          "oklch(49% 0.1612 124.66)",
-          "oklch(61% 0.1612 124.66)",
-          "oklch(72% 0.1612 124.66)",
-          "oklch(84% 0.1612 124.66)",
-          "oklch(95% 0.1612 124.66)"
+          "oklch(15% 0.1612 124.7)",
+          "oklch(25% 0.1612 124.7)",
+          "oklch(35% 0.1612 124.7)",
+          "oklch(45% 0.1612 124.7)",
+          "oklch(55% 0.1612 124.7)",
+          "oklch(65% 0.1612 124.7)",
+          "oklch(80% 0.1612 124.7)",
+          "oklch(95% 0.1612 124.7)"
         ]
       },
       "accent-wash": {
         "role": "primary",
-        "displayName": "Lime wash",
+        "displayName": "Lime Wash",
         "tonalRamp": [
-          "oklch(15% 0.1864 124.91 / 0.078)",
-          "oklch(26% 0.1864 124.91 / 0.078)",
-          "oklch(38% 0.1864 124.91 / 0.078)",
-          "oklch(49% 0.1864 124.91 / 0.078)",
-          "oklch(61% 0.1864 124.91 / 0.078)",
-          "oklch(72% 0.1864 124.91 / 0.078)",
-          "oklch(84% 0.1864 124.91 / 0.078)",
-          "oklch(95% 0.1864 124.91 / 0.078)"
+          "oklch(15% 0.1864 124.9 / 0.078)",
+          "oklch(25% 0.1864 124.9 / 0.078)",
+          "oklch(35% 0.1864 124.9 / 0.078)",
+          "oklch(45% 0.1864 124.9 / 0.078)",
+          "oklch(55% 0.1864 124.9 / 0.078)",
+          "oklch(65% 0.1864 124.9 / 0.078)",
+          "oklch(80% 0.1864 124.9 / 0.078)",
+          "oklch(95% 0.1864 124.9 / 0.078)"
         ]
       },
-      "island-tint": {
+      "action-text": {
         "role": "neutral",
-        "displayName": "Island graphite",
+        "displayName": "Action Ink",
         "tonalRamp": [
-          "oklch(15% 0.0037 286.15 / 0.659)",
-          "oklch(26% 0.0037 286.15 / 0.659)",
-          "oklch(38% 0.0037 286.15 / 0.659)",
-          "oklch(49% 0.0037 286.15 / 0.659)",
-          "oklch(61% 0.0037 286.15 / 0.659)",
-          "oklch(72% 0.0037 286.15 / 0.659)",
-          "oklch(84% 0.0037 286.15 / 0.659)",
-          "oklch(95% 0.0037 286.15 / 0.659)"
+          "oklch(15% 0.0020 286.2)",
+          "oklch(25% 0.0020 286.2)",
+          "oklch(35% 0.0020 286.2)",
+          "oklch(45% 0.0020 286.2)",
+          "oklch(55% 0.0020 286.2)",
+          "oklch(65% 0.0020 286.2)",
+          "oklch(80% 0.0020 286.2)",
+          "oklch(95% 0.0020 286.2)"
         ]
       },
-      "mascot-shadow": {
+      "panel-wash": {
         "role": "neutral",
-        "displayName": "Explorer shadow",
+        "displayName": "Panel Wash",
         "tonalRamp": [
-          "oklch(15% 0.0107 286.04)",
-          "oklch(26% 0.0107 286.04)",
-          "oklch(38% 0.0107 286.04)",
-          "oklch(49% 0.0107 286.04)",
-          "oklch(61% 0.0107 286.04)",
-          "oklch(72% 0.0107 286.04)",
-          "oklch(84% 0.0107 286.04)",
-          "oklch(95% 0.0107 286.04)"
+          "oklch(15% 0.0000 89.9 / 0.024)",
+          "oklch(25% 0.0000 89.9 / 0.024)",
+          "oklch(35% 0.0000 89.9 / 0.024)",
+          "oklch(45% 0.0000 89.9 / 0.024)",
+          "oklch(55% 0.0000 89.9 / 0.024)",
+          "oklch(65% 0.0000 89.9 / 0.024)",
+          "oklch(80% 0.0000 89.9 / 0.024)",
+          "oklch(95% 0.0000 89.9 / 0.024)"
         ]
       },
-      "mascot-mid": {
+      "glass-pane": {
         "role": "neutral",
-        "displayName": "Explorer mid",
+        "displayName": "Glass Pane",
         "tonalRamp": [
-          "oklch(15% 0.0114 286.11)",
-          "oklch(26% 0.0114 286.11)",
-          "oklch(38% 0.0114 286.11)",
-          "oklch(49% 0.0114 286.11)",
-          "oklch(61% 0.0114 286.11)",
-          "oklch(72% 0.0114 286.11)",
-          "oklch(84% 0.0114 286.11)",
-          "oklch(95% 0.0114 286.11)"
+          "oklch(15% 0.0000 89.9 / 0.031)",
+          "oklch(25% 0.0000 89.9 / 0.031)",
+          "oklch(35% 0.0000 89.9 / 0.031)",
+          "oklch(45% 0.0000 89.9 / 0.031)",
+          "oklch(55% 0.0000 89.9 / 0.031)",
+          "oklch(65% 0.0000 89.9 / 0.031)",
+          "oklch(80% 0.0000 89.9 / 0.031)",
+          "oklch(95% 0.0000 89.9 / 0.031)"
         ]
       },
-      "mascot-light": {
+      "illumination-wash": {
         "role": "neutral",
-        "displayName": "Explorer light",
+        "displayName": "Illumination Wash",
         "tonalRamp": [
-          "oklch(15% 0.0054 286.29)",
-          "oklch(26% 0.0054 286.29)",
-          "oklch(38% 0.0054 286.29)",
-          "oklch(49% 0.0054 286.29)",
-          "oklch(61% 0.0054 286.29)",
-          "oklch(72% 0.0054 286.29)",
-          "oklch(84% 0.0054 286.29)",
-          "oklch(95% 0.0054 286.29)"
+          "oklch(15% 0.0000 89.9 / 0.051)",
+          "oklch(25% 0.0000 89.9 / 0.051)",
+          "oklch(35% 0.0000 89.9 / 0.051)",
+          "oklch(45% 0.0000 89.9 / 0.051)",
+          "oklch(55% 0.0000 89.9 / 0.051)",
+          "oklch(65% 0.0000 89.9 / 0.051)",
+          "oklch(80% 0.0000 89.9 / 0.051)",
+          "oklch(95% 0.0000 89.9 / 0.051)"
         ]
       },
-      "glass-tint": {
+      "nav-tint": {
         "role": "neutral",
-        "displayName": "Quiet glass wash",
+        "displayName": "Navigation Tint",
         "tonalRamp": [
-          "oklch(15% 0.0000 89.88 / 0.031)",
-          "oklch(26% 0.0000 89.88 / 0.031)",
-          "oklch(38% 0.0000 89.88 / 0.031)",
-          "oklch(49% 0.0000 89.88 / 0.031)",
-          "oklch(61% 0.0000 89.88 / 0.031)",
-          "oklch(72% 0.0000 89.88 / 0.031)",
-          "oklch(84% 0.0000 89.88 / 0.031)",
-          "oklch(95% 0.0000 89.88 / 0.031)"
+          "oklch(15% 0.0036 286.2 / 0.737)",
+          "oklch(25% 0.0036 286.2 / 0.737)",
+          "oklch(35% 0.0036 286.2 / 0.737)",
+          "oklch(45% 0.0036 286.2 / 0.737)",
+          "oklch(55% 0.0036 286.2 / 0.737)",
+          "oklch(65% 0.0036 286.2 / 0.737)",
+          "oklch(80% 0.0036 286.2 / 0.737)",
+          "oklch(95% 0.0036 286.2 / 0.737)"
         ]
       },
-      "diagram-line": {
+      "scene-ground": {
         "role": "neutral",
-        "displayName": "Diagram line",
+        "displayName": "Scene Ground",
         "tonalRamp": [
-          "oklch(15% 0.0044 286.28)",
-          "oklch(26% 0.0044 286.28)",
-          "oklch(38% 0.0044 286.28)",
-          "oklch(49% 0.0044 286.28)",
-          "oklch(61% 0.0044 286.28)",
-          "oklch(72% 0.0044 286.28)",
-          "oklch(84% 0.0044 286.28)",
-          "oklch(95% 0.0044 286.28)"
+          "oklch(15% 0.0056 286.0)",
+          "oklch(25% 0.0056 286.0)",
+          "oklch(35% 0.0056 286.0)",
+          "oklch(45% 0.0056 286.0)",
+          "oklch(55% 0.0056 286.0)",
+          "oklch(65% 0.0056 286.0)",
+          "oklch(80% 0.0056 286.0)",
+          "oklch(95% 0.0056 286.0)"
+        ]
+      },
+      "scene-shade": {
+        "role": "neutral",
+        "displayName": "Scene Shade",
+        "tonalRamp": [
+          "oklch(15% 0.0063 285.7 / 0.282)",
+          "oklch(25% 0.0063 285.7 / 0.282)",
+          "oklch(35% 0.0063 285.7 / 0.282)",
+          "oklch(45% 0.0063 285.7 / 0.282)",
+          "oklch(55% 0.0063 285.7 / 0.282)",
+          "oklch(65% 0.0063 285.7 / 0.282)",
+          "oklch(80% 0.0063 285.7 / 0.282)",
+          "oklch(95% 0.0063 285.7 / 0.282)"
+        ]
+      },
+      "device-shell": {
+        "role": "neutral",
+        "displayName": "Device Shell",
+        "tonalRamp": [
+          "oklch(15% 0.0052 286.1)",
+          "oklch(25% 0.0052 286.1)",
+          "oklch(35% 0.0052 286.1)",
+          "oklch(45% 0.0052 286.1)",
+          "oklch(55% 0.0052 286.1)",
+          "oklch(65% 0.0052 286.1)",
+          "oklch(80% 0.0052 286.1)",
+          "oklch(95% 0.0052 286.1)"
+        ]
+      },
+      "metadata-wash": {
+        "role": "neutral",
+        "displayName": "Metadata Wash",
+        "tonalRamp": [
+          "oklch(15% 0 0 / 0.031)",
+          "oklch(25% 0 0 / 0.031)",
+          "oklch(35% 0 0 / 0.031)",
+          "oklch(45% 0 0 / 0.031)",
+          "oklch(55% 0 0 / 0.031)",
+          "oklch(65% 0 0 / 0.031)",
+          "oklch(80% 0 0 / 0.031)",
+          "oklch(95% 0 0 / 0.031)"
         ]
       }
     },
     "typographyMeta": {
       "display": {
-        "displayName": "display",
-        "purpose": "Homepage offer"
-      },
-      "headline": {
-        "displayName": "headline",
-        "purpose": "Section headings"
-      },
-      "title": {
-        "displayName": "title",
-        "purpose": "Tertiary titles"
-      },
-      "body": {
-        "displayName": "body",
-        "purpose": "Base paragraphs"
-      },
-      "action": {
-        "displayName": "action",
-        "purpose": "Primary control labels"
-      },
-      "text-action": {
-        "displayName": "text action",
-        "purpose": "Secondary links"
-      },
-      "faq": {
-        "displayName": "faq",
-        "purpose": "Disclosure questions"
-      },
-      "service-display": {
-        "displayName": "service display",
-        "purpose": "Individual service offers"
-      },
-      "case-display": {
-        "displayName": "case display",
-        "purpose": "Desktop case names; companion layout uses a 38px mobile override."
-      },
-      "footer-contact": {
-        "displayName": "Footer contact",
-        "purpose": "Direct Telegram address in the shared open footer."
+        "displayName": "Centered hero",
+        "purpose": "Bold centered homepage offer below the maker."
       },
       "display-mobile": {
-        "displayName": "Mobile display",
-        "purpose": "The centered homepage offer below 750px."
+        "displayName": "Mobile hero",
+        "purpose": "Homepage display under 750px; the narrow 370px override is 30px."
       },
-      "mascot-cell": {
-        "displayName": "Character cells",
-        "purpose": "Decorative ASCII explorer glyphs in SVG, not labels or controls."
+      "headline": {
+        "displayName": "Homepage heading",
+        "purpose": "Compact semibold section titles."
       },
-      "mascot-packet": {
-        "displayName": "Character packet",
-        "purpose": "Three-line ASCII packet in inspect and carry poses."
+      "scene-title": {
+        "displayName": "Project scene title",
+        "purpose": "Bold name beside actual source screens."
       },
-      "case-display-mobile": {
-        "displayName": "Mobile case display",
-        "purpose": "Case names below 750px in the companion layout; side clearance preserves readable titles."
+      "compact-body": {
+        "displayName": "Compact reading",
+        "purpose": "Scene descriptions and static process text."
+      },
+      "label": {
+        "displayName": "Functional small label",
+        "purpose": "11px metadata and functional mobile labels."
       }
     },
     "shadows": [
       {
-        "name": "navigation-island",
-        "value": "0 8px 30px #00000025",
-        "purpose": "One ambient lift under the complete frosted header island; other major matte panels retain no broad shadow."
+        "name": "navigation-ambient",
+        "value": "0 8px 24px #0000001c",
+        "purpose": "Central navigation pill only; outer row is clear."
+      },
+      {
+        "name": "device-structural",
+        "value": "5px 12px 23px #0000004d",
+        "purpose": "Separate actual screenshot device frames from decorative grounds."
       }
     ],
     "motion": [
       {
-        "name": "studio-ease",
+        "name": "ease-studio",
         "value": "cubic-bezier(.16,1,.3,1)",
-        "purpose": "Bounded entrances, tab state settles and hover transforms."
+        "purpose": "Existing bounded entrances and state transitions."
       },
       {
-        "name": "mascot-entrance",
-        "value": "1100ms",
-        "purpose": "Visible-default explorer rises 10px, releases an 18% lower mask and settles from .55 opacity."
+        "name": "idle-frames",
+        "value": "4.4s steps(1,end)",
+        "purpose": "Clip each quadrant before registered atlas translation; select four redrawn frames without scaling body dimensions."
       },
       {
-        "name": "mascot-idle",
-        "value": "1.8s steps(4,end)",
-        "purpose": "Existing SVG groups move body/head by 5px/3px and rotate scarf -4deg; viewport, document and reduced-motion gates pause loops."
+        "name": "guide-frames",
+        "value": "4.8s steps(1,end)",
+        "purpose": "Clip each quadrant before registered atlas translation; select guide frames with static registration compensation."
       },
       {
-        "name": "mascot-blink",
-        "value": "5.4s steps(1,end)",
-        "purpose": "Plus-sign eyes briefly scale to .08 on the vertical axis."
+        "name": "work-entrance",
+        "value": "860ms; translateY(25px) to none; opacity 0 to 1; desktop alternate-column delay 100ms",
+        "purpose": "Once per card after before-paint preparation; static/reduced-motion visible fallback."
       },
       {
-        "name": "mascot-wave",
-        "value": "1.4s steps(4,end)",
-        "purpose": "Maverick companion right arm rotates between -50deg and -64deg."
+        "name": "pending-fallback",
+        "value": "2200ms",
+        "purpose": "Clear head preparation when initialization fails."
       },
       {
-        "name": "mascot-packet",
-        "value": "2.4s steps(4,end)",
-        "purpose": "Inspect/carry packet bobs 5px within the sprite; static poses remain under reduced motion."
-      },
-      {
-        "name": "work-card-ascent",
-        "value": "1100ms; alternate-column 140ms delay",
-        "purpose": "Whole homepage proof cards settle from 64px translateY, 4deg rotateX, .96 scale and .25 opacity; transform origin is the lower centre."
-      },
-      {
-        "name": "wheel-smoothing",
-        "value": "Lenis 1.3.26; lerp .075; wheelMultiplier .85",
-        "purpose": "Already installed optional library; event-driven RAF with reentrancy guard stops at rest. Native touch/keyboard, dialog/demo opt-outs, hidden-document stop, reduced-motion destruction and native import-failure fallback."
-      },
-      {
-        "name": "internal-anchors",
-        "value": "configured offset -104px",
-        "purpose": "Smoothing retains internal anchors; placement also includes existing target scroll margin/container padding. Final Screens sample settled near 279.6px, not an exact 104px landing."
-      },
-      {
-        "name": "hero-copy",
-        "value": "900ms; at most 130ms child delay",
-        "purpose": "Visible-default offer children settle from 12px with 65ms local stagger capped at the third child."
-      },
-      {
-        "name": "heading-mask",
-        "value": "850ms",
-        "purpose": "A 35% lower mask and 9px settle give section headings a bounded entrance."
-      },
-      {
-        "name": "proof-media",
-        "value": "1000ms",
-        "purpose": "Service proof and related media arrive through a 7% upper crop and a small opacity settle; homepage work uses whole-card ascent."
-      },
-      {
-        "name": "service-geometry",
-        "value": "1000ms",
-        "purpose": "Authored diagrams scale from .96; content remains visible before enhancement."
-      },
-      {
-        "name": "scope-mask",
-        "value": "750ms",
-        "purpose": "Scope, automation and capability groups release a 12% lower mask."
-      },
-      {
-        "name": "section-settle",
-        "value": "800ms; 45ms child stagger",
-        "purpose": "Process, roadmaps, pricing, questions and stories alternate a shallow +/-8px horizontal settle."
-      },
-      {
-        "name": "tab-settle",
-        "value": "460ms; 35ms child stagger",
-        "purpose": "Panel children settle from 7px; a new selection cancels previous animations, hidden/reduced states finish active ones."
-      },
-      {
-        "name": "scroll-depth",
-        "value": "work images 8px to -8px; seam -24px to 24px and 4px to -4px",
-        "purpose": "Native CSS view timelines are progressive enhancement; unsupported browsers and reduced motion use static positions."
-      },
-      {
-        "name": "footer-contact",
-        "value": "950ms; 80ms child stagger",
-        "purpose": "The open contact pair settles once from 10px."
-      },
-      {
-        "name": "footer-wordmark",
-        "value": "1200ms",
-        "purpose": "The closing wordmark releases a 55% lower mask once."
+        "name": "service-illumination",
+        "value": ".35s ease",
+        "purpose": "Background and shadow state only; no card/diagram translation."
       },
       {
         "name": "disclosure-height",
         "value": "440ms cubic-bezier(.22,1,.36,1)",
-        "purpose": "Reversible native disclosure enhancement; settles when hidden or reduced."
-      },
-      {
-        "name": "faq-indicator",
-        "value": "280ms cubic-bezier(.16,1,.3,1)",
-        "purpose": "The 14px vertical plus stroke collapses on open and returns at the beginning of closing."
-      },
-      {
-        "name": "connection-cycle",
-        "value": "5.6s linear",
-        "purpose": "Existing decorative SVG connection pulses, visibility-gated."
+        "purpose": "Reversible native disclosure enhancement."
       }
     ],
     "breakpoints": [
       {
-        "name": "wide",
-        "value": "1800px"
+        "name": "wide-maker",
+        "value": "1600px"
       },
       {
-        "name": "compact",
+        "name": "incumbent-service-intermediate",
         "value": "1100px"
+      },
+      {
+        "name": "header-intermediate",
+        "value": "1000px"
       },
       {
         "name": "mobile",
         "value": "750px"
       },
       {
-        "name": "narrow",
+        "name": "service-single-column",
         "value": "500px"
+      },
+      {
+        "name": "narrow-mobile",
+        "value": "370px"
       }
     ]
   },
   "components": [
     {
+      "name": "Hero action",
+      "kind": "button",
+      "refersTo": "hero-button",
+      "description": "Compact filled Telegram action below the centered maker.",
+      "html": "<a class=\"ds-hero-action\" href=\"https://t.me/LancerManager\">Обсудить проект</a>",
+      "css": ".ds-hero-action{font-family:Manrope,Arial,sans-serif;display:inline-flex;align-items:center;justify-content:center;line-height:1.4;border:0;text-decoration:none;cursor:pointer;background:var(--studio-accent,#bded52);color:var(--studio-action-ink,#171718);border-radius:12px;min-height:48px;padding:11px 26px;font-size:13px;font-weight:600;transition:background .2s;transform:none}.ds-hero-action:hover{background:var(--studio-accent-hover,#ccf677);transform:none}.ds-hero-action:focus-visible{outline:2px solid var(--studio-accent,#bded52);outline-offset:5px;}.ds-hero-action:active{transform:none}"
+    },
+    {
       "name": "Primary action",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "Electric lime contact capsule with dark lettering and a small hover lift.",
-      "html": "<a class=\"ds-primary\" href=\"https://t.me/LancerManager\" target=\"_blank\" rel=\"noopener noreferrer\">Обсудить проект</a>",
-      "css": ".ds-primary{display:inline-flex;align-items:center;justify-content:center;gap:24px;border:0;border-radius:40px;min-height:48px;padding:13px 21px;background:var(--studio-accent,#bded52);color:var(--studio-action-ink,#171718);font:500 13px/1.4 Manrope,Arial,sans-serif;cursor:pointer;text-decoration:none;box-shadow:none;transition:background .2s,transform .3s cubic-bezier(.16,1,.3,1)}.ds-primary svg{width:17px;height:17px}.ds-primary:hover{background:var(--studio-accent-hover,#ccf677);transform:translateY(-2px)}.ds-primary:active{transform:translateY(0)}.ds-primary:focus-visible,.ds-text-action:focus-visible,.ds-nav a:focus-visible,.ds-tab:focus-visible,.ds-disclosure summary:focus-visible,.ds-caption:focus-visible{outline:2px solid var(--studio-accent,#bded52);outline-offset:5px}"
+      "description": "Retained filled action on service and case editorial surfaces.",
+      "html": "<a class=\"ds-primary\" href=\"https://t.me/LancerManager\">Обсудить проект</a>",
+      "css": ".ds-primary{font-family:Manrope,Arial,sans-serif;display:inline-flex;align-items:center;justify-content:center;line-height:1.4;border:0;text-decoration:none;cursor:pointer;background:var(--studio-accent,#bded52);color:var(--studio-action-ink,#171718);border-radius:40px;min-height:48px;padding:13px 21px;font-size:13px;font-weight:500;transition:background .2s,transform .3s cubic-bezier(.16,1,.3,1)}.ds-primary:hover{background:var(--studio-accent-hover,#ccf677);transform:translateY(-2px)}.ds-primary:focus-visible{outline:2px solid var(--studio-accent,#bded52);outline-offset:5px;}.ds-primary:active{transform:translateY(0)}@media(prefers-reduced-motion:reduce){.ds-primary{transition:none}.ds-primary:hover{transform:none}}"
     },
     {
-      "name": "Text action",
+      "name": "Quiet work link",
       "kind": "button",
       "refersTo": "text-action",
-      "description": "The homepage's quiet text-only work link, with an underlined hover response.",
-      "html": "<a class=\"ds-text-action\" href=\"#works\">Смотреть работы</a>",
-      "css": ".ds-text-action{display:inline-flex;align-items:center;min-height:44px;color:var(--studio-muted,#bdbdbf);font:400 14px/1.4 Manrope,Arial,sans-serif;text-decoration:underline;text-underline-offset:6px;text-decoration-color:#f4f4f440}.ds-text-action:hover{color:var(--studio-ink,#f4f4f4);text-decoration-color:var(--studio-accent,#bded52)}.ds-text-action:focus-visible{outline:2px solid var(--studio-accent,#bded52);outline-offset:5px}"
+      "description": "Supporting homepage action with a quiet underline.",
+      "html": "<a class=\"ds-work-link\" href=\"#works\">Смотреть работы</a>",
+      "css": ".ds-work-link{font-family:Manrope,Arial,sans-serif;display:inline-flex;align-items:center;min-height:34px;font-size:13px;line-height:1.4;color:var(--studio-muted,#bdbdbf);border-bottom:1px solid var(--studio-accent,#bded52);text-decoration:underline;text-underline-offset:6px;text-decoration-color:#f4f4f440}.ds-work-link:hover{color:var(--studio-ink,#f4f4f4);text-decoration-color:var(--studio-accent,#bded52)}.ds-work-link:focus-visible{outline:2px solid var(--studio-accent,#bded52);outline-offset:5px;}"
     },
     {
-      "name": "Frosted navigation island",
+      "name": "Central navigation",
       "kind": "nav",
       "refersTo": "navigation",
-      "description": "One shared outer island with 32px blur and ambient lift; the child navigation stays transparent and lime signals hover/current text.",
-      "html": "<header class=\"ds-island\"><a class=\"ds-logo\" href=\"#home\" aria-label=\"Lancer Agency — главная\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m12 3 10 5-10 5L2 8zM2 12l10 5 10-5M2 16l10 5 10-5\"/></svg><span>Lancer <small>Agency</small></span></a><nav class=\"ds-nav\" aria-label=\"Основная навигация\"><a href=\"#works\">Работы</a><a href=\"#services\" aria-current=\"page\">Услуги</a><a href=\"#approach\">Процесс</a></nav><a class=\"ds-header-contact\" href=\"#contact\">Контакты</a></header>",
-      "css": ".ds-island{display:flex;align-items:center;justify-content:space-between;gap:24px;width:min(1120px,calc(100% - 40px));min-height:64px;padding:8px 20px;margin-inline:auto;border:0;border-radius:32px;background:#252527a8;backdrop-filter:blur(32px) saturate(105%);-webkit-backdrop-filter:blur(32px) saturate(105%);box-shadow:0 8px 30px #00000025;color:var(--studio-ink,#f4f4f4);font-family:Manrope,Arial,sans-serif}.ds-logo{display:flex;align-items:center;gap:10px;font-size:24px;color:inherit;text-decoration:none}.ds-logo svg{width:26px;height:26px;color:var(--studio-accent,#bded52)}.ds-logo small{font-size:11px}.ds-nav{display:flex;align-items:center;gap:3px;background:none;border:0;box-shadow:none;backdrop-filter:none;padding:0;font:400 13px/1.6 Manrope,Arial,sans-serif}.ds-nav a{display:inline-flex;align-items:center;min-height:40px;padding:8px 19px;border-radius:30px;background:transparent;color:var(--studio-ink,#f4f4f4);text-decoration:none;transition:color .25s}.ds-nav a:is(:hover,:focus-visible,[aria-current]){color:var(--studio-accent,#bded52)}.ds-header-contact{font-size:13px;color:var(--studio-muted,#bdbdbf);text-decoration:none}.ds-header-contact:hover{color:var(--studio-accent,#bded52)}.ds-island a:focus-visible{outline:2px solid var(--studio-accent,#bded52);outline-offset:5px}@supports not (backdrop-filter:blur(1px)){.ds-island{background:var(--studio-surface,#252527)}}@media(max-width:1100px){.ds-island{gap:18px}.ds-logo small{display:none}.ds-nav a{padding:8px 14px}}@media(max-width:750px){.ds-island{width:calc(100% - 24px);min-height:60px;padding:8px 12px;gap:10px;border-radius:28px}.ds-logo{font-size:22px}.ds-nav a{padding:8px 9px;font-size:11px}.ds-header-contact{display:none}}"
+      "description": "One shallow frosted central pill; outer side branding is outside this component.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Основная навигация\"><a href=\"#works\">Работы</a><a href=\"/services/\" aria-current=\"page\">Услуги</a><a href=\"#approach\">Процесс</a><a href=\"#contact\">Контакты</a></nav>",
+      "css": ".ds-nav{display:inline-flex;align-items:center;gap:4px;padding:4px 12px;min-height:46px;background:#29292bbc;border-radius:24px;backdrop-filter:blur(24px) saturate(105%);box-shadow:0 8px 24px #0000001c;font-family:Manrope,Arial,sans-serif}.ds-nav a{display:inline-flex;align-items:center;padding:6px 14px;min-height:38px;border-radius:30px;background:transparent;color:var(--studio-ink,#f4f4f4);font-size:12px;text-decoration:none;transition:color .25s}.ds-nav a:is(:hover,:focus-visible,[aria-current]){color:var(--studio-accent,#bded52)}.ds-nav a:focus-visible{outline:2px solid var(--studio-accent,#bded52);outline-offset:5px;}@supports not(backdrop-filter:blur(1px)){.ds-nav{background:#29292b}}@media(max-width:750px){.ds-nav{padding:3px 5px;gap:0;min-height:42px}.ds-nav a{font-size:11px;min-height:36px;padding:5px 9px}}"
     },
     {
-      "name": "Starting-price pill",
+      "name": "Service card",
+      "kind": "card",
+      "refersTo": "service-card",
+      "description": "Preserved matte service diagram card; hover illuminates without moving.",
+      "html": "<a class=\"ds-service\" href=\"/services/websites/\"><div class=\"ds-service-title\"><h3>Сайты и лендинги</h3><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 19 19 5M5 5h14v14\"/></svg></div><p>Понятный сайт для вашего продукта и бизнеса.</p><svg class=\"ds-service-art\" viewBox=\"0 0 600 390\" fill=\"none\" aria-hidden=\"true\"><rect class=\"ds-panel\" x=\"124\" y=\"60\" width=\"351\" height=\"258\" rx=\"14\"/><path class=\"ds-divider\" d=\"M124 94h351\"/><g class=\"ds-dots\"><circle cx=\"140\" cy=\"77\" r=\"2\"/><circle cx=\"149\" cy=\"77\" r=\"2\"/><circle cx=\"158\" cy=\"77\" r=\"2\"/></g><rect class=\"ds-block\" x=\"144\" y=\"114\" width=\"173\" height=\"115\" rx=\"7\"/><path class=\"ds-line\" d=\"M333 136h100M333 156h82M145 266h151M145 283h278\"/><rect class=\"ds-bright\" x=\"333\" y=\"182\" width=\"101\" height=\"31\" rx=\"7\"/></svg><span class=\"ds-service-price\">от 30 000 ₽</span></a>",
+      "css": ".ds-service{position:relative;display:block;overflow:hidden;isolation:isolate;min-height:310px;aspect-ratio:1.25;width:360px;max-width:100%;padding:25px;border:0;border-radius:20px;background:var(--studio-glass-pane,#ffffff08);color:var(--studio-ink,#f4f4f4);font-family:Manrope,Arial,sans-serif;text-decoration:none;transition:background-color .35s ease,box-shadow .35s ease}.ds-service:is(:hover,:focus-visible){transform:none;background:#ffffff0d;box-shadow:none}.ds-service:focus-visible{outline:2px solid var(--studio-accent,#bded52);outline-offset:5px;}.ds-service-title{display:flex;justify-content:space-between;gap:12px;align-items:center}.ds-service h3{margin:0;font-size:18px;font-weight:500;line-height:1.4;letter-spacing:-.02em}.ds-service p{margin:7px 0 0;font-size:12px;line-height:1.65;color:#ceced1;max-width:28ch}.ds-service-title>svg{width:18px;height:18px;color:var(--studio-muted,#bdbdbf);opacity:0;transform:translate(-3px,3px);transition:opacity .25s,transform .25s}.ds-service:is(:hover,:focus-visible) .ds-service-title>svg{opacity:1;transform:none}.ds-service-art{position:absolute;left:5%;bottom:20px;width:90%;max-height:210px;z-index:-1}.ds-panel{fill:#29292d;stroke:#56565c;stroke-width:.9}.ds-block{fill:#303034}.ds-bright{fill:#dddde0}.ds-line{stroke:#9d9da4;stroke-width:3;stroke-linecap:round}.ds-divider{stroke:#58585e;stroke-width:1}.ds-dots{fill:#9c9ca3}.ds-service-price{position:absolute;left:22px;bottom:20px;background:#ffffff0d;padding:6px 11px;border-radius:25px;font-size:11px}.ds-service:hover .ds-service-art{transform:none}@media(prefers-reduced-motion:reduce){.ds-service,.ds-service-title>svg{transition:none}}"
+    },
+    {
+      "name": "Case metadata",
       "kind": "chip",
-      "refersTo": "price-chip",
-      "description": "A noninteractive scope label with a quiet fill and tabular numerals.",
-      "html": "<span class=\"ds-price\">от 30 000 ₽</span>",
-      "css": ".ds-price{display:inline-block;padding:6px 11px;border:0;border-radius:25px;background:#ffffff0d;color:var(--studio-ink,#f4f4f4);font:400 11px/1.6 Manrope,Arial,sans-serif;font-variant-numeric:tabular-nums;white-space:nowrap}"
+      "refersTo": "metadata-pill",
+      "description": "Compact noninteractive tags for case scope.",
+      "html": "<span class=\"ds-pill\">Telegram Mini App</span>",
+      "css": ".ds-pill{display:inline-block;font-family:Manrope,Arial,sans-serif;font-size:11px;color:var(--studio-ink,#f4f4f4);padding:5px 11px;border:1px solid var(--studio-line,#f4f4f425);border-radius:25px;background:#f4f4f408}"
     },
     {
-      "name": "Included-work card",
-      "kind": "card",
-      "refersTo": "included-card",
-      "description": "A borderless scope group whose tonal wash carries the grouping.",
-      "html": "<article class=\"ds-scope\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 5h16v14H4zM4 9h16M9 9v10\"/></svg><h3>Интерфейс</h3><p>Основной сценарий, экраны и состояния.</p></article>",
-      "css": ".ds-scope{display:block;border:0;border-radius:16px;padding:26px;background:var(--studio-glass-pane,#ffffff08);color:var(--studio-ink,#f4f4f4);font-family:Manrope,Arial,sans-serif;min-height:170px}.ds-scope svg{width:19px;height:19px;color:var(--studio-accent,#bded52);margin:0 0 18px}.ds-scope h3{margin:0 0 11px;font-size:19px;font-weight:500;line-height:1.35;letter-spacing:-.02em}.ds-scope p{margin:0;color:var(--studio-muted,#bdbdbf);font-size:14px;line-height:1.65;max-width:47ch}"
+      "name": "Editorial process step",
+      "kind": "custom",
+      "description": "Static numbered step with a fine top connector; not a tab.",
+      "html": "<article class=\"ds-step\"><span>01</span><h3>Задача</h3><p>Разбираем пользователей, сценарии и ограничения. Отделяем первую версию от идей на будущее.</p></article>",
+      "css": ".ds-step{position:relative;padding-top:30px;max-width:31ch;font-family:Manrope,Arial,sans-serif}.ds-step::before{content:'';position:absolute;top:9px;left:30px;right:0;height:1px;background:var(--studio-line,#f4f4f425)}.ds-step>span{position:absolute;top:0;left:0;font-size:11px;font-variant-numeric:tabular-nums;color:var(--studio-muted,#bdbdbf)}.ds-step h3{font-size:18px;font-weight:650;line-height:1.35;color:var(--studio-ink,#f4f4f4);margin:0 0 10px;letter-spacing:-.02em}.ds-step p{font-size:12px;line-height:1.65;color:var(--studio-muted,#bdbdbf);margin:0}"
     },
     {
-      "name": "Production tab",
+      "name": "Native FAQ",
+      "kind": "custom",
+      "description": "Transparent native disclosure with authored plus/minus strokes.",
+      "html": "<details class=\"ds-faq\"><summary>Как начать работу?<i aria-hidden=\"true\"></i></summary><p>Напишите в Telegram и опишите задачу, пользователей и нужные функции.</p></details>",
+      "css": ".ds-faq{font-family:Manrope,Arial,sans-serif;background:transparent;border:0;border-bottom:1px solid var(--studio-line,#f4f4f425);padding:0 18px;color:var(--studio-ink,#f4f4f4)}.ds-faq summary{display:flex;align-items:center;justify-content:space-between;gap:24px;cursor:pointer;list-style:none;min-height:66px;padding:19px 0;font-size:15px;font-weight:400;line-height:1.5}.ds-faq summary:hover,.ds-faq[open] summary{color:var(--studio-accent,#bded52)}.ds-faq summary:focus-visible{outline:2px solid var(--studio-accent,#bded52);outline-offset:5px;}.ds-faq i{position:relative;width:20px;height:20px;flex:none;color:var(--studio-muted,#bdbdbf)}.ds-faq i::before,.ds-faq i::after{content:'';position:absolute;background:currentColor;border-radius:1px;transition:transform .28s cubic-bezier(.16,1,.3,1)}.ds-faq i::before{left:3px;top:9px;width:14px;height:2px}.ds-faq i::after{left:9px;top:3px;width:2px;height:14px;transform:scaleY(1)}.ds-faq[open] i::after{transform:scaleY(0)}.ds-faq p{font-size:14px;line-height:1.8;color:var(--studio-muted,#bdbdbf);margin:0;padding:0 32px 24px 0}@media(prefers-reduced-motion:reduce){.ds-faq i::after{transition:none}}"
+    },
+    {
+      "name": "Footer Telegram link",
       "kind": "button",
-      "refersTo": "process-tab",
-      "description": "A text-only phase button; both states share a neutral wash and selected text turns lime.",
-      "html": "<button class=\"ds-tab\" type=\"button\" role=\"tab\" aria-selected=\"true\">Интерфейс</button>",
-      "css": ".ds-tab{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px;padding:16px 20px;border:0;border-radius:12px;background:#ffffff06;color:var(--studio-muted,#bdbdbf);font:400 16px/1.6 Manrope,Arial,sans-serif;text-align:left;cursor:pointer;transition:color .2s}.ds-tab:hover{background:#f4f4f40b}.ds-tab[aria-selected=true]{background:#ffffff06;color:var(--studio-accent,#bded52)}.ds-primary:focus-visible,.ds-text-action:focus-visible,.ds-nav a:focus-visible,.ds-tab:focus-visible,.ds-disclosure summary:focus-visible,.ds-caption:focus-visible{outline:2px solid var(--studio-accent,#bded52);outline-offset:5px}"
-    },
-    {
-      "name": "Native disclosure",
-      "kind": "custom",
-      "refersTo": "faq-row",
-      "description": "Transparent native FAQ row with explicit 14px, 2px plus/minus strokes and a stable divider.",
-      "html": "<details class=\"ds-disclosure\"><summary>Что передаётся после завершения проекта?<i aria-hidden=\"true\"></i></summary><p>Исходный код, согласованные материалы и инструкции по запуску.</p></details>",
-      "css": ".ds-disclosure{padding:0 18px;background:transparent;border:0;border-bottom:1px solid var(--studio-line,#f4f4f425);border-radius:0;box-shadow:none;color:var(--studio-ink,#f4f4f4);font-family:Manrope,Arial,sans-serif}.ds-disclosure summary{display:flex;align-items:center;justify-content:space-between;gap:24px;cursor:pointer;list-style:none;min-height:66px;padding:19px 0;font-size:15px;line-height:1.5}.ds-disclosure summary:hover,.ds-disclosure[open] summary{color:var(--studio-accent,#bded52)}.ds-disclosure summary::-webkit-details-marker{display:none}.ds-disclosure i{position:relative;width:20px;height:20px;flex:none;color:var(--studio-muted,#bdbdbf)}.ds-disclosure i:before,.ds-disclosure i:after{content:\"\";position:absolute;background:currentColor;border-radius:1px;transform:none;transition:transform .28s var(--studio-ease,cubic-bezier(.16,1,.3,1))}.ds-disclosure i:before{left:3px;top:9px;width:14px;height:2px}.ds-disclosure i:after{left:9px;top:3px;width:2px;height:14px;transform:scaleY(1)}.ds-disclosure[open]{background:transparent;border-radius:0;box-shadow:none}.ds-disclosure[open] i:after{transform:scaleY(0)}.ds-disclosure[data-disclosure-state=closing] i:after{transform:scaleY(1)}.ds-disclosure p{margin:0;padding:0 32px 24px 0;color:var(--studio-muted,#bdbdbf);font-size:14px;line-height:1.8}.ds-disclosure summary:focus-visible{outline:2px solid var(--studio-accent,#bded52);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-disclosure i:after{transition:none}}"
-    },
-    {
-      "name": "Project overlay caption",
-      "kind": "card",
-      "refersTo": "project-caption",
-      "description": "Readable borderless cover tint with a circular SVG action.",
-      "html": "<a class=\"ds-caption\" href=\"#case\"><div><h3>12К</h3><p>Программа лояльности и кабинет бизнеса</p></div><span class=\"ds-caption-arrow\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 19 19 5M5 5h14v14\"/></svg></span></a>",
-      "css": ".ds-caption{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:16px 19px;border:0;border-radius:15px;background:var(--studio-glass-caption,#141417ad);backdrop-filter:var(--studio-glass-filter,blur(24px) saturate(105%));-webkit-backdrop-filter:var(--studio-glass-filter,blur(24px) saturate(105%));color:var(--studio-ink,#f4f4f4);text-decoration:none;font-family:Manrope,Arial,sans-serif}.ds-caption h3{margin:0 0 5px;font-size:23px;font-weight:500;line-height:1.35;letter-spacing:-.02em}.ds-caption p{margin:0;color:var(--studio-ink,#f4f4f4);font-size:12px;line-height:1.65}.ds-caption-arrow{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--studio-ink,#f4f4f4);color:var(--studio-ground,#141415);flex-shrink:0}.ds-caption-arrow svg{width:21px;height:21px;transition:transform .3s cubic-bezier(.16,1,.3,1)}.ds-caption:hover .ds-caption-arrow svg{transform:rotate(45deg)}.ds-primary:focus-visible,.ds-text-action:focus-visible,.ds-nav a:focus-visible,.ds-tab:focus-visible,.ds-disclosure summary:focus-visible,.ds-caption:focus-visible{outline:2px solid var(--studio-accent,#bded52);outline-offset:5px}@supports not (backdrop-filter:blur(1px)){.ds-caption{background:#252527}}.ds-caption:is(:hover,:focus-visible) .ds-caption-arrow{background:var(--studio-accent,#bded52);color:var(--studio-action-ink,#171718)}"
-    },
-    {
-      "name": "ASCII explorer",
-      "kind": "custom",
-      "refersTo": "hero-mascot",
-      "description": "Actual original hood/scarf explorer: 1,587 ASCII SVG text cells in a 64×72 field, with stepped idle and blink; the site shares smaller wave/inspect/carry/sit variants.",
-      "html": "<div class=\"ds-mascot ds-mascot-idle ds-digital-running\" aria-hidden=\"true\"><svg viewBox=\"0 0 512 648\" xmlns=\"http://www.w3.org/2000/svg\"><g class=\"ds-mascot-sprite\" font-family=\"monospace\" font-size=\"10\" font-weight=\"400\"><g class=\"ds-mascot-scarf\"><text x=\"336\" y=\"287\" fill=\"#bded52\">+</text><text x=\"344\" y=\"287\" fill=\"#bded52\">+</text><text x=\"352\" y=\"287\" fill=\"#bded52\">+</text><text x=\"336\" y=\"296\" fill=\"#bded52\">+</text><text x=\"344\" y=\"296\" fill=\"#bded52\">+</text><text x=\"352\" y=\"296\" fill=\"#bded52\">+</text><text x=\"360\" y=\"296\" fill=\"#bded52\">+</text><text x=\"368\" y=\"296\" fill=\"#bded52\">+</text><text x=\"376\" y=\"296\" fill=\"#bded52\">+</text><text x=\"384\" y=\"296\" fill=\"#bded52\">+</text><text x=\"344\" y=\"305\" fill=\"#bded52\">+</text><text x=\"352\" y=\"305\" fill=\"#bded52\">+</text><text x=\"360\" y=\"305\" fill=\"#bded52\">+</text><text x=\"368\" y=\"305\" fill=\"#bded52\">+</text><text x=\"376\" y=\"305\" fill=\"#bded52\">+</text><text x=\"384\" y=\"305\" fill=\"#bded52\">+</text><text x=\"392\" y=\"305\" fill=\"#bded52\">+</text><text x=\"400\" y=\"305\" fill=\"#bded52\">+</text><text x=\"408\" y=\"305\" fill=\"#bded52\">+</text><text x=\"416\" y=\"305\" fill=\"#bded52\">+</text><text x=\"344\" y=\"314\" fill=\"#bded52\">+</text><text x=\"352\" y=\"314\" fill=\"#bded52\">+</text><text x=\"360\" y=\"314\" fill=\"#bded52\">+</text><text x=\"368\" y=\"314\" fill=\"#bded52\">+</text><text x=\"376\" y=\"314\" fill=\"#bded52\">+</text><text x=\"384\" y=\"314\" fill=\"#bded52\">+</text><text x=\"392\" y=\"314\" fill=\"#bded52\">+</text><text x=\"400\" y=\"314\" fill=\"#bded52\">+</text><text x=\"408\" y=\"314\" fill=\"#bded52\">+</text><text x=\"416\" y=\"314\" fill=\"#bded52\">+</text><text x=\"424\" y=\"314\" fill=\"#bded52\">+</text><text x=\"344\" y=\"323\" fill=\"#bded52\">+</text><text x=\"352\" y=\"323\" fill=\"#bded52\">+</text><text x=\"360\" y=\"323\" fill=\"#bded52\">+</text><text x=\"368\" y=\"323\" fill=\"#bded52\">+</text><text x=\"376\" y=\"323\" fill=\"#bded52\">+</text><text x=\"384\" y=\"323\" fill=\"#bded52\">+</text><text x=\"392\" y=\"323\" fill=\"#bded52\">+</text><text x=\"400\" y=\"323\" fill=\"#bded52\">+</text><text x=\"408\" y=\"323\" fill=\"#bded52\">+</text><text x=\"416\" y=\"323\" fill=\"#bded52\">+</text><text x=\"424\" y=\"323\" fill=\"#bded52\">+</text><text x=\"432\" y=\"323\" fill=\"#bded52\">+</text><text x=\"352\" y=\"332\" fill=\"#bded52\">+</text><text x=\"360\" y=\"332\" fill=\"#bded52\">+</text><text x=\"368\" y=\"332\" fill=\"#bded52\">+</text><text x=\"376\" y=\"332\" fill=\"#bded52\">+</text><text x=\"384\" y=\"332\" fill=\"#bded52\">+</text><text x=\"392\" y=\"332\" fill=\"#bded52\">+</text><text x=\"400\" y=\"332\" fill=\"#bded52\">+</text><text x=\"408\" y=\"332\" fill=\"#bded52\">+</text><text x=\"416\" y=\"332\" fill=\"#bded52\">+</text><text x=\"424\" y=\"332\" fill=\"#bded52\">+</text><text x=\"432\" y=\"332\" fill=\"#bded52\">+</text><text x=\"352\" y=\"341\" fill=\"#bded52\">+</text><text x=\"360\" y=\"341\" fill=\"#bded52\">+</text><text x=\"368\" y=\"341\" fill=\"#bded52\">+</text><text x=\"376\" y=\"341\" fill=\"#bded52\">+</text><text x=\"384\" y=\"341\" fill=\"#bded52\">+</text><text x=\"392\" y=\"341\" fill=\"#bded52\">+</text><text x=\"400\" y=\"341\" fill=\"#bded52\">+</text><text x=\"408\" y=\"341\" fill=\"#bded52\">+</text><text x=\"416\" y=\"341\" fill=\"#bded52\">+</text><text x=\"424\" y=\"341\" fill=\"#bded52\">+</text><text x=\"432\" y=\"341\" fill=\"#bded52\">+</text><text x=\"440\" y=\"341\" fill=\"#bded52\">+</text><text x=\"424\" y=\"350\" fill=\"#bded52\">+</text><text x=\"432\" y=\"350\" fill=\"#bded52\">+</text><text x=\"440\" y=\"350\" fill=\"#bded52\">+</text><text x=\"448\" y=\"350\" fill=\"#bded52\">+</text></g><g class=\"ds-mascot-leftBoot\"><text x=\"184\" y=\"512\" fill=\"#e4e4e8\">@</text><text x=\"192\" y=\"512\" fill=\"#e4e4e8\">:</text><text x=\"200\" y=\"512\" fill=\"#e4e4e8\">%</text><text x=\"208\" y=\"512\" fill=\"#e4e4e8\">#</text><text x=\"216\" y=\"512\" fill=\"#e4e4e8\">=</text><text x=\"224\" y=\"512\" fill=\"#e4e4e8\">@</text><text x=\"184\" y=\"521\" fill=\"#e4e4e8\">=</text><text x=\"192\" y=\"521\" fill=\"#e4e4e8\">@</text><text x=\"200\" y=\"521\" fill=\"#e4e4e8\">:</text><text x=\"208\" y=\"521\" fill=\"#e4e4e8\">%</text><text x=\"216\" y=\"521\" fill=\"#e4e4e8\">#</text><text x=\"224\" y=\"521\" fill=\"#e4e4e8\">=</text><text x=\"184\" y=\"530\" fill=\"#e4e4e8\">#</text><text x=\"192\" y=\"530\" fill=\"#e4e4e8\">=</text><text x=\"200\" y=\"530\" fill=\"#e4e4e8\">@</text><text x=\"208\" y=\"530\" fill=\"#e4e4e8\">:</text><text x=\"216\" y=\"530\" fill=\"#e4e4e8\">%</text><text x=\"224\" y=\"530\" fill=\"#e4e4e8\">#</text><text x=\"184\" y=\"539\" fill=\"#e4e4e8\">%</text><text x=\"192\" y=\"539\" fill=\"#e4e4e8\">#</text><text x=\"200\" y=\"539\" fill=\"#e4e4e8\">=</text><text x=\"208\" y=\"539\" fill=\"#e4e4e8\">@</text><text x=\"216\" y=\"539\" fill=\"#e4e4e8\">:</text><text x=\"224\" y=\"539\" fill=\"#e4e4e8\">%</text><text x=\"184\" y=\"548\" fill=\"#e4e4e8\">:</text><text x=\"192\" y=\"548\" fill=\"#e4e4e8\">%</text><text x=\"200\" y=\"548\" fill=\"#e4e4e8\">#</text><text x=\"208\" y=\"548\" fill=\"#e4e4e8\">=</text><text x=\"216\" y=\"548\" fill=\"#e4e4e8\">@</text><text x=\"224\" y=\"548\" fill=\"#e4e4e8\">:</text><text x=\"152\" y=\"557\" fill=\"#e4e4e8\">:</text><text x=\"160\" y=\"557\" fill=\"#e4e4e8\">%</text><text x=\"168\" y=\"557\" fill=\"#e4e4e8\">#</text><text x=\"176\" y=\"557\" fill=\"#e4e4e8\">=</text><text x=\"184\" y=\"557\" fill=\"#e4e4e8\">@</text><text x=\"192\" y=\"557\" fill=\"#e4e4e8\">:</text><text x=\"200\" y=\"557\" fill=\"#e4e4e8\">%</text><text x=\"208\" y=\"557\" fill=\"#e4e4e8\">#</text><text x=\"216\" y=\"557\" fill=\"#e4e4e8\">=</text><text x=\"224\" y=\"557\" fill=\"#e4e4e8\">@</text><text x=\"152\" y=\"566\" fill=\"#e4e4e8\">@</text><text x=\"160\" y=\"566\" fill=\"#e4e4e8\">:</text><text x=\"168\" y=\"566\" fill=\"#e4e4e8\">%</text><text x=\"176\" y=\"566\" fill=\"#e4e4e8\">#</text><text x=\"184\" y=\"566\" fill=\"#e4e4e8\">=</text><text x=\"192\" y=\"566\" fill=\"#e4e4e8\">@</text><text x=\"200\" y=\"566\" fill=\"#e4e4e8\">:</text><text x=\"208\" y=\"566\" fill=\"#e4e4e8\">%</text><text x=\"216\" y=\"566\" fill=\"#e4e4e8\">#</text><text x=\"224\" y=\"566\" fill=\"#e4e4e8\">=</text><text x=\"152\" y=\"575\" fill=\"#e4e4e8\">=</text><text x=\"160\" y=\"575\" fill=\"#e4e4e8\">@</text><text x=\"168\" y=\"575\" fill=\"#e4e4e8\">:</text><text x=\"176\" y=\"575\" fill=\"#e4e4e8\">%</text><text x=\"184\" y=\"575\" fill=\"#e4e4e8\">#</text><text x=\"192\" y=\"575\" fill=\"#e4e4e8\">=</text><text x=\"200\" y=\"575\" fill=\"#e4e4e8\">@</text><text x=\"208\" y=\"575\" fill=\"#e4e4e8\">:</text><text x=\"216\" y=\"575\" fill=\"#e4e4e8\">%</text><text x=\"224\" y=\"575\" fill=\"#e4e4e8\">#</text></g><g class=\"ds-mascot-rightBoot\"><text x=\"288\" y=\"512\" fill=\"#a5a5ad\">#</text><text x=\"296\" y=\"512\" fill=\"#a5a5ad\">=</text><text x=\"304\" y=\"512\" fill=\"#707077\">@</text><text x=\"312\" y=\"512\" fill=\"#707077\">:</text><text x=\"320\" y=\"512\" fill=\"#707077\">%</text><text x=\"328\" y=\"512\" fill=\"#707077\">#</text><text x=\"288\" y=\"521\" fill=\"#a5a5ad\">%</text><text x=\"296\" y=\"521\" fill=\"#a5a5ad\">#</text><text x=\"304\" y=\"521\" fill=\"#707077\">=</text><text x=\"312\" y=\"521\" fill=\"#707077\">@</text><text x=\"320\" y=\"521\" fill=\"#707077\">:</text><text x=\"328\" y=\"521\" fill=\"#707077\">%</text><text x=\"288\" y=\"530\" fill=\"#a5a5ad\">:</text><text x=\"296\" y=\"530\" fill=\"#a5a5ad\">%</text><text x=\"304\" y=\"530\" fill=\"#707077\">#</text><text x=\"312\" y=\"530\" fill=\"#707077\">=</text><text x=\"320\" y=\"530\" fill=\"#707077\">@</text><text x=\"328\" y=\"530\" fill=\"#707077\">:</text><text x=\"288\" y=\"539\" fill=\"#a5a5ad\">@</text><text x=\"296\" y=\"539\" fill=\"#a5a5ad\">:</text><text x=\"304\" y=\"539\" fill=\"#707077\">%</text><text x=\"312\" y=\"539\" fill=\"#707077\">#</text><text x=\"320\" y=\"539\" fill=\"#707077\">=</text><text x=\"328\" y=\"539\" fill=\"#707077\">@</text><text x=\"288\" y=\"548\" fill=\"#a5a5ad\">=</text><text x=\"296\" y=\"548\" fill=\"#a5a5ad\">@</text><text x=\"304\" y=\"548\" fill=\"#707077\">:</text><text x=\"312\" y=\"548\" fill=\"#707077\">%</text><text x=\"320\" y=\"548\" fill=\"#707077\">#</text><text x=\"328\" y=\"548\" fill=\"#707077\">=</text><text x=\"288\" y=\"557\" fill=\"#a5a5ad\">#</text><text x=\"296\" y=\"557\" fill=\"#a5a5ad\">=</text><text x=\"304\" y=\"557\" fill=\"#707077\">@</text><text x=\"312\" y=\"557\" fill=\"#707077\">:</text><text x=\"320\" y=\"557\" fill=\"#707077\">%</text><text x=\"328\" y=\"557\" fill=\"#707077\">#</text><text x=\"336\" y=\"557\" fill=\"#707077\">=</text><text x=\"344\" y=\"557\" fill=\"#707077\">@</text><text x=\"352\" y=\"557\" fill=\"#707077\">:</text><text x=\"360\" y=\"557\" fill=\"#707077\">%</text><text x=\"288\" y=\"566\" fill=\"#a5a5ad\">%</text><text x=\"296\" y=\"566\" fill=\"#a5a5ad\">#</text><text x=\"304\" y=\"566\" fill=\"#707077\">=</text><text x=\"312\" y=\"566\" fill=\"#707077\">@</text><text x=\"320\" y=\"566\" fill=\"#707077\">:</text><text x=\"328\" y=\"566\" fill=\"#707077\">%</text><text x=\"336\" y=\"566\" fill=\"#707077\">#</text><text x=\"344\" y=\"566\" fill=\"#707077\">=</text><text x=\"352\" y=\"566\" fill=\"#707077\">@</text><text x=\"360\" y=\"566\" fill=\"#707077\">:</text><text x=\"288\" y=\"575\" fill=\"#a5a5ad\">:</text><text x=\"296\" y=\"575\" fill=\"#a5a5ad\">%</text><text x=\"304\" y=\"575\" fill=\"#707077\">#</text><text x=\"312\" y=\"575\" fill=\"#707077\">=</text><text x=\"320\" y=\"575\" fill=\"#707077\">@</text><text x=\"328\" y=\"575\" fill=\"#707077\">:</text><text x=\"336\" y=\"575\" fill=\"#707077\">%</text><text x=\"344\" y=\"575\" fill=\"#707077\">#</text><text x=\"352\" y=\"575\" fill=\"#707077\">=</text><text x=\"360\" y=\"575\" fill=\"#707077\">@</text></g><g class=\"ds-mascot-body\"><text x=\"184\" y=\"287\" fill=\"#e4e4e8\">@</text><text x=\"192\" y=\"287\" fill=\"#e4e4e8\">:</text><text x=\"200\" y=\"287\" fill=\"#e4e4e8\">%</text><text x=\"208\" y=\"287\" fill=\"#e4e4e8\">#</text><text x=\"216\" y=\"287\" fill=\"#e4e4e8\">=</text><text x=\"224\" y=\"287\" fill=\"#e4e4e8\">@</text><text x=\"232\" y=\"287\" fill=\"#a5a5ad\">:</text><text x=\"240\" y=\"287\" fill=\"#a5a5ad\">%</text><text x=\"248\" y=\"287\" fill=\"#a5a5ad\">#</text><text x=\"256\" y=\"287\" fill=\"#a5a5ad\">=</text><text x=\"264\" y=\"287\" fill=\"#a5a5ad\">@</text><text x=\"272\" y=\"287\" fill=\"#bded52\">+</text><text x=\"280\" y=\"287\" fill=\"#bded52\">+</text><text x=\"288\" y=\"287\" fill=\"#bded52\">+</text><text x=\"296\" y=\"287\" fill=\"#a5a5ad\">=</text><text x=\"304\" y=\"287\" fill=\"#707077\">@</text><text x=\"312\" y=\"287\" fill=\"#707077\">:</text><text x=\"184\" y=\"296\" fill=\"#e4e4e8\">=</text><text x=\"192\" y=\"296\" fill=\"#e4e4e8\">@</text><text x=\"200\" y=\"296\" fill=\"#e4e4e8\">:</text><text x=\"208\" y=\"296\" fill=\"#e4e4e8\">%</text><text x=\"216\" y=\"296\" fill=\"#e4e4e8\">#</text><text x=\"224\" y=\"296\" fill=\"#e4e4e8\">=</text><text x=\"232\" y=\"296\" fill=\"#a5a5ad\">@</text><text x=\"240\" y=\"296\" fill=\"#a5a5ad\">:</text><text x=\"248\" y=\"296\" fill=\"#a5a5ad\">%</text><text x=\"256\" y=\"296\" fill=\"#a5a5ad\">#</text><text x=\"264\" y=\"296\" fill=\"#bded52\">+</text><text x=\"272\" y=\"296\" fill=\"#bded52\">+</text><text x=\"280\" y=\"296\" fill=\"#bded52\">+</text><text x=\"288\" y=\"296\" fill=\"#a5a5ad\">%</text><text x=\"296\" y=\"296\" fill=\"#a5a5ad\">#</text><text x=\"304\" y=\"296\" fill=\"#707077\">=</text><text x=\"312\" y=\"296\" fill=\"#707077\">@</text><text x=\"320\" y=\"296\" fill=\"#707077\">:</text><text x=\"184\" y=\"305\" fill=\"#e4e4e8\">#</text><text x=\"192\" y=\"305\" fill=\"#e4e4e8\">=</text><text x=\"200\" y=\"305\" fill=\"#e4e4e8\">@</text><text x=\"208\" y=\"305\" fill=\"#e4e4e8\">:</text><text x=\"216\" y=\"305\" fill=\"#e4e4e8\">%</text><text x=\"224\" y=\"305\" fill=\"#e4e4e8\">#</text><text x=\"232\" y=\"305\" fill=\"#a5a5ad\">=</text><text x=\"240\" y=\"305\" fill=\"#a5a5ad\">@</text><text x=\"248\" y=\"305\" fill=\"#a5a5ad\">:</text><text x=\"256\" y=\"305\" fill=\"#bded52\">+</text><text x=\"264\" y=\"305\" fill=\"#bded52\">+</text><text x=\"272\" y=\"305\" fill=\"#bded52\">+</text><text x=\"280\" y=\"305\" fill=\"#a5a5ad\">@</text><text x=\"288\" y=\"305\" fill=\"#a5a5ad\">:</text><text x=\"296\" y=\"305\" fill=\"#a5a5ad\">%</text><text x=\"304\" y=\"305\" fill=\"#707077\">#</text><text x=\"312\" y=\"305\" fill=\"#707077\">=</text><text x=\"320\" y=\"305\" fill=\"#707077\">@</text><text x=\"328\" y=\"305\" fill=\"#707077\">:</text><text x=\"176\" y=\"314\" fill=\"#e4e4e8\">:</text><text x=\"184\" y=\"314\" fill=\"#e4e4e8\">%</text><text x=\"192\" y=\"314\" fill=\"#e4e4e8\">#</text><text x=\"200\" y=\"314\" fill=\"#e4e4e8\">=</text><text x=\"208\" y=\"314\" fill=\"#e4e4e8\">@</text><text x=\"216\" y=\"314\" fill=\"#e4e4e8\">:</text><text x=\"224\" y=\"314\" fill=\"#e4e4e8\">%</text><text x=\"232\" y=\"314\" fill=\"#a5a5ad\">#</text><text x=\"240\" y=\"314\" fill=\"#a5a5ad\">=</text><text x=\"248\" y=\"314\" fill=\"#bded52\">+</text><text x=\"256\" y=\"314\" fill=\"#bded52\">+</text><text x=\"264\" y=\"314\" fill=\"#bded52\">+</text><text x=\"272\" y=\"314\" fill=\"#a5a5ad\">#</text><text x=\"280\" y=\"314\" fill=\"#a5a5ad\">=</text><text x=\"288\" y=\"314\" fill=\"#a5a5ad\">@</text><text x=\"296\" y=\"314\" fill=\"#a5a5ad\">:</text><text x=\"304\" y=\"314\" fill=\"#707077\">%</text><text x=\"312\" y=\"314\" fill=\"#707077\">#</text><text x=\"320\" y=\"314\" fill=\"#707077\">=</text><text x=\"328\" y=\"314\" fill=\"#707077\">@</text><text x=\"176\" y=\"323\" fill=\"#e4e4e8\">@</text><text x=\"184\" y=\"323\" fill=\"#e4e4e8\">:</text><text x=\"192\" y=\"323\" fill=\"#e4e4e8\">%</text><text x=\"200\" y=\"323\" fill=\"#e4e4e8\">#</text><text x=\"208\" y=\"323\" fill=\"#e4e4e8\">=</text><text x=\"216\" y=\"323\" fill=\"#e4e4e8\">@</text><text x=\"224\" y=\"323\" fill=\"#e4e4e8\">:</text><text x=\"232\" y=\"323\" fill=\"#a5a5ad\">%</text><text x=\"240\" y=\"323\" fill=\"#bded52\">+</text><text x=\"248\" y=\"323\" fill=\"#bded52\">+</text><text x=\"256\" y=\"323\" fill=\"#bded52\">+</text><text x=\"264\" y=\"323\" fill=\"#a5a5ad\">:</text><text x=\"272\" y=\"323\" fill=\"#a5a5ad\">%</text><text x=\"280\" y=\"323\" fill=\"#a5a5ad\">#</text><text x=\"288\" y=\"323\" fill=\"#a5a5ad\">=</text><text x=\"296\" y=\"323\" fill=\"#a5a5ad\">@</text><text x=\"304\" y=\"323\" fill=\"#707077\">:</text><text x=\"312\" y=\"323\" fill=\"#707077\">%</text><text x=\"320\" y=\"323\" fill=\"#707077\">#</text><text x=\"328\" y=\"323\" fill=\"#707077\">=</text><text x=\"336\" y=\"323\" fill=\"#707077\">@</text><text x=\"176\" y=\"332\" fill=\"#e4e4e8\">=</text><text x=\"184\" y=\"332\" fill=\"#e4e4e8\">@</text><text x=\"192\" y=\"332\" fill=\"#e4e4e8\">:</text><text x=\"200\" y=\"332\" fill=\"#e4e4e8\">%</text><text x=\"208\" y=\"332\" fill=\"#e4e4e8\">#</text><text x=\"216\" y=\"332\" fill=\"#e4e4e8\">=</text><text x=\"224\" y=\"332\" fill=\"#e4e4e8\">@</text><text x=\"232\" y=\"332\" fill=\"#bded52\">+</text><text x=\"240\" y=\"332\" fill=\"#bded52\">+</text><text x=\"248\" y=\"332\" fill=\"#bded52\">+</text><text x=\"256\" y=\"332\" fill=\"#a5a5ad\">=</text><text x=\"264\" y=\"332\" fill=\"#a5a5ad\">@</text><text x=\"272\" y=\"332\" fill=\"#a5a5ad\">:</text><text x=\"280\" y=\"332\" fill=\"#a5a5ad\">%</text><text x=\"288\" y=\"332\" fill=\"#a5a5ad\">#</text><text x=\"296\" y=\"332\" fill=\"#a5a5ad\">=</text><text x=\"304\" y=\"332\" fill=\"#707077\">@</text><text x=\"312\" y=\"332\" fill=\"#707077\">:</text><text x=\"320\" y=\"332\" fill=\"#707077\">%</text><text x=\"328\" y=\"332\" fill=\"#707077\">#</text><text x=\"336\" y=\"332\" fill=\"#707077\">=</text><text x=\"168\" y=\"341\" fill=\"#e4e4e8\">%</text><text x=\"176\" y=\"341\" fill=\"#e4e4e8\">#</text><text x=\"184\" y=\"341\" fill=\"#e4e4e8\">=</text><text x=\"192\" y=\"341\" fill=\"#e4e4e8\">@</text><text x=\"200\" y=\"341\" fill=\"#e4e4e8\">:</text><text x=\"208\" y=\"341\" fill=\"#e4e4e8\">%</text><text x=\"216\" y=\"341\" fill=\"#e4e4e8\">#</text><text x=\"224\" y=\"341\" fill=\"#bded52\">+</text><text x=\"232\" y=\"341\" fill=\"#bded52\">+</text><text x=\"240\" y=\"341\" fill=\"#bded52\">+</text><text x=\"248\" y=\"341\" fill=\"#a5a5ad\">%</text><text x=\"256\" y=\"341\" fill=\"#a5a5ad\">#</text><text x=\"264\" y=\"341\" fill=\"#a5a5ad\">=</text><text x=\"272\" y=\"341\" fill=\"#a5a5ad\">@</text><text x=\"280\" y=\"341\" fill=\"#a5a5ad\">:</text><text x=\"288\" y=\"341\" fill=\"#a5a5ad\">%</text><text x=\"296\" y=\"341\" fill=\"#a5a5ad\">#</text><text x=\"304\" y=\"341\" fill=\"#707077\">=</text><text x=\"312\" y=\"341\" fill=\"#707077\">@</text><text x=\"320\" y=\"341\" fill=\"#707077\">:</text><text x=\"328\" y=\"341\" fill=\"#707077\">%</text><text x=\"336\" y=\"341\" fill=\"#707077\">#</text><text x=\"344\" y=\"341\" fill=\"#707077\">=</text><text x=\"168\" y=\"350\" fill=\"#e4e4e8\">:</text><text x=\"176\" y=\"350\" fill=\"#e4e4e8\">%</text><text x=\"184\" y=\"350\" fill=\"#e4e4e8\">#</text><text x=\"192\" y=\"350\" fill=\"#e4e4e8\">=</text><text x=\"200\" y=\"350\" fill=\"#e4e4e8\">@</text><text x=\"208\" y=\"350\" fill=\"#e4e4e8\">:</text><text x=\"216\" y=\"350\" fill=\"#bded52\">+</text><text x=\"224\" y=\"350\" fill=\"#bded52\">+</text><text x=\"232\" y=\"350\" fill=\"#bded52\">+</text><text x=\"240\" y=\"350\" fill=\"#a5a5ad\">@</text><text x=\"248\" y=\"350\" fill=\"#a5a5ad\">:</text><text x=\"256\" y=\"350\" fill=\"#a5a5ad\">%</text><text x=\"264\" y=\"350\" fill=\"#a5a5ad\">#</text><text x=\"272\" y=\"350\" fill=\"#a5a5ad\">=</text><text x=\"280\" y=\"350\" fill=\"#a5a5ad\">@</text><text x=\"288\" y=\"350\" fill=\"#a5a5ad\">:</text><text x=\"296\" y=\"350\" fill=\"#a5a5ad\">%</text><text x=\"304\" y=\"350\" fill=\"#707077\">#</text><text x=\"312\" y=\"350\" fill=\"#707077\">=</text><text x=\"320\" y=\"350\" fill=\"#707077\">@</text><text x=\"328\" y=\"350\" fill=\"#707077\">:</text><text x=\"336\" y=\"350\" fill=\"#707077\">%</text><text x=\"344\" y=\"350\" fill=\"#707077\">#</text><text x=\"168\" y=\"359\" fill=\"#e4e4e8\">@</text><text x=\"176\" y=\"359\" fill=\"#e4e4e8\">:</text><text x=\"184\" y=\"359\" fill=\"#e4e4e8\">%</text><text x=\"192\" y=\"359\" fill=\"#e4e4e8\">#</text><text x=\"200\" y=\"359\" fill=\"#e4e4e8\">=</text><text x=\"208\" y=\"359\" fill=\"#bded52\">+</text><text x=\"216\" y=\"359\" fill=\"#bded52\">+</text><text x=\"224\" y=\"359\" fill=\"#bded52\">+</text><text x=\"232\" y=\"359\" fill=\"#a5a5ad\">#</text><text x=\"240\" y=\"359\" fill=\"#a5a5ad\">=</text><text x=\"248\" y=\"359\" fill=\"#a5a5ad\">@</text><text x=\"256\" y=\"359\" fill=\"#a5a5ad\">:</text><text x=\"264\" y=\"359\" fill=\"#a5a5ad\">%</text><text x=\"272\" y=\"359\" fill=\"#a5a5ad\">#</text><text x=\"280\" y=\"359\" fill=\"#a5a5ad\">=</text><text x=\"288\" y=\"359\" fill=\"#a5a5ad\">@</text><text x=\"296\" y=\"359\" fill=\"#a5a5ad\">:</text><text x=\"304\" y=\"359\" fill=\"#707077\">%</text><text x=\"312\" y=\"359\" fill=\"#707077\">#</text><text x=\"320\" y=\"359\" fill=\"#707077\">=</text><text x=\"328\" y=\"359\" fill=\"#707077\">@</text><text x=\"336\" y=\"359\" fill=\"#707077\">:</text><text x=\"344\" y=\"359\" fill=\"#707077\">%</text><text x=\"352\" y=\"359\" fill=\"#707077\">#</text><text x=\"160\" y=\"368\" fill=\"#e4e4e8\">#</text><text x=\"168\" y=\"368\" fill=\"#e4e4e8\">=</text><text x=\"176\" y=\"368\" fill=\"#e4e4e8\">@</text><text x=\"184\" y=\"368\" fill=\"#e4e4e8\">:</text><text x=\"192\" y=\"368\" fill=\"#e4e4e8\">%</text><text x=\"200\" y=\"368\" fill=\"#bded52\">+</text><text x=\"208\" y=\"368\" fill=\"#bded52\">+</text><text x=\"216\" y=\"368\" fill=\"#bded52\">+</text><text x=\"224\" y=\"368\" fill=\"#e4e4e8\">:</text><text x=\"232\" y=\"368\" fill=\"#a5a5ad\">%</text><text x=\"240\" y=\"368\" fill=\"#a5a5ad\">#</text><text x=\"248\" y=\"368\" fill=\"#a5a5ad\">=</text><text x=\"256\" y=\"368\" fill=\"#a5a5ad\">@</text><text x=\"264\" y=\"368\" fill=\"#a5a5ad\">:</text><text x=\"272\" y=\"368\" fill=\"#a5a5ad\">%</text><text x=\"280\" y=\"368\" fill=\"#a5a5ad\">#</text><text x=\"288\" y=\"368\" fill=\"#a5a5ad\">=</text><text x=\"296\" y=\"368\" fill=\"#a5a5ad\">@</text><text x=\"304\" y=\"368\" fill=\"#707077\">:</text><text x=\"312\" y=\"368\" fill=\"#707077\">%</text><text x=\"320\" y=\"368\" fill=\"#707077\">#</text><text x=\"328\" y=\"368\" fill=\"#707077\">=</text><text x=\"336\" y=\"368\" fill=\"#707077\">@</text><text x=\"344\" y=\"368\" fill=\"#707077\">:</text><text x=\"352\" y=\"368\" fill=\"#707077\">%</text><text x=\"160\" y=\"377\" fill=\"#e4e4e8\">%</text><text x=\"168\" y=\"377\" fill=\"#e4e4e8\">#</text><text x=\"176\" y=\"377\" fill=\"#e4e4e8\">=</text><text x=\"184\" y=\"377\" fill=\"#e4e4e8\">@</text><text x=\"192\" y=\"377\" fill=\"#bded52\">+</text><text x=\"200\" y=\"377\" fill=\"#bded52\">+</text><text x=\"208\" y=\"377\" fill=\"#bded52\">+</text><text x=\"216\" y=\"377\" fill=\"#e4e4e8\">=</text><text x=\"224\" y=\"377\" fill=\"#e4e4e8\">@</text><text x=\"232\" y=\"377\" fill=\"#a5a5ad\">:</text><text x=\"240\" y=\"377\" fill=\"#a5a5ad\">%</text><text x=\"248\" y=\"377\" fill=\"#a5a5ad\">#</text><text x=\"256\" y=\"377\" fill=\"#a5a5ad\">=</text><text x=\"264\" y=\"377\" fill=\"#a5a5ad\">@</text><text x=\"272\" y=\"377\" fill=\"#a5a5ad\">:</text><text x=\"280\" y=\"377\" fill=\"#a5a5ad\">%</text><text x=\"288\" y=\"377\" fill=\"#a5a5ad\">#</text><text x=\"296\" y=\"377\" fill=\"#a5a5ad\">=</text><text x=\"304\" y=\"377\" fill=\"#707077\">@</text><text x=\"312\" y=\"377\" fill=\"#707077\">:</text><text x=\"320\" y=\"377\" fill=\"#707077\">%</text><text x=\"328\" y=\"377\" fill=\"#707077\">#</text><text x=\"336\" y=\"377\" fill=\"#707077\">=</text><text x=\"344\" y=\"377\" fill=\"#707077\">@</text><text x=\"352\" y=\"377\" fill=\"#707077\">:</text><text x=\"360\" y=\"377\" fill=\"#707077\">%</text><text x=\"160\" y=\"386\" fill=\"#e4e4e8\">:</text><text x=\"168\" y=\"386\" fill=\"#e4e4e8\">%</text><text x=\"176\" y=\"386\" fill=\"#e4e4e8\">#</text><text x=\"184\" y=\"386\" fill=\"#bded52\">+</text><text x=\"192\" y=\"386\" fill=\"#bded52\">+</text><text x=\"200\" y=\"386\" fill=\"#bded52\">+</text><text x=\"208\" y=\"386\" fill=\"#e4e4e8\">%</text><text x=\"216\" y=\"386\" fill=\"#e4e4e8\">#</text><text x=\"224\" y=\"386\" fill=\"#e4e4e8\">=</text><text x=\"232\" y=\"386\" fill=\"#a5a5ad\">@</text><text x=\"240\" y=\"386\" fill=\"#a5a5ad\">:</text><text x=\"248\" y=\"386\" fill=\"#a5a5ad\">%</text><text x=\"256\" y=\"386\" fill=\"#a5a5ad\">#</text><text x=\"264\" y=\"386\" fill=\"#a5a5ad\">=</text><text x=\"272\" y=\"386\" fill=\"#a5a5ad\">@</text><text x=\"280\" y=\"386\" fill=\"#a5a5ad\">:</text><text x=\"288\" y=\"386\" fill=\"#a5a5ad\">%</text><text x=\"296\" y=\"386\" fill=\"#a5a5ad\">#</text><text x=\"304\" y=\"386\" fill=\"#707077\">=</text><text x=\"312\" y=\"386\" fill=\"#707077\">@</text><text x=\"320\" y=\"386\" fill=\"#707077\">:</text><text x=\"328\" y=\"386\" fill=\"#707077\">%</text><text x=\"336\" y=\"386\" fill=\"#707077\">#</text><text x=\"344\" y=\"386\" fill=\"#707077\">=</text><text x=\"352\" y=\"386\" fill=\"#707077\">@</text><text x=\"360\" y=\"386\" fill=\"#707077\">:</text><text x=\"160\" y=\"395\" fill=\"#e4e4e8\">@</text><text x=\"168\" y=\"395\" fill=\"#e4e4e8\">:</text><text x=\"176\" y=\"395\" fill=\"#bded52\">+</text><text x=\"184\" y=\"395\" fill=\"#bded52\">+</text><text x=\"192\" y=\"395\" fill=\"#bded52\">+</text><text x=\"200\" y=\"395\" fill=\"#e4e4e8\">@</text><text x=\"208\" y=\"395\" fill=\"#e4e4e8\">:</text><text x=\"216\" y=\"395\" fill=\"#e4e4e8\">%</text><text x=\"224\" y=\"395\" fill=\"#e4e4e8\">#</text><text x=\"232\" y=\"395\" fill=\"#a5a5ad\">=</text><text x=\"240\" y=\"395\" fill=\"#a5a5ad\">@</text><text x=\"248\" y=\"395\" fill=\"#a5a5ad\">:</text><text x=\"256\" y=\"395\" fill=\"#a5a5ad\">%</text><text x=\"264\" y=\"395\" fill=\"#a5a5ad\">#</text><text x=\"272\" y=\"395\" fill=\"#a5a5ad\">=</text><text x=\"280\" y=\"395\" fill=\"#a5a5ad\">@</text><text x=\"288\" y=\"395\" fill=\"#a5a5ad\">:</text><text x=\"296\" y=\"395\" fill=\"#a5a5ad\">%</text><text x=\"304\" y=\"395\" fill=\"#707077\">#</text><text x=\"312\" y=\"395\" fill=\"#707077\">=</text><text x=\"320\" y=\"395\" fill=\"#707077\">@</text><text x=\"328\" y=\"395\" fill=\"#707077\">:</text><text x=\"336\" y=\"395\" fill=\"#707077\">%</text><text x=\"344\" y=\"395\" fill=\"#707077\">#</text><text x=\"352\" y=\"395\" fill=\"#707077\">=</text><text x=\"360\" y=\"395\" fill=\"#707077\">@</text><text x=\"152\" y=\"404\" fill=\"#e4e4e8\">#</text><text x=\"160\" y=\"404\" fill=\"#e4e4e8\">=</text><text x=\"168\" y=\"404\" fill=\"#bded52\">+</text><text x=\"176\" y=\"404\" fill=\"#bded52\">+</text><text x=\"184\" y=\"404\" fill=\"#bded52\">+</text><text x=\"192\" y=\"404\" fill=\"#e4e4e8\">#</text><text x=\"200\" y=\"404\" fill=\"#e4e4e8\">=</text><text x=\"208\" y=\"404\" fill=\"#e4e4e8\">@</text><text x=\"216\" y=\"404\" fill=\"#e4e4e8\">:</text><text x=\"224\" y=\"404\" fill=\"#e4e4e8\">%</text><text x=\"232\" y=\"404\" fill=\"#a5a5ad\">#</text><text x=\"240\" y=\"404\" fill=\"#a5a5ad\">=</text><text x=\"248\" y=\"404\" fill=\"#a5a5ad\">@</text><text x=\"256\" y=\"404\" fill=\"#a5a5ad\">:</text><text x=\"264\" y=\"404\" fill=\"#a5a5ad\">%</text><text x=\"272\" y=\"404\" fill=\"#a5a5ad\">#</text><text x=\"280\" y=\"404\" fill=\"#a5a5ad\">=</text><text x=\"288\" y=\"404\" fill=\"#a5a5ad\">@</text><text x=\"296\" y=\"404\" fill=\"#a5a5ad\">:</text><text x=\"304\" y=\"404\" fill=\"#707077\">%</text><text x=\"312\" y=\"404\" fill=\"#707077\">#</text><text x=\"320\" y=\"404\" fill=\"#707077\">=</text><text x=\"328\" y=\"404\" fill=\"#707077\">@</text><text x=\"336\" y=\"404\" fill=\"#707077\">:</text><text x=\"344\" y=\"404\" fill=\"#707077\">%</text><text x=\"352\" y=\"404\" fill=\"#707077\">#</text><text x=\"360\" y=\"404\" fill=\"#707077\">=</text><text x=\"152\" y=\"413\" fill=\"#e4e4e8\">%</text><text x=\"160\" y=\"413\" fill=\"#bded52\">+</text><text x=\"168\" y=\"413\" fill=\"#bded52\">+</text><text x=\"176\" y=\"413\" fill=\"#bded52\">+</text><text x=\"184\" y=\"413\" fill=\"#e4e4e8\">:</text><text x=\"192\" y=\"413\" fill=\"#e4e4e8\">%</text><text x=\"200\" y=\"413\" fill=\"#e4e4e8\">#</text><text x=\"208\" y=\"413\" fill=\"#e4e4e8\">=</text><text x=\"216\" y=\"413\" fill=\"#e4e4e8\">@</text><text x=\"224\" y=\"413\" fill=\"#e4e4e8\">:</text><text x=\"232\" y=\"413\" fill=\"#a5a5ad\">%</text><text x=\"240\" y=\"413\" fill=\"#a5a5ad\">#</text><text x=\"248\" y=\"413\" fill=\"#a5a5ad\">=</text><text x=\"256\" y=\"413\" fill=\"#a5a5ad\">@</text><text x=\"264\" y=\"413\" fill=\"#a5a5ad\">:</text><text x=\"272\" y=\"413\" fill=\"#a5a5ad\">%</text><text x=\"280\" y=\"413\" fill=\"#a5a5ad\">#</text><text x=\"288\" y=\"413\" fill=\"#a5a5ad\">=</text><text x=\"296\" y=\"413\" fill=\"#a5a5ad\">@</text><text x=\"304\" y=\"413\" fill=\"#707077\">:</text><text x=\"312\" y=\"413\" fill=\"#707077\">%</text><text x=\"320\" y=\"413\" fill=\"#707077\">#</text><text x=\"328\" y=\"413\" fill=\"#707077\">=</text><text x=\"336\" y=\"413\" fill=\"#707077\">@</text><text x=\"344\" y=\"413\" fill=\"#707077\">:</text><text x=\"352\" y=\"413\" fill=\"#707077\">%</text><text x=\"360\" y=\"413\" fill=\"#707077\">#</text><text x=\"152\" y=\"422\" fill=\"#bded52\">+</text><text x=\"160\" y=\"422\" fill=\"#bded52\">+</text><text x=\"168\" y=\"422\" fill=\"#bded52\">+</text><text x=\"176\" y=\"422\" fill=\"#e4e4e8\">=</text><text x=\"184\" y=\"422\" fill=\"#e4e4e8\">@</text><text x=\"192\" y=\"422\" fill=\"#e4e4e8\">:</text><text x=\"200\" y=\"422\" fill=\"#e4e4e8\">%</text><text x=\"208\" y=\"422\" fill=\"#e4e4e8\">#</text><text x=\"216\" y=\"422\" fill=\"#e4e4e8\">=</text><text x=\"224\" y=\"422\" fill=\"#e4e4e8\">@</text><text x=\"232\" y=\"422\" fill=\"#a5a5ad\">:</text><text x=\"240\" y=\"422\" fill=\"#a5a5ad\">%</text><text x=\"248\" y=\"422\" fill=\"#a5a5ad\">#</text><text x=\"256\" y=\"422\" fill=\"#a5a5ad\">=</text><text x=\"264\" y=\"422\" fill=\"#a5a5ad\">@</text><text x=\"272\" y=\"422\" fill=\"#a5a5ad\">:</text><text x=\"280\" y=\"422\" fill=\"#a5a5ad\">%</text><text x=\"288\" y=\"422\" fill=\"#a5a5ad\">#</text><text x=\"296\" y=\"422\" fill=\"#a5a5ad\">=</text><text x=\"304\" y=\"422\" fill=\"#707077\">@</text><text x=\"312\" y=\"422\" fill=\"#707077\">:</text><text x=\"320\" y=\"422\" fill=\"#707077\">%</text><text x=\"328\" y=\"422\" fill=\"#707077\">#</text><text x=\"336\" y=\"422\" fill=\"#707077\">=</text><text x=\"344\" y=\"422\" fill=\"#707077\">@</text><text x=\"352\" y=\"422\" fill=\"#707077\">:</text><text x=\"360\" y=\"422\" fill=\"#707077\">%</text><text x=\"368\" y=\"422\" fill=\"#707077\">#</text><text x=\"144\" y=\"431\" fill=\"#bded52\">+</text><text x=\"152\" y=\"431\" fill=\"#bded52\">+</text><text x=\"160\" y=\"431\" fill=\"#bded52\">+</text><text x=\"168\" y=\"431\" fill=\"#e4e4e8\">%</text><text x=\"176\" y=\"431\" fill=\"#e4e4e8\">#</text><text x=\"184\" y=\"431\" fill=\"#e4e4e8\">=</text><text x=\"192\" y=\"431\" fill=\"#e4e4e8\">@</text><text x=\"200\" y=\"431\" fill=\"#e4e4e8\">:</text><text x=\"208\" y=\"431\" fill=\"#e4e4e8\">%</text><text x=\"216\" y=\"431\" fill=\"#e4e4e8\">#</text><text x=\"224\" y=\"431\" fill=\"#e4e4e8\">=</text><text x=\"232\" y=\"431\" fill=\"#a5a5ad\">@</text><text x=\"240\" y=\"431\" fill=\"#a5a5ad\">:</text><text x=\"248\" y=\"431\" fill=\"#a5a5ad\">%</text><text x=\"256\" y=\"431\" fill=\"#a5a5ad\">#</text><text x=\"264\" y=\"431\" fill=\"#a5a5ad\">=</text><text x=\"272\" y=\"431\" fill=\"#a5a5ad\">@</text><text x=\"280\" y=\"431\" fill=\"#a5a5ad\">:</text><text x=\"288\" y=\"431\" fill=\"#a5a5ad\">%</text><text x=\"296\" y=\"431\" fill=\"#a5a5ad\">#</text><text x=\"304\" y=\"431\" fill=\"#707077\">=</text><text x=\"312\" y=\"431\" fill=\"#707077\">@</text><text x=\"320\" y=\"431\" fill=\"#707077\">:</text><text x=\"328\" y=\"431\" fill=\"#707077\">%</text><text x=\"336\" y=\"431\" fill=\"#707077\">#</text><text x=\"344\" y=\"431\" fill=\"#707077\">=</text><text x=\"352\" y=\"431\" fill=\"#707077\">@</text><text x=\"360\" y=\"431\" fill=\"#707077\">:</text><text x=\"368\" y=\"431\" fill=\"#707077\">%</text><text x=\"144\" y=\"440\" fill=\"#bded52\">+</text><text x=\"152\" y=\"440\" fill=\"#bded52\">+</text><text x=\"160\" y=\"440\" fill=\"#e4e4e8\">@</text><text x=\"168\" y=\"440\" fill=\"#e4e4e8\">:</text><text x=\"176\" y=\"440\" fill=\"#e4e4e8\">%</text><text x=\"184\" y=\"440\" fill=\"#e4e4e8\">#</text><text x=\"192\" y=\"440\" fill=\"#e4e4e8\">=</text><text x=\"200\" y=\"440\" fill=\"#e4e4e8\">@</text><text x=\"208\" y=\"440\" fill=\"#e4e4e8\">:</text><text x=\"216\" y=\"440\" fill=\"#e4e4e8\">%</text><text x=\"224\" y=\"440\" fill=\"#e4e4e8\">#</text><text x=\"232\" y=\"440\" fill=\"#a5a5ad\">=</text><text x=\"240\" y=\"440\" fill=\"#a5a5ad\">@</text><text x=\"248\" y=\"440\" fill=\"#a5a5ad\">:</text><text x=\"256\" y=\"440\" fill=\"#a5a5ad\">%</text><text x=\"264\" y=\"440\" fill=\"#a5a5ad\">#</text><text x=\"272\" y=\"440\" fill=\"#a5a5ad\">=</text><text x=\"280\" y=\"440\" fill=\"#a5a5ad\">@</text><text x=\"288\" y=\"440\" fill=\"#a5a5ad\">:</text><text x=\"296\" y=\"440\" fill=\"#a5a5ad\">%</text><text x=\"304\" y=\"440\" fill=\"#707077\">#</text><text x=\"312\" y=\"440\" fill=\"#707077\">=</text><text x=\"320\" y=\"440\" fill=\"#707077\">@</text><text x=\"328\" y=\"440\" fill=\"#707077\">:</text><text x=\"336\" y=\"440\" fill=\"#707077\">%</text><text x=\"344\" y=\"440\" fill=\"#707077\">#</text><text x=\"352\" y=\"440\" fill=\"#707077\">=</text><text x=\"360\" y=\"440\" fill=\"#707077\">@</text><text x=\"368\" y=\"440\" fill=\"#707077\">:</text><text x=\"144\" y=\"449\" fill=\"#bded52\">+</text><text x=\"152\" y=\"449\" fill=\"#e4e4e8\">#</text><text x=\"160\" y=\"449\" fill=\"#e4e4e8\">=</text><text x=\"168\" y=\"449\" fill=\"#e4e4e8\">@</text><text x=\"176\" y=\"449\" fill=\"#e4e4e8\">:</text><text x=\"184\" y=\"449\" fill=\"#e4e4e8\">%</text><text x=\"192\" y=\"449\" fill=\"#e4e4e8\">#</text><text x=\"200\" y=\"449\" fill=\"#e4e4e8\">=</text><text x=\"208\" y=\"449\" fill=\"#e4e4e8\">@</text><text x=\"216\" y=\"449\" fill=\"#e4e4e8\">:</text><text x=\"224\" y=\"449\" fill=\"#e4e4e8\">%</text><text x=\"232\" y=\"449\" fill=\"#a5a5ad\">#</text><text x=\"240\" y=\"449\" fill=\"#a5a5ad\">=</text><text x=\"248\" y=\"449\" fill=\"#a5a5ad\">@</text><text x=\"256\" y=\"449\" fill=\"#a5a5ad\">:</text><text x=\"264\" y=\"449\" fill=\"#a5a5ad\">%</text><text x=\"272\" y=\"449\" fill=\"#a5a5ad\">#</text><text x=\"280\" y=\"449\" fill=\"#a5a5ad\">=</text><text x=\"288\" y=\"449\" fill=\"#a5a5ad\">@</text><text x=\"296\" y=\"449\" fill=\"#a5a5ad\">:</text><text x=\"304\" y=\"449\" fill=\"#707077\">%</text><text x=\"312\" y=\"449\" fill=\"#707077\">#</text><text x=\"320\" y=\"449\" fill=\"#707077\">=</text><text x=\"328\" y=\"449\" fill=\"#707077\">@</text><text x=\"336\" y=\"449\" fill=\"#707077\">:</text><text x=\"344\" y=\"449\" fill=\"#707077\">%</text><text x=\"352\" y=\"449\" fill=\"#707077\">#</text><text x=\"360\" y=\"449\" fill=\"#707077\">=</text><text x=\"368\" y=\"449\" fill=\"#707077\">@</text><text x=\"136\" y=\"458\" fill=\"#bded52\">+</text><text x=\"144\" y=\"458\" fill=\"#e4e4e8\">:</text><text x=\"152\" y=\"458\" fill=\"#e4e4e8\">%</text><text x=\"160\" y=\"458\" fill=\"#e4e4e8\">#</text><text x=\"168\" y=\"458\" fill=\"#e4e4e8\">=</text><text x=\"176\" y=\"458\" fill=\"#e4e4e8\">@</text><text x=\"184\" y=\"458\" fill=\"#e4e4e8\">:</text><text x=\"192\" y=\"458\" fill=\"#e4e4e8\">%</text><text x=\"200\" y=\"458\" fill=\"#e4e4e8\">#</text><text x=\"208\" y=\"458\" fill=\"#e4e4e8\">=</text><text x=\"216\" y=\"458\" fill=\"#e4e4e8\">@</text><text x=\"224\" y=\"458\" fill=\"#e4e4e8\">:</text><text x=\"232\" y=\"458\" fill=\"#a5a5ad\">%</text><text x=\"240\" y=\"458\" fill=\"#a5a5ad\">#</text><text x=\"248\" y=\"458\" fill=\"#a5a5ad\">=</text><text x=\"256\" y=\"458\" fill=\"#a5a5ad\">@</text><text x=\"264\" y=\"458\" fill=\"#a5a5ad\">:</text><text x=\"272\" y=\"458\" fill=\"#a5a5ad\">%</text><text x=\"280\" y=\"458\" fill=\"#a5a5ad\">#</text><text x=\"288\" y=\"458\" fill=\"#a5a5ad\">=</text><text x=\"296\" y=\"458\" fill=\"#a5a5ad\">@</text><text x=\"304\" y=\"458\" fill=\"#707077\">:</text><text x=\"312\" y=\"458\" fill=\"#707077\">%</text><text x=\"320\" y=\"458\" fill=\"#707077\">#</text><text x=\"328\" y=\"458\" fill=\"#707077\">=</text><text x=\"336\" y=\"458\" fill=\"#707077\">@</text><text x=\"344\" y=\"458\" fill=\"#707077\">:</text><text x=\"352\" y=\"458\" fill=\"#707077\">%</text><text x=\"360\" y=\"458\" fill=\"#707077\">#</text><text x=\"368\" y=\"458\" fill=\"#707077\">=</text><text x=\"136\" y=\"467\" fill=\"#e4e4e8\">=</text><text x=\"144\" y=\"467\" fill=\"#e4e4e8\">@</text><text x=\"152\" y=\"467\" fill=\"#e4e4e8\">:</text><text x=\"160\" y=\"467\" fill=\"#e4e4e8\">%</text><text x=\"168\" y=\"467\" fill=\"#e4e4e8\">#</text><text x=\"176\" y=\"467\" fill=\"#e4e4e8\">=</text><text x=\"184\" y=\"467\" fill=\"#e4e4e8\">@</text><text x=\"192\" y=\"467\" fill=\"#e4e4e8\">:</text><text x=\"200\" y=\"467\" fill=\"#e4e4e8\">%</text><text x=\"208\" y=\"467\" fill=\"#e4e4e8\">#</text><text x=\"216\" y=\"467\" fill=\"#e4e4e8\">=</text><text x=\"224\" y=\"467\" fill=\"#e4e4e8\">@</text><text x=\"232\" y=\"467\" fill=\"#a5a5ad\">:</text><text x=\"240\" y=\"467\" fill=\"#a5a5ad\">%</text><text x=\"248\" y=\"467\" fill=\"#a5a5ad\">#</text><text x=\"256\" y=\"467\" fill=\"#a5a5ad\">=</text><text x=\"264\" y=\"467\" fill=\"#a5a5ad\">@</text><text x=\"272\" y=\"467\" fill=\"#a5a5ad\">:</text><text x=\"280\" y=\"467\" fill=\"#a5a5ad\">%</text><text x=\"288\" y=\"467\" fill=\"#a5a5ad\">#</text><text x=\"296\" y=\"467\" fill=\"#a5a5ad\">=</text><text x=\"304\" y=\"467\" fill=\"#707077\">@</text><text x=\"312\" y=\"467\" fill=\"#707077\">:</text><text x=\"320\" y=\"467\" fill=\"#707077\">%</text><text x=\"328\" y=\"467\" fill=\"#707077\">#</text><text x=\"336\" y=\"467\" fill=\"#707077\">=</text><text x=\"344\" y=\"467\" fill=\"#707077\">@</text><text x=\"352\" y=\"467\" fill=\"#707077\">:</text><text x=\"360\" y=\"467\" fill=\"#707077\">%</text><text x=\"368\" y=\"467\" fill=\"#707077\">#</text><text x=\"376\" y=\"467\" fill=\"#707077\">=</text><text x=\"136\" y=\"476\" fill=\"#e4e4e8\">#</text><text x=\"144\" y=\"476\" fill=\"#e4e4e8\">=</text><text x=\"152\" y=\"476\" fill=\"#e4e4e8\">@</text><text x=\"160\" y=\"476\" fill=\"#e4e4e8\">:</text><text x=\"168\" y=\"476\" fill=\"#e4e4e8\">%</text><text x=\"176\" y=\"476\" fill=\"#e4e4e8\">#</text><text x=\"184\" y=\"476\" fill=\"#e4e4e8\">=</text><text x=\"192\" y=\"476\" fill=\"#e4e4e8\">@</text><text x=\"200\" y=\"476\" fill=\"#e4e4e8\">:</text><text x=\"208\" y=\"476\" fill=\"#e4e4e8\">%</text><text x=\"216\" y=\"476\" fill=\"#e4e4e8\">#</text><text x=\"224\" y=\"476\" fill=\"#e4e4e8\">=</text><text x=\"232\" y=\"476\" fill=\"#a5a5ad\">@</text><text x=\"240\" y=\"476\" fill=\"#a5a5ad\">:</text><text x=\"248\" y=\"476\" fill=\"#a5a5ad\">%</text><text x=\"256\" y=\"476\" fill=\"#a5a5ad\">#</text><text x=\"264\" y=\"476\" fill=\"#a5a5ad\">=</text><text x=\"272\" y=\"476\" fill=\"#a5a5ad\">@</text><text x=\"280\" y=\"476\" fill=\"#a5a5ad\">:</text><text x=\"288\" y=\"476\" fill=\"#a5a5ad\">%</text><text x=\"296\" y=\"476\" fill=\"#a5a5ad\">#</text><text x=\"304\" y=\"476\" fill=\"#707077\">=</text><text x=\"312\" y=\"476\" fill=\"#707077\">@</text><text x=\"320\" y=\"476\" fill=\"#707077\">:</text><text x=\"328\" y=\"476\" fill=\"#707077\">%</text><text x=\"336\" y=\"476\" fill=\"#707077\">#</text><text x=\"344\" y=\"476\" fill=\"#707077\">=</text><text x=\"352\" y=\"476\" fill=\"#707077\">@</text><text x=\"360\" y=\"476\" fill=\"#707077\">:</text><text x=\"368\" y=\"476\" fill=\"#707077\">%</text><text x=\"376\" y=\"476\" fill=\"#707077\">#</text><text x=\"128\" y=\"485\" fill=\"#e4e4e8\">:</text><text x=\"136\" y=\"485\" fill=\"#e4e4e8\">%</text><text x=\"144\" y=\"485\" fill=\"#e4e4e8\">#</text><text x=\"152\" y=\"485\" fill=\"#e4e4e8\">=</text><text x=\"160\" y=\"485\" fill=\"#e4e4e8\">@</text><text x=\"168\" y=\"485\" fill=\"#e4e4e8\">:</text><text x=\"176\" y=\"485\" fill=\"#e4e4e8\">%</text><text x=\"184\" y=\"485\" fill=\"#e4e4e8\">#</text><text x=\"192\" y=\"485\" fill=\"#e4e4e8\">=</text><text x=\"200\" y=\"485\" fill=\"#e4e4e8\">@</text><text x=\"208\" y=\"485\" fill=\"#e4e4e8\">:</text><text x=\"216\" y=\"485\" fill=\"#e4e4e8\">%</text><text x=\"224\" y=\"485\" fill=\"#e4e4e8\">#</text><text x=\"232\" y=\"485\" fill=\"#a5a5ad\">=</text><text x=\"240\" y=\"485\" fill=\"#a5a5ad\">@</text><text x=\"248\" y=\"485\" fill=\"#a5a5ad\">:</text><text x=\"256\" y=\"485\" fill=\"#a5a5ad\">%</text><text x=\"264\" y=\"485\" fill=\"#a5a5ad\">#</text><text x=\"272\" y=\"485\" fill=\"#a5a5ad\">=</text><text x=\"280\" y=\"485\" fill=\"#a5a5ad\">@</text><text x=\"288\" y=\"485\" fill=\"#a5a5ad\">:</text><text x=\"296\" y=\"485\" fill=\"#a5a5ad\">%</text><text x=\"304\" y=\"485\" fill=\"#707077\">#</text><text x=\"312\" y=\"485\" fill=\"#707077\">=</text><text x=\"320\" y=\"485\" fill=\"#707077\">@</text><text x=\"328\" y=\"485\" fill=\"#707077\">:</text><text x=\"336\" y=\"485\" fill=\"#707077\">%</text><text x=\"344\" y=\"485\" fill=\"#707077\">#</text><text x=\"352\" y=\"485\" fill=\"#707077\">=</text><text x=\"360\" y=\"485\" fill=\"#707077\">@</text><text x=\"368\" y=\"485\" fill=\"#707077\">:</text><text x=\"376\" y=\"485\" fill=\"#707077\">%</text><text x=\"136\" y=\"494\" fill=\"#e4e4e8\">:</text><text x=\"144\" y=\"494\" fill=\"#e4e4e8\">%</text><text x=\"152\" y=\"494\" fill=\"#e4e4e8\">#</text><text x=\"160\" y=\"494\" fill=\"#e4e4e8\">=</text><text x=\"168\" y=\"494\" fill=\"#e4e4e8\">@</text><text x=\"176\" y=\"494\" fill=\"#e4e4e8\">:</text><text x=\"184\" y=\"494\" fill=\"#e4e4e8\">%</text><text x=\"192\" y=\"494\" fill=\"#e4e4e8\">#</text><text x=\"200\" y=\"494\" fill=\"#e4e4e8\">=</text><text x=\"208\" y=\"494\" fill=\"#e4e4e8\">@</text><text x=\"216\" y=\"494\" fill=\"#e4e4e8\">:</text><text x=\"224\" y=\"494\" fill=\"#e4e4e8\">%</text><text x=\"232\" y=\"494\" fill=\"#a5a5ad\">#</text><text x=\"240\" y=\"494\" fill=\"#a5a5ad\">=</text><text x=\"248\" y=\"494\" fill=\"#a5a5ad\">@</text><text x=\"256\" y=\"494\" fill=\"#a5a5ad\">:</text><text x=\"264\" y=\"494\" fill=\"#a5a5ad\">%</text><text x=\"272\" y=\"494\" fill=\"#a5a5ad\">#</text><text x=\"280\" y=\"494\" fill=\"#a5a5ad\">=</text><text x=\"288\" y=\"494\" fill=\"#a5a5ad\">@</text><text x=\"296\" y=\"494\" fill=\"#a5a5ad\">:</text><text x=\"304\" y=\"494\" fill=\"#707077\">%</text><text x=\"312\" y=\"494\" fill=\"#707077\">#</text><text x=\"320\" y=\"494\" fill=\"#707077\">=</text><text x=\"328\" y=\"494\" fill=\"#707077\">@</text><text x=\"336\" y=\"494\" fill=\"#707077\">:</text><text x=\"344\" y=\"494\" fill=\"#707077\">%</text><text x=\"352\" y=\"494\" fill=\"#707077\">#</text><text x=\"360\" y=\"494\" fill=\"#707077\">=</text><text x=\"368\" y=\"494\" fill=\"#707077\">@</text><text x=\"376\" y=\"494\" fill=\"#707077\">:</text><text x=\"136\" y=\"503\" fill=\"#e4e4e8\">@</text><text x=\"144\" y=\"503\" fill=\"#e4e4e8\">:</text><text x=\"152\" y=\"503\" fill=\"#e4e4e8\">%</text><text x=\"160\" y=\"503\" fill=\"#e4e4e8\">#</text><text x=\"168\" y=\"503\" fill=\"#e4e4e8\">=</text><text x=\"176\" y=\"503\" fill=\"#e4e4e8\">@</text><text x=\"184\" y=\"503\" fill=\"#e4e4e8\">:</text><text x=\"192\" y=\"503\" fill=\"#e4e4e8\">%</text><text x=\"200\" y=\"503\" fill=\"#e4e4e8\">#</text><text x=\"208\" y=\"503\" fill=\"#e4e4e8\">=</text><text x=\"216\" y=\"503\" fill=\"#e4e4e8\">@</text><text x=\"224\" y=\"503\" fill=\"#e4e4e8\">:</text><text x=\"232\" y=\"503\" fill=\"#a5a5ad\">%</text><text x=\"240\" y=\"503\" fill=\"#a5a5ad\">#</text><text x=\"248\" y=\"503\" fill=\"#a5a5ad\">=</text><text x=\"256\" y=\"503\" fill=\"#a5a5ad\">@</text><text x=\"264\" y=\"503\" fill=\"#a5a5ad\">:</text><text x=\"272\" y=\"503\" fill=\"#a5a5ad\">%</text><text x=\"280\" y=\"503\" fill=\"#a5a5ad\">#</text><text x=\"288\" y=\"503\" fill=\"#a5a5ad\">=</text><text x=\"296\" y=\"503\" fill=\"#a5a5ad\">@</text><text x=\"304\" y=\"503\" fill=\"#707077\">:</text><text x=\"312\" y=\"503\" fill=\"#707077\">%</text><text x=\"320\" y=\"503\" fill=\"#707077\">#</text><text x=\"328\" y=\"503\" fill=\"#707077\">=</text><text x=\"336\" y=\"503\" fill=\"#707077\">@</text><text x=\"344\" y=\"503\" fill=\"#707077\">:</text><text x=\"352\" y=\"503\" fill=\"#707077\">%</text><text x=\"360\" y=\"503\" fill=\"#707077\">#</text><text x=\"368\" y=\"503\" fill=\"#707077\">=</text><text x=\"376\" y=\"503\" fill=\"#707077\">@</text><text x=\"144\" y=\"512\" fill=\"#e4e4e8\">@</text><text x=\"152\" y=\"512\" fill=\"#e4e4e8\">:</text><text x=\"160\" y=\"512\" fill=\"#e4e4e8\">%</text><text x=\"168\" y=\"512\" fill=\"#e4e4e8\">#</text><text x=\"176\" y=\"512\" fill=\"#e4e4e8\">=</text><text x=\"184\" y=\"512\" fill=\"#e4e4e8\">@</text><text x=\"192\" y=\"512\" fill=\"#e4e4e8\">:</text><text x=\"200\" y=\"512\" fill=\"#e4e4e8\">%</text><text x=\"208\" y=\"512\" fill=\"#e4e4e8\">#</text><text x=\"216\" y=\"512\" fill=\"#e4e4e8\">=</text><text x=\"224\" y=\"512\" fill=\"#e4e4e8\">@</text><text x=\"232\" y=\"512\" fill=\"#a5a5ad\">:</text><text x=\"240\" y=\"512\" fill=\"#a5a5ad\">%</text><text x=\"248\" y=\"512\" fill=\"#a5a5ad\">#</text><text x=\"256\" y=\"512\" fill=\"#a5a5ad\">=</text><text x=\"264\" y=\"512\" fill=\"#a5a5ad\">@</text><text x=\"272\" y=\"512\" fill=\"#a5a5ad\">:</text><text x=\"280\" y=\"512\" fill=\"#a5a5ad\">%</text><text x=\"288\" y=\"512\" fill=\"#a5a5ad\">#</text><text x=\"296\" y=\"512\" fill=\"#a5a5ad\">=</text><text x=\"304\" y=\"512\" fill=\"#707077\">@</text><text x=\"312\" y=\"512\" fill=\"#707077\">:</text><text x=\"320\" y=\"512\" fill=\"#707077\">%</text><text x=\"328\" y=\"512\" fill=\"#707077\">#</text><text x=\"336\" y=\"512\" fill=\"#707077\">=</text><text x=\"344\" y=\"512\" fill=\"#707077\">@</text><text x=\"352\" y=\"512\" fill=\"#707077\">:</text><text x=\"360\" y=\"512\" fill=\"#707077\">%</text><text x=\"368\" y=\"512\" fill=\"#707077\">#</text><text x=\"376\" y=\"512\" fill=\"#707077\">=</text><text x=\"144\" y=\"521\" fill=\"#e4e4e8\">=</text><text x=\"152\" y=\"521\" fill=\"#e4e4e8\">@</text><text x=\"160\" y=\"521\" fill=\"#e4e4e8\">:</text><text x=\"168\" y=\"521\" fill=\"#e4e4e8\">%</text><text x=\"176\" y=\"521\" fill=\"#e4e4e8\">#</text><text x=\"184\" y=\"521\" fill=\"#e4e4e8\">=</text><text x=\"192\" y=\"521\" fill=\"#e4e4e8\">@</text><text x=\"200\" y=\"521\" fill=\"#e4e4e8\">:</text><text x=\"208\" y=\"521\" fill=\"#e4e4e8\">%</text><text x=\"264\" y=\"521\" fill=\"#a5a5ad\">=</text><text x=\"272\" y=\"521\" fill=\"#a5a5ad\">@</text><text x=\"280\" y=\"521\" fill=\"#a5a5ad\">:</text><text x=\"288\" y=\"521\" fill=\"#a5a5ad\">%</text><text x=\"296\" y=\"521\" fill=\"#a5a5ad\">#</text><text x=\"304\" y=\"521\" fill=\"#707077\">=</text><text x=\"312\" y=\"521\" fill=\"#707077\">@</text><text x=\"320\" y=\"521\" fill=\"#707077\">:</text><text x=\"328\" y=\"521\" fill=\"#707077\">%</text><text x=\"336\" y=\"521\" fill=\"#707077\">#</text><text x=\"344\" y=\"521\" fill=\"#707077\">=</text><text x=\"352\" y=\"521\" fill=\"#707077\">@</text><text x=\"152\" y=\"530\" fill=\"#e4e4e8\">=</text><text x=\"160\" y=\"530\" fill=\"#e4e4e8\">@</text><text x=\"168\" y=\"530\" fill=\"#e4e4e8\">:</text><text x=\"176\" y=\"530\" fill=\"#e4e4e8\">%</text><text x=\"280\" y=\"530\" fill=\"#a5a5ad\">@</text><text x=\"288\" y=\"530\" fill=\"#a5a5ad\">:</text><text x=\"296\" y=\"530\" fill=\"#a5a5ad\">%</text><text x=\"304\" y=\"530\" fill=\"#707077\">#</text><text x=\"312\" y=\"530\" fill=\"#707077\">=</text><text x=\"320\" y=\"530\" fill=\"#707077\">@</text></g><g class=\"ds-mascot-leftArm\"><text x=\"152\" y=\"314\" fill=\"#e4e4e8\">#</text><text x=\"160\" y=\"314\" fill=\"#e4e4e8\">=</text><text x=\"168\" y=\"314\" fill=\"#e4e4e8\">@</text><text x=\"144\" y=\"323\" fill=\"#e4e4e8\">:</text><text x=\"152\" y=\"323\" fill=\"#e4e4e8\">%</text><text x=\"160\" y=\"323\" fill=\"#e4e4e8\">#</text><text x=\"168\" y=\"323\" fill=\"#e4e4e8\">=</text><text x=\"176\" y=\"323\" fill=\"#e4e4e8\">@</text><text x=\"184\" y=\"323\" fill=\"#e4e4e8\">:</text><text x=\"136\" y=\"332\" fill=\"#e4e4e8\">=</text><text x=\"144\" y=\"332\" fill=\"#e4e4e8\">@</text><text x=\"152\" y=\"332\" fill=\"#e4e4e8\">:</text><text x=\"160\" y=\"332\" fill=\"#e4e4e8\">%</text><text x=\"168\" y=\"332\" fill=\"#e4e4e8\">#</text><text x=\"176\" y=\"332\" fill=\"#e4e4e8\">=</text><text x=\"184\" y=\"332\" fill=\"#e4e4e8\">@</text><text x=\"192\" y=\"332\" fill=\"#e4e4e8\">:</text><text x=\"128\" y=\"341\" fill=\"#e4e4e8\">%</text><text x=\"136\" y=\"341\" fill=\"#e4e4e8\">#</text><text x=\"144\" y=\"341\" fill=\"#e4e4e8\">=</text><text x=\"152\" y=\"341\" fill=\"#e4e4e8\">@</text><text x=\"160\" y=\"341\" fill=\"#e4e4e8\">:</text><text x=\"168\" y=\"341\" fill=\"#e4e4e8\">%</text><text x=\"176\" y=\"341\" fill=\"#e4e4e8\">#</text><text x=\"184\" y=\"341\" fill=\"#e4e4e8\">=</text><text x=\"192\" y=\"341\" fill=\"#e4e4e8\">@</text><text x=\"112\" y=\"350\" fill=\"#e4e4e8\">=</text><text x=\"120\" y=\"350\" fill=\"#e4e4e8\">@</text><text x=\"128\" y=\"350\" fill=\"#e4e4e8\">:</text><text x=\"136\" y=\"350\" fill=\"#e4e4e8\">%</text><text x=\"144\" y=\"350\" fill=\"#e4e4e8\">#</text><text x=\"152\" y=\"350\" fill=\"#e4e4e8\">=</text><text x=\"160\" y=\"350\" fill=\"#e4e4e8\">@</text><text x=\"168\" y=\"350\" fill=\"#e4e4e8\">:</text><text x=\"176\" y=\"350\" fill=\"#e4e4e8\">%</text><text x=\"184\" y=\"350\" fill=\"#e4e4e8\">#</text><text x=\"112\" y=\"359\" fill=\"#e4e4e8\">#</text><text x=\"120\" y=\"359\" fill=\"#e4e4e8\">=</text><text x=\"128\" y=\"359\" fill=\"#e4e4e8\">@</text><text x=\"136\" y=\"359\" fill=\"#e4e4e8\">:</text><text x=\"144\" y=\"359\" fill=\"#e4e4e8\">%</text><text x=\"152\" y=\"359\" fill=\"#e4e4e8\">#</text><text x=\"160\" y=\"359\" fill=\"#e4e4e8\">=</text><text x=\"168\" y=\"359\" fill=\"#e4e4e8\">@</text><text x=\"176\" y=\"359\" fill=\"#e4e4e8\">:</text><text x=\"184\" y=\"359\" fill=\"#e4e4e8\">%</text><text x=\"112\" y=\"368\" fill=\"#e4e4e8\">%</text><text x=\"120\" y=\"368\" fill=\"#e4e4e8\">#</text><text x=\"128\" y=\"368\" fill=\"#e4e4e8\">=</text><text x=\"136\" y=\"368\" fill=\"#e4e4e8\">@</text><text x=\"144\" y=\"368\" fill=\"#e4e4e8\">:</text><text x=\"152\" y=\"368\" fill=\"#e4e4e8\">%</text><text x=\"160\" y=\"368\" fill=\"#e4e4e8\">#</text><text x=\"168\" y=\"368\" fill=\"#e4e4e8\">=</text><text x=\"176\" y=\"368\" fill=\"#e4e4e8\">@</text><text x=\"112\" y=\"377\" fill=\"#e4e4e8\">:</text><text x=\"120\" y=\"377\" fill=\"#e4e4e8\">%</text><text x=\"128\" y=\"377\" fill=\"#e4e4e8\">#</text><text x=\"136\" y=\"377\" fill=\"#e4e4e8\">=</text><text x=\"144\" y=\"377\" fill=\"#e4e4e8\">@</text><text x=\"152\" y=\"377\" fill=\"#e4e4e8\">:</text><text x=\"160\" y=\"377\" fill=\"#e4e4e8\">%</text><text x=\"168\" y=\"377\" fill=\"#e4e4e8\">#</text><text x=\"176\" y=\"377\" fill=\"#e4e4e8\">=</text><text x=\"104\" y=\"386\" fill=\"#e4e4e8\">=</text><text x=\"112\" y=\"386\" fill=\"#e4e4e8\">@</text><text x=\"120\" y=\"386\" fill=\"#e4e4e8\">:</text><text x=\"128\" y=\"386\" fill=\"#e4e4e8\">%</text><text x=\"136\" y=\"386\" fill=\"#e4e4e8\">#</text><text x=\"144\" y=\"386\" fill=\"#e4e4e8\">=</text><text x=\"152\" y=\"386\" fill=\"#e4e4e8\">@</text><text x=\"160\" y=\"386\" fill=\"#e4e4e8\">:</text><text x=\"168\" y=\"386\" fill=\"#e4e4e8\">%</text><text x=\"104\" y=\"395\" fill=\"#e4e4e8\">#</text><text x=\"112\" y=\"395\" fill=\"#e4e4e8\">=</text><text x=\"120\" y=\"395\" fill=\"#e4e4e8\">@</text><text x=\"128\" y=\"395\" fill=\"#e4e4e8\">:</text><text x=\"136\" y=\"395\" fill=\"#e4e4e8\">%</text><text x=\"144\" y=\"395\" fill=\"#e4e4e8\">#</text><text x=\"152\" y=\"395\" fill=\"#e4e4e8\">=</text><text x=\"160\" y=\"395\" fill=\"#e4e4e8\">@</text><text x=\"104\" y=\"404\" fill=\"#e4e4e8\">%</text><text x=\"112\" y=\"404\" fill=\"#e4e4e8\">#</text><text x=\"120\" y=\"404\" fill=\"#e4e4e8\">=</text><text x=\"128\" y=\"404\" fill=\"#e4e4e8\">@</text><text x=\"136\" y=\"404\" fill=\"#e4e4e8\">:</text><text x=\"144\" y=\"404\" fill=\"#e4e4e8\">%</text><text x=\"152\" y=\"404\" fill=\"#e4e4e8\">#</text><text x=\"160\" y=\"404\" fill=\"#e4e4e8\">=</text><text x=\"96\" y=\"413\" fill=\"#e4e4e8\">@</text><text x=\"104\" y=\"413\" fill=\"#e4e4e8\">:</text><text x=\"112\" y=\"413\" fill=\"#e4e4e8\">%</text><text x=\"120\" y=\"413\" fill=\"#e4e4e8\">#</text><text x=\"128\" y=\"413\" fill=\"#e4e4e8\">=</text><text x=\"136\" y=\"413\" fill=\"#e4e4e8\">@</text><text x=\"144\" y=\"413\" fill=\"#e4e4e8\">:</text><text x=\"152\" y=\"413\" fill=\"#e4e4e8\">%</text><text x=\"160\" y=\"413\" fill=\"#e4e4e8\">#</text><text x=\"120\" y=\"422\" fill=\"#e4e4e8\">%</text><text x=\"128\" y=\"422\" fill=\"#e4e4e8\">#</text><text x=\"136\" y=\"422\" fill=\"#e4e4e8\">=</text><text x=\"144\" y=\"422\" fill=\"#e4e4e8\">@</text><text x=\"152\" y=\"422\" fill=\"#e4e4e8\">:</text><text x=\"136\" y=\"431\" fill=\"#e4e4e8\">#</text><text x=\"144\" y=\"431\" fill=\"#e4e4e8\">=</text><text x=\"152\" y=\"431\" fill=\"#e4e4e8\">@</text></g><g class=\"ds-mascot-rightArm\"><text x=\"328\" y=\"305\" fill=\"#707077\">:</text><text x=\"336\" y=\"305\" fill=\"#707077\">%</text><text x=\"344\" y=\"305\" fill=\"#707077\">#</text><text x=\"352\" y=\"305\" fill=\"#707077\">=</text><text x=\"360\" y=\"305\" fill=\"#707077\">@</text><text x=\"336\" y=\"314\" fill=\"#707077\">:</text><text x=\"344\" y=\"314\" fill=\"#707077\">%</text><text x=\"352\" y=\"314\" fill=\"#707077\">#</text><text x=\"360\" y=\"314\" fill=\"#707077\">=</text><text x=\"368\" y=\"314\" fill=\"#707077\">@</text><text x=\"336\" y=\"323\" fill=\"#707077\">@</text><text x=\"344\" y=\"323\" fill=\"#707077\">:</text><text x=\"352\" y=\"323\" fill=\"#707077\">%</text><text x=\"360\" y=\"323\" fill=\"#707077\">#</text><text x=\"368\" y=\"323\" fill=\"#707077\">=</text><text x=\"376\" y=\"323\" fill=\"#707077\">@</text><text x=\"336\" y=\"332\" fill=\"#707077\">=</text><text x=\"344\" y=\"332\" fill=\"#707077\">@</text><text x=\"352\" y=\"332\" fill=\"#707077\">:</text><text x=\"360\" y=\"332\" fill=\"#707077\">%</text><text x=\"368\" y=\"332\" fill=\"#707077\">#</text><text x=\"376\" y=\"332\" fill=\"#707077\">=</text><text x=\"384\" y=\"332\" fill=\"#707077\">@</text><text x=\"336\" y=\"341\" fill=\"#707077\">#</text><text x=\"344\" y=\"341\" fill=\"#707077\">=</text><text x=\"352\" y=\"341\" fill=\"#707077\">@</text><text x=\"360\" y=\"341\" fill=\"#707077\">:</text><text x=\"368\" y=\"341\" fill=\"#707077\">%</text><text x=\"376\" y=\"341\" fill=\"#707077\">#</text><text x=\"384\" y=\"341\" fill=\"#707077\">=</text><text x=\"392\" y=\"341\" fill=\"#707077\">@</text><text x=\"344\" y=\"350\" fill=\"#707077\">#</text><text x=\"352\" y=\"350\" fill=\"#707077\">=</text><text x=\"360\" y=\"350\" fill=\"#707077\">@</text><text x=\"368\" y=\"350\" fill=\"#707077\">:</text><text x=\"376\" y=\"350\" fill=\"#707077\">%</text><text x=\"384\" y=\"350\" fill=\"#707077\">#</text><text x=\"392\" y=\"350\" fill=\"#707077\">=</text><text x=\"400\" y=\"350\" fill=\"#707077\">@</text><text x=\"344\" y=\"359\" fill=\"#707077\">%</text><text x=\"352\" y=\"359\" fill=\"#707077\">#</text><text x=\"360\" y=\"359\" fill=\"#707077\">=</text><text x=\"368\" y=\"359\" fill=\"#707077\">@</text><text x=\"376\" y=\"359\" fill=\"#707077\">:</text><text x=\"384\" y=\"359\" fill=\"#707077\">%</text><text x=\"392\" y=\"359\" fill=\"#707077\">#</text><text x=\"400\" y=\"359\" fill=\"#707077\">=</text><text x=\"344\" y=\"368\" fill=\"#707077\">:</text><text x=\"352\" y=\"368\" fill=\"#707077\">%</text><text x=\"360\" y=\"368\" fill=\"#707077\">#</text><text x=\"368\" y=\"368\" fill=\"#707077\">=</text><text x=\"376\" y=\"368\" fill=\"#707077\">@</text><text x=\"384\" y=\"368\" fill=\"#707077\">:</text><text x=\"392\" y=\"368\" fill=\"#707077\">%</text><text x=\"400\" y=\"368\" fill=\"#707077\">#</text><text x=\"408\" y=\"368\" fill=\"#707077\">=</text><text x=\"344\" y=\"377\" fill=\"#707077\">@</text><text x=\"352\" y=\"377\" fill=\"#707077\">:</text><text x=\"360\" y=\"377\" fill=\"#707077\">%</text><text x=\"368\" y=\"377\" fill=\"#707077\">#</text><text x=\"376\" y=\"377\" fill=\"#707077\">=</text><text x=\"384\" y=\"377\" fill=\"#707077\">@</text><text x=\"392\" y=\"377\" fill=\"#707077\">:</text><text x=\"400\" y=\"377\" fill=\"#707077\">%</text><text x=\"408\" y=\"377\" fill=\"#707077\">#</text><text x=\"352\" y=\"386\" fill=\"#707077\">@</text><text x=\"360\" y=\"386\" fill=\"#707077\">:</text><text x=\"368\" y=\"386\" fill=\"#707077\">%</text><text x=\"376\" y=\"386\" fill=\"#707077\">#</text><text x=\"384\" y=\"386\" fill=\"#707077\">=</text><text x=\"392\" y=\"386\" fill=\"#707077\">@</text><text x=\"400\" y=\"386\" fill=\"#707077\">:</text><text x=\"408\" y=\"386\" fill=\"#707077\">%</text><text x=\"352\" y=\"395\" fill=\"#707077\">=</text><text x=\"360\" y=\"395\" fill=\"#707077\">@</text><text x=\"368\" y=\"395\" fill=\"#707077\">:</text><text x=\"376\" y=\"395\" fill=\"#707077\">%</text><text x=\"384\" y=\"395\" fill=\"#707077\">#</text><text x=\"392\" y=\"395\" fill=\"#707077\">=</text><text x=\"400\" y=\"395\" fill=\"#707077\">@</text><text x=\"408\" y=\"395\" fill=\"#707077\">:</text><text x=\"416\" y=\"395\" fill=\"#707077\">%</text><text x=\"360\" y=\"404\" fill=\"#707077\">=</text><text x=\"368\" y=\"404\" fill=\"#707077\">@</text><text x=\"376\" y=\"404\" fill=\"#707077\">:</text><text x=\"384\" y=\"404\" fill=\"#707077\">%</text><text x=\"392\" y=\"404\" fill=\"#707077\">#</text><text x=\"400\" y=\"404\" fill=\"#707077\">=</text><text x=\"408\" y=\"404\" fill=\"#707077\">@</text><text x=\"416\" y=\"404\" fill=\"#707077\">:</text><text x=\"360\" y=\"413\" fill=\"#707077\">#</text><text x=\"368\" y=\"413\" fill=\"#707077\">=</text><text x=\"376\" y=\"413\" fill=\"#707077\">@</text><text x=\"384\" y=\"413\" fill=\"#707077\">:</text><text x=\"392\" y=\"413\" fill=\"#707077\">%</text><text x=\"400\" y=\"413\" fill=\"#707077\">#</text><text x=\"408\" y=\"413\" fill=\"#707077\">=</text><text x=\"416\" y=\"413\" fill=\"#707077\">@</text><text x=\"360\" y=\"422\" fill=\"#707077\">%</text><text x=\"368\" y=\"422\" fill=\"#707077\">#</text><text x=\"376\" y=\"422\" fill=\"#707077\">=</text><text x=\"384\" y=\"422\" fill=\"#707077\">@</text><text x=\"392\" y=\"422\" fill=\"#707077\">:</text><text x=\"400\" y=\"422\" fill=\"#707077\">%</text><text x=\"408\" y=\"422\" fill=\"#707077\">#</text><text x=\"416\" y=\"422\" fill=\"#707077\">=</text><text x=\"368\" y=\"431\" fill=\"#707077\">%</text><text x=\"376\" y=\"431\" fill=\"#707077\">#</text><text x=\"384\" y=\"431\" fill=\"#707077\">=</text><text x=\"392\" y=\"431\" fill=\"#707077\">@</text><text x=\"400\" y=\"431\" fill=\"#707077\">:</text><text x=\"368\" y=\"440\" fill=\"#707077\">:</text><text x=\"376\" y=\"440\" fill=\"#707077\">%</text><text x=\"384\" y=\"440\" fill=\"#707077\">#</text></g><g class=\"ds-mascot-head\"><text x=\"256\" y=\"44\" fill=\"#a5a5ad\">:</text><text x=\"216\" y=\"53\" fill=\"#e4e4e8\">@</text><text x=\"224\" y=\"53\" fill=\"#e4e4e8\">:</text><text x=\"232\" y=\"53\" fill=\"#a5a5ad\">%</text><text x=\"240\" y=\"53\" fill=\"#a5a5ad\">#</text><text x=\"248\" y=\"53\" fill=\"#a5a5ad\">=</text><text x=\"256\" y=\"53\" fill=\"#a5a5ad\">@</text><text x=\"264\" y=\"53\" fill=\"#a5a5ad\">:</text><text x=\"272\" y=\"53\" fill=\"#a5a5ad\">%</text><text x=\"280\" y=\"53\" fill=\"#a5a5ad\">#</text><text x=\"288\" y=\"53\" fill=\"#a5a5ad\">=</text><text x=\"296\" y=\"53\" fill=\"#a5a5ad\">@</text><text x=\"200\" y=\"62\" fill=\"#e4e4e8\">%</text><text x=\"208\" y=\"62\" fill=\"#e4e4e8\">#</text><text x=\"216\" y=\"62\" fill=\"#e4e4e8\">=</text><text x=\"224\" y=\"62\" fill=\"#e4e4e8\">@</text><text x=\"232\" y=\"62\" fill=\"#a5a5ad\">:</text><text x=\"240\" y=\"62\" fill=\"#a5a5ad\">%</text><text x=\"248\" y=\"62\" fill=\"#a5a5ad\">#</text><text x=\"256\" y=\"62\" fill=\"#a5a5ad\">=</text><text x=\"264\" y=\"62\" fill=\"#a5a5ad\">@</text><text x=\"272\" y=\"62\" fill=\"#a5a5ad\">:</text><text x=\"280\" y=\"62\" fill=\"#a5a5ad\">%</text><text x=\"288\" y=\"62\" fill=\"#a5a5ad\">#</text><text x=\"296\" y=\"62\" fill=\"#a5a5ad\">=</text><text x=\"304\" y=\"62\" fill=\"#707077\">@</text><text x=\"312\" y=\"62\" fill=\"#707077\">:</text><text x=\"184\" y=\"71\" fill=\"#e4e4e8\">=</text><text x=\"192\" y=\"71\" fill=\"#e4e4e8\">@</text><text x=\"200\" y=\"71\" fill=\"#e4e4e8\">:</text><text x=\"208\" y=\"71\" fill=\"#e4e4e8\">%</text><text x=\"216\" y=\"71\" fill=\"#e4e4e8\">#</text><text x=\"224\" y=\"71\" fill=\"#e4e4e8\">=</text><text x=\"232\" y=\"71\" fill=\"#a5a5ad\">@</text><text x=\"240\" y=\"71\" fill=\"#a5a5ad\">:</text><text x=\"248\" y=\"71\" fill=\"#a5a5ad\">%</text><text x=\"256\" y=\"71\" fill=\"#a5a5ad\">#</text><text x=\"264\" y=\"71\" fill=\"#a5a5ad\">=</text><text x=\"272\" y=\"71\" fill=\"#a5a5ad\">@</text><text x=\"280\" y=\"71\" fill=\"#a5a5ad\">:</text><text x=\"288\" y=\"71\" fill=\"#a5a5ad\">%</text><text x=\"296\" y=\"71\" fill=\"#a5a5ad\">#</text><text x=\"304\" y=\"71\" fill=\"#707077\">=</text><text x=\"312\" y=\"71\" fill=\"#707077\">@</text><text x=\"320\" y=\"71\" fill=\"#707077\">:</text><text x=\"328\" y=\"71\" fill=\"#707077\">%</text><text x=\"176\" y=\"80\" fill=\"#e4e4e8\">%</text><text x=\"184\" y=\"80\" fill=\"#e4e4e8\">#</text><text x=\"192\" y=\"80\" fill=\"#e4e4e8\">=</text><text x=\"200\" y=\"80\" fill=\"#e4e4e8\">@</text><text x=\"208\" y=\"80\" fill=\"#e4e4e8\">:</text><text x=\"216\" y=\"80\" fill=\"#e4e4e8\">%</text><text x=\"224\" y=\"80\" fill=\"#e4e4e8\">#</text><text x=\"232\" y=\"80\" fill=\"#a5a5ad\">=</text><text x=\"240\" y=\"80\" fill=\"#a5a5ad\">@</text><text x=\"248\" y=\"80\" fill=\"#a5a5ad\">:</text><text x=\"256\" y=\"80\" fill=\"#a5a5ad\">%</text><text x=\"264\" y=\"80\" fill=\"#a5a5ad\">#</text><text x=\"272\" y=\"80\" fill=\"#a5a5ad\">=</text><text x=\"280\" y=\"80\" fill=\"#a5a5ad\">@</text><text x=\"288\" y=\"80\" fill=\"#a5a5ad\">:</text><text x=\"296\" y=\"80\" fill=\"#a5a5ad\">%</text><text x=\"304\" y=\"80\" fill=\"#707077\">#</text><text x=\"312\" y=\"80\" fill=\"#707077\">=</text><text x=\"320\" y=\"80\" fill=\"#707077\">@</text><text x=\"328\" y=\"80\" fill=\"#707077\">:</text><text x=\"336\" y=\"80\" fill=\"#707077\">%</text><text x=\"168\" y=\"89\" fill=\"#e4e4e8\">@</text><text x=\"176\" y=\"89\" fill=\"#e4e4e8\">:</text><text x=\"184\" y=\"89\" fill=\"#e4e4e8\">%</text><text x=\"192\" y=\"89\" fill=\"#e4e4e8\">#</text><text x=\"200\" y=\"89\" fill=\"#e4e4e8\">=</text><text x=\"208\" y=\"89\" fill=\"#e4e4e8\">@</text><text x=\"216\" y=\"89\" fill=\"#e4e4e8\">:</text><text x=\"224\" y=\"89\" fill=\"#e4e4e8\">%</text><text x=\"232\" y=\"89\" fill=\"#a5a5ad\">#</text><text x=\"240\" y=\"89\" fill=\"#a5a5ad\">=</text><text x=\"248\" y=\"89\" fill=\"#a5a5ad\">@</text><text x=\"256\" y=\"89\" fill=\"#a5a5ad\">:</text><text x=\"264\" y=\"89\" fill=\"#a5a5ad\">%</text><text x=\"272\" y=\"89\" fill=\"#a5a5ad\">#</text><text x=\"280\" y=\"89\" fill=\"#a5a5ad\">=</text><text x=\"288\" y=\"89\" fill=\"#a5a5ad\">@</text><text x=\"296\" y=\"89\" fill=\"#a5a5ad\">:</text><text x=\"304\" y=\"89\" fill=\"#707077\">%</text><text x=\"312\" y=\"89\" fill=\"#707077\">#</text><text x=\"320\" y=\"89\" fill=\"#707077\">=</text><text x=\"328\" y=\"89\" fill=\"#707077\">@</text><text x=\"336\" y=\"89\" fill=\"#707077\">:</text><text x=\"344\" y=\"89\" fill=\"#707077\">%</text><text x=\"160\" y=\"98\" fill=\"#e4e4e8\">#</text><text x=\"168\" y=\"98\" fill=\"#e4e4e8\">=</text><text x=\"176\" y=\"98\" fill=\"#e4e4e8\">@</text><text x=\"184\" y=\"98\" fill=\"#e4e4e8\">:</text><text x=\"192\" y=\"98\" fill=\"#e4e4e8\">%</text><text x=\"200\" y=\"98\" fill=\"#e4e4e8\">#</text><text x=\"208\" y=\"98\" fill=\"#e4e4e8\">=</text><text x=\"216\" y=\"98\" fill=\"#e4e4e8\">@</text><text x=\"224\" y=\"98\" fill=\"#e4e4e8\">:</text><text x=\"232\" y=\"98\" fill=\"#a5a5ad\">%</text><text x=\"240\" y=\"98\" fill=\"#a5a5ad\">#</text><text x=\"248\" y=\"98\" fill=\"#a5a5ad\">=</text><text x=\"256\" y=\"98\" fill=\"#a5a5ad\">@</text><text x=\"264\" y=\"98\" fill=\"#a5a5ad\">:</text><text x=\"272\" y=\"98\" fill=\"#a5a5ad\">%</text><text x=\"280\" y=\"98\" fill=\"#a5a5ad\">#</text><text x=\"288\" y=\"98\" fill=\"#a5a5ad\">=</text><text x=\"296\" y=\"98\" fill=\"#a5a5ad\">@</text><text x=\"304\" y=\"98\" fill=\"#707077\">:</text><text x=\"312\" y=\"98\" fill=\"#707077\">%</text><text x=\"320\" y=\"98\" fill=\"#707077\">#</text><text x=\"328\" y=\"98\" fill=\"#707077\">=</text><text x=\"336\" y=\"98\" fill=\"#707077\">@</text><text x=\"344\" y=\"98\" fill=\"#707077\">:</text><text x=\"352\" y=\"98\" fill=\"#707077\">%</text><text x=\"152\" y=\"107\" fill=\"#e4e4e8\">:</text><text x=\"160\" y=\"107\" fill=\"#e4e4e8\">%</text><text x=\"168\" y=\"107\" fill=\"#e4e4e8\">#</text><text x=\"176\" y=\"107\" fill=\"#e4e4e8\">=</text><text x=\"184\" y=\"107\" fill=\"#e4e4e8\">@</text><text x=\"192\" y=\"107\" fill=\"#e4e4e8\">:</text><text x=\"200\" y=\"107\" fill=\"#e4e4e8\">%</text><text x=\"208\" y=\"107\" fill=\"#e4e4e8\">#</text><text x=\"216\" y=\"107\" fill=\"#e4e4e8\">=</text><text x=\"224\" y=\"107\" fill=\"#e4e4e8\">@</text><text x=\"232\" y=\"107\" fill=\"#a5a5ad\">:</text><text x=\"240\" y=\"107\" fill=\"#a5a5ad\">%</text><text x=\"248\" y=\"107\" fill=\"#a5a5ad\">#</text><text x=\"256\" y=\"107\" fill=\"#a5a5ad\">=</text><text x=\"264\" y=\"107\" fill=\"#a5a5ad\">@</text><text x=\"272\" y=\"107\" fill=\"#a5a5ad\">:</text><text x=\"280\" y=\"107\" fill=\"#a5a5ad\">%</text><text x=\"288\" y=\"107\" fill=\"#a5a5ad\">#</text><text x=\"296\" y=\"107\" fill=\"#a5a5ad\">=</text><text x=\"304\" y=\"107\" fill=\"#707077\">@</text><text x=\"312\" y=\"107\" fill=\"#707077\">:</text><text x=\"320\" y=\"107\" fill=\"#707077\">%</text><text x=\"328\" y=\"107\" fill=\"#707077\">#</text><text x=\"336\" y=\"107\" fill=\"#707077\">=</text><text x=\"344\" y=\"107\" fill=\"#707077\">@</text><text x=\"352\" y=\"107\" fill=\"#707077\">:</text><text x=\"360\" y=\"107\" fill=\"#707077\">%</text><text x=\"144\" y=\"116\" fill=\"#e4e4e8\">=</text><text x=\"152\" y=\"116\" fill=\"#e4e4e8\">@</text><text x=\"160\" y=\"116\" fill=\"#e4e4e8\">:</text><text x=\"168\" y=\"116\" fill=\"#e4e4e8\">%</text><text x=\"176\" y=\"116\" fill=\"#e4e4e8\">#</text><text x=\"184\" y=\"116\" fill=\"#e4e4e8\">=</text><text x=\"192\" y=\"116\" fill=\"#e4e4e8\">@</text><text x=\"200\" y=\"116\" fill=\"#e4e4e8\">:</text><text x=\"208\" y=\"116\" fill=\"#e4e4e8\">%</text><text x=\"216\" y=\"116\" fill=\"#e4e4e8\">#</text><text x=\"224\" y=\"116\" fill=\"#e4e4e8\">=</text><text x=\"232\" y=\"116\" fill=\"#a5a5ad\">@</text><text x=\"240\" y=\"116\" fill=\"#a5a5ad\">:</text><text x=\"248\" y=\"116\" fill=\"#a5a5ad\">%</text><text x=\"256\" y=\"116\" fill=\"#a5a5ad\">#</text><text x=\"264\" y=\"116\" fill=\"#a5a5ad\">=</text><text x=\"272\" y=\"116\" fill=\"#a5a5ad\">@</text><text x=\"280\" y=\"116\" fill=\"#a5a5ad\">:</text><text x=\"288\" y=\"116\" fill=\"#a5a5ad\">%</text><text x=\"296\" y=\"116\" fill=\"#a5a5ad\">#</text><text x=\"304\" y=\"116\" fill=\"#707077\">=</text><text x=\"312\" y=\"116\" fill=\"#707077\">@</text><text x=\"320\" y=\"116\" fill=\"#707077\">:</text><text x=\"328\" y=\"116\" fill=\"#707077\">%</text><text x=\"336\" y=\"116\" fill=\"#707077\">#</text><text x=\"344\" y=\"116\" fill=\"#707077\">=</text><text x=\"352\" y=\"116\" fill=\"#707077\">@</text><text x=\"360\" y=\"116\" fill=\"#707077\">:</text><text x=\"368\" y=\"116\" fill=\"#707077\">%</text><text x=\"144\" y=\"125\" fill=\"#e4e4e8\">#</text><text x=\"152\" y=\"125\" fill=\"#e4e4e8\">=</text><text x=\"160\" y=\"125\" fill=\"#e4e4e8\">@</text><text x=\"168\" y=\"125\" fill=\"#e4e4e8\">:</text><text x=\"176\" y=\"125\" fill=\"#e4e4e8\">%</text><text x=\"184\" y=\"125\" fill=\"#e4e4e8\">#</text><text x=\"192\" y=\"125\" fill=\"#e4e4e8\">=</text><text x=\"200\" y=\"125\" fill=\"#e4e4e8\">@</text><text x=\"208\" y=\"125\" fill=\"#e4e4e8\">:</text><text x=\"216\" y=\"125\" fill=\"#e4e4e8\">%</text><text x=\"224\" y=\"125\" fill=\"#e4e4e8\">#</text><text x=\"232\" y=\"125\" fill=\"#a5a5ad\">=</text><text x=\"240\" y=\"125\" fill=\"#a5a5ad\">@</text><text x=\"248\" y=\"125\" fill=\"#a5a5ad\">:</text><text x=\"256\" y=\"125\" fill=\"#a5a5ad\">%</text><text x=\"264\" y=\"125\" fill=\"#a5a5ad\">#</text><text x=\"272\" y=\"125\" fill=\"#a5a5ad\">=</text><text x=\"280\" y=\"125\" fill=\"#a5a5ad\">@</text><text x=\"288\" y=\"125\" fill=\"#a5a5ad\">:</text><text x=\"296\" y=\"125\" fill=\"#a5a5ad\">%</text><text x=\"304\" y=\"125\" fill=\"#707077\">#</text><text x=\"312\" y=\"125\" fill=\"#707077\">=</text><text x=\"320\" y=\"125\" fill=\"#707077\">@</text><text x=\"328\" y=\"125\" fill=\"#707077\">:</text><text x=\"336\" y=\"125\" fill=\"#707077\">%</text><text x=\"344\" y=\"125\" fill=\"#707077\">#</text><text x=\"352\" y=\"125\" fill=\"#707077\">=</text><text x=\"360\" y=\"125\" fill=\"#707077\">@</text><text x=\"368\" y=\"125\" fill=\"#707077\">:</text><text x=\"136\" y=\"134\" fill=\"#e4e4e8\">:</text><text x=\"144\" y=\"134\" fill=\"#e4e4e8\">%</text><text x=\"152\" y=\"134\" fill=\"#e4e4e8\">#</text><text x=\"160\" y=\"134\" fill=\"#e4e4e8\">=</text><text x=\"168\" y=\"134\" fill=\"#e4e4e8\">@</text><text x=\"176\" y=\"134\" fill=\"#e4e4e8\">:</text><text x=\"184\" y=\"134\" fill=\"#e4e4e8\">%</text><text x=\"192\" y=\"134\" fill=\"#e4e4e8\">#</text><text x=\"200\" y=\"134\" fill=\"#e4e4e8\">=</text><text x=\"208\" y=\"134\" fill=\"#e4e4e8\">@</text><text x=\"216\" y=\"134\" fill=\"#e4e4e8\">:</text><text x=\"224\" y=\"134\" fill=\"#e4e4e8\">%</text><text x=\"232\" y=\"134\" fill=\"#a5a5ad\">#</text><text x=\"240\" y=\"134\" fill=\"#a5a5ad\">=</text><text x=\"248\" y=\"134\" fill=\"#a5a5ad\">@</text><text x=\"256\" y=\"134\" fill=\"#a5a5ad\">:</text><text x=\"264\" y=\"134\" fill=\"#a5a5ad\">%</text><text x=\"272\" y=\"134\" fill=\"#a5a5ad\">#</text><text x=\"280\" y=\"134\" fill=\"#a5a5ad\">=</text><text x=\"288\" y=\"134\" fill=\"#a5a5ad\">@</text><text x=\"296\" y=\"134\" fill=\"#a5a5ad\">:</text><text x=\"304\" y=\"134\" fill=\"#707077\">%</text><text x=\"312\" y=\"134\" fill=\"#707077\">#</text><text x=\"320\" y=\"134\" fill=\"#707077\">=</text><text x=\"328\" y=\"134\" fill=\"#707077\">@</text><text x=\"336\" y=\"134\" fill=\"#707077\">:</text><text x=\"344\" y=\"134\" fill=\"#707077\">%</text><text x=\"352\" y=\"134\" fill=\"#707077\">#</text><text x=\"360\" y=\"134\" fill=\"#707077\">=</text><text x=\"368\" y=\"134\" fill=\"#707077\">@</text><text x=\"376\" y=\"134\" fill=\"#707077\">:</text><text x=\"136\" y=\"143\" fill=\"#e4e4e8\">@</text><text x=\"144\" y=\"143\" fill=\"#e4e4e8\">:</text><text x=\"152\" y=\"143\" fill=\"#e4e4e8\">%</text><text x=\"160\" y=\"143\" fill=\"#e4e4e8\">#</text><text x=\"168\" y=\"143\" fill=\"#e4e4e8\">=</text><text x=\"176\" y=\"143\" fill=\"#e4e4e8\">@</text><text x=\"184\" y=\"143\" fill=\"#e4e4e8\">:</text><text x=\"192\" y=\"143\" fill=\"#e4e4e8\">%</text><text x=\"200\" y=\"143\" fill=\"#e4e4e8\">#</text><text x=\"208\" y=\"143\" fill=\"#e4e4e8\">=</text><text x=\"216\" y=\"143\" fill=\"#e4e4e8\">@</text><text x=\"224\" y=\"143\" fill=\"#e4e4e8\">:</text><text x=\"232\" y=\"143\" fill=\"#a5a5ad\">%</text><text x=\"240\" y=\"143\" fill=\"#a5a5ad\">#</text><text x=\"248\" y=\"143\" fill=\"#a5a5ad\">=</text><text x=\"264\" y=\"143\" fill=\"#a5a5ad\">:</text><text x=\"272\" y=\"143\" fill=\"#a5a5ad\">%</text><text x=\"280\" y=\"143\" fill=\"#a5a5ad\">#</text><text x=\"288\" y=\"143\" fill=\"#a5a5ad\">=</text><text x=\"296\" y=\"143\" fill=\"#a5a5ad\">@</text><text x=\"304\" y=\"143\" fill=\"#707077\">:</text><text x=\"312\" y=\"143\" fill=\"#707077\">%</text><text x=\"320\" y=\"143\" fill=\"#707077\">#</text><text x=\"328\" y=\"143\" fill=\"#707077\">=</text><text x=\"336\" y=\"143\" fill=\"#707077\">@</text><text x=\"344\" y=\"143\" fill=\"#707077\">:</text><text x=\"352\" y=\"143\" fill=\"#707077\">%</text><text x=\"360\" y=\"143\" fill=\"#707077\">#</text><text x=\"368\" y=\"143\" fill=\"#707077\">=</text><text x=\"376\" y=\"143\" fill=\"#707077\">@</text><text x=\"136\" y=\"152\" fill=\"#e4e4e8\">=</text><text x=\"144\" y=\"152\" fill=\"#e4e4e8\">@</text><text x=\"152\" y=\"152\" fill=\"#e4e4e8\">:</text><text x=\"160\" y=\"152\" fill=\"#e4e4e8\">%</text><text x=\"168\" y=\"152\" fill=\"#e4e4e8\">#</text><text x=\"176\" y=\"152\" fill=\"#e4e4e8\">=</text><text x=\"184\" y=\"152\" fill=\"#e4e4e8\">@</text><text x=\"192\" y=\"152\" fill=\"#e4e4e8\">:</text><text x=\"200\" y=\"152\" fill=\"#e4e4e8\">%</text><text x=\"208\" y=\"152\" fill=\"#e4e4e8\">#</text><text x=\"304\" y=\"152\" fill=\"#707077\">@</text><text x=\"312\" y=\"152\" fill=\"#707077\">:</text><text x=\"320\" y=\"152\" fill=\"#707077\">%</text><text x=\"328\" y=\"152\" fill=\"#707077\">#</text><text x=\"336\" y=\"152\" fill=\"#707077\">=</text><text x=\"344\" y=\"152\" fill=\"#707077\">@</text><text x=\"352\" y=\"152\" fill=\"#707077\">:</text><text x=\"360\" y=\"152\" fill=\"#707077\">%</text><text x=\"368\" y=\"152\" fill=\"#707077\">#</text><text x=\"376\" y=\"152\" fill=\"#707077\">=</text><text x=\"136\" y=\"161\" fill=\"#e4e4e8\">#</text><text x=\"144\" y=\"161\" fill=\"#e4e4e8\">=</text><text x=\"152\" y=\"161\" fill=\"#e4e4e8\">@</text><text x=\"160\" y=\"161\" fill=\"#e4e4e8\">:</text><text x=\"168\" y=\"161\" fill=\"#e4e4e8\">%</text><text x=\"176\" y=\"161\" fill=\"#e4e4e8\">#</text><text x=\"184\" y=\"161\" fill=\"#e4e4e8\">=</text><text x=\"192\" y=\"161\" fill=\"#e4e4e8\">@</text><text x=\"320\" y=\"161\" fill=\"#707077\">:</text><text x=\"328\" y=\"161\" fill=\"#707077\">%</text><text x=\"336\" y=\"161\" fill=\"#707077\">#</text><text x=\"344\" y=\"161\" fill=\"#707077\">=</text><text x=\"352\" y=\"161\" fill=\"#707077\">@</text><text x=\"360\" y=\"161\" fill=\"#707077\">:</text><text x=\"368\" y=\"161\" fill=\"#707077\">%</text><text x=\"376\" y=\"161\" fill=\"#707077\">#</text><text x=\"136\" y=\"170\" fill=\"#e4e4e8\">%</text><text x=\"144\" y=\"170\" fill=\"#e4e4e8\">#</text><text x=\"152\" y=\"170\" fill=\"#e4e4e8\">=</text><text x=\"160\" y=\"170\" fill=\"#e4e4e8\">@</text><text x=\"168\" y=\"170\" fill=\"#e4e4e8\">:</text><text x=\"176\" y=\"170\" fill=\"#e4e4e8\">%</text><text x=\"184\" y=\"170\" fill=\"#e4e4e8\">#</text><text x=\"328\" y=\"170\" fill=\"#707077\">:</text><text x=\"336\" y=\"170\" fill=\"#707077\">%</text><text x=\"344\" y=\"170\" fill=\"#707077\">#</text><text x=\"352\" y=\"170\" fill=\"#707077\">=</text><text x=\"360\" y=\"170\" fill=\"#707077\">@</text><text x=\"368\" y=\"170\" fill=\"#707077\">:</text><text x=\"376\" y=\"170\" fill=\"#707077\">%</text><text x=\"128\" y=\"179\" fill=\"#e4e4e8\">@</text><text x=\"136\" y=\"179\" fill=\"#e4e4e8\">:</text><text x=\"144\" y=\"179\" fill=\"#e4e4e8\">%</text><text x=\"152\" y=\"179\" fill=\"#e4e4e8\">#</text><text x=\"160\" y=\"179\" fill=\"#e4e4e8\">=</text><text x=\"168\" y=\"179\" fill=\"#e4e4e8\">@</text><text x=\"176\" y=\"179\" fill=\"#e4e4e8\">:</text><text x=\"336\" y=\"179\" fill=\"#707077\">:</text><text x=\"344\" y=\"179\" fill=\"#707077\">%</text><text x=\"352\" y=\"179\" fill=\"#707077\">#</text><text x=\"360\" y=\"179\" fill=\"#707077\">=</text><text x=\"368\" y=\"179\" fill=\"#707077\">@</text><text x=\"376\" y=\"179\" fill=\"#707077\">:</text><text x=\"384\" y=\"179\" fill=\"#707077\">%</text><text x=\"136\" y=\"188\" fill=\"#e4e4e8\">@</text><text x=\"144\" y=\"188\" fill=\"#e4e4e8\">:</text><text x=\"152\" y=\"188\" fill=\"#e4e4e8\">%</text><text x=\"160\" y=\"188\" fill=\"#e4e4e8\">#</text><text x=\"168\" y=\"188\" fill=\"#e4e4e8\">=</text><text x=\"344\" y=\"188\" fill=\"#707077\">:</text><text x=\"352\" y=\"188\" fill=\"#707077\">%</text><text x=\"360\" y=\"188\" fill=\"#707077\">#</text><text x=\"368\" y=\"188\" fill=\"#707077\">=</text><text x=\"376\" y=\"188\" fill=\"#707077\">@</text><text x=\"136\" y=\"197\" fill=\"#e4e4e8\">=</text><text x=\"144\" y=\"197\" fill=\"#e4e4e8\">@</text><text x=\"152\" y=\"197\" fill=\"#e4e4e8\">:</text><text x=\"160\" y=\"197\" fill=\"#e4e4e8\">%</text><text x=\"352\" y=\"197\" fill=\"#707077\">:</text><text x=\"360\" y=\"197\" fill=\"#707077\">%</text><text x=\"368\" y=\"197\" fill=\"#707077\">#</text><text x=\"376\" y=\"197\" fill=\"#707077\">=</text><text x=\"136\" y=\"206\" fill=\"#e4e4e8\">#</text><text x=\"144\" y=\"206\" fill=\"#e4e4e8\">=</text><text x=\"152\" y=\"206\" fill=\"#e4e4e8\">@</text><text x=\"160\" y=\"206\" fill=\"#e4e4e8\">:</text><text x=\"352\" y=\"206\" fill=\"#707077\">@</text><text x=\"360\" y=\"206\" fill=\"#707077\">:</text><text x=\"368\" y=\"206\" fill=\"#707077\">%</text><text x=\"376\" y=\"206\" fill=\"#707077\">#</text><text x=\"136\" y=\"215\" fill=\"#e4e4e8\">%</text><text x=\"144\" y=\"215\" fill=\"#e4e4e8\">#</text><text x=\"152\" y=\"215\" fill=\"#e4e4e8\">=</text><text x=\"160\" y=\"215\" fill=\"#e4e4e8\">@</text><text x=\"352\" y=\"215\" fill=\"#707077\">=</text><text x=\"360\" y=\"215\" fill=\"#707077\">@</text><text x=\"368\" y=\"215\" fill=\"#707077\">:</text><text x=\"376\" y=\"215\" fill=\"#707077\">%</text><text x=\"136\" y=\"224\" fill=\"#e4e4e8\">:</text><text x=\"144\" y=\"224\" fill=\"#e4e4e8\">%</text><text x=\"152\" y=\"224\" fill=\"#e4e4e8\">#</text><text x=\"160\" y=\"224\" fill=\"#e4e4e8\">=</text><text x=\"352\" y=\"224\" fill=\"#707077\">#</text><text x=\"360\" y=\"224\" fill=\"#707077\">=</text><text x=\"368\" y=\"224\" fill=\"#707077\">@</text><text x=\"376\" y=\"224\" fill=\"#707077\">:</text><text x=\"144\" y=\"233\" fill=\"#e4e4e8\">:</text><text x=\"152\" y=\"233\" fill=\"#e4e4e8\">%</text><text x=\"160\" y=\"233\" fill=\"#e4e4e8\">#</text><text x=\"352\" y=\"233\" fill=\"#707077\">%</text><text x=\"360\" y=\"233\" fill=\"#707077\">#</text><text x=\"368\" y=\"233\" fill=\"#707077\">=</text><text x=\"144\" y=\"242\" fill=\"#e4e4e8\">@</text><text x=\"152\" y=\"242\" fill=\"#e4e4e8\">:</text><text x=\"160\" y=\"242\" fill=\"#e4e4e8\">%</text><text x=\"168\" y=\"242\" fill=\"#e4e4e8\">#</text><text x=\"344\" y=\"242\" fill=\"#707077\">@</text><text x=\"352\" y=\"242\" fill=\"#707077\">:</text><text x=\"360\" y=\"242\" fill=\"#707077\">%</text><text x=\"368\" y=\"242\" fill=\"#707077\">#</text><text x=\"152\" y=\"251\" fill=\"#e4e4e8\">@</text><text x=\"160\" y=\"251\" fill=\"#e4e4e8\">:</text><text x=\"168\" y=\"251\" fill=\"#e4e4e8\">%</text><text x=\"176\" y=\"251\" fill=\"#e4e4e8\">#</text><text x=\"336\" y=\"251\" fill=\"#707077\">#</text><text x=\"344\" y=\"251\" fill=\"#707077\">=</text><text x=\"352\" y=\"251\" fill=\"#707077\">@</text><text x=\"360\" y=\"251\" fill=\"#707077\">:</text><text x=\"160\" y=\"260\" fill=\"#e4e4e8\">@</text><text x=\"168\" y=\"260\" fill=\"#e4e4e8\">:</text><text x=\"176\" y=\"260\" fill=\"#e4e4e8\">%</text><text x=\"184\" y=\"260\" fill=\"#e4e4e8\">#</text><text x=\"328\" y=\"260\" fill=\"#707077\">:</text><text x=\"336\" y=\"260\" fill=\"#707077\">%</text><text x=\"344\" y=\"260\" fill=\"#707077\">#</text><text x=\"352\" y=\"260\" fill=\"#707077\">=</text><text x=\"168\" y=\"269\" fill=\"#e4e4e8\">@</text><text x=\"176\" y=\"269\" fill=\"#e4e4e8\">:</text><text x=\"184\" y=\"269\" fill=\"#e4e4e8\">%</text><text x=\"192\" y=\"269\" fill=\"#e4e4e8\">#</text><text x=\"320\" y=\"269\" fill=\"#707077\">=</text><text x=\"328\" y=\"269\" fill=\"#707077\">@</text><text x=\"336\" y=\"269\" fill=\"#707077\">:</text><text x=\"344\" y=\"269\" fill=\"#707077\">%</text><text x=\"176\" y=\"278\" fill=\"#e4e4e8\">@</text><text x=\"184\" y=\"278\" fill=\"#e4e4e8\">:</text><text x=\"192\" y=\"278\" fill=\"#e4e4e8\">%</text><text x=\"200\" y=\"278\" fill=\"#e4e4e8\">#</text><text x=\"208\" y=\"278\" fill=\"#e4e4e8\">=</text><text x=\"304\" y=\"278\" fill=\"#707077\">:</text><text x=\"312\" y=\"278\" fill=\"#707077\">%</text><text x=\"320\" y=\"278\" fill=\"#707077\">#</text><text x=\"328\" y=\"278\" fill=\"#707077\">=</text><text x=\"336\" y=\"278\" fill=\"#707077\">@</text><text x=\"184\" y=\"287\" fill=\"#e4e4e8\">@</text><text x=\"192\" y=\"287\" fill=\"#e4e4e8\">:</text><text x=\"200\" y=\"287\" fill=\"#e4e4e8\">%</text><text x=\"208\" y=\"287\" fill=\"#e4e4e8\">#</text><text x=\"216\" y=\"287\" fill=\"#e4e4e8\">=</text><text x=\"224\" y=\"287\" fill=\"#e4e4e8\">@</text><text x=\"232\" y=\"287\" fill=\"#a5a5ad\">:</text><text x=\"240\" y=\"287\" fill=\"#a5a5ad\">%</text><text x=\"248\" y=\"287\" fill=\"#a5a5ad\">#</text><text x=\"264\" y=\"287\" fill=\"#a5a5ad\">@</text><text x=\"272\" y=\"287\" fill=\"#a5a5ad\">:</text><text x=\"280\" y=\"287\" fill=\"#a5a5ad\">%</text><text x=\"288\" y=\"287\" fill=\"#a5a5ad\">#</text><text x=\"296\" y=\"287\" fill=\"#a5a5ad\">=</text><text x=\"304\" y=\"287\" fill=\"#707077\">@</text><text x=\"312\" y=\"287\" fill=\"#707077\">:</text><text x=\"320\" y=\"287\" fill=\"#707077\">%</text><text x=\"328\" y=\"287\" fill=\"#707077\">#</text><text x=\"200\" y=\"296\" fill=\"#e4e4e8\">:</text><text x=\"208\" y=\"296\" fill=\"#e4e4e8\">%</text><text x=\"216\" y=\"296\" fill=\"#e4e4e8\">#</text><text x=\"224\" y=\"296\" fill=\"#e4e4e8\">=</text><text x=\"232\" y=\"296\" fill=\"#a5a5ad\">@</text><text x=\"240\" y=\"296\" fill=\"#a5a5ad\">:</text><text x=\"248\" y=\"296\" fill=\"#a5a5ad\">%</text><text x=\"256\" y=\"296\" fill=\"#a5a5ad\">#</text><text x=\"264\" y=\"296\" fill=\"#a5a5ad\">=</text><text x=\"272\" y=\"296\" fill=\"#a5a5ad\">@</text><text x=\"280\" y=\"296\" fill=\"#a5a5ad\">:</text><text x=\"288\" y=\"296\" fill=\"#a5a5ad\">%</text><text x=\"296\" y=\"296\" fill=\"#a5a5ad\">#</text><text x=\"304\" y=\"296\" fill=\"#707077\">=</text><text x=\"312\" y=\"296\" fill=\"#707077\">@</text><text x=\"216\" y=\"305\" fill=\"#e4e4e8\">%</text><text x=\"224\" y=\"305\" fill=\"#e4e4e8\">#</text><text x=\"232\" y=\"305\" fill=\"#a5a5ad\">=</text><text x=\"240\" y=\"305\" fill=\"#a5a5ad\">@</text><text x=\"248\" y=\"305\" fill=\"#a5a5ad\">:</text><text x=\"256\" y=\"305\" fill=\"#a5a5ad\">%</text><text x=\"264\" y=\"305\" fill=\"#a5a5ad\">#</text><text x=\"272\" y=\"305\" fill=\"#a5a5ad\">=</text><text x=\"280\" y=\"305\" fill=\"#a5a5ad\">@</text><text x=\"288\" y=\"305\" fill=\"#a5a5ad\">:</text><text x=\"296\" y=\"305\" fill=\"#a5a5ad\">%</text><text x=\"256\" y=\"314\" fill=\"#a5a5ad\">:</text></g><g class=\"ds-mascot-face\"><g class=\"ds-mascot-eyes\" fill=\"#bded52\"><text x=\"200\" y=\"206\">+</text><text x=\"208\" y=\"206\">+</text><text x=\"216\" y=\"206\">+</text><text x=\"200\" y=\"215\">+</text><text x=\"208\" y=\"215\">+</text><text x=\"216\" y=\"215\">+</text><text x=\"288\" y=\"206\">+</text><text x=\"296\" y=\"206\">+</text><text x=\"304\" y=\"206\">+</text><text x=\"288\" y=\"215\">+</text><text x=\"296\" y=\"215\">+</text><text x=\"304\" y=\"215\">+</text></g></g></g></svg></div>",
-      "css": ".ds-mascot{width:300px;max-width:100%;height:clamp(245px,36svh,330px);pointer-events:none;contain:layout style}.ds-mascot>svg{display:block;width:100%;height:100%;overflow:visible}.ds-mascot-sprite{animation:ds-explorer-idle 1.8s steps(4,end) infinite paused}.ds-mascot-head,.ds-mascot-face{animation:ds-explorer-head 1.8s steps(4,end) infinite paused}.ds-mascot-scarf{transform-origin:344px 290px;animation:ds-explorer-scarf 1.8s steps(4,end) infinite paused}.ds-mascot-eyes{transform-box:fill-box;transform-origin:center;animation:ds-explorer-blink 5.4s steps(1,end) infinite paused}.ds-digital-running :is(.ds-mascot-sprite,.ds-mascot-head,.ds-mascot-face,.ds-mascot-scarf,.ds-mascot-eyes){animation-play-state:running}@keyframes ds-explorer-idle{0%,100%{transform:translateY(0)}35%,70%{transform:translateY(5px)}}@keyframes ds-explorer-head{0%,100%{transform:translateY(0)}45%,75%{transform:translateY(3px)}}@keyframes ds-explorer-scarf{0%,100%{transform:rotate(0)}45%,75%{transform:rotate(-4deg)}}@keyframes ds-explorer-blink{0%,91%,100%{transform:scaleY(1)}94%,97%{transform:scaleY(.08)}}@media(max-width:750px){.ds-mascot{width:260px;height:260px}}@media(prefers-reduced-motion:reduce){.ds-mascot g{animation:none!important}}"
-    },
-    {
-      "name": "Open contact footer",
-      "kind": "custom",
-      "refersTo": "footer-contact",
-      "description": "Actual shared footer: direct Telegram contact, labelled directory, muted wordmark and legal links.",
-      "html": "<footer class=\"ds-studio-end\" id=\"contact\"><div class=\"ds-end-contact\"><h2>Следующий продукт<br>начинается с идеи.</h2><div><p>Расскажите, что хотите создать.</p><a class=\"ds-end-telegram\" href=\"https://t.me/LancerManager\" target=\"_blank\" rel=\"noopener noreferrer\">@LancerManager <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m2 10 20-7-4 18-6-5-4 4v-6l10-8-13 7z\"/></svg></a></div></div><div class=\"ds-end-directory\"><div class=\"ds-end-signature\"><a href=\"/\" aria-label=\"Lancer Agency — главная\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m12 3 10 5-10 5L2 8zM2 12l10 5 10-5M2 16l10 5 10-5\"/></svg><span>Lancer Agency</span></a><p>Дизайн и разработка<br>цифровых продуктов.</p></div><div><h3>Услуги</h3><nav aria-label=\"Услуги в подвале\"><a href=\"/services/websites/\">Сайты и лендинги</a><a href=\"/services/web-apps/\">Веб-сервисы</a><a href=\"/services/telegram-mini-apps/\">Telegram Mini Apps</a><a href=\"/services/crm/\">CRM и админ-панели</a><a href=\"/services/automation/\">AI и автоматизация</a><a href=\"/services/mvp/\">MVP для стартапа</a></nav></div><div><h3>Проекты</h3><nav aria-label=\"Проекты в подвале\"><a href=\"/cases/maverick/\">Maverick</a><a href=\"/cases/loyalty/\">12К</a><a href=\"/cases/gift-roulette/\">Gift Roulette</a><a href=\"/cases/tailcare/\">TailCare</a></nav></div></div><div class=\"ds-end-wordmark\" aria-hidden=\"true\">Lancer<span>.</span></div><div class=\"ds-end-legal\"><span>© 2026 Lancer Agency</span><a href=\"/privacy/\">Конфиденциальность</a><a class=\"ds-text-action\" href=\"#top\">Наверх</a></div></footer>",
-      "css": ".ds-studio-end{background:var(--studio-ground,#141415);border-top:1px solid var(--studio-line,#f4f4f425);color:var(--studio-ink,#f4f4f4);font:400 16px/1.6 Manrope,Arial,sans-serif;--ds-gutter:clamp(22px,4.4vw,70px)}.ds-studio-end a{color:inherit;text-decoration:none}.ds-studio-end svg{width:24px;height:24px}.ds-studio-end p{color:var(--studio-muted,#bdbdbf);line-height:1.65}.ds-end-contact,.ds-end-directory,.ds-end-wordmark,.ds-end-legal{width:min(1560px,calc(100% - var(--ds-gutter)*2));margin:auto}.ds-end-contact{display:grid;grid-template-columns:1.4fr 1fr;gap:50px;align-items:end;padding:64px 0 56px}.ds-end-contact h2{margin:0;font-size:clamp(30px,3.5vw,52px);line-height:1.16;max-width:24ch;letter-spacing:-.035em;font-weight:400}.ds-end-contact>div{justify-self:end}.ds-end-contact p{margin:0 0 14px;font-size:14px}.ds-studio-end .ds-end-telegram{display:inline-flex;align-items:center;gap:22px;font-size:clamp(21px,2.25vw,32px);letter-spacing:-.025em;color:var(--studio-accent,#bded52);padding:0 0 7px;border-bottom:1px solid var(--studio-accent-wash,#bded5214);transition:border-color .25s}.ds-end-telegram:hover{border-color:var(--studio-accent,#bded52)}.ds-end-telegram svg{width:23px;height:23px}.ds-end-directory{border-top:1px solid var(--studio-line,#f4f4f425);display:grid;grid-template-columns:1.4fr 1fr .8fr;gap:50px;padding:34px 0 12px}.ds-end-signature>a{display:inline-flex;align-items:center;gap:12px;font-size:17px}.ds-end-signature svg{color:var(--studio-accent,#bded52)}.ds-end-signature p{margin:14px 0 0;font-size:13px}.ds-end-directory h3{font-size:12px;line-height:1.6;color:var(--studio-muted,#bdbdbf);margin:0 0 15px;font-weight:400}.ds-end-directory nav{display:flex;flex-direction:column;align-items:flex-start;gap:9px;font-size:13px}.ds-end-directory nav a:hover{color:var(--studio-accent,#bded52)}.ds-end-wordmark{font-size:clamp(90px,20vw,320px);letter-spacing:-.04em;line-height:1.06;color:#f4f4f421;padding:25px 0 8px}.ds-end-wordmark>span{color:var(--studio-accent,#bded52)}.ds-end-legal{display:flex;flex-wrap:wrap;gap:28px;color:var(--studio-muted,#bdbdbf);border-top:1px solid var(--studio-line,#f4f4f425);font-size:12px;padding:20px 0 24px}.ds-end-legal .ds-text-action{margin-left:auto}.ds-studio-end a:focus-visible{outline:2px solid var(--studio-accent,#bded52);outline-offset:5px}@media(max-width:1100px){.ds-end-contact,.ds-end-directory{gap:35px}}@media(max-width:750px){.ds-end-contact{grid-template-columns:1fr;gap:28px;padding:42px 0 38px}.ds-end-contact>div{justify-self:start}.ds-end-contact h2{font-size:clamp(30px,5.5vw,42px)}.ds-studio-end .ds-end-telegram{font-size:26px}.ds-end-directory{grid-template-columns:1fr 1fr;gap:28px;padding-top:28px}.ds-end-signature{grid-column:1/-1}.ds-end-directory nav{font-size:12px;gap:10px}.ds-end-directory h3{margin-bottom:13px}.ds-end-wordmark{font-size:23vw;padding:30px 0 12px}.ds-end-legal{gap:14px 22px;font-size:11px}}@media(max-width:500px){.ds-end-legal .ds-text-action{margin-left:0}}"
+      "refersTo": "contact-link",
+      "description": "Compact direct contact inside the open portrait footer.",
+      "html": "<a class=\"ds-contact\" href=\"https://t.me/LancerManager\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m2 10 20-7-4 18-6-5-4 4v-6l10-8-13 7z\"/></svg>@LancerManager</a>",
+      "css": ".ds-contact{display:inline-flex;align-items:center;gap:9px;padding:9px 13px;min-height:42px;border-radius:10px;background:#ffffff08;color:var(--studio-ink,#f4f4f4);font-family:Manrope,Arial,sans-serif;font-size:12px;font-weight:650;line-height:1.4;text-decoration:none;transition:background-color .25s,color .25s}.ds-contact svg{width:17px;height:17px}.ds-contact:hover{background:#ffffff12;color:var(--studio-accent,#bded52)}.ds-contact:focus-visible{outline:2px solid var(--studio-accent,#bded52);outline-offset:5px;}"
     }
   ],
   "narrative": {
-    "northStar": "Monochrome studio",
-    "overview": "Lancer's editorial shell uses graphite fields, pale lettering and quiet tonal groups. Regular Manrope headings give short offers room; an original hooded ASCII explorer gives the opening a recognizable game-character silhouette, while authored service diagrams make digital work visible. Large groups are borderless. Thin strokes inside diagrams describe interfaces and relationships.\n\nThe user's approved October 2 refinement uses electric lime for primary contact actions, focus/selection, selected process and navigation states, logo strokes and the direct footer contact. A restrained green horizon and three thin curved signal lines connect the hero to work. The graphite grounds and pale headings stay neutral. Resting project arrows remain pale; hover or keyboard focus makes them lime. Product interfaces preserve their own palettes. The opening has one filled contact action and a quiet work link; the header contact is plain navigation.\n\nThe latest user-approved amendment uses the chat «Скопировать сайт Dev Studio» as an interaction and material reference: soft wheel scrolling, one floating frosted header island and ascending work cards. The homepage centers the original ASCII explorer above its offer and actions; smaller companions use alternate poses on the four cases. This precise code-led continuation inherits the established world, without a new seed or raster comp. It preserves the established homepage, service directory, six service pages and four case shells. It preserves their structure and working demonstrations. Homepage work covers are individually generated device visualizations grounded in original product captures, with neutral graphite and silver surroundings. Gift Roulette uses its approved Farm/Autumn cover at immutable v4 URLs. Other service proof cards use real screenshots, and native product demos retain their source colors.",
+    "northStar": "The Pixel Maker Studio",
+    "overview": "A friendly pixel maker gives this restrained digital studio a human introduction. Graphite grounds, pale Manrope and electric lime keep the interface calm; independently composited real product screens supply the proof and retain each product's own colors. Pixel sprites and the gray text-matrix portrait are distinct media.\n\nThe October 2 user-approved hybrid establishes the homepage and navigation from mock 03, process from mock 02, and footer from mock 01, while preserving the incumbent six service cards. This approved replacement supersedes the previous ASCII explorer, curved seam light and production-tab composition. The source supplies the observed token values recorded here; the approved comps and explicit substitutions retain composition authority.",
     "keyCharacteristics": [
-      "Graphite, gray and pale agency surfaces with a selective electric lime accent.",
-      "Self-hosted Manrope with regular display weight and compact supporting copy.",
-      "Borderless matte groups, capsule actions, one frosted navigation island and gently curved media.",
-      "An original ASCII explorer and its case-pose family, meaningful service diagrams and bounded openings.",
-      "Equal project and service geometry within each responsive grid.",
-      "Visible static content, keyboard access, soft wheel scrolling and varied, bounded motion."
+      "Centered seated pixel human, bold offer and two clear actions.",
+      "Quiet central frosted navigation pill with optional side branding.",
+      "Landscape product scenes made from actual interface captures.",
+      "Six matte service cards; hover illuminates without moving the card.",
+      "Four static editorial process steps and a portrait-led open footer."
     ],
     "rules": [
       {
-        "name": "The Product Theme Rule",
-        "body": "Apply monochrome to Lancer's editorial shell; preserve original interface colors inside product captures, generated device visualizations and interactive demos.",
+        "name": "The Product Color Rule",
+        "body": "Preserve the source interface palette inside project screens. The pale 12К portal and beige/red Maverick UI are part of the evidence.",
         "section": "colors"
       },
       {
-        "name": "The Useful Type Rule",
-        "body": "Let the actual offer, project name and useful description create hierarchy; detailed scope belongs in the supporting content.",
+        "name": "The Human Title Rule",
+        "body": "Use a bold, direct main offer; keep supporting text short enough to sit beneath the maker as a calm centered stack.",
         "section": "typography"
       },
       {
-        "name": "The Bounded Stage Rule",
-        "body": "Keep openings proportionate to their useful content; mobile text and diagrams establish their own height.",
+        "name": "The Anchored Maker Rule",
+        "body": "Keep the maker's torso, head and laptop registered while frames switch. Frame selection changes pixel art, not the component's scale or body dimensions.",
         "section": "layout"
       },
       {
-        "name": "The Tonal Grouping Rule",
-        "body": "Separate major groups with diffuse translucent panes and spacing. Reserve thin strokes for functional relationships and dividers.",
+        "name": "The Illumination Rule",
+        "body": "Service hover may reveal the authored arrow and brighten the matte ground; it must not move the card, screenshot or service diagram.",
         "section": "elevation"
-      },
-      {
-        "name": "The Single Island Rule",
-        "body": "Apply header glass and ambient lift to one shared outer island; keep its child navigation transparent and express hover/current state through lime text.",
-        "section": "elevation"
-      },
-      {
-        "name": "The Visible Default Rule",
-        "body": "Useful text, media and diagrams are present before JavaScript; decoration must pause offscreen, in hidden documents and under reduced motion.",
-        "section": "components"
       }
     ],
     "dos": [
-      "**Do** use graphite editorial surfaces, selective electric lime, regular Manrope and concise useful copy.",
-      "**Do** group major panels with tonal washes and spacing.",
-      "**Do** keep project and service media equal within each responsive grid.",
-      "**Do** preserve authentic product colors, demo behavior and simulation boundaries.",
-      "**Do** retain keyboard access, visible lime focus and useful static content.",
-      "**Do** distinguish generated device visualizations from original product captures.",
-      "**Do** pause decorative loops offscreen, in hidden documents and under reduced motion."
+      "**Do** preserve actual product screens and their original colors.",
+      "**Do** keep the pixel maker's rigid regions registered while selecting redrawn frames.",
+      "**Do** illuminate the six service cards without translating or scaling them.",
+      "**Do** retain native links, disclosures and static artwork before JavaScript.",
+      "**Do** stop decorative loops when offscreen, hidden or reduced motion is requested.",
+      "**Do** keep functional mobile navigation, action labels, legal links and metadata legible at the observed 11px minimum."
     ],
     "donts": [
-      "**Don't** restore olive studio photography, Model table, the garden or global particles as the current identity.",
-      "**Don't** add decorative perimeter frames to major matte panels.",
-      "**Don't** leave an empty visual column beside centered case copy.",
-      "**Don't** turn a bounded opening into a mandatory viewport-height empty stage.",
-      "**Don't** present generated devices as guaranteed pixel-identical interface captures.",
-      "**Don't** invent business outcomes, durations, model names, benchmark scores or AI delivery claims.",
-      "**Don't** replace inline SVG or drawn disclosure controls with text glyph icons; the requested ASCII character artwork is a separate decorative medium."
+      "",
+      "**Don't** substitute invented interface screenshots for real product evidence.",
+      "**Don't** use global squash, stretch, bob or scaling as the maker's frame animation.",
+      "**Don't** restore the superseded ASCII hero, seam glow or homepage production tabs.",
+      "**Don't** present generated scene grounds as photographs of Lancer's office or client devices.",
+      "**Don't** turn 8px decorative browser chrome or 10px copyright into a functional text rule."
     ]
   }
 }

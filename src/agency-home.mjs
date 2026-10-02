@@ -1,8 +1,8 @@
 import {serviceShowcase,studioFooter} from './studio-sections.mjs';
 import {faqBlock} from './seo.mjs';
-import {projectCover} from './project-cover.mjs';
+import {projectSceneCard} from './project-scene.mjs';
 import {head,cta,studioHeader} from './agency-shared.mjs';
-import {studioSignal} from './digital-visuals.mjs';
+import {makerStage} from './pixel-maker.mjs';
 
 const projects=[['loyalty','12К'],['maverick','Maverick'],['tailcare','TailCare'],['gift-roulette','Gift Roulette']];
 const phases=[
@@ -11,8 +11,8 @@ const phases=[
  ['Разработка','Соединяем интерфейс, сервер и интеграции. Показываем законченные сценарии по мере готовности.','Работающая версия для проверки'],
  ['Запуск','Проверяем формы, доступы и мобильные экраны. Публикуем продукт, передаём код и инструкции.','Опубликованный продукт и документация']
 ];
-function process(){return `<section class="studio-process" id="approach"><div class="section-heading"><h2>Как идёт работа</h2><p>От понятной задачи до продукта,<br> которым можно пользоваться.</p></div><div class="process-tabs" role="tablist" aria-label="Этапы работы">${phases.map(([title],i)=>`<button type="button" id="phase-${i}" role="tab" aria-selected="${i===0}" aria-controls="phase-panel-${i}" tabindex="${i===0?0:-1}">${title}</button>`).join('')}</div><div class="process-panels">${phases.map(([title,text,result],i)=>`<article id="phase-panel-${i}" role="tabpanel" aria-labelledby="phase-${i}" ${i?'hidden':''}><h3>${title}</h3><p>${text}</p><div><span>Результат этапа</span><strong>${result}</strong></div></article>`).join('')}</div></section>`;}
+function process(){return `<section class="studio-process" id="approach"><div class="section-heading"><h2>Процесс</h2><p>От идеи до работающего продукта.</p></div><ol class="process-roadmap">${phases.map(([title,text],i)=>`<li><span class="process-step">0${i+1}</span><h3>${title}</h3><p>${text}</p></li>`).join('')}</ol></section>`;}
 export function home(){return head('Сайты и цифровые продукты','Разрабатываем сайты, Telegram Mini Apps, веб-сервисы и AI-интеграции. Дизайн, серверная логика и запуск — Lancer Agency.').replace('class="theme-blue"','class="theme-blue lancer-site studio-home"')+studioHeader()+`
-<main id="main" class="studio-main"><section class="studio-hero mascot-hero" id="about">${studioSignal()}<div class="hero-copy"><h1>Идеи становятся продуктами.</h1><p>Создаём сайты, Mini Apps и системы для бизнеса.<br> Соединяем дизайн и разработку.</p><div class="hero-actions">${cta()}<a class="text-action" href="#works">Смотреть работы</a></div></div></section>
-<section class="studio-works" id="works"><div class="signal-seam" aria-hidden="true"><svg viewBox="0 0 1400 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M-80 67C260 100 380-12 700 43S1170 116 1480 20"/><path d="M-80 75C260 108 380-4 700 51S1170 124 1480 28"/><path d="M-80 83C260 116 380 4 700 59S1170 132 1480 36"/></svg></div><div class="section-heading"><h2>Работы</h2><p>Четыре продукта.<br> Разные задачи, внимание к деталям.</p></div><div class="studio-projects">${projects.map(([slug,name])=>`<article class="studio-project" id="project-${slug}">${projectCover(slug,name,{illustrated:true})}</article>`).join('')}</div></section>
+<main id="main" class="studio-main"><section class="studio-hero pixel-hero" id="about">${makerStage()}<div class="hero-copy"><h1>Идеи становятся продуктами.</h1><p>Создаём сайты, Mini Apps и системы для бизнеса.</p><div class="hero-actions">${cta()}<a class="text-action" href="#works">Смотреть работы</a></div></div></section>
+<section class="studio-works" id="works"><div class="section-heading"><h2>Работы</h2><p>Реальные проекты.<br>Настоящие задачи. Живые интерфейсы.</p></div><div class="studio-projects">${projects.map(([slug])=>`<article class="studio-project" id="project-${slug}">${projectSceneCard(slug)}</article>`).join('')}</div></section>
 ${serviceShowcase()}${process()}${faqBlock()}</main>`+studioFooter();}

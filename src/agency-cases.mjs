@@ -1,9 +1,8 @@
-import {mascot} from './mascot.mjs';
-import {illustratedCoverFile} from './project-cover.mjs';
+import {projectScene,projectSceneCard} from './project-scene.mjs';
 import {studioFooter} from './studio-sections.mjs';
 import {breadcrumbs} from './seo.mjs';
 import {productStage} from './product-stage.mjs';
-import {head,icon,studioHeader} from './agency-shared.mjs';
+import {head,icon,studioHeader,phone,desktop} from './agency-shared.mjs';
 export const cases=[
  {slug:'gift-roulette',name:'Gift Roulette',theme:'gift',type:'Telegram Mini App',intro:'Четыре игровых интерфейса, личный кабинет и управление через Telegram.',tags:['Интерфейс','Backend','Telegram-бот'],screens:['gift-mines-active.webp','gaming-case.webp'],hand:'Дарим<br>возможности',section:'Один продукт — четыре игровых режима',sub:'Разные сценарии взаимодействия, общий профиль и единая навигация.',features:[
  ['Кейсы','Каталог предметов и анимированная лента. Отдельный экран результата.','Коллекционные предметы со всего мира Telegram','gaming-case.webp','gift'],
@@ -35,18 +34,17 @@ const visualGroups={
  loyalty:[['loyalty-member',[0,1,2]],['loyalty-business',[3]]],
  tailcare:[['tailcare-home',[0]],['tailcare-catalog',[1,2]]]
 };
-function stories(p){return visualGroups[p.slug].map(([asset,indices])=>{
- const title=indices.map(i=>p.features[i][0]).join(' · '),src=`/assets/case-visuals/${asset}.webp`;
- return `<section class="case-story"><div class="story-copy">${indices.map(i=>{const [t,d,a]=p.features[i];return `<article><h2>${t}</h2><p>${d}</p><span class="story-aside">${a}</span></article>`;}).join('')}</div><figure class="story-art"><button type="button" class="generated-device" data-zoom="${src}" data-caption="${p.name}: ${title}" aria-label="Рассмотреть визуализацию ${p.name}"><img src="${src}" width="1536" height="1024" alt="${p.name}: интерфейсы в настоящих устройствах" loading="lazy"></button><figcaption>${title}</figcaption></figure></section>`;
+function stories(p){return visualGroups[p.slug].map(([,indices])=>{
+ const title=indices.map(i=>p.features[i][0]).join(' · ');
+ return `<section class="case-story"><div class="story-copy">${indices.map(i=>{const [t,d,a]=p.features[i];return `<article><h2>${t}</h2><p>${d}</p><span class="story-aside">${a}</span></article>`;}).join('')}</div><figure class="story-art real-story-art"><div class="real-story-screens">${indices.map(i=>{const [t,,,file]=p.features[i];return file.startsWith('pets-')||file==='12k-dashboard.webp'?desktop(file,`${p.name}: ${t}`):phone(file,`${p.name}: ${t}`);}).join('')}</div><figcaption>${title}</figcaption></figure></section>`;
 }).join('');}
-const companionPoses={maverick:'wave',loyalty:'carry','gift-roulette':'inspect',tailcare:'sit'};
 export function casePage(p){return head(`${p.name} — ${p.type}`,p.intro,`/cases/${p.slug}/`,p.theme).replace(`class="theme-${p.theme}"`,`class="theme-${p.theme} lancer-site case-editorial"`)+`
 ${studioHeader('case')}
-<main id="main"><section class="case-opening" id="overview"><aside class="case-companion" aria-hidden="true">${mascot(companionPoses[p.slug],true)}</aside><div class="case-opening-copy"><div>${breadcrumbs(`/cases/${p.slug}/`,p.name)}<h1>${p.name}</h1><p class="case-type">${p.type}</p></div><div class="case-opening-note"><p>${p.intro}</p><div class="case-pills">${p.tags.map(t=>`<span>${t}</span>`).join('')}</div><a class="case-play" href="#demo">Попробовать продукт ${icon('arrow')}</a></div></div></section>
+<main id="main"><section class="case-opening pixel-case-opening" id="overview"><div class="case-opening-copy"><div>${breadcrumbs(`/cases/${p.slug}/`,p.name)}<h1>${p.name}</h1><p class="case-type">${p.type}</p></div><div class="case-opening-note"><p>${p.intro}</p><div class="case-pills">${p.tags.map(t=>`<span>${t}</span>`).join('')}</div><a class="case-play" href="#demo">Попробовать продукт ${icon('arrow')}</a></div></div>${projectScene(p.slug,{eager:true})}</section>
 <section class="case-story-intro" id="screens"><h2>${p.section}</h2><p>${p.sub}</p></section>
-<p class="case-visual-note">Визуализации на основе интерфейсов. Механику продукта можно проверить в демо.</p><div class="case-stories">${stories(p)}</div>
+<p class="case-visual-note">${p.note} Механику продукта можно проверить в демо.</p><div class="case-stories">${stories(p)}</div>
 <section class="case-demo-section"><div class="case-demo-heading"><h2>Попробуйте сами.</h2><p>Интерактивный фрагмент ${p.name}. Можно нажимать и исследовать.</p></div>${productStage(p)}</section>
 <section class="case-capabilities" id="features"><div><h2>${p.extraTitle}</h2></div><div class="case-capability-grid">${p.extra.map(([ico,t,d])=>`<article>${icon(ico)}<h3>${t}</h3><p>${d}</p></article>`).join('')}</div></section>
 <section class="case-details"><h2>Как устроен продукт</h2><div>${p.details.map(([t,d])=>`<details><summary>${t}<i aria-hidden="true"></i></summary><p>${d}</p></details>`).join('')}</div></section>
 <section class="case-stack"><h2>Технологии</h2><p>${p.infra}</p><div>${p.stack.map(([ico,t,d])=>`<span><strong>${t}</strong><small>${d}</small></span>`).join('')}</div></section>
-<section class="case-related"><h2>Ещё проекты</h2><div>${cases.filter(c=>c.slug!==p.slug).map(c=>`<a href="/cases/${c.slug}/"><img src="/assets/covers/${illustratedCoverFile(c.slug)}" width="1536" height="1024" alt="" loading="lazy"><span>${c.name} ${icon('arrow')}</span><small>${c.type}</small></a>`).join('')}</div></section></main><dialog class="lightbox" aria-label="Изображение проекта"><div class="lightbox-toolbar"><p></p><button type="button" aria-label="Закрыть изображение">Закрыть ${icon('check')}</button></div><img alt=""></dialog>`+studioFooter().replaceAll('href="#','href="/#');}
+<section class="case-related"><h2>Ещё проекты</h2><div>${cases.filter(c=>c.slug!==p.slug).map(c=>projectSceneCard(c.slug)).join('')}</div></section></main><dialog class="lightbox" aria-label="Изображение проекта"><div class="lightbox-toolbar"><p></p><button type="button" aria-label="Закрыть изображение">Закрыть ${icon('check')}</button></div><img alt=""></dialog>`+studioFooter();}

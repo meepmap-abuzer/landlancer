@@ -1,4 +1,4 @@
-// Each surface has its own entrance; native scrolling owns scroll-linked depth.
+// Card preparation happens in the head; no visible-then-hidden entrance flash.
 export function setupStudioMotion(reduced){
  const animations=new Set();
  const play=(element,frames,options={})=>{
@@ -13,12 +13,17 @@ export function setupStudioMotion(reduced){
  });
  add('.mascot-hero>.mascot',element=>play(element,[{opacity:.55,clipPath:'inset(0 0 18% 0)',transform:'translateY(10px)'},{opacity:1,clipPath:'inset(0)',transform:'none'}],{duration:1100}));
  add('.section-heading h2,.service-page section h2,.case-editorial section h2,.faq-intro h2',element=>play(element,[{clipPath:'inset(0 0 35% 0)',transform:'translateY(9px)'},{clipPath:'inset(0)',transform:'none'}],{duration:850}));
- add('.studio-project',element=>{
+ const prepared=document.documentElement.dataset.motion==='pending';
+ const cards=[...document.querySelectorAll('.studio-project')];
+ if(prepared&&!reduced.matches)cards.forEach(card=>card.classList.add('reveal-pending'));
+ if(prepared)add('.studio-project',element=>{
   const index=[...element.parentElement.children].indexOf(element);
-  play(element,[{opacity:.25,transform:'perspective(1000px) translateY(64px) rotateX(4deg) scale(.96)'},{opacity:1,transform:'none'}],{duration:1100,delay:index%2*140,fill:'backwards'});
+  if(reduced.matches||document.hidden){element.classList.remove('reveal-pending');return;}
+  const animation=element.animate([{opacity:0,transform:'translateY(25px)'},{opacity:1,transform:'none'}],{duration:860,delay:innerWidth>750?index%2*100:0,easing:'cubic-bezier(.16,1,.3,1)',fill:'both'});
+  animations.add(animation);animation.finished.catch(()=>{}).finally(()=>{element.classList.remove('reveal-pending');animations.delete(animation);animation.cancel();});
  });
  add('.service-case-card .project-photo,.case-related a',element=>play(element,[{clipPath:'inset(7% 0 0 round 16px)',opacity:.8},{clipPath:'inset(0 round 16px)',opacity:1}],{duration:1000}));
- add('.service-list .digital-signal,.service-hero-art .digital-signal,.service-system>.frost',element=>play(element,[{opacity:.45,transform:'scale(.96)'},{opacity:1,transform:'none'}],{duration:1000}));
+ add('.service-hero-art .digital-signal,.service-system>.frost',element=>play(element,[{opacity:.45,transform:'scale(.96)'},{opacity:1,transform:'none'}],{duration:1000}));
  add('.included-grid article,.ai-example-grid article,.case-capability-grid article',element=>play(element,[{clipPath:'inset(0 0 12% 0)',opacity:.7},{clipPath:'inset(0)',opacity:1}],{duration:750}));
  add('.service-roadmap,.studio-process,.service-pricing,.service-questions,.case-story',element=>{
   const children=[...element.children].filter(child=>child.tagName!=='H2');
@@ -30,6 +35,7 @@ export function setupStudioMotion(reduced){
   entries.filter(entry=>entry.isIntersecting).forEach(({target})=>{jobs.get(target)?.(target);observer.unobserve(target);});
  },{threshold:.12});
  if(!reduced.matches)jobs.forEach((_,element)=>observer.observe(element));
- function settle(){if(reduced.matches||document.hidden){animations.forEach(a=>a.finish());if(reduced.matches)observer.disconnect();}}
+ if(prepared&&!reduced.matches)document.documentElement.dataset.motion='ready';else delete document.documentElement.dataset.motion;
+ function settle(){if(reduced.matches||document.hidden){animations.forEach(a=>a.finish());if(reduced.matches){cards.forEach(card=>card.classList.remove('reveal-pending'));delete document.documentElement.dataset.motion;observer.disconnect();}}}
  reduced.addEventListener('change',settle);document.addEventListener('visibilitychange',settle);
 }
