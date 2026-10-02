@@ -1,18 +1,20 @@
 ---
 name: Lancer Agency — Monochrome studio
-description: A restrained digital studio with graphite grounds, pale Manrope, borderless matte groups and authored interface geometry.
+description: A restrained digital studio with graphite grounds, pale Manrope, a saffron action accent, borderless matte groups and authored interface geometry.
 colors:
   ground: "#141415"
   surface: "#252527"
   ink: "#f4f4f4"
   muted: "#bdbdbf"
   line: "#f4f4f425"
-  accent: "#dddddf"
+  accent: "#e4c369"
+  accent-hover: "#f0d58d"
+  accent-wash: "#e4c36914"
   action-text: "#171718"
   panel-wash: "#ffffff06"
   nav-wash: "#ffffff0a"
   price-wash: "#ffffff0d"
-  selected-wash: "#ffffff15"
+  selected-wash: "#e4c36914"
   caption-tint: "#18181bcc"
   service-matte: "#1e1e20"
   diagram-matte: "#1d1d20"
@@ -96,13 +98,13 @@ spacing:
   home-section-end-mobile: "64px"
 components:
   button-primary:
-    backgroundColor: "{colors.ink}"
+    backgroundColor: "{colors.accent}"
     textColor: "{colors.action-text}"
     typography: "{typography.action}"
     rounded: "{rounded.action}"
     padding: "13px 21px"
   button-primary-hover:
-    backgroundColor: "{colors.accent}"
+    backgroundColor: "{colors.accent-hover}"
   text-action:
     textColor: "{colors.ink}"
     typography: "{typography.text-action}"
@@ -146,6 +148,7 @@ components:
     padding: "16px 20px"
   process-tab-selected:
     backgroundColor: "{colors.selected-wash}"
+    textColor: "{colors.accent}"
   process-panel:
     backgroundColor: "{colors.panel-wash}"
     rounded: "{rounded.panel}"
@@ -162,6 +165,8 @@ components:
 **Creative North Star: "Monochrome studio"**
 
 Lancer's editorial shell uses graphite fields, pale lettering and quiet tonal groups. Regular Manrope headings give short offers room; authored interface windows, routes and cursor geometry make digital work visible without decorative interior photography. Large groups are borderless. Thin strokes inside diagrams describe interfaces and relationships.
+
+The user's October 2 accent amendment adds warm saffron (#e4c369) to primary contact actions, focus/selection, selected process and navigation states, directional arrows and the hero's moving routes and launch node. The graphite grounds and pale headings stay neutral. Resting project arrows remain pale; hover or keyboard focus makes them saffron. Product interfaces preserve their own palettes.
 
 This is the user's approved monochrome amendment to the established homepage, service directory, six service pages and four case shells. It preserves their structure and working demonstrations. Homepage work covers are individually generated device visualizations grounded in original product captures, with neutral graphite and silver surroundings. Real screenshots on service proof cards and native product demos retain their source colors.
 
@@ -180,20 +185,22 @@ The palette uses pale type and gray emphasis on a continuous graphite field; the
 
 ### Primary
 
-- **Pale gray** (accent): focus, selection, selected-tab arrows, functional diagram emphasis and primary-action hover.
+- **Saffron** (accent): primary contact actions, focus, selection, selected-tab arrows, roadmap points, meaningful digital routes and launch.
+- **Light saffron** (accent-hover): primary-action hover.
+- **Saffron wash** (accent-wash): selected process and current navigation grounds.
 
 ### Neutral
 
 - **Graphite** (ground): continuous page field.
 - **Dark gray** (surface): functional diagram nodes and native structured examples.
-- **Pale white** (ink): headings, navigation, solid actions and arrow controls.
+- **Pale white** (ink): headings, ordinary navigation, secondary return actions and resting project arrows.
 - **Soft gray** (muted): descriptions and secondary information.
 - **Quiet line** (line): disclosure, price and functional editorial dividers.
 - **Action graphite** (action-text): lettering on solid pale controls.
 - **Matte wash** (panel-wash): scope, process, example and capability groups.
 - **Navigation wash** (nav-wash): the capsule navigation and case-category pills.
 - **Price wash** (price-wash): the borderless starting-price pill.
-- **Selected wash** (selected-wash): the selected production tab.
+- **Selected wash** (selected-wash): the saffron-tinted selected production tab, with saffron type and aria-selected semantics.
 - **Graphite caption** (caption-tint): readable image-overlay captions.
 - **Service matte** (service-matte) and **diagram matte** (diagram-matte): grounds for authored service graphics.
 - **Open wash** (open-wash): expanded disclosure state.
@@ -258,7 +265,7 @@ Centered case openings and the closing contact area are open compositions withou
 
 ### Actions
 
-Pale solid actions use dark lettering, inline SVG arrows, the recorded padding and a 48px minimum target. Hover changes to pale gray and rises 2px; active returns to rest. Text actions have a 44px target and hover underline. Keyboard focus is a 2px accent outline, offset 5px. Header CTA and case-return controls hide below 750px while navigation remains visible.
+Saffron primary contact actions use dark lettering, inline SVG arrows, the recorded padding and a 48px minimum target. Hover changes to light saffron and rises 2px; active returns to rest. Case-return controls stay pale and secondary. Text actions have a 44px target, saffron arrows and hover underline. Keyboard focus is a 2px saffron outline, offset 5px. Header CTA and case-return controls hide below 750px while navigation remains visible.
 
 ### Navigation
 
