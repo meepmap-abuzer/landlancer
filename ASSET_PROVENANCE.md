@@ -1,5 +1,9 @@
 # Asset provenance
 
+## October 2: Gift Roulette Farm and Autumn cover edit
+
+`assets/covers/gift-roulette-mono-v3.webp` replaces only the homepage Gift Roulette cover. The built-in image_gen editor replaced its two lower placeholder cards with the Farm and Autumn artwork and two-card layout supplied by the user. Farm has a green 0.1 pill; Autumn has a purple 3.5 pill and the supplied limited ribbon. The phone composition and surrounding studio remain the same. This is an illustrative device visualization, not a newly captured product interface or a change to the product demo. The original v2 asset is retained. The full image and its 768px responsive derivative record the exact prompt, user reference paths, origin and generated source path in adjacent sidecars.
+
 ## October 2: Monochrome studio amendment
 
 The user's later instruction restores illustrated covers specifically to the homepage “Работы” grid. Four new built-in image_gen renders in `assets/covers/*-mono-v2.webp` depict the actual project's interface on a realistic device, in neutral graphite/silver/frosted-glass studio compositions. Original product captures were supplied as interface references. These are fictional visualizations, not documentary photographs or guaranteed pixel-exact captures. The four 768px WebP derivatives and every original record the exact prompt and input origin in adjacent sidecars. Home uses these new covers; service proof cards retain actual captures, and hero/service illustrations remain vector geometry.

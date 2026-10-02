@@ -108,5 +108,10 @@
     "sourceWidth": 1536,
     "small": "/assets/responsive/covers-gift-roulette-mono-v2-768.webp",
     "width": 768
+  },
+  "/assets/covers/gift-roulette-mono-v3.webp": {
+    "sourceWidth": 1536,
+    "small": "/assets/responsive/covers-gift-roulette-mono-v3-768.webp",
+    "width": 768
   }
 }
