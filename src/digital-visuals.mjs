@@ -5,16 +5,22 @@ const text=(x,y,label)=>`<text x="${x}" y="${y}">${label}</text>`;
 const window=(x,y,w,h)=>rect(x,y,w,h,14)+line(x,y+34,w,'signal-divider')+`<g class="signal-dots"><circle cx="${x+16}" cy="${y+17}" r="2"/><circle cx="${x+25}" cy="${y+17}" r="2"/><circle cx="${x+34}" cy="${y+17}" r="2"/></g>`;
 const view=body=>`<svg class="digital-signal" viewBox="0 0 600 390" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">${body}</svg>`;
 
-export function studioSignal(){return `<div class="hero-signal" data-digital-scene aria-hidden="true">${view(`
- <path class="signal-route" d="M72 118H150Q166 118 166 134V185H260M512 218H550V319H438"/>
- <g class="signal-input">${rect(25,81,132,73,12)}${text(43,107,'Ваша идея')}${line(44,128,73)}</g>
- <g class="signal-window">${window(191,46,325,246)}${text(214,104,'Интерфейс')}${rect(213,122,92,126,7,'signal-block')}${rect(321,122,173,47,7,'signal-block')}${rect(321,185,80,63,7,'signal-block')}${rect(414,185,80,63,7,'signal-block')}${line(231,143,49)}${line(231,158,33)}${line(338,145,65)}${line(338,154,122,'signal-divider')}</g>
- <g class="signal-output">${window(118,222,250,125)}${text(138,280,'Система')}${line(139,299,160)}${line(139,314,102)}<path class="signal-check" d="m319 274 9 9 15-19"/></g>
- <g class="signal-node">${rect(443,291,97,53,12)}${text(462,323,'Запуск')}<path class="signal-check" d="m515 324 8-8m-8 0h8v8"/></g>
- <path class="signal-trace" d="M72 118H150Q166 118 166 134V185H191"/>
- <path class="signal-trace signal-trace-late" d="M512 218H550V319H540"/>
- <g class="signal-cursor"><path d="m409 149 2 27 8-7 10 3Z" fill="#f5f5f5"/><circle class="signal-click" cx="411" cy="153" r="13"/></g>
- `)}<span class="signal-caption">Дизайн · Разработка · Интеграции</span></div>`;}
+// Three folded point planes echo the layered Lancer mark. The resting geometry
+// is complete in static HTML; motion only separates and rejoins those planes.
+export function studioSignal(){
+ const layers=Array.from({length:3},(_,layer)=>{
+  const dots=[];
+  for(let row=0;row<13;row++)for(let column=0;column<37;column++){
+   const u=column/36,v=row/12;
+   const x=85+u*392+v*56;
+   const y=121+layer*58+v*60+Math.sin(u*Math.PI*2-.4)*29-u*52;
+   const bright=(column+row+layer*3)%9===0;
+   dots.push(`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${bright?1.8:1.2}"${bright?' class="weave-bright"':''}/>`);
+  }
+  return `<g class="weave-plane weave-plane-${layer}"><g class="weave-field">${dots.join('')}</g></g>`;
+ }).join('');
+ return `<div class="hero-signal hero-weave" data-digital-scene aria-hidden="true"><svg class="digital-weave" viewBox="0 0 600 390" fill="none" xmlns="http://www.w3.org/2000/svg">${layers}</svg></div>`;
+}
 
 const graphics={
  websites:window(124,60,351,258)+rect(144,114,173,115,7,'signal-block')+line(333,136,100)+line(333,156,82)+rect(333,182,101,31,7,'signal-bright')+line(145,266,151)+line(145,283,278),
