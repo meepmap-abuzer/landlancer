@@ -1,0 +1,11 @@
+# Restored frosted material — October 2, 2026
+
+The user asked to restore the former frosted glass while keeping the saffron accent. The monochrome amendment had retained blur but flattened group fills and raised caption opacity. The refinement restores a shared diffuse translucent pane, a soft offset shadow and 24px backdrop filtering on key larger panes. Captions transmit more of the original cover at 68% dark tint, with pale description text. No perimeter frames, decorative photographs, new animation loops, layout changes or factual changes were introduced.
+
+The new shared rules exclude native product-demo descendants. Small repeated scope/service groups use the material without individual backdrop filters. Navigation, captions, process, pricing and larger diagram panes receive the filter. The opaque support fallback is last in cascade and considers both standard and WebKit backdrop filtering. Fallback behavior was source-reviewed, not emulated in another browser.
+
+Local browser evidence: homepage covers and automation service at CSS viewports 1280×720 and 390×844, plus the desktop process panel. Captures are restored-glass-*.jpg; the screenshot API may resample them. Computed caption tint is rgba(20,20,23,.68), with blur(24px) saturate(1.05). All sampled group borders are 0px. All four work images loaded. No horizontal overflow or sampled console warnings/errors appeared.
+
+Conservative compositing checks: caption text against a pure-white underlying image plus the strongest caption highlight is 5.00:1; secondary panel text at its strongest highlight is 6.32:1. Primary contact colors and their prior 10.50:1 contrast stay unchanged. The material filters and reflections are static. No performance profiling, color-vision emulation or cross-browser runtime coverage is claimed.
+
+Review outcome: the shared material tokens fit the component boundary, captions remain readable, demo palettes and behavior remain independent, no new dependency or image load is added, and the cache version is updated across all 12 canonical routes. Static build, 7 SEO/link/loading tests and whitespace checks pass. No critical or required findings remain for this scoped restoration. Public publication is verified separately.

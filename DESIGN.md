@@ -1,6 +1,6 @@
 ---
 name: Lancer Agency — Monochrome studio
-description: A restrained digital studio with graphite grounds, pale Manrope, a saffron action accent, borderless matte groups and authored interface geometry.
+description: A restrained digital studio with graphite grounds, pale Manrope, a saffron action accent, borderless frosted groups and authored interface geometry.
 colors:
   ground: "#141415"
   surface: "#252527"
@@ -15,7 +15,7 @@ colors:
   nav-wash: "#ffffff0a"
   price-wash: "#ffffff0d"
   selected-wash: "#e4c36914"
-  caption-tint: "#18181bcc"
+  caption-tint: "#141417ad"
   service-matte: "#1e1e20"
   diagram-matte: "#1d1d20"
   open-wash: "#f4f4f409"
@@ -96,6 +96,11 @@ spacing:
   service-section-mobile: "44px"
   home-section-end: "90px"
   home-section-end-mobile: "64px"
+effects:
+  glass-pane: "linear-gradient(135deg,#ffffff26 0%,#ffffff0a 55%,#ffffff12 100%)"
+  glass-caption-highlight: "linear-gradient(120deg,#ffffff0f,transparent 60%,#ffffff05)"
+  glass-filter: "blur(24px) saturate(105%)"
+  glass-shadow: "0 14px 34px #00000026"
 components:
   button-primary:
     backgroundColor: "{colors.accent}"
@@ -109,7 +114,10 @@ components:
     textColor: "{colors.ink}"
     typography: "{typography.text-action}"
   navigation:
-    backgroundColor: "{colors.nav-wash}"
+    backgroundColor: "transparent"
+    backgroundImage: "{effects.glass-pane}"
+    backdropFilter: "{effects.glass-filter}"
+    boxShadow: "{effects.glass-shadow}"
     textColor: "{colors.ink}"
     rounded: "{rounded.action}"
     padding: "6px"
@@ -119,11 +127,16 @@ components:
     padding: "8px 19px"
   project-caption:
     backgroundColor: "{colors.caption-tint}"
+    backgroundImage: "{effects.glass-caption-highlight}"
+    backdropFilter: "{effects.glass-filter}"
+    boxShadow: "{effects.glass-shadow}"
     textColor: "{colors.ink}"
     rounded: "{rounded.caption}"
     padding: "16px 19px"
   service-card:
-    backgroundColor: "{colors.service-matte}"
+    backgroundColor: "transparent"
+    backgroundImage: "{effects.glass-pane}"
+    boxShadow: "{effects.glass-shadow}"
     textColor: "{colors.ink}"
     rounded: "{rounded.panel}"
     padding: "25px"
@@ -133,12 +146,17 @@ components:
     rounded: "{rounded.chip}"
     padding: "6px 11px"
   included-card:
-    backgroundColor: "{colors.panel-wash}"
+    backgroundColor: "transparent"
+    backgroundImage: "{effects.glass-pane}"
+    boxShadow: "{effects.glass-shadow}"
     textColor: "{colors.ink}"
     rounded: "{rounded.scope}"
     padding: "26px"
   diagram-panel:
-    backgroundColor: "{colors.diagram-matte}"
+    backgroundColor: "transparent"
+    backgroundImage: "{effects.glass-pane}"
+    backdropFilter: "{effects.glass-filter}"
+    boxShadow: "{effects.glass-shadow}"
     textColor: "{colors.ink}"
     rounded: "{rounded.diagram}"
     padding: "28px"
@@ -150,7 +168,10 @@ components:
     backgroundColor: "{colors.selected-wash}"
     textColor: "{colors.accent}"
   process-panel:
-    backgroundColor: "{colors.panel-wash}"
+    backgroundColor: "transparent"
+    backgroundImage: "{effects.glass-pane}"
+    backdropFilter: "{effects.glass-filter}"
+    boxShadow: "{effects.glass-shadow}"
     rounded: "{rounded.panel}"
     padding: "32px 200px 32px 32px"
   faq-row:
@@ -249,11 +270,11 @@ Case openings and story introductions are centered single-column compositions wi
 
 ## Elevation & Depth
 
-Depth comes from tonal separation, overlapping interface geometry and the generated device covers. Shared editorial panels have no ambient shadow and no perimeter frame. Solid actions are flat at rest. Product-demo shadows remain local to their product.
+The user's later October 2 amendment restores frosted glass. Depth comes from transmitted imagery, a broad diffuse highlight, overlapping interface geometry and the generated device covers. Shared grouped panels use the glass-pane and glass-shadow effects, with no perimeter frame. Solid actions are flat at rest. Product-demo shadows remain local to their product.
 
-Some existing navigation, caption, process and shared matte selectors retain backdrop blur (22px). Image captions have a darker tint so they stay readable over covers. The image-dialog backdrop uses blur (14px). The existing shared fallback supplies an opaque dark tint where backdrop filtering is unsupported. Border removal supersedes older frosted-border declarations; retaining a functional diagram stroke or editorial divider does not authorize an outer panel frame.
+Navigation, image captions, process panels, pricing asides, shared frost groups and service hero artwork use the 24px glass filter. Smaller scope/service groups share the diffuse material without adding individual backdrop filters. Image captions use a 68% dark tint and pale body text for readable transmission; they no longer use the former 80% flat tint. The image-dialog backdrop stays at 14px. A final support fallback supplies opaque #252527 when neither standard nor WebKit backdrop filtering is supported. Reflections and blur are static, not continuously animated. Case openings and the contact close remain open compositions. Border removal still supersedes older frosted-border declarations.
 
-**The Tonal Grouping Rule.** Separate major groups with a dark wash and spacing. Reserve thin strokes for functional relationships and dividers.
+**The Tonal Grouping Rule.** Separate major groups with diffuse translucent panes and spacing. Reserve thin strokes for functional relationships and dividers.
 
 ## Shapes
 
