@@ -1,20 +1,20 @@
 ---
 name: Lancer Agency — Monochrome studio
-description: A restrained digital studio with graphite grounds, pale Manrope, a saffron action accent, quiet borderless groups, selective frosted glass and authored interface geometry.
+description: A restrained digital studio with graphite grounds, pale Manrope, an electric lime action accent, quiet borderless groups, selective frosted glass and authored point-plane geometry.
 colors:
   ground: "#141415"
   surface: "#252527"
   ink: "#f4f4f4"
   muted: "#bdbdbf"
   line: "#f4f4f425"
-  accent: "#e4c369"
-  accent-hover: "#f0d58d"
-  accent-wash: "#e4c36914"
+  accent: "#bded52"
+  accent-hover: "#ccf677"
+  accent-wash: "#bded5214"
   action-text: "#171718"
   panel-wash: "#ffffff06"
   nav-wash: "#ffffff0a"
   price-wash: "#ffffff0d"
-  selected-wash: "#e4c36914"
+  selected-wash: "#bded5214"
   caption-tint: "#141417ad"
   glass-tint: "#ffffff08"
   diagram-line: "#939396"
@@ -72,10 +72,10 @@ typography:
     fontWeight: 400
     lineHeight: 1.08
     letterSpacing: "-.035em"
-  motif:
-    fontFamily: "ui-monospace, Consolas, monospace"
-    fontSize: "12px"
-    lineHeight: 1.45
+  footer-contact:
+    fontFamily: "Manrope, Arial, sans-serif"
+    fontSize: "clamp(21px, 2.25vw, 32px)"
+    letterSpacing: "-.025em"
 rounded:
   action: "40px"
   nav-link: "30px"
@@ -178,6 +178,12 @@ components:
   faq-row:
     typography: "{typography.faq}"
     padding: "19px 0"
+  hero-weave:
+    width: "100%"
+  footer-contact:
+    textColor: "{colors.accent}"
+    typography: "{typography.footer-contact}"
+    padding: "0 0 7px"
 ---
 
 # Design System: Lancer Agency
@@ -186,18 +192,18 @@ components:
 
 **Creative North Star: "Monochrome studio"**
 
-Lancer's editorial shell uses graphite fields, pale lettering and quiet tonal groups. Regular Manrope headings give short offers room; authored interface windows, routes and cursor geometry make digital work visible without decorative interior photography. Large groups are borderless. Thin strokes inside diagrams describe interfaces and relationships.
+Lancer's editorial shell uses graphite fields, pale lettering and quiet tonal groups. Regular Manrope headings give short offers room; three folded point planes echo the layered Lancer mark, while authored service diagrams make digital work visible. Large groups are borderless. Thin strokes inside diagrams describe interfaces and relationships.
 
-The user's October 2 accent amendment adds warm saffron (#e4c369) to primary contact actions, focus/selection, selected process and navigation states, directional arrows and the hero's moving routes and launch node. The graphite grounds and pale headings stay neutral. Resting project arrows remain pale; hover or keyboard focus makes them saffron. Product interfaces preserve their own palettes.
+The user's approved October 2 refinement uses electric lime for primary contact actions, focus/selection, selected process and navigation states, logo strokes and the direct footer contact. The graphite grounds and pale headings stay neutral. Resting project arrows remain pale; hover or keyboard focus makes them lime. Product interfaces preserve their own palettes. The opening has one filled contact action and a quiet work link; the header contact is plain navigation.
 
-This is the user's approved monochrome amendment to the established homepage, service directory, six service pages and four case shells. It preserves their structure and working demonstrations. Homepage work covers are individually generated device visualizations grounded in original product captures, with neutral graphite and silver surroundings. Real screenshots on service proof cards and native product demos retain their source colors.
+This is the user's approved refinement of the established homepage, service directory, six service pages and four case shells. It preserves their structure and working demonstrations. Homepage work covers are individually generated device visualizations grounded in original product captures, with neutral graphite and silver surroundings. Gift Roulette uses its approved Farm/Autumn cover at immutable v4 URLs. Other service proof cards use real screenshots, and native product demos retain their source colors.
 
 **Key Characteristics:**
 
-- Neutral black, gray and white agency surfaces.
+- Graphite, gray and pale agency surfaces with a selective electric lime accent.
 - Self-hosted Manrope with regular display weight and compact supporting copy.
 - Borderless matte groups, capsule actions and gently curved media.
-- Meaningful interface geometry and bounded opening compositions.
+- Folded point planes, meaningful service diagrams and bounded opening compositions.
 - Equal project and service geometry within each responsive grid.
 - Visible static content, keyboard access and restrained motion.
 
@@ -207,9 +213,9 @@ The palette uses pale type and gray emphasis on a continuous graphite field; the
 
 ### Primary
 
-- **Saffron** (accent): primary contact actions, focus, selection, selected-tab arrows, roadmap points, meaningful digital routes and launch.
-- **Light saffron** (accent-hover): primary-action hover.
-- **Saffron wash** (accent-wash): selected process and current navigation grounds.
+- **Electric lime** (accent): primary contact actions, logo strokes, focus, selection, roadmap points, active service routes, the hero's lower plane and direct footer contact.
+- **Light lime** (accent-hover): primary-action hover.
+- **Lime wash** (accent-wash): selected process and current navigation grounds.
 
 ### Neutral
 
@@ -222,7 +228,7 @@ The palette uses pale type and gray emphasis on a continuous graphite field; the
 - **Matte wash** (panel-wash): scope, process, example and capability groups.
 - **Navigation wash** (nav-wash): the capsule navigation and case-category pills.
 - **Price wash** (price-wash): the borderless starting-price pill.
-- **Selected wash** (selected-wash): the saffron-tinted selected production tab, with saffron type and aria-selected semantics.
+- **Selected wash** (selected-wash): the lime-tinted selected production tab, with lime type and aria-selected semantics.
 - **Graphite caption** (caption-tint): readable image-overlay captions.
 - **Service matte** (service-matte) and **diagram matte** (diagram-matte): grounds for authored service graphics.
 - **Open wash** (open-wash): expanded disclosure state.
@@ -233,7 +239,7 @@ The palette uses pale type and gray emphasis on a continuous graphite field; the
 
 **Display Font:** Manrope, with Arial and sans-serif fallbacks.
 **Body Font:** Manrope, with the same fallbacks.
-**Label/Mono Font:** UI monospace / Consolas for the decorative process drawing; service ASCII uses Consolas / monospace.
+**Label Font:** Manrope; process and service sections use useful text and authored diagrams.
 
 Manrope is self-hosted in Cyrillic and Latin WOFF2 files, with variable weights 200–800 and font-display swap. Regular display weight and close tracking establish the calm voice. Medium tertiary titles and sentence-case action labels support everyday reading.
 
@@ -247,7 +253,7 @@ Manrope is self-hosted in Cyrillic and Latin WOFF2 files, with variable weights 
 - **FAQ:** question text; answers use 14px and a 1.8 line height.
 - **Service display:** individual offers, becoming 35px below 750px.
 - **Case display:** centered product names, becoming 46px below 750px.
-- **Motif:** decorative drawing with no information role.
+- **Footer contact:** the direct Telegram address, becoming 26px below 750px.
 
 **The Useful Type Rule.** Let the actual offer, project name and useful description create hierarchy; detailed scope belongs in the supporting content.
 
@@ -255,13 +261,13 @@ Manrope is self-hosted in Cyrillic and Latin WOFF2 files, with variable weights 
 
 Content is at most 1560px wide, with the recorded fluid gutters. Below 750px the gutter is 22px. Native scrolling and anchor links remain available.
 
-The homepage navigation floats over a full-width opening. Inner-page navigation stays in normal flow. The navigation row has a 70px minimum, becoming 64px below 750px. The desktop hero is 570px high, 540px at the compact 1100px breakpoint and 610px at 1800px and above. A left offer and two actions face a meaningful authored interface assembly. Below 750px the hero becomes content-sized, with copy above a bounded scene and no mandatory viewport height.
+The homepage navigation floats over a full-width opening. Inner-page navigation stays in normal flow. The navigation row has a 70px minimum, becoming 64px below 750px. The desktop hero is 570px high, 540px at the compact 1100px breakpoint and 610px at 1800px and above. A left offer, one filled contact action and a quiet work link face three folded point planes. Below 750px the hero becomes content-sized, with copy above a bounded scene and no mandatory viewport height.
 
 Four homepage projects share equal two-column geometry and a 24px gap, becoming one column below 500px. Their media ratio is 1.55 on desktop, 1.1 on tablet and 1.25 on narrow mobile. Captions overlay the bottom of the generated device covers. Service proof cards use actual captures with their own screen-fitting inset, rather than reusing those generated homepage covers.
 
 Six service cards share three equal desktop columns and a 22px gap. They become two columns below 750px and one below 500px. The final desktop ratio is 1.25 with a 310px minimum; compact desktop uses a 270px minimum and mobile a 300px minimum. The artwork is a contained SVG interface diagram under the title and above the price.
 
-Homepage section ends use the recorded 80–90px desktop / 64px mobile rhythm. Service sections use the 68px / 44px rhythm. Four production tabs form a desktop row and become 2×2 below 500px. Their panel has a 190px desktop minimum and fits content below 750px. FAQ uses two desktop columns and one mobile column. A plain dark contact close and subdued large wordmark finish the shell.
+Homepage section ends use the recorded 80–90px desktop / 64px mobile rhythm. Service sections use the 68px / 44px rhythm. Four text-only production tabs form a desktop row and become 2×2 below 500px. Their panel has a 190px desktop minimum and fits content below 750px, with 32px desktop and 25px mobile padding. FAQ uses two desktop columns and one mobile column. The open contact close pairs a heading with a direct Telegram link. A labelled three-column directory becomes a full-width brand signature above two link columns below 750px; a subdued large wordmark with a lime full stop and legal links finish the shell.
 
 Service heroes pair copy, facts and actions with an authored diagram. A separate functional diagram explains the system. Scope cards use three columns, two on tablet and one below 500px. Four roadmap stops stay horizontal; mobile scrolls within a focusable track with 240px stops. Price rows remain open and ruled beside a matte scope aside. AI examples retain connected four-step flows, becoming a vertical sequence on mobile.
 
@@ -285,7 +291,7 @@ Centered case openings and the closing contact area are open compositions withou
 
 ### Actions
 
-Saffron primary contact actions use dark lettering, inline SVG arrows, the recorded padding and a 48px minimum target. Hover changes to light saffron and rises 2px; active returns to rest. Case-return controls stay pale and secondary. Text actions have a 44px target, saffron arrows and hover underline. Keyboard focus is a 2px saffron outline, offset 5px. Header CTA and case-return controls hide below 750px while navigation remains visible.
+Electric lime primary contact actions use dark lettering, the recorded padding and a 48px minimum target. The homepage action uses 26px horizontal padding. Hover changes to light lime and rises 2px; active returns to rest. Case-return controls stay pale and secondary. Shared text actions have a 44px target and may use drawn lime arrows; the homepage work link is text-only, muted and underlined, with a lime underline on hover. Keyboard focus is a 2px lime outline, offset 5px. Homepage header contact is a plain muted navigation link; header contact actions and case-return controls hide below 750px while navigation remains visible.
 
 ### Navigation
 
@@ -293,13 +299,13 @@ An authored layer SVG and Manrope wordmark anchor the capsule. The navigation ha
 
 ### Project media and service cards
 
-Equal homepage media hold generated graphite/silver device covers with colored product interfaces. A dark borderless caption overlays each cover with a circular inline arrow. Image hover scales to 1.045 over 900ms; the arrow rotates 45 degrees. Service proof previews use actual screenshots; phone captures are contained vertically and wide captures are fitted at the top.
+Equal homepage media hold generated graphite/silver device covers with colored product interfaces. A dark borderless caption overlays each cover with a circular inline arrow. Image hover scales to 1.045 over 900ms; the arrow rotates 45 degrees. Service proof previews use actual screenshots, except Gift Roulette's approved current visualization; phone captures are contained vertically and wide captures are fitted at the top.
 
 Six service links use equal matte cards with authored SVG graphics, short titles/descriptions and a borderless starting-price pill. The whole card rises 4px over 550ms; its diagram rises 5px over 700ms. Case-story device spreads retain image dialogs and explicit visualization captions.
 
 ### Scope cards and functional diagrams
 
-Scope cards use a subtle wash, no perimeter border, concise copy and an inline SVG. Desktop padding is 26px, tablet 21px and narrow single-column 22px. Practical maps, Telegram connections, CRM states and error/success paths sit on the open page ground. Equal-width HTML node rows and 36px SVG connector strips share the same column centres, so wrapped labels do not detach lines. Directed paths use the diagram-line token; the active or resulting node uses the subtle saffron wash. Web-service roles appear above the service, with data and integrations below. CRM states form a horizontal sequence on desktop and a vertical one on mobile. Labels remain searchable HTML; connector SVGs are decorative.
+Scope cards use a subtle wash, no perimeter border, concise copy and an inline SVG. Desktop padding is 26px, tablet 21px and narrow single-column 22px. Practical maps, Telegram connections, CRM states and error/success paths sit on the open page ground. Equal-width HTML node rows and 36px SVG connector strips share the same column centres, so wrapped labels do not detach lines. Directed paths use the diagram-line token; the active or resulting node uses the subtle lime wash. Web-service roles appear above the service, with data and integrations below. CRM states form a horizontal sequence on desktop and a vertical one on mobile. Labels remain searchable HTML; connector SVGs are decorative.
 
 ### Chips
 
@@ -307,7 +313,7 @@ Starting-price pills have a quiet translucent fill, no border and no blur. Their
 
 ### Production tabs
 
-Native buttons use tablist/tab/tabpanel semantics, aria-selected, aria-controls and roving tabindex. Click selects; Left/Right, Home and End move selection and focus. The selected button gets the selected wash and an accent arrow rotated 45 degrees. The panel settles by 4px over 260ms. Mobile keeps description and deliverable together and hides the decorative drawing.
+Native text-only buttons use tablist/tab/tabpanel semantics, aria-selected, aria-controls and roving tabindex. Click selects; Left/Right, Home and End move selection and focus. The selected button gets the selected wash and lime type. The panel settles by 4px over 260ms. Description and deliverable stay together at every breakpoint.
 
 ### Native disclosures
 
@@ -315,17 +321,21 @@ FAQ, audience, handover and case architecture preserve details/summary behavior 
 
 ### Interface assembly and motion
 
-The hero's idea, interface, system and launch geometry is a decorative digital illustration. It carries no performance metric or claim about a delivered product. Authored stroke arrows replace text glyphs; AI flow arrows likewise use drawn chevrons.
+The hero is three mathematical folded point planes echoing the layered Lancer mark. Each SVG plane has a 13×37 point field: 481 circles, or 1443 across the scene. Two planes use pale points at different opacity; the third and periodic brighter points use lime. This is decorative geometry without a product or performance claim. Service diagrams retain authored functional interfaces and routes. Drawn arrows remain where they communicate navigation or direction.
 
-The scene settles from blur 4px and a 12px shift over 1200ms; copy settles over 900ms. Project, service, diagram and story entrances are visible by default, run once for 650ms and stagger by at most 150ms. The common ease is cubic-bezier(.16,1,.3,1). Reduced motion skips entrances, finishes active ones and removes CSS animations/transitions.
+The complete point field is visible in static HTML. Its three inner groups progressively assemble from opacity .25, blur 2px, scale .9 and ±32px/±28px separation over 1600ms, with 100ms plane delays; copy settles over 900ms. Project, service, diagram and story entrances are visible by default, run once for 650ms and stagger by at most 150ms. The common ease is cubic-bezier(.16,1,.3,1). Reduced motion skips entrances, finishes active ones and removes CSS animations/transitions.
 
-Connection pulses take 5.6s and cursor/click cycles 8s. They run only while a scene intersects the viewport, the document is visible and reduced motion is off. Small ASCII motifs update at 700ms under the same visibility policy. The homepage emits no brand-object element and mounts no continuous WebGL scene.
+The outer plane groups drift by up to -7px/-12px on an 11s ease-in-out cycle, with -3.5s and -7s phase offsets and a reversed middle plane. Service connection pulses retain 5.6s cycles. Loops run only while their scene intersects the viewport, the document is visible and reduced motion is off. The homepage has no simulated cursor, launch node or continuous WebGL scene. Loose ASCII companions have been removed from the canonical homepage and service sections.
 
 **The Visible Default Rule.** Useful text, media and diagrams are present before JavaScript; decoration must pause offscreen, in hidden documents and under reduced motion.
 
+### Open contact footer
+
+An open heading and large direct @LancerManager link lead the shared footer. The Telegram link uses lime text and a thin wash-colored underline that becomes solid lime on hover. A brand signature, six service links and four case links form three desktop columns (1.4fr / 1fr / .8fr), with labelled navigation. Mobile gives the signature its own row above the two link columns. The subdued Manrope wordmark uses a lime full stop; privacy and return-to-top links complete the directory. No contact card or repeated filled CTA encloses the close.
+
 ### Images and browser surfaces
 
-Images retain real sources, alt text, intrinsic dimensions, async decoding, native lazy loading and responsive WebP candidates. Current work-cover originals are 1536×1024 with 768px derivatives. The hero and service diagrams use inline SVG, with no decorative photograph to preload. A nonblocking progress line and local indicators preserve useful content while assets load. Dialogs assign image/caption before opening and restore focus on close.
+Images retain real sources, alt text, intrinsic dimensions, async decoding, native lazy loading and responsive WebP candidates. Current work-cover originals are 1536×1024 with 768px derivatives. Gift Roulette maps to gift-roulette-mono-v4.webp and covers-gift-roulette-mono-v4-768.webp in homepage, proof and related-work views; the approved Farm/Autumn raster pixels are reused unchanged. Other generated homepage covers retain their mono-v2 mapping. The hero and service diagrams use inline SVG, with no decorative photograph to preload. A nonblocking progress line and local indicators preserve useful content while assets load. Dialogs assign image/caption before opening and restore focus on close.
 
 The root agency viewport uses a dark color scheme, a graphite scrollbar track and gray thumb. WebKit width/height is 7px; the standard scrollbar width is thin. Preserve this browser-surface treatment when extending canonical agency pages.
 
@@ -333,11 +343,11 @@ The root agency viewport uses a dark color scheme, a graphite scrollbar track an
 
 ### Do:
 
-- **Do** use monochrome editorial surfaces, regular Manrope and concise useful copy.
+- **Do** use graphite editorial surfaces, selective electric lime, regular Manrope and concise useful copy.
 - **Do** group major panels with tonal washes and spacing.
 - **Do** keep project and service media equal within each responsive grid.
 - **Do** preserve authentic product colors, demo behavior and simulation boundaries.
-- **Do** retain keyboard access, visible pale-gray focus and useful static content.
+- **Do** retain keyboard access, visible lime focus and useful static content.
 - **Do** distinguish generated device visualizations from original product captures.
 - **Do** pause decorative loops offscreen, in hidden documents and under reduced motion.
 
@@ -351,6 +361,6 @@ The root agency viewport uses a dark color scheme, a graphite scrollbar track an
 - **Don't** invent business outcomes, durations, model names, benchmark scores or AI delivery claims.
 - **Don't** replace inline SVG or drawn disclosure controls with text glyph icons.
 
-Source authority: frost.css loaded after lancer.css, service-editorial.css and case-editorial.css; src/agency-home.mjs, src/digital-visuals.mjs, src/project-cover.mjs, src/studio-sections.mjs, src/agency-shared.mjs, src/service-pages.mjs, src/service-stories.mjs, src/service-flow.mjs, src/agency-cases.mjs, studio-world.mjs and disclosures.mjs. The user's amendment is .impeccable/review/monochrome-direction.md. mono-finish-review.md and mono-fix-verdict.md record the material review and resolved scrollbar/icon findings; mono-runtime.md records local runtime evidence. mono-cover-review.md records the separate shipped review of all four final homepage covers and their responsive placement; this scoped review does not repeat full-surface QA. Public deployment verification is outside these local gates.
+Source authority: frost.css loaded after lancer.css, service-editorial.css and case-editorial.css; src/agency-home.mjs, src/digital-visuals.mjs, src/project-cover.mjs, src/studio-sections.mjs, src/agency-shared.mjs, src/service-pages.mjs, src/service-stories.mjs, src/service-flow.mjs, src/agency-cases.mjs, studio-world.mjs and disclosures.mjs. The latest approved amendment is .impeccable/review/lime-direction.md; lime-finish-review.md records the seven scoped visual captures and lime-documentation.md records this persistence reconciliation. Earlier monochrome reviews remain historical evidence. Public deployment verification is outside these local gates.
 
 Not canonized or repaired by this documentation pass: superseded photographic selectors/assets and conditional object code; dated homepage-exhibit and universal local-reset wording in DEMOS.md; hidden historical project-type labels. These remain source/history drift, not reusable visual rules. Native product-demo styles and functional directed relationships remain legitimate local systems. No actual browser-zoom proof, Safari/Firefox check or deployment claim is made here.

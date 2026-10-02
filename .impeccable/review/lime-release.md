@@ -10,4 +10,6 @@ Browser checks in the in-app browser: no horizontal overflow at CSS widths 390/9
 
 Foreground contrast calculations: lime against graphite 13.50:1; dark button ink against lime 13.14:1; muted body type against graphite 9.81:1. Decorative point opacity is intentionally lower and is not a text contrast claim.
 
-Fresh finish review: visual/code scope accepted; only persisted design/product amendment records needed correction. See lime-finish-review.md and the subsequent documentation/verdict records. Public deployment will be verified separately after the push.
+Fresh finish review: visual/code scope accepted; only persisted design/product amendment records needed correction. See lime-finish-review.md and the subsequent documentation/verdict records.
+
+Public deployment cf564f4 verified at https://landlancer.ru/: frost.css?v=lime-1 loaded, accent #bded52, three point planes, one primary hero action, no simulated cursor, Gift Roulette v4 cover, correct Telegram contact, no horizontal overflow or sampled console warnings/errors. Evidence: lime-home-live.jpg. No additional visual correction was made after this live verification.
