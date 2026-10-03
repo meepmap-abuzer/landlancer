@@ -1,0 +1,13 @@
+{
+  "tool": "built-in GPT Image",
+  "prompt": "Use case: compositing. Asset type: premium photographic project scene for a digital agency portfolio. Image1 is the EDIT TARGET: the existing charcoal desk environment. Image2 is the DEVICE/SCREEN insert reference. Integrate the referenced hardware INTO this exact physical scene, not a pasted sticker. Preserve graphite materials, restrained daylight, subtle plants/fabric already present. Photorealistic editorial product photography, landscape3:2, 1536x1024. Match the camera perspective and lighting of the desk; devices have real thickness, precise hardware and glass. Visible convincing contact with the tabletop, soft contact/occlusion shadows directly underneath, natural restrained reflections. No floating hardware. No luminous outlines or glow. Preserve the supplied application branding, interface layout, screen colors and prominent labels. Do not invent a different app. Composition: devices grouped on the right half, x44%-94%; every device including its support and shadow fits vertically in y20%-80% of the image, so panoramic crops remain complete. Left40% stays quiet/dark and empty for HTML title/copy and a pixel character added later. Keep the tabletop visually continuous beneath devices. No text, logos, badges or characters outside the screens; no decorative 3D props. The output is ONE fully opaque finished photograph with hardware and environment together, no transparent background.\nPrimary request: Place the referenced open graphite MacBook naturally on the charcoal desk, front feet/base visibly in contact with the tabletop. Faithfully retain the TailCare pale green/white website, dog photo, header and main Russian headline. One laptop only, no phone. Complete laptop display, keyboard, hinges and base.",
+  "origin": "Z:/Users/smoke/.codex/generated_images/01a0ba0f-366c-7831-a716-46acf74a1410/exec-cf2d137a-10ed-4804-a259-e71afe01548a.png",
+  "references": [
+    "Z:/Users/smoke/Documents/Codex/2026-09-19/files-mentioned-by-the-user-codex/outputs/landlancer/assets/pixel/studio-desk-v1.webp",
+    "Z:/Users/smoke/Documents/Codex/2026-09-19/files-mentioned-by-the-user-codex/outputs/landlancer/assets/devices/tailcare-device-v2.webp"
+  ],
+  "file": "assets/scenes/tailcare-table-v3.webp",
+  "width": 1536,
+  "height": 1024,
+  "encoding": "Opaque photograph,1536px WebP quality90;768px variant quality88. Original unchanged. Devices, tabletop, stands and contact shadows are one generated photographic scene; UI is visualization of referenced project, not an exact capture."
+}

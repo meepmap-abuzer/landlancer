@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-03T04:52:34.107Z",
+  "generatedAt": "2026-10-03T05:45:47.373Z",
   "title": "Design System: Lancer Agency",
   "extensions": {
     "colorMeta": {
@@ -287,14 +287,14 @@
         "purpose": "Existing bounded entrances and state transitions."
       },
       {
-        "name": "idle-frames",
-        "value": "4.4s steps(1,end)",
-        "purpose": "Current regenerated v5:240px atlas,120px registered cells,16 decoded ink RGB colours and binary alpha. Crisp-edge sampling with static full-quadrant left/top positions; only stepped opacity selects the four drawings. Display dimensions and visibility/reduced-motion lifecycle remain unchanged."
+        "name": "maker-blink",
+        "value": "5.6s steps(1,end)",
+        "purpose": "One fixed256px generated base drawing with preserved RGB/binary native coverage alpha; only local SVG pixel details animate. No changing body silhouette or image transform. Visibility/reduced-motion lifecycle retained."
       },
       {
-        "name": "guide-frames",
-        "value": "4.8s steps(1,end)",
-        "purpose": "Current regenerated v5:240px atlas,120px registered cells,16 decoded ink RGB colours and binary alpha. Crisp-edge sampling with static full-quadrant left/top positions; only stepped opacity selects the four drawings. Display dimensions and visibility/reduced-motion lifecycle remain unchanged."
+        "name": "guide-blink",
+        "value": "6.2s steps(1,end)",
+        "purpose": "One fixed256px generated base drawing with preserved RGB/binary native coverage alpha; only local SVG pixel details animate. No changing body silhouette or image transform. Visibility/reduced-motion lifecycle retained."
       },
       {
         "name": "work-entrance",
@@ -325,6 +325,11 @@
         "name": "disclosure-strokes",
         "value": "180ms opacity ease",
         "purpose": "Shared SSR SVG has two12px paths with1.5px stroke in20px frame. Vertical opacity1 closed,0 open,1 closing; horizontal always visible."
+      },
+      {
+        "name": "maker-type",
+        "value": "3.8s steps(1,end)",
+        "purpose": "Local fingertip pixels only; the seated base drawing stays fixed."
       }
     ],
     "breakpoints": [

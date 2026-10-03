@@ -7,9 +7,8 @@ const scenes={
  'gift-roulette':{name:'Gift Roulette',description:'Игровые сценарии\nи коллекционные подарки',file:'gift-mines-current.webp',width:430,height:865,kind:'phone',ground:'fabric',pose:'idle',second:['gaming-case.webp',719,1280]}
 };
 export const projectSceneData=scenes;
-const deviceArt={loyalty:['loyalty-devices-v2',1100,825],maverick:['maverick-device-v2',700,933],tailcare:['tailcare-device-v2',1100,825],'gift-roulette':['gift-device-v2',700,933]};
 export function projectScene(slug,{eager=false}={}){
- const s=scenes[slug],[file,width,height]=deviceArt[slug];
- return `<div class="project-scene scene-${slug}" aria-label="Проект ${s.name}"><img class="scene-ground" src="/assets/pixel/studio-${s.ground}-v1.webp" alt="" width="1100" height="733" loading="${eager?'eager':'lazy'}"><div class="scene-shade" aria-hidden="true"></div><img class="scene-device-art" src="/assets/devices/${file}.webp" alt="${s.name}: визуализация интерфейса на устройстве" width="${width}" height="${height}" loading="${eager?'eager':'lazy'}" decoding="async">${pixelMaker(s.pose)}</div>`;
+ const s=scenes[slug],file=`/assets/scenes/${slug}-table-v3`;
+ return `<div class="project-scene scene-${slug}" aria-label="Проект ${s.name}"><img class="scene-photo" src="${file}.webp" srcset="${file}-768.webp 768w,${file}.webp 1536w" sizes="(max-width:750px) 100vw, (max-width:1450px) 50vw,640px" alt="${s.name}: визуализация интерфейса на устройствах, стоящих на столе" width="1536" height="1024" loading="${eager?'eager':'lazy'}" decoding="async">${pixelMaker(s.pose)}</div>`;
 }
 export function projectSceneCard(slug){const s=scenes[slug];return `<a class="project-scene-link" href="/cases/${slug}/">${projectScene(slug)}<div class="project-scene-copy"><h3>${s.name}</h3><p>${s.description.replace('\n','<br>')}</p><span class="scene-action">Смотреть проект ${icon('arrow')}</span></div></a>`;}

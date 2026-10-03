@@ -1,6 +1,23 @@
 # Asset provenance
 
-## October 3: clean regenerated v5 sprites — current production use
+## October 3: stable maker and integrated tabletop scenes — current production
+
+The user reported changing eye clarity and body width across the independent generated animation frames. The current v6 maker uses only the approved first seated/standing drawing, cropped from the original 640px cell and nearest-neighbour encoded at 256px without 16-colour quantisation. Original RGB, including eye whites, is preserved; native coverage alpha is binary0/255. No whole-body frame swapping, transformation, resizing or translation occurs. Only local SVG pixel eyelids and fingertips change in stepped time: seated blink 5.6s, guide blink 6.2s, typing 3.8s. The existing intersection/document-visibility and reduced-motion controls still gate these details. SVG ink is matched to the source character, separate from brand tokens.
+
+The four project scenes are now complete built-in GPT Image photographic composites in assets/scenes: loyalty-table-v3.webp, maverick-table-v3.webp, tailcare-table-v3.webp and gift-roulette-table-v3.webp. Each 1536×1024 photograph integrates hardware, desk, support and contact shadows into one raster. 768px variants serve smaller layouts. Titles and pixel helpers remain HTML layers; devices are no longer independently positioned overlays. Exact prompts, original paths and environment/device references are preserved in adjacent .webp.json files. These retain the current project interface references; generated screen pixels remain visualizations. Original screenshots/demos and case-story photography are unchanged.
+
+Native 1280×720 and 390×720 captures show the hero, work scenes and representative case openings. The four actual maker component states show open eyes, blink, typing and guide blink with identical base anatomy. Base image computed animation/transform are none; mobile intrinsic 256px source displays at 192×192 with crisp-edge sampling. No native console errors were observed. Seven SEO/static checks resolve generated page, image and srcset assets. Verification is scoped to these changes; broad performance/cross-browser certification is not claimed.
+
+Exact new scene files and original locations:
+
+- assets/scenes/loyalty-table-v3.webp and -768.webp; prompt record: loyalty-table-v3.webp.json; original: Z:/Users/smoke/.codex/generated_images/01a0ba0f-366c-7831-a716-46acf74a1410/exec-782f3a84-272b-4973-b6c2-a47b8a26e5f5.png
+- assets/scenes/tailcare-table-v3.webp and -768.webp; prompt record: tailcare-table-v3.webp.json; original: Z:/Users/smoke/.codex/generated_images/01a0ba0f-366c-7831-a716-46acf74a1410/exec-cf2d137a-10ed-4804-a259-e71afe01548a.png
+- assets/scenes/maverick-table-v3.webp and -768.webp; prompt record: maverick-table-v3.webp.json; original: Z:/Users/smoke/.codex/generated_images/01a0ba0f-366c-7831-a716-46acf74a1410/exec-55c87b9b-210a-4f19-9a7e-250eda6b41d9.png
+- assets/scenes/gift-roulette-table-v3.webp and -768.webp; prompt record: gift-roulette-table-v3.webp.json; original: Z:/Users/smoke/.codex/generated_images/01a0ba0f-366c-7831-a716-46acf74a1410/exec-7444e095-4053-4a40-822a-481b052d6746.png
+
+Maker final paths: assets/pixel/maker-idle-stable-v6.png and maker-guide-stable-v6.png. Adjacent .png.json records carry their original built-in GPT Image prompts and original paths; this refinement crops/encodes the approved first drawings instead of generating a new identity. Source originals remain untouched.
+
+## October 3: clean regenerated v5 sprites — earlier production use
 
 The user rejected the CSS-only clarity fix and explicitly requested regeneration: fewer smooth intermediate shades and brighter eyes, retaining the incumbent person and seated browser-edge pose. Built-in GPT Image edited both poses. Current assets are assets/pixel/maker-idle-v5.png and maker-guide-v5.png; their adjacent .png.json files preserve the exact final prompts, edit targets, references and absolute original paths.
 
