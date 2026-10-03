@@ -3,6 +3,24 @@ import vm from 'node:vm';
 import assert from 'node:assert/strict';
 import test from 'node:test';
 
+test('wheel scrolling remains smooth across demo surfaces, with explicit native opt-outs preserved', async () => {
+ let options;
+ class Lenis {constructor(config){options=config;}on(){} destroy(){} stop(){} start(){}}
+ const context=vm.createContext({document:{body:{dataset:{}},hidden:false,addEventListener(){},removeEventListener(){}},window:{addEventListener(){}},requestAnimationFrame(){},cancelAnimationFrame(){}});
+ const lenisModule=new vm.SyntheticModule(['default'],function(){this.setExport('default',Lenis);},{context});
+ await lenisModule.link(()=>{});await lenisModule.evaluate();
+ const source=await readFile(new URL('../studio-scroll.mjs',import.meta.url),'utf8');
+ const module=new vm.SourceTextModule(source,{context,importModuleDynamically:()=>lenisModule});
+ await module.link(()=>{});await module.evaluate();
+ module.namespace.setupStudioScroll({matches:false,addEventListener(){},removeEventListener(){}});
+ await new Promise(resolve=>setImmediate(resolve));
+ const node=selector=>({matches:list=>list.split(',').includes(selector)});
+ for(const surface of ['.interactive-stage','.product-demo'])
+  assert.equal(options.prevent(node(surface)),false,`${surface} must not mix native wheel input with an active smooth animation`);
+ assert.equal(options.prevent(node('dialog')),true,'dialog content keeps native scrolling');
+ assert.equal(options.prevent(node('[data-lenis-prevent]')),true,'explicit nested-scroll opt-outs stay supported');
+});
+
 test('restarting after an idle pause advances by one frame, not the idle duration', async () => {
  const events=new Map(),frames=new Map(),deltas=[];
  let next=0,instance;

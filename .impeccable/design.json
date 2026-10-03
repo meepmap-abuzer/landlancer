@@ -393,7 +393,7 @@
       "name": "Central navigation",
       "kind": "nav",
       "refersTo": "navigation",
-      "description": "One shallow frosted central pill; outer side branding is outside this component.",
+      "description": "One shallow frosted central pill; outer side branding is outside this component and hides past 90px scroll on home, case and service pages. Transparent outer header space passes pointer input through.",
       "html": "<nav class=\"ds-nav\" aria-label=\"Основная навигация\"><a href=\"#works\">Работы</a><a href=\"/services/\" aria-current=\"page\">Услуги</a><a href=\"#approach\">Процесс</a><a href=\"#contact\">Контакты</a></nav>",
       "css": ".ds-nav{display:inline-flex;align-items:center;gap:4px;padding:4px 12px;min-height:46px;background:#29292bbc;border-radius:24px;backdrop-filter:blur(24px) saturate(105%);box-shadow:0 8px 24px #0000001c;font-family:Manrope,Arial,sans-serif}.ds-nav a{display:inline-flex;align-items:center;padding:6px 14px;min-height:38px;border-radius:30px;background:transparent;color:var(--studio-ink,#f4f4f4);font-size:12px;text-decoration:none;transition:color .25s}.ds-nav a:is(:hover,:focus-visible,[aria-current]){color:var(--studio-accent,#bded52)}.ds-nav a:focus-visible{outline:2px solid var(--studio-accent,#bded52);outline-offset:5px;}@supports not(backdrop-filter:blur(1px)){.ds-nav{background:#29292b}}@media(max-width:750px){.ds-nav{padding:3px 5px;gap:0;min-height:42px}.ds-nav a{font-size:11px;min-height:36px;padding:5px 9px}}"
     },

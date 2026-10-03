@@ -21,7 +21,8 @@ export function setupStudioScroll(reduced){
    if(disposed||reduced.matches)return;
    lenis=new Lenis({lerp:.075,wheelMultiplier:.85,syncTouch:false,autoRaf:false,
     anchors:{offset:-104,onStart:kick},
-    prevent:node=>node.matches('dialog,.interactive-stage,.product-demo,[data-lenis-prevent]')});
+    // Demos belong to the page: bypassing them mixes native input with Lenis inertia.
+    prevent:node=>node.matches('dialog,[data-lenis-prevent]')});
    lenis.on('virtual-scroll',kick);lenis.on('scroll',kick);setState('rest');
   }catch{setState('native');}finally{loading=false;}
  }

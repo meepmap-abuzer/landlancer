@@ -1,6 +1,6 @@
 import {setupDisclosures} from '/disclosures.mjs?v=1';
 import {setupStudioMotion} from '/studio-motion.mjs?v=pixel-1';
-import {setupStudioScroll} from '/studio-scroll.mjs?v=game-4';
+import {setupStudioScroll} from '/studio-scroll.mjs?v=demo-wheel-1';
 // Shared disclosures preserve their native no-JS behavior.
 const reduced=matchMedia('(prefers-reduced-motion: reduce)');
 setupDisclosures({reduced,allowed:()=>!reduced.matches});
@@ -51,5 +51,5 @@ document.addEventListener('visibilitychange',syncScenes);reduced.addEventListene
 setupStudioMotion(reduced);
 setupStudioScroll(reduced);
 // Side branding leaves the scrolled view; the frosted navigation remains readable.
-const floatingHeader=document.querySelector('.studio-home .studio-nav');
+const floatingHeader=document.querySelector('.lancer-site .studio-nav');
 if(floatingHeader){const syncHeader=()=>floatingHeader.toggleAttribute('data-scrolled',scrollY>90);addEventListener('scroll',syncHeader,{passive:true});syncHeader();}

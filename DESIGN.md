@@ -329,4 +329,6 @@ Not canonized or repaired: inherited literal color/radius/type detector advisori
 
 ### Pixel-edge rendering
 
+The side logo and supporting header action are visible at the top of canonical pages and hidden beyond 90px scroll, with the same behavior on home, case and service routes. The central navigation pill remains. Outer transparent header space passes pointer input through; reduced-motion preferences remove the side-branding fade. Demo surfaces share the page's smooth wheel path, with native exceptions limited to dialogs and explicit opt-outs. New logo directions are local review concepts until the user selects one.
+
 Current v5 display sizes retain the incumbent layout. Use `image-rendering: crisp-edges` with the existing pixelated fallback. Registered full cells use static left/top positions without translated image layers. Source colours and the binary matte form hard square pixel clusters; only frame-layer opacity animates.
