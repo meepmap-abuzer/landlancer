@@ -1,5 +1,9 @@
 # Lancer Agency — product brief
 
+## October 3: gallery image selection
+
+Case image viewers open the selected preview's full-resolution image. The dialog starts with an empty image placeholder; each click clears any previous responsive srcset/sizes before assigning the selected source and caption, and loads it eagerly. This fixes a stale first-image srcset overriding later selections. Responsive previews keep their existing variants. The actual-handler regression in src/lightbox.test.mjs covers first/second/repeated clicks in all four cases, including an already populated viewer. Native desktop/mobile 12К checks confirm the selected currentSrc, correct photo, Escape closing and returned focus. Evidence is under .impeccable/review/lightbox-*.
+
 ## October 3: stable maker and integrated tabletop scenes — current production
 
 The user reported changing eye clarity and body width across the independent generated animation frames. The current v6 maker uses only the approved first seated/standing drawing, cropped from the original 640px cell and nearest-neighbour encoded at 256px without 16-colour quantisation. Original RGB, including eye whites, is preserved; native coverage alpha is binary0/255. Face, body and laptop remain fixed. The seated maker now continuously alternates eight gentle lower-leg poses over 1.6s and four fingertip key presses over .8s. These use the original hand pixels in two fixed windows with a1px downward press; the resting hand matches the source exactly. Leg poses reuse clipped source pixels with integer offsets; no image stretching or independently generated bodies. Seated/guide blinking stays at 5.6s/6.2s. Existing intersection/document-visibility and reduced-motion controls gate all loops; a complete resting pose is visible without JS or with reduced motion. SVG ink is matched to the source character, separate from brand tokens.

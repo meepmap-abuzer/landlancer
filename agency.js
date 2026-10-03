@@ -6,8 +6,13 @@
     if (!button) return;
     if (!dialog) return;
     returnFocus = button;
-    dialog.querySelector('img').src = button.dataset.zoom;
-    dialog.querySelector('img').alt = button.dataset.caption;
+    const image = dialog.querySelector('img');
+    // A responsive candidate from an earlier image overrides a newly assigned src.
+    image.removeAttribute('srcset');
+    image.removeAttribute('sizes');
+    image.loading = 'eager';
+    image.src = button.dataset.zoom;
+    image.alt = button.dataset.caption;
     dialog.querySelector('p').textContent = button.dataset.caption;
     dialog.showModal();
   });

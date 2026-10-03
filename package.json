@@ -10,6 +10,7 @@
     "build:concepts": "vite build --config src/concepts/vite.config.mjs && node src/concepts/build.mjs",
     "test:scroll": "node --experimental-vm-modules --test src/studio-scroll.test.mjs",
     "test:seo": "node --test src/seo.test.mjs",
+    "test:lightbox": "node --test src/lightbox.test.mjs",
     "build:scene": "vite build --config src/sculpture/vite.config.mjs"
   },
   "dependencies": {
