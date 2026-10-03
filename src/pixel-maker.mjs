@@ -7,12 +7,14 @@ const legOffsets=[
 ];
 function seatedMotion(){
  const id=`maker-legs-${++makerId}`;
- const clips=[['left-shin','M0 202H171L169 225H0Z'],['right-shin','M171 202H256V225H169Z'],['left-boot','M0 223H169L181 256H0Z'],['right-boot','M169 223H256V256H181Z']];
+ const clips=[['left-shin','M0 202H171L169 225H0Z'],['right-shin','M171 202H256V225H169Z'],['left-boot','M0 223H169L181 256H0Z'],['right-boot','M169 223H256V256H181Z'],['left-finger','M131 159h10v8h-10Z'],['right-finger','M142 159h10v8h-10Z']];
  const defs=clips.map(([part,d])=>`<clipPath id="${id}-${part}" clipPathUnits="userSpaceOnUse"><path d="${d}"/></clipPath>`).join('');
  const piece=(part,x,y=0)=>`<g transform="translate(${x} ${y})"><image href="${seatedSource}" width="256" height="256" clip-path="url(#${id}-${part})"/></g>`;
  const legs=legOffsets.map(([ls,lb,ly,rs,rb,ry],frame)=>`<g class="maker-leg-frame leg-frame-${frame}" style="--frame:${frame}">${piece('left-shin',ls)}${piece('right-shin',rs)}${piece('left-boot',lb,ly)}${piece('right-boot',rb,ry)}</g>`).join('');
- // Four finger poses alternate the two key presses; wrist and laptop never move.
- const fingers=[[0,2],[1,0],[2,1],[0,0]].map(([left,right],frame)=>`<g class="maker-type-frame type-frame-${frame}" style="--frame:${frame}"><path d="M132 161v-8h5v1h3v7Z" fill="#fcc593"/><path d="M133 ${153-left}h4v1h2v5h-2v-3h-2v4h-2Z" fill="#17191c"/><path d="M134 ${154-left}h2v4h-2Z" fill="#fcc593"/><path d="M141 ${155-right}h4v1h2v5h-2v-3h-2v3h-2Z" fill="#17191c"/><path d="M142 ${156-right}h2v3h-2Z" fill="#fcc593"/></g>`).join('');
+ // Sample the actual fingertips inside fixed windows; pressing travels one source pixel.
+ // The resting pose is exactly the original hand, with no invented finger outlines.
+ const finger=(part,press)=>`<g clip-path="url(#${id}-${part})"><image href="${seatedSource}" y="${press}" width="256" height="256"/></g>`;
+ const fingers=[[0,0],[1,0],[0,0],[0,1]].map(([left,right],frame)=>`<g class="maker-type-frame type-frame-${frame}" style="--frame:${frame}">${finger('left-finger',left)}${finger('right-finger',right)}</g>`).join('');
  return `<defs>${defs}</defs>${legs}${fingers}`;
 }
 function pixelDetails(pose){

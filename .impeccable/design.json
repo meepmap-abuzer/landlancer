@@ -328,8 +328,8 @@
       },
       {
         "name": "maker-type",
-        "value": ".64s steps(1,end); four poses",
-        "purpose": "Continuous alternating pixel key presses; wrist and laptop stay fixed. Visibility/reduced-motion lifecycle retained."
+        "value": ".8s steps(1,end); four poses",
+        "purpose": "Continuous alternating1px key presses from the approved hand pixels in two fixed10×8px source windows. Resting pose is the exact original hand; no invented dark finger strokes. Wrist/laptop fixed; visibility/reduced-motion gating retained."
       },
       {
         "name": "maker-legs",

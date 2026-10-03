@@ -17,7 +17,7 @@
 .maker-details image{image-rendering:pixelated;image-rendering:crisp-edges}
 .maker-blink{opacity:0;animation:maker-blink 5.6s steps(1,end) infinite;animation-play-state:paused}
 .maker-leg-frame,.maker-type-frame{opacity:0;animation:maker-leg-slot 1.6s steps(1,end) infinite;animation-delay:calc(var(--frame)*.2s);animation-play-state:paused}
-.maker-type-frame{animation-name:maker-type-slot;animation-duration:.64s;animation-delay:calc(var(--frame)*.16s)}
+.maker-type-frame{animation-name:maker-type-slot;animation-duration:.8s;animation-delay:calc(var(--frame)*.2s)}
 .leg-frame-0,.type-frame-0{opacity:1}
 .pixel-maker.digital-running :is(.maker-blink,.maker-leg-frame,.maker-type-frame){animation-play-state:running}
 .pixel-guide .maker-blink{animation-duration:6.2s}.scene-loyalty .maker-blink{animation-delay:-1.1s}.scene-maverick .maker-blink{animation-delay:-2.3s}.scene-tailcare .maker-blink{animation-delay:-3.2s}
