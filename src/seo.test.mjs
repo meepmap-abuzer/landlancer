@@ -77,7 +77,7 @@ test('loading feedback preserves static content and responsive image assets reso
 });
 
 test('every advertised service has its own page and a bounded starting budget',()=>{
- const expected={websites:30000,'web-apps':90000,'telegram-mini-apps':80000,crm:80000,automation:100000,mvp:200000};
+ const expected={websites:30000,'web-apps':180000,'telegram-mini-apps':150000,crm:150000,automation:90000,mvp:240000};
  assert.deepEqual(Object.fromEntries(services.map(s=>[s.slug,s.startingPrice])),expected);
  for(const s of services){
   const path=`/services/${s.slug}/`,html=pages.get(path);
@@ -91,5 +91,5 @@ test('every advertised service has its own page and a bounded starting budget',(
  }
  const automation=pages.get('/services/automation/');
  for(const example of services.find(s=>s.slug==='automation').aiExamples){assert.ok(automation.includes(example.title));assert.ok(automation.includes(example.text));}
- assert.ok(automation.includes('Кейс 12К демонстрирует интеграцию и обмен данными, а не внедрение AI.'));
+ assert.ok(automation.includes('Пример интеграции и обмена данными. AI-сценарии ниже — идеи для вашего проекта.'));
 });
