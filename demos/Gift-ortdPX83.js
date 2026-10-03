@@ -335,7 +335,7 @@ const H = (r) => Number((1 + r * 0.18).toFixed(2)), O = (r) => Math.exp(Math.max
   key: 0,
   class: "demo-tabs",
   "aria-label": "Режим игры"
-}, Se = ["aria-pressed", "onClick"], De = {
+}, Se = ["aria-pressed", "onClick"], De = { class: "gift-mode-host" }, Le = {
   __name: "Gift",
   props: { compact: Boolean },
   setup(r) {
@@ -357,11 +357,13 @@ const H = (r) => Number((1 + r * 0.18).toFixed(2)), O = (r) => Math.exp(Math.max
           onClick: (m) => t.value = c
         }, d(v), 9, Se)), 64))
       ])),
-      (l(), b(D(e.find((c) => c[0] === t.value)[2]), { compact: r.compact }, null, 8, ["compact"])),
+      a("div", De, [
+        (l(), b(D(e.find((c) => c[0] === t.value)[2]), { compact: r.compact }, null, 8, ["compact"]))
+      ]),
       n[1] || (n[1] = a("p", { class: "demo-note" }, "Демонстрационные раунды · без ставок и реальных призов", -1))
     ], 2));
   }
-}, je = /* @__PURE__ */ w(De, [["__scopeId", "data-v-1806e352"]]);
+}, Ee = /* @__PURE__ */ w(Le, [["__scopeId", "data-v-bcd47d91"]]);
 export {
-  je as default
+  Ee as default
 };

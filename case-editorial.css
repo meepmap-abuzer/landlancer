@@ -20,7 +20,7 @@
 .generated-device{display:block;padding:0;border:0;background:var(--studio-surface);width:100%;border-radius:10px;overflow:hidden;cursor:zoom-in}
 .generated-device img{display:block;width:100%;height:auto;transition:transform .65s var(--studio-ease)}
 .generated-device:hover img{transform:scale(1.018)}.story-art figcaption{font-size:11px;color:var(--studio-muted);margin-top:12px}
-.case-demo-section{display:grid;grid-template-columns:.75fr 1.35fr;gap:75px;align-items:start;padding:58px 0 68px;border-top:1px solid var(--studio-line)}
+.case-demo-section{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.35fr);gap:75px;align-items:start;padding:58px 0 68px;border-top:1px solid var(--studio-line)}
 .case-demo-heading{position:sticky;top:100px}.case-demo-heading h2{font-size:30px}.case-demo-heading p{font-size:14px;max-width:32ch;margin-top:20px}
 .case-editorial .interactive-stage{width:100%!important;max-width:850px!important;margin:0!important;padding:20px!important;border:0!important;border-radius:10px!important;box-shadow:none!important;background:var(--studio-surface)!important;position:relative!important;transform:none!important}
 .case-editorial .stage-invitation{padding:2px 0 20px;color:var(--studio-muted)}.case-editorial .stage-invitation p{font-size:12px!important;line-height:1.6}.case-editorial .product-demo{min-width:0}.case-editorial .stage-live-label{font-size:10px}

@@ -49,7 +49,7 @@ test('sitemap lists canonical public routes and excludes utility and demo pages'
  for(const url of urls)await stat(fileFor(new URL(url).pathname));
  for(const p of ['/404.html','/privacy/'])assert.match(pages.get(p),/name="robots" content="noindex, follow"/);
  assert.match(await readFile(resolve(root,'robots.txt'),'utf8'),/Sitemap: https:\/\/landlancer.ru\/sitemap.xml/);
- const png=await readFile(resolve(root,'assets/seo/social.png'));assert.equal(png.readUInt32BE(16),1200);assert.equal(png.readUInt32BE(20),630);
+ const png=await readFile(resolve(root,'assets/seo/social-fold-v1.png'));assert.equal(png.readUInt32BE(16),1200);assert.equal(png.readUInt32BE(20),630);
 });
 test('metadata escapes HTML and JSON-LD script boundaries',()=>{
  const html=seoHead('Example </script> <img src=x>','" & < >','/example/');

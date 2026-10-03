@@ -1,4 +1,4 @@
-const a = { maverick: () => import("./Maverick-C3qYXvq5.js"), loyalty: () => import("./Loyalty-OQ_-WDkT.js").then((t) => t.L), "gift-roulette": () => import("./Gift-BpnQVvJ-.js"), tailcare: () => import("./TailCare-DNgvsoAu.js") };
+const a = { maverick: () => import("./Maverick-C3qYXvq5.js"), loyalty: () => import("./Loyalty-OQ_-WDkT.js").then((t) => t.L), "gift-roulette": () => import("./Gift-ortdPX83.js"), tailcare: () => import("./TailCare-DNgvsoAu.js") };
 async function i(t) {
   try {
     const [{ mountProduct: r }, { default: o }] = await Promise.all([import("./mount-product-BwY9AtXu.js"), a[t.dataset.productDemo]()]);

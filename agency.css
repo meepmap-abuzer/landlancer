@@ -141,3 +141,9 @@ img{height:auto}.phone img{height:100%}.project-card .cover-phone img,.cover-min
 }
 @media(prefers-reduced-transparency:reduce){.glass:is(.top-nav,.side-nav,.crm,.hero-business,.hero-invite,.custom-steps,.stack-layer,.flow-card,.team-card,.orbit-card,.case-note,.progress-pill){background:#eaf6fc;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}}
 .service-art{width:195px;height:260px;max-width:100%;margin-inline:auto;background-size:400% 100%;background-position-y:center}@media(max-width:1100px){.service-art{width:155px;height:207px}}@media(max-width:760px){.service-art{width:135px;height:180px}}@media(min-width:500px) and (max-width:760px){.service-art{width:190px;height:253px}}@media(max-width:370px){.service-art{width:118px;height:157px}}
+
+/* Approved folded rosette identity; typography stays native to the page. */
+.brand{display:inline-flex;align-items:center;gap:9px}
+.brand>.lancer-mark{width:30px;height:30px;flex-shrink:0;object-fit:contain}
+.brand>span{font-size:22px;white-space:nowrap;letter-spacing:-.025em}
+.brand small{font-size:11px;font-weight:400;margin-left:4px;opacity:.75}

@@ -1,6 +1,33 @@
 // Run through the in-app Browser Node session with its existing tab and viewport.
 // This checks rendered geometry, including the site's global CSS cascade.
 import assert from 'node:assert/strict';
+export async function verifyGiftModeLayout({tab,viewport,widths=[320,390,1280]}){
+ const results=[];
+ for(const width of widths){
+  await viewport.set({width,height:900});
+  await tab.goto('http://127.0.0.1:4173/cases/gift-roulette/');
+  await tab.playwright.getByRole('link',{name:'Попробовать',exact:true}).click();
+  await settleStage(tab);
+  const modes=[];
+  for(const label of ['Мины','Кейсы','Краш','Апгрейд']){
+   await tab.playwright.getByRole('button',{name:label,exact:true}).click();
+   await tab.playwright.domSnapshot();
+   modes.push(await tab.playwright.evaluate(()=>{
+    const gift=document.querySelector('.gift-demo'),host=gift.querySelector('.gift-mode-host');
+    const body=host?.firstElementChild||[...gift.children].find(e=>!e.matches('header,nav,.demo-note'));
+    const g=gift.getBoundingClientRect(),b=body.getBoundingClientRect(),a=body.querySelector('.demo-action').getBoundingClientRect();
+    return {mode:gift.querySelector('[aria-pressed=true]').textContent,width:g.width,height:g.height,panelWidth:b.width,actionWidth:a.width,actionTop:a.top-g.top,overflow:document.documentElement.scrollWidth>innerWidth};
+   }));
+  }
+  for(const key of ['width','height','panelWidth','actionWidth','actionTop']){
+   const values=modes.map(mode=>mode[key]);
+   assert.ok(Math.max(...values)-Math.min(...values)<=1,`${key} changes between Gift modes at ${width}: ${JSON.stringify(modes)}`);
+  }
+  assert.ok(modes.every(mode=>!mode.overflow),`Gift modes overflow at ${width}`);
+  results.push({viewport:width,modes});
+ }
+ return results;
+}
 async function settleStage(tab){
  let stable=0;
  for(let attempt=0;attempt<120;attempt++){

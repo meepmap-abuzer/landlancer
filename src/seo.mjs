@@ -11,10 +11,10 @@ export function metadata(title,description,path){
 export function breadcrumbItems(path,title){return [{name:'Главная',url:site.url+'/'},...(path.startsWith('/services/')&&path!=='/services/'?[{name:'Услуги',url:site.url+'/services/'}]:path.startsWith('/cases/')?[{name:'Кейсы',url:site.url+'/#works'}]:[]),{name:title,url:site.url+path}];}
 export function breadcrumbs(path,title){return `<nav class="seo-breadcrumbs" aria-label="Хлебные крошки"><ol>${breadcrumbItems(path,title).map((item,i,items)=>`<li>${i===items.length-1?`<span aria-current="page">${escapeHtml(item.name)}</span>`:`<a href="${escapeHtml(item.url.replace(site.url,''))}">${escapeHtml(item.name)}</a>`}</li>`).join('')}</ol></nav>`;}
 export function seoHead(inputTitle,inputDescription,path){
- const [title,description]=metadata(inputTitle,inputDescription,path),url=site.url+path,image=site.url+'/assets/seo/social.png';
+ const [title,description]=metadata(inputTitle,inputDescription,path),url=site.url+path,image=site.url+'/assets/seo/social-fold-v1.png';
  const noindex=path==='/404.html'||path==='/privacy/';
  const service=services.find(s=>path===`/services/${s.slug}/`);
- const organization={'@type':'Organization','@id':site.url+'/#organization',name:site.name,url:site.url+'/',logo:{'@type':'ImageObject',url:site.url+'/assets/brand/lancer.webp',width:800,height:320},description:'Разработка сайтов, Telegram Mini Apps, CRM и автоматизации для бизнеса.',sameAs:[site.contact],contactPoint:{'@type':'ContactPoint',contactType:'Обсуждение проекта',url:site.contact,availableLanguage:'ru'}};
+ const organization={'@type':'Organization','@id':site.url+'/#organization',name:site.name,url:site.url+'/',logo:{'@type':'ImageObject',url:site.url+'/assets/brand/lancer-fold-mark-v1.png',width:128,height:128},description:'Разработка сайтов, Telegram Mini Apps, CRM и автоматизации для бизнеса.',sameAs:[site.contact],contactPoint:{'@type':'ContactPoint',contactType:'Обсуждение проекта',url:site.contact,availableLanguage:'ru'}};
  const webpage={'@type':'WebPage','@id':url+'#page',url,name:title+' — '+site.name,description,inLanguage:'ru',isPartOf:{'@id':site.url+'/#website'},about:{'@id':site.url+'/#organization'}};
  const graph=[organization,{'@type':'WebSite','@id':site.url+'/#website',url:site.url+'/',name:site.name,inLanguage:'ru',publisher:{'@id':site.url+'/#organization'}},webpage];
  if(path!=='/'&&!noindex)graph.push({'@type':'BreadcrumbList',itemListElement:breadcrumbItems(path,title).map((item,i)=>({'@type':'ListItem',position:i+1,name:item.name,item:item.url}))});
