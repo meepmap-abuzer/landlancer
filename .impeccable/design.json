@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-02T16:03:53Z",
+  "generatedAt": "2026-10-03T04:10:36Z",
   "title": "Design System: Lancer Agency",
   "extensions": {
     "colorMeta": {
@@ -258,7 +258,7 @@
       },
       "scene-title": {
         "displayName": "Project scene title",
-        "purpose": "Bold name beside actual source screens."
+        "purpose": "Bold project name beside a generated device visualization."
       },
       "compact-body": {
         "displayName": "Compact reading",
@@ -267,6 +267,10 @@
       "label": {
         "displayName": "Functional small label",
         "purpose": "11px metadata and functional mobile labels."
+      },
+      "diagram-label": {
+        "displayName": "Centered diagram label",
+        "purpose": "Service-signal SVG text at 22px/500, middle anchor and middle baseline."
       }
     },
     "shadows": [
@@ -274,11 +278,6 @@
         "name": "navigation-ambient",
         "value": "0 8px 24px #0000001c",
         "purpose": "Central navigation pill only; outer row is clear."
-      },
-      {
-        "name": "device-structural",
-        "value": "5px 12px 23px #0000004d",
-        "purpose": "Separate actual screenshot device frames from decorative grounds."
       }
     ],
     "motion": [
@@ -290,12 +289,12 @@
       {
         "name": "idle-frames",
         "value": "4.4s steps(1,end)",
-        "purpose": "Clip each quadrant before registered atlas translation; select four redrawn frames without scaling body dimensions."
+        "purpose": "Four fixed registered crops of the incumbent 240px PNG atlas (120px cells, 64-color palette); only layer opacity switches. No animated clip, transform, scale or mask. Hero size 256px desktop/192px mobile; work size112px desktop/80px mobile."
       },
       {
         "name": "guide-frames",
         "value": "4.8s steps(1,end)",
-        "purpose": "Clip each quadrant before registered atlas translation; select guide frames with static registration compensation."
+        "purpose": "Four fixed registered crops retain the original guide drawing and registration percentages; only stepped opacity switches. Case-opening size128px desktop/112px mobile."
       },
       {
         "name": "work-entrance",
@@ -310,12 +309,22 @@
       {
         "name": "service-illumination",
         "value": ".35s ease",
-        "purpose": "Background and shadow state only; no card/diagram translation."
+        "purpose": "Background state only; no card/diagram translation or emitted heading arrow."
       },
       {
         "name": "disclosure-height",
         "value": "440ms cubic-bezier(.22,1,.36,1)",
         "purpose": "Reversible native disclosure enhancement."
+      },
+      {
+        "name": "scroll-idle-resume",
+        "value": "first resumed increment 16ms; then actual uncapped active frame deltas",
+        "purpose": "Accumulated Lenis wrapper clock clears lastTime at rest/visibility change; scoped actual-wrapper regression, no FPS certification."
+      },
+      {
+        "name": "disclosure-strokes",
+        "value": "180ms opacity ease",
+        "purpose": "Shared SSR SVG has two12px paths with1.5px stroke in20px frame. Vertical opacity1 closed,0 open,1 closing; horizontal always visible."
       }
     ],
     "breakpoints": [
@@ -382,9 +391,9 @@
       "name": "Service card",
       "kind": "card",
       "refersTo": "service-card",
-      "description": "Preserved matte service diagram card; hover illuminates without moving.",
-      "html": "<a class=\"ds-service\" href=\"/services/websites/\"><div class=\"ds-service-title\"><h3>Сайты и лендинги</h3><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 19 19 5M5 5h14v14\"/></svg></div><p>Понятный сайт для вашего продукта и бизнеса.</p><svg class=\"ds-service-art\" viewBox=\"0 0 600 390\" fill=\"none\" aria-hidden=\"true\"><rect class=\"ds-panel\" x=\"124\" y=\"60\" width=\"351\" height=\"258\" rx=\"14\"/><path class=\"ds-divider\" d=\"M124 94h351\"/><g class=\"ds-dots\"><circle cx=\"140\" cy=\"77\" r=\"2\"/><circle cx=\"149\" cy=\"77\" r=\"2\"/><circle cx=\"158\" cy=\"77\" r=\"2\"/></g><rect class=\"ds-block\" x=\"144\" y=\"114\" width=\"173\" height=\"115\" rx=\"7\"/><path class=\"ds-line\" d=\"M333 136h100M333 156h82M145 266h151M145 283h278\"/><rect class=\"ds-bright\" x=\"333\" y=\"182\" width=\"101\" height=\"31\" rx=\"7\"/></svg><span class=\"ds-service-price\">от 30 000 ₽</span></a>",
-      "css": ".ds-service{position:relative;display:block;overflow:hidden;isolation:isolate;min-height:310px;aspect-ratio:1.25;width:360px;max-width:100%;padding:25px;border:0;border-radius:20px;background:var(--studio-glass-pane,#ffffff08);color:var(--studio-ink,#f4f4f4);font-family:Manrope,Arial,sans-serif;text-decoration:none;transition:background-color .35s ease,box-shadow .35s ease}.ds-service:is(:hover,:focus-visible){transform:none;background:#ffffff0d;box-shadow:none}.ds-service:focus-visible{outline:2px solid var(--studio-accent,#bded52);outline-offset:5px;}.ds-service-title{display:flex;justify-content:space-between;gap:12px;align-items:center}.ds-service h3{margin:0;font-size:18px;font-weight:500;line-height:1.4;letter-spacing:-.02em}.ds-service p{margin:7px 0 0;font-size:12px;line-height:1.65;color:#ceced1;max-width:28ch}.ds-service-title>svg{width:18px;height:18px;color:var(--studio-muted,#bdbdbf);opacity:0;transform:translate(-3px,3px);transition:opacity .25s,transform .25s}.ds-service:is(:hover,:focus-visible) .ds-service-title>svg{opacity:1;transform:none}.ds-service-art{position:absolute;left:5%;bottom:20px;width:90%;max-height:210px;z-index:-1}.ds-panel{fill:#29292d;stroke:#56565c;stroke-width:.9}.ds-block{fill:#303034}.ds-bright{fill:#dddde0}.ds-line{stroke:#9d9da4;stroke-width:3;stroke-linecap:round}.ds-divider{stroke:#58585e;stroke-width:1}.ds-dots{fill:#9c9ca3}.ds-service-price{position:absolute;left:22px;bottom:20px;background:#ffffff0d;padding:6px 11px;border-radius:25px;font-size:11px}.ds-service:hover .ds-service-art{transform:none}@media(prefers-reduced-motion:reduce){.ds-service,.ds-service-title>svg{transition:none}}"
+      "description": "Preserved matte service diagram card; illumination only, no heading arrow or movement.",
+      "html": "<a class=\"ds-service\" href=\"/services/websites/\"><div class=\"ds-service-title\"><h3>Сайты и лендинги</h3></div><p>Понятный сайт для вашего продукта и бизнеса.</p><svg class=\"ds-service-art\" viewBox=\"0 0 600 390\" fill=\"none\" aria-hidden=\"true\"><rect class=\"ds-panel\" x=\"124\" y=\"60\" width=\"351\" height=\"258\" rx=\"14\"/><path class=\"ds-divider\" d=\"M124 94h351\"/><g class=\"ds-dots\"><circle cx=\"140\" cy=\"77\" r=\"2\"/><circle cx=\"149\" cy=\"77\" r=\"2\"/><circle cx=\"158\" cy=\"77\" r=\"2\"/></g><rect class=\"ds-block\" x=\"144\" y=\"114\" width=\"173\" height=\"115\" rx=\"7\"/><path class=\"ds-line\" d=\"M333 136h100M333 156h82M145 266h151M145 283h278\"/><rect class=\"ds-bright\" x=\"333\" y=\"182\" width=\"101\" height=\"31\" rx=\"7\"/></svg><span class=\"ds-service-price\">от 30 000 ₽</span></a>",
+      "css": ".ds-service{position:relative;display:block;overflow:hidden;isolation:isolate;min-height:310px;aspect-ratio:1.25;width:360px;max-width:100%;padding:25px;border:0;border-radius:20px;background:var(--studio-glass-pane,#ffffff08);color:var(--studio-ink,#f4f4f4);font-family:Manrope,Arial,sans-serif;text-decoration:none;transition:background-color .35s ease,box-shadow .35s ease}.ds-service:is(:hover,:focus-visible){transform:none;background:#ffffff0d;box-shadow:none}.ds-service:focus-visible{outline:2px solid var(--studio-accent,#bded52);outline-offset:5px;}.ds-service-title{display:flex;justify-content:space-between;gap:12px;align-items:center}.ds-service h3{margin:0;font-size:18px;font-weight:500;line-height:1.4;letter-spacing:-.02em}.ds-service p{margin:7px 0 0;font-size:12px;line-height:1.65;color:#ceced1;max-width:28ch}.ds-service .ds-service-art{position:absolute;left:5%;bottom:20px;width:90%;max-height:210px;z-index:-1}.ds-panel{fill:#29292d;stroke:#56565c;stroke-width:.9}.ds-block{fill:#303034}.ds-bright{fill:#dddde0}.ds-line{stroke:#9d9da4;stroke-width:3;stroke-linecap:round}.ds-divider{stroke:#58585e;stroke-width:1}.ds-dots{fill:#9c9ca3}.ds-service-price{position:absolute;left:22px;bottom:20px;background:#ffffff0d;padding:6px 11px;border-radius:25px;font-size:11px}.ds-service:hover .ds-service-art{transform:none}@media(prefers-reduced-motion:reduce){.ds-service{transition:none}}"
     },
     {
       "name": "Case metadata",
@@ -404,9 +413,9 @@
     {
       "name": "Native FAQ",
       "kind": "custom",
-      "description": "Transparent native disclosure with authored plus/minus strokes.",
-      "html": "<details class=\"ds-faq\"><summary>Как начать работу?<i aria-hidden=\"true\"></i></summary><p>Напишите в Telegram и опишите задачу, пользователей и нужные функции.</p></details>",
-      "css": ".ds-faq{font-family:Manrope,Arial,sans-serif;background:transparent;border:0;border-bottom:1px solid var(--studio-line,#f4f4f425);padding:0 18px;color:var(--studio-ink,#f4f4f4)}.ds-faq summary{display:flex;align-items:center;justify-content:space-between;gap:24px;cursor:pointer;list-style:none;min-height:66px;padding:19px 0;font-size:15px;font-weight:400;line-height:1.5}.ds-faq summary:hover,.ds-faq[open] summary{color:var(--studio-accent,#bded52)}.ds-faq summary:focus-visible{outline:2px solid var(--studio-accent,#bded52);outline-offset:5px;}.ds-faq i{position:relative;width:20px;height:20px;flex:none;color:var(--studio-muted,#bdbdbf)}.ds-faq i::before,.ds-faq i::after{content:'';position:absolute;background:currentColor;border-radius:1px;transition:transform .28s cubic-bezier(.16,1,.3,1)}.ds-faq i::before{left:3px;top:9px;width:14px;height:2px}.ds-faq i::after{left:9px;top:3px;width:2px;height:14px;transform:scaleY(1)}.ds-faq[open] i::after{transform:scaleY(0)}.ds-faq p{font-size:14px;line-height:1.8;color:var(--studio-muted,#bdbdbf);margin:0;padding:0 32px 24px 0}@media(prefers-reduced-motion:reduce){.ds-faq i::after{transition:none}}"
+      "description": "Transparent native disclosure with shared server-rendered plus/minus SVG paths.",
+      "html": "<details class=\"ds-faq\"><summary>Как начать работу?<svg class=\"ds-disclosure-icon\" viewBox=\"0 0 20 20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" aria-hidden=\"true\"><path d=\"M4 10h12\"/><path class=\"ds-disclosure-vertical\" d=\"M10 4v12\"/></svg></summary><p>Напишите в Telegram и опишите задачу, пользователей и нужные функции.</p></details>",
+      "css": ".ds-faq{font-family:Manrope,Arial,sans-serif;background:transparent;border:0;border-bottom:1px solid var(--studio-line,#f4f4f425);padding:0 18px;color:var(--studio-ink,#f4f4f4)}.ds-faq summary{display:flex;align-items:center;justify-content:space-between;gap:24px;cursor:pointer;list-style:none;min-height:66px;padding:19px 0;font-size:15px;font-weight:400;line-height:1.5}.ds-faq summary:hover,.ds-faq[open] summary{color:var(--studio-accent,#bded52)}.ds-faq summary:focus-visible{outline:2px solid var(--studio-accent,#bded52);outline-offset:5px}.ds-disclosure-icon{display:block;width:20px;height:20px;flex:0 0 20px;color:var(--studio-muted,#bdbdbf)}.ds-disclosure-vertical{opacity:1;transition:opacity .18s ease}.ds-faq[open]>summary .ds-disclosure-vertical{opacity:0}.ds-faq[data-disclosure-state=closing]>summary .ds-disclosure-vertical{opacity:1}.ds-faq p{font-size:14px;line-height:1.8;color:var(--studio-muted,#bdbdbf);margin:0;padding:0 32px 24px 0}@media(prefers-reduced-motion:reduce){.ds-disclosure-vertical{transition:none}}"
     },
     {
       "name": "Footer Telegram link",
@@ -419,18 +428,18 @@
   ],
   "narrative": {
     "northStar": "The Pixel Maker Studio",
-    "overview": "A friendly pixel maker gives this restrained digital studio a human introduction. Graphite grounds, pale Manrope and electric lime keep the interface calm; independently composited real product screens supply the proof and retain each product's own colors. Pixel sprites and the gray text-matrix portrait are distinct media.\n\nThe October 2 user-approved hybrid establishes the homepage and navigation from mock 03, process from mock 02, and footer from mock 01, while preserving the incumbent six service cards. This approved replacement supersedes the previous ASCII explorer, curved seam light and production-tab composition. The source supplies the observed token values recorded here; the approved comps and explicit substitutions retain composition authority.",
+    "overview": "A friendly pixel maker gives this restrained digital studio a human introduction. Graphite grounds, pale Manrope and electric lime keep the interface calm; generated device visualizations introduce the real projects while original captures and local demos supply interface and behavior evidence. Pixel sprites and the gray text-matrix portrait are distinct media.\n\nThe October 2 user-approved hybrid establishes the homepage and navigation from mock 03, process from mock 02, and footer from mock 01, while preserving the incumbent six service cards. The October 3 refinement preserves this world and the original seated maker, including browser-edge contact, laptop and dangling legs; its encoding-only v4 revision makes pixels slightly larger. The approved hybrid supersedes the previous ASCII explorer, curved seam light and production-tab composition. The source supplies the observed token values recorded here; the approved region choices and later human substitutions retain composition authority.",
     "keyCharacteristics": [
       "Centered seated pixel human, bold offer and two clear actions.",
       "Quiet central frosted navigation pill with optional side branding.",
-      "Landscape product scenes made from actual interface captures.",
+      "Landscape scenes using generated device cutouts based on supplied project visuals.",
       "Six matte service cards; hover illuminates without moving the card.",
       "Four static editorial process steps and a portrait-led open footer."
     ],
     "rules": [
       {
         "name": "The Product Color Rule",
-        "body": "Preserve the source interface palette inside project screens. The pale 12К portal and beige/red Maverick UI are part of the evidence.",
+        "body": "Preserve the source interface palette in original captures and use it as the reference for device visualizations. The pale 12К portal and beige/red Maverick UI belong to the projects; generated device UI is not claimed as pixel-exact capture evidence.",
         "section": "colors"
       },
       {
@@ -440,29 +449,28 @@
       },
       {
         "name": "The Anchored Maker Rule",
-        "body": "Keep the maker's torso, head and laptop registered while frames switch. Frame selection changes pixel art, not the component's scale or body dimensions.",
+        "body": "Keep the maker's torso, head and laptop registered while frames switch. Use four fixed registered crops and stepped opacity; neither the crop nor the component's scale or body dimensions animates.",
         "section": "layout"
       },
       {
         "name": "The Illumination Rule",
-        "body": "Service hover may reveal the authored arrow and brighten the matte ground; it must not move the card, screenshot or service diagram.",
+        "body": "Service hover brightens the matte ground without moving the card or service diagram. Card headings emit no hover arrow.",
         "section": "elevation"
       }
     ],
     "dos": [
-      "**Do** preserve actual product screens and their original colors.",
-      "**Do** keep the pixel maker's rigid regions registered while selecting redrawn frames.",
+      "**Do** preserve original product captures and their colors, and identify generated device images as visualizations.",
+      "**Do** keep the incumbent pixel maker's rigid regions registered while fixed crop layers switch redrawn frames.",
       "**Do** illuminate the six service cards without translating or scaling them.",
       "**Do** retain native links, disclosures and static artwork before JavaScript.",
       "**Do** stop decorative loops when offscreen, hidden or reduced motion is requested.",
       "**Do** keep functional mobile navigation, action labels, legal links and metadata legible at the observed 11px minimum."
     ],
     "donts": [
-      "",
-      "**Don't** substitute invented interface screenshots for real product evidence.",
+      "**Don't** claim generated device UI is a pixel-exact product screenshot or behavior evidence.",
       "**Don't** use global squash, stretch, bob or scaling as the maker's frame animation.",
       "**Don't** restore the superseded ASCII hero, seam glow or homepage production tabs.",
-      "**Don't** present generated scene grounds as photographs of Lancer's office or client devices.",
+      "**Don't** present generated grounds, cutouts or case photographs as documentary images of Lancer's office or client devices.",
       "**Don't** turn 8px decorative browser chrome or 10px copyright into a functional text rule."
     ]
   }

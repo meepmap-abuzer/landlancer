@@ -1,6 +1,6 @@
 ---
 name: Lancer Agency — Pixel maker studio
-description: Graphite and electric lime editorial studio, a friendly frame-animated pixel maker and real product screens.
+description: Graphite and electric lime editorial studio, an incumbent pixel maker and project device visualizations.
 colors:
   ground: "#141415"
   surface: "#252527"
@@ -80,6 +80,10 @@ typography:
     fontFamily: "Manrope, Arial, sans-serif"
     fontSize: "11px"
     fontWeight: 400
+  diagram-label:
+    fontFamily: "Manrope, Arial, sans-serif"
+    fontSize: "22px"
+    fontWeight: 500
   case-display:
     fontFamily: "Manrope, Arial, sans-serif"
     fontSize: "clamp(37px, 4.5vw, 66px)"
@@ -179,21 +183,21 @@ components:
 
 **Creative North Star: "The Pixel Maker Studio"**
 
-A friendly pixel maker gives this restrained digital studio a human introduction. Graphite grounds, pale Manrope and electric lime keep the interface calm; independently composited real product screens supply the proof and retain each product's own colors. Pixel sprites and the gray text-matrix portrait are distinct media.
+A friendly pixel maker gives this restrained digital studio a human introduction. Graphite grounds, pale Manrope and electric lime keep the interface calm; generated device visualizations introduce the real projects while original captures and local demos supply interface and behavior evidence. Pixel sprites and the gray text-matrix portrait are distinct media.
 
-The October 2 user-approved hybrid establishes the homepage and navigation from mock 03, process from mock 02, and footer from mock 01, while preserving the incumbent six service cards. This approved replacement supersedes the previous ASCII explorer, curved seam light and production-tab composition. The source supplies the observed token values recorded here; the approved comps and explicit substitutions retain composition authority.
+The October 2 user-approved hybrid establishes the homepage and navigation from mock 03, process from mock 02, and footer from mock 01, while preserving the incumbent six service cards. The October 3 refinement preserves this world and the original seated maker, including browser-edge contact, laptop and dangling legs; its encoding-only v4 revision makes pixels slightly larger. The approved hybrid supersedes the previous ASCII explorer, curved seam light and production-tab composition. The source supplies the observed token values recorded here; the approved region choices and later human substitutions retain composition authority.
 
 **Key Characteristics:**
 
 - Centered seated pixel human, bold offer and two clear actions.
 - Quiet central frosted navigation pill with optional side branding.
-- Landscape product scenes made from actual interface captures.
+- Landscape scenes using generated device cutouts based on supplied project visuals.
 - Six matte service cards; hover illuminates without moving the card.
 - Four static editorial process steps and a portrait-led open footer.
 
 ## Colors
 
-The palette is graphite, pale gray and a selective electric lime action accent. Frontmatter values are normative; screenshots keep their native product palette.
+The palette is graphite, pale gray and a selective electric lime action accent. Frontmatter values are normative; original screenshots keep their native product palette, and generated visualizations reference that palette.
 
 ### Primary
 
@@ -209,9 +213,9 @@ The palette is graphite, pale gray and a selective electric lime action accent. 
 - **Quiet Line** (`line`): section dividers, process connectors and metadata boundaries.
 - **Glass Pane** (`glass-pane`) and **Illumination Wash** (`illumination-wash`): service/card grouping and the brighter hover state.
 - **Navigation Tint** (`nav-tint`): central pill only.
-- **Scene Ground / Shade** (`scene-ground`, `scene-shade`): readability behind real screens; they do not recolor those screens.
+- **Scene Ground / Shade** (`scene-ground`, `scene-shade`): readability behind device cutouts; the actual screenshot references retain their product palette.
 
-**The Product Color Rule.** Preserve the source interface palette inside project screens. The pale 12К portal and beige/red Maverick UI are part of the evidence.
+**The Product Color Rule.** Preserve the source interface palette in original captures and use it as the reference for device visualizations. The pale 12К portal and beige/red Maverick UI belong to the projects; generated device UI is not claimed as pixel-exact capture evidence.
 
 ## Typography
 
@@ -228,6 +232,7 @@ The type is plain, compact and editorial. Bold display and project titles carry 
 - **Process title:** compact semibold steps; mobile uses 17px.
 - **Body:** regular site prose; usual maximum line length is 65ch. Hero support allows 70ch desktop and 36ch mobile.
 - **Compact body / label:** scene descriptions and process text use compact copy; functional mobile navigation, scene actions, legal links and metadata use at least the observed 11px role.
+- **Diagram label:** service-signal SVG text uses 22px medium Manrope, `text-anchor="middle"` and `dominant-baseline="middle"` to center labels within their boxes.
 
 Copyright at 10px, mobile maker notes at 10px and decorative browser chrome at 8px are intentional secondary art details, not new functional reading defaults.
 
@@ -237,25 +242,25 @@ Copyright at 10px, mobile maker notes at 10px and decorative browser chrome at 8
 
 Canonical agency content has a 1560px maximum and fluid gutters; below 750px the incumbent gutter is 22px. The header's three-part row has its own 1280px maximum and 50px minimum height, with logo left, central navigation and optional studio phrase right. Home fixes it 14px from the top; service/case headers remain sticky. Home side branding fades after 90px scroll. At 1000px the studio phrase and outer action disappear; below 750px the header uses a 42px row and a 10px top offset.
 
-The hero is content-sized, centered and compact. Its stage is 235px tall, with a fixed 256px sprite overlapping a shallow 390px browser ledge. Mobile uses a 202px stage, 224px sprite and 300px ledge. Above 1600px the explicit wide-screen sprite is 288px. These are stage dimensions, never animation targets.
+The hero is content-sized, centered and compact. Its stage is 235px tall, with a fixed 256px seated sprite on a shallow 390px browser ledge. Mobile uses a 202px stage, 192px sprite and 300px ledge. Above 1600px the explicit wide-screen sprite is 288px. These are stage dimensions, never animation targets.
 
-Works uses a 2×2 equal desktop grid, a 16px gap and landscape ratio 2.18. At 1000px the ratio is 1.9; below 750px there is one column, 14px gaps and final ratio 1.55. Titles and descriptions sit left; independently composited screenshot devices sit right and a small guide sits at the base. The six preserved services use three columns desktop, two below 750px and one below 500px. Their desktop minimum is 310px, with the existing 270px intermediate and 300px mobile minimums.
+Works uses a 2×2 equal desktop grid, a 16px gap and landscape ratio 2.18. At 1000px the ratio is 1.9; below 750px there is one column, 14px gaps and final homepage ratio 1.3. Titles and descriptions sit left; generated native-alpha device cutouts sit right and a small maker sits at the base. Work makers are 112px desktop, 94px intermediate and 80px mobile. At the measured native 390×720 viewport, maker containers begin 23.65–40.15px below the action underline. The six preserved services use three columns desktop, two below 750px and one below 500px. Their desktop minimum is 310px, with the existing 270px intermediate and 300px mobile minimums.
 
-Process is four static columns, with number and top rule above each title; below 750px it becomes 2×2. The footer has contact, navigation, signature and a large text-matrix portrait. Mobile has two columns with contact spanning the width. Case openings use copy beside a coherent real-screen scene, then stack below 750px; actual feature captures continue through each story.
+Process is four static columns, with number and top rule above each title; below 750px it becomes 2×2. The footer has contact, navigation, signature and a contained text-matrix portrait. Mobile has two columns with contact spanning the width. Case openings use copy beside the same device visualization, then stack below 750px; their makers are 128px desktop and 112px mobile. Eight restored generated device photographs continue through case stories with responsive 768px renditions and zoom. Related-project cards retain their separate incumbent geometry.
 
-**The Anchored Maker Rule.** Keep the maker's torso, head and laptop registered while frames switch. Frame selection changes pixel art, not the component's scale or body dimensions.
+**The Anchored Maker Rule.** Keep the maker's torso, head and laptop registered while frames switch. Use four fixed registered crops and stepped opacity; neither the crop nor the component's scale or body dimensions animates.
 
 ## Elevation & Depth
 
-Open grounds and borderless matte panels are the default. One small frosted navigation pill carries backdrop blur (24px) with 105% saturation and the ambient shadow `0 8px 24px #0000001c`. Its outer row has no shadow or blur; the unsupported-filter fallback is a solid navigation ground. Project devices use a small structural shadow `5px 12px 23px #0000004d` to separate them from the decorative scene.
+Open grounds and borderless matte panels are the default. One small frosted navigation pill carries backdrop blur (24px) with 105% saturation and the ambient shadow `0 8px 24px #0000001c`. Its outer row has no shadow or blur; the unsupported-filter fallback is a solid navigation ground. Current device cutouts carry their generated hardware reflections and lighting within the image. Earlier CSS device-shadow selectors remain historical presentation code.
 
 Service artwork and functional diagrams retain their transparent ground; content groups use tonal separation. Service hover changes the illumination wash without card or diagram translation. Native FAQ grounds stay transparent through closed, open and closing states.
 
-**The Illumination Rule.** Service hover may reveal the authored arrow and brighten the matte ground; it must not move the card, screenshot or service diagram.
+**The Illumination Rule.** Service hover brightens the matte ground without moving the card or service diagram. Card headings emit no hover arrow.
 
 ## Shapes
 
-Media uses softly rounded rectangles; service cards retain the larger incumbent corners. The navigation is a shallow pill, not an encompassing glass header island. Browser and device frames are structural support for the maker and actual screen captures. Thin SVG lines, borders and process connectors explain relationships; they are not decorative perimeter boxes.
+Media uses softly rounded rectangles; service cards retain the larger incumbent corners. The navigation is a shallow pill, not an encompassing glass header island. The authored browser ledge supports the seated maker; device hardware is now part of the generated raster. Thin SVG lines, borders and process connectors explain relationships; they are not decorative perimeter boxes.
 
 ## Components
 
@@ -269,11 +274,11 @@ The pill carries four home/service destinations or three local case destinations
 
 ### Project scenes
 
-A real screenshot is a separate image inside an authored CSS desktop/phone frame over one of two empty generated studio grounds. Screenshot alt text names the real interface; all decorative grounds and sprites are hidden from assistive reading. The linked scene includes its project name, short description and authored SVG arrow. All four destinations work without JavaScript.
+One of four generated native-alpha WebP device cutouts sits over one of two retained empty generated studio grounds. The current cutouts use 12К's dashboard/member screenshots, Maverick's home screenshot and TailCare's home screenshot as direct references; Gift uses the prior approved Farm/Autumn cover visualization as its direct reference. Alt text calls the result a device visualization. Original screenshots remain independently recorded evidence. Decorative grounds and sprites are hidden from assistive reading. The linked scene includes its project name, short description and authored SVG action arrow. All four destinations work without JavaScript.
 
 ### Service cards
 
-Preserve the six headings, gray authored diagrams, starting prices, matte tint and incumbent dimensions. Prices are small rounded labels. Connection pulses retain visibility gating; hover uses illumination only. The card is a single real service link.
+Preserve the six headings, gray authored diagrams, starting prices, matte tint and incumbent dimensions. Prices are small rounded labels. Connection pulses retain visibility gating; hover uses illumination only and no heading arrow is emitted. Diagram labels use the centered 22px role. The card is a single real service link.
 
 ### Process
 
@@ -281,24 +286,26 @@ Use an ordered list of four static steps. Numbers and top rules sit above short 
 
 ### Metadata and disclosures
 
-Metadata pills retain small padded labels. FAQ, audience, handover and case architecture use native details/summary with functional plus/minus strokes. Enhanced disclosure height uses 440ms and reverses from the current height; reduced motion or hidden documents settle immediately.
+Metadata pills retain small padded labels. Homepage FAQ, service FAQ/audience/handover and case architecture use native details/summary with the same server-rendered SVG: two independent 12px paths, 1.5px stroke and round caps in a 20px frame. The horizontal path stays visible; vertical opacity is 1 when closed, 0 when open and 1 while closing, with a 180ms transition. Enhanced disclosure height uses 440ms and reverses from the current height; reduced motion or hidden documents settle immediately.
 
 ### Pixel maker and footer portrait
 
-Each maker is a four-cell, 2×2 native-alpha raster sheet (288×288), displayed with nearest-neighbor pixel rendering. Idle and guide frames redraw hand, blink and shoe pixels. Atlas selection compensates for measured rigid-region offsets: idle 20px horizontally and 4px vertically; guide 21px horizontally and 1px vertically, in 144px source cells. Only the selected cell changes in stepped time: idle 4.4s, guide 4.8s. Intersection visibility, document visibility and reduced motion gate loops; the first frame is useful without JavaScript.
+Each maker uses a 240×240 native-alpha PNG sheet with four 120px cells in a 2×2 atlas and a 64-color palette, displayed with nearest-neighbor pixel rendering. V4 is an encoding-only revision of the incumbent v1 artwork: the drawing, pose, face and outfit stay the same while pixels are 20% larger at unchanged rendered size. The original four frames redraw hand, blink and shoe details. Fixed crops retain static registration percentages derived from the v1 144px cells: idle 20px horizontal/4px vertical and guide 21px horizontal/1px vertical compensation. Stepped opacity selects one layer: idle 4.4s, guide 4.8s. Intersection visibility, document visibility and reduced motion gate loops; the first fixed crop is useful without JavaScript.
 
-Each frame is clipped to its own atlas quadrant before the registered translation. The default first-cell clip is `inset(0 50% 50% 0)`; matching clips on every stepped frame prevent neighboring-cell bleed without editing the source sheet.
+Four frame layers each contain the same sheet, statically clipped to their own atlas quadrant and statically translated into registration. The default first-cell clip is `inset(0 50% 50% 0)`. Crop, transform, scale and mask do not animate; only layer opacity follows mutually exclusive stepped intervals. The all-eight-crop evidence is .impeccable/review/game-v4-frames-desktop.png.
 
-The anonymous gray text-matrix portrait is an original transparent raster in the footer. It is neither the retired ASCII explorer nor a copied Pushkin portrait.
+The anonymous gray text-matrix portrait is an original transparent raster in the footer. Its static image uses `object-fit:contain`, maximum 264×330px desktop and 220×250px mobile, retaining the full head and bust. It is neither the retired ASCII explorer nor a copied Pushkin portrait.
 
 Work entrances are prepared in the head before first paint and run once over 860ms from 25px below. Desktop alternate columns delay by 100ms. Static/no-JS and reduced-motion content remains available; failed pending setup clears after 2.2s. This entrance does not animate the pixel character's dimensions.
+
+Optional Lenis wheel/anchor smoothing uses an accumulated wrapper clock. Reset lastTime when the RAF rests or visibility changes, advance the first resumed frame by 16ms and then use uncapped active frame deltas. The actual-wrapper regression supports this idle/restart behavior; it does not certify sustained frame rate or the complete vendor implementation.
 
 ## Do's and Don'ts
 
 ### Do:
 
-- **Do** preserve actual product screens and their original colors.
-- **Do** keep the pixel maker's rigid regions registered while selecting redrawn frames.
+- **Do** preserve original product captures and their colors, and identify generated device images as visualizations.
+- **Do** keep the incumbent pixel maker's rigid regions registered while fixed crop layers switch redrawn frames.
 - **Do** illuminate the six service cards without translating or scaling them.
 - **Do** retain native links, disclosures and static artwork before JavaScript.
 - **Do** stop decorative loops when offscreen, hidden or reduced motion is requested.
@@ -306,10 +313,12 @@ Work entrances are prepared in the head before first paint and run once over 860
 
 ### Don't:
 
-- **Don't** substitute invented interface screenshots for real product evidence.
+- **Don't** claim generated device UI is a pixel-exact product screenshot or behavior evidence.
 - **Don't** use global squash, stretch, bob or scaling as the maker's frame animation.
 - **Don't** restore the superseded ASCII hero, seam glow or homepage production tabs.
-- **Don't** present generated scene grounds as photographs of Lancer's office or client devices.
+- **Don't** present generated grounds, cutouts or case photographs as documentary images of Lancer's office or client devices.
 - **Don't** turn 8px decorative browser chrome or 10px copyright into a functional text rule.
 
-The source files `pixel-studio.css`, `frost.css`, `lancer.css`, `seo.css` and their generating modules establish these rules. This document records source evidence; it does not claim browser/comparison gates passed. Historical implementation selectors and retired image assets are not current visual authority.
+The source files `pixel-studio.css`, `frost.css`, `lancer.css`, `seo.css` and their generating modules establish these rules. Native 1280×720 and 390×720 geometry is recorded in .impeccable/build/spec.json and .impeccable/review/diff/final/region-evidence.md. The build record preserves the superseded historical single-comp round as fidelity unproven; current geometry and source verification do not turn historical machine gates into passed gates. No formal QUALITY BAR card exists, and the scoped fix-verdict resolves all four material findings and permits shipping this fix batch. Reduced-motion handling is source-verified; OS mode, physical phones and sustained FPS remain untested. Representative 12К/Gift browser evidence and source/static resolution cover the cases, not four complete browser audits.
+
+Not canonized or repaired: inherited literal color/radius/type detector advisories, including pastel browser dots, the 7px browser corner and uneven incidental type steps. This ordinary extension preserves the incumbent world; those advisories do not define new tokens or authorize a wider redesign. Historical implementation selectors and retired image assets are not current visual authority.

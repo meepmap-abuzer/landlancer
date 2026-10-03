@@ -1,6 +1,6 @@
 import {setupDisclosures} from '/disclosures.mjs?v=1';
 import {setupStudioMotion} from '/studio-motion.mjs?v=pixel-1';
-import {setupStudioScroll} from '/studio-scroll.mjs?v=mascot-1';
+import {setupStudioScroll} from '/studio-scroll.mjs?v=game-4';
 // Shared disclosures preserve their native no-JS behavior.
 const reduced=matchMedia('(prefers-reduced-motion: reduce)');
 setupDisclosures({reduced,allowed:()=>!reduced.matches});

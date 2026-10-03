@@ -1,6 +1,44 @@
 # Asset provenance
 
-## October 2: approved pixel-maker hybrid — current production assets
+## October 3: incumbent v4 maker and generated device visualizations — current production use
+
+This is a refinement of the selected graphite/pale/lime hybrid. The latest human correction preserves the original seated maker's face, outfit, laptop, browser-edge contact and dangling legs; rejected chibi replacements are not shipping assets. The v4 PNGs are encoding-only revisions of the original v1 artwork. Homepage works, case openings and related cards now use four generated native-alpha device cutouts; case stories restore the eight earlier generated device photographs. Visible device UI is a visualization, while retained screenshots and local demos remain the interface/behavior evidence.
+
+| Shipping file | Exact-prompt/origin sidecar | Source and production form |
+| --- | --- | --- |
+| assets/pixel/maker-idle-v4.png | assets/pixel/maker-idle-v4.png.json | Origin: assets/pixel/maker-idle-v1.webp, whose original generation is recorded below. Nearest-neighbor 240×240 2×2 atlas, 120px cells, 64-color palette PNG, native alpha retained. Same incumbent drawing and four poses/details; pixels 20% larger at unchanged display size. |
+| assets/pixel/maker-guide-v4.png | assets/pixel/maker-guide-v4.png.json | Origin: assets/pixel/maker-guide-v1.webp, whose original generation is recorded below. The same encoding-only 240×240/120px/64-color revision; no new character generation. |
+| assets/devices/loyalty-devices-v2.webp | assets/devices/loyalty-devices-v2.webp.json | Built-in image_gen original exec-cb21cd8b-26a9-4d01-810d-790d1f04a964.png; direct references assets/screenshots/12k-dashboard.webp and 12k-home.webp. Generated laptop/phone cutout, 1100×825, WebP quality 86, native alpha retained. |
+| assets/devices/maverick-device-v2.webp | assets/devices/maverick-device-v2.webp.json | Built-in image_gen original exec-c2a7a1a0-545d-4592-8856-6079828ac761.png; direct reference assets/screenshots/club-home.webp. Generated phone cutout, 700×933, WebP quality 86, native alpha retained. |
+| assets/devices/tailcare-device-v2.webp | assets/devices/tailcare-device-v2.webp.json | Built-in image_gen original exec-d1b32fe9-90cf-4f4e-a4c4-3fb306a10557.png; direct reference assets/screenshots/pets-home.webp. Generated laptop cutout, 1100×825, WebP quality 86, native alpha retained. |
+| assets/devices/gift-device-v2.webp | assets/devices/gift-device-v2.webp.json | Built-in image_gen original exec-3c1094fb-5949-43c0-a74f-fe10c7342bbc.png; direct reference assets/covers/gift-roulette-mono-v4.webp, the prior user-approved Farm/Autumn visualization. Its user-supplied artwork/layout and original are in that cover's sidecar. Generated phone cutout, 700×933, WebP quality 86, native alpha retained. This is indirect lineage, not a newly captured Gift homepage. |
+
+The four device-original paths above share the directory Z:/Users/smoke/.codex/generated_images/01a0ba0f-366c-7831-a716-46acf74a1410/; their sidecars retain the exact absolute originals, prompt text and direct input paths. No selectable generator model is asserted. These are fictional generated hardware/UI images, not documentary photographs of client devices or Lancer's office and not guaranteed pixel-exact screens. The Gift source is explicitly a previous visualization rather than a direct screenshot reference.
+
+The current sprite implementation mounts four fixed crops of each PNG sheet. Their clip/registration transforms stay static; stepped opacity alone selects the frame, using 4.4s idle and 4.8s guide cycles. It retains registration percentages derived from the original 144px cells (idle 20px horizontal/4px vertical; guide 21px horizontal/1px vertical). Display sizes are hero 256px desktop/192px mobile, work makers 112px desktop/80px mobile and case-opening makers 128px desktop/112px mobile. Native all-eight-crop proof is .impeccable/review/game-v4-frames-desktop.png; this is separate from a machine comp-fidelity gate.
+
+Retained current decorative files are letter-portrait-v1.webp (760×950 native alpha), studio-desk-v1.webp and studio-fabric-v1.webp (1100×733). Their original generation lineage below still applies. The portrait stays in a contained static box; the grounds contain no generated product UI. Original v1 sprites are retained as source/historical renditions rather than the current src.
+
+### Restored October 1 case photographs
+
+All eight are earlier built-in image_gen photographic device visualizations, 1536×1024, restored without new generation. assets/device-visuals.json preserves their exact prompts, direct screenshot references, generated original paths and dimensions. Each asset and its 768px responsive rendition has an adjacent prompt/provenance sidecar. The case copy labels them as visualizations and directs mechanics verification to the demo.
+
+| Restored source | Direct interface references | Responsive rendition |
+| --- | --- | --- |
+| assets/case-visuals/loyalty-member.webp | 12k-home.png, 12k-missions.png, 12k-shop.png | assets/responsive/case-visuals-loyalty-member-768.webp |
+| assets/case-visuals/loyalty-business.webp | 12k-dashboard.png | assets/responsive/case-visuals-loyalty-business-768.webp |
+| assets/case-visuals/maverick-activation.webp | club-home.png, club-roulette.png | assets/responsive/case-visuals-maverick-activation-768.webp |
+| assets/case-visuals/maverick-engagement.webp | club-tasks.png, club-shop.png | assets/responsive/case-visuals-maverick-engagement-768.webp |
+| assets/case-visuals/tailcare-home.webp | pets-home.png | assets/responsive/case-visuals-tailcare-home-768.webp |
+| assets/case-visuals/tailcare-catalog.webp | pets-catalog.png | assets/responsive/case-visuals-tailcare-catalog-768.webp |
+| assets/case-visuals/gift-games.webp | gaming-case.png, gift-mines-current.png | assets/responsive/case-visuals-gift-games-768.webp |
+| assets/case-visuals/gift-rounds.webp | gift-upgrade-current.png, gift-crash-active.webp | assets/responsive/case-visuals-gift-rounds-768.webp |
+
+All reference filenames in this table are under assets/screenshots. The existing source/fixture qualifications below remain in effect. The 11-raster pixel/device provenance scan reported zero missing prompt records; the six new v4/device files reported alpha 0 at corners and the last pixel. Those scoped checks establish file records and transparency, not full visual fidelity or a new audit of every historical asset. The build record leaves historical machine fidelity unproven, with all four current material findings resolved by the scoped fix-verdict. OS reduced-motion mode, physical phones and sustained FPS were not benchmarked.
+
+## October 2: initial approved pixel-maker hybrid — superseded presentation
+
+The following records the original v1 generation and the initial CSS-screen presentation. Its current-use statements were superseded by the October 3 entry above; the original prompts, sources and unrelated provenance are preserved.
 
 This approved replacement uses real product captures in authored CSS device frames over empty generated scene grounds. The user selected homepage/navigation and works from mock03-pixel-editorial, process from mock02-pixel-workbench and footer from mock01-centered-maker, preserving the incumbent six service cards. The latest instruction requires actual redrawn game sprite frames, not whole-body squash/stretch. The selection contract is ../../work/selected-hybrid-contract.md.
 

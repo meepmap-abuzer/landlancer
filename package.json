@@ -8,6 +8,7 @@
     "check": "node --check src/build-agency.mjs && node --check src/product-stage.mjs && node --check agency.js && node --check experience.mjs && node --check glass-lens.mjs",
     "test": "node --experimental-strip-types --test src/glass-optics.test.mjs src/demos/rounds.test.mjs src/demos/source-components.test.mjs",
     "build:concepts": "vite build --config src/concepts/vite.config.mjs && node src/concepts/build.mjs",
+    "test:scroll": "node --experimental-vm-modules --test src/studio-scroll.test.mjs",
     "test:seo": "node --test src/seo.test.mjs",
     "build:scene": "vite build --config src/sculpture/vite.config.mjs"
   },

@@ -1,0 +1,11 @@
+{
+  "prompt": "Use case: product-mockup. Create a NEW premium studio PHOTOGRAPHIC device cutout on TRUE native transparent alpha. Accurate real hardware, complete devices fully inside frame with generous margin. Near frontal three-quarter view, subtle clockwise 6 degree angle, realistic metallic edges, crisp glass, restrained reflections, soft broad studio lighting. No floor, pedestal, furniture, background, text captions or extra UI. Faithfully display the provided real project UI reference, retaining its exact layout, brand, colors and legible prominent labels; no invented dashboards. This is a website project cutout, isolated devices only, not a page design. Full device screen and all hardware edges visible. Alpha=0 around hardware. One titanium iPhone showing the attached Maverick beige loyalty home with dark blue MAVERICK header and red QR scan block. Physical Dynamic Island at top, one coherent status bar and bottom home indicator. Whole phone including rounded corners and side buttons. Portrait 3:4 transparent canvas.",
+  "references": [
+    "Z:/Users/smoke/Documents/Codex/2026-09-19/files-mentioned-by-the-user-codex/outputs/landlancer/assets/screenshots/club-home.webp"
+  ],
+  "original": "Z:\\Users\\smoke\\.codex\\generated_images\\01a0ba0f-366c-7831-a716-46acf74a1410\\exec-c2a7a1a0-545d-4592-8856-6079828ac761.png",
+  "tool": "built-in GPT Image",
+  "width": 700,
+  "height": 933,
+  "encoding": "WebP at quality 86, native alpha retained."
+}

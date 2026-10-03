@@ -1,0 +1,12 @@
+{
+  "prompt": "Use case: product-mockup. Create a NEW premium studio PHOTOGRAPHIC device cutout on TRUE native transparent alpha. Accurate real hardware, complete devices fully inside frame with generous margin. Near frontal three-quarter view, subtle clockwise 6 degree angle, realistic metallic edges, crisp glass, restrained reflections, soft broad studio lighting. No floor, pedestal, furniture, background, text captions or extra UI. Faithfully display the provided real project UI reference, retaining its exact layout, brand, colors and legible prominent labels; no invented dashboards. This is a website project cutout, isolated devices only, not a page design. Full device screen and all hardware edges visible. Alpha=0 around hardware. Two devices: a slim space-gray MacBook Pro showing Image1 12K business dashboard, and a titanium iPhone in foreground at laptop's RIGHT showing Image2 dark blue 12K membership card. Laptop screen is the dominant device. Real keyboard, trackpad and bottom base clearly visible, accurate hardware. Wide 4:3 transparent canvas.",
+  "references": [
+    "Z:/Users/smoke/Documents/Codex/2026-09-19/files-mentioned-by-the-user-codex/outputs/landlancer/assets/screenshots/12k-dashboard.webp",
+    "Z:/Users/smoke/Documents/Codex/2026-09-19/files-mentioned-by-the-user-codex/outputs/landlancer/assets/screenshots/12k-home.webp"
+  ],
+  "original": "Z:\\Users\\smoke\\.codex\\generated_images\\01a0ba0f-366c-7831-a716-46acf74a1410\\exec-cb21cd8b-26a9-4d01-810d-790d1f04a964.png",
+  "tool": "built-in GPT Image",
+  "width": 1100,
+  "height": 825,
+  "encoding": "WebP at quality 86, native alpha retained."
+}
