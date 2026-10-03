@@ -289,7 +289,7 @@
       {
         "name": "maker-blink",
         "value": "5.6s steps(1,end)",
-        "purpose": "One fixed256px generated base drawing with preserved RGB/binary native coverage alpha; only local SVG pixel details animate. No changing body silhouette or image transform. Visibility/reduced-motion lifecycle retained."
+        "purpose": "Fixed face/body/laptop from the approved256px source; local eyelids blink independently of continuous leg/typing poses. Visibility/reduced-motion lifecycle retained."
       },
       {
         "name": "guide-blink",
@@ -328,8 +328,13 @@
       },
       {
         "name": "maker-type",
-        "value": "3.8s steps(1,end)",
-        "purpose": "Local fingertip pixels only; the seated base drawing stays fixed."
+        "value": ".64s steps(1,end); four poses",
+        "purpose": "Continuous alternating pixel key presses; wrist and laptop stay fixed. Visibility/reduced-motion lifecycle retained."
+      },
+      {
+        "name": "maker-legs",
+        "value": "1.6s steps(1,end); eight poses",
+        "purpose": "Gentle continuous swing from clipped approved source pixels below row202, integer offsets at most5px horizontal/2px vertical. Fixed face/body/laptop; complete resting fallback and visibility/reduced-motion gating."
       }
     ],
     "breakpoints": [
