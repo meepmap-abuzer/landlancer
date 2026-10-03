@@ -158,3 +158,7 @@ Backgrounds replaced throughout the homepage and case pages. No new AI-generated
 - assets/photos/forest.webp and forest-mobile.webp: Origin: real stock photograph by eberhard grossgasteiger. Source https://www.pexels.com/photo/sunlight-filtering-through-majestic-forest-trees-28871326/. License https://www.pexels.com/license/, checked September 28, 2026. Local WebP desktop/mobile resizes; no generative editing.
 
 - assets/photos/peaks.webp and peaks-mobile.webp: Origin: real stock photograph by Sean Oblizalo. Source https://unsplash.com/photos/jagged-mountain-peaks-reflecting-in-a-still-alpine-lake-FHL2Pc4sBIY. License https://unsplash.com/license, checked September 28, 2026. Local WebP desktop/mobile resizes; no generative editing.
+
+## October 3 pixel clarity rendering fix
+
+No raster asset was regenerated or edited for this fix. The same v4 PNG sheets use crisp-edge browser sampling and whole-pixel static crop registration; original prompts and asset lineage above remain unchanged.

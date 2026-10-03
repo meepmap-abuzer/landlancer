@@ -289,12 +289,12 @@
       {
         "name": "idle-frames",
         "value": "4.4s steps(1,end)",
-        "purpose": "Four fixed registered crops of the incumbent 240px PNG atlas (120px cells, 64-color palette); only layer opacity switches. No animated clip, transform, scale or mask. Hero size 256px desktop/192px mobile; work size112px desktop/80px mobile."
+        "purpose": "Four fixed registered crops of the incumbent 240px PNG atlas (120px cells, 64-color palette); only layer opacity switches. No animated clip, transform, scale or mask. Hero size 256px desktop/192px mobile; work size112px desktop/80px mobile. Crisp-edge sampling and whole-pixel static left/top registration avoid softened fractional image transforms; source art and display size stay unchanged."
       },
       {
         "name": "guide-frames",
         "value": "4.8s steps(1,end)",
-        "purpose": "Four fixed registered crops retain the original guide drawing and registration percentages; only stepped opacity switches. Case-opening size128px desktop/112px mobile."
+        "purpose": "Four fixed registered crops retain the original guide drawing and registration percentages; only stepped opacity switches. Case-opening size128px desktop/112px mobile. Crisp-edge sampling and whole-pixel static left/top registration avoid softened fractional image transforms; source art and display size stay unchanged."
       },
       {
         "name": "work-entrance",

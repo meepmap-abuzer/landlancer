@@ -91,3 +91,7 @@ The current build pass reports 16 passed checks: seven SEO/static checks, one ac
 The build record separates the superseded historical single-comp round, whose fidelity remains unproven, from the current human-pinned extension with measured geometry and region evidence. Neither historical machine gates nor a formal QUALITY BAR ceiling are marked passed. Source evidence establishes reduced-motion/lifecycle behavior; OS reduced-motion browser mode, physical phones, sustained FPS, broad cross-browser coverage and Lighthouse are not certified by this document. Case image zoom was exercised in the representative local browser evidence.
 
 GitHub Pages publishes landlancer.ru from main. Publish revisions through main and verify the public render after the exact commit build completes. Local review records and deployment receipts record the scope and timing of verification.
+
+## October 3 pixel clarity refinement
+
+The existing v4 sprite files, identity, seated pose and dimensions are preserved. Crisp-edge sampling replaces the softened fractional upscale; atlas registration now uses whole-pixel static left/top positions without image transforms. All eight crop drawings, desktop and mobile hero rendering are the scoped visual checks for this CSS-only refinement.

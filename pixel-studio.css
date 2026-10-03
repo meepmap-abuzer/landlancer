@@ -11,7 +11,7 @@
 .pixel-hero::before,.pixel-hero::after,.studio-works::before{display:none!important}
 .maker-stage{position:relative;width:min(620px,100%);height:235px;flex-shrink:0}
 .pixel-maker{--sprite-size:128px;position:relative;display:block;width:var(--sprite-size);height:var(--sprite-size);overflow:hidden;pointer-events:none;contain:layout paint}
-.pixel-maker>.sprite-frame{position:absolute;inset:0;opacity:0;animation:maker-slot-0 4.4s steps(1,end) infinite;animation-play-state:paused}.pixel-maker>.frame-0{opacity:1}.pixel-maker .pixel-sheet{position:absolute;left:0;top:0;display:block;width:200%;height:200%;max-width:none;image-rendering:pixelated;object-fit:fill;animation:none!important}
+.pixel-maker>.sprite-frame{position:absolute;inset:0;opacity:0;animation:maker-slot-0 4.4s steps(1,end) infinite;animation-play-state:paused}.pixel-maker>.frame-0{opacity:1}.pixel-maker .pixel-sheet{position:absolute;left:0;top:0;display:block;width:200%;height:200%;max-width:none;image-rendering:pixelated;image-rendering:crisp-edges;object-fit:fill;animation:none!important;transform:none}
 .pixel-maker.digital-running>.sprite-frame{animation-play-state:running}.pixel-guide>.sprite-frame{animation-duration:4.8s}.pixel-maker>.frame-1{animation-name:maker-slot-1}.pixel-maker>.frame-2{animation-name:maker-slot-2}.pixel-maker>.frame-3{animation-name:maker-slot-3}.pixel-guide>.frame-0{animation-name:guide-slot-0}.pixel-guide>.frame-1{animation-name:guide-slot-1}.pixel-guide>.frame-2{animation-name:guide-slot-2}.pixel-guide>.frame-3{animation-name:guide-slot-3}
 .maker-stage>.pixel-maker{--sprite-size:256px;position:absolute;left:50%;top:-6px;margin-left:-128px;z-index:2}
 .maker-browser{position:absolute;bottom:5px;left:50%;width:390px;height:53px;margin-left:-195px;background:#161618;overflow:hidden;border-radius:7px 7px 0 0;border-top:1px solid #a7a7ad7a}
@@ -69,14 +69,14 @@ html[data-motion="pending"] .studio-project,html[data-motion="ready"] .studio-pr
 html.lenis{scroll-behavior:auto!important}
 @media(max-width:750px){.maker-stage>.pixel-maker{--sprite-size:192px;margin-left:-96px;top:8px}.pixel-end-portrait{min-height:215px}}
 
-/* Atlas crops never animate. The compositor switches only fixed frame opacity. */
-.frame-0>.pixel-sheet{transform:translate(0,0);clip-path:inset(0 50% 50% 0)}
-.frame-1>.pixel-sheet{transform:translate(-43.055556%,0);clip-path:inset(0 0 50% 50%)}
-.frame-2>.pixel-sheet{transform:translate(0,-48.611111%);clip-path:inset(50% 50% 0 0)}
-.frame-3>.pixel-sheet{transform:translate(-43.055556%,-48.611111%);clip-path:inset(50% 0 0 50%)}
-.pixel-guide>.frame-1>.pixel-sheet{transform:translate(-42.708333%,0)}
-.pixel-guide>.frame-2>.pixel-sheet{transform:translate(0,-49.652778%)}
-.pixel-guide>.frame-3>.pixel-sheet{transform:translate(-42.708333%,-49.652778%)}
+/* Nearest-neighbor sampling and whole-pixel registration prevent soft atlas edges.
+   Positioning uses the frame box rather than a fractionally translated image layer. */
+.frame-0>.pixel-sheet{clip-path:inset(0 50% 50% 0)}
+.frame-1>.pixel-sheet{left:-86.111112%;left:round(nearest,-86.111112%,1px);clip-path:inset(0 0 50% 50%)}
+.frame-2>.pixel-sheet{top:-97.222222%;top:round(nearest,-97.222222%,1px);clip-path:inset(50% 50% 0 0)}
+.frame-3>.pixel-sheet{left:-86.111112%;left:round(nearest,-86.111112%,1px);top:-97.222222%;top:round(nearest,-97.222222%,1px);clip-path:inset(50% 0 0 50%)}
+.pixel-guide>.frame-1>.pixel-sheet,.pixel-guide>.frame-3>.pixel-sheet{left:-85.416666%;left:round(nearest,-85.416666%,1px)}
+.pixel-guide>.frame-2>.pixel-sheet,.pixel-guide>.frame-3>.pixel-sheet{top:-99.305556%;top:round(nearest,-99.305556%,1px)}
 @keyframes maker-slot-0{0%{opacity:1}29%{opacity:0}78%,100%{opacity:1}}
 @keyframes maker-slot-1{0%{opacity:0}29%{opacity:1}46%,100%{opacity:0}}
 @keyframes maker-slot-2{0%{opacity:0}46%{opacity:1}50%,100%{opacity:0}}
