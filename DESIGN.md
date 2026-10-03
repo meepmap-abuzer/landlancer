@@ -185,7 +185,7 @@ components:
 
 A friendly pixel maker gives this restrained digital studio a human introduction. Graphite grounds, pale Manrope and electric lime keep the interface calm; generated device visualizations introduce the real projects while original captures and local demos supply interface and behavior evidence. Pixel sprites and the gray text-matrix portrait are distinct media.
 
-The October 2 user-approved hybrid establishes the homepage and navigation from mock 03, process from mock 02, and footer from mock 01, while preserving the incumbent six service cards. The October 3 refinement preserves this world and the original seated maker, including browser-edge contact, laptop and dangling legs; its encoding-only v4 revision makes pixels slightly larger. The approved hybrid supersedes the previous ASCII explorer, curved seam light and production-tab composition. The source supplies the observed token values recorded here; the approved region choices and later human substitutions retain composition authority.
+The October 2 user-approved hybrid establishes the homepage and navigation from mock 03, process from mock 02, and footer from mock 01, while preserving the incumbent six service cards. The October 3 refinement preserves this world and the original seated maker, including browser-edge contact, laptop and dangling legs; the latest v5 regeneration removes smooth colour ramps and dull eyes with a flat16-colour palette while retaining the seated/pointing identity and display sizes. The approved hybrid supersedes the previous ASCII explorer, curved seam light and production-tab composition. The source supplies the observed token values recorded here; the approved region choices and later human substitutions retain composition authority.
 
 **Key Characteristics:**
 
@@ -290,9 +290,9 @@ Metadata pills retain small padded labels. Homepage FAQ, service FAQ/audience/ha
 
 ### Pixel maker and footer portrait
 
-Each maker uses a 240×240 native-alpha PNG sheet with four 120px cells in a 2×2 atlas and a 64-color palette, displayed with nearest-neighbor pixel rendering. V4 is an encoding-only revision of the incumbent v1 artwork: the drawing, pose, face and outfit stay the same while pixels are 20% larger at unchanged rendered size. The original four frames redraw hand, blink and shoe details. Fixed crops retain static registration percentages derived from the v1 144px cells: idle 20px horizontal/4px vertical and guide 21px horizontal/1px vertical compensation. Stepped opacity selects one layer: idle 4.4s, guide 4.8s. Intersection visibility, document visibility and reduced motion gate loops; the first fixed crop is useful without JavaScript.
+Each maker uses a240×240 PNG sheet with four120px cells in a2×2 atlas. Current v5 is a built-in GPT Image redraw of the incumbent identity and poses, with strong eye whites/dark pupils, flat shading and exactly16 decoded ink RGB colours. Export quantises RGB without dithering and uses hard binary native-coverage alpha0/255. Head anchors are registered at integer logical pixels before export. The four drawings retain typing, pointing, blinking and shoe movement. Idle4.4s and guide4.8s stepped-opacity cycles retain their visibility/reduced-motion controls.
 
-Four frame layers each contain the same sheet, statically clipped to their own atlas quadrant and statically translated into registration. The default first-cell clip is `inset(0 50% 50% 0)`. Crop, transform, scale and mask do not animate; only layer opacity follows mutually exclusive stepped intervals. The all-eight-crop evidence is .impeccable/review/game-v4-frames-desktop.png.
+Four frame layers each contain the same sheet, statically clipped to their own quadrant and positioned by left/top at0 or-100%. Registration is baked into the atlas, so image transforms and fractional crop compensation are unnecessary. Only mutually exclusive stepped opacity selects drawings. The native all-eight-crop evidence is .impeccable/review/clean-maker-frames.png.
 
 The anonymous gray text-matrix portrait is an original transparent raster in the footer. Its static image uses `object-fit:contain`, maximum 264×330px desktop and 220×250px mobile, retaining the full head and bust. It is neither the retired ASCII explorer nor a copied Pushkin portrait.
 
@@ -325,4 +325,4 @@ Not canonized or repaired: inherited literal color/radius/type detector advisori
 
 ### Pixel-edge rendering
 
-The incumbent v4 art and display sizes stay fixed. Use `image-rendering: crisp-edges` with the existing pixelated fallback. Atlas registration uses static left/top offsets rounded to whole CSS pixels instead of fractional translated compositor layers. Four redrawn crops still switch through stepped opacity; no scale, blur or whole-body motion is added.
+Current v5 display sizes retain the incumbent layout. Use `image-rendering: crisp-edges` with the existing pixelated fallback. Registered full cells use static left/top positions without translated image layers. Source colours and the binary matte form hard square pixel clusters; only frame-layer opacity animates.

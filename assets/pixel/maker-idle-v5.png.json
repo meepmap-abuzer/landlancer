@@ -1,0 +1,36 @@
+{
+  "tool": "built-in GPT Image",
+  "createdAt": "2026-10-03T04:49:11.818Z",
+  "prompt": "Use-case: identity-preserve sprite edit for a website.\nImage1 is the edit target: the existing four-frame seated maker atlas. Preserve this exact friendly young man, silhouette, adult-ish body proportions, spiky sandy-brown hair shape, ivory overshirt, bright lime scarf, charcoal trousers, lime/white sneakers and gray laptop. Preserve the SAME seated position, hands at the laptop, feet dangling from an invisible browser ledge. No new chibi design.\nChange ONLY pixel-art rendering and palette clarity. The original has too many fuzzy intermediate shades and dull eyes. Redraw as clean, professionally hand-pixeled 16-bit RPG game sprites. Compact palette of approximately16-20 opaque flat colors total. Strong black/dark outline, coherent square pixel clusters, crisp staircase contours. Only2-3 flat shades per material. Absolutely no gradients, airbrush, smooth color ramps, dithering, noise, glow, soft shadow, semitransparent antialiasing, blur or vector smoothing. Hair must have readable solid brown clusters; ivory clothes solid clean shapes; scarf vivid lime. Eyes must be lively and high contrast with clearly visible pale whites and dark pupils, using discrete square pixels, not grey smears. Preserve face identity and expression.\nProduction layout: EXACTLY FOUR complete seated animation frames in2 columns by2 rows, no other sprites. Each logical cell120x120 pixels, consistent identical scale, centered at same anchor with same fixed head/torso/laptop positions. Clear transparent padding and same foot baseline. Render logical square pixels by nearest-neighbor if output is larger. Medium pixel size matching target, not giant coarse blocks and not a smooth illustration pixel filter.\nFrame1: eyes open, fingers typing. Frame2: same body, change only fingers by one logical pixel. Frame3: blink closed eyes and one-pixel shoe swing. Frame4: open eyes, neutral hand and shoes. Genuine separately redrawn pixel changes, not scaled or rotated duplicates. Every sprite fully visible.\nBackground: genuinely native transparent alpha everywhere outside hard opaque ink, including spaces between all four cells. No ledge, browser panel, floor, environment, aura, captions, labels, borders, checkerboard baked into pixels, or extra props. White garments and eye whites remain fully opaque. Output only the clean four-frame sprite atlas.",
+  "origin": "Z:/Users/smoke/.codex/generated_images/01a0ba0f-366c-7831-a716-46acf74a1410/exec-e5e798b4-d7c9-460b-9b5d-3202c2de53f7.png",
+  "references": [
+    "Z:/Users/smoke/Documents/Codex/2026-09-19/files-mentioned-by-the-user-codex/outputs/landlancer/assets/pixel/maker-idle-v4.png"
+  ],
+  "width": 240,
+  "height": 240,
+  "encoding": "Nearest-neighbor120px cells in a240px2x2 PNG; RGB quantised independently to16 colors without dithering. Native alpha coverage >=128 defines hard opaque pixel ink, lower coverage stays transparent. Lossless RGBA PNG preserves this binary matte. Frames registered to the first head anchor at integer logical pixels; original generated PNG preserved. Isolated floating background specks of at most24 pixels removed per component; connected character ink and its alpha preserved.",
+  "registration": [
+    {
+      "dx": 0,
+      "dy": 0
+    },
+    {
+      "dx": 15,
+      "dy": -1
+    },
+    {
+      "dx": 0,
+      "dy": 2
+    },
+    {
+      "dx": 15,
+      "dy": 2
+    }
+  ],
+  "removedBackgroundSpecks": [
+    0,
+    0,
+    0,
+    0
+  ]
+}

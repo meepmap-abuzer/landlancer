@@ -1,6 +1,14 @@
 # Asset provenance
 
-## October 3: incumbent v4 maker and generated device visualizations — current production use
+## October 3: clean regenerated v5 sprites — current production use
+
+The user rejected the CSS-only clarity fix and explicitly requested regeneration: fewer smooth intermediate shades and brighter eyes, retaining the incumbent person and seated browser-edge pose. Built-in GPT Image edited both poses. Current assets are assets/pixel/maker-idle-v5.png and maker-guide-v5.png; their adjacent .png.json files preserve the exact final prompts, edit targets, references and absolute original paths.
+
+Idle original: Z:/Users/smoke/.codex/generated_images/01a0ba0f-366c-7831-a716-46acf74a1410/exec-e5e798b4-d7c9-460b-9b5d-3202c2de53f7.png. Guide original: Z:/Users/smoke/.codex/generated_images/01a0ba0f-366c-7831-a716-46acf74a1410/exec-d9715a43-79a5-4c05-932d-cf099695d9c0.png. Originals remain unchanged at those paths. Production240×240 RGBA PNGs use120px cells, nearest-neighbour resizing,16 measured ink RGB colours without dithering, integer head-anchor registration and hard alpha0/255 derived from native generated coverage. Connected pixel ink is retained; the background-speck check removed0 pixels after hard-matte export. There is no colour-key background removal or new body-scale animation. The generated idle is the guide style/identity reference.
+
+Current colour count is measured from decoded files. Earlier palette descriptions below are historical configured targets rather than a new assertion of decoded counts. Current v5 source artefacts supersede v4; device/photo/portrait provenance is unchanged. Native all-eight-crop and desktop/mobile evidence is under .impeccable/review/clean-maker-*.png. Seven SEO/static checks and scoped visual/alpha checks cover this refinement; no whole-surface, FPS or physical-device certification is claimed.
+
+## October 3: incumbent v4 maker and generated device visualizations — earlier production use
 
 This is a refinement of the selected graphite/pale/lime hybrid. The latest human correction preserves the original seated maker's face, outfit, laptop, browser-edge contact and dangling legs; rejected chibi replacements are not shipping assets. The v4 PNGs are encoding-only revisions of the original v1 artwork. Homepage works, case openings and related cards now use four generated native-alpha device cutouts; case stories restore the eight earlier generated device photographs. Visible device UI is a visualization, while retained screenshots and local demos remain the interface/behavior evidence.
 
