@@ -77,7 +77,7 @@ test('loading feedback preserves static content and responsive image assets reso
 });
 
 test('every advertised service has its own page and a bounded starting budget',()=>{
- const expected={websites:30000,'web-apps':180000,'telegram-mini-apps':150000,crm:150000,automation:90000,mvp:240000};
+ const expected={websites:30000,'web-apps':120000,'telegram-mini-apps':100000,crm:100000,automation:70000,mvp:240000};
  assert.deepEqual(Object.fromEntries(services.map(s=>[s.slug,s.startingPrice])),expected);
  for(const s of services){
   const path=`/services/${s.slug}/`,html=pages.get(path);

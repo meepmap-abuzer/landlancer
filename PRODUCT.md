@@ -53,15 +53,15 @@ Hero artwork uses inline SVG interface geometry; service hero artwork and practi
 | Service | Supplied starting budget | Bounded starting scope |
 | --- | ---: | --- |
 | Сайты и лендинги | 30 000 ₽ | One page for one offer: structure, individual design, responsive layout and lead form; client supplies materials. |
-| Веб-сервисы | 180 000 ₽ | One main user scenario, sign-in, responsive interface, server/database and basic management. |
-| Telegram Mini Apps | 150 000 ₽ | One completed scenario, Telegram sign-in, responsive screens, bot, server and basic management. |
-| CRM и админ-панели | 150 000 ₽ | One work process: list, record, statuses, basic roles and data management. |
-| AI и автоматизация | 90 000 ₽ | One limited AI scenario: agreed source, processing, result validation and simple interaction channel. |
+| Веб-сервисы | 120 000 ₽ | One main user scenario, sign-in, responsive interface, server/database and basic management. |
+| Telegram Mini Apps | 100 000 ₽ | One completed scenario, Telegram sign-in, responsive screens, bot, server and basic management. |
+| CRM и админ-панели | 100 000 ₽ | One work process: list, record, statuses, basic roles and data management. |
+| AI и автоматизация | 70 000 ₽ | One limited AI scenario: agreed source, processing, result validation and simple interaction channel. |
 | MVP для стартапа | 240 000 ₽ | One core scenario: design, responsive interface, server/database, simple administration and launch. |
 
 Public service text and tiers now live in `src/service-catalog-data.mjs`; `startingPrice` is derived from the first tier. Cards, detail pages and service metadata consume this catalog. General development FAQs in `src/seo-data.mjs` cover estimates, timing, design approval, changed scope, starting small, existing projects, handover and operating expenses. Service FAQs discuss decisions relevant to the service, rather than individual portfolio mechanisms. Approximate timelines are planning ranges, not guaranteed delivery dates.
 
-The 2026-10-03 content refresh uses the Russian Atoms Technology service pages as pricing references, with original Lancer wording. It does not adopt Atoms' client list, response SLA, warranty or team claims. See `docs/service-pricing-reference.md` for the compared scopes and reduction factors. Starting amounts apply to the stated scope; final scope and price are agreed before development. Hosting, model APIs and outside fees are separate. Complete portfolio products do not imply all their features fit a starting tier.
+The 2026-10-03 content refresh used the Russian Atoms Technology service pages as pricing references, with original Lancer wording. On 2026-10-04 the owner requested lower prices; the current catalog follows those amounts rather than the original 1.5–2 division factor. It does not adopt Atoms' client list, response SLA, warranty or team claims. See `docs/service-pricing-reference.md` for the current tiers and historical comparison. Starting amounts apply to the stated scope; final scope and price are agreed before development. Hosting, model APIs and outside fees are separate. Complete portfolio products do not imply all their features fit a starting tier.
 
 Factual related work: TailCare supports websites; TailCare and 12К support web services; Maverick, 12К and Gift Roulette support Mini Apps; 12К supports CRM; TailCare publishing and 12К API operations support integration/automation; TailCare and Maverick illustrate bounded MVP scenarios.
 

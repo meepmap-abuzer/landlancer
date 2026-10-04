@@ -1,6 +1,21 @@
 # Service content and price reference
 
-Updated 2026-10-03 following the user's request to broaden development FAQs and use Atoms Technology's Russian service offers as a reference, priced about 1.5–2 times lower. Text is written for Lancer's existing six services. No Atoms projects, personnel, warranties, response deadlines or performance claims are transferred.
+## Current prices — 2026-10-04
+
+The owner requested more accessible prices, replacing the original reference multiplier. Amounts explicitly chosen by the owner are preserved; the remaining CRM, AI and larger MVP tiers were reduced in the same update. Scopes are unchanged. All public starting prices, detail-page tiers and service metadata come from `src/service-catalog-data.mjs`.
+
+| Service | Current tiers, from ₽ |
+| --- | --- |
+| Websites: landing / company / integrated catalog | 30,000 / 60,000 / 150,000 |
+| Web services: account / multiple roles / integrations | 120,000 / 200,000 / 260,000 |
+| Mini Apps: account / payments and subscriptions / multiple modules | 100,000 / 200,000 / estimated by scope |
+| CRM: admin panel / team processes / migration and API | 100,000 / 200,000 / 260,000 |
+| AI: one scenario / requests and documents / connected process | 70,000 / 140,000 / 240,000 |
+| MVP: one scenario / account and payment / roles and integrations | 240,000 / 350,000 / 500,000 |
+
+## Historical reference — 2026-10-03
+
+The initial refresh broadened development FAQs and used Atoms Technology's Russian service offers as a reference, priced about 1.5–2 times lower. The comparison below records that initial version and is not the current price list. Text is written for Lancer's existing six services. No Atoms projects, personnel, warranties, response deadlines or performance claims are transferred.
 
 | Reference offer | Atoms starting price | Lancer starting price | Division factor |
 | --- | ---: | ---: | ---: |
@@ -19,7 +34,7 @@ Updated 2026-10-03 following the user's request to broaden development FAQs and 
 | Product with account and payment | 800,000 ₽ | 450,000 ₽ | 1.78 |
 | Platform with roles and integrations | 1,500,000 ₽ | 850,000 ₽ | 1.76 |
 
-Lancer's separate admin-panel offer starts at 150,000 ₽ for one internal process. This is our scope-based adaptation of the 300,000 ₽ personal-account reference (factor 2), not an admin-panel price published by Atoms. CRM tiers use the CRM and integration references above. A Mini App with additional modules is estimated by scope; no unsupported fixed reference is assigned to it. The existing landing-page offer stays at 30,000 ₽.
+The initial separate admin-panel offer started at 150,000 ₽ for one internal process. This was our scope-based adaptation of the 300,000 ₽ personal-account reference (factor 2), not an admin-panel price published by Atoms. Initial CRM tiers used the CRM and integration references above. A Mini App with additional modules is estimated by scope; no unsupported fixed reference is assigned to it. The existing landing-page offer stays at 30,000 ₽.
 
 Sources, read 2026-10-03:
 
